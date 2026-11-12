@@ -1,0 +1,9 @@
+espei 0.8.11.dev82+g9039ea215 <fit-python>
+{"step": "step4c_b_hingefloor", "start": "s2_perturbed", "logpost": -5657.288636863603, "grad_norm_q": 0.00033919564067290354, "nfev": 234, "seconds": 3197.097863584757, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s1_perturbed", "logpost": -5657.288636861643, "grad_norm_q": 0.0004148527196700923, "nfev": 238, "seconds": 3233.9979794993997, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s0_start", "logpost": -5657.288636866143, "grad_norm_q": 0.00048014862916066563, "nfev": 244, "seconds": 3367.4842292498797, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s3_perturbed", "logpost": -5657.2886368629, "grad_norm_q": 0.0008634463920760293, "nfev": 286, "seconds": 3736.38997266721, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s5_perturbed", "logpost": -5657.293148835046, "grad_norm_q": 0.0004537643404965795, "nfev": 200, "seconds": 1971.4526870828122, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s6_perturbed", "logpost": -5657.288636868062, "grad_norm_q": 0.00027910394159228635, "nfev": 203, "seconds": 1984.9889513328671, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s4_perturbed", "logpost": -5657.288636859774, "grad_norm_q": 4.5368712701211385e-05, "nfev": 224, "seconds": 2178.9020631657913, "final": "converged", "n_nonfinite": 0}
+{"step": "step4c_b_hingefloor", "start": "s7_perturbed", "logpost": -5657.288636882263, "grad_norm_q": 0.0009907310767645373, "nfev": 218, "seconds": 1921.228849249892, "final": "converged", "n_nonfinite": 0}

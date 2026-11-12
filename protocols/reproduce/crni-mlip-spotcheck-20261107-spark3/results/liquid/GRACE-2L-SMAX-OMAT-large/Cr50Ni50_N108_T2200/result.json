@@ -1,0 +1,14 @@
+{
+  "status": "computed",
+  "fit_ready": false,
+  "n_atoms": 108,
+  "temperature_K": 2200.0,
+  "production_ps": 100.0,
+  "elapsed_s": 3217.424475669861,
+  "finished_unix": 1794087782.1857505,
+  "pending": [
+    "liquid-state checks (MSD, RDF)",
+    "finite-size comparison",
+    "entropy analysis"
+  ]
+}

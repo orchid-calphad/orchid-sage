@@ -1,0 +1,139 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-step4c_b-10c-basin",
+ "version": "1.0.0",
+ "title": "Cr-Ni step 4c-b: 10c basin hopping from the 10a pick s4 (seed 7201, 1500 evaluations)",
+ "status": "complete",
+ "run_id": "crni-step4c_b-10c-basin",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.0",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "fit_solid"
+ },
+ "host": "spark1",
+ "hardware_class": "DGX Spark GB10 (20 Arm cores), CPU only",
+ "pids": [
+  3242879
+ ],
+ "started": "2026-11-06T16:53:32-0600",
+ "finished": "2026-11-06T18:45:17-0600",
+ "interpreter": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "cd <home>/orchid-protocols-work-20261106/crni-10c-spark1 && OMP_NUM_THREADS=1 PY -u scripts/run_global_crni.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json s4_perturbed basin 7201 1500 steps/step4c_b_hingefloor_10c/basin_7201",
+ "threads": "OMP_NUM_THREADS=1; 1 process",
+ "seeds": {
+  "rule": "scipy seed=7201 (legacy RandomState) for the method; data, objective deterministic"
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/run_global_crni.py",
+   "sha256": "a8b3b251068b96cb9f383e5219d8c9f76c1aa03c3fdc116d11990e9b96d542fb",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model2.py",
+   "sha256": "a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/multistart.json",
+   "sha256": "ac39ad7804cd57907c023b20305b434a78a2dc5401fa46f5043165d151c42150",
+   "storage_class": "local",
+   "role": "common start (s4)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step4c_b_hingefloor.json",
+   "sha256": "1ad9a2353d0e17d1a5d418bd32ae53c21f1280656e68d58c4378be33ab608e24",
+   "storage_class": "local",
+   "role": "objective config"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step3b_thermo_crni2free_pick.tdb",
+   "sha256": "5b48923dc9f3755368aeafc65f61ef1157b185f77cb15fabbfa72808ad26d5c7",
+   "storage_class": "local",
+   "role": "start TDB of the objective"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/hinge/step4c_hinge_floor.json",
+   "sha256": "4ab667e875b304bfff96022d67e82af617429e3a0162e58d839c0238b65604df",
+   "storage_class": "local",
+   "role": "hinge sidecar"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/run_manifest.json",
+   "sha256": "623afe708e869c4dfd30f1b790fa296a10618b7f3b21fe6dc547636512ca344c",
+   "storage_class": "local",
+   "role": "run_manifest.json"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+   "sha256": "3a4189c5c0f287f3a102b9941545e4717574004f9346b890d221ea63cc8e404b",
+   "storage_class": "local",
+   "role": "status.json"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/trace.jsonl",
+   "sha256": "0afa1c7e820b412d80eab1471bab40abaeb836f56fd286264a80d0adb38279c2",
+   "storage_class": "local",
+   "role": "trace.jsonl"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/top10.json",
+   "sha256": "cf1d467f051f3f5d34552d7d380075b18d821bce50493397a1d2b12f4141338c",
+   "storage_class": "local",
+   "role": "top10.json"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/events.jsonl",
+   "sha256": "646766d2d1bd9c1e0ed13f5f0e1fce7781b88a5d1681b9e0af547b21aff7b155",
+   "storage_class": "local",
+   "role": "events.jsonl"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/best.tdb",
+   "sha256": "5d60079fdb73c0191cff8c1810565e804b5bed602e57d01cffe5334c2580e5ce",
+   "storage_class": "local",
+   "role": "best.tdb"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor_10c/basin_7201/parameters.json",
+   "sha256": "1dfffebc0e0df316fc1198540be4d71a18c83a4c0c7ec8bfc3049d4fb3e86c94",
+   "storage_class": "local",
+   "role": "parameters.json"
+  }
+ ],
+ "results": {
+  "best": {
+   "logpost": -5657.288636859768,
+   "evaluation": 3,
+   "improvement_over_start": 5.4569682106375694e-12
+  },
+  "termination": "thermodynamic evaluation budget reached",
+  "evaluations": 1500,
+  "cache_hits": 32,
+  "wall_s": 6705.000154018402,
+  "n_invalid": 0,
+  "n_liquid_infeasible": 0,
+  "n_local_solves": 31,
+  "logpost_median": -5657.289022024828,
+  "n_within_0.01_of_pick": 1239,
+  "best_theta_minus_s4_max_abs": 3.4357526601525024e-05
+ },
+ "notes": [
+  "fit_protocol 10c; code pattern cuzr-protocol-20261104/run_global.py; settings and agent decisions (bounds z in [-5,5], L-BFGS-B local, <= 50 evaluations per local solve, liquid convexity accept test) in PLAN.md addendum, stated before launch",
+  "no better optimum: best = s4 within 4e-5 J/mol; no global-optimality claim",
+  "schema gap: the general protocol orchid-calphad-fit@2.0.0 has no step for 10c; recorded under fit_solid"
+ ],
+ "recorded_by": {
+  "tool": "crni-paper-fit-20261106/scripts/emit_run_cards_10ac_v2.py",
+  "version": "2"
+ }
+}

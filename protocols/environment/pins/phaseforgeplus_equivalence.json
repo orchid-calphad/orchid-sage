@@ -1,0 +1,11 @@
+{
+ "rule": "Two PhaseForge+ commits are the same source when their git tree hashes are equal (git rev-parse <commit>^{tree}). The fits recorded commit c66656f, which is on a private repository; public commit 2da1d69 has the identical tree. orchid_reproduce.py checks --pfp by the sha256 of each pinned source file (spark1_phaseforgeplus_src_files.sha256, pinned by the specific protocol), so either checkout passes; it also reports the commit and tree of a git checkout given as --pfp. Recorded 7 Nov 2026; frozen records that name c66656f are unchanged.",
+ "tree": "1c7ba5fb356ced5a4bbf4bb533eee04ca12d8c5b",
+ "commits": [
+  {"commit": "c66656faad884c7ed11354417bc89074665a74f3", "role": "recorded in the run cards and in crni-paper-fit-step4c-b@1.0.4 (the commit the fits used)", "public": false},
+  {"commit": "2da1d69ee713aebff16f76ee16cc9b6f40a0777b", "role": "public source until the pull request is merged and tagged", "public": true,
+   "repository": "https://github.com/ArroyaveLab/PhaseForgePlus", "branch": "hinge-penalty-espei-9039ea2",
+   "pull_request": "https://github.com/dogusariturk/PhaseForgePlus/pull/163"}
+ ],
+ "verified": "2da1d69^{tree} = c66656f^{tree} = 1c7ba5fb...; the 10 files of spark1_phaseforgeplus_src_files.sha256 match a fresh clone of 2da1d69 (shasum -c)"
+}

@@ -1,0 +1,11 @@
+{"start": "s7_perturbed", "logpost": -3941.800881989772, "grad_norm_q": 1.3149806776142343, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 5152.5}
+{"start": "s5_perturbed", "logpost": -3941.8014471203537, "grad_norm_q": 1.3286876364555513, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 5267.9}
+{"start": "s1_perturbed", "logpost": -3941.8053767288384, "grad_norm_q": 1.3320740113053986, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 7375.3}
+{"start": "s3_perturbed", "logpost": -3941.810120630274, "grad_norm_q": 1.3342775768520816, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 7380.1}
+{"start": "s4_perturbed", "logpost": -3941.8016888384905, "grad_norm_q": 0.07916313356470739, "status": "stalled (no further improvement)", "n_evals": 147, "seconds": 13475.4}
+{"start": "s6_perturbed", "logpost": -3941.811102301057, "grad_norm_q": 1.3359957080666731, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 3094.0}
+{"start": "s2_perturbed", "logpost": -3941.838726859463, "grad_norm_q": 1.3388290836665182, "status": "stalled (no further improvement)", "n_evals": 63, "seconds": 3146.2}
+{"start": "s0_start", "logpost": -3942.370964319946, "grad_norm_q": 0.08334730899521312, "status": "stalled (no further improvement)", "n_evals": 123, "seconds": 5939.3}
+{"step": "step3b_thermo_crni2free", "n_starts": 8, "n_converged": 0}
+{"step": "step3b_thermo_crni2free", "threshold": 0.001, "n_starts": 8, "n_eligible": 0, "pick": null, "pick_objective": null}
+step3b_thermo_crni2free: no eligible start; chain stops

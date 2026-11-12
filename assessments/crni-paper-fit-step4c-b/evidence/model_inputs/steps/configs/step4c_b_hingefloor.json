@@ -1,0 +1,33 @@
+{
+ "name": "step4c_b_hingefloor",
+ "start_tdb": "tdb/step3b_thermo_crni2free_pick.tdb",
+ "groups": [
+  "oneshot_relax",
+  "liq_c",
+  "solid_c",
+  "zpf_susp",
+  "thermo"
+ ],
+ "free": [
+  "VV0000",
+  "VV0001",
+  "VV0002",
+  "VV0003",
+  "VV0004",
+  "VV0005",
+  "VV0006",
+  "VV0007",
+  "VV0008",
+  "VV0009",
+  "VV0010",
+  "VV0011",
+  "VV0012",
+  "VV0013"
+ ],
+ "hinge": "data/hinge/step4c_hinge_floor.json",
+ "hinge_smooth": "softplus_sigma_over_5",
+ "wall_s": 5400,
+ "held_rule": "held never means fixed (protocol 0.1, PI 6 Nov): every compound stays free, anchored by its one-shot observation and sigma",
+ "pick_rule": "stated before launch: eligible only if |g|_q < 1e-3 (optimiser scaling q = theta/scale) and terminated converged; ties to the objective; report |g| and gap to runner-up",
+ "note": "step 4 combined (PI decisions 6 Nov, fit_protocol item 8): converted ZPF sigma floored at tier (tiers3: 100, 50 replicated; Karmazin 550 C and Zhang at 100); completed exclusions at confidence 1.0 with per-excluded-phase tiers (tiers3), CRNI2 exclusions dropped at 17 kinetically limited states below 900 K; 12 Jette/Karmazin rows below 900 K as metastable bcc+fcc with CRNI2 suspended; smooth hinge onset (softplus, width sigma/5); relaxation midpoint rule for the one-shot observations; tau 100 | VARIANT b (labelled, one change): hinge sigma = max(tier, converted state uncertainty)"
+}

@@ -1,0 +1,46 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2"
+ ],
+ "solver": {
+  "mode": "manual",
+  "sublattice_site_ratios": [
+   1
+  ],
+  "sublattice_configurations": [
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ]
+  ],
+  "sublattice_occupancies": [
+   [
+    [
+     0.75,
+     0.25
+    ]
+   ]
+  ]
+ },
+ "conditions": {
+  "P": 101325,
+  "T": 298.15
+ },
+ "output": "HM_MIX",
+ "values": [
+  [
+   [
+    7815.695163501609
+   ]
+  ]
+ ],
+ "weight": 0.05161594462962819,
+ "reference": "PhaseForge one-shot GRACE-2L-SMAX-OMAT-large observation BCC_A2_x0.25 (crni-paper-fit-20261106); sigma 9687 J/mol-atom (sigma_MLIP)",
+ "comment": "protocol 0.0a/0.1 one-shot observation; ESPEI weight = 500/sigma"
+}

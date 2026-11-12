@@ -1,0 +1,67 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-phase_sequence",
+ "version": "1.0.0",
+ "title": "final_pick (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-phase_sequence",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "final_pick"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T17:34:34-0600",
+ "finished": "2026-11-07T17:34:35-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> -I <orchid-sage>/protocols/tools/phase_sequence.py crni tdb/step4c_b_hingefloor_pick10a.tdb phase_sequence_rerun.json && <fit-python> -I <orchid-sage>/protocols/tools/phase_sequence.py crni reference/step4c_b_hingefloor_pick.tdb phase_sequence_reference.json",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/step4c_b_hingefloor_pick.tdb",
+   "sha256": "3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/phase_sequence_rerun.json",
+   "sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4",
+   "storage_class": "local",
+   "role": "output"
+  }
+ ],
+ "results": {
+  "returncode": 0,
+  "wall_s": 0.91
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/phase_sequence.log",
+   "sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item phase_sequence (reproduce.plan of the specific protocol)"
+ ]
+}

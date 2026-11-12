@@ -1,0 +1,371 @@
+{
+ "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+ "spec_sha256": "e44c5f979e9638de31dc98a85c0b663c78ac15b7a17a25bdad5875f4ca390817",
+ "root": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-06T08:36:25-0600",
+ "items": [
+  {
+   "id": "step2",
+   "step": "fit_liquidus",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step2_liquidus/multistart.json",
+     "reference": -1703.6767365088053,
+     "rerun": -1703.6767369237646,
+     "diff": -4.1495923142065294e-07,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "tdb_abs",
+     "path": "tdb/step2_liquidus_pick.tdb",
+     "reference": "assessments/crni-paper-fit-step4-s1/evidence/reference_outputs/tdb/step2_liquidus_pick.tdb (sha256 618093023138cada)",
+     "rerun_sha256": "586549f5828c169d0997693cbef8ef187352ece495394bdaf582bfdd3a5904de",
+     "byte_identical": false,
+     "worst_diff_over_tol": 0.3337121000000002,
+     "other_lines_identical": true,
+     "params": {
+      "VV0000": [
+       -24151.864691,
+       -24151.96649,
+       50
+      ],
+      "VV0001": [
+       2.809162,
+       2.809163,
+       0.03
+      ],
+      "VV0002": [
+       17236.350827,
+       17236.442866,
+       50
+      ],
+      "VV0003": [
+       -1.610209,
+       -1.610245,
+       0.03
+      ],
+      "VV0004": [
+       16673.433053,
+       16663.185282,
+       50
+      ],
+      "VV0005": [
+       -16.844808,
+       -16.838213,
+       0.03
+      ],
+      "VV0006": [
+       33438.380177,
+       33430.203433,
+       50
+      ],
+      "VV0007": [
+       -3.863267,
+       -3.86012,
+       0.03
+      ],
+      "VV0008": [
+       -37304.413795,
+       -37294.237437,
+       50
+      ],
+      "VV0009": [
+       10.07669,
+       10.070363,
+       0.03
+      ],
+      "VV0010": [
+       -297.535107,
+       -314.220712,
+       50
+      ],
+      "VV0011": [
+       8.972986,
+       8.982533,
+       0.03
+      ],
+      "VV0012": [
+       -43487.554,
+       -43487.554,
+       50
+      ],
+      "VV0013": [
+       0.0,
+       0.0,
+       0.03
+      ]
+     },
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step2_liquidus/evaluation.json",
+     "reference": 1616,
+     "rerun": 1616.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step2_liquidus/evaluation.json",
+     "reference": 1664,
+     "rerun": 1662.0,
+     "diff": -2.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "step3b",
+   "step": "fit_thermo",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/multistart.json",
+     "reference": -3941.800787656944,
+     "rerun": -3941.8188020044654,
+     "diff": -0.01801434752132991,
+     "abs_tol": 0.05,
+     "pass": true
+    },
+    {
+     "check": "tdb_abs",
+     "path": "tdb/step3b_thermo_crni2free_pick.tdb",
+     "reference": "assessments/crni-paper-fit-step4-s1/evidence/reference_outputs/tdb/step3b_thermo_crni2free_pick.tdb (sha256 5b48923dc9f37553)",
+     "rerun_sha256": "92f368cb896133e441de1f5eaebf8a6a2922a9a20f49f59e7958a074c5d6e2f5",
+     "byte_identical": false,
+     "worst_diff_over_tol": 34.72771612000004,
+     "other_lines_identical": true,
+     "params": {
+      "VV0000": [
+       -13045.084925,
+       -13044.62243,
+       50
+      ],
+      "VV0001": [
+       2.740694,
+       2.740593,
+       0.03
+      ],
+      "VV0002": [
+       -1108.038515,
+       -1109.791856,
+       50
+      ],
+      "VV0003": [
+       1.458471,
+       1.458847,
+       0.03
+      ],
+      "VV0004": [
+       18293.8993,
+       17733.948381,
+       50
+      ],
+      "VV0005": [
+       -11.501371,
+       -11.175589,
+       0.03
+      ],
+      "VV0006": [
+       29139.817163,
+       30876.202969,
+       50
+      ],
+      "VV0007": [
+       -7.550019,
+       -8.541437,
+       0.03
+      ],
+      "VV0008": [
+       -4997.98685,
+       -4987.049251,
+       50
+      ],
+      "VV0009": [
+       -3.333819,
+       -3.33597,
+       0.03
+      ],
+      "VV0010": [
+       7819.511869,
+       7822.207763,
+       50
+      ],
+      "VV0011": [
+       -4.551654,
+       -4.541921,
+       0.03
+      ],
+      "VV0012": [
+       -35570.326025,
+       -34259.858353,
+       50
+      ],
+      "VV0013": [
+       11.309535,
+       11.012495,
+       0.03
+      ]
+     },
+     "pass": false
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/evaluation.json",
+     "reference": 1626,
+     "rerun": 1626.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/evaluation.json",
+     "reference": 1074,
+     "rerun": 1038.0,
+     "diff": -36.0,
+     "abs_tol": 2,
+     "pass": false
+    }
+   ],
+   "pass": false
+  },
+  {
+   "id": "step4",
+   "step": "fit_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step4_solid/multistart.json",
+     "reference": -6332.243665831225,
+     "rerun": -6332.243665834535,
+     "diff": -3.309651219751686e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "tdb_abs",
+     "path": "tdb/step4_solid_pick.tdb",
+     "reference": "assessments/crni-paper-fit-step4-s1/evidence/artifact/CrNi_paper_fit_FINAL_step4_s1.tdb (sha256 d46bf5ddddbaeb1e)",
+     "rerun_sha256": "7ddafb90588b6118275847bb34421d003b6af81dde49205d4dee098ad3d65a2b",
+     "byte_identical": false,
+     "worst_diff_over_tol": 0.002066666666666883,
+     "other_lines_identical": true,
+     "params": {
+      "VV0000": [
+       -12963.301186,
+       -12963.30247,
+       50
+      ],
+      "VV0001": [
+       2.755549,
+       2.755549,
+       0.03
+      ],
+      "VV0002": [
+       -856.808441,
+       -856.790919,
+       50
+      ],
+      "VV0003": [
+       1.588725,
+       1.588714,
+       0.03
+      ],
+      "VV0004": [
+       20912.281592,
+       20912.197092,
+       50
+      ],
+      "VV0005": [
+       -13.031093,
+       -13.031041,
+       0.03
+      ],
+      "VV0006": [
+       17132.168736,
+       17132.250302,
+       50
+      ],
+      "VV0007": [
+       -0.076542,
+       -0.076604,
+       0.03
+      ],
+      "VV0008": [
+       1332.377804,
+       1332.336877,
+       50
+      ],
+      "VV0009": [
+       -6.939817,
+       -6.939794,
+       0.03
+      ],
+      "VV0010": [
+       35749.423487,
+       35749.520376,
+       50
+      ],
+      "VV0011": [
+       -19.789262,
+       -19.789323,
+       0.03
+      ],
+      "VV0012": [
+       -35084.689277,
+       -35084.786705,
+       50
+      ],
+      "VV0013": [
+       19.691423,
+       19.69143,
+       0.03
+      ]
+     },
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4_solid/evaluation.json",
+     "reference": 1620,
+     "rerun": 1620.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4_solid/evaluation.json",
+     "reference": 780,
+     "rerun": 780.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "pass": true
+  }
+ ],
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "finished": "2026-11-06T08:36:26-0600",
+ "pass": false
+}

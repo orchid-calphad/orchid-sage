@@ -1,0 +1,25 @@
+# Accepted findings of protocols/tools/check_public.py: "REGEX" or "path-glob::REGEX" (the matched text must match REGEX).
+# Each rule says why it is not local information.
+#
+# the scanner and the sanitizer define the patterns they look for
+protocols/tools/check_public.py::.
+protocols/tools/public_sanitize.py::^(/private/tmp|/private/var/folders)$
+# localpaths.py looks up the current user's home in one place, to read <home> in records and '~' in a path a user gives
+protocols/tools/localpaths.py::^expanduser\("~$
+# records name machine-specific locations by placeholder (<home>, <orchid-sage>, <fit-python>, <fit-env>; protocols/tools/public_sanitize.py): no tilde-slash path is accepted
+# frozen code that ran (snapshots in assessments/ and in the crates; extractors and converters pinned or reproducing frozen
+# records): the code is kept as it ran; machine-specific lookups in it are part of the record
+assessments/*::^(Path\.home\(\)|expanduser\(\s*["']~|\$\{?HOME)
+protocols/crates/*::^(Path\.home\(\)|expanduser\(\s*["']~|\$\{?HOME)
+benchmarks/*::^(Path\.home\(\)|expanduser\(\s*["']~|\$\{?HOME)
+# four-part library versions in the environment pins (CUDA/NCCL versions, not addresses)
+protocols/environment/pins/*::^10\.(8\.0\.43|3\.9\.55)$
+# our own figures (matplotlib output), not publisher material
+protocols/figures/*/fig_*.pdf::restricted
+protocols/crates/*/figures/fig_*.pdf::restricted
+# extractors pinned by sha256 in frozen dashboard records (their host names are mapped to labels in the public copy)
+protocols/tools/extract_dashboard_data*.py::^Path\.home\(\)$
+# this file names the patterns it accepts
+.public-allow::.
+# the container's own environment (HOME inside the image), recorded by docker image inspect
+protocols/environment/pins/*::^\$\{HOME$

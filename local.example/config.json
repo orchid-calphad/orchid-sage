@@ -1,0 +1,33 @@
+{
+ "_note": "copy to local/config.json (gitignored) and fill in what this machine has; every key is optional. Paths may start with ~ (this user's home). Without a config: data under data/, state under local/, the running interpreter, host labels as written in the public records.",
+ "orchid_data_dir": "data/orchid-data",
+ "orchid_data_next": "data/orchid-data-next",
+ "orchid_mcp_src": null,
+ "site_data_dir": null,
+ "phaseforgeplus_src": null,
+ "paper_repo": null,
+ "brand_repo": null,
+ "runs_root": "data/runs",
+ "restricted_dir": "data/private",
+ "fit_python": null,
+ "mlip_python": null,
+ "state_dir": "local/state",
+ "backends_file": "local/backends.json",
+ "protected_paths": [],
+ "hosts": {
+  "studio": "studio",
+  "spark1": "spark1",
+  "spark2": "spark2",
+  "spark3": "spark3",
+  "spark4": "spark4"
+ },
+ "spark_home": null,
+ "siblings": {},
+ "private": {
+  "_note": "names check_public.py fails on and public_sanitize.py replaces, besides the generic patterns: user names, host names (hosts above and other_hosts: name -> label) and address prefixes",
+  "usernames": [],
+  "other_hosts": {},
+  "ip_prefixes": [],
+  "accounts": []
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "CRNI2",
+  "FCC_A1"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": [
+   863.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "CRNI2",
+    [
+     "NI"
+    ],
+    [
+     0.666667
+    ]
+   ],
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "reference": "ORCHID ORC-X3KVP7D3PO (Hao et al. 2021 p. 13: CrNi2 ordering at 863 K near 66.7 at.% Ni, XRD and neutron diffraction [160,161]; experimental; single reader, not yet accepted); sigma_eff 16 K",
+ "comment": "crni-paper-fit-20261106: highest temperature of CRNI2 (x 2/3) on the hull; the fcc partner at zero phase fraction with null composition (0.4a form); composition 'vicinity of 66.7 at.% Ni' taken as 2/3 (specification gap)"
+}

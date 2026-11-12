@@ -1,0 +1,290 @@
+{
+ "figure": "fig_invariants",
+ "orchid_release": "unreleased (set E + private exports)",
+ "evidence_bundle_version": "2.0.0",
+ "labels": {
+  "L = BCC_A2 + FCC_A1 (eutectic)": [
+   "ORC-SV7H3CNRYS"
+  ],
+  "CrNi2 ordering (top of CRNI2)": [
+   "ORC-X3KVP7D3PO"
+  ]
+ },
+ "records": [
+  {
+   "id": "ORC-2DHRS54FM4",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-3DHRKUJ5M3",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-3LOS72PGLC",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-52HXTTKZAO",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-5DKDOPMV4A",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-5RTTUFASW2",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-6QZEHDRBWE",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-7S4IN2HNDK",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-B5RGEA7JN6",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-B6VWCQHI5Z",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-BHAVW6OGXV",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-EOSQO2KFJI",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-GFFRNQHEW3",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-IQINPGNSAL",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-JPIU5NDXCT",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-KIBVNAYPKI",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-MDTW4ZSGRQ",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-OZ6DQCZYDO",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-PZZWLILSZ3",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-SERUDTXZOJ",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-SV7H3CNRYS",
+   "state_id": "S-8c8e0ac2c1",
+   "state_class_id": "C-abd155ffe9",
+   "paper_id": "doi:10.1016/j.calphad.2021.102268",
+   "pid": "doi:10.1016/j.calphad.2021.102268/p13/text-01/s04#phase_transition",
+   "in_release": true,
+   "resolved": true
+  },
+  {
+   "id": "ORC-SYDYEYFHYV",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-TZSHZWDOFK",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-VITDXRPDCX",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-X3KVP7D3PO",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-Y3VE43NVA4",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-Y6JFGBTOTC",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-YCGYFK32YK",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-YRCJNFD3YY",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  },
+  {
+   "id": "ORC-ZRIRMTYM5U",
+   "state_id": null,
+   "state_class_id": null,
+   "paper_id": null,
+   "pid": null,
+   "in_release": false,
+   "resolved": false
+  }
+ ],
+ "missing": {
+  "dataset without row-level ORC ids (ESPEI-format data; pending intake)": 327,
+  "new extraction pending intake (ORC id not in the local registry or literature checkout)": 29,
+  "exclusion added by the campaign": 290
+ }
+}

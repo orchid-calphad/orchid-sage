@@ -1,0 +1,35 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "FCC_A1"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1515
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     0.496
+    ]
+   ]
+  ]
+ ],
+ "reference": "jenkins1937some_alloys",
+ "comment": "Liquidus digitized from table 2, solidus digitized from figure | REBUILD set D, observation (i): the known phase at its printed composition (single-phase), derived from the same parent points as the (ii) file; parent indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]; weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [42, 43, 44, 45, 46, 47, 48]); values unchanged | step4c: sigma_DF = max(converted 144, tier less_certain 50) = 144 J/mol",
+ "weight": 6.946761570528466
+}

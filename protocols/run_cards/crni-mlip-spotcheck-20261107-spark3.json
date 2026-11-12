@@ -1,0 +1,172 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-mlip-spotcheck-20261107-spark3",
+ "version": "1.0.0",
+ "title": "GPU spot check of the MLIP steps (PI 7 Nov 2026): one SQS cell and one liquid MD state recomputed on spark3",
+ "status": "complete",
+ "run_id": "crni-mlip-spotcheck-20261107-spark3",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "staged_relax"
+ },
+ "host": "spark3",
+ "hardware_class": "DGX Spark (GB10 GPU)",
+ "pids": [
+  2761332,
+  2761574
+ ],
+ "started": "2026-11-07T20:49:00Z",
+ "finished": "2026-11-07T21:43:00Z",
+ "interpreter": "python (container cuzr-phaseforge-grace-gpu:20261104, image sha256:8eae0b91e288271f49ec8ed095a3772ce05630e844d4b3a6bbe171ccd99b6371; original spark1 image ac223e2c...)",
+ "packages": {
+  "image": "cuzr-phaseforge-grace-gpu:20261104",
+  "image_id": "sha256:8eae0b91e288271f49ec8ed095a3772ce05630e844d4b3a6bbe171ccd99b6371",
+  "potential": "GRACE-2L-SMAX-OMAT-large"
+ },
+ "command": "logs/launch.sh: docker run (as code/launch_liquid.sh) 'python -u /campaign/code/relax_solids.py GRACE-2L-SMAX-OMAT-large' (BCC_A2 x0.0000_pure, x0.2500_s2026110501, x1.0000_pure staged) and 'python -u /campaign/code/run_liquid.py --size 108 --x-ni 0.5 --temperature 2200 --seed 2026110503'; comparison code/compare_spot2.py",
+ "seeds": {
+  "sqs": "s2026110501 (bcc)",
+  "md": "2026110503 (as recorded in the spark1 run.json)"
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/code/relax_solids.py",
+   "sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+   "storage_class": "local",
+   "role": "protocol code (staged relaxation)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/code/run_liquid.py",
+   "sha256": "a4b6d40caa19b978a4e982bb1a372044862edcf719ae41d4e96cc4bfe9cd3f85",
+   "storage_class": "local",
+   "role": "protocol code (liquid MD)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/code/launch_liquid.sh",
+   "sha256": "ae9b59f9edf1e7f789e25e752cb057f34700e1dc27d894d35282f857a41a8d78",
+   "storage_class": "local",
+   "role": "protocol launch command (docker run form reused)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/inputs/structures/BCC_A2/x0.2500_s2026110501/POSCAR",
+   "sha256": "23e7ac6647691c3fc3563d468bc5a1e8f6b0822f83f50696dc7cf8ee45667585",
+   "storage_class": "local",
+   "role": "SQS cell"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/inputs/structures/LIQUID/x0.5000_s2026110521/POSCAR",
+   "sha256": "ed8bd81337edde63522aaa3fff0e64d8557f83ecccfc293b376994afd34f29bc",
+   "storage_class": "local",
+   "role": "liquid start"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/provenance/potential_sha256.txt",
+   "sha256": "bd774abc6bb5ffc12f5accb42476cf34fc96cc7c8e17a2b30e72623dd9d3432c",
+   "storage_class": "local",
+   "role": "GRACE weights hash list (7 of 7 staged files match)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_checks_enthalpy.json",
+   "sha256": "88bc894ceada3bfe87195d8f6de558e30774e6ab44e9a05012787983085c638e",
+   "storage_class": "local",
+   "role": "recorded liquid H (reference)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/collected_solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/result.json",
+   "sha256": "2e1ae773552f846c4dd17a35864d0f7f0695af81e40c10b2728e51e0490e39a8",
+   "storage_class": "local",
+   "role": "recorded SQS energies (reference)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.json",
+   "sha256": "9d87de4024a85ac65dd244e9d3360f7dffd5f3654a448ce29227ac65121a04cd",
+   "storage_class": "local",
+   "role": "comparison"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.md",
+   "sha256": "30f5031d52bdd2e990d37a8a1e73b1744ef788c298e03532c9de5ca209673407",
+   "storage_class": "local",
+   "role": "comparison table"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/result.json",
+   "sha256": "7d8bc374391fa4e630916c8fe1701da8854fb72a9d92cc0b7bfccf43683bc3bc",
+   "storage_class": "local",
+   "role": "spark3 SQS result"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/thermo_10fs.npy",
+   "sha256": "ff818e6451112832983226411de52c9bd1ba236255a99dd46c58c563de3396cd",
+   "storage_class": "local",
+   "role": "spark3 liquid thermo"
+  }
+ ],
+ "results": {
+  "overall": "FAIL",
+  "solids": [
+   {
+    "stage": "s0_unrelaxed",
+    "E_spark1_eV_atom": -8.391590408980846,
+    "E_spark3_eV_atom": -8.391590859740973,
+    "diff_kJ_mol_atom": -4.34917404204607e-05,
+    "pass": true
+   },
+   {
+    "stage": "s1_volume",
+    "E_spark1_eV_atom": -8.39162303507328,
+    "E_spark3_eV_atom": -8.39162303507328,
+    "diff_kJ_mol_atom": 0.0,
+    "pass": true
+   },
+   {
+    "stage": "s2_volume_ions",
+    "E_spark1_eV_atom": -8.41078296303749,
+    "E_spark3_eV_atom": -8.410782929509878,
+    "diff_kJ_mol_atom": 3.2349228411912917e-06,
+    "pass": true
+   },
+   {
+    "stage": "s3_full",
+    "E_spark1_eV_atom": -8.410920966416597,
+    "E_spark3_eV_atom": -8.410921033471823,
+    "diff_kJ_mol_atom": -6.469845682382583e-06,
+    "pass": true
+   }
+  ],
+  "liquid": {
+   "H_spark1_eV_atom": -6.619229202537169,
+   "SE_spark1_eV_atom": 0.005230529035996626,
+   "H_spark3_eV_atom": -6.68807275745706,
+   "SE_spark3_eV_atom": 0.004452156128585695,
+   "diff_kJ_mol_atom": -6.642393252505887,
+   "tol_kJ_mol_atom": 1.3254728899954136,
+   "z": -10.02267689160941,
+   "pass": false
+  },
+  "liquid_diagnostic": {
+   "dE_UK_kJ_mol_atom": 0.5118357785942793,
+   "combined_SE_E_kJ_mol_atom": 0.17512573358706637,
+   "z_E": 2.922676000325289,
+   "d_pV_kJ_mol_atom": -7.154229031100308,
+   "reading": "the enthalpy difference is mostly the <p>V term: the NVT volume taken from 5 ps of NPT differs by +0.096 A3/atom between the runs, so <p> is +0.14 GPa (spark1) and -0.78 GPa (spark3); the block SE of the production run does not contain this volume uncertainty. Not a verdict change; a note for the PI."
+  }
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "relaxation and MD, not a fit"
+ },
+ "notes": [
+  "Not a protocol rerun (PI 7 Nov 2026: a small GPU spot check). spark3 GPU idle at launch (0 %); spark1 (original host) and spark4 not used.",
+  "Tolerances as declared: MLIP energies 0.1 kJ/mol-atom; MD enthalpy within its statistical error (2 x combined 5-block SE).",
+  "The liquid enthalpy FAILS its declared tolerance; the diagnostic attributes the difference to the <p>V term of the NVT production at the volume taken from 5 ps of NPT; reported to the PI, no rerun."
+ ],
+ "recorded_by": {
+  "tool": "agent (coordinator brief 7 Nov 2026)",
+  "version": "1.0.0"
+ }
+}

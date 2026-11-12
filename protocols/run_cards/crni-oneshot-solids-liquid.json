@@ -1,0 +1,155 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-oneshot-solids-liquid",
+ "version": "1.0.0",
+ "title": "Cr-Ni one-shot: staged MLIP solids (both potentials) and 100 ps liquid MD with MLIPentropy",
+ "status": "complete",
+ "run_id": "crni-oneshot-solids-liquid",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "staged_relax"
+ },
+ "host": "spark1",
+ "hardware_class": "DGX Spark (GB10 GPU)",
+ "started": "2026-11-05T17:12:00Z",
+ "finished": {
+  "status": "pending",
+  "reason": "end time of the 864-atom run not recorded in a Studio file"
+ },
+ "interpreter": "python (container cuzr-phaseforge-grace-gpu:20261104)",
+ "packages": {
+  "image": "cuzr-phaseforge-grace-gpu:20261104",
+  "image_digest": "pending (not recorded)",
+  "tensorpotential": "0.6.2.1",
+  "materialsframework": "1.0.0",
+  "m_scraps": "0.6.0"
+ },
+ "command": "code/gen_sqs.py + gen_sqs_fullrange.py (Studio); relax_solids.py / relax_solids_v2.py and run_liquid.py in containers on spark1 (code/launch_liquid.sh); collect.sh; analyze_solids.py; analyze_liquid.py",
+ "seeds": {
+  "sqs": "bcc 2026110501/02, fcc 2026110511/12 (PLAN.md STANDARD section)"
+ },
+ "inputs": [
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs.py",
+   "sha256": "164c4da409be5ac446c90a245dd620e1a921b39248cde2b2a2798e4727f4f131",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/gen_sqs.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs_fullrange.py",
+   "sha256": "74044addcf7efc1c400c5dba87a6875f429f0096719a6c96bc0893dfac0b9188",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/gen_sqs_fullrange.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids.py",
+   "sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/relax_solids.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids_v2.py",
+   "sha256": "d9ead6af2c41937533e95b798edca91ab21c13f66b7403b73983ee1adbcfe342",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/relax_solids_v2.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/run_liquid.py",
+   "sha256": "a4b6d40caa19b978a4e982bb1a372044862edcf719ae41d4e96cc4bfe9cd3f85",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/run_liquid.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_solids.py",
+   "sha256": "50582a792056afb1a4197858a7c88d1abb5411291c424bd17cbf0490090a2eef",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/analyze_solids.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_liquid.py",
+   "sha256": "d346522d19a969e9f30af0f2dd75a2f56b22f30f82773c52e6c887522c57f258",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/analyze_liquid.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/launch_liquid.sh",
+   "sha256": "ae9b59f9edf1e7f789e25e752cb057f34700e1dc27d894d35282f857a41a8d78",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/launch_liquid.sh)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/collect.sh",
+   "sha256": "e3df4f5bae9e7ccc5ce2548f20be26aa68ec50873051a450184153e5e87020a6",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/collect.sh)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-phaseforge/provenance/potential_sha256.txt",
+   "sha256": "bd774abc6bb5ffc12f5accb42476cf34fc96cc7c8e17a2b30e72623dd9d3432c",
+   "storage_class": "local",
+   "role": "MLIP weight hashes (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/provenance/potential_sha256.txt)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/solids_GRACE-2L-SMAX-OMAT-large.json",
+   "sha256": "1a254993067fb230851265157722982a792f8f48066428068246bac605e3bc3e",
+   "storage_class": "local",
+   "role": "result"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/solids_GRACE-2L-OMAT.json",
+   "sha256": "ba7e4dc6fc171a9e797fe92e53ec89300a83ddf784b154837efad070e06ec3e7",
+   "storage_class": "local",
+   "role": "result"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_checks_enthalpy.json",
+   "sha256": "88bc894ceada3bfe87195d8f6de558e30774e6ab44e9a05012787983085c638e",
+   "storage_class": "local",
+   "role": "result"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_excess_entropy.json",
+   "sha256": "8f8c1869df94e0ae7bad683d5a6500341460a3a4b85a604abc73ed6af1aab082",
+   "storage_class": "local",
+   "role": "result"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_ideal_mixing_check.json",
+   "sha256": "7df7b32826ab40becdefca9579cb4cdd750b2d1c6380d6b5ccfa8446c675a043",
+   "storage_class": "local",
+   "role": "result"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_cutoffs.json",
+   "sha256": "e1af4f4fe5df461347ef7bcbc1209ce803ee0b15652204ce06535b3fa4b3251d",
+   "storage_class": "local",
+   "role": "result"
+  }
+ ],
+ "results": {
+  "note": "pure Cr at 1900 K crystallised after 82 ps; analysed over its first 80 ps (PLAN.md results notes)",
+  "ideal_mixing_check": "|S_chem,ex| <= 0.004 J/mol-atom/K"
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "relaxation and MD, not a fit"
+ },
+ "converted_from": [
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-phaseforge/PLAN.md",
+   "sha256": "8f10d54e699b0fdb2aa62814371d2159167922d6ba5d1f9869f565f58e1bea80",
+   "storage_class": "local",
+   "role": "campaign plan and run log (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/PLAN.md)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-phaseforge/results/NOT_USED.md",
+   "sha256": "2b3b55ea34fceb046dfc7b9f57eb7e11fe84621019d50a91df86ecef9a5b3033",
+   "storage_class": "local",
+   "role": "used / not used record (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/results/NOT_USED.md)"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"n_states": 695, "evaluated": 695, "match": 404, "contains_expected": 566, "excluded_phase_present": 6, "skipped": 0, "by_kind": {"3-phase": {"n": 1, "match": 0}, "partial_tie_line": {"n": 164, "match": 66}, "single_phase": {"n": 489, "match": 298}, "tie_line": {"n": 41, "match": 40}}} wall_s 2.6

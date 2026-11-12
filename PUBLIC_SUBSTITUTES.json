@@ -1,0 +1,2619 @@
+{
+ "by": "protocols/tools/public_sanitize.py export",
+ "rule": "every file that held local information is its sanitized copy (rules in protocols/tools/public_sanitize.py: host and user names, scratch and session names, then the home-relative record paths as placeholders <fit-python>, <fit-env>, <orchid-sage>, <home>; second pass of 8 Nov 2026, PI rule of 7 Nov: no home path or machine-specific location in anything disseminated); original_sha256 identifies the original kept in the private repository; records that pin an original's sha256 are satisfied by its copy here (protocols/tools/validate.py reads this file)",
+ "n_files": 1169,
+ "n_changed": 433,
+ "edited_in_public_copy": {
+  "files": [
+   "protocols/tools/public_sanitize.py",
+   "protocols/tools/check_public.py",
+   "protocols/tools/localpaths.py",
+   "protocols/tools/orchidproto.py",
+   "sage_mcp/repo.py",
+   "README.md",
+   ".public-allow",
+   "protocols/tools/orchid_reproduce.py"
+  ],
+  "note": "code and documentation of this copy changed by hand on 8 Nov 2026 so that the tools read and write the placeholders (localpaths.py, orchidproto.py: evidence digests read <home> back as the tilde form the records were hashed in; sage_mcp/repo.py; orchid_reproduce.py: a rerun output that records the sha256 of a staged public copy is compared with the sha256 read as the original's) and the scanner, the sanitizer, the allowlist and the README describe them; these rows are not recomputed by public_sanitize.py proof; no record, number or result is among them"
+ },
+ "files": [
+  {
+   "path": "README.md",
+   "original": "README.md",
+   "original_sha256": "2ca53a2d88df8f2c2d05bac1a02e63c8027bab087e70441bdcbb18097b9602ed",
+   "sanitized_sha256": "654c0cc28637c8b416da75041f7bfaa3398fa2d288fa6f0f17f7dcade7801d05"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_liquid.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_liquid.py",
+   "original_sha256": "d346522d19a969e9f30af0f2dd75a2f56b22f30f82773c52e6c887522c57f258",
+   "sanitized_sha256": "d87216e5b1868d2c1cda7eb0bfed84409b6a6e918a4e9c80813de310baccef6a"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_solids.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_solids.py",
+   "original_sha256": "50582a792056afb1a4197858a7c88d1abb5411291c424bd17cbf0490090a2eef",
+   "sanitized_sha256": "f580d2c5d88d2f985f165b9857b2c5e49d6604787e981c65f6b3daae93cc92ad"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/collect.sh",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/collect.sh",
+   "original_sha256": "e3df4f5bae9e7ccc5ce2548f20be26aa68ec50873051a450184153e5e87020a6",
+   "sanitized_sha256": "a24320195476ff236a2eaa0b9ea444ed8b9b11e8f6ee176cc4c27193d36b9086"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/launch_liquid.sh",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/launch_liquid.sh",
+   "original_sha256": "ae9b59f9edf1e7f789e25e752cb057f34700e1dc27d894d35282f857a41a8d78",
+   "sanitized_sha256": "133c522c4a05087d7501b8af27c9dab99bd3ad9d52fe6f56d684296e78cc8d2a"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids.py",
+   "original_sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+   "sanitized_sha256": "4dfbb7b8e9f067627e6ab1f1604b873fb87e063df80380604964cf9d277af92f"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids_v2.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids_v2.py",
+   "original_sha256": "d9ead6af2c41937533e95b798edca91ab21c13f66b7403b73983ee1adbcfe342",
+   "sanitized_sha256": "bc122205af123d1232c25199b5e0102cfb03046b9ca44b03d2171283d5eb0e8b"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/PLAN.md",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/PLAN.md",
+   "original_sha256": "5bafd64614ffe567aeb732ec9fa39ddba615c6d80e0f17c943394558eb030bfb",
+   "sanitized_sha256": "744184956a957161c86fbc105f8b78e532a439cdbb893bce77510bc4b96fd464"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step2.log",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step2.log",
+   "original_sha256": "d0c0a292f74d6e8e25f456e3bc6cd3b10d5a803eeec9bdefd374464a000ef2c7",
+   "sanitized_sha256": "e9192224fe1976b7cc3c2803941a84c5db24d854fb4dca8378f95aea65507ac3"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step3.log",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step3.log",
+   "original_sha256": "8a13b9917b28994a07651a97ced814ed0ad8f9d070188873e0a68dcbf4e79e93",
+   "sanitized_sha256": "19aabeb3a1864afa2d235b4216382ed16410d5d6cbc1e1333bcb5e096be4ad36"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step3b.log",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step3b.log",
+   "original_sha256": "00f09d797a571054a3c96f2734f15f9ad0e5e17f3346aadbf4adeb211ec08ed7",
+   "sanitized_sha256": "6834c098d9c6d05ff6ada7b65d0be7164c19ab67ef2dbae67474ab01e97aba20"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step4.log",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step4.log",
+   "original_sha256": "e92d0d7baa699876a81f2431f47105930ecd6e8082b35432c23e09bdff5b21c7",
+   "sanitized_sha256": "b21295a49c39e8a2f4bd19b61563bac4c951849e56ac3f1554ef262137c0263c"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-phaseforge/PLAN.md",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-phaseforge/PLAN.md",
+   "original_sha256": "8f10d54e699b0fdb2aa62814371d2159167922d6ba5d1f9869f565f58e1bea80",
+   "sanitized_sha256": "89085408bc1594019ee9cb3211a73ca3b750d38d4c9c25633eeb2f6cf54f0214"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/evidence/oneshot/oneshot_parameters.json",
+   "original": "assessments/crni-paper-fit-step4-s1/evidence/oneshot/oneshot_parameters.json",
+   "original_sha256": "49eb44a0bd3ee09f173ddff4e6b3d304fc30453f7d7a930963640a599c2857e2",
+   "sanitized_sha256": "68e983621cc89a4a066df0389897f5cac7d085fbd58745ff1f164927719ac42f"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/MANIFEST.json",
+   "original_sha256": "d30619703bd06c3e3d0551ebd646e4d7174691d36555430555c2d5f543d090c2",
+   "sanitized_sha256": "71a0ad30c1dc30dabcf1feb1f45ce985e39a7f552acaa8b59ff79b068aef4fed"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/emit_run_cards_10ac.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/emit_run_cards_10ac.py",
+   "original_sha256": "f51d60e60973566fc0215215deb7692bdaa3c7ca5cdef8b17f72cde81b6caba6",
+   "sanitized_sha256": "01b45e654cec11d8155829175cfd5de9361ed8c4066ef1b9b41eefeab9c0cd91"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/emit_run_cards_10ac_v2.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/emit_run_cards_10ac_v2.py",
+   "original_sha256": "eab2bec79cf70a525e658056f4ab3b62de7a0a380ab4c766cb2e4fb20bb4df7b",
+   "sanitized_sha256": "2ab3bc9aee97913339d1e8de0475a55aaf2aecaf2090e9fcc8ef979fa1353431"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/MANIFEST.json",
+   "original_sha256": "ab1ef7c335448c22d7dbe635abc93e156d83cd380ad251a38aa33e2d97e4033f",
+   "sanitized_sha256": "dd19a5f3f5f391d55965fdc5104f6d4587ef41fc86e0c4c5444e8e541cda3514"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log",
+   "original": "assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log",
+   "original_sha256": "d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13",
+   "sanitized_sha256": "2044e68421ecdcef9a1640aca9fe48f184b255e5b9f9e7b2b182d1ad913e688a"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs/results/data_consistency.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs/results/data_consistency.json",
+   "original_sha256": "6717ba9f456509d117b54056bcd6963722d48e07b20716b8986d9eea0780daf0",
+   "sanitized_sha256": "280554df7a1912f03db8333a5d38fd226cab8a8dfbb9903b5980323c67a2ff9b"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/oneshot/oneshot_parameters.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/oneshot/oneshot_parameters.json",
+   "original_sha256": "49eb44a0bd3ee09f173ddff4e6b3d304fc30453f7d7a930963640a599c2857e2",
+   "sanitized_sha256": "68e983621cc89a4a066df0389897f5cac7d085fbd58745ff1f164927719ac42f"
+  },
+  {
+   "path": "docs/fit_protocol.md",
+   "original": "docs/fit_protocol.md",
+   "original_sha256": "c2f0e42b5337c5e656805c89efa303bc3f59440ad628f357e0149c3382565207",
+   "sanitized_sha256": "2fd01974cfe440a90a2822cdf5935c0ca23e82f6ef6a4035481bde449bde8a08"
+  },
+  {
+   "path": "docs/fit_protocol@2.0.0.md",
+   "original": "docs/fit_protocol@2.0.0.md",
+   "original_sha256": "d85b4dd42d4bf4fbfd342f386bbb6673fc3bb19a25989a665362aafc9fd66074",
+   "sanitized_sha256": "85a969a87e15948ba630ae8e4ef898bd8b1f80c91c26707784e44d865333fab1"
+  },
+  {
+   "path": "docs/fit_protocol@2.1.0.md",
+   "original": "docs/fit_protocol@2.1.0.md",
+   "original_sha256": "6049494ef94b0831a1f106667e7a8752e7e4cec3a3f0ab89e2e7cacdbf934ec9",
+   "sanitized_sha256": "76b65ab1cd6def601b04736a9e007c6415de791692fe6a59449e643f9ea67d1f"
+  },
+  {
+   "path": "protocols/BRIEF_rerun_agents.md",
+   "original": "protocols/BRIEF_rerun_agents.md",
+   "original_sha256": "637306e5c2fb292c78b1bf0917000b4e108b48c0afc3dc3f475ae604cb6b99c5",
+   "sanitized_sha256": "64a077b7f1e135e19e0f36d02e8e66e474a5a3bcc78d240123f9a8e38c339dc7"
+  },
+  {
+   "path": "protocols/BRIEF_rerun_mcp_crni-paper-fit-step4c-b@1.0.0.md",
+   "original": "protocols/BRIEF_rerun_mcp_crni-paper-fit-step4c-b@1.0.0.md",
+   "original_sha256": "48584676d994a08746585fbf39f07bddd6791ef0538559af7f284b636743b325",
+   "sanitized_sha256": "9eb39813fada475d7ca51d46a35e9c4e86d8216b6d7e7858f1210ccdd214c13f"
+  },
+  {
+   "path": "protocols/BRIEF_rerun_mcp_crni-paper-fit-step4c-b@1.0.1.md",
+   "original": "protocols/BRIEF_rerun_mcp_crni-paper-fit-step4c-b@1.0.1.md",
+   "original_sha256": "347a680541c12c438219216deb51e5aad685d51d70bef071662f553fd1ff39d4",
+   "sanitized_sha256": "c61089379b43b22247ddda2444db072fd21d15c9ced67ab2304a1ce3dab078a2"
+  },
+  {
+   "path": "protocols/OPEN_QUESTIONS.md",
+   "original": "protocols/OPEN_QUESTIONS.md",
+   "original_sha256": "cbc72e4692bbf4e794f4e091d147951ab1f9c8c01f742901c16665988bd04e73",
+   "sanitized_sha256": "83de6e32acd8abea21065472f1a632136380da9224cb49e1c88a24ef9c51ae2f"
+  },
+  {
+   "path": "protocols/REPRODUCE.md",
+   "original": "protocols/REPRODUCE.md",
+   "original_sha256": "e91b8846219dd33c800857d23645aac61ab030fb2168a4a4e972cea6f1c041ae",
+   "sanitized_sha256": "437fb7cf230b60b989a6a2095c2e1602047f5103598feb0a14c3367aed3d81a4"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4-s1/dashboard.html",
+   "original": "protocols/dashboards/crni-paper-fit-step4-s1/dashboard.html",
+   "original_sha256": "d7b2a62bafdcd6d5f98ac72a6c1671a0cdbf1df7885fb7ba2d945f69cbe818e6",
+   "sanitized_sha256": "780349f29517d90b112237e41cf1a0f0d777618ae156e04ad0c962070af57c20"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4-s1/dashboard_data.json",
+   "original": "protocols/dashboards/crni-paper-fit-step4-s1/dashboard_data.json",
+   "original_sha256": "7db31f88b752dd7f49e01b9a9ee2287dac35376e44e64699011a2f0442a90bd1",
+   "sanitized_sha256": "cdfde251c24892740337492a00b9bfd2e696bef843e6a19aa9da0f3cb0aa35c1"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.0/dashboard.html",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.0/dashboard.html",
+   "original_sha256": "7db1875218416c2aa39c2304ce35e2f145a285cb669e6496f1c673e02a18ff84",
+   "sanitized_sha256": "a935bf6156d916d4f85032326cb3aabde4c505d304637782dc024e33d48f41f9"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.0/dashboard_data.json",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.0/dashboard_data.json",
+   "original_sha256": "8f5961a42b8cb9f45bf75dc3526a5ef0b7a5839867949182e36f99d9df5c73b1",
+   "sanitized_sha256": "017157dbf054faa068c1212ecf68ff6dca550ab6e9bda19744ad5f9d3a76dee4"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.2/dashboard.html",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.2/dashboard.html",
+   "original_sha256": "c97564a08a1da21bd569af9ad7721b20545d80d71a1f1cdfd6ae8b78697f0dde",
+   "sanitized_sha256": "5fcbbd5081dd2e5f562fb8b770d725c9ac38fab4fc4138272de6dca9cb4e3c34"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.2/dashboard_data.json",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b-1.0.2/dashboard_data.json",
+   "original_sha256": "1495369f6c37315e8381fd0148131b76da7ab1bfa6a4691e8d32587708855e7c",
+   "sanitized_sha256": "8be3a9a4045285c17f35139558cf7f858629989ccb2e1c058890944442e32298"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b/dashboard.html",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b/dashboard.html",
+   "original_sha256": "679f876a2c58b28ef2bd1bcc16378680ace1602e0be1ec235fde9d3ce7de6357",
+   "sanitized_sha256": "552f98bd8fe4fe3abe38d1027444005e4ac5402e33b4df60819c705cd0c308a8"
+  },
+  {
+   "path": "protocols/dashboards/crni-paper-fit-step4c-b/dashboard_data.json",
+   "original": "protocols/dashboards/crni-paper-fit-step4c-b/dashboard_data.json",
+   "original_sha256": "d18b9b6491140954afeb20c8d492b99035043082ede4e9d7b603d748319ed392",
+   "sanitized_sha256": "1aee0901c11a3611c0a394972f18700a9a258f28bca339c09a22c04e8eb0e404"
+  },
+  {
+   "path": "protocols/environment/espei-pr268.lock.txt",
+   "original": "protocols/environment/espei-pr268.lock.txt",
+   "original_sha256": "e0138471ec8a9b1945b893c6547f212d955310491e534e89ed55e9172bdcafed",
+   "sanitized_sha256": "a169211ab3c1b5b5f46bb0ea2ff97cd2c939d09686f0b99378afa90dbc1a0fda"
+  },
+  {
+   "path": "protocols/environment/pins/PINS.md",
+   "original": "protocols/environment/pins/PINS.md",
+   "original_sha256": "ae47a777bcca69fb0b23eb6780f4abc0523317c2f3e4d5ea39473c5b14b42ffb",
+   "sanitized_sha256": "69abd2b02270f5e1783dd2b983dbc122ac4c18d38416cb9f3078659578b0d90d"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_container.txt",
+   "original": "protocols/environment/pins/spark1_container.txt (renamed: host label)",
+   "original_sha256": "b25e93c6327a2a9ada80a78b7a86847baba869217ce6dac4776a217ae2f98b95",
+   "sanitized_sha256": "bf574d021de8b339b61e59f306cc77667970277e360a59ba54035cfcdf551044"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_dockerfile.txt",
+   "original": "protocols/environment/pins/spark1_dockerfile.txt (renamed: host label)",
+   "original_sha256": "e4ca6ca238a31ce360a0035ec20fe24a93dcc847c5fd167fb8b621c57a648ab0",
+   "sanitized_sha256": "fd972c51cc00e970850eee38ea71056848c8e6f627377c57df2656028a5f89d1"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_envs_hardware.txt",
+   "original": "protocols/environment/pins/spark1_envs_hardware.txt (renamed: host label)",
+   "original_sha256": "40d2937f34d8f4421f124972f368b6dc7497dbc8e9d4468029ab984520f5a69c",
+   "sanitized_sha256": "7ae2102e6e5850d967de2a5b1a8960d98c983f7dc194e06b595c656323518f42"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_image_pip_freeze.txt",
+   "original": "protocols/environment/pins/spark1_image_pip_freeze.txt (renamed: host label)",
+   "original_sha256": "2b2fa7539fe399f53dc68a25bcc8b35bd550b3acceba9b503501413debaef1ec",
+   "sanitized_sha256": "2b2fa7539fe399f53dc68a25bcc8b35bd550b3acceba9b503501413debaef1ec"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_mlip_weights_origin.json.txt",
+   "original": "protocols/environment/pins/spark1_mlip_weights_origin.json.txt (renamed: host label)",
+   "original_sha256": "1efdc9c0499bdf391cc9d215d079b90457ec472e277c1b43f0e730e9926f3373",
+   "sanitized_sha256": "1efdc9c0499bdf391cc9d215d079b90457ec472e277c1b43f0e730e9926f3373"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_mlip_weights_sha256.txt",
+   "original": "protocols/environment/pins/spark1_mlip_weights_sha256.txt (renamed: host label)",
+   "original_sha256": "59c5ee4d1e1630292f434c5e9cbe0010f6e0535ee6fe32d5b133884210d01945",
+   "sanitized_sha256": "59c5ee4d1e1630292f434c5e9cbe0010f6e0535ee6fe32d5b133884210d01945"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_phaseforgeplus.txt",
+   "original": "protocols/environment/pins/spark1_phaseforgeplus.txt (renamed: host label)",
+   "original_sha256": "d7b23b07ae9af2dfd7e6d994e3bf8e5f5e04c7c59b7373d2d729ff149726d7ea",
+   "sanitized_sha256": "27ab8d5527c2d93e82d0a3b2b4f748c57eb8fe8d0474338a59291f3d06f27c07"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_phaseforgeplus_files.sha256",
+   "original": "protocols/environment/pins/spark1_phaseforgeplus_files.sha256 (renamed: host label)",
+   "original_sha256": "b244af15cc94ac46b3d9f9e4ca9700774211390cb3a4120daa8664667e873f96",
+   "sanitized_sha256": "b244af15cc94ac46b3d9f9e4ca9700774211390cb3a4120daa8664667e873f96"
+  },
+  {
+   "path": "protocols/environment/pins/spark1_phaseforgeplus_src_files.sha256",
+   "original": "protocols/environment/pins/spark1_phaseforgeplus_src_files.sha256 (renamed: host label)",
+   "original_sha256": "a0ab89efc7b5b19d55cc3d27678c19833c0e0198a84aec4e36cb3dd3cc7a6406",
+   "sanitized_sha256": "a0ab89efc7b5b19d55cc3d27678c19833c0e0198a84aec4e36cb3dd3cc7a6406"
+  },
+  {
+   "path": "protocols/environment/pins/spark2_container.txt",
+   "original": "protocols/environment/pins/spark2_container.txt (renamed: host label)",
+   "original_sha256": "706a1f1bd09b26db4fa02a0af2da4daf05461c9234552ddab7c9b9b057021ea5",
+   "sanitized_sha256": "706a1f1bd09b26db4fa02a0af2da4daf05461c9234552ddab7c9b9b057021ea5"
+  },
+  {
+   "path": "protocols/environment/pins/spark2_image_pip_freeze.txt",
+   "original": "protocols/environment/pins/spark2_image_pip_freeze.txt (renamed: host label)",
+   "original_sha256": "2b2fa7539fe399f53dc68a25bcc8b35bd550b3acceba9b503501413debaef1ec",
+   "sanitized_sha256": "2b2fa7539fe399f53dc68a25bcc8b35bd550b3acceba9b503501413debaef1ec"
+  },
+  {
+   "path": "protocols/environment/pins/phaseforgeplus_equivalence.json",
+   "original": "protocols/environment/pins/phaseforgeplus_equivalence.json",
+   "original_sha256": "b8f36cd363fb2eac1ca8ca3d90392abe2feee6ee695f27f8e57c8f0d55f4f571",
+   "sanitized_sha256": "dd4f0bce7db5a3035714c811e21d2833a76746a4f9382f279686e90a1f2eca05"
+  },
+  {
+   "path": "protocols/environment/pins/studio_espei-pr268.lock.txt",
+   "original": "protocols/environment/pins/studio_espei-pr268.lock.txt",
+   "original_sha256": "e0138471ec8a9b1945b893c6547f212d955310491e534e89ed55e9172bdcafed",
+   "sanitized_sha256": "a169211ab3c1b5b5f46bb0ea2ff97cd2c939d09686f0b99378afa90dbc1a0fda"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.0.0.html",
+   "original": "protocols/general/orchid-calphad-fit@2.0.0.html",
+   "original_sha256": "d3df3bd07103fccdb6528c33f9190df14d08d287b59b914bc077f2a5f77a75c3",
+   "sanitized_sha256": "b254401824054bee8edc91c04d46ae9bde276b649044cdf14d9414ea1b12e141"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.0.0.md",
+   "original": "protocols/general/orchid-calphad-fit@2.0.0.md",
+   "original_sha256": "ec570b6ad7da8061c2122c9394ae15a9d48d4fbdda86a698cb95d721211f801f",
+   "sanitized_sha256": "ddbe6e4962d2590ad02d7e823970a88abedc5fee24caa2df2af25f6bcfa815de"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.0.0.yaml",
+   "original": "protocols/general/orchid-calphad-fit@2.0.0.yaml",
+   "original_sha256": "27b54fa9cd3f4fe50aa67654b42979a92c644e17fd4f914d501d798dbd19e4b7",
+   "sanitized_sha256": "8adc619113ec059da50bffc66e8139e94647b5d660c4841780152b99af463ab2"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.0.html",
+   "original": "protocols/general/orchid-calphad-fit@2.1.0.html",
+   "original_sha256": "f33ab7a1b330bab637d9a9bb2d1ea06884247f6e9d689101854f5b1c83b30193",
+   "sanitized_sha256": "1e26ec8c9413360894ff57c32896d10c9a1f2eb04a3ea3c3e8e1d3ffa92e926d"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.0.md",
+   "original": "protocols/general/orchid-calphad-fit@2.1.0.md",
+   "original_sha256": "1ce69d5e85b1c1e3b7a2f72aa39f20cd6cc1ffc2f3c5bf40079d42c9bfa03aa8",
+   "sanitized_sha256": "736eccd54d32e187b2a0e7803147dd596e8786cb5480b0a9d2fd37911704a921"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.0.yaml",
+   "original": "protocols/general/orchid-calphad-fit@2.1.0.yaml",
+   "original_sha256": "d3b4aedabbfbaf55121337ec7f2001f898cf1b8748577966039e21cc5686d409",
+   "sanitized_sha256": "565e32385c6b8eb1c4a8e1fa9e965c76c67a71e536a68b3ad2393a0a260bc7a1"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.1.html",
+   "original": "protocols/general/orchid-calphad-fit@2.1.1.html",
+   "original_sha256": "557f1c32979d8541e0148b1caab277a341262d5d93fb80eb153e25c4b9ef277b",
+   "sanitized_sha256": "b7da6080ba72a2ea84f70683257db54900a0bcb6d9ce21e5b401bd1d41ee672b"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.1.md",
+   "original": "protocols/general/orchid-calphad-fit@2.1.1.md",
+   "original_sha256": "38500adc4e23e33a9a1325efc060522f2132ed3a3cb29ef4491d90f21b6803f6",
+   "sanitized_sha256": "86e2a40ddd6b9204a6fe3eee0ee95efb6cd93226ec5a72536dd537ccc08a797a"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.1.yaml",
+   "original": "protocols/general/orchid-calphad-fit@2.1.1.yaml",
+   "original_sha256": "d97a867dacef38f970c22256de0dc5d4f05c1fb0eff9337935ed6ec10b27536d",
+   "sanitized_sha256": "3e97aac6e02788dd98edbef1d4bef32ebb1a5c1cfbdd562df088f0a6bee43c83"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.2.html",
+   "original": "protocols/general/orchid-calphad-fit@2.1.2.html",
+   "original_sha256": "81f02ac078dff8e463dfda398bc6f5c19e5cb5c136145a8ee9aa4d4f8a3e93eb",
+   "sanitized_sha256": "38ef755f8709d1829d621a7e389097775ad7c119a660bebdacf5780baafa6e25"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.2.md",
+   "original": "protocols/general/orchid-calphad-fit@2.1.2.md",
+   "original_sha256": "351af9b0780366a5dbf9a10bea8867b87cdcbb76368456e28c58ad8b8fefc5af",
+   "sanitized_sha256": "84996c3b4b98e029cde786fd07d828d0fa773757268d0f3f34142a5e2f5d5541"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.1.2.yaml",
+   "original": "protocols/general/orchid-calphad-fit@2.1.2.yaml",
+   "original_sha256": "7e782887b184ecbfa6d7d67961dca9e0f4d1abeb5ec7b6dc751f7e9a11144179",
+   "sanitized_sha256": "b951e76cdcd67c377a5ede759029f358e97639ae38cd741049e56488aae8b31b"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/code/compare_spot2.py",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/code/compare_spot2.py (renamed: host label)",
+   "original_sha256": "ddbcf51ce04e213dbe68bd21a2d5048e479b0dbe6fef7d9d6665c1b75058468e",
+   "sanitized_sha256": "c25f75656a7316e8439b94017517b490d5801352c5723450681167e03f94d3c6"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.json (renamed: host label)",
+   "original_sha256": "9d87de4024a85ac65dd244e9d3360f7dffd5f3654a448ce29227ac65121a04cd",
+   "sanitized_sha256": "185c381435b13d87617339017cfa1341aa026fc5bd2f659ea514dbb5adaff3fa"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.md",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/comparison.md (renamed: host label)",
+   "original_sha256": "30f5031d52bdd2e990d37a8a1e73b1744ef788c298e03532c9de5ca209673407",
+   "sanitized_sha256": "b1cb03c55210e6972800a970dac039d6d71f49f1899633bcf9312d3156cae357"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/container_image_ids.txt",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/container_image_ids.txt (renamed: host label)",
+   "original_sha256": "7c0ced05723e4a84c598547e02a7a70959f41758ecb6108cf9a976896104bc6f",
+   "sanitized_sha256": "7c0ced05723e4a84c598547e02a7a70959f41758ecb6108cf9a976896104bc6f"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/launch.sh",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/launch.sh (renamed: host label)",
+   "original_sha256": "0c62e9a669361768c1763fc6f5802d759022d35ff2e281e811db74480747e7cf",
+   "sanitized_sha256": "23974d0d0d9a5186016c47308c5c5a9dbbf6bc31ceaff73adaafcf053d04d3f5"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/launch.tsv",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/launch.tsv (renamed: host label)",
+   "original_sha256": "aa95b7c66599aa468bb4079f839d9dc863f757dadcf4d733a992ea8560b38f6e",
+   "sanitized_sha256": "aa95b7c66599aa468bb4079f839d9dc863f757dadcf4d733a992ea8560b38f6e"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/liquid-x050-N108-T2200.tail.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/liquid-x050-N108-T2200.tail.log (renamed: host label)",
+   "original_sha256": "19841da7adbe10d143e801ab60ef1edb48c067920f3fb370ed458e4a0ca5bbb7",
+   "sanitized_sha256": "19841da7adbe10d143e801ab60ef1edb48c067920f3fb370ed458e4a0ca5bbb7"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/solids-SMAX.tail.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/solids-SMAX.tail.log (renamed: host label)",
+   "original_sha256": "97fae5f0e4e2a0d2343aa45145987cd497f87ecf36f668e8f9b6e9b13bd28064",
+   "sanitized_sha256": "97fae5f0e4e2a0d2343aa45145987cd497f87ecf36f668e8f9b6e9b13bd28064"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/staged_inputs.sha256",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/logs/staged_inputs.sha256 (renamed: host label)",
+   "original_sha256": "026329d31f09952fd4c7908bffaadbb075e9a086cece8af0d9d3043ee8d980cc",
+   "sanitized_sha256": "026329d31f09952fd4c7908bffaadbb075e9a086cece8af0d9d3043ee8d980cc"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/density.complete.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/density.complete.json (renamed: host label)",
+   "original_sha256": "0bc6048a35b1500c797dbae5a76df30eee5ae843013b80afa72e0d3b762d9a7c",
+   "sanitized_sha256": "0bc6048a35b1500c797dbae5a76df30eee5ae843013b80afa72e0d3b762d9a7c"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/production.complete.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/production.complete.json (renamed: host label)",
+   "original_sha256": "6232300041c8fdd13f8ff784bb966a0a7b5f94266e6d09e78d41ea621add204e",
+   "sanitized_sha256": "6232300041c8fdd13f8ff784bb966a0a7b5f94266e6d09e78d41ea621add204e"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/result.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/result.json (renamed: host label)",
+   "original_sha256": "2bccdf112565a28bdc3cb98bd9739202f7f2151adac9b90f2ff54191a759ee40",
+   "sanitized_sha256": "2bccdf112565a28bdc3cb98bd9739202f7f2151adac9b90f2ff54191a759ee40"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/run.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/run.json (renamed: host label)",
+   "original_sha256": "e7b9ab6fe6b85d6849e2bdd5cbb3182f3d803e6016ae138296694202578fe791",
+   "sanitized_sha256": "e7b9ab6fe6b85d6849e2bdd5cbb3182f3d803e6016ae138296694202578fe791"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/thermo_10fs.npy",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/liquid/GRACE-2L-SMAX-OMAT-large/Cr50Ni50_N108_T2200/thermo_10fs.npy (renamed: host label)",
+   "original_sha256": "ff818e6451112832983226411de52c9bd1ba236255a99dd46c58c563de3396cd",
+   "sanitized_sha256": "ff818e6451112832983226411de52c9bd1ba236255a99dd46c58c563de3396cd"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s1",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s1 (renamed: host label)",
+   "original_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473",
+   "sanitized_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s2",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s2 (renamed: host label)",
+   "original_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473",
+   "sanitized_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s3",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/CONTCAR_s3 (renamed: host label)",
+   "original_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473",
+   "sanitized_sha256": "f5afe1147689a4cb8cbff36e6d63abe3f805468be58a87a3495dfa066897e473"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/elastic.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/elastic.json (renamed: host label)",
+   "original_sha256": "71d7e6e5213565ffa0bf08598ae9cb0128332fd7786a840edb370b410a56138c",
+   "sanitized_sha256": "71d7e6e5213565ffa0bf08598ae9cb0128332fd7786a840edb370b410a56138c"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/result.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/result.json (renamed: host label)",
+   "original_sha256": "ad5d3049cb110b19bc0ad5cb0d67183bf3b72633f9fc03e26db784b7c5869eb5",
+   "sanitized_sha256": "ad5d3049cb110b19bc0ad5cb0d67183bf3b72633f9fc03e26db784b7c5869eb5"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s2.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s2.log (renamed: host label)",
+   "original_sha256": "b08163f0945d1d74bde45055ed31c47a4f315829e64ec20166305e88ec4e280c",
+   "sanitized_sha256": "b08163f0945d1d74bde45055ed31c47a4f315829e64ec20166305e88ec4e280c"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s2.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s2.traj (renamed: host label)",
+   "original_sha256": "797384afd1fbceb9547d6c67b6f61e6d32e8ec67ae3f651d5338964c7e4debb5",
+   "sanitized_sha256": "797384afd1fbceb9547d6c67b6f61e6d32e8ec67ae3f651d5338964c7e4debb5"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s3.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s3.log (renamed: host label)",
+   "original_sha256": "b08163f0945d1d74bde45055ed31c47a4f315829e64ec20166305e88ec4e280c",
+   "sanitized_sha256": "b08163f0945d1d74bde45055ed31c47a4f315829e64ec20166305e88ec4e280c"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s3.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.0000_pure/s3.traj (renamed: host label)",
+   "original_sha256": "797384afd1fbceb9547d6c67b6f61e6d32e8ec67ae3f651d5338964c7e4debb5",
+   "sanitized_sha256": "797384afd1fbceb9547d6c67b6f61e6d32e8ec67ae3f651d5338964c7e4debb5"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s1",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s1 (renamed: host label)",
+   "original_sha256": "fd157a347b08b5a08168f02f9fdac2228d039962ca64a9bf788f7c87163c5766",
+   "sanitized_sha256": "fd157a347b08b5a08168f02f9fdac2228d039962ca64a9bf788f7c87163c5766"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s2",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s2 (renamed: host label)",
+   "original_sha256": "0f60636ef6ae1c3a4fa2847cdb8373a86e30fba6b8134043eedd365b338f72f9",
+   "sanitized_sha256": "0f60636ef6ae1c3a4fa2847cdb8373a86e30fba6b8134043eedd365b338f72f9"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s3",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/CONTCAR_s3 (renamed: host label)",
+   "original_sha256": "cff869b09485e7aeea95f60007c440ba61bb7d64746d4768d2da990a2b3cda83",
+   "sanitized_sha256": "cff869b09485e7aeea95f60007c440ba61bb7d64746d4768d2da990a2b3cda83"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/elastic.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/elastic.json (renamed: host label)",
+   "original_sha256": "489ccaf929d33a94d9d408990fdb4998507e5c4116a82233498ddc6f9699cdd8",
+   "sanitized_sha256": "489ccaf929d33a94d9d408990fdb4998507e5c4116a82233498ddc6f9699cdd8"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/result.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/result.json (renamed: host label)",
+   "original_sha256": "7d8bc374391fa4e630916c8fe1701da8854fb72a9d92cc0b7bfccf43683bc3bc",
+   "sanitized_sha256": "7d8bc374391fa4e630916c8fe1701da8854fb72a9d92cc0b7bfccf43683bc3bc"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s2.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s2.log (renamed: host label)",
+   "original_sha256": "1c0c12bbb9564a60401724fc02d95449b22f7901e327201e5fd7aed904b26486",
+   "sanitized_sha256": "1c0c12bbb9564a60401724fc02d95449b22f7901e327201e5fd7aed904b26486"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s2.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s2.traj (renamed: host label)",
+   "original_sha256": "805616c661ca838308de5e8900f7ad4d66caa4583c5c8c8057bb0d50ded5ea5e",
+   "sanitized_sha256": "805616c661ca838308de5e8900f7ad4d66caa4583c5c8c8057bb0d50ded5ea5e"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s3.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s3.log (renamed: host label)",
+   "original_sha256": "a2a6d093c7df358bead105bf499e8b27d8c4f14ddc3fd2d37ed8fbe23e1e3d9f",
+   "sanitized_sha256": "a2a6d093c7df358bead105bf499e8b27d8c4f14ddc3fd2d37ed8fbe23e1e3d9f"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s3.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x0.2500_s2026110501/s3.traj (renamed: host label)",
+   "original_sha256": "f3689754c55458d85ededd291b1b3de850a585a2c45c00c894ab17a6e2308fa9",
+   "sanitized_sha256": "f3689754c55458d85ededd291b1b3de850a585a2c45c00c894ab17a6e2308fa9"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s1",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s1 (renamed: host label)",
+   "original_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50",
+   "sanitized_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s2",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s2 (renamed: host label)",
+   "original_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50",
+   "sanitized_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s3",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/CONTCAR_s3 (renamed: host label)",
+   "original_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50",
+   "sanitized_sha256": "216267440d80c31c774dff2edf1da954154102a19b4e518914b1f9d55cfd8c50"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/result.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/result.json (renamed: host label)",
+   "original_sha256": "6a998e04acef00f9582099e6a2e39b47944e1ac6a9835509bf4bebc734b7259e",
+   "sanitized_sha256": "6a998e04acef00f9582099e6a2e39b47944e1ac6a9835509bf4bebc734b7259e"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s2.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s2.log (renamed: host label)",
+   "original_sha256": "9ea8c4ba557422e7a7867757a365020f93718a87a86b44669790eb4233f9757f",
+   "sanitized_sha256": "9ea8c4ba557422e7a7867757a365020f93718a87a86b44669790eb4233f9757f"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s2.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s2.traj (renamed: host label)",
+   "original_sha256": "b032c6a018bb1a4a4a268adcf2332220cf0edc156f1ec5b5871532370e6980f9",
+   "sanitized_sha256": "b032c6a018bb1a4a4a268adcf2332220cf0edc156f1ec5b5871532370e6980f9"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s3.log",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s3.log (renamed: host label)",
+   "original_sha256": "9ea8c4ba557422e7a7867757a365020f93718a87a86b44669790eb4233f9757f",
+   "sanitized_sha256": "9ea8c4ba557422e7a7867757a365020f93718a87a86b44669790eb4233f9757f"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s3.traj",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/BCC_A2/x1.0000_pure/s3.traj (renamed: host label)",
+   "original_sha256": "b032c6a018bb1a4a4a268adcf2332220cf0edc156f1ec5b5871532370e6980f9",
+   "sanitized_sha256": "b032c6a018bb1a4a4a268adcf2332220cf0edc156f1ec5b5871532370e6980f9"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/summary.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck-20261107-spark3/results/solids/GRACE-2L-SMAX-OMAT-large/summary.json (renamed: host label)",
+   "original_sha256": "a1413c0c129af3f5619e04c57964d2a73baf1899dff5f8c711c32845caf29c15",
+   "sanitized_sha256": "a1413c0c129af3f5619e04c57964d2a73baf1899dff5f8c711c32845caf29c15"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck/comparison.json",
+   "original": "protocols/reproduce/crni-mlip-spotcheck/comparison.json",
+   "original_sha256": "334fe19f5a27afe764ef750025cee83a0670f60b875a24e886dc515498eae22f",
+   "sanitized_sha256": "d6bb23ba2cc3e8db21d3de905ce9489f2638ac890c9cbefdfdc1dd51bcbfcf3b"
+  },
+  {
+   "path": "protocols/reproduce/crni-mlip-spotcheck/comparison.md",
+   "original": "protocols/reproduce/crni-mlip-spotcheck/comparison.md",
+   "original_sha256": "8fbb74f3c58aef2478b7448cd7962e7705ede87b2f46fab2e16ec1ea3436d873",
+   "sanitized_sha256": "76fa90e7546e2f31240d8de386ef011c2cfe2c64bf6dbdc10f8175c3265c0d1e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/comparison.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/comparison.json (renamed: host label)",
+   "original_sha256": "d05ae499770a02332afd1c30e6a7d4aa4fdc2cbc1b443b790f1b76ab05483750",
+   "sanitized_sha256": "f724412f73fe13f9d0ed23b5c66d03ddc3c63e4a7d344f084931b53a62fa48d6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/comparison.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/comparison.md (renamed: host label)",
+   "original_sha256": "27bef39a61db1225a39f0faf778b22955a5a960cd3c71af1304ce8b2875eba12",
+   "sanitized_sha256": "100cd83d5c83a7a2a0ebe912892548ce39b984865e2dc752ed77cd18128526df"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step2.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step2.log (renamed: host label)",
+   "original_sha256": "c5b7833a1973113dac855568614845d165e9af1229f806127c52dd1b33fb0571",
+   "sanitized_sha256": "cf7f2dd4f63a9e069a932426797b6c84fa3a42e8353f0b02ec0d0777c1876c91"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step3b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step3b.log (renamed: host label)",
+   "original_sha256": "cbaae0ddc06e80691689d30041f8a77541256bb8e95a2fc960e8759eb7c7489b",
+   "sanitized_sha256": "a10a5f645da8ff7e7ccb51af831cabd48ee1d80d0c668376a7a67959dd164ce3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step4.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/reproduce_logs/step4.log (renamed: host label)",
+   "original_sha256": "80d02d8ff37913b011df1f95a55e9fd3b0990eda5b312e82965d06fedbf02322",
+   "sanitized_sha256": "0b60126458733f4783d12e2b7611ca13744e334085bc7a8aab76fd8cc80415ff"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/run_report.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/run_report.json (renamed: host label)",
+   "original_sha256": "7ef3218a0c896f0e9ec52d8b1b17ac25e7283afc21e2e89ba522299fefe2b143",
+   "sanitized_sha256": "23cfc562bb19589e8515c06e900922aa067b9272b5448655f61e11ba1ef82bb0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/evaluation.json (renamed: host label)",
+   "original_sha256": "6851cee25acf94313c87efa59c30157623efa4e26e130501f92abc53d1306ca9",
+   "sanitized_sha256": "6851cee25acf94313c87efa59c30157623efa4e26e130501f92abc53d1306ca9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/multistart.json (renamed: host label)",
+   "original_sha256": "7e1d85d81ed79e2ea15318828963692ecd76b97ab434bd2f28b3d81c76ce5707",
+   "sanitized_sha256": "7e1d85d81ed79e2ea15318828963692ecd76b97ab434bd2f28b3d81c76ce5707"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/run_card.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step2_liquidus/run_card.json (renamed: host label)",
+   "original_sha256": "3daeb10ff45bd52c2e0ba49102e1e1e4d3f33784a70b9166f5f6aee0dc260144",
+   "sanitized_sha256": "c1e307181cd375f4af3d8bac0c7ff45ec44b24f3c9cda7006dd67b28299fafec"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/evaluation.json (renamed: host label)",
+   "original_sha256": "13690d97b3d5887f994bc5be4bc5e6a0d78dc55e767babaa3af4d99d767ae8b3",
+   "sanitized_sha256": "13690d97b3d5887f994bc5be4bc5e6a0d78dc55e767babaa3af4d99d767ae8b3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/multistart.json (renamed: host label)",
+   "original_sha256": "d16f8c0a873829dce11c0a8109fc2439654689a68fa1101c5e0184bd033c91de",
+   "sanitized_sha256": "d16f8c0a873829dce11c0a8109fc2439654689a68fa1101c5e0184bd033c91de"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/run_card.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step3b_thermo_crni2free/run_card.json (renamed: host label)",
+   "original_sha256": "486f978beaa9304ba465267ac21af2a028509a7b7b7ab421bf6ad48ea82e8f95",
+   "sanitized_sha256": "85bf1ee912762a38a9a6575d2fe84f66ce09fc6b957ca37f2e1348557426946d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/evaluation.json (renamed: host label)",
+   "original_sha256": "542706f04009fe6caf06b71bbe8d741f112408c9fcb1100b88f0940affb0f6dd",
+   "sanitized_sha256": "542706f04009fe6caf06b71bbe8d741f112408c9fcb1100b88f0940affb0f6dd"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/multistart.json (renamed: host label)",
+   "original_sha256": "d6e7248132a97afcbe45a1724e920e3a160ec9009ff5af193284eb7feef57776",
+   "sanitized_sha256": "d6e7248132a97afcbe45a1724e920e3a160ec9009ff5af193284eb7feef57776"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/run_card.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/steps/step4_solid/run_card.json (renamed: host label)",
+   "original_sha256": "f464b48cf29305ab258babf9ebe2e023eec2cac6cf301d0bb1925ee3393da8e1",
+   "sanitized_sha256": "d9f7bca5d84297814bac030e9c11363f33ac1e65720fb3f5f07f4d8bb2450f65"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step2_liquidus_pick.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step2_liquidus_pick.tdb (renamed: host label)",
+   "original_sha256": "586549f5828c169d0997693cbef8ef187352ece495394bdaf582bfdd3a5904de",
+   "sanitized_sha256": "586549f5828c169d0997693cbef8ef187352ece495394bdaf582bfdd3a5904de"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step3b_thermo_crni2free_pick.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step3b_thermo_crni2free_pick.tdb (renamed: host label)",
+   "original_sha256": "92f368cb896133e441de1f5eaebf8a6a2922a9a20f49f59e7958a074c5d6e2f5",
+   "sanitized_sha256": "92f368cb896133e441de1f5eaebf8a6a2922a9a20f49f59e7958a074c5d6e2f5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step4_solid_pick.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/tdb/step4_solid_pick.tdb (renamed: host label)",
+   "original_sha256": "7ddafb90588b6118275847bb34421d003b6af81dde49205d4dee098ad3d65a2b",
+   "sanitized_sha256": "7ddafb90588b6118275847bb34421d003b6af81dde49205d4dee098ad3d65a2b"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/oneshot_noSex/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/oneshot_noSex/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "70730bf7844e52634d40e4f0e9f065baab1948d14e17a3a759507af9f246154c",
+   "sanitized_sha256": "70730bf7844e52634d40e4f0e9f065baab1948d14e17a3a759507af9f246154c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s0_start/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s0_start/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "9cb65ab6681356ad8c0b7648799c87144c3bda31ea6c27424b5de431fc3a3265",
+   "sanitized_sha256": "9cb65ab6681356ad8c0b7648799c87144c3bda31ea6c27424b5de431fc3a3265"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s1_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s1_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "16cbcffe1ad7a73306aa297a3cba59c6668fa59813edf91c1a630e9d613bedbb",
+   "sanitized_sha256": "16cbcffe1ad7a73306aa297a3cba59c6668fa59813edf91c1a630e9d613bedbb"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s2_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s2_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "7e9dc9a5ba4f199ac05a6c66e14ffc073224b02d1e13eb9f358a1824d65b1eb6",
+   "sanitized_sha256": "7e9dc9a5ba4f199ac05a6c66e14ffc073224b02d1e13eb9f358a1824d65b1eb6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s3_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s3_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "fb844b136c82f7a9cf9264572eb89afad2f4b499de45b0ba2e5145f8e4b29b95",
+   "sanitized_sha256": "fb844b136c82f7a9cf9264572eb89afad2f4b499de45b0ba2e5145f8e4b29b95"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s4_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s4_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "cb7da8406ac7970eb6d1c7d6947e2a40ff33798e06633c753c498875ce7fc0db",
+   "sanitized_sha256": "cb7da8406ac7970eb6d1c7d6947e2a40ff33798e06633c753c498875ce7fc0db"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s5_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s5_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "5b3c089e8bb7491e476ae70e0e11d432e8926d97dea2f072d926fe07c5e29b8a",
+   "sanitized_sha256": "5b3c089e8bb7491e476ae70e0e11d432e8926d97dea2f072d926fe07c5e29b8a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s6_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s6_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "9842bffa3b01f687a1fc24d1aef0c0491c8688a47b84e00b91c89d4e5f5a9b41",
+   "sanitized_sha256": "9842bffa3b01f687a1fc24d1aef0c0491c8688a47b84e00b91c89d4e5f5a9b41"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s7_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step2_liquidus/s7_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "913253440ca25a6228982129ec486cac680789cca261e64951e34cb9ba2dc78c",
+   "sanitized_sha256": "913253440ca25a6228982129ec486cac680789cca261e64951e34cb9ba2dc78c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s0_start/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s0_start/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "697e6e84c2be7282e4ea135d6183605aa23fe9ff6092f3737f8c96bdfe45523e",
+   "sanitized_sha256": "697e6e84c2be7282e4ea135d6183605aa23fe9ff6092f3737f8c96bdfe45523e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s1_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s1_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "25b24d64625fede7418dafb2f31a8a6214ae1ac1cb28b758ececdf116c287a03",
+   "sanitized_sha256": "25b24d64625fede7418dafb2f31a8a6214ae1ac1cb28b758ececdf116c287a03"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s2_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s2_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "04bc9960bd1723a67e494f3de2fc1fd9d60be01eee82697a501bf99f5dc279eb",
+   "sanitized_sha256": "04bc9960bd1723a67e494f3de2fc1fd9d60be01eee82697a501bf99f5dc279eb"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s3_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s3_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "b98615e1702d793d66e6b179a69cdeba9693480ac36612f598515c9c48fe8735",
+   "sanitized_sha256": "b98615e1702d793d66e6b179a69cdeba9693480ac36612f598515c9c48fe8735"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s4_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s4_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "c6eb4efcb6ee1a0a63a43395b0f68350fcc6114c55268fbc23ba95fc300f9ac2",
+   "sanitized_sha256": "c6eb4efcb6ee1a0a63a43395b0f68350fcc6114c55268fbc23ba95fc300f9ac2"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s5_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s5_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "b1001779b93a06113c112171b46575ba99ea494ef4c359f0d494c383217b3b5c",
+   "sanitized_sha256": "b1001779b93a06113c112171b46575ba99ea494ef4c359f0d494c383217b3b5c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s6_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s6_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "5ed87557e17738da2b60758b3b982777207414146f6ab6dac3fc3ed84537f418",
+   "sanitized_sha256": "5ed87557e17738da2b60758b3b982777207414146f6ab6dac3fc3ed84537f418"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s7_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step3b_thermo_crni2free/s7_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "75af7601d3e92becedb14b7a6b95068f718f99b5b1842a2ea8fb6f8b5d65a0e6",
+   "sanitized_sha256": "75af7601d3e92becedb14b7a6b95068f718f99b5b1842a2ea8fb6f8b5d65a0e6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s0_start/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s0_start/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "3a111594293a1496ef73e7d5306b9ade5de422f29ab9a418756ea25ccdcbdc88",
+   "sanitized_sha256": "3a111594293a1496ef73e7d5306b9ade5de422f29ab9a418756ea25ccdcbdc88"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s1_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s1_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "c1b52a9d71666f1fd753ffe67e679610aa3abfb2e8f1b0386f0e92f517f84c38",
+   "sanitized_sha256": "c1b52a9d71666f1fd753ffe67e679610aa3abfb2e8f1b0386f0e92f517f84c38"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s2_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s2_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "26200fdbb659d6e6c1c9d20d53fb5715675d60c4cf40c79bbdff670b6c741d81",
+   "sanitized_sha256": "26200fdbb659d6e6c1c9d20d53fb5715675d60c4cf40c79bbdff670b6c741d81"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s3_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s3_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "4b96a7dbf793bb0db7cdd06e438da62736248b6846c5f757387aefd115ab481d",
+   "sanitized_sha256": "4b96a7dbf793bb0db7cdd06e438da62736248b6846c5f757387aefd115ab481d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s4_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s4_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "1004f554ed1f573e8ae14e11c08f9016c66343cd8416d4eb66cc921bf4b607ad",
+   "sanitized_sha256": "1004f554ed1f573e8ae14e11c08f9016c66343cd8416d4eb66cc921bf4b607ad"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s5_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s5_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "bc8e6b51d068d68e0497098478acb287c15261050011de7b5e775297f130305f",
+   "sanitized_sha256": "bc8e6b51d068d68e0497098478acb287c15261050011de7b5e775297f130305f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s6_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s6_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "3d9a2021d3105c65c3f4ca8e7db28d4be975995c41d3cdedcab29e8d999f9a38",
+   "sanitized_sha256": "3d9a2021d3105c65c3f4ca8e7db28d4be975995c41d3cdedcab29e8d999f9a38"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s7_perturbed/trajectory.jsonl",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-spark1/trajectories/step4_solid/s7_perturbed/trajectory.jsonl (renamed: host label)",
+   "original_sha256": "329f0e7d4a67c659a89239830fc2f080b2d8b5b54b3614111b3600da66b4a8ad",
+   "sanitized_sha256": "329f0e7d4a67c659a89239830fc2f080b2d8b5b54b3614111b3600da66b4a8ad"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-studio-F2/comparison.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-studio-F2/comparison.json",
+   "original_sha256": "e5eac7459d313bfd5859047c4b997adaefe9ded28dee6e16697be078dda265f8",
+   "sanitized_sha256": "0b7753769de84522b2496da6bb23a0518f0ad1cc8dc42aaabba409b85f1eb79c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4-s1-studio-F2/comparison.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4-s1-studio-F2/comparison.md",
+   "original_sha256": "ba199a7cccc4901297a5e0bc1ac19340d3d0d490b38b6ba110200794597f187f",
+   "sanitized_sha256": "b946ed7c7d0a0f700f6fe744840804ac2107aac4255131147929d90db0f975a2"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/README.md (renamed: host label)",
+   "original_sha256": "5ba4bb2852480c67bbf1646727c64dc18259350e34cba5fd5fa79b7aaed997fb",
+   "sanitized_sha256": "ca118f0c5f8f1b30adb74e2a52f1bbfffffde70e4a2323483091a15315bad59c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/prediction_comparison_params.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/prediction_comparison_params.json (renamed: host label)",
+   "original_sha256": "dda2ca8d438a6422459e67dc5d0cc493085f617ae047d82efe764cd66c7bbffc",
+   "sanitized_sha256": "dda2ca8d438a6422459e67dc5d0cc493085f617ae047d82efe764cd66c7bbffc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/reproduce_report.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/reproduce_report.json (renamed: host label)",
+   "original_sha256": "cb0c875f7e17bad67de4311057eba271d13f5f0c801041fcd2606b52161fa562",
+   "sanitized_sha256": "6ada80fece4dacc28fb6004fa252e31182a6fb708aa607f4f153e28eea252ebf"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/reproduce_report.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/reproduce_report.md (renamed: host label)",
+   "original_sha256": "f92da8e01670ec270ca7af2ead5dfc40ef7ba722c96d2c1037848afc7789fe9f",
+   "sanitized_sha256": "a982d1ee8cec0684791a7443e7d30fdacc3cd929d9ed5792808ff2886c34f893"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/anneal_parameters.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/anneal_parameters.json (renamed: host label)",
+   "original_sha256": "cde2c7a7e96850320690163adf7200c61993856d82bc8bb77c7770e55d4474e1",
+   "sanitized_sha256": "cde2c7a7e96850320690163adf7200c61993856d82bc8bb77c7770e55d4474e1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/anneal_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/anneal_status.json (renamed: host label)",
+   "original_sha256": "8399e89f13b8d8353b9558526472f4471ef0b10123d02caa9338f063561b1bb1",
+   "sanitized_sha256": "8399e89f13b8d8353b9558526472f4471ef0b10123d02caa9338f063561b1bb1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/basin_parameters.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/basin_parameters.json (renamed: host label)",
+   "original_sha256": "0419bd69abe1692fb71bc01fcefafff441742b65d457f09af6f2c1daf8f32b22",
+   "sanitized_sha256": "0419bd69abe1692fb71bc01fcefafff441742b65d457f09af6f2c1daf8f32b22"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/basin_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/10c/basin_status.json (renamed: host label)",
+   "original_sha256": "58994cf53866f82e48d0a06c866a34abd20f7023a1014c204632cbc240165e3c",
+   "sanitized_sha256": "58994cf53866f82e48d0a06c866a34abd20f7023a1014c204632cbc240165e3c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/check10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/check10a_rerun.json (renamed: host label)",
+   "original_sha256": "5d3211bbba6f008582146be23e295fb998d3b0866ea4aec5493283168d9de833",
+   "sanitized_sha256": "37df0826c80be75c6b0eb68f069b1804b8da20c31a673396607f0192825aed72"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/evaluation.json (renamed: host label)",
+   "original_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3",
+   "sanitized_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/laplace_step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/laplace_step4c_b.json (renamed: host label)",
+   "original_sha256": "c4c272f3f7e523c50ba1330bcaee35ff2599098dd9f9a214a40a451f0f4f16a2",
+   "sanitized_sha256": "c4c272f3f7e523c50ba1330bcaee35ff2599098dd9f9a214a40a451f0f4f16a2"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/multistart.json (renamed: host label)",
+   "original_sha256": "7c7cceea0fa06406337b0722255101eaa917a004afb538e13e60d947878ccb53",
+   "sanitized_sha256": "7c7cceea0fa06406337b0722255101eaa917a004afb538e13e60d947878ccb53"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/per_dataset_ref.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/per_dataset_ref.json (renamed: host label)",
+   "original_sha256": "4805d18b35097dd8b5c616e803ddfbf12cd276af3594836ce8684a8ae5b7dac3",
+   "sanitized_sha256": "4805d18b35097dd8b5c616e803ddfbf12cd276af3594836ce8684a8ae5b7dac3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/per_dataset_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/per_dataset_rerun.json (renamed: host label)",
+   "original_sha256": "667ad9b43ea31cb97c35a7f61774dac09b149312b7197fb4ec8b3d8988637ab9",
+   "sanitized_sha256": "667ad9b43ea31cb97c35a7f61774dac09b149312b7197fb4ec8b3d8988637ab9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/phase_sequence_reference.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/phase_sequence_reference.json (renamed: host label)",
+   "original_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5",
+   "sanitized_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/phase_sequence_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/phase_sequence_rerun.json (renamed: host label)",
+   "original_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5",
+   "sanitized_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/physics_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/physics_rerun.json (renamed: host label)",
+   "original_sha256": "6fd285ee55b0f448b7c72ef4c392a331fe6ace6b0881ced9a91ceec3967c62d6",
+   "sanitized_sha256": "b6d6f376783fd4df471da9643e8bc3ea07ea2e79f850f56abf4b3967a934af83"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/check10a.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/check10a.log (renamed: host label)",
+   "original_sha256": "16ce23f3f63127e90d46718a9abfc35fa00ffbe513e0c459a8235ca089383b85",
+   "sanitized_sha256": "16ce23f3f63127e90d46718a9abfc35fa00ffbe513e0c459a8235ca089383b85"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/evaluate_states.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/evaluate_states.log (renamed: host label)",
+   "original_sha256": "cf6241cafe50de33eabc02cb226df83224293502925e50342dc1a5bd20eae101",
+   "sanitized_sha256": "cf6241cafe50de33eabc02cb226df83224293502925e50342dc1a5bd20eae101"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/global_10c.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/global_10c.log (renamed: host label)",
+   "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/laplace_weights.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/laplace_weights.log (renamed: host label)",
+   "original_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9",
+   "sanitized_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/phase_sequence.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/phase_sequence.log (renamed: host label)",
+   "original_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f",
+   "sanitized_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/pure_elements.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/pure_elements.log (renamed: host label)",
+   "original_sha256": "1964434ebff32ebcf6a7d8fcaf559c5e01cc5c446035bc690c04010a61d91dcf",
+   "sanitized_sha256": "29e2cdfd047baff6e81f72a6181993af31efab649171802975693906aa8b142a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/step4c_b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/reproduce_logs/step4c_b.log (renamed: host label)",
+   "original_sha256": "66003c28f9dc2586e2be72b5f392b51732e8659a137e351c9dbdff2b3f5cec6f",
+   "sanitized_sha256": "4018fb147651fa7564bb0eef967bf51abee8e6fe08479a5693497d8760873fa6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/s1_perturbed.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/s1_perturbed.tdb (renamed: host label)",
+   "original_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a",
+   "sanitized_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/s4_perturbed.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/s4_perturbed.tdb (renamed: host label)",
+   "original_sha256": "f9d49da78a9a91e9a29a310c6c632aad02e22667b1115608ecfc597bf49f1c55",
+   "sanitized_sha256": "f9d49da78a9a91e9a29a310c6c632aad02e22667b1115608ecfc597bf49f1c55"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/step4c_b_hingefloor_pick.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/rerun/step4c_b_hingefloor_pick.tdb (renamed: host label)",
+   "original_sha256": "9547bd6917472f890df7f0d27810d121869f3cf8fa8572b8b9934bc07a87c53a",
+   "sanitized_sha256": "9547bd6917472f890df7f0d27810d121869f3cf8fa8572b8b9934bc07a87c53a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/thermo_comparison_summary.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.0-spark1/thermo_comparison_summary.json (renamed: host label)",
+   "original_sha256": "3e15c8de03cac499e9270f05f5b7d5a7cc4a1f66a966fe908a63fe6e80fc3740",
+   "sanitized_sha256": "3e15c8de03cac499e9270f05f5b7d5a7cc4a1f66a966fe908a63fe6e80fc3740"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/README.md (renamed: host label)",
+   "original_sha256": "852630604131bbf8de8aa1355adb0647391edf84b24fa4016f2e9d48d276596e",
+   "sanitized_sha256": "59ea7fa85e97a2c7c464f5ef9dd66fdfdd7fdc1c21b4cb36e7889b387f363be7"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report.json (renamed: host label)",
+   "original_sha256": "1099de60d919dd923ecb40f9a7f5f0d40e91578ea3791bad6a48c9e5c9d28426",
+   "sanitized_sha256": "72336e59cf245aae55e95c786320fee8c66279204a29b0854571459b22d3b308"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report.md (renamed: host label)",
+   "original_sha256": "f1f0d659728a43ad640fdc72b98fedee8ca63f57eac1f7cf76f86e1ff43b362a",
+   "sanitized_sha256": "70bcb67b0959e90aec87440da510f50315df4dea08fd90cc715470d7360fc342"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_run.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_run.json (renamed: host label)",
+   "original_sha256": "dd36ca7341c9d242699f8b8b4b1b3edefe53a820e48e94fa841320d754c92add",
+   "sanitized_sha256": "3ad3bdb9c22d13a191c76c4fccd52e7bf3c1e9f677aeb4ee2544636ac721ea82"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_run.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_run.md (renamed: host label)",
+   "original_sha256": "d0c8877a1d5c9b677e4a92a5719a3c7ea471c58c47cf0071bd8fc1a60c641514",
+   "sanitized_sha256": "9054745a70ffca439b94f7d502dc1c1cd04508c3870abd8dd18aea39cf633692"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_thermochemistry.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/reproduce_report_thermochemistry.json (renamed: host label)",
+   "original_sha256": "c0a0fcb847996df5f06635f1227d0867460e03ea5374a400a7bdea075374f04d",
+   "sanitized_sha256": "05383706f52d8c014fa36e42e85954796b8226e2dcf6215b57d791bdc4677203"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/10c/anneal_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/10c/anneal_status.json (renamed: host label)",
+   "original_sha256": "e25e791be798a1d0a1cfcd668a5572fafdf9bf292c93f9f664cddcbf6e06d05e",
+   "sanitized_sha256": "e25e791be798a1d0a1cfcd668a5572fafdf9bf292c93f9f664cddcbf6e06d05e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/10c/basin_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/10c/basin_status.json (renamed: host label)",
+   "original_sha256": "13e61976128a3ddb35f76c6b178f3d8f52b1fc38e4be45a2e4b3303bc187ec13",
+   "sanitized_sha256": "13e61976128a3ddb35f76c6b178f3d8f52b1fc38e4be45a2e4b3303bc187ec13"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/check10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/check10a_rerun.json (renamed: host label)",
+   "original_sha256": "eaef0b74fc6def74923e4807aa8462e974d458e0da777adca8386845efb14b15",
+   "sanitized_sha256": "97498b33b129ae2495f2251abb4e6b4e5b91981ea6c9f6f0bbb9a9b3d15bdd16"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/evaluation.json (renamed: host label)",
+   "original_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3",
+   "sanitized_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/laplace_step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/laplace_step4c_b.json (renamed: host label)",
+   "original_sha256": "9518ec7d155b2bc13a22794e8a847025146ccc1546892ed7967a7641163f11db",
+   "sanitized_sha256": "9518ec7d155b2bc13a22794e8a847025146ccc1546892ed7967a7641163f11db"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/multistart.json (renamed: host label)",
+   "original_sha256": "5d310a2b9195fdf97232eeb0c55785c8a230d478f2fa0fa47026f55ecb3a0c3c",
+   "sanitized_sha256": "5d310a2b9195fdf97232eeb0c55785c8a230d478f2fa0fa47026f55ecb3a0c3c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/per_dataset_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/per_dataset_rerun.json (renamed: host label)",
+   "original_sha256": "d02d995fe9612bfa83000d15695cdab98f9282a66e2deaf87d2280a1cba4dc98",
+   "sanitized_sha256": "d02d995fe9612bfa83000d15695cdab98f9282a66e2deaf87d2280a1cba4dc98"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/phase_sequence_reference.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/phase_sequence_reference.json (renamed: host label)",
+   "original_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5",
+   "sanitized_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/phase_sequence_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/phase_sequence_rerun.json (renamed: host label)",
+   "original_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4",
+   "sanitized_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/physics_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/physics_rerun.json (renamed: host label)",
+   "original_sha256": "b55222866a18467f157b884b9ac59e97cab84e7da0fb100875ec913a43083d38",
+   "sanitized_sha256": "b55222866a18467f157b884b9ac59e97cab84e7da0fb100875ec913a43083d38"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/pick10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/pick10a_rerun.json (renamed: host label)",
+   "original_sha256": "31fe3cb14e432e240075e29b19739b1590f5725afe64e943567170083eece895",
+   "sanitized_sha256": "31fe3cb14e432e240075e29b19739b1590f5725afe64e943567170083eece895"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/pick10a_start.txt",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/pick10a_start.txt (renamed: host label)",
+   "original_sha256": "ebd319b434d56fb55e79242beeee0044648b694b859758ca7f984269e6cc8fa1",
+   "sanitized_sha256": "ebd319b434d56fb55e79242beeee0044648b694b859758ca7f984269e6cc8fa1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/check10a.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/check10a.log (renamed: host label)",
+   "original_sha256": "09bdfb8460d070e8ee9146f75fa4328aae318807e3b49b484a9be5f5e76822f8",
+   "sanitized_sha256": "09bdfb8460d070e8ee9146f75fa4328aae318807e3b49b484a9be5f5e76822f8"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/evaluate_states.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/evaluate_states.log (renamed: host label)",
+   "original_sha256": "7b2be13d49e92de2771acd278195e9a04e49c8a3bdb17a81d7bfdb64892870d6",
+   "sanitized_sha256": "7b2be13d49e92de2771acd278195e9a04e49c8a3bdb17a81d7bfdb64892870d6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/global_10c.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/global_10c.log (renamed: host label)",
+   "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/laplace_weights.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/laplace_weights.log (renamed: host label)",
+   "original_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9",
+   "sanitized_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/phase_sequence.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/phase_sequence.log (renamed: host label)",
+   "original_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f",
+   "sanitized_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/pure_elements.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/pure_elements.log (renamed: host label)",
+   "original_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c",
+   "sanitized_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/step4c_b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/step4c_b.log (renamed: host label)",
+   "original_sha256": "24cafe5adccc3ad34460e755b0070e56fe3a0e36440cf60eda84a6b9dfecd455",
+   "sanitized_sha256": "b83300a95d848546021dee9a533de627fd877214c3d761c4ca7c60d4f08e11b5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/thermochemistry.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/reproduce_logs/thermochemistry.log (renamed: host label)",
+   "original_sha256": "d111e38961075604660ed32208440fcf2753d62b5e9d15cba9b10aaea5ca0992",
+   "sanitized_sha256": "d111e38961075604660ed32208440fcf2753d62b5e9d15cba9b10aaea5ca0992"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/step4c_b_hingefloor_pick10a.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/step4c_b_hingefloor_pick10a.tdb (renamed: host label)",
+   "original_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a",
+   "sanitized_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/thermo_compare.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.1-spark1/rerun/thermo_compare.json (renamed: host label)",
+   "original_sha256": "5be1f24dac7122843d967118b3e1c524d88a4b562bdf896182e411a195ebb708",
+   "sanitized_sha256": "5be1f24dac7122843d967118b3e1c524d88a4b562bdf896182e411a195ebb708"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/README.md (renamed: host label)",
+   "original_sha256": "12a74877fb276df31c6bff4c1e3a06617d362290e42b55efc90b74cdbc38d133",
+   "sanitized_sha256": "56243e6b70e7cf8d3d7116a8a30d429a6ebe545e7392e486a3fe1f6d560dff8a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/README.md (renamed: host label)",
+   "original_sha256": "d3a711516d0b89ad61d6ac9bfdf73634c1d62cfc323b28d2c7e2a0f7d686e384",
+   "sanitized_sha256": "b75b4cf6f0851525477b68833dce85f44d0d994c03970f4a4ea5e45dd00d8666"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_eval.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_eval.py (renamed: host label)",
+   "original_sha256": "1d95d2c2ba4d9970d96a332abd5badc762d32e99fe2c3e91dde402845b6e8157",
+   "sanitized_sha256": "1d95d2c2ba4d9970d96a332abd5badc762d32e99fe2c3e91dde402845b6e8157"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_pool.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_pool.py (renamed: host label)",
+   "original_sha256": "127724c670189823f6f61b41da5e975b861d04d91a9d9787154912347fd18636",
+   "sanitized_sha256": "127724c670189823f6f61b41da5e975b861d04d91a9d9787154912347fd18636"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_pool_n4_r6.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_pool_n4_r6.json (renamed: host label)",
+   "original_sha256": "10d5e8813a1d71409daa1af8d15c827fc0d4e5ce3ad6152d32bd2c80795a491c",
+   "sanitized_sha256": "10d5e8813a1d71409daa1af8d15c827fc0d4e5ce3ad6152d32bd2c80795a491c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_race.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/q40/probe_race.py (renamed: host label)",
+   "original_sha256": "c2fc9bf26f252f7e67a7a53bc36c446ee144368e4b1d82796e26a7c5d5768cfc",
+   "sanitized_sha256": "c2fc9bf26f252f7e67a7a53bc36c446ee144368e4b1d82796e26a7c5d5768cfc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report.json (renamed: host label)",
+   "original_sha256": "15948ea716c07485fac8707ab16e9ec50503dd49532ddf2b6947061fdc8b7ef5",
+   "sanitized_sha256": "08acc6f9679c1b73bf0d3ea335f751e4f2af0b46625b6fc0f7ff22e10e1f7137"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report.md (renamed: host label)",
+   "original_sha256": "6a6d8693648b629bc0fbd1404f74e03f9a3908328f9d20dd6d24b5047a8684bd",
+   "sanitized_sha256": "85b596ff15bcad976ec582d06b2b285c30e16fcf9344a84aea270ca1244478e2"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report_run.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report_run.json (renamed: host label)",
+   "original_sha256": "42994bbb87dcb3077e759856ab00ab1339449333634864fa9866377bd9126fec",
+   "sanitized_sha256": "fe9355cf09974830456e67c3aef789b7cc04c7527440c62c56116f9cf1dfa34a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report_run.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/reproduce_report_run.md (renamed: host label)",
+   "original_sha256": "99f54d5614eb2f82aca8b554c218ba21e5a2860b05e7f8138ecf77eb152d7f3a",
+   "sanitized_sha256": "0214cb95842404820286b15e571a34f59a612e21d39134057f9660fc8d4439d0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/10c/anneal_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/10c/anneal_status.json (renamed: host label)",
+   "original_sha256": "a7bf7df5290d82e971e1b80aaad7c0da2f66d800e8821482923239c0794a9dbc",
+   "sanitized_sha256": "a7bf7df5290d82e971e1b80aaad7c0da2f66d800e8821482923239c0794a9dbc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/10c/basin_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/10c/basin_status.json (renamed: host label)",
+   "original_sha256": "fb51388e9cbc92037a5180dba9e809cf61c43489672dcf076f886200ddabceed",
+   "sanitized_sha256": "fb51388e9cbc92037a5180dba9e809cf61c43489672dcf076f886200ddabceed"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/check10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/check10a_rerun.json (renamed: host label)",
+   "original_sha256": "b6e42c6f58a96a8b3d2e91b239c5df71a20965083fa7f7039d3558d90274a154",
+   "sanitized_sha256": "452063330655b3f4fc387e967cbdcbe4caccebad65c7ff3ba705a63aa8b20f4e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/evaluation.json (renamed: host label)",
+   "original_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3",
+   "sanitized_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/laplace_step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/laplace_step4c_b.json (renamed: host label)",
+   "original_sha256": "ec2ec01e709ea1015b9bcedcff98b0b889e9fcc22a5edfa56aa39c492bf23b88",
+   "sanitized_sha256": "ec2ec01e709ea1015b9bcedcff98b0b889e9fcc22a5edfa56aa39c492bf23b88"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/multistart.json (renamed: host label)",
+   "original_sha256": "094f04ad71e5ce9a6cea0d89919431b396812f5e6e7016eb91dd02ad15397c8f",
+   "sanitized_sha256": "094f04ad71e5ce9a6cea0d89919431b396812f5e6e7016eb91dd02ad15397c8f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/per_dataset_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/per_dataset_rerun.json (renamed: host label)",
+   "original_sha256": "e6682f7cf32fc3447138097c6452c506cce2c016062dc46a1cb963d6a3548c39",
+   "sanitized_sha256": "e6682f7cf32fc3447138097c6452c506cce2c016062dc46a1cb963d6a3548c39"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/phase_sequence_reference.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/phase_sequence_reference.json (renamed: host label)",
+   "original_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5",
+   "sanitized_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/phase_sequence_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/phase_sequence_rerun.json (renamed: host label)",
+   "original_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4",
+   "sanitized_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/physics_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/physics_rerun.json (renamed: host label)",
+   "original_sha256": "c7f8176a9b1860e07e49254a5d098e7e1e5d17cf1c35f10ea0c91b2c6647f2a0",
+   "sanitized_sha256": "c7f8176a9b1860e07e49254a5d098e7e1e5d17cf1c35f10ea0c91b2c6647f2a0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/pick10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/pick10a_rerun.json (renamed: host label)",
+   "original_sha256": "1e7a534f7e75a4cd7abfc231a13635ce4b17d4f6c91f1202ba4e18cbc6e66633",
+   "sanitized_sha256": "1e7a534f7e75a4cd7abfc231a13635ce4b17d4f6c91f1202ba4e18cbc6e66633"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/pick10a_start.txt",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/pick10a_start.txt (renamed: host label)",
+   "original_sha256": "62375fce67912642b5612a83390ae72b0813d46f94b9bdcd667070ed391e0dd0",
+   "sanitized_sha256": "62375fce67912642b5612a83390ae72b0813d46f94b9bdcd667070ed391e0dd0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/check10a.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/check10a.log (renamed: host label)",
+   "original_sha256": "f7565d20cbd530f365707083ec3604939dc283cc2bd608e90751118943019de6",
+   "sanitized_sha256": "f7565d20cbd530f365707083ec3604939dc283cc2bd608e90751118943019de6"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/evaluate_states.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/evaluate_states.log (renamed: host label)",
+   "original_sha256": "01bb6df658b4803c6362770f9f40fc5e8a249e75231036e1f17210d398e429fc",
+   "sanitized_sha256": "01bb6df658b4803c6362770f9f40fc5e8a249e75231036e1f17210d398e429fc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/global_10c.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/global_10c.log (renamed: host label)",
+   "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/laplace_weights.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/laplace_weights.log (renamed: host label)",
+   "original_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9",
+   "sanitized_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/phase_sequence.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/phase_sequence.log (renamed: host label)",
+   "original_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f",
+   "sanitized_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/pure_elements.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/pure_elements.log (renamed: host label)",
+   "original_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c",
+   "sanitized_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/step4c_b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/step4c_b.log (renamed: host label)",
+   "original_sha256": "b2aedf31e2c708ec147f8f3da073fa8987c5f680fd3766a888cdcbd79c1b8dcc",
+   "sanitized_sha256": "4b5f1b55d5925388ab2b16068f5a0de53a043dbc32a2edfc5d4e420909831172"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/thermochemistry.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/reproduce_logs/thermochemistry.log (renamed: host label)",
+   "original_sha256": "1a674fb9bc04b77b346752943b6ea3b315cd8388568153d67dc9aff3b2d3a444",
+   "sanitized_sha256": "1a674fb9bc04b77b346752943b6ea3b315cd8388568153d67dc9aff3b2d3a444"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/step4c_b_hingefloor_pick10a.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/step4c_b_hingefloor_pick10a.tdb (renamed: host label)",
+   "original_sha256": "c079525bf157dc172b56be7cb094ac7854bcfa6be533eb5bee57619e627a46de",
+   "sanitized_sha256": "c079525bf157dc172b56be7cb094ac7854bcfa6be533eb5bee57619e627a46de"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/thermo_compare.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.2-spark1/rerun/thermo_compare.json (renamed: host label)",
+   "original_sha256": "dedf8ea598bee6816472b534c5fbf668b58578a2d38cdb7342e13cd35766a571",
+   "sanitized_sha256": "dedf8ea598bee6816472b534c5fbf668b58578a2d38cdb7342e13cd35766a571"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/README.md (renamed: host label)",
+   "original_sha256": "df17d9f184882f9b8fd2aa01830c8587b562f5f34a321899565a481dbe1863fc",
+   "sanitized_sha256": "5fd67a412d4dbcaf937bd91e8c2d7170edd9fad511b080565a5abb557d21bda8"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/check10a_ms2_negative.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/check10a_ms2_negative.json (renamed: host label)",
+   "original_sha256": "41da531b1bbf333e1ab9e1cdb0bb593fc86223253ee3d5a08a1eab7cdf7a32cb",
+   "sanitized_sha256": "81d41216b3a24f53ecbec137ecd6353f15197034c700efb39c3a292618f5b61f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/check10a_ms2_negative.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/check10a_ms2_negative.log (renamed: host label)",
+   "original_sha256": "2ab0aca445f8dafb291105fb4a6e214ce46a78882d29577e0736c8bebab7502d",
+   "sanitized_sha256": "2ab0aca445f8dafb291105fb4a6e214ce46a78882d29577e0736c8bebab7502d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/cmp_spark1.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/cmp_spark1.json (renamed: host label)",
+   "original_sha256": "69aea621579ae7390d6fceea7162a6e44a93e1e6a2e0b34cc987d60a4d2530f1",
+   "sanitized_sha256": "52adbfed3f9da1be3671ad80b7e96815ef4ab7e74a24dc7af84d92dafef568f0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/guard_spark1.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/guard_spark1.json (renamed: host label)",
+   "original_sha256": "294cf88ea55a5c3d8b551be2359022615bfb30bab4b50255184863a4de16cba3",
+   "sanitized_sha256": "294cf88ea55a5c3d8b551be2359022615bfb30bab4b50255184863a4de16cba3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/id_spark1_model2.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/id_spark1_model2.json (renamed: host label)",
+   "original_sha256": "04fcd5dcd878eed587a74935b992e72b961623275c84970ade4dd406a66705c8",
+   "sanitized_sha256": "6f0f5ff444cedeea9238fca4034b8ef70fb8087524031cbe8a8213be58c0eae5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/id_spark1_model3.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/id_spark1_model3.json (renamed: host label)",
+   "original_sha256": "0724a26b6bca9b0dd38d2daae9c2157a6b94addce15cb849d898faf00a928c9a",
+   "sanitized_sha256": "c1768862f4e8f498a47b145c573a609fb3242a37d49259424f2eb3fc2627b250"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/race_mix.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/race_mix.log (renamed: host label)",
+   "original_sha256": "133b02b89ccb12459c3abd38ce0658ed4050662360280d59bbfc8a506d875241",
+   "sanitized_sha256": "133b02b89ccb12459c3abd38ce0658ed4050662360280d59bbfc8a506d875241"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/race_n4.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/spark1/race_n4.log (renamed: host label)",
+   "original_sha256": "b35df22c6d89409405edfd721f9094a7649b5cc1af8458298016da64e341f7d4",
+   "sanitized_sha256": "b35df22c6d89409405edfd721f9094a7649b5cc1af8458298016da64e341f7d4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/compare_identity.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/compare_identity.py (renamed: host label)",
+   "original_sha256": "f5139b2b30d446e6fe2a8063fa984c35444ba0c9614afd6b4b88c1e957d1bdba",
+   "sanitized_sha256": "f5139b2b30d446e6fe2a8063fa984c35444ba0c9614afd6b4b88c1e957d1bdba"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/modes_check.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/modes_check.json (renamed: host label)",
+   "original_sha256": "0e8850e7b70527e9446d915ccfa65c59231e1a595195b5f47036918cfbc0a6d0",
+   "sanitized_sha256": "0e8850e7b70527e9446d915ccfa65c59231e1a595195b5f47036918cfbc0a6d0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/modes_check.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/modes_check.py (renamed: host label)",
+   "original_sha256": "25a8aa1392a9a7c76bb56bf0143404d6c1df56addec28f517222ec336719dfd4",
+   "sanitized_sha256": "e39bae402f4e46c76492e001decd63ee829e1b4370b87e0c6970c9a6383e1a62"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/probe_guard.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/probe_guard.py (renamed: host label)",
+   "original_sha256": "ad4565bf7562fc2ac38b2e2755ff2ae8359cf11937659b4a085231360526832d",
+   "sanitized_sha256": "ad4565bf7562fc2ac38b2e2755ff2ae8359cf11937659b4a085231360526832d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/probe_race_fixed.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/probe_race_fixed.py (renamed: host label)",
+   "original_sha256": "9b786bc6f3065323a0f33a7bbdcd62735e75747712d04165be51fe8aecd0557e",
+   "sanitized_sha256": "9b786bc6f3065323a0f33a7bbdcd62735e75747712d04165be51fe8aecd0557e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/prove_identity.py",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/prove_identity.py (renamed: host label)",
+   "original_sha256": "3a39c2547a0c341e54e4c84514e84cc5e1fa9ca9f3d41b0688874cf4b937a118",
+   "sanitized_sha256": "3a39c2547a0c341e54e4c84514e84cc5e1fa9ca9f3d41b0688874cf4b937a118"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/cmp_studio.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/cmp_studio.json (renamed: host label)",
+   "original_sha256": "6d7b975c3f4d0159e92ae7a4b1146960700c985ad751f139ff63beee5c059f24",
+   "sanitized_sha256": "ef0158f729ba8d83da989bdbf4834808ca040b74b15fb15ae009898f0d685524"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/guard_studio.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/guard_studio.json (renamed: host label)",
+   "original_sha256": "294cf88ea55a5c3d8b551be2359022615bfb30bab4b50255184863a4de16cba3",
+   "sanitized_sha256": "294cf88ea55a5c3d8b551be2359022615bfb30bab4b50255184863a4de16cba3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2.json (renamed: host label)",
+   "original_sha256": "4e2cfbf4e7ef6319bdb30a25d2b5d2dd5f774f7a5dbe28f9764e3b6e62c024c6",
+   "sanitized_sha256": "aae9af9322002148bac2aa53725af5c288fddd59ac660e4f19355e62891fa008"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2@1.1.0.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2@1.1.0.json (renamed: host label)",
+   "original_sha256": "2960db17136edd6653d961b4c7af8b33fa8c3a6123fdf36a70f9f79ca07d4fdd",
+   "sanitized_sha256": "aae9af9322002148bac2aa53725af5c288fddd59ac660e4f19355e62891fa008"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3.json (renamed: host label)",
+   "original_sha256": "173c4f45095918154d2babaac7408047aaca2c61a5727d440baa5badcfa931cf",
+   "sanitized_sha256": "4b000642803a05658ff01325f2cf9cff94cfe9803ef1a9a897dd65f38cf22dc3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3@1.1.0.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3@1.1.0.json (renamed: host label)",
+   "original_sha256": "41e3062939c3d4f2bfdf8cbd451b237cd84485da14457cef2a4dfad29a9d0f96",
+   "sanitized_sha256": "4b000642803a05658ff01325f2cf9cff94cfe9803ef1a9a897dd65f38cf22dc3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/race_mix.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/race_mix.log (renamed: host label)",
+   "original_sha256": "b65303d17b1163b771caa338d7c3e3f8a7623d64ecd8386261c3b67dfe712da9",
+   "sanitized_sha256": "b65303d17b1163b771caa338d7c3e3f8a7623d64ecd8386261c3b67dfe712da9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/race_n4.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/race_n4.log (renamed: host label)",
+   "original_sha256": "b35df22c6d89409405edfd721f9094a7649b5cc1af8458298016da64e341f7d4",
+   "sanitized_sha256": "b35df22c6d89409405edfd721f9094a7649b5cc1af8458298016da64e341f7d4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report.json (renamed: host label)",
+   "original_sha256": "177bd7be905fab49476d88b16aa7e7498fe309da15a607b49e0ba6b301022e6e",
+   "sanitized_sha256": "e39a618be9b53e21da31fef29d0796fb2bf69229d63a8d33809a32bc18714f4e"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report.md (renamed: host label)",
+   "original_sha256": "c3b96557f2ca062b824955dd08d3c311a372c150af2c90031d2beb1f04962e4e",
+   "sanitized_sha256": "d9b0717b306bde433d7d93966dfee4dd6c212f294e63a23bc90e351887ff8381"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report_run.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report_run.json (renamed: host label)",
+   "original_sha256": "192461770ea2321317911acef478d2a178020db41b68b933ea40104d89a5dbae",
+   "sanitized_sha256": "917c419f67a487ee90033f76d1329b071cb6344aa23ba8bf818f99d8a965a2ea"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report_run.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/reproduce_report_run.md (renamed: host label)",
+   "original_sha256": "0e993f88643aaa8e68cf248800b707bd464ceb49f82207e9c0120a82f4db46dc",
+   "sanitized_sha256": "2cd40374f29cc11c8c95cc8a0bfa74fd277be61014072243351306067525e585"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/10c/anneal_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/10c/anneal_status.json (renamed: host label)",
+   "original_sha256": "7e0fae4b9a7ad1095040ec668d92bec25d86e4fb0133ca13ef192f8adedd440a",
+   "sanitized_sha256": "7e0fae4b9a7ad1095040ec668d92bec25d86e4fb0133ca13ef192f8adedd440a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/10c/basin_status.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/10c/basin_status.json (renamed: host label)",
+   "original_sha256": "4f5d814295fa10a72fdd55d65f63aae577d6b658cfc0e9423d9d204c371ba174",
+   "sanitized_sha256": "4f5d814295fa10a72fdd55d65f63aae577d6b658cfc0e9423d9d204c371ba174"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/check10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/check10a_rerun.json (renamed: host label)",
+   "original_sha256": "408608f0b5ac4425a4c5b933b0d5aacb2fb7f197b3fa2137bae7978c9df3a18d",
+   "sanitized_sha256": "638c82e4ce220cefc2a10bf9a750ed12903c236a72a9d163efcbf8cecc17ff6d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/evaluation.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/evaluation.json (renamed: host label)",
+   "original_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3",
+   "sanitized_sha256": "0ca87b219ddd243443d04dc1a9cc93181ce4cb0e2f1c4f6591e94e5ad92c50f3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/laplace_step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/laplace_step4c_b.json (renamed: host label)",
+   "original_sha256": "dd01c2624bf7b7a38d9bdc8f341b2016dc6ee3bff572305ca90d752a1dea44b4",
+   "sanitized_sha256": "dd01c2624bf7b7a38d9bdc8f341b2016dc6ee3bff572305ca90d752a1dea44b4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/multistart.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/multistart.json (renamed: host label)",
+   "original_sha256": "7754a27ff1aecd122317c4fc1b772c704321a838a08bacc4833ad5aba64e7e7f",
+   "sanitized_sha256": "7754a27ff1aecd122317c4fc1b772c704321a838a08bacc4833ad5aba64e7e7f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/per_dataset_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/per_dataset_rerun.json (renamed: host label)",
+   "original_sha256": "d02d995fe9612bfa83000d15695cdab98f9282a66e2deaf87d2280a1cba4dc98",
+   "sanitized_sha256": "d02d995fe9612bfa83000d15695cdab98f9282a66e2deaf87d2280a1cba4dc98"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/phase_sequence_reference.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/phase_sequence_reference.json (renamed: host label)",
+   "original_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5",
+   "sanitized_sha256": "241abf93fdadc2d47ed62deb5ed4307642885122f3edc468d8faa47700ee75d5"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/phase_sequence_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/phase_sequence_rerun.json (renamed: host label)",
+   "original_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4",
+   "sanitized_sha256": "a40283f6c373634fdd4e1a54851364d3ed5b1cc2cce798f1993479beb55d2ae4"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/physics_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/physics_rerun.json (renamed: host label)",
+   "original_sha256": "b55222866a18467f157b884b9ac59e97cab84e7da0fb100875ec913a43083d38",
+   "sanitized_sha256": "b55222866a18467f157b884b9ac59e97cab84e7da0fb100875ec913a43083d38"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/pick10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/pick10a_rerun.json (renamed: host label)",
+   "original_sha256": "31fe3cb14e432e240075e29b19739b1590f5725afe64e943567170083eece895",
+   "sanitized_sha256": "31fe3cb14e432e240075e29b19739b1590f5725afe64e943567170083eece895"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/pick10a_start.txt",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/pick10a_start.txt (renamed: host label)",
+   "original_sha256": "ebd319b434d56fb55e79242beeee0044648b694b859758ca7f984269e6cc8fa1",
+   "sanitized_sha256": "ebd319b434d56fb55e79242beeee0044648b694b859758ca7f984269e6cc8fa1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/check10a.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/check10a.log (renamed: host label)",
+   "original_sha256": "09bdfb8460d070e8ee9146f75fa4328aae318807e3b49b484a9be5f5e76822f8",
+   "sanitized_sha256": "09bdfb8460d070e8ee9146f75fa4328aae318807e3b49b484a9be5f5e76822f8"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/evaluate_states.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/evaluate_states.log (renamed: host label)",
+   "original_sha256": "01bb6df658b4803c6362770f9f40fc5e8a249e75231036e1f17210d398e429fc",
+   "sanitized_sha256": "01bb6df658b4803c6362770f9f40fc5e8a249e75231036e1f17210d398e429fc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/global_10c.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/global_10c.log (renamed: host label)",
+   "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/laplace_weights.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/laplace_weights.log (renamed: host label)",
+   "original_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9",
+   "sanitized_sha256": "913976a38a9bb5a272ddb1801cf831d207f3916bc0cdd18f9acda9a70450c2b9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/phase_sequence.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/phase_sequence.log (renamed: host label)",
+   "original_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f",
+   "sanitized_sha256": "4066da97d7b614cf6888516b8eb713381e3e8e77749afd146a16be095340528f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/pure_elements.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/pure_elements.log (renamed: host label)",
+   "original_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c",
+   "sanitized_sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/step4c_b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/step4c_b.log (renamed: host label)",
+   "original_sha256": "296bbbae085aec2f443d5be060e4dfd2cec1ded8fbaf834304ec4e37d897fe37",
+   "sanitized_sha256": "6b154ad3d65ee1162f9b8ae9ac08fc6a9b8bfd426ab77b07c1556d2f4ee6a360"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/thermochemistry.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/reproduce_logs/thermochemistry.log (renamed: host label)",
+   "original_sha256": "d111e38961075604660ed32208440fcf2753d62b5e9d15cba9b10aaea5ca0992",
+   "sanitized_sha256": "d111e38961075604660ed32208440fcf2753d62b5e9d15cba9b10aaea5ca0992"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/step4c_b_hingefloor_pick10a.tdb",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/step4c_b_hingefloor_pick10a.tdb (renamed: host label)",
+   "original_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a",
+   "sanitized_sha256": "9701e1fd6a7597884dbf95f000f7c75ae4065e1663b849b52bc45887839afb5a"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/thermo_compare.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/rerun/thermo_compare.json (renamed: host label)",
+   "original_sha256": "5be1f24dac7122843d967118b3e1c524d88a4b562bdf896182e411a195ebb708",
+   "sanitized_sha256": "5be1f24dac7122843d967118b3e1c524d88a4b562bdf896182e411a195ebb708"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/README.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/README.md",
+   "original_sha256": "613b02c73de7f3e408030e40d108e43c5cd45eb16e6048a089ec7cc16499712f",
+   "sanitized_sha256": "665d857c1c3bf94bfdd7bdd2697f98e8271315c37b22f27c2730a71615cd2092"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/plan_compare.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/plan_compare.json",
+   "original_sha256": "9ed4f4d13740a7aaa784968ddb37502dee55c1933ab2f2d265497d74496ddb61",
+   "sanitized_sha256": "124a0c523f5c6bd2249d3881857d42ad58a1e1e800bd96c977e0ff7bd04daa5f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/plan_compare.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/plan_compare.md",
+   "original_sha256": "836460bcf659ab319a1caf902985551599b660ab3e640ba2d6a947f19093b50d",
+   "sanitized_sha256": "6f2e51138abbe8a36beec23325ceb1f96a224fe8fc9054f717dbf67c352ff99f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/check10a_rerun.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/check10a_rerun.json",
+   "original_sha256": "720bd7cbe8cad7906718898f1bbb2a79813ee3f923a7f609a38157cb93aafa9d",
+   "sanitized_sha256": "82d31dbaa030b75ae8d08d1e79f1df045770deefd4896b667bcff2b0d6c96eb3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-check10a.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-check10a.json",
+   "original_sha256": "6d225e5485533e9286c95cbcde3b0898a693f7e7a7b6d8b045bc2f1894f9ba0f",
+   "sanitized_sha256": "2885fc94b2b86a594e64009245d0dca6552378d8ed32c985ba04780d419e3634"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-environment_check.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-environment_check.json",
+   "original_sha256": "484300f2f2f2c87a46bdcebaa631f4f13c3d6163a90bc0ffbd9d7036ee41d258",
+   "sanitized_sha256": "22efb1037091ca8de030f359a8692b91b591fa16437a68dbde3957bc5517a8fd"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-evaluate_states.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-evaluate_states.json",
+   "original_sha256": "3e31b06d9752643961a0c1fc3c88c95930ae2ec9f7b4570eebec07b6eed7816a",
+   "sanitized_sha256": "a39f7e8b7c8c998ec0a9144665c86f232a14ec5fd776d923830dd20a782ccabd"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-global_10c.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-global_10c.json",
+   "original_sha256": "35ccfc6a5cac84a49412df93f46eeb4c8dc36698d8c3dfeb5f353044a05eb50b",
+   "sanitized_sha256": "78867f0381591e04ebde4508856a1ff332fb7ceb289a5c345adfca1cc334e42f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-laplace_weights.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-laplace_weights.json",
+   "original_sha256": "df1109864bfd80a97349af90819223b358cd8410325cd106c9b1d47ab741df25",
+   "sanitized_sha256": "4d49627f3b8ee067a32b4a7af92b2125d0c95fc1ac53a1d2c6463037034484b0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-phase_sequence.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-phase_sequence.json",
+   "original_sha256": "9d13d770e74801022ab5dd4eff7e27b694c2b2d83cce1a68bc2d66707f93d64b",
+   "sanitized_sha256": "db8a470a3f2dbd516e5f74d0594b27346599e52feef525b0f0d8c35b7686f3fe"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-pure_elements.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-pure_elements.json",
+   "original_sha256": "38eb48adafa6a652f29f7103f3ccb18de6e728c41d9eed772b79f54b741d1e43",
+   "sanitized_sha256": "6180875097df8eb7b0fb96803f3bcbd7189061c4a3f113b8627fcae133a444f1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-stage.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-stage.json",
+   "original_sha256": "b550622fb14320ebcbce82271706a3ca020776e7ee8f50e48def9d8373f0b222",
+   "sanitized_sha256": "c5371e93e1ec6dec2374cb0bf7f40fcda4020776a76d1f08540a62f40ec06c3d"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-step4c_b.json",
+   "original_sha256": "6589e9174845b108209dd96df5f563cd5b24edc32948447e8011850f874ee9a4",
+   "sanitized_sha256": "797aa14ef80fc1bf9f3e7a70b28bf7367cad49e625f8d23925a376731baa0ff2"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-thermochemistry.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/run_cards/crni-paper-fit-step4c-b-thermochemistry.json",
+   "original_sha256": "31c8c857b920cc33278b94f8b2e6e4a79a87b54d86caca09f37125fbb4bd68ad",
+   "sanitized_sha256": "ecf059201a1b7e751898008b5e0e1b77678059497e4e46d975e23de175826602"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/session_summary.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/session_summary.json",
+   "original_sha256": "f9c3796643ae24ad6ab75e9b7e1483b42c7e5658b8c7c15a8188c8021799fa00",
+   "sanitized_sha256": "8ca8e5d3c87a1f1c701df593bf85d0a586af9a28c94a51b5c6481fea7c81e2b9"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/home_path_proof.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/home_path_proof.json",
+   "original_sha256": "ffd5ba80448f2727cd409203c4d85ab64a2f336658e8a3da210d9269b9ca0eb7",
+   "sanitized_sha256": "3d74f84b4297cd69b762f16133fb5ad45e020fa3f327707d9ec6a6ecc8bea810"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/objective_identity_stage104.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/objective_identity_stage104.json",
+   "original_sha256": "1cb31d363d6e23f0c4e792e52c3dc20a924e54c62af893b5582f48993dfad103",
+   "sanitized_sha256": "ebaaaa6d7a158cc6cd61f531152fa00cf443af6cc35e598e4aaabc448fc91594"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/chain.log",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/chain.log (renamed: host label)",
+   "original_sha256": "33cfefb3a5e1057e625bc9a5bafd222d02de720373c6821b44d78003472ac649",
+   "sanitized_sha256": "33cfefb3a5e1057e625bc9a5bafd222d02de720373c6821b44d78003472ac649"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/fd_check.py",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/fd_check.py (renamed: host label)",
+   "original_sha256": "49033f6b64157e3bb8f8b8a20152cad8f22d5440a57b79528d2391381406e6c8",
+   "sanitized_sha256": "49033f6b64157e3bb8f8b8a20152cad8f22d5440a57b79528d2391381406e6c8"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/gradient_diagnostics.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/gradient_diagnostics.json (renamed: host label)",
+   "original_sha256": "e9f63054a5e8d125863abfd107f32abdc5188c62ebcc97d6e4738212a98f372e",
+   "sanitized_sha256": "ea478122348ce70c39e9b604472bc3c4eb35a788250133f829b91d4bcfafb1d8"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/line_probe.py",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/line_probe.py (renamed: host label)",
+   "original_sha256": "04e83cea706ada30d6d2942af7a393cda854f1be06003b6026271c2e1df062c6",
+   "sanitized_sha256": "04e83cea706ada30d6d2942af7a393cda854f1be06003b6026271c2e1df062c6"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/parts_check.py",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/parts_check.py (renamed: host label)",
+   "original_sha256": "c85af1668335d1d105e57d60cbceb4a8a2e0bafd08671a972f9ea46c171ce6c7",
+   "sanitized_sha256": "c85af1668335d1d105e57d60cbceb4a8a2e0bafd08671a972f9ea46c171ce6c7"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/time_terms.py",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/diagnostics/time_terms.py (renamed: host label)",
+   "original_sha256": "1fb653ade9854af774918cfa9925f4e586adb9a56b74f31e1eae582689bdeb0d",
+   "sanitized_sha256": "1fb653ade9854af774918cfa9925f4e586adb9a56b74f31e1eae582689bdeb0d"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/evaluation.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/evaluation.json (renamed: host label)",
+   "original_sha256": "5b087055d3ed4f7efb631bb0aa7315397595ebc2cee8d0acc16dc4de592f9383",
+   "sanitized_sha256": "5b087055d3ed4f7efb631bb0aa7315397595ebc2cee8d0acc16dc4de592f9383"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/multistart.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/multistart.json (renamed: host label)",
+   "original_sha256": "07017e5f4cd36aee82d3276801ceab806f3bf7a697dffb9e26cea80c4e0c39a0",
+   "sanitized_sha256": "07017e5f4cd36aee82d3276801ceab806f3bf7a697dffb9e26cea80c4e0c39a0"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/multistart_prepolish.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/multistart_prepolish.json (renamed: host label)",
+   "original_sha256": "d4408785b643746e637928886759833bf6582460f07b4662c496b3530662ef24",
+   "sanitized_sha256": "d4408785b643746e637928886759833bf6582460f07b4662c496b3530662ef24"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/pick_protocol_10a.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/pick_protocol_10a.json (renamed: host label)",
+   "original_sha256": "28a68b10323a6656011b31c29ffa1f31622c652c0a4493108c31afb364511889",
+   "sanitized_sha256": "28a68b10323a6656011b31c29ffa1f31622c652c0a4493108c31afb364511889"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/polish_report.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/polish_report.json (renamed: host label)",
+   "original_sha256": "0d5b1ea2708cdf370021c3da55e946f38da674a8fe17c48d3b3cd471a7b358f8",
+   "sanitized_sha256": "0d5b1ea2708cdf370021c3da55e946f38da674a8fe17c48d3b3cd471a7b358f8"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/polish_step3b.log",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/polish_step3b.log (renamed: host label)",
+   "original_sha256": "97a0da09fb3e126de739cc7d4a943dade98bf3fe4c6f1978bdd4be252d67b619",
+   "sanitized_sha256": "97a0da09fb3e126de739cc7d4a943dade98bf3fe4c6f1978bdd4be252d67b619"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/polish_step3b_analytic_attempt.log",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/polish_step3b_analytic_attempt.log (renamed: host label)",
+   "original_sha256": "46bbdf94bcaa7fa6bfb830471efb9ccddaf62cd5e7737a9a8c4f8daddc914df0",
+   "sanitized_sha256": "46bbdf94bcaa7fa6bfb830471efb9ccddaf62cd5e7737a9a8c4f8daddc914df0"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-spark1/step3b_rerun_report.json",
+   "original": "protocols/reproduce/crni-step3b-polish-spark1/step3b_rerun_report.json (renamed: host label)",
+   "original_sha256": "845def8a42f2a73229501be6deee6dddd5b19fb0bf6601308ce040eefb760696",
+   "sanitized_sha256": "c974ad13de157f6cbaf0a4d48c1249c1782eb3ee421342b84f229a763e150ebe"
+  },
+  {
+   "path": "protocols/reproduce/crni-step3b-polish-studio/step3b_rerun_report.json",
+   "original": "protocols/reproduce/crni-step3b-polish-studio/step3b_rerun_report.json",
+   "original_sha256": "89ed962ecadf746f3459c0cf7b35cb84bd385f15f3223a7eec832787b8c73ec4",
+   "sanitized_sha256": "45357323a6feaa61cfbc918598fe0ba8502d7f18d4d13c5cc11c990f62a572da"
+  },
+  {
+   "path": "protocols/reproduce/espei-gradient-q39/README.md",
+   "original": "protocols/reproduce/espei-gradient-q39/README.md",
+   "original_sha256": "865abfae19dedb3ceee5f66242d55fe099dff0231504d639d3b3fbbf34b51166",
+   "sanitized_sha256": "1f23624ffaa899ba0b70c6820010f9b254f7364af96fab58d7c75952687738bb"
+  },
+  {
+   "path": "protocols/reproduce/espei-gradient-q39/data/endpoints.json",
+   "original": "protocols/reproduce/espei-gradient-q39/data/endpoints.json",
+   "original_sha256": "ec06b89b5622800d561740111381a7297ce7a39e104f32aa8b313d68fd27898f",
+   "sanitized_sha256": "df416d46b92a62646c9274db8e9a9569102e6675694c4dde5626732fdae9447a"
+  },
+  {
+   "path": "protocols/reproduce/espei-gradient-q39/endpoints_check.json",
+   "original": "protocols/reproduce/espei-gradient-q39/endpoints_check.json",
+   "original_sha256": "83e4f511449af39cd69b9306d94a79cb66a06d2d7264e33e5e624fb54d9fcac0",
+   "sanitized_sha256": "496600c7f51b19315d432e29460020226177c5ba14f3530b029c6b0d2629a6c6"
+  },
+  {
+   "path": "protocols/reproduce/espei-gradient-q39/kinkcheck.py",
+   "original": "protocols/reproduce/espei-gradient-q39/kinkcheck.py",
+   "original_sha256": "01d8879304076660ace5444279810731b9ecce1293f64a809823ee1ea06019a1",
+   "sanitized_sha256": "104ea0574b7cd9840c8e4686d50485517ad96086715745635623db4adaff260d"
+  },
+  {
+   "path": "protocols/run_cards/crni-mlip-spotcheck-20261107-spark3.json",
+   "original": "protocols/run_cards/crni-mlip-spotcheck-20261107-spark3.json (renamed: host label)",
+   "original_sha256": "7ebe520542cddf00a7d9a07ce03f0ebe54a4291813e421adadd2ab82d30af490",
+   "sanitized_sha256": "6e283cedbd93a25d18b8130105004f3f804545bf8885b916c64f3e25273474b7"
+  },
+  {
+   "path": "protocols/run_cards/crni-oneshot-build.json",
+   "original": "protocols/run_cards/crni-oneshot-build.json",
+   "original_sha256": "b4eb7593d5ecf0524218e2ff74b189c5f4cf4f8995e4ab0b130a8178766dd894",
+   "sanitized_sha256": "ffb9a0b745e3a999c3926e8c96eedc7424489f640aaa2fb768cec41ec8eeaf38"
+  },
+  {
+   "path": "protocols/run_cards/crni-oneshot-solids-liquid.json",
+   "original": "protocols/run_cards/crni-oneshot-solids-liquid.json",
+   "original_sha256": "e83021e6d8f76c0995b11c590224df14f47b591910247899d82c1b82ed48374e",
+   "sanitized_sha256": "706074c86d6a6ef39981de0630649ba658b71c4455fc3728b850687dac3e6411"
+  },
+  {
+   "path": "protocols/run_cards/crni-step1_oneshot.json",
+   "original": "protocols/run_cards/crni-step1_oneshot.json",
+   "original_sha256": "db87872065cd1f7358f81b7e78e4ccde8b6612f38ac6eeb17dff6c9de193fdf6",
+   "sanitized_sha256": "9df1f5567435cdd00be8e416d03e439efcb40b16f930233b03ce4236660bf053"
+  },
+  {
+   "path": "protocols/run_cards/crni-step2_liquidus.json",
+   "original": "protocols/run_cards/crni-step2_liquidus.json",
+   "original_sha256": "14597a3cdfdf0a0eaf35cc996abe0730fd5d3b9bfb1daf40486d82aad81307f8",
+   "sanitized_sha256": "3052169bdf9e9a0e3b2855d24041da9737dc381967d5bc2b9e48d89f82de5f28"
+  },
+  {
+   "path": "protocols/run_cards/crni-step3_thermo.json",
+   "original": "protocols/run_cards/crni-step3_thermo.json",
+   "original_sha256": "63cd15cad2617ed84a815a6e30609cf33a2fc7cc5a34993e8816f174b18cfb84",
+   "sanitized_sha256": "bd1c58bb8828a8b88994dfeeb8289e4a74131fd765ef442d72497c783ed6ec47"
+  },
+  {
+   "path": "protocols/run_cards/crni-step3b-check10a.json",
+   "original": "protocols/run_cards/crni-step3b-check10a.json",
+   "original_sha256": "a67d38c7b6f8038825eec807479bf3a04e6699aff1508406e6a4d7546a74a8ce",
+   "sanitized_sha256": "ec3105e6969515967b7616ebd6e5c13a316d1ee5ff4a73c5836b3ff36b4702cb"
+  },
+  {
+   "path": "protocols/run_cards/crni-step3b_thermo_crni2free.json",
+   "original": "protocols/run_cards/crni-step3b_thermo_crni2free.json",
+   "original_sha256": "c175574c89f0c6b26364b28797f0f9da1a10bf67980b510ead4d21c377fd57c7",
+   "sanitized_sha256": "54f4a47c64c4296296e80b2c5302e91888836b1e7ea579435f83ae42a397cb3a"
+  },
+  {
+   "path": "protocols/run_cards/crni-step4_solid.json",
+   "original": "protocols/run_cards/crni-step4_solid.json",
+   "original_sha256": "fe424cea8c2666838869370bcd22025e6ee5bb56ec68c40fc1b691a161e4775b",
+   "sanitized_sha256": "82f3f17a019537b2550a4502a799e74ae9bb17f6ad887e14e4ae0e3a3932347b"
+  },
+  {
+   "path": "protocols/run_cards/crni-step4c_b-10c-anneal.json",
+   "original": "protocols/run_cards/crni-step4c_b-10c-anneal.json",
+   "original_sha256": "e05d97d8a0d81f21e0394e6267c81dad608fa39c811846eb713efcf5fc650d7f",
+   "sanitized_sha256": "795a09ff40160a6a0161232e1020e3d41cd460c7aec6b566bff6c4031148a1e6"
+  },
+  {
+   "path": "protocols/run_cards/crni-step4c_b-10c-basin.json",
+   "original": "protocols/run_cards/crni-step4c_b-10c-basin.json",
+   "original_sha256": "cc9e1bce1c7f8859c1c0a21cc0ab30cf008ff13aed8ccbda4d298d50c5159181",
+   "sanitized_sha256": "c50ffe5941e2056c60d6b5e91beacfb6c781e18dcd6a9f8cb16b4f8edad05d1b"
+  },
+  {
+   "path": "protocols/run_cards/crni-step4c_b-check10a.json",
+   "original": "protocols/run_cards/crni-step4c_b-check10a.json",
+   "original_sha256": "cfd88959ae9362ee20954e5a7952607a41e456f02173480c0793d9e15381be69",
+   "sanitized_sha256": "89b20d92fc1a43e21e5d4312a0a879d2b06068bfc8b1cfbffdeb1725eb9ee14a"
+  },
+  {
+   "path": "protocols/run_cards/crni-step4c_b_hingefloor.json",
+   "original": "protocols/run_cards/crni-step4c_b_hingefloor.json",
+   "original_sha256": "6abdca1d7a0717962c4c3c76bf9a4a9ad8048b10d945ba238bc1ed7beb81d86c",
+   "sanitized_sha256": "573cf6d8144d159a25b7a5fd901802b6874a772e01c40ffdde5e9d11bf6a3a9e"
+  },
+  {
+   "path": "protocols/run_cards/crni-uq-laplace-step4.json",
+   "original": "protocols/run_cards/crni-uq-laplace-step4.json",
+   "original_sha256": "f61327fa82c8d019caf678ec8c10474ad2f93e1649f57e27dbf518084e9d6093",
+   "sanitized_sha256": "ce1f4b61a780e37999d31e082aee8b3b4b76b8f1391de560dc9e4010c6efd26f"
+  },
+  {
+   "path": "protocols/run_cards/crni-uq-laplace-step4c_b.json",
+   "original": "protocols/run_cards/crni-uq-laplace-step4c_b.json",
+   "original_sha256": "2b8a77f98cc8fca16eea8cedf3d2a1a4cf0ed61f1a9c9b5b143e9c0968c5f66a",
+   "sanitized_sha256": "28d9610d3b71f641b5bc7da53c0e94df23674e373f80d389f2d34c3a605bd567"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.html",
+   "original": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.html",
+   "original_sha256": "82052916908c7dc2f8a1fc077a3baaa89ae8823553fa6482c3c835197d67a97c",
+   "sanitized_sha256": "70a71b034cb78d6aa5fc5526fb0cecc5382afaa3fbe26c0468115bb2043440e1"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.md",
+   "original": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.md",
+   "original_sha256": "4824ac85414f2815c9ce5459fc88373b4c6c7e0cfe5e476543b85a74ab13f2bf",
+   "sanitized_sha256": "9c658926dd54812fcc12baddb2eed77feb7e9cded6b0728abf5a3dd220c28f7f"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.yaml",
+   "original_sha256": "49c889e17de70fa7c73338ba7cb3f16e811f338fc30cc31faa94020cdd84ebc5",
+   "sanitized_sha256": "e2e752db58a1ff3cae37eeef17e335104632a6578c74c7179ca10a3f0f8d4b56"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.html",
+   "original_sha256": "d7d4c63947c1a7a277405f8d40596b456bc1d14be0b38e365290dd39673a8d16",
+   "sanitized_sha256": "b03b380aa685b09bc9edbc5d07b5069c84851bbaff97598e4e291c350e8f085c"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.md",
+   "original_sha256": "f1bc86c201effc505c22d5b881671e776439e51720bb6613c939268e6d392c45",
+   "sanitized_sha256": "4b15543b4a281003fa4e539c1288e08d5a07697cb4221ecb128baa4669447331"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@0.2.0-draft.yaml",
+   "original_sha256": "2701c898e4ce42f0f3e675b0a21dbde67d95b1b9d1f18fb3b34a54fb3c0fb831",
+   "sanitized_sha256": "ff6ef6cf7e249f9a63d499fccf2da15f03fdfd3e25547a463058256c9989e2b5"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.html",
+   "original_sha256": "bf40638249fc9883374e2eddbb0566c602d5a18c14359159f3b8853cf57867fe",
+   "sanitized_sha256": "27a489e8f86f050f9fbde07e9e9b5d4965854782adf35f8ee9d008908e7dedfe"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.md",
+   "original_sha256": "8e37794add2424a0582c401ee87b5a9726f03a3fb32cbe78bc3fdf1471081506",
+   "sanitized_sha256": "06d73d07bc29b5fe191dcb629e3d664d30d24c44dec1b976998295aee1e3eee5"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.0.yaml",
+   "original_sha256": "fcc94d9b922c9f42f5ccabdc7dcace9e472e10ed4c2e53894605741de9ebdb61",
+   "sanitized_sha256": "c3686bc62dae0774ba19ec26973e5e0ae97ba0e05d1d75cecf974500d07113d1"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.html",
+   "original_sha256": "96e19c552653c35bd13bb1784fe662cee1cb33765d83341a4581940fe0256c6c",
+   "sanitized_sha256": "49492706fc7b46422872a676ba10461bcbf9ee6f4502db6e31e6d56ba2e93a2d"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.md",
+   "original_sha256": "20f9535b995d977a055eef96a46736a16eeb6e0dd226dbed1696369bfb531ca0",
+   "sanitized_sha256": "1ab6df8054931ad9f431140b360fde4572d8adea221f039c189fbb82ba501781"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.1.yaml",
+   "original_sha256": "11d4ab393b35c7294d2371bf401ea512e51ae347767ec04161c9cb37af62e91e",
+   "sanitized_sha256": "8f0631db66c08a79ecbf8090cbd1749699881628194dd18b4240c3788af8a5f9"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.html",
+   "original_sha256": "9fd7fdc338f09d5c1617417a1a583881c9ed8398c3eb4d502e53fb2794b7f0c9",
+   "sanitized_sha256": "3ab109dbb8772f5add69a368a84d7a3dd5894f8163bed1f99be64356f1f307a7"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.md",
+   "original_sha256": "245c4c94194d936b2769f4250ae89847ebd8fcf6d7ac32614675b297a616e001",
+   "sanitized_sha256": "9dc5a7f69e9f8723294da827df5562c185102b0e0ff1c6ca8c4b90ead5ac0971"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.2.yaml",
+   "original_sha256": "afcff291c2708c2f58315343f3399d90d94471562e3100121900c6d563e0c0fa",
+   "sanitized_sha256": "387f9d26d7e83bfd6db1544ebb729b40ff18ab6b64f49b2176883fff19819ba4"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.html",
+   "original_sha256": "0999129c877895e6cccfa384f2240004cdbd8e285b2c2ec5044c4f6272302889",
+   "sanitized_sha256": "d4e733460f7aac70387ca8aa67017552fa180071c886cf8f42b93dbd1fc528d4"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.md",
+   "original_sha256": "af2d92be70fa8fa5887f92f28af7d46e06a578ee51672f89f0c1e2bd035cf9bf",
+   "sanitized_sha256": "0d214d7ed1e5276970c910323621ecfb42f4ad93ace5674908b32cc545d798a3"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.3.yaml",
+   "original_sha256": "ee75514ce9046579a5ee41ea24cc674e3ece8cee070a20a0d3f06935e18485cb",
+   "sanitized_sha256": "fdf52dd32c9ab4bee73168866622dc9d47986881419748747932ea466c265b1e"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.html",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.html",
+   "original_sha256": "a8f3faefa1cc872c6d3326bc6949c813759a235faabfac24e38ae0f28de5e4cf",
+   "sanitized_sha256": "b67b9b204f23e916a6e4212c3b79d813bb3dcb102c67a710dbfe958acf1a1b5c"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.md",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.md",
+   "original_sha256": "c7a16a1cfe22c7b73adcfe7e27a9eebe1030f61a8e335aa9e0d50216fd84b76a",
+   "sanitized_sha256": "19027405175f9272aa881382483faf172874eb80d8e7be530ee010784d305d61"
+  },
+  {
+   "path": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.yaml",
+   "original": "protocols/specific/crni-paper-fit-step4c-b@1.0.4.yaml",
+   "original_sha256": "5f0db3297a3e1e5d8d7747a1e0d8df19dd4b8cb9d4a6a254833e3c56eb8373c7",
+   "sanitized_sha256": "2640b18d6b29cb42c7aeace7bf704c9065c7c665471c632927987b75bf42056a"
+  },
+  {
+   "path": "protocols/tools/extract_dashboard_data.py",
+   "original": "protocols/tools/extract_dashboard_data.py",
+   "original_sha256": "e726034aeaafae97ed7508c9af6bcdab5893ac6507c775acb27e792c9533c91e",
+   "sanitized_sha256": "b8c1a31b70fbdb281a1e9821911237b72d409b8386ff01953d837a5fe864d260"
+  },
+  {
+   "path": "protocols/tools/extract_dashboard_data_crni4cb.py",
+   "original": "protocols/tools/extract_dashboard_data_crni4cb.py",
+   "original_sha256": "8e123e11e4c850d34577cf3e6c348ba0b7bfed4305377ea3d9b310a973ad608a",
+   "sanitized_sha256": "19ac0b070fe3ea061eee3914fa12c69e4841cf1f1461306c8a60d9f05988a7ee"
+  },
+  {
+   "path": "protocols/tools/extract_dashboard_data_crni4cb_v1.py",
+   "original": "protocols/tools/extract_dashboard_data_crni4cb_v1.py",
+   "original_sha256": "75155fd8bd829723f1004e49603ed173cb15a320a5ae453e3fc89ca0ecf81941",
+   "sanitized_sha256": "7a9e01a9967f5b00055e679ea1833acf4da4fc71a52eea5ef746d053b3d9fab9"
+  },
+  {
+   "path": "protocols/tools/orchid_reproduce.py",
+   "original": "protocols/tools/orchid_reproduce.py",
+   "original_sha256": "fc2cefbab0fdbb927326a8346b349e3ae845c1bb274ed5c9252ef39fbf1658a2",
+   "sanitized_sha256": "cf625eee1cfb49b06ea1f2f5958cc8605ffe03a05c8328a10828c7934eedf4ae"
+  },
+  {
+   "path": "protocols/tools/public_sanitize.py",
+   "original": "protocols/tools/public_sanitize.py",
+   "original_sha256": "b03c0351cb82305b9bf3abaf20efd8268d65a9ba9d349cc7cfd6d31b7de83aac",
+   "sanitized_sha256": "c51ec4697685db8b2a00c939278b4a67a884c4b09f719912dc66aa6ddfe16878"
+  },
+  {
+   "path": "sage_mcp/REPRODUCE_WITH_MCP.md",
+   "original": "sage_mcp/REPRODUCE_WITH_MCP.md",
+   "original_sha256": "302cb959e5e8b44e624d29fed0efadbc403b66d6f3e63ccb90e6dd46b678e6bb",
+   "sanitized_sha256": "a0512415d9b99d462a032675cff30bd565caf53569180552963b5d130dff5d6a"
+  },
+  {
+   "path": "sage_mcp/SCHEMA_GAPS.md",
+   "original": "sage_mcp/SCHEMA_GAPS.md",
+   "original_sha256": "eb6d162cab857a347e26cbbef9a38a0ebd1c604c25f251021a3522f36eec6283",
+   "sanitized_sha256": "77c77ec57d4f6b9fe76ae4eb547ceb43fb99935e5ecd32f4a149858971e56a5f"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4-s1/code/MANIFEST.json",
+   "original_sha256": "8ef651944c7f18fa6c221acaca065155d8a08ae6273ba7e30c2090fc14558eaf",
+   "sanitized_sha256": "cf703d69e7332a60e7963a308c70420304c01143597128367ed9ed6f173988e8"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/build_tdb.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/build_tdb.py",
+   "original_sha256": "79b9da97306aeba303cfd7ba5bbb93980684f28bf728451aee47b7d07c9abbc8",
+   "sanitized_sha256": "cffe7c0c9ccb0b1dbcf16bab4f448414f5950fb3b90e5a4634588ca55cdb0918"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs.py",
+   "original_sha256": "164c4da409be5ac446c90a245dd620e1a921b39248cde2b2a2798e4727f4f131",
+   "sanitized_sha256": "743ac8204b9da377b4bb14796059bb87f91f83261608e6c54470e985a61b2565"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs_fullrange.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/gen_sqs_fullrange.py",
+   "original_sha256": "74044addcf7efc1c400c5dba87a6875f429f0096719a6c96bc0893dfac0b9188",
+   "sanitized_sha256": "dc8620514d931144be63874dd45646757f433060073cc39041a2690d41c734c5"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/REPORT.md",
+   "original": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/REPORT.md",
+   "original_sha256": "4bb7427edf1b2b57ac7c3a28131fee6f01ab336c2d7ed076e17508b61af6540e",
+   "sanitized_sha256": "6ba87aa365f7d49b087f85143b66fc531f3cc456e4605b06265abf0c90fafe30"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/fit.py",
+   "original": "assessments/crni-paper-fit-step4-s1/code/scripts/fit.py",
+   "original_sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "sanitized_sha256": "83b675e95b8ccb415f815533f6e15cb660ed25691dd643121e606fe5e3067aff"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/evidence/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4-s1/evidence/MANIFEST.json",
+   "original_sha256": "a261f8729f7760583c4b77e104929081ac9d24dbc8dc447daf0dcfffdf191598",
+   "sanitized_sha256": "11bb21384206b89b9e633dc19c15bf3e411fbbdc3c1f7c2fd4a8969976f2fb59"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/evidence/MANIFEST@2.0.0.json",
+   "original": "assessments/crni-paper-fit-step4-s1/evidence/MANIFEST@2.0.0.json",
+   "original_sha256": "fe3cbb16bdaf930e8dbf7ddf90ebd1cd91ab7e52b018936ad7dea5c54848d7e9",
+   "sanitized_sha256": "b257c4f5c2a7e6ffa1edbcae1872ed02c90021e72a70b38f26d90c35ad9bc651"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/evidence/states@2.0.0.json",
+   "original": "assessments/crni-paper-fit-step4-s1/evidence/states@2.0.0.json",
+   "original_sha256": "5de896f659d7cdfecd51045c0738d3d15306b8af5a8d62e77fd33150cd41ade1",
+   "sanitized_sha256": "3bed28cb572f04e6eb6a578ff45c0119a34f67e6eb7018411ad5171a4c3ed1c3"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/intake/intake_manifest.json",
+   "original": "assessments/crni-paper-fit-step4-s1/intake/intake_manifest.json",
+   "original_sha256": "cafec6f934b50e0dd22dfaa77bc4abe28dd8b87ccb07f48b4146c55d89409a5a",
+   "sanitized_sha256": "8bbb7e35ad605a68fc85172d1365e592ee3edd9eeca44ed985350064a58641a5"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.1/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.1/code/MANIFEST.json",
+   "original_sha256": "d9a3136c40c62d3cfcbb8a9e2e9715c6c61e0592f7e2ddc8ba692d46213cf84c",
+   "sanitized_sha256": "f5598ae48b0179417aef839dda736f1cba8a4ae21465e0f0a1f848557cf117f8"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.1/code/scripts/physics.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.1/code/scripts/physics.py",
+   "original_sha256": "d9711402194a31df4d2ea5b127a63e127944dbf8e977651c305b103aa9848830",
+   "sanitized_sha256": "3a4d7dff4da3c5b4c3672ec5d0faa309595ff6f9fc5498973dd60f775b9ab96c"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.3/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.3/code/MANIFEST.json",
+   "original_sha256": "f28647b6ee489653bff2554b52ae25d8b5a098228bab74c35e8fae4cba91d471",
+   "sanitized_sha256": "7c56e478501e222ef7bc1fc403e9b3c0760825920bf4eabd4748034df0e8f3a9"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.3/code/scripts/fit3.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.3/code/scripts/fit3.py",
+   "original_sha256": "c8c63705d8518f7b78080dcadcf4ba59e59f10de2d3ef47cfa5ce1da733e0274",
+   "sanitized_sha256": "1311f71166da8f343ad59817cf130d046f76867526e90e3f932f98807002f9d6"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/records/crni-paper-fit/logs/step4c_b_hingefloor@1.1.0.log",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/records/crni-paper-fit/logs/step4c_b_hingefloor@1.1.0.log",
+   "original_sha256": "e317a0e79a6adf88d1ad3b9f9e77b7abcef0295c116067677d33c0d66e1d5990",
+   "sanitized_sha256": "2044e68421ecdcef9a1640aca9fe48f184b255e5b9f9e7b2b182d1ad913e688a"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/record_modes_2_1_2.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/record_modes_2_1_2.py",
+   "original_sha256": "e0b0b0626b9fb35bff076e53d81ef513f6dffb3185c9fa7ca974e7e6bcd344b0",
+   "sanitized_sha256": "1f5e6f844c52336e9d914b860bffc229399482d1857b08e5e99140391ece5637"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/redact_home_paths.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/redact_home_paths.py",
+   "original_sha256": "e241be2f74d1b2b2c80d6334bbcb2a78a8dfcddb78fc52ffaf091e3b9ea4cd68",
+   "sanitized_sha256": "2a5419f863f7c8a535e60c6ee0c95119c7ef5f43eea7c41cdb62e09681ed5d0c"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/relabel_hinge_observed.py",
+   "original": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/relabel_hinge_observed.py",
+   "original_sha256": "61fc0d49f5b51b435ebb41695f485be1a54c2c0b64d52ddedde17077c5bb13fb",
+   "sanitized_sha256": "cc954bfbe67d9f49c5f1ecca842516ebd119b36c24f60990cf83c472f7437d43"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/code/MANIFEST.json",
+   "original": "assessments/crni-paper-fit-step4c-b/code/MANIFEST.json",
+   "original_sha256": "c924795cf274ca0aba2e167d7e2e60e4844f1493a5569a1d0d24492604ab4b35",
+   "sanitized_sha256": "6f1874de9207da680529c3471cada473583cc42ee4da3971c27584c8d9b77ae3"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/code/scripts/emit_run_cards_v5.py",
+   "original": "assessments/crni-paper-fit-step4c-b/code/scripts/emit_run_cards_v5.py",
+   "original_sha256": "9202ce08927888ce1d90c09ed8780348d199b82cd21c1e068bf7d6543c9218f0",
+   "sanitized_sha256": "a653456842cdba4e98a8bbe4239bc80c69bbbf548225cddb90da6a7d388c6df0"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/code/scripts/fit.py",
+   "original": "assessments/crni-paper-fit-step4c-b/code/scripts/fit.py",
+   "original_sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "sanitized_sha256": "83b675e95b8ccb415f815533f6e15cb660ed25691dd643121e606fe5e3067aff"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/code/scripts/fit2.py",
+   "original": "assessments/crni-paper-fit-step4c-b/code/scripts/fit2.py",
+   "original_sha256": "829a58eb99cf6554d6c30eced5d82e084efe5860a48e3c1b26c1523255936cfd",
+   "sanitized_sha256": "077745e36542465c2dbe34752bc64a77d2080e796936ad4281492d22d9f6aae6"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.0.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.0.0.json",
+   "original_sha256": "60a4a11e771160c7f0eff9ccc0840af55337a9f71e9f22f25e8068ccb2d36d7a",
+   "sanitized_sha256": "768353a408b9c32f38578c3951c755a0709341792acf6516d5a89eaf69d084a4"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.1.0.json",
+   "original_sha256": "504058df6a29af030b4f5152fad2d80c2419193eb230c309b9a2b868e913b7ef",
+   "sanitized_sha256": "9d1ad4f24e549fb0c22640ae0053ac60921f6c27cf1c6d19b0bedd5914d000b1"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.2.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.2.0.json",
+   "original_sha256": "6dc2ba3713f38022682801d1dcfa808f70d2e47eae3c1e8afdcafe6cf4df12d0",
+   "sanitized_sha256": "5e9b30cff4428f64a7ccaea95d7d669522ed875981eebb2bbf1832caa92a199c"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/hinge_labels/step4c_hinge_floor@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/hinge_labels/step4c_hinge_floor@1.1.0.json",
+   "original_sha256": "0f7a220bbb5684d2e6b5b6b2a55e5b6be3b2e1dde408bddc60926d58ef543818",
+   "sanitized_sha256": "2c07905ed7aeb40e662e081b1f0ea64b588df04f7156c6b11c1840e579109cd9"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs_redacted/results/data_consistency@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs_redacted/results/data_consistency@1.1.0.json",
+   "original_sha256": "5283405743295162a27db11188fab6e06615cc042716f5238dfa45bbf7690539",
+   "sanitized_sha256": "280554df7a1912f03db8333a5d38fd226cab8a8dfbb9903b5980323c67a2ff9b"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/oneshot_redacted/oneshot_parameters@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/oneshot_redacted/oneshot_parameters@1.1.0.json",
+   "original_sha256": "f52e38a9b87d6259f09c1956054c1603c8560f554ff3d721eeb921d0f81b7417",
+   "sanitized_sha256": "68e983621cc89a4a066df0389897f5cac7d085fbd58745ff1f164927719ac42f"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/steps/step4c_b_hingefloor/trajectories_manifest.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/steps/step4c_b_hingefloor/trajectories_manifest.json",
+   "original_sha256": "66c82a63713f926b7e36de8063c00aecc4a4f9591189c5784553d24e351159fa",
+   "sanitized_sha256": "ef27ca57c2fde65dea71e67b56dd96d017b140186d01105b20dc3f85adb36149"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/states@1.0.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/states@1.0.0.json",
+   "original_sha256": "7121c9a34d5315b6acacd2a1607f77f9ac69e9bd2cb5a1d9843cc8f3e9ea0205",
+   "sanitized_sha256": "1a822dea3224b223f04283fa374df3ea86ef591f4147495f9bb8c647e2e6462c"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/states@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/states@1.1.0.json",
+   "original_sha256": "b2a93c9de507ee9bae1e463df61dc4b7269a8eaa8017a45c0f710948012988a2",
+   "sanitized_sha256": "e5f6c88601213a563cd31d49656a136a7ef5dcf2994e08490d3e4f056555c632"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/evidence/states@1.2.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/states@1.2.0.json",
+   "original_sha256": "90c94274b933f8c9ac0ffbc6c4aa06cf4fbef139e151369947e2f6c200e98ab4",
+   "sanitized_sha256": "2f4ca1d3fcf79a1c3067ea80d269f1276d9c6ef038c9db6a4c68a05aacbd603a"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/intake/intake_manifest.json",
+   "original": "assessments/crni-paper-fit-step4c-b/intake/intake_manifest.json",
+   "original_sha256": "4f93ef9bd0809d733a28289997b012a8faed7b1568df6e3d3ec036a2357a6025",
+   "sanitized_sha256": "9a1f9939eefa61f58380ddc63a2216f03386b431a842caced2a9e542b8510c7d"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4c-b/intake/intake_manifest@1.1.0.json",
+   "original": "assessments/crni-paper-fit-step4c-b/intake/intake_manifest@1.1.0.json",
+   "original_sha256": "520b8e9ab2d2fe411a6acec88a0082c5b1514fc861ba4a4cc0d49fb3ff237cd9",
+   "sanitized_sha256": "e94a9ce58777aa1814c55bdabbd908093b7c259b4c798d863d7fbb35d89a9669"
+  },
+  {
+   "path": "docs/fit_protocol_v1.9.md",
+   "original": "docs/fit_protocol_v1.9.md",
+   "original_sha256": "441620b271592039cf71d70c3a9a50365aa0f089c8d56aa960c1436c1be544bc",
+   "sanitized_sha256": "fcb3ae0bf0e7f08945d430ce529576a3720db53e74f262e12e4b573e8ddd840c"
+  },
+  {
+   "path": "protocols/environment/phaseforge.lock.txt",
+   "original": "protocols/environment/phaseforge.lock.txt",
+   "original_sha256": "24230590f82a25b46f471a98c2a3d57be31f3ffa94dd27c0371fadfd78a9443f",
+   "sanitized_sha256": "29b768fa7d62e76f572f7d528a1d6246bf08e8efc388ae17d25a954762c5b01a"
+  },
+  {
+   "path": "protocols/environment/pins/studio_phaseforge.lock.txt",
+   "original": "protocols/environment/pins/studio_phaseforge.lock.txt",
+   "original_sha256": "24230590f82a25b46f471a98c2a3d57be31f3ffa94dd27c0371fadfd78a9443f",
+   "sanitized_sha256": "29b768fa7d62e76f572f7d528a1d6246bf08e8efc388ae17d25a954762c5b01a"
+  },
+  {
+   "path": "protocols/figures/crni-paper-fit-step4-s1/figures_manifest.json",
+   "original": "protocols/figures/crni-paper-fit-step4-s1/figures_manifest.json",
+   "original_sha256": "bd9b006b8b2c34dd3b850e0b67389b138e6b07acea445e18abec659c4fdbe339",
+   "sanitized_sha256": "7846604fa4f6e2decb44b5ca6f26f9850cdacafcdeede358fc3adefb171c1975"
+  },
+  {
+   "path": "protocols/figures/crni-paper-fit-step4c-b/figures_manifest.json",
+   "original": "protocols/figures/crni-paper-fit-step4c-b/figures_manifest.json",
+   "original_sha256": "027a68f92e653dc794ed189655637cbc11b4357edc3e03dce58638b387592ad3",
+   "sanitized_sha256": "e429b0bc72d69e65708e2852bb9a22ffea5349689b5b3e86fff8b19daeb6e9ad"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/comparison.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/comparison.json",
+   "original_sha256": "6ecec98adba8930895cc345d4c8f7aa6a0b3c08987429443b07c6fc95f8637bb",
+   "sanitized_sha256": "209494e16f3afda623082c279ecfb6f6f60ae7a6a8ed52689a75fa0ad3c19cd1"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/comparison.md",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/comparison.md",
+   "original_sha256": "3cf1722b6d8b6318eaaeba300af9526a8cb3936077f1a8264d5090c0f15bba3d",
+   "sanitized_sha256": "dc70185275377e024c1abb8c2c1909cd1305db5ff4aca3c52b50f0648c99d077"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/check10a.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/check10a.json",
+   "original_sha256": "92226b30eec5e6a867330edacb5b1704817453257de0a9174601206a45789250",
+   "sanitized_sha256": "6b618855b48668514e30b72b6d7d658758dbe500848bb18bee6ed8f4fa892335"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/check10a.recorded.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/check10a.recorded.json",
+   "original_sha256": "bb23de6349d8c7deff38909cd2ef0046233f8dfeab4019a0bb1e3ce7bb8ab68e",
+   "sanitized_sha256": "39dba6a92ed581a06957f9ff38daae65199d360ba687d89e0b8644e8f54123fb"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/global_10c.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/global_10c.json",
+   "original_sha256": "1c8e785b647e6a321a57ab1664339ea90c8f72a9d1b5487417ff33f3b4959ed5",
+   "sanitized_sha256": "50ae3d5b10cb91750c4540ad9f76c5b24ca96ad140a00cafa4c9ecb9ccf2bbe3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/global_10c.recorded.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/global_10c.recorded.json",
+   "original_sha256": "90b25b83c69c377bd4a27096cc3fef8976f2f14d0f1da71541b6855fcfc84263",
+   "sanitized_sha256": "6abbd39ed6a4cfd1a1933c3d25e64395a4114c3eaf0dc9ba09e71b53ffd278dc"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/laplace_weights.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/laplace_weights.json",
+   "original_sha256": "c48f746c3879c037b9bed18a1c98d78db7d438f0dd0ce7e4838e5b73a06ac323",
+   "sanitized_sha256": "386f028299fa57a86ccd9a8eed87eaa1c04f29edcd0316b4d81a312ee05986b3"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/laplace_weights.recorded.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/laplace_weights.recorded.json",
+   "original_sha256": "3c40d037fc5f7557779ca77489a40f5e5916f66d57cb3c3968e98b00cc36b7a9",
+   "sanitized_sha256": "ae1657886cbaa492225e0d86fd4b85fc3abc16a355b2c82b1bbcef9e518b519b"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/step4c_b.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/step4c_b.json",
+   "original_sha256": "883e53058b9db5c1cb2465b1387ace56bf261edbf9b19fcba44df2bfe0033f83",
+   "sanitized_sha256": "e4e621f6072df7f81e39a6f44073367e8ac497bdd1eac23f65b46228f9a03d7f"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/step4c_b.recorded.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/step4c_b.recorded.json",
+   "original_sha256": "09897077d327dbb0d44841436f81cb8dc78acca0369a7728a8e53441983e018b",
+   "sanitized_sha256": "71e29c7b890ea6ecbb9d78f221bd037723883df468abbad02401bc563b81e339"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/thermochemistry.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/thermochemistry.json",
+   "original_sha256": "6f63bb607c456f05f384e9541475f8ff73678e9e74936d821aa2b4080375074d",
+   "sanitized_sha256": "5c45bcdc81798cefb79878e7764b4df169d17bf35f429cc1da5d2b44cc983c97"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/thermochemistry.recorded.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/jobs/thermochemistry.recorded.json",
+   "original_sha256": "ad5d656297e1e27785603d00b89df3d73261467364d8b6e620b39c5ff444c50b",
+   "sanitized_sha256": "973837afb60c5217615cf6d5fec50007d7cd83b92e51d8c80a03b954070e1e04"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/reproduce_logs/step4c_b.log",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/rerun/reproduce_logs/step4c_b.log",
+   "original_sha256": "e5e4b621db2afa34b4f538b947b4135f8746b5ba93296f107193038d0aa85681",
+   "sanitized_sha256": "db2b90e7aab22623e5f16aeb0c849f91865de07dce6ae35e83a968619a724295"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/PROMPT.txt",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/PROMPT.txt",
+   "original_sha256": "d656d22fab5ba6a49f0a6d3465a7407ed0f956eb662ab20d2b0a57e6141142c0",
+   "sanitized_sha256": "506435b01389545be880f60c654aee92a15655228a8bc274e33d6f561a0298d0"
+  },
+  {
+   "path": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/mcp-only.json",
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-mcp-studio/session/mcp-only.json",
+   "original_sha256": "4163d79a61aac9be6042cd8d21e9cae74e764cfef5ddccc80c5361034e1a3475",
+   "sanitized_sha256": "0aa0118027fcf7e05ec06cf79976a85b9beb163bebfcb600d1f3d1b6384abf32"
+  },
+  {
+   "path": "protocols/schema/common.schema.json",
+   "original": "protocols/schema/common.schema.json",
+   "original_sha256": "ad36520891c930ec2bd13fdf103b881242ed077582bc2c575c8191e6eb90ae81",
+   "sanitized_sha256": "76b3959f53886a8a0b52f4e6c04f1906eafdb5f10536ea18beac7724991a122a"
+  },
+  {
+   "path": "protocols/tools/backfill_run_cards.py",
+   "original": "protocols/tools/backfill_run_cards.py",
+   "original_sha256": "daaf5bbf7129c0b39f3c507d0cb359e571c3d7d0f9fa82a604ada14ff029291a",
+   "sanitized_sha256": "5bc2dfd1827d05d4e110d5b3eb05d046aadd2c3a5ce45b44b575447a4528f393"
+  },
+  {
+   "path": "protocols/tools/build_crate.py",
+   "original": "protocols/tools/build_crate.py",
+   "original_sha256": "90467cded5e9665569edcc5dac986dcc6f5c3b32e0d4136f0d882da49d0025df",
+   "sanitized_sha256": "817146da9105454bdad4b9ed762d5862b42664e38709ddd575b2dfcde05f56ab"
+  },
+  {
+   "path": "protocols/tools/build_evidence_bundle.py",
+   "original": "protocols/tools/build_evidence_bundle.py",
+   "original_sha256": "fc00f8cd0a40b1fec3fae6279064dcdc66a1d58107db5ba2c3dc62c7d3f571d9",
+   "sanitized_sha256": "684263ee171ff307d2079b7e64e83eadbe63cd549133c91a8b1a48975019bc2a"
+  },
+  {
+   "path": "protocols/tools/palette.json",
+   "original": "protocols/tools/palette.json",
+   "original_sha256": "9997b9cd1b3ed57170a6b36fd30967da3f2df99a090203bcfd960b77da87f96d",
+   "sanitized_sha256": "5dd68a2db62fef7996d6e974a306dbd67f0a2c81029530fb8420ea3f68e14b65"
+  },
+  {
+   "path": "protocols/tools/snapshot_code.py",
+   "original": "protocols/tools/snapshot_code.py",
+   "original_sha256": "df48522a8b9c7e73d3b2c47c0212f5d6c7442d076d917df6827026455e4cd6d1",
+   "sanitized_sha256": "53b51c726edbfbfc7800913a1cc5f93cacf6c41ff49cc4ffbc1191c9187bbea6"
+  },
+  {
+   "path": "protocols/tools/check_public.py",
+   "original": "protocols/tools/check_public.py",
+   "original_sha256": "36e6cbf669b1125918d26662397eb9e33d4cf3f1ed200696b98e353886bde5a7",
+   "sanitized_sha256": "8f986d8e3758487c41e987f7292258f516447b36bd81f2d1fec5311d5390cfa2"
+  },
+  {
+   "path": "protocols/tools/localpaths.py",
+   "original": "protocols/tools/localpaths.py",
+   "original_sha256": "7dd2feb5b1224732840eb533a87b4e458ab39b3b1b7334d8e8c513a22d4879c9",
+   "sanitized_sha256": "b384a1618508509876088b609ba8abfa414ebcddfcf61e3ccde2b7ee36f162f7"
+  },
+  {
+   "path": "protocols/tools/orchidproto.py",
+   "original": "protocols/tools/orchidproto.py",
+   "original_sha256": "0ff6487ec6449e0cd665a7ba260f43138ab7c2160e16616e5abb1bba1f48c148",
+   "sanitized_sha256": "a350035504e1e891827bc5d479dd0474b88e5f7b74b15a5201d45e289bdf129a"
+  },
+  {
+   "path": "sage_mcp/repo.py",
+   "original": "sage_mcp/repo.py",
+   "original_sha256": "d398a91b96e0ff16ce11865635e61b6bc6a5898a981590a5f8059c5e62dc0bc3",
+   "sanitized_sha256": "662daea9470f9388974511ad36ec72f72e4cb090cb96e55d72449af2d54184b3"
+  },
+  {
+   "path": ".public-allow",
+   "original": ".public-allow",
+   "original_sha256": "ddfc409c7691fec809166b7bd00a13a0cb6e25243751100b8bb30b7cf17d9ad8",
+   "sanitized_sha256": "a859f5466148f5c824136c25e6d8125fd3f2f60d57a75a59509901289e7a85da"
+  }
+ ]
+}

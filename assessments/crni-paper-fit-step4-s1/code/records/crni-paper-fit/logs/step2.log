@@ -1,0 +1,10 @@
+espei 0.8.11.dev82+g9039ea215 <fit-python>
+{"step": "step2_liquidus", "start": "s1_perturbed", "logpost": -1703.6767369522913, "grad_norm_q": 5.203343408472042e-05, "nfev": 100, "seconds": 81.61022787448019, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s3_perturbed", "logpost": -1703.6767365813623, "grad_norm_q": 4.555385096745984e-06, "nfev": 105, "seconds": 85.03953879140317, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s0_start", "logpost": -1703.6767365508058, "grad_norm_q": 2.9155538712660856e-05, "nfev": 113, "seconds": 91.56651716679335, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s2_perturbed", "logpost": -1703.6876939511153, "grad_norm_q": 0.01109215537213373, "nfev": 141, "seconds": 111.32136158365756, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s4_perturbed", "logpost": -1703.676736751694, "grad_norm_q": 2.4645558713139303e-05, "nfev": 103, "seconds": 76.69564466644078, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s6_perturbed", "logpost": -1703.6768833788256, "grad_norm_q": 2.4120230726843253e-05, "nfev": 102, "seconds": 75.85650716722012, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s5_perturbed", "logpost": -1703.676736690307, "grad_norm_q": 4.2826290094612285e-05, "nfev": 121, "seconds": 89.1170349996537, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "s7_perturbed", "logpost": -1703.6767365088053, "grad_norm_q": 2.9712241007381535e-05, "nfev": 110, "seconds": 76.11206220835447, "final": "converged", "n_nonfinite": 0}
+{"step": "step2_liquidus", "start": "oneshot_noSex", "logpost": -1703.676736602101, "grad_norm_q": 3.696187363717299e-05, "nfev": 100, "seconds": 61.91232120897621, "final": "converged", "n_nonfinite": 0}

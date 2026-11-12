@@ -1,0 +1,79 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-evaluate_states",
+ "version": "1.0.0",
+ "title": "evaluate_states (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-evaluate_states",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "evaluate_states"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T17:34:26-0600",
+ "finished": "2026-11-07T17:34:29-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> -I <orchid-sage>/protocols/tools/evaluate_states.py step4c_b_hingefloor_pick.tdb states@1.2.0.json states_evaluated@1.2.0.json --nproc 4",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/evaluate/step4c_b_hingefloor_pick.tdb",
+   "sha256": "3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78",
+   "storage_class": "local",
+   "role": "input"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/evaluate/states@1.2.0.json",
+   "sha256": "90c94274b933f8c9ac0ffbc6c4aa06cf4fbef139e151369947e2f6c200e98ab4",
+   "storage_class": "local",
+   "role": "input"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/states_evaluated@1.2.0.json",
+   "sha256": "cf2c98793814d32c0b5d58a4347914e8ab9b11e7a337c43afd0154ae0b520940",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/evaluate/states_evaluated@1.2.0.json",
+   "sha256": "cf2c98793814d32c0b5d58a4347914e8ab9b11e7a337c43afd0154ae0b520940",
+   "storage_class": "local",
+   "role": "output"
+  }
+ ],
+ "results": {
+  "returncode": 0,
+  "wall_s": 3.48
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/evaluate_states.log",
+   "sha256": "bf87dae7f510494b98fde4c146df558daecf0f2d46990000b0830371e9d51b5d",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item evaluate_states (reproduce.plan of the specific protocol)"
+ ]
+}

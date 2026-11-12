@@ -1,0 +1,37 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "CRNI2"
+ ],
+ "solver": {
+  "mode": "manual",
+  "sublattice_site_ratios": [
+   1,
+   2
+  ],
+  "sublattice_configurations": [
+   [
+    "CR",
+    "NI"
+   ]
+  ]
+ },
+ "conditions": {
+  "P": 101325,
+  "T": 298.15
+ },
+ "output": "HM_FORM",
+ "values": [
+  [
+   [
+    -12067.851343643677
+   ]
+  ]
+ ],
+ "weight": 0.05161594462962819,
+ "reference": "PhaseForge one-shot GRACE-2L-SMAX-OMAT-large observation CRNI2 (crni-paper-fit-20261106); sigma 9687 J/mol-atom (sigma_MLIP)",
+ "comment": "protocol 0.0a/0.1 one-shot observation; ESPEI weight = 500/sigma"
+}

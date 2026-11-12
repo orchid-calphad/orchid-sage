@@ -1,0 +1,25 @@
+{
+ "start_tdb": "tdb/step1_oneshot.tdb",
+ "groups": [
+  "oneshot",
+  "liq"
+ ],
+ "free": [
+  "VV0000",
+  "VV0001",
+  "VV0002",
+  "VV0003",
+  "VV0004",
+  "VV0005",
+  "VV0006",
+  "VV0007",
+  "VV0008",
+  "VV0009",
+  "VV0010",
+  "VV0011"
+ ],
+ "hinge": null,
+ "note": "0.1 step 2: liquid L0,L1 (a,b) and the solids that melt (bcc, fcc L0,L1 a,b); CRNI2 held (does not melt). Data: liquid-containing ZPF rows (i)+(ii), ORCHID eutectic, liquid S_ex, one-shot observations.",
+ "name": "step2_liquidus",
+ "wall_s": 5400
+}

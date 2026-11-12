@@ -1,0 +1,140 @@
+{
+ "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+ "spec_sha256": "e5b0f24362f2bc5533a6a6afcd2ff979cedc9659616ddb6ba920d4e77b47d18f",
+ "root": "<home>/orchid-protocols-work-20261106/step3b-spark1",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-06T09:10:23-0600",
+ "items": [
+  {
+   "id": "step3b",
+   "step": "fit_thermo",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/multistart.json",
+     "reference": -3941.800787656944,
+     "rerun": -3941.8007861388533,
+     "diff": 1.5180908121692482e-06,
+     "abs_tol": 0.05,
+     "pass": true
+    },
+    {
+     "check": "tdb_abs",
+     "path": "tdb/step3b_thermo_crni2free_pick.tdb",
+     "reference": "assessments/crni-paper-fit-step4-s1/evidence/reference_outputs/tdb/step3b_thermo_crni2free_pick.tdb (sha256 5b48923dc9f37553)",
+     "rerun_sha256": "7cf45d25cd1de68772aa76c5ad813e002add1392222804095fcc6d91faf6c22c",
+     "byte_identical": false,
+     "worst_diff_over_tol": 103.96670000000003,
+     "other_lines_identical": true,
+     "params": {
+      "VV0000": [
+       -13045.084925,
+       -13027.91012,
+       50
+      ],
+      "VV0001": [
+       2.740694,
+       2.75048,
+       0.03
+      ],
+      "VV0002": [
+       -1108.038515,
+       -1056.418026,
+       50
+      ],
+      "VV0003": [
+       1.458471,
+       1.459802,
+       0.03
+      ],
+      "VV0004": [
+       18293.8993,
+       18934.435974,
+       50
+      ],
+      "VV0005": [
+       -11.501371,
+       -11.860092,
+       0.03
+      ],
+      "VV0006": [
+       29139.817163,
+       27552.596306,
+       50
+      ],
+      "VV0007": [
+       -7.550019,
+       -6.587225,
+       0.03
+      ],
+      "VV0008": [
+       -4997.98685,
+       -5275.849584,
+       50
+      ],
+      "VV0009": [
+       -3.333819,
+       -3.115068,
+       0.03
+      ],
+      "VV0010": [
+       7819.511869,
+       6107.921781,
+       50
+      ],
+      "VV0011": [
+       -4.551654,
+       -3.388942,
+       0.03
+      ],
+      "VV0012": [
+       -35570.326025,
+       -32148.512175,
+       50
+      ],
+      "VV0013": [
+       11.309535,
+       8.190534,
+       0.03
+      ]
+     },
+     "pass": false
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/evaluation.json",
+     "reference": 1626,
+     "rerun": 1626.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step3b_thermo_crni2free/evaluation.json",
+     "reference": 1074,
+     "rerun": 1074.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/fit.py steps/configs/step3b_thermo_crni2free.json 4 && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/evaluate.py step3b_thermo_crni2free",
+   "returncode": 0,
+   "wall_s": 1232.6,
+   "pass": false
+  }
+ ],
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "finished": "2026-11-06T09:30:57-0600",
+ "pass": false
+}

@@ -1,0 +1,65 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-step4c_b",
+ "version": "1.0.0",
+ "title": "fit_solid (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-step4c_b",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "fit_solid"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T15:09:59-0600",
+ "finished": "2026-11-07T15:42:14-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> scripts/fit3.py steps/configs/step4c_b_hingefloor.json 4 7 && <fit-python> scripts/evaluate.py step4c_b_hingefloor",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/tdb/step1_oneshot.tdb",
+   "sha256": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [],
+ "results": {
+  "returncode": 0,
+  "wall_s": 1934.44
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/step4c_b.log",
+   "sha256": "884e0934158dbbb0afd4b9eb2cafecf278994cd01667368923ff67be7ca6426a",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item step4c_b (reproduce.plan of the specific protocol)",
+  "run detached by sage_mcp (start_step / step_status); pids = [job wrapper, command shell]"
+ ],
+ "pids": [
+  44427,
+  44429
+ ]
+}

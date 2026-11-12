@@ -1,0 +1,45 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2",
+  "FCC_A1"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1487
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "BCC_A2",
+    [
+     "NI"
+    ],
+    [
+     0.281
+    ]
+   ],
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "reference": "jenkins1937some_alloys",
+ "comment": "Liquidus digitized from table 2, solidus digitized from figure | REBUILD set D, observation (ii): values as printed, null vertex kept (ESPEI zero-phase-fraction condition of the partner phase), weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [42, 43, 44, 45, 46, 47, 48]); values unchanged | step4c: sigma_DF = max(converted 80, tier less_certain 50) = 80 J/mol",
+ "weight": 12.462951881704116
+}

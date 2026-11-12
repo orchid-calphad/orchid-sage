@@ -1,0 +1,120 @@
+{
+ "a_normal": {
+  "record_counts": {
+   "zpf": {
+    "files": 317,
+    "zpf_records": 317,
+    "activity_datasets_with_ACR": 0,
+    "fixed_points": 0,
+    "equilibrium_property_datasets": 0,
+    "phases": [
+     "BCC_A2",
+     "CRNI2",
+     "FCC_A1",
+     "LIQUID"
+    ],
+    "held": {
+     "ZPFResidual": 317,
+     "fixed_points": 0,
+     "equilibrium_property": 0,
+     "activity_datasets": 317,
+     "activity_phases": 4
+    }
+   },
+   "zpf_susp": {
+    "files": 12,
+    "zpf_records": 12,
+    "activity_datasets_with_ACR": 0,
+    "fixed_points": 0,
+    "equilibrium_property_datasets": 0,
+    "phases": [
+     "BCC_A2",
+     "FCC_A1",
+     "LIQUID"
+    ],
+    "held": {
+     "ZPFResidual": 12,
+     "fixed_points": 0,
+     "equilibrium_property": 0,
+     "activity_datasets": 12,
+     "activity_phases": 3
+    }
+   },
+   "thermo": {
+    "files": 22,
+    "zpf_records": 0,
+    "activity_datasets_with_ACR": 12,
+    "fixed_points": 130,
+    "equilibrium_property_datasets": 0,
+    "phases": [
+     "BCC_A2",
+     "CRNI2",
+     "FCC_A1",
+     "LIQUID"
+    ],
+    "held": {
+     "ZPFResidual": 0,
+     "fixed_points": 130,
+     "equilibrium_property": 0,
+     "activity_datasets": 22,
+     "activity_phases": 4
+    }
+   },
+   "oneshot_anchor": {
+    "files": 10,
+    "zpf_records": 0,
+    "activity_datasets_with_ACR": 0,
+    "fixed_points": 10,
+    "equilibrium_property_datasets": 0,
+    "phases": [
+     "BCC_A2",
+     "CRNI2",
+     "FCC_A1",
+     "LIQUID"
+    ],
+    "held": {
+     "ZPFResidual": 0,
+     "fixed_points": 10,
+     "equilibrium_property": 0,
+     "activity_datasets": 10,
+     "activity_phases": 4
+    }
+   },
+   "S_ex": {
+    "files": 6,
+    "zpf_records": 0,
+    "activity_datasets_with_ACR": 0,
+    "fixed_points": 6,
+    "equilibrium_property_datasets": 0,
+    "phases": [
+     "BCC_A2",
+     "CRNI2",
+     "FCC_A1",
+     "LIQUID"
+    ],
+    "held": {
+     "ZPFResidual": 0,
+     "fixed_points": 6,
+     "equilibrium_property": 0,
+     "activity_datasets": 6,
+     "activity_phases": 4
+    }
+   }
+  },
+  "n_zpf_susp_records": 12,
+  "no_crni2_phases": [
+   "BCC_A2",
+   "FCC_A1",
+   "LIQUID"
+  ]
+ },
+ "b_empty_db": {
+  "raised": true,
+  "message": "no-CRNI2 database has phases [], expected ['BCC_A2', 'FCC_A1', 'LIQUID']"
+ },
+ "c_dropped_record": {
+  "raised": true,
+  "message": "category zpf_susp: ZPF records 11 of 12"
+ },
+ "fail_closed_ok": true
+}

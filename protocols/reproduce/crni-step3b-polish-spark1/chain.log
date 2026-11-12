@@ -1,0 +1,2 @@
+{"step": "step3b_thermo_crni2free", "threshold": 0.001, "n_starts": 8, "n_eligible": 0, "pick": null, "pick_objective": null}
+step3b_thermo_crni2free: no eligible start; chain stops

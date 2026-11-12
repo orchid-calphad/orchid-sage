@@ -1,0 +1,41 @@
+{
+ "n_datasets": 63,
+ "max_abs_diff": 0.32675633333201404,
+ "worst": [
+  [
+   0.32675633333201404,
+   "oneshot/oneshot_HM_FORM_CRNI2.json",
+   "rms_residual",
+   829.1096699770133,
+   829.4364263103453
+  ],
+  [
+   0.022058175316487905,
+   "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "max_abs_z",
+   1010.3951783443918,
+   1010.3731201690753
+  ],
+  [
+   0.022058175316487905,
+   "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "max_abs_z",
+   1010.3951783443918,
+   1010.3731201690753
+  ],
+  [
+   0.018543281248412313,
+   "oneshot/oneshot_HM_MIX_BCC_A2_x0.75.json",
+   "rms_residual",
+   1455.410952765411,
+   1455.4294960466593
+  ],
+  [
+   0.015395249998618965,
+   "oneshot/oneshot_HM_MIX_BCC_A2_x0.50.json",
+   "rms_residual",
+   1107.3872616890876,
+   1107.371866439089
+  ]
+ ]
+}

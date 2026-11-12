@@ -1,0 +1,96 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-check10a",
+ "version": "1.0.0",
+ "title": "pick_solid (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-check10a",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "pick_solid"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T15:42:19-0600",
+ "finished": "2026-11-07T16:02:45-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> -u scripts/check10a_ms2.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json results/check10a_rerun.json 4 model3 && <fit-python> -I scripts/pick10a2.py results/check10a_rerun.json steps/step4c_b_hingefloor/evaluation.json steps/step4c_b_hingefloor reference/step4c_b_hingefloor_pick.tdb reference/modes_step4c_b@1.1.0.json results/pick10a_rerun.json tdb/step4c_b_hingefloor_pick10a.tdb results/pick10a_start.txt 50 0.03",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/step4c_b_hingefloor_pick.tdb",
+   "sha256": "3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78",
+   "storage_class": "local",
+   "role": "input"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/modes_step4c_b@1.1.0.json",
+   "sha256": "039e3a45724238984e514141a279b8c5ad3e3b21839ce851e199a9150e56bf03",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/pick10a_rerun.json",
+   "sha256": "474298df841255aec53ff89e386b7e639435fa5a966436adbe712929fab6253e",
+   "storage_class": "local",
+   "role": "output"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/pick10a_rerun.json",
+   "sha256": "474298df841255aec53ff89e386b7e639435fa5a966436adbe712929fab6253e",
+   "storage_class": "local",
+   "role": "output"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/pick10a_rerun.json",
+   "sha256": "474298df841255aec53ff89e386b7e639435fa5a966436adbe712929fab6253e",
+   "storage_class": "local",
+   "role": "output"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/pick10a_rerun.json",
+   "sha256": "474298df841255aec53ff89e386b7e639435fa5a966436adbe712929fab6253e",
+   "storage_class": "local",
+   "role": "output"
+  }
+ ],
+ "results": {
+  "returncode": 0,
+  "wall_s": 1226.42
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/check10a.log",
+   "sha256": "07090053ef89915ef6e56c07e741552c243f78792cf512195ef6fe5ed649d492",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item check10a (reproduce.plan of the specific protocol)",
+  "run detached by sage_mcp (start_step / step_status); pids = [job wrapper, command shell]"
+ ],
+ "pids": [
+  59993,
+  59994
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2"
+ ],
+ "solver": {
+  "mode": "manual",
+  "sublattice_site_ratios": [
+   1
+  ],
+  "sublattice_configurations": [
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ]
+  ],
+  "sublattice_occupancies": [
+   [
+    [
+     0.25,
+     0.75
+    ]
+   ]
+  ]
+ },
+ "conditions": {
+  "P": 101325,
+  "T": 298.15
+ },
+ "output": "HM_MIX",
+ "values": [
+  [
+   [
+    1056.305286026068
+   ]
+  ]
+ ],
+ "weight": 0.05161594462962819,
+ "reference": "PhaseForge one-shot GRACE-2L-SMAX-OMAT-large observation BCC_A2_x0.75 (crni-paper-fit-20261106); sigma 9687 J/mol-atom (sigma_MLIP) | RELAXATION RULE VARIANT (fit_protocol 0.0a, PI 6 Nov): s2 failed the lattice check; value = midpoint of [s3, s0] = 1056 J (was s2 240), sigma = max(half-width 2550, sigma_MLIP) = 9687",
+ "comment": "protocol 0.0a/0.1 one-shot observation; ESPEI weight = 500/sigma"
+}

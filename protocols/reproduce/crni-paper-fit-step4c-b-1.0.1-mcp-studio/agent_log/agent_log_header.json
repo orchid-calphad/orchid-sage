@@ -1,0 +1,152 @@
+{
+ "role": "header",
+ "title": "AI-agent log: regeneration of crni-paper-fit-step4c-b@1.0.1 through the ORCHID-SAGE MCP server (7 Nov 2026)",
+ "assessment": "crni-paper-fit-step4c-b@1.0.1 (Cr-Ni, then draft); the agent reported PASS, 13 of 13 checks (final result below). The reproduce records of this session are not part of this release; the approved version is 1.0.4 (../../crni-paper-fit-step4c-b-1.0.4-mcp-studio/)",
+ "model_identifier": "claude-opus-5-5",
+ "model_identifiers_in_messages": [
+  "claude-opus-5-5"
+ ],
+ "model_usage": {
+  "claude-opus-5-5": {
+   "inputTokens": 64,
+   "outputTokens": 11195,
+   "cacheReadInputTokens": 1370193,
+   "cacheCreationInputTokens": 81272,
+   "costUSD": 1.1483706,
+   "provider": "firstParty"
+  }
+ },
+ "generation_dates_utc": {
+  "session_started": "2026-11-07T11:56:28Z",
+  "first_record": "2026-11-07T11:56:28Z",
+  "last_record": "2026-11-07T14:37:15.233Z",
+  "session_finished": "2026-11-07T14:37:15Z"
+ },
+ "client": {
+  "name": "Claude Code CLI (headless, claude -p)",
+  "version": "2.1.316",
+  "output_format": "stream-json --verbose",
+  "permission_mode": "default"
+ },
+ "command": "claude -p --strict-mcp-config --mcp-config mcp-only.json --allowedTools mcp__orchid-sage --disallowedTools Bash Edit Write Read Glob Grep WebFetch WebSearch Agent NotebookEdit RemoteTrigger Workflow CronCreate ScheduleWakeup SendToProject SendToProjectContext PushNotification EnterWorktree DesignSync --output-format stream-json --verbose \"$(cat PROMPT.txt)\"  (run in <run-dir>; launch command from the operator session, 11:56:08 UTC; mcp-only.json identical to the 1.0.4 one)",
+ "mcp_server": {
+  "name": "sage_mcp (ORCHID-SAGE MCP server, stdio)",
+  "version": "0.1.0",
+  "source": "orchid-sage commit 2ff7eb8bd408b9b5a8b6181ac5f718e340578aa3 (private repository; the last commit before the session, 84 s earlier, which added start/status for long items; sage_mcp tree 8e972adf409f1003d160766b7046dd4dd620e165); launched as `<mcp-python> -m sage_mcp` with PYTHONPATH and SAGE_REPO = <orchid-sage>"
+ },
+ "mcp_servers_connected": [
+  "orchid-sage"
+ ],
+ "allowed_tools": "--allowedTools mcp__orchid-sage (the 29 orchid-sage MCP tools) with --strict-mcp-config, and the built-in write, shell, read, web, agent and remote tools disallowed (41 tools available at start, listed below)",
+ "tools_available_at_init": [
+  "CronDelete",
+  "CronList",
+  "ExitWorktree",
+  "ListAgents",
+  "ListMcpResourcesTool",
+  "ReadMcpResourceDirTool",
+  "ReadMcpResourceTool",
+  "ReportFindings",
+  "SendMessage",
+  "Skill",
+  "TaskStop",
+  "ToolSearch",
+  "mcp__orchid-sage__compare_outputs",
+  "mcp__orchid-sage__compute_ids",
+  "mcp__orchid-sage__gather_evidence",
+  "mcp__orchid-sage__get_dashboard_data",
+  "mcp__orchid-sage__get_decisions",
+  "mcp__orchid-sage__get_evidence_links",
+  "mcp__orchid-sage__get_evidence_manifest",
+  "mcp__orchid-sage__get_history",
+  "mcp__orchid-sage__get_open_questions",
+  "mcp__orchid-sage__get_protocol",
+  "mcp__orchid-sage__get_run_cards",
+  "mcp__orchid-sage__get_step",
+  "mcp__orchid-sage__get_steps",
+  "mcp__orchid-sage__list_backends",
+  "mcp__orchid-sage__list_protocols",
+  "mcp__orchid-sage__migrate",
+  "mcp__orchid-sage__modify_protocol",
+  "mcp__orchid-sage__new_assessment",
+  "mcp__orchid-sage__next_step",
+  "mcp__orchid-sage__package",
+  "mcp__orchid-sage__plan_reproduction",
+  "mcp__orchid-sage__propose_general_change",
+  "mcp__orchid-sage__record_decision",
+  "mcp__orchid-sage__record_external_run",
+  "mcp__orchid-sage__run_step",
+  "mcp__orchid-sage__start_step",
+  "mcp__orchid-sage__step_status",
+  "mcp__orchid-sage__validate",
+  "mcp__orchid-sage__verify_inputs"
+ ],
+ "prompt": "You are reproducing the ORCHID-SAGE assessment crni-paper-fit-step4c-b@1.0.1. You have only the orchid-sage MCP tools. Do not\nguess: every command, path, tolerance and decision comes from a tool result. Never run a step the tools refuse. LOCAL work only:\nno remote or cloud agents, no `rm` (move aside), stop only processes you started, by exact PID; never touch other jobs on the host.\n1. Read: get_protocol(\"crni-paper-fit-step4c-b@1.0.1\"), then get_steps. Note the reproduce items (step4c_b, check10a, global_10c,\n   evaluate_states, phase_sequence, pure_elements, thermochemistry, laplace_weights) and the judgement steps.\n2. Validate: validate(\"crni-paper-fit-step4c-b@1.0.1\"). Report every error.\n3. Verify inputs: verify_inputs(...). The rerun needs only `bundle_manifests` to be ok (`rerun_ready: true`); the four manifests are\n   the 0.2.0 code snapshot, the 1.0.0 and 1.0.1 addendum snapshots and evidence bundle 1.0.0.\n4. Plan: plan_reproduction(..., run_root=<a NEW directory outside the repository, <home>/ScientificRuns and <home>/data/private>).\n5. Run in plan order, one call each: stage, environment_check, then step4c_b (numerical, allow_long=true), check10a (numerical,\n   allow_long=true), global_10c (numerical, allow_long=true), evaluate_states, phase_sequence, pure_elements, thermochemistry\n   (allow_long=true), laplace_weights (allow_long=true). Pass python= and the PhaseForge+ source the tools ask for. check10a must\n   run before global_10c, phase_sequence, pure_elements and thermochemistry: it writes the 10a pick they use (results/pick10a_start.txt, tdb/step4c_b_hingefloor_pick10a.tdb).\n6. Judgement steps are never executed: get_step returns the recorded decision and its source (get_decisions lists them, the agent\n   decisions labelled).\n7. Compare: compare_outputs(...).\n8. Report: items run; PASS/FAIL per check with reference, rerun value and tolerance; what was not run and why; the report path;\n   and every choice the tools did not settle. The verdict is by predictions only (PI, 6 Nov: \"this is too strict\"): objective\n   of the 10a pick (by rule), diagram topology and phase sequence, eutectic and CrNi2 top, thermochemistry, pure elements and\n   Laplace weight within tolerance, plus the byte checks of data identity (staged inputs, evidence bundle, evaluated states).\n   Parameters (results/pick10a_rerun.json; flat directions undetermined), start and mode labels, cache files, timestamps,\n   the environment check and the PhaseForge+ pin are notes, never failures.\nUse run_root=<run-dir>/run. The operator provides: python=<fit-python> and the PhaseForge+ source at <run-dir>/pfp-c66656f/src (an export of commit c66656f). nproc=4.\nLong items (needs_allow_long) start detached: run_step returns at once with status \"running\". Then call step_status(protocol, run_root, item, wait_s=900) repeatedly until its status is \"finished\" (each call returns within 15 min; the item keeps running between calls); that call writes the run card. Never start an item twice, and start the next item only after the previous one has finished.",
+ "totals": {
+  "turns_reported_by_client": 37,
+  "assistant_messages": 31,
+  "tool_calls": 36,
+  "tool_calls_by_name": {
+   "ToolSearch": 1,
+   "mcp__orchid-sage__compare_outputs": 1,
+   "mcp__orchid-sage__get_decisions": 1,
+   "mcp__orchid-sage__get_protocol": 1,
+   "mcp__orchid-sage__get_step": 4,
+   "mcp__orchid-sage__get_steps": 1,
+   "mcp__orchid-sage__plan_reproduction": 1,
+   "mcp__orchid-sage__run_step": 10,
+   "mcp__orchid-sage__step_status": 14,
+   "mcp__orchid-sage__validate": 1,
+   "mcp__orchid-sage__verify_inputs": 1
+  },
+  "cost_usd": 1.1483706,
+  "duration_ms": 9661769,
+  "duration_api_ms": 156644,
+  "tokens": {
+   "input_tokens": 64,
+   "output_tokens": 11195,
+   "cache_read_input_tokens": 1370193,
+   "cache_creation_input_tokens": 81272
+  },
+  "permission_denials": 0,
+  "is_error": false,
+  "stop_reason": "end_turn"
+ },
+ "records_left_out": {
+  "rate_limit_event": 1,
+  "system/thinking_tokens": 10,
+  "tool_progress": 305
+ },
+ "source": {
+  "transcript": "stream-json output of the client (session.jsonl in the run directory)",
+  "transcript_sha256": "fca63008d58c10b024795f292cd69cb4f941c120b557d8261f974aa4340fc18a",
+  "prompt_sha256": "8e85ec6cfbfe25176b7e25e0607af1cb652302bf75aef56aebafc26f115407c4",
+  "persisted_tool_results": {
+   "call-006.json": "6907ca254b8781395cf2f99bf1f417a736a848732ddde0ee452b7e025a510988"
+  },
+  "note": "sha256 of the unsanitized local originals (kept privately); this log is their sanitized rendering"
+ },
+ "sanitization": "protocols/tools/public_sanitize.py rules (home paths -> ~, user names -> <user>, host names -> machine labels, session ids -> <session>), then the local directories named below -> placeholders, then any remaining home-relative path (tilde, slash) -> <home>/; API/client ids dropped, tool-use ids renumbered; the prompt is sanitized by the same rules (its local original is pinned by source.prompt_sha256)",
+ "placeholders": {
+  "<run-dir>": "the fresh run directory of this session (the client's working directory; run root <run-dir>/run)",
+  "<orchid-sage>": "the orchid-sage repository checkout (this repository, private copy at the commit named in the header)",
+  "<orchid-mcp>": "the checkout that holds the Python environment of the MCP server",
+  "<mcp-python>": "the MCP server's interpreter (<orchid-mcp>/.venv/bin/python)",
+  "<fit-python>": "the fit interpreter given by the operator (a Python 3 virtual environment with ESPEI 0.8.11.dev82+g9039ea215 and pycalphad 0.11.3.dev35+g9a6939dd2)",
+  "<fit-venv>": "that virtual environment",
+  "<client-tool-results>": "the client's folder for tool results too long to return inline",
+  "<client-projects>": "the client's per-project session folder",
+  "<home>": "the operator's home directory (any other path below it)",
+  "<session>": "the client session id",
+  "mac-studio": "the Mac Studio (Apple silicon, arm64, macOS) on which the session and every item ran"
+ },
+ "notes": [
+  "No start or finish stamp files were written for this session: the generation dates are its first and last records.",
+  "Single session, single model; no subagents.",
+  "Thinking blocks: the client stored them with empty text (only an opaque signature, omitted here).",
+  "Earlier agent sessions of 6 Nov (crni-paper-fit-step4c-b@1.0.0: a session refused at the PhaseForge+ pin, one stopped by a timeout, one failed --bare start and a completed run) are not included.",
+  "Built by build_agent_log.py (in this folder) from the local stream-json transcript, with the sanitizer rules of protocols/tools/public_sanitize.py and the machine names of the private local configuration."
+ ],
+ "final_result_text": "# Reproduction of crni-paper-fit-step4c-b@1.0.1: PASS\n\nAll 10 reproduce items ran with return code 0, and all 13 compared checks are within tolerance. This PASS covers predictions and data identity only, as the PI's 6 Nov rule asks. The run used the operator's python and PhaseForge+ source (export of c66656f), with nproc=4, in the run root `<run-dir>/run`.\n\n## 1–3. Protocol, validation, inputs\n- **Protocol:** status is draft, awaiting PI approval. It instantiates orchid-calphad-fit@2.1.0. The reproduce plan is the eight items you listed, plus `stage` and `environment_check`.\n- **Validation:** no errors and no warnings for this document. The validator's exit code is 1, but it applies to the whole repository; errors in other documents are filtered out when one document is named, so I can't see them.\n- **verify_inputs:** 89 files match their hashes, with 0 mismatched and 0 missing. The 2 restricted files are present and were checked by hash only, never read. All four bundle manifests are ok (code 0.2.0: 28 files; addendum 1.0.0: 8; addendum 1.0.1: 3; evidence 1.0.0: 395), so `rerun_ready: true`.\n\n## 4–5. Items run (in plan order, each started once)\n| Item | rc | Wall time | Result |\n|---|---|---|---|\n| stage | 0 | — | 409 files staged |\n| environment_check | 0 | — | `0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2`, matches expected |\n| step4c_b | 0 | 1954 s | 8 of 8 starts converged; ranking pick s4_perturbed (logpost −5657.288637); T_eut 1614 K, CrNi2 top 860 K |\n| check10a | 0 | 1230 s | 8 smooth, 0 kink, 0 not stationary; 10a pick s4_perturbed, gap 1.87e-9; nearest mode A_s4 |\n| global_10c | 0 | 5643 s | basin hopping and dual annealing, seed 7201, 1500 evaluations each |\n| evaluate_states | 0 | 3.6 s | 695 of 695 states evaluated, 404 match |\n| phase_sequence | 0 | 0.9 s | — |\n| pure_elements | 0 | 2.5 s | unary_ok true |\n| thermochemistry | 0 | 3.4 s | 22 of 22 datasets compared |\n| laplace_weights | 0 | 700 s | — |\n\n## 7. Comparison (`run/comparison/comparison.json`, plus `.md` and `plan_compare.json`)\n| Check | Reference | Rerun | Tolerance | Verdict |\n|---|---|---|---|---|\n| Objective of the 10a pick | −5657.288636859774 | −5657.288636859774 | 0.01 | PASS |\n| 10a pick by rule (json_equal) | true | true | equal | PASS |\n| Eutectic | 1614 K | 1614.0 K | ±2 K | PASS |\n| CrNi2 top | 860 K | 860.0 K | ±2 K | PASS |\n| 10c basin-hopping best | −5657.288636859766 | −5657.288636859772 | 0.01 | PASS |\n| 10c dual-annealing best | −5657.288636859768 | −5657.288636859772 | 0.01 | PASS |\n| Evaluated states (bytes) | reference/states_evaluated@1.0.0.json | sha256 b610e5ec… | identical | PASS |\n| Diagram topology and phase sequence | phase_sequence_reference.json | phase_sequence_rerun.json | sequence equal | PASS |\n| Pure elements (3 checks) | true / BCC_A2 / FCC_A1 | same | equal | PASS |\n| Thermochemistry | within = true | 22 of 22, max \\|Δ rms_z\\| 0.0 | 0.1 | PASS |\n| Laplace weight of A_s4 | 0.7660570156 | 0.7660570156 | 0.01 | PASS |\n\n**Data identity:** the evaluated-states byte check passed. For the staged inputs and evidence bundle, the evidence is the verify_inputs result (all four manifests match by sha256) and the 409-file stage. `compare_outputs` does not list a separate byte check for these, so I am reporting them on that basis rather than as a compared item.\n\n## Notes (not failures)\n- **Parameters** (`results/pick10a_rerun.json`): \"determined within tol True\". The flat directions VV0004–VV0011 and VV0013 are reported as undetermined, by the agent's recorded rule.\n- **Strict topology flag** (`top_ok False`, one bad region, \"high-T only\"): this is the recorded BCC_A2 + LIQUID sliver at 2176 K, already a protocol limitation. The phase-sequence check passed.\n- **Laplace:** `positive_definite_fd: false` for both modes. The mixture gives P(accepted topology) 0.989, P(CrNi2 ok) 0.992 and T_CrNi2 830/860/885 K. These were not compared.\n- **Plausibility notes** match the recorded ones: fcc one-shot +14.5 / +11.4 kJ, bcc S_ex(0.5) +2.96, liquid z −3.1.\n- **Labels and environment:** start and mode labels match (s4_perturbed, A_s4). The environment check passed. No PhaseForge+ pin result was reported to me.\n\n## 6. Not executed\nNo reproduce item was skipped (`not_run: []`). Judgement steps are never executed; their recorded decisions are:\n- **pick_liquidus:** s7_perturbed (agent, because s2 had not converged).\n- **pick_thermo:** s1_perturbed, kink-stationary, not refitted (agent, labelled).\n- **pick_solid:** step4c-b s4_perturbed (PI). Keeping s4 over the dual-annealing best, which is 5e-12 log-units higher, was the agent's choice (labelled).\n- **final_pick:** proposed by the coordinator and accepted by the PI. 1.0.1 stays draft until the PI approves it.\n- **Others:** topology_moves, same_phase_split, ambiguous_structures, mcmc_optional and read_established_practice are not in the reproduce plan.\n- **Agent decisions in force** (all labelled in get_decisions): judging at the 10a pick by rule, the thermochemistry tolerance of 0.1 rms_z, the definition of \"undetermined\" parameters, the 10c settings, and the PhaseForge+ pin as 9 src files plus pyproject.toml.\n\n## Choices the tools did not settle\n1. **Plan output not read in full.** It was 56.9 KB and was saved to a file I can't open with only the orchid-sage tools. I took commands, outputs and tolerances from the run_step, get_step and compare_outputs results instead.\n2. **No staged-input byte check in compare_outputs.** As noted above, identity of the staged inputs and evidence bundle rests on verify_inputs and the stage step.\n3. **PhaseForge+ pin not reported.** Neither run_step nor compare_outputs returned a pin-check result for the source path you gave. It is a note under the PI rule, but it is unverified in this report.\n4. **Validator exit code 1** for the whole repository, from other documents I can't see.\n\nI started no processes outside the tool calls and deleted nothing.",
+ "permission_denials": []
+}

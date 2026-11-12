@@ -1,0 +1,30 @@
+{
+ "executed": true,
+ "item": "check10a",
+ "returncode": 0,
+ "wall_s": 1226.42,
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/check10a.log",
+ "log_tail": "s4_perturbed -5657.28864 smooth elig True |g| 4.5e-05 worst {'dir': '+p12', 'step': 1e-06, 'improvement': 7.275957614183426e-12} bp 8 out 0 failed 0\ns1_perturbed -5657.28864 smooth elig True |g| 4.1e-04 worst {'dir': '+p12', 'step': 1e-05, 'improvement': 3.4651748137548566e-10} bp 8 out 0 failed 0\ns3_perturbed -5657.28864 smooth elig True |g| 8.6e-04 worst {'dir': '-p8', 'step': 1e-06, 'improvement': 2.0372681319713593e-10} bp 8 out 0 failed 0\ns2_perturbed -5657.28864 smooth elig True |g| 3.4e-04 worst {'dir': 'rand11', 'step': 1e-05, 'improvement': 1.053194864653051e-09} bp 8 out 0 failed 0\ns0_start -5657.28864 smooth elig True |g| 4.8e-04 worst {'dir': '+p12', 'step': 1e-05, 'improvement': 5.393303581513464e-10} bp 8 out 0 failed 0\ns6_perturbed -5657.28864 smooth elig True |g| 2.8e-04 worst {'dir': '+p13', 'step': 1e-05, 'improvement': 1.8826540326699615e-10} bp 8 out 0 failed 0\ns7_perturbed -5657.28864 smooth elig True |g| 9.9e-04 worst {'dir': '-p11', 'step': 1e-05, 'improvement': 3.1250237952917814e-09} bp 8 out 0 failed 0\ns5_perturbed -5657.29315 smooth elig True |g| 4.5e-04 worst {'dir': '+p10', 'step': 1e-05, 'improvement': 8.676579454913735e-10} bp 11 out 0 failed 0\nkinds {'smooth': 8, 'kink': 0, 'not_stationary': 0} eligible 8 pick s4_perturbed gap 1.8690116121433675e-09\n10a pick s4_perturbed logpost -5657.2886369 smooth Teut 1614.0 TCrNi2 860.0 determined within tol True undetermined ['VV0004', 'VV0005', 'VV0006', 'VV0007', 'VV0008', 'VV0009', 'VV0010', 'VV0011', 'VV0013'] nearest mode A_s4_perturbed",
+ "outputs": [
+  {
+   "path": "results/pick10a_rerun.json",
+   "exists": true
+  },
+  {
+   "path": "results/pick10a_rerun.json",
+   "exists": true
+  },
+  {
+   "path": "results/pick10a_rerun.json",
+   "exists": true
+  },
+  {
+   "path": "results/pick10a_rerun.json",
+   "exists": true
+  }
+ ],
+ "run_card": "<home>/mcp-rerun-crni-1.0.4-20261107/run/run_cards/crni-paper-fit-step4c-b-check10a.json",
+ "detached": true,
+ "next": "compare_outputs(protocol, run_root)",
+ "recorded": "2026-11-07T16:02:45-0600"
+}

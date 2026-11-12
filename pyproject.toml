@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orchid-sage"
+version = "1.0.0"
+description = "Evidence-backed CALPHAD model screening and calculation planning"
+requires-python = ">=3.11"
+
+[project.scripts]
+orchid-sage = "calphad_model_guide.cli:main"
+calphad-model-guide = "calphad_model_guide.cli:main"
+orchid-sage-mcp = "sage_mcp.server:main"  # needs the repository checkout (editable install or SAGE_REPO); see sage_mcp/README.md
+orchid-ids = "orchid_ids.__main__:main"  # ORCHID ids offline (docs/ID_SCHEME.md)
+
+[tool.setuptools.packages.find]
+include = ["calphad_model_guide*", "sage_mcp*", "orchid_ids*"]
+
+[tool.setuptools.package-data]
+calphad_model_guide = ["data/*.json"]
+sage_mcp = ["*.md"]

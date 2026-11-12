@@ -1,0 +1,3713 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-step3_thermo",
+ "version": "1.0.0",
+ "title": "Cr-Ni step3_thermo: 8 starts, pick s4_perturbed",
+ "status": "failed",
+ "run_id": "crni-step3_thermo",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "fit_thermo"
+ },
+ "status_note": "role in the specific protocol: failed",
+ "host": "mac-studio",
+ "hardware_class": "Mac Studio M1 Max (10 cores)",
+ "pids": [
+  92091
+ ],
+ "started": "2026-11-06T09:54:59Z",
+ "finished": "2026-11-06T10:15:36Z",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "cd <home>/ScientificRuns/crni-paper-fit-20261106 && PYTHONPATH=<home>/src/PhaseForgePlus/src <fit-python> scripts/fit.py steps/configs/step3_thermo.json 4; <fit-python> scripts/evaluate.py step3_thermo",
+ "threads": "4 worker processes",
+ "config": {
+  "start_tdb": "tdb/step2_liquidus_pick.tdb",
+  "groups": [
+   "oneshot",
+   "liq",
+   "thermo"
+  ],
+  "free": [
+   "VV0000",
+   "VV0001",
+   "VV0002",
+   "VV0003",
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011"
+  ],
+  "hinge": null,
+  "note": "0.1 step 3: + set E thermochemistry at its own sigma (activities, HM_MIX, HM_FORM, DFT Liu 2016). CRNI2 held (no calorimetry for it).",
+  "name": "step3_thermo",
+  "wall_s": 5400
+ },
+ "seeds": {
+  "rule": "s0 = start TDB; s1..s7 a(1 + 0.1 N(0,1)) [+ N(0, 2 kJ) where a = 0], b + N(0, 3 J/K), seed 1000 + k (fit.py)",
+  "starting_vectors": {
+   "s0_start": [
+    -24151.864691,
+    2.809162,
+    17236.350827,
+    -1.610209,
+    16673.433053,
+    -16.844808,
+    33438.380177,
+    -3.863267,
+    -37304.413795,
+    10.07669,
+    -297.535107,
+    8.972986,
+    -43487.554,
+    0.0
+   ],
+   "s1_perturbed": [
+    -26403.59722114128,
+    2.4046347744793546,
+    15344.194031250352,
+    2.017731907558078,
+    14138.969558641164,
+    -17.94252473525584,
+    33731.088261555014,
+    -5.883843971001848,
+    -36139.767625673565,
+    12.031943695182276,
+    -300.56649476077007,
+    15.32797020056235,
+    -43487.554,
+    0.0
+   ],
+   "s2_perturbed": [
+    -24410.297643490045,
+    -2.085957779203182,
+    19514.644722693472,
+    -1.3621494462011974,
+    14711.321666121241,
+    -13.375759544996491,
+    36719.3655964021,
+    -8.213964889830198,
+    -41444.24670411928,
+    8.241210617486237,
+    -268.41085437029824,
+    11.173517077109567,
+    -43487.554,
+    0.0
+   ],
+   "s3_perturbed": [
+    -21684.19065060802,
+    2.447470708924855,
+    14780.56984780744,
+    -2.8022601384945247,
+    16588.099724074797,
+    -12.384356341580508,
+    38407.79879968485,
+    -2.165016355806137,
+    -39373.6462784267,
+    10.985830279480439,
+    -310.3422199084365,
+    8.126158399741701,
+    -43487.554,
+    0.0
+   ],
+   "s4_perturbed": [
+    -24184.808305950668,
+    2.621019223438906,
+    17665.807402266408,
+    -1.4614549591368653,
+    18645.34286090207,
+    -12.63000491298842,
+    33455.50653715637,
+    -4.68672445032678,
+    -38986.49910425664,
+    6.8931637795454614,
+    -305.57468269992734,
+    5.970810473704523,
+    -43487.554,
+    0.0
+   ],
+   "s5_perturbed": [
+    -22434.40950270393,
+    2.2645795741994426,
+    16240.75586236036,
+    -2.0813423924324295,
+    18379.365375539342,
+    -18.728669616132606,
+    31691.32507349556,
+    2.031397359145561,
+    -29815.63726098497,
+    8.170147821191362,
+    -322.18544487852193,
+    7.42542325008888,
+    -43487.554,
+    0.0
+   ],
+   "s6_perturbed": [
+    -26975.158642478527,
+    -3.1845239673168515,
+    18743.29038693718,
+    3.7882227710341914,
+    17747.34286170893,
+    -12.466512706451187,
+    31957.188947515704,
+    -9.262588610697915,
+    -35911.17763206608,
+    14.349802782198767,
+    -338.98148475468076,
+    7.978774472099329,
+    -43487.554,
+    0.0
+   ],
+   "s7_perturbed": [
+    -21555.933805395045,
+    -1.0087538523097588,
+    17456.83319593226,
+    0.8202398561769513,
+    17560.86397543279,
+    -16.0854672504097,
+    29109.85082249956,
+    0.2607192365983022,
+    -29940.92786198102,
+    7.978485570924793,
+    -279.84875812200517,
+    14.899368354399149,
+    -43487.554,
+    0.0
+   ]
+  }
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step2_liquidus_pick.tdb",
+   "sha256": "618093023138cada1955226ce8643948e8adcf88ae6e3907511b7754f722b747",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step3_thermo.json",
+   "sha256": "9692c3d0acb62c9a5eab484774aec9ada35260e11e7af7e9684f28c76cca7faa",
+   "storage_class": "local",
+   "role": "step config"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_FORM_CRNI2.json",
+   "sha256": "0407f83e3aa6c06b7be4d0444e457b3582c68b54b2b87743cc62317f3f5af04e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.25.json",
+   "sha256": "5fbaf17f2b8c79ed79e8f582d1345ece6f43af26dc8ee9da37e3b633ccabc300",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.50.json",
+   "sha256": "b98c26406e3fc68b7975524b8dc80ffdd4d73142c50c87fe39678befda46c04d",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.75.json",
+   "sha256": "5e7b373353fd239cd783415aa22d207310ecf47f37ff7b28a6b3f0350c14b881",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.25.json",
+   "sha256": "4d5b09ab408961024ef30d1e7d3000648bea99b98083e0c9c70bd77f54d755e7",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.50.json",
+   "sha256": "be498f5e8d0944c89d21e5b0068d78d4275e94da3650577f9d37dd55c2141e5b",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.75.json",
+   "sha256": "97d67c738f6e20d45803e1e9fcf9656778f54dc276639d9c6894007e1a7ed61a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.25.json",
+   "sha256": "8aa6da998b442c75e1d71d61d48fb0bdebed9af674436260c19ae0058aa9265e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.50.json",
+   "sha256": "26ba116eccd6bba8a4c73118cb3bda46beef0650623546d6bc1d8b95ff46a32d",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.75.json",
+   "sha256": "3b1774f3c8dee36e028f782d51b4e484fb13ba283fd651be35000f7bb80dc529",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T1900.json",
+   "sha256": "b167783975d1db6d0a8f8fe22e3d91f10acb6e663d8c31b028bcc5ec0081fc58",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T2200.json",
+   "sha256": "39d82c33c9388a5de24ffac889b739fe87e8ec8f7335422be7a6065d9cf22fc2",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T1900.json",
+   "sha256": "80954104eab4b42e098745fc57a64aef08c5d285282537a3e19732626dd331da",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T2200.json",
+   "sha256": "a4126814222fd3bca5ddf32c79b95fa17c27a60fc5255164cb031d5332681d41",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T1900.json",
+   "sha256": "5f7e4c9e59fc545ce415d13a980aa9dbf26730364dd4dd5ed837e2101d8594c0",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T2200.json",
+   "sha256": "9ec555bb54aebd2eca22ab0319440a0302dbe63a5b61d771873540c9af795178",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "ad20881c1726a8481af66175ec6cdd7d367a4a0fd5a441d1dbbb56a9d880ac53",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "c2aeff6a69b7c9b03dfcedf8ba8a3bb8681f8ecf92942a6acc59be769a8a54a9",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "5976b3a7ceea051e32518eaa0c82289af9e09414b9a62a854011163f53d3840a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "sha256": "77219f188a5729583d93e732b1999b4cbfce6da2ce474eced8a59675a5ccca6c",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "1aee85f4de822f8b3c498dec1535d551dd5d5207596079d25a4e6c29342727af",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "1693a17839afb34d8c861484a6f069e90facb3bab705e420357e28f7bdf9684c",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "97e201bc33b744db6da09b5df04ffb9c0375f738cf765f58fe9fe4a1da4191dd",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json",
+   "sha256": "a2e09434ef90d2c848decb6aec8705e092f7c2647ad473c3f408b1a19edecf31",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json",
+   "sha256": "21a248eb182f1587c370f1a24e69cf311ca47ade87a7f855a5c20b42eaad167a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json",
+   "sha256": "9dfeefef578205182384241618c2b2a3e32a1349f2614a251cc46cb98556be33",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json",
+   "sha256": "ef389ce5534bc4e160d90f3707e7beadfdcb1709fdf34c4f168726caa01cf21e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json",
+   "sha256": "0848e5e31cef7ffa64a277a4cafbe5f2e729c91a03a72ab1002a4e6c7a3ada76",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/dft_HM_MIX_BCC_A2_liu2016.json",
+   "sha256": "e53c9c40836797914e19b1e80c431e8acb89ca6e2c4b34ed0858f4e0eeb48793",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/dft_HM_MIX_FCC_A1_liu2016.json",
+   "sha256": "b2dfac152afeca3c2fe03552507b1d8ee63450af335b5c5c43997769f4eb1769",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "sha256": "27661334b763672edb255713bbd8f7122bd28f038a29ce94898aaefbd0dc26f5",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "sha256": "cfc8770074e73268f7b0099e63db525abfb246bcbcc917719231b6411d33a0d3",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "sha256": "ee1eb445ef0d1f03e55646f2dd3b6ca9d597eb9d6ef8f49588b07ce1e11b402a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "sha256": "e8b729ed59ca32bf73d7c555d29f338a976240f594904c1e38c7f356f8274087",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "sha256": "0b76c94f147daa472db0b34f74003132025498ff7f3f45f7b6328e779b9f9953",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json",
+   "sha256": "5ac5eb73db303f0cef7d73b650b5ea1f8dd2dc1a5c5a9c6ba6bbaf681cc4bb2f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "sha256": "e11c12d954a93a9b1964272c8640c770d1a4ce2f39d92bc6eb91c350b31583f5",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "sha256": "ef59165ec9a891b9e9d0a3dd89604b8aeaf828320ddb9c736d064bedff2e0064",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "sha256": "ce1455109a8b540245297ad8b8a354d1f2482e03f80ffe2060a60592a8f5b565",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json",
+   "sha256": "306dc441045f903a6114a3a951b38255c54abf68a1cb7f56239a7175d39fc61f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json",
+   "sha256": "dc930752bfe72ace0c0b21dd25ac355bf35f4405c8f7f949cdb3f29f7c298d76",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json",
+   "sha256": "0334e2dfff499acaac85d05217d9452bfc10c7fa41ed258442f1e4dc7087db97",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json",
+   "sha256": "76ecb8be3cc23570f4dac669201d3c8f2f25e04cde2e9a025bfb254eb3458473",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "sha256": "6f0e5743b3d17939fd254f3be725660a5079c750fcf3578f8090555055050127",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "sha256": "c0203d9338d8f8cc8e524413bfd84241adc95faacd33f19cc13b6922c0b7c1ca",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/fit.py",
+   "sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/evaluate.py",
+   "sha256": "6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/evaluate.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/pd4.py",
+   "sha256": "c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/pd4.py)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/multistart.json",
+   "sha256": "337df0bbe2245667b7d9ef930852bb05e385c8201dbdeef4624d35f8cbdcd406",
+   "storage_class": "local",
+   "role": "all starts"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/run_card.json",
+   "sha256": "f785fb98887ab76884501e5af743e491ee8174f0bf8024ac6c0548e93685301d",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/evaluation.json",
+   "sha256": "e4da587e3e2e27f220afb43fb27924eb1db9a3869931d2129496aa781129eaab",
+   "storage_class": "local",
+   "role": "evaluation and ranking"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s0_start.tdb",
+   "sha256": "3a54b6cc25e3774c3a1ed346986fbfe8fe3f038d4364ab4e634402f5b9f96858",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s1_perturbed.tdb",
+   "sha256": "94d17f447b7b6c1482e9ade97ada4b042d64b0463a647274947ed053be21a2aa",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s2_perturbed.tdb",
+   "sha256": "b2dcdf653abbb504520580954ad3b4ce75072f1eb73db4febd4bdb8bb24955ef",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s3_perturbed.tdb",
+   "sha256": "963a7908366d15931fcd0e43f9da7bc110af92a6998e3c6d011a6f0d30f81ffb",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s4_perturbed.tdb",
+   "sha256": "6877582adae036b15eb9e5ecfb27a191091eb7e0400f248a62e54df4ac8f0cc8",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s5_perturbed.tdb",
+   "sha256": "aa16f95c725cbe6897069e7341443b153c5267eedcf2d66b20e3050b3dab0e95",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s6_perturbed.tdb",
+   "sha256": "7557c2cdefaade59a67c6165b84a61dec64fb303d16a7d8708674a040498a11f",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/s7_perturbed.tdb",
+   "sha256": "c66f6fc0e9c7fa003c7a12b78be5df3d8aa0116eaf15be1e7079d8cd29f55213",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step3_thermo_pick.tdb",
+   "sha256": "4c7e292602e3703ec9f29bd15fce06d7c2ea337287b8863ead73c1f816f43cfc",
+   "storage_class": "local",
+   "role": "pick TDB"
+  }
+ ],
+ "results": {
+  "s4_perturbed": {
+   "logpost": -4086.251645509774,
+   "log_prior": -103.79972477392774,
+   "components": {
+    "ActivityResidual": -1168.0023471634254,
+    "FixedConfigurationPropertyResidual": -1286.1245572593782,
+    "ZPFResidual": -1528.3250163130424,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 246,
+   "wall_s": 771.7,
+   "grad_norm_q": 6.533908932487306,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1652.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 66,
+    "bad": [
+     [
+      1664.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1712.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1664.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.6",
+    "BCC_A2 S_ex(0.5) = +3.45 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.3293260791409867
+  },
+  "s5_perturbed": {
+   "logpost": -4086.2559877502194,
+   "log_prior": -103.81987007813443,
+   "components": {
+    "ActivityResidual": -1167.9298831427081,
+    "FixedConfigurationPropertyResidual": -1286.1612638038764,
+    "ZPFResidual": -1528.3449707255006,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 208,
+   "wall_s": 653.1,
+   "grad_norm_q": 6.541684447837033,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1652.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 66,
+    "bad": [
+     [
+      1664.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1712.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1664.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.6",
+    "BCC_A2 S_ex(0.5) = +3.67 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.3283724161943304
+  },
+  "s0_start": {
+   "logpost": -4086.257445243046,
+   "log_prior": -103.80483527096703,
+   "components": {
+    "ActivityResidual": -1167.9531818354938,
+    "FixedConfigurationPropertyResidual": -1286.1169694397013,
+    "ZPFResidual": -1528.382458696884,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 209,
+   "wall_s": 582.7,
+   "grad_norm_q": 6.4655469133948245,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1652.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 66,
+    "bad": [
+     [
+      1664.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1712.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1664.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.6",
+    "BCC_A2 S_ex(0.5) = +3.39 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.3307712474627102
+  },
+  "s1_perturbed": {
+   "logpost": -4086.270656671167,
+   "log_prior": -103.76242108287816,
+   "components": {
+    "ActivityResidual": -1168.361206573861,
+    "FixedConfigurationPropertyResidual": -1285.7330335302745,
+    "ZPFResidual": -1528.4139954841537,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 215,
+   "wall_s": 590.4,
+   "grad_norm_q": 6.34118194739607,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1650.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 67,
+    "bad": [
+     [
+      1662.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1664.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1662.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.6",
+    "BCC_A2 S_ex(0.5) = +3.37 J/mol-atom/K (|.| > 2.5)",
+    "FCC_A1 S_ex(0.5) = +2.50 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.3281393885500106
+  },
+  "s3_perturbed": {
+   "logpost": -4086.275063107955,
+   "log_prior": -103.8046102985094,
+   "components": {
+    "ActivityResidual": -1168.368736324038,
+    "FixedConfigurationPropertyResidual": -1285.8128584794285,
+    "ZPFResidual": -1528.2888580059787,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 175,
+   "wall_s": 457.8,
+   "grad_norm_q": 6.578979481468256,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1650.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 67,
+    "bad": [
+     [
+      1662.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1664.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1662.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.6, FCC_A1_x0.50 +10.0",
+    "BCC_A2 S_ex(0.5) = +3.40 J/mol-atom/K (|.| > 2.5)",
+    "FCC_A1 S_ex(0.5) = +2.53 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.3355673516869193
+  },
+  "s6_perturbed": {
+   "logpost": -4086.9956012073458,
+   "log_prior": -103.74841585598537,
+   "components": {
+    "ActivityResidual": -1168.6229280918146,
+    "FixedConfigurationPropertyResidual": -1285.8562750017131,
+    "ZPFResidual": -1528.7679822578325,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 204,
+   "wall_s": 633.6,
+   "grad_norm_q": 6.2588552197911635,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1662.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [
+     [
+      1580.0,
+      "BCC_A2",
+      0.13583333333333333,
+      0.2758333333333334
+     ],
+     [
+      1582.0,
+      "BCC_A2",
+      0.1375,
+      0.2733333333333334
+     ],
+     [
+      1584.0,
+      "BCC_A2",
+      0.14,
+      0.27
+     ],
+     [
+      1586.0,
+      "BCC_A2",
+      0.14166666666666666,
+      0.2675
+     ],
+     [
+      1588.0,
+      "BCC_A2",
+      0.14416666666666667,
+      0.26416666666666666
+     ],
+     [
+      1590.0,
+      "BCC_A2",
+      0.14666666666666667,
+      0.26166666666666666
+     ],
+     [
+      1592.0,
+      "BCC_A2",
+      0.14916666666666667,
+      0.25833333333333336
+     ],
+     [
+      1594.0,
+      "BCC_A2",
+      0.15166666666666667,
+      0.255
+     ],
+     [
+      1596.0,
+      "BCC_A2",
+      0.15416666666666667,
+      0.2516666666666667
+     ],
+     [
+      1598.0,
+      "BCC_A2",
+      0.1575,
+      0.24750000000000003
+     ],
+     [
+      1600.0,
+      "BCC_A2",
+      0.16083333333333336,
+      0.24416666666666667
+     ],
+     [
+      1602.0,
+      "BCC_A2",
+      0.16416666666666668,
+      0.2391666666666667
+     ],
+     [
+      1604.0,
+      "BCC_A2",
+      0.16833333333333333,
+      0.23500000000000001
+     ],
+     [
+      1606.0,
+      "BCC_A2",
+      0.17333333333333334,
+      0.22916666666666669
+     ],
+     [
+      1608.0,
+      "BCC_A2",
+      0.18000000000000002,
+      0.2225
+     ],
+     [
+      1610.0,
+      "BCC_A2",
+      0.18916666666666668,
+      0.21166666666666667
+     ]
+    ],
+    "n_gap_T": 16,
+    "n_bad": 77,
+    "bad": [
+     [
+      1580.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1582.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1584.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1586.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1588.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1590.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1592.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1594.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1596.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1598.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1600.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1602.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1604.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1606.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1608.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1610.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1580.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +22.5",
+    "BCC_A2 S_ex(0.5) = +3.67 J/mol-atom/K (|.| > 2.5)",
+    "FCC_A1 S_ex(0.5) = +2.50 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 2.326747898654708
+  },
+  "s2_perturbed": {
+   "logpost": -4088.605268193273,
+   "log_prior": -103.09907368254167,
+   "components": {
+    "ActivityResidual": -1169.439098391995,
+    "FixedConfigurationPropertyResidual": -1284.7886219237407,
+    "ZPFResidual": -1531.2784741949956,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "ABNORMAL: ",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 248,
+   "wall_s": 710.5,
+   "grad_norm_q": 38.35229435125857,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1666.0,
+    "T_CrNi2_max": 1818.0,
+    "gaps": [
+     [
+      1580.0,
+      "BCC_A2",
+      0.095,
+      0.3325
+     ],
+     [
+      1582.0,
+      "BCC_A2",
+      0.09583333333333334,
+      0.33166666666666667
+     ],
+     [
+      1584.0,
+      "BCC_A2",
+      0.09666666666666668,
+      0.33
+     ],
+     [
+      1586.0,
+      "BCC_A2",
+      0.0975,
+      0.32833333333333337
+     ],
+     [
+      1588.0,
+      "BCC_A2",
+      0.09833333333333334,
+      0.32666666666666666
+     ],
+     [
+      1590.0,
+      "BCC_A2",
+      0.09916666666666667,
+      0.32583333333333336
+     ],
+     [
+      1592.0,
+      "BCC_A2",
+      0.1,
+      0.3241666666666667
+     ],
+     [
+      1594.0,
+      "BCC_A2",
+      0.10083333333333334,
+      0.3225
+     ],
+     [
+      1596.0,
+      "BCC_A2",
+      0.10166666666666667,
+      0.32083333333333336
+     ],
+     [
+      1598.0,
+      "BCC_A2",
+      0.10250000000000001,
+      0.3191666666666667
+     ],
+     [
+      1600.0,
+      "BCC_A2",
+      0.10416666666666667,
+      0.3175
+     ],
+     [
+      1602.0,
+      "BCC_A2",
+      0.10500000000000001,
+      0.3166666666666667
+     ],
+     [
+      1604.0,
+      "BCC_A2",
+      0.10583333333333333,
+      0.315
+     ],
+     [
+      1606.0,
+      "BCC_A2",
+      0.10666666666666667,
+      0.31333333333333335
+     ],
+     [
+      1608.0,
+      "BCC_A2",
+      0.10750000000000001,
+      0.3116666666666667
+     ],
+     [
+      1610.0,
+      "BCC_A2",
+      0.10916666666666668,
+      0.31
+     ],
+     [
+      1612.0,
+      "BCC_A2",
+      0.11,
+      0.30833333333333335
+     ],
+     [
+      1614.0,
+      "BCC_A2",
+      0.11083333333333334,
+      0.3066666666666667
+     ],
+     [
+      1616.0,
+      "BCC_A2",
+      0.1125,
+      0.305
+     ],
+     [
+      1618.0,
+      "BCC_A2",
+      0.11333333333333334,
+      0.30333333333333334
+     ]
+    ],
+    "n_gap_T": 46,
+    "n_bad": 114,
+    "bad": [
+     [
+      1580.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1582.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1584.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1586.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1588.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1590.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1592.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1594.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+CRNI2",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1596.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1598.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1600.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1602.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1604.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1606.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1608.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1610.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1612.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1614.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1616.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1618.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1620.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1622.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1624.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1626.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1628.0,
+      [
+       "BCC_A2",
+       "BCC_A2+BCC_A2",
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1580.0,
+     1872.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +21.5",
+    "BCC_A2 S_ex(0.5) = +3.38 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.2"
+   ],
+   "max_abs_shift_sigma": 2.221412522081959
+  },
+  "s7_perturbed": {
+   "logpost": -4115.781942668024,
+   "log_prior": -97.28170493326758,
+   "components": {
+    "ActivityResidual": -1238.1851498633089,
+    "FixedConfigurationPropertyResidual": -1252.4787182226328,
+    "ZPFResidual": -1527.836369648815,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 165,
+   "wall_s": 503.5,
+   "grad_norm_q": 7.566712766451616,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1654.0,
+    "T_CrNi2_max": 1828.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 65,
+    "bad": [
+     [
+      1666.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1668.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "CRNI2+FCC_A1",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1670.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1672.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1674.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1676.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1678.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1680.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1682.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1684.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1686.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1688.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1690.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1692.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1694.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1696.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1698.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1700.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1702.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1704.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1706.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1708.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1710.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1712.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ],
+     [
+      1714.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "CRNI2+LIQUID",
+       "CRNI2",
+       "CRNI2+FCC_A1",
+       "FCC_A1"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1666.0,
+     1816.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +12.9",
+    "BCC_A2 S_ex(0.5) = +3.19 J/mol-atom/K (|.| > 2.5)",
+    "liquid S_ex beyond 3u: Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 1.329998455517016
+  }
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "fit.py of 6 Nov kept only theta0 and theta per start (multistart.json); the rerun agents now record trajectories"
+ },
+ "ranking": {
+  "pick": "s4_perturbed",
+  "rule": "PLAN.md ranking (0.3): plausible, topology, quantitative",
+  "order": [
+   "s7_perturbed",
+   "s4_perturbed",
+   "s5_perturbed",
+   "s0_start",
+   "s1_perturbed",
+   "s3_perturbed",
+   "s6_perturbed",
+   "s2_perturbed"
+  ]
+ },
+ "converted_from": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/run_card.json",
+   "sha256": "f785fb98887ab76884501e5af743e491ee8174f0bf8024ac6c0548e93685301d",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step3_thermo/multistart.json",
+   "sha256": "337df0bbe2245667b7d9ef930852bb05e385c8201dbdeef4624d35f8cbdcd406",
+   "storage_class": "local",
+   "role": "campaign multistart record"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step3.log",
+   "sha256": "8a13b9917b28994a07651a97ced814ed0ad8f9d070188873e0a68dcbf4e79e93",
+   "storage_class": "local",
+   "role": "run log (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/logs/step3.log)"
+  }
+ ],
+ "notes": [
+  "CRNI2 fixed at its one-shot value: broke the topology (CRNI2 stable to 1828 K, above the liquidus); reported, not continued; led to the PI rule 'held never means fixed'",
+  "first step-3 launch failed on a start-TDB file name (attic/step3_failed_start_tdb_name.log) and was relaxed"
+ ]
+}

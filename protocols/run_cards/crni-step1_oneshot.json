@@ -1,0 +1,737 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-step1_oneshot",
+ "version": "1.0.0",
+ "title": "Cr-Ni step1_oneshot: 2 starts, pick oneshot_Sex",
+ "status": "complete",
+ "run_id": "crni-step1_oneshot",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "oneshot_diagram"
+ },
+ "status_note": "role in the specific protocol: accepted",
+ "host": "mac-studio",
+ "hardware_class": "Mac Studio M1 Max (10 cores)",
+ "pids": [],
+ "started": "2026-11-06",
+ "finished": {
+  "status": "pending",
+  "reason": "not recorded"
+ },
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "cd <home>/ScientificRuns/crni-paper-fit-20261106 && PYTHONPATH=<home>/src/PhaseForgePlus/src <fit-python> scripts/fit.py steps/configs/step1_oneshot.json 4; <fit-python> scripts/evaluate.py step1_oneshot",
+ "threads": "4 worker processes",
+ "config": {
+  "name": "step1_oneshot",
+  "start_tdb": "tdb/step1_oneshot.tdb",
+  "groups": [
+   "oneshot",
+   "liq"
+  ],
+  "free": [
+   "VV0000",
+   "VV0001",
+   "VV0002",
+   "VV0003",
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011"
+  ],
+  "hinge": null,
+  "note": "0.1 step 1: no fitting; objective shown = step-2 objective for reference"
+ },
+ "seeds": {
+  "rule": "s0 = start TDB; s1..s7 a(1 + 0.1 N(0,1)) [+ N(0, 2 kJ) where a = 0], b + N(0, 3 J/K), seed 1000 + k (fit.py)",
+  "starting_vectors": null
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step1_oneshot.tdb",
+   "sha256": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step1_oneshot.json",
+   "sha256": "7357e2950d2159039d24625d20e158de6298a5ff215280037416d2a8bbfdcc24",
+   "storage_class": "local",
+   "role": "step config"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/fit.py",
+   "sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/evaluate.py",
+   "sha256": "6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/evaluate.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/pd4.py",
+   "sha256": "c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/pd4.py)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/multistart.json",
+   "sha256": "4976766ad00874b2c93ca38ca96ab659648fef913c238ed65a659d29ebdd2113",
+   "storage_class": "local",
+   "role": "all starts"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/run_card.json",
+   "sha256": "e2aec4cac796245581dcddacac0a474932b91372e7c37f19fde20f21b575efc7",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/evaluation.json",
+   "sha256": "f56f12f62efe0947330900d1a6677247896a109cc58e76b308795f2d18eb26cb",
+   "storage_class": "local",
+   "role": "evaluation and ranking"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/oneshot_Sex.tdb",
+   "sha256": "eeed3c4f6ecd4fcf4c53b99c775f3fcab9df5d2b065ffed68aaa1b0ffc2ee4a6",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/oneshot_noSex.tdb",
+   "sha256": "cf316aed96cac674b57005bc0414304eac812e7df54e83013ff81871ad634c83",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step1_oneshot_pick.tdb",
+   "sha256": "1b006415319e8a0026d76cc470eb5b997dbb60e9cafcea5e7acdcb7be6225c4c",
+   "storage_class": "local",
+   "role": "pick TDB"
+  }
+ ],
+ "results": {
+  "oneshot_Sex": {
+   "logpost": -5617.391872030378,
+   "log_prior": null,
+   "components": {
+    "ActivityResidual": 0.0,
+    "FixedConfigurationPropertyResidual": -108.02850010418912,
+    "ZPFResidual": -5413.010255531298,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "no fit",
+   "messages": null,
+   "n_eval": 0,
+   "wall_s": null,
+   "grad_norm_q": 446.9677819535088,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1730.0,
+    "T_CrNi2_max": 1156.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 218,
+    "bad": [
+     [
+      1742.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1744.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1746.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1748.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1750.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1752.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1754.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1756.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1758.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1760.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1762.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1764.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1766.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1768.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1770.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1772.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1774.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1776.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1778.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1780.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1782.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1784.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1786.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1788.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1790.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1742.0,
+     2176.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": false,
+    "crni2_ok": false
+   },
+   "plausible": true,
+   "plausibility_notes": [],
+   "max_abs_shift_sigma": 0.17842241199084408
+  },
+  "oneshot_noSex": {
+   "logpost": -5440.3250130072365,
+   "log_prior": null,
+   "components": {
+    "ActivityResidual": 0.0,
+    "FixedConfigurationPropertyResidual": -121.74271888679638,
+    "ZPFResidual": -5222.2278772255495,
+    "EquilibriumPropertyResidual": 0.0
+   },
+   "termination": "no fit",
+   "messages": null,
+   "n_eval": 0,
+   "wall_s": null,
+   "grad_norm_q": 422.1246518088806,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1730.0,
+    "T_CrNi2_max": 1156.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 180,
+    "bad": [
+     [
+      1742.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1744.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1746.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1748.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1750.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1752.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1754.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1756.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1758.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1760.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1762.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1764.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1766.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1768.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1770.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1772.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1774.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1776.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1778.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1780.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1782.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1784.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1786.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1788.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ],
+     [
+      1790.0,
+      [
+       "BCC_A2",
+       "BCC_A2+FCC_A1",
+       "FCC_A1",
+       "FCC_A1+LIQUID",
+       "LIQUID"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1742.0,
+     2100.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": false,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "liquid S_ex beyond 3u: Cr75Ni25_N108_T1900 z=+3.8, Cr50Ni50_N108_T1900 z=+3.4, Cr25Ni75_N108_T1900 z=+3.4"
+   ],
+   "max_abs_shift_sigma": 0.17842241199084408
+  }
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "fit.py of 6 Nov kept only theta0 and theta per start (multistart.json); the rerun agents now record trajectories"
+ },
+ "ranking": {
+  "pick": "oneshot_Sex",
+  "rule": "PLAN.md ranking (0.3): plausible, topology, quantitative",
+  "order": [
+   "oneshot_Sex",
+   "oneshot_noSex"
+  ]
+ },
+ "converted_from": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/run_card.json",
+   "sha256": "e2aec4cac796245581dcddacac0a474932b91372e7c37f19fde20f21b575efc7",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step1_oneshot/multistart.json",
+   "sha256": "4976766ad00874b2c93ca38ca96ab659648fef913c238ed65a659d29ebdd2113",
+   "storage_class": "local",
+   "role": "campaign multistart record"
+  }
+ ],
+ "notes": []
+}

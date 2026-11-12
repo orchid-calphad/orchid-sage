@@ -1,0 +1,72 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "FCC_A1"
+ ],
+ "solver": {
+  "mode": "manual",
+  "sublattice_site_ratios": [
+   1
+  ],
+  "sublattice_configurations": [
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ],
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ],
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ]
+  ],
+  "sublattice_occupancies": [
+   [
+    [
+     0.75,
+     0.25
+    ]
+   ],
+   [
+    [
+     0.5,
+     0.5
+    ]
+   ],
+   [
+    [
+     0.25,
+     0.75
+    ]
+   ]
+  ]
+ },
+ "conditions": {
+  "P": 101325,
+  "T": 298.15
+ },
+ "output": "HM_MIX",
+ "values": [
+  [
+   [
+    -12690.0,
+    -9030.0,
+    -5790.0
+   ]
+  ]
+ ],
+ "reference": "liu2016thermodynamic_dft (ORCHID)",
+ "comment": "Liu, Lindwall, Gheno, Liu, Calphad 52 (2016) 125-142, SQS DFT at 0 K, tables 6 (A2) / 7 (gamma); ORCHID records ORC-BJCC23KTCK.7c92d8,ORC-XYCE5GPHM6,ORC-CG6B7EHP2R.127230; kJ/mol-atom x1000. | REBUILD: sigma 7200.0 J/mol -> weight 0.06944. | REBUILD set C/D: weight 0.0694444 (ORCHID DFT sigma_effective 7.2 kJ/mol). | crni-paper-fit-20261106: set E file unchanged",
+ "weight": 0.06944444444444445
+}

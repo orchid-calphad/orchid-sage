@@ -1,0 +1,118 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-oneshot-build",
+ "version": "1.0.0",
+ "title": "Cr-Ni one-shot TDBs (with and without liquid S_ex) and the step-1 base",
+ "status": "complete",
+ "run_id": "crni-oneshot-build",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "build_oneshot_tdb"
+ },
+ "host": "mac-studio",
+ "started": "2026-11-06",
+ "finished": "2026-11-06",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "<fit-python> code/build_tdb.py (crni-phaseforge-20261105); <fit-python> scripts/make_base.py (crni-paper-fit-20261106)",
+ "seeds": {},
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/solids_GRACE-2L-SMAX-OMAT-large.json",
+   "sha256": "1a254993067fb230851265157722982a792f8f48066428068246bac605e3bc3e",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_excess_entropy.json",
+   "sha256": "8f8c1869df94e0ae7bad683d5a6500341460a3a4b85a604abc73ed6af1aab082",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_checks_enthalpy.json",
+   "sha256": "88bc894ceada3bfe87195d8f6de558e30774e6ab44e9a05012787983085c638e",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/cr-ni-rebuild-20261105/inputs/cr-ni-model.tdb",
+   "sha256": "f9a7769eb204a82578e288f20df9f7f27a0e3bc5ea3b1e61ad960425dab11233",
+   "storage_class": "local",
+   "role": "unary source (SGTE91)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/build_tdb.py",
+   "sha256": "79b9da97306aeba303cfd7ba5bbb93980684f28bf728451aee47b7d07c9abbc8",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-phaseforge-20261105/code/build_tdb.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/make_base.py",
+   "sha256": "758be969fcd704d357245d5bea1e0a4eca626a41872069f3ee5312f6155b35c2",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/make_base.py)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb",
+   "sha256": "84ec5ae41a42650e0915683f4e3a2fd552e33b98b9c7c62b3b28b3ad3e70aaf8",
+   "storage_class": "local",
+   "role": "one-shot with S_ex"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_GRACE-2L-SMAX-OMAT-large.tdb",
+   "sha256": "108378d67447667b534a46f13421d0a270947c8f45a8702701bbbd7a8bebdbac",
+   "storage_class": "local",
+   "role": "one-shot without S_ex"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/oneshot_tdb.json",
+   "sha256": "51ab0531d7300f6e9ca96d7d43270f334e963cbf4aaf129aaef1044df43d42aa",
+   "storage_class": "local",
+   "role": "build record"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step1_oneshot.tdb",
+   "sha256": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+   "storage_class": "local",
+   "role": "step-1 base with VV symbols"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step1_oneshot_noSex.tdb",
+   "sha256": "390508b0f4bb13ff886dffcdcafe2b685c189d5019ebb1f085ac573edb204482",
+   "storage_class": "local"
+  }
+ ],
+ "results": {
+  "solid_L_J_mol": {
+   "BCC_A2": [
+    22450.604378582,
+    38187.63651645627
+   ],
+   "FCC_A1": [
+    -40467.38680321247,
+    -8324.566979123745
+   ]
+  },
+  "liquid_a_J_mol": [
+   -19115.316684770445
+  ],
+  "liquid_b_from_Sex_J_mol_K": [
+   1.5299999587646516
+  ]
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "deterministic build"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/ScientificRuns/crni-phaseforge-20261105/results/oneshot_tdb.json",
+   "sha256": "51ab0531d7300f6e9ca96d7d43270f334e963cbf4aaf129aaef1044df43d42aa",
+   "storage_class": "local"
+  }
+ ]
+}

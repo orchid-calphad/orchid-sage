@@ -1,0 +1,82 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1556,
+   1512,
+   1481,
+   1403,
+   1347
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.647
+    ]
+   ]
+  ],
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.672
+    ]
+   ]
+  ],
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.697
+    ]
+   ]
+  ],
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.797
+    ]
+   ]
+  ],
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.898
+    ]
+   ]
+  ]
+ ],
+ "reference": "dench1963adiabatic",
+ "comment": "Digitized from figure 8 | REBUILD set D, observation (i): the known phase at its printed composition (single-phase), derived from the same parent points as the (ii) file; parent indices [0, 1, 2, 3, 4]; weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [0, 1, 2, 3, 4]); values unchanged"
+}

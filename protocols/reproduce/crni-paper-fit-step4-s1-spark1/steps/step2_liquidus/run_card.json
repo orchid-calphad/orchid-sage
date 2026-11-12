@@ -1,0 +1,280 @@
+{
+ "step": "step2_liquidus",
+ "config": {
+  "start_tdb": "tdb/step1_oneshot.tdb",
+  "groups": [
+   "oneshot",
+   "liq"
+  ],
+  "free": [
+   "VV0000",
+   "VV0001",
+   "VV0002",
+   "VV0003",
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011"
+  ],
+  "hinge": null,
+  "note": "0.1 step 2: liquid L0,L1 (a,b) and the solids that melt (bcc, fcc L0,L1 a,b); CRNI2 held (does not melt). Data: liquid-containing ZPF rows (i)+(ii), ORCHID eutectic, liquid S_ex, one-shot observations.",
+  "name": "step2_liquidus",
+  "wall_s": 5400
+ },
+ "espei_version": "0.8.11.dev82+g9039ea215",
+ "espei_file": "<home>/orchid-crni-mcmc-20261105/env/grad/lib/python3.12/site-packages/espei/__init__.py",
+ "pycalphad_version": "0.11.3.dev35+g9a6939dd2",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "host": "spark1",
+ "start_tdb": "tdb/step1_oneshot.tdb",
+ "start_tdb_sha256": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+ "hinge_sha256": null,
+ "data_files": [
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_FORM_CRNI2.json",
+   "sha256": "0407f83e3aa6c06b7be4d0444e457b3582c68b54b2b87743cc62317f3f5af04e"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.25.json",
+   "sha256": "5fbaf17f2b8c79ed79e8f582d1345ece6f43af26dc8ee9da37e3b633ccabc300"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.50.json",
+   "sha256": "b98c26406e3fc68b7975524b8dc80ffdd4d73142c50c87fe39678befda46c04d"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.75.json",
+   "sha256": "5e7b373353fd239cd783415aa22d207310ecf47f37ff7b28a6b3f0350c14b881"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.25.json",
+   "sha256": "4d5b09ab408961024ef30d1e7d3000648bea99b98083e0c9c70bd77f54d755e7"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.50.json",
+   "sha256": "be498f5e8d0944c89d21e5b0068d78d4275e94da3650577f9d37dd55c2141e5b"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.75.json",
+   "sha256": "97d67c738f6e20d45803e1e9fcf9656778f54dc276639d9c6894007e1a7ed61a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.25.json",
+   "sha256": "8aa6da998b442c75e1d71d61d48fb0bdebed9af674436260c19ae0058aa9265e"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.50.json",
+   "sha256": "26ba116eccd6bba8a4c73118cb3bda46beef0650623546d6bc1d8b95ff46a32d"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.75.json",
+   "sha256": "3b1774f3c8dee36e028f782d51b4e484fb13ba283fd651be35000f7bb80dc529"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T1900.json",
+   "sha256": "b167783975d1db6d0a8f8fe22e3d91f10acb6e663d8c31b028bcc5ec0081fc58"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T2200.json",
+   "sha256": "39d82c33c9388a5de24ffac889b739fe87e8ec8f7335422be7a6065d9cf22fc2"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T1900.json",
+   "sha256": "80954104eab4b42e098745fc57a64aef08c5d285282537a3e19732626dd331da"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T2200.json",
+   "sha256": "a4126814222fd3bca5ddf32c79b95fa17c27a60fc5255164cb031d5332681d41"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T1900.json",
+   "sha256": "5f7e4c9e59fc545ce415d13a980aa9dbf26730364dd4dd5ed837e2101d8594c0"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T2200.json",
+   "sha256": "9ec555bb54aebd2eca22ab0319440a0302dbe63a5b61d771873540c9af795178"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "ad20881c1726a8481af66175ec6cdd7d367a4a0fd5a441d1dbbb56a9d880ac53"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "c2aeff6a69b7c9b03dfcedf8ba8a3bb8681f8ecf92942a6acc59be769a8a54a9"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "5976b3a7ceea051e32518eaa0c82289af9e09414b9a62a854011163f53d3840a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "sha256": "77219f188a5729583d93e732b1999b4cbfce6da2ce474eced8a59675a5ccca6c"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "1aee85f4de822f8b3c498dec1535d551dd5d5207596079d25a4e6c29342727af"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "1693a17839afb34d8c861484a6f069e90facb3bab705e420357e28f7bdf9684c"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "97e201bc33b744db6da09b5df04ffb9c0375f738cf765f58fe9fe4a1da4191dd"
+  }
+ ],
+ "starts": {
+  "s0_start": [
+   -19115.3167,
+   1.53,
+   0.0,
+   0.0,
+   22450.6044,
+   0.0,
+   38187.6365,
+   0.0,
+   -40467.3868,
+   0.0,
+   -8324.567,
+   0.0,
+   -43487.554,
+   0.0
+  ],
+  "s1_perturbed": [
+   -20897.48056138427,
+   1.1254727744793545,
+   2418.6272717053853,
+   -4.56018293227768,
+   21629.124261117053,
+   0.26260968653890027,
+   35615.601203703685,
+   -0.9366019064606278,
+   -43104.85371916902,
+   0.30565009198427845,
+   -10087.983392050755,
+   -0.5241314726676081,
+   -43487.554,
+   0.0
+  ],
+  "s2_perturbed": [
+   -19319.856920631668,
+   -3.365119779203182,
+   165.3730358658684,
+   -3.5303672266685187,
+   25046.6788835905,
+   2.943610368117241,
+   32649.540848728248,
+   3.329230368182989,
+   -37991.48499547968,
+   -2.936552891861102,
+   -8935.182612899358,
+   -2.2078586197047474,
+   -43487.554,
+   0.0
+  ],
+  "s3_perturbed": [
+   -17162.24303889925,
+   1.1683087089248545,
+   -794.7007589963496,
+   -0.15353765835857353,
+   25788.59892095,
+   4.458426451622483,
+   40349.375776212204,
+   1.664065138348891,
+   -41693.73784483983,
+   1.2913211860175395,
+   -8089.584563473351,
+   -3.3875118432836597,
+   -43487.554,
+   0.0
+  ],
+  "s4_perturbed": [
+   -19141.390365163403,
+   1.3418572234389057,
+   99.1693605754231,
+   3.5479972270268636,
+   25604.766957679858,
+   0.015365301846906204,
+   37139.4400404568,
+   1.3527235558507265,
+   -36173.087234964136,
+   0.8106178576023304,
+   -7491.5066228531,
+   1.5123899133404812,
+   -43487.554,
+   0.0
+  ],
+  "s5_perturbed": [
+   -17756.013794722825,
+   0.9854175741994423,
+   -314.0889282882864,
+   3.069432042789291,
+   21040.81000372874,
+   -1.5674100488032474,
+   45691.0798278852,
+   -6.022432017161547,
+   -37895.627473321205,
+   2.4854550570923357,
+   -7895.140673388687,
+   -1.473143184560514,
+   -43487.554,
+   0.0
+  ],
+  "s6_perturbed": [
+   -21349.850501434274,
+   -4.463685967316851,
+   3598.9545140227947,
+   1.9322531933800597,
+   25727.116919394874,
+   -1.3288842536425631,
+   31314.725466135784,
+   -1.120432695115015,
+   -46231.443726575395,
+   4.178973517368571,
+   -8048.687650793949,
+   -4.714643284105212,
+   -43487.554,
+   0.0
+  ],
+  "s7_perturbed": [
+   -17060.732441413063,
+   -2.2879158523097587,
+   1620.2992374513008,
+   1.596727415905113,
+   23018.85969246171,
+   -3.883438131501724,
+   43437.146077807294,
+   -5.921674019715538,
+   -37637.091792771345,
+   -1.7832869260024635,
+   -9969.05256589378,
+   1.7827068107385673,
+   -43487.554,
+   0.0
+  ],
+  "oneshot_noSex": [
+   -19115.3167,
+   0.0,
+   0.0,
+   0.0,
+   22450.6044,
+   0.0,
+   38187.6365,
+   0.0,
+   -40467.3868,
+   0.0,
+   -8324.567,
+   0.0,
+   -43487.554,
+   0.0
+  ]
+ },
+ "nproc": 4,
+ "started_utc": "2026-11-06T14:02:48Z",
+ "pid": 1780349,
+ "finished_utc": "2026-11-06T14:05:06Z"
+}

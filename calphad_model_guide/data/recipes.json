@@ -1,0 +1,1438 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "dupin2018",
+      "title": "Implementation of an Effective Bond Energy Formalism in the Multicomponent Calphad Approach",
+      "doi": "10.6028/jres.123.020",
+      "url": "https://doi.org/10.6028/jres.123.020",
+      "access": "open full text; selected passages inspected",
+      "locators": [
+        "Section 2, equations 1–3",
+        "Section 2.2, Table 1",
+        "Abstract"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "santos2023",
+      "title": "Applying the Effective Bond Energy Formalism (EBEF) to Describe the Sigma (σ) Phase in the Co-Cr-Ni-Re System",
+      "doi": "10.1007/s11669-023-01079-3",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=956715",
+      "access": "open author manuscript; introduction inspected",
+      "locators": [
+        "Introduction, PDF pages 2–4",
+        "Abstract: matrix inversion method"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "vacancies2019",
+      "title": "Thermodynamic modelling of vacancies as a constituent",
+      "doi": "10.1016/j.calphad.2019.101666",
+      "url": "https://doi.org/10.1016/j.calphad.2019.101666",
+      "access": "publisher abstract inspected; equations not verified",
+      "locators": [
+        "Abstract"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "assessment2007",
+      "title": "Assessment techniques, database design and software facilities for thermodynamics and diffusion",
+      "doi": "10.1016/j.calphad.2006.02.007",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591606000150",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract: quality assurance and combining assessments"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "sundman-1981-sublattices",
+      "title": "A regular solution model for phases with several components and sublattices, suitable for computer applications",
+      "doi": "10.1016/0022-3697(81)90144-X",
+      "url": "https://doi.org/10.1016/0022-3697(81)90144-X",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 1981
+    },
+    {
+      "id": "hari-kumar-2001-guidelines",
+      "title": "Some guidelines for thermodynamic optimisation of phase diagrams",
+      "doi": "10.1016/S0925-8388(00)01491-2",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925838800014912",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract and introduction: evidence, constraints, optimization"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2001
+    },
+    {
+      "id": "stan-2003-bayesian",
+      "title": "A Bayesian approach to evaluating the uncertainty of thermodynamic data and phase diagrams",
+      "doi": "10.1016/j.calphad.2003.11.002",
+      "url": "https://doi.org/10.1016/j.calphad.2003.11.002",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2003
+    },
+    {
+      "id": "oates-2008-vacancies",
+      "title": "Vacancy thermodynamics for intermediate phases using the compound energy formalism",
+      "doi": "10.1016/j.actamat.2008.07.002",
+      "url": "https://doi.org/10.1016/j.actamat.2008.07.002",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2008
+    },
+    {
+      "id": "cacciamani-2012-binary",
+      "title": "Critical Evaluation of Binary Phase Diagram Data: Best Practice Guidelines for Evaluation & Notes for Authors",
+      "doi": "",
+      "url": "https://www.apdic.info/fileadmin/content/research/binary_evaluations/docs/notes_authors_binary.pdf",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2012
+    },
+    {
+      "id": "effenberg-2012-ternary",
+      "title": "Critical Evaluation of Ternary Phase Diagram Data: Best Practice Guidelines for Evaluation & Notes for Authors",
+      "doi": "",
+      "url": "https://www.msiport.com/fileadmin/content/research/ternary_evaluations/docs/notes_author_ternary.pdf",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2012
+    },
+    {
+      "id": "dinsdale-2014-vacancies",
+      "title": "Critical Assessment 5: Thermodynamic data for vacancies",
+      "doi": "10.1179/1743284714Y.0000000589",
+      "url": "https://doi.org/10.1179/1743284714Y.0000000589",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2014
+    },
+    {
+      "id": "kattner-2020-data",
+      "title": "The Need for Reliable Experimental Data in Computational Thermodynamics",
+      "doi": "10.32908/hthp.v49.853",
+      "url": "https://doi.org/10.32908/hthp.v49.853",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "dovbenko-2020-ternary",
+      "title": "Critical evaluation of ternary phase diagram data: Important considerations in the scrutiny of the correctness, coherence, and interpretation",
+      "doi": "10.1016/j.calphad.2019.101719",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591619302809",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Publisher title and indexed abstract passages"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "paulson-2020-weighting",
+      "title": "Comparison of statistically-based methods for automated weighting of experimental data in CALPHAD-type assessment",
+      "doi": "10.1016/j.calphad.2019.101728",
+      "url": "https://www.osti.gov/servlets/purl/1592101",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract: classical and Bayesian dataset weighting"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "otis-2021-sensitivity",
+      "title": "Sensitivity estimation for calculated phase equilibria",
+      "doi": "10.1557/s43578-020-00073-6",
+      "url": "https://link.springer.com/article/10.1557/s43578-020-00073-6",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Sensitivity framework and Fisher information case study"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2021
+    },
+    {
+      "id": "ury-2022-generalized-sensitivity",
+      "title": "Generalized method of sensitivity analysis for uncertainty quantification in Calphad calculations",
+      "doi": "10.1016/j.calphad.2022.102504",
+      "url": "https://doi.org/10.1016/j.calphad.2022.102504",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2022
+    },
+    {
+      "id": "kusoffsky-2001-fcc-ordering",
+      "title": "On the compound energy formalism applied to fcc ordering",
+      "doi": "10.1016/S0364-5916(02)00007-X",
+      "url": "https://doi.org/10.1016/S0364-5916(02)00007-X",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2001
+    },
+    {
+      "id": "sundman-2017-order-disorder",
+      "title": "A note on models for phases with order/disorder transitions in thermodynamic software and databases",
+      "doi": "10.2298/JMMB170801023S",
+      "url": "https://doi.org/10.2298/JMMB170801023S",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2017
+    },
+    {
+      "id": "enoki-2020-lro-sro",
+      "title": "Calphad Modeling of LRO and SRO Using ab initio Data",
+      "doi": "10.3390/met10080998",
+      "url": "https://www.mdpi.com/2075-4701/10/8/998",
+      "access": "primary article indexed passages inspected; direct full-text request rate-limited",
+      "locators": [
+        "Sections 2.3, 4.2, 5.2.1, 5.2.2; indexed passages"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "dinsdale-1991-sgte-unary",
+      "title": "SGTE data for pure elements",
+      "doi": "10.1016/0364-5916(91)90030-N",
+      "url": "https://doi.org/10.1016/0364-5916(91)90030-N",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 1991
+    },
+    {
+      "id": "hillert-2001-cef",
+      "title": "The compound energy formalism",
+      "doi": "10.1016/S0925-8388(00)01481-X",
+      "url": "https://doi.org/10.1016/S0925-8388(00)01481-X",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2001
+    },
+    {
+      "id": "kattner-campbell-2009-multicomponent",
+      "title": "Modelling of thermodynamics and diffusion in multicomponent systems",
+      "doi": "10.1179/174328408X372001",
+      "url": "https://doi.org/10.1179/174328408X372001",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2009
+    },
+    {
+      "id": "xiong-2012-magnetism",
+      "title": "An improved magnetic model for thermodynamic modeling",
+      "doi": "10.1016/j.calphad.2012.07.002",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591612000612",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract: ferro/antiferromagnetic artifacts"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2012
+    },
+    {
+      "id": "becker-2014-liquids",
+      "title": "Thermodynamic modelling of liquids: CALPHAD approaches and contributions from statistical physics",
+      "doi": "10.1002/pssb.201350149",
+      "url": "https://doi.org/10.1002/pssb.201350149",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2014
+    },
+    {
+      "id": "roslyakova-2016-segmented",
+      "title": "Modeling of Gibbs energies of pure elements down to 0 K using segmented regression",
+      "doi": "10.1016/j.calphad.2016.09.001",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591616300906",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract and introduction: low-temperature domain"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2016
+    },
+    {
+      "id": "kaptay-2017-temperature-excess",
+      "title": "The exponential excess Gibbs energy model revisited",
+      "doi": "10.1016/j.calphad.2017.01.002",
+      "url": "https://doi.org/10.1016/j.calphad.2017.01.002",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2017
+    },
+    {
+      "id": "sundman-2020-high-temperature",
+      "title": "A method for handling the extrapolation of solid crystalline phases to temperatures far above their melting point",
+      "doi": "10.1016/j.calphad.2020.101737",
+      "url": "https://www.nist.gov/publications/method-handling-extrapolation-solid-crystalline-phases-temperatures-far-above-their",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract: spurious high-temperature restabilization"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "pereira-dos-santos-2025-mu-sigma-ebef",
+      "title": "Applying the Effective Bond Energy Formalism (EBEF) to describe the mu (μ) and sigma (σ) phases in the Co-Cr-Ni-W system",
+      "doi": "10.1016/j.calphad.2025.102897",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0364591625001002",
+      "access": "publisher abstract inspected",
+      "locators": [
+        "Abstract: simultaneous mu/sigma EBEF assessment"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2025
+    },
+    {
+      "id": "campbell-2014-phase-properties",
+      "title": "The development of phase-based property data using the CALPHAD method and infrastructure needs",
+      "doi": "10.1186/2193-9772-3-12",
+      "url": "https://doi.org/10.1186/2193-9772-3-12",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2014
+    },
+    {
+      "id": "jacob-2018-fe-cr-sigma",
+      "title": "Revised thermodynamic description of the Fe-Cr system based on an improved sublattice model of the σ phase",
+      "doi": "10.1016/j.calphad.2017.10.002",
+      "url": "https://doi.org/10.1016/j.calphad.2017.10.002",
+      "access": "inherited bibliography lead; not independently full-text verified",
+      "locators": [
+        "Local catalog entry"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2018
+    },
+    {
+      "id": "joubert-crivello-2019-sublattices",
+      "title": "Description of terminal substitutional solid solutions using the sublattice model",
+      "doi": "10.1016/j.calphad.2019.101685",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0364591619302081",
+      "access": "primary-source abstract/search passages inspected",
+      "locators": [
+        "Abstract: terminal solutions with distinct site occupancies"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2019
+    },
+    {
+      "id": "myhill2021",
+      "title": "Notes on the creation and manipulation of solid solution models",
+      "doi": "10.1007/s00410-021-01825-1",
+      "url": "https://link.springer.com/article/10.1007/s00410-021-01825-1",
+      "access": "primary abstract and methods/Appendix A passages inspected",
+      "locators": [
+        "Model geometry; independent endmember bases; Appendix A code"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "thermal2022",
+      "title": "Including state-of-the-art physical understanding of thermal vacancies in Calphad models",
+      "doi": "10.1038/s41598-022-16926-5",
+      "url": "https://www.nature.com/articles/s41598-022-16926-5",
+      "access": "primary results and conclusion passages inspected",
+      "locators": [
+        "Heat capacity comparison",
+        "Conclusion: equivalence of vacancy reference conventions under parameterization"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "ionic1991",
+      "title": "Modification of the two-sublattice model for liquids",
+      "doi": "10.1016/0364-5916(91)90010-H",
+      "url": "https://www.sciencedirect.com/science/article/pii/036459169190010H",
+      "access": "publisher abstract inspected",
+      "locators": [
+        "Abstract: multicomponent compatibility"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "mqm2000",
+      "title": "The Modified Quasichemical Model I—Binary Solutions",
+      "doi": "10.1007/s11663-000-0103-2",
+      "url": "https://users.encs.concordia.ca/~tmg/images/3/3a/Modified_Quasichemical_Model-part_1.pdf",
+      "access": "primary paper first-page theory inspected",
+      "locators": [
+        "Introduction; equations 1–10"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "mqm2001",
+      "title": "The modified quasi-chemical model: Part IV. Two-sublattice quadruplet approximation",
+      "doi": "10.1007/s11661-001-0230-7",
+      "url": "https://doi.org/10.1007/s11661-001-0230-7",
+      "access": "publisher abstract inspected",
+      "locators": [
+        "Abstract: FNN/SNN SRO and limiting cases"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "espei2019",
+      "title": "ESPEI for efficient thermodynamic database development, modification, and uncertainty quantification: application to Cu–Mg",
+      "doi": "10.1557/mrc.2019.59",
+      "url": "https://arxiv.org/abs/1902.01269",
+      "access": "primary preprint metadata and published supplementary documentation passages inspected",
+      "locators": [
+        "Supplement: parameter_selection.selection.score_model; AICc"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "espei-unaries",
+      "title": "ESPEI custom unary reference states",
+      "doi": "",
+      "url": "https://espei.org/how-to/custom_unary_data.html",
+      "access": "official documentation search passages inspected",
+      "locators": [
+        "Custom unary reference states"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "unstable2023",
+      "title": "Revisiting the SGTE lattice stability of bcc aluminum",
+      "doi": "10.1016/j.calphad.2023.102628",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591623001001",
+      "access": "publisher abstract and highlights inspected",
+      "locators": [
+        "Inflection detection; reference replacement"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "unstable2025",
+      "title": "A computational free energy reference for mechanically unstable phases",
+      "doi": "10.1016/j.calphad.2025.102869",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0364591625000720",
+      "access": "publisher abstract and highlights inspected",
+      "locators": [
+        "Inflection detection and finite-temperature reference"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "interpolation2019",
+      "title": "Interpolation and extrapolation with the CALPHAD method",
+      "doi": "",
+      "url": "https://www.jmst.org/article/2019/1005-0302/1005-0302-35-9-2115.shtml",
+      "access": "primary article methods and discussion passages inspected",
+      "locators": [
+        "Binary and ternary weighting; geometric models"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "sro2004",
+      "title": "A description of the effect of short range ordering in the compound energy formalism",
+      "doi": "",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0364591604000148",
+      "access": "publisher abstract and introduction inspected",
+      "locators": [
+        "Reciprocal interaction parameters; SRO approximation"
+      ],
+      "checked": "2026-10-27"
+    },
+    {
+      "id": "orchid-pi-rules-20261030",
+      "title": "ORCHID assessment rules set by the project PI (R. Arróyave) during the Co–Ga topology study (board task Y36)",
+      "doi": null,
+      "url": null,
+      "access": "internal project rule, recorded 2026-10-30; not a publication; literature support to be added after full-text verification",
+      "locators": [
+        "PI statements, 30 Oct 2026: 'we can't overfit'; 'be mindful of making models too complex as they may break when extrapolating to higher order systems'"
+      ],
+      "checked": "2026-10-30"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "cef-baseline",
+      "title": "Crystallography-informed CEF baseline",
+      "trigger": "always",
+      "requires": [
+        "crystallography",
+        "phase_equilibria"
+      ],
+      "method_kind": "model_family",
+      "source_ids": [
+        "dupin2018"
+      ],
+      "description": "Use an explicit site and constituent specification as a candidate CEF representation.",
+      "limitations": [
+        "Crystal structure alone does not fix thermodynamic parameterization."
+      ],
+      "validation_tests": [
+        "Site ratios and atomic composition agree.",
+        "Reference states and pure limits are consistent."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "ebef-multisite",
+      "title": "Effective Bond Energy Formalism",
+      "trigger": "multisite",
+      "requires": [
+        "crystallography",
+        "endmember_energies",
+        "phase_equilibria"
+      ],
+      "method_kind": "constrained_parameterization",
+      "source_ids": [
+        "dupin2018",
+        "santos2023"
+      ],
+      "description": "Consider effective-bond parameterization for complex multisublattice phases.",
+      "limitations": [
+        "Not an exact reconstruction of arbitrary independently specified endmember energies.",
+        "Matrix construction, rank tests and published numerical reproduction are not implemented."
+      ],
+      "validation_tests": [
+        "Reproduce published parameter mapping.",
+        "Test independent higher-order endmember energies and ternary equilibria."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "site-merging",
+      "title": "Evidence-supported sublattice reduction",
+      "trigger": "multisite",
+      "requires": [
+        "crystallography",
+        "site_occupancy",
+        "phase_equilibria"
+      ],
+      "method_kind": "approximation",
+      "source_ids": [
+        "santos2023"
+      ],
+      "description": "Consider combining sites only when occupancy evidence supports the reduction over the intended domain.",
+      "limitations": [
+        "Successful binary fitting does not establish multicomponent transferability."
+      ],
+      "validation_tests": [
+        "Compare occupancy and equilibrium predictions before and after reduction."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "vacancy-treatment",
+      "title": "Vacancy interpretation and normalization",
+      "trigger": "vacancy",
+      "requires": [
+        "crystallography",
+        "defect_data"
+      ],
+      "method_kind": "modeling_convention",
+      "source_ids": [
+        "vacancies2019"
+      ],
+      "description": "Establish vacancy role and the physical interpretation of limiting configurations.",
+      "limitations": [
+        "Abstract-level source supports screening only; no numerical vacancy-energy prescription is supplied."
+      ],
+      "validation_tests": [
+        "Check empty-corner limits and equilibrium stability.",
+        "Check atomic versus formula normalization and observed defects."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "ordering-coupling",
+      "title": "Ordered and disordered phase coupling",
+      "trigger": "ordering",
+      "requires": [
+        "crystallography",
+        "ordering_data"
+      ],
+      "method_kind": "constraint_family",
+      "source_ids": [
+        "dupin2018"
+      ],
+      "description": "Require explicit ordered/disordered relationships before parameter fitting.",
+      "limitations": [
+        "No automatic ordering transformation or correction subtraction is implemented."
+      ],
+      "validation_tests": [
+        "Test disordered limit and avoid double counting contributions."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "database-compatibility",
+      "title": "Subsystem compatibility review",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "assessment_practice",
+      "source_ids": [
+        "assessment2007"
+      ],
+      "description": "Review subsystem descriptions together before combining them.",
+      "limitations": [
+        "Guidance source remains a bibliographic lead in this release.",
+        "Structural preflight cannot certify Gibbs-energy equivalence."
+      ],
+      "validation_tests": [
+        "Compare shared references and phase identities.",
+        "Test binary limits and multicomponent extrapolation."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "reciprocal-zero",
+      "title": "Zero-reciprocal-energy endmember estimate",
+      "topic": "endmembers",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "assumption",
+      "source_ids": [
+        "enoki-2020-lro-sro"
+      ],
+      "description": "Close a reciprocal square by explicitly assuming its reciprocal energy is zero.",
+      "applicability": "Conditional estimate of an unknown metastable endmember when three compatible energies are known and an artificial reciprocal miscibility gap should be avoided. Requires independent phase-topology evidence; not a default for ordering phases.",
+      "limitations": [
+        "Zero reciprocal energy is an explicit approximation, not a symmetry identity.",
+        "Do not impose it on an ordering-driving reciprocal cycle without physical justification; B2 NiAl is an exclusion/counterexample test, not a general refutation.",
+        "Zero endmember reciprocal reaction energy is distinct from setting an excess reciprocal interaction parameter to zero.",
+        "Enoki et al. 2020 Sections 2.2 (Eqs. 9–10) and 2.3 establish the context. Their reference 81 is Hillert et al., Parameters in the compound energy formalism for ionic systems, Calphad 33 (2009) 227–232, doi:10.1016/j.calphad.2008.05.006. Original 2009 full text not yet inspected."
+      ],
+      "validation_tests": [
+        "With consistent labels check G(A:C)+G(B:D)-G(A:D)-G(B:C)=0 and validate withheld energies."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "independent-basis",
+      "title": "Independent endmember and reaction bases",
+      "topic": "model_geometry",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "exact_transformation_with_conditions",
+      "source_ids": [
+        "myhill2021"
+      ],
+      "description": "Construct independent composition/site-occupancy bases and retain reaction coordinates.",
+      "applicability": "Fixed-site solution models with explicit stoichiometry and constraints.",
+      "limitations": [
+        "Linear dependence of compositions does not imply linear dependence of endmember energies."
+      ],
+      "validation_tests": [
+        "Verify rank, nullspace, reconstruction and unchanged admissible composition domain."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "basis-change",
+      "title": "Change model basis without losing energetic terms",
+      "topic": "model_geometry",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "exact_transformation_with_conditions",
+      "source_ids": [
+        "myhill2021"
+      ],
+      "description": "Transform reference and interaction terms together when changing an endmember basis.",
+      "applicability": "An explicitly defined invertible transformation on the represented model space.",
+      "limitations": [
+        "Dropping interaction terms turns a transformation into an approximation."
+      ],
+      "validation_tests": [
+        "Compare G and derivatives throughout the mapped domain."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "ordering-symmetry",
+      "title": "Symmetry-related ordered endmembers",
+      "topic": "ordering",
+      "trigger": "ordering",
+      "requires": [
+        "crystallography",
+        "ordering_data"
+      ],
+      "method_kind": "symmetry_constraint",
+      "source_ids": [
+        "enoki-2020-lro-sro"
+      ],
+      "description": "Tie endmember and interaction parameters only under validated site permutations.",
+      "applicability": "Equivalent sites in a specified parent lattice.",
+      "limitations": [
+        "Equal site multiplicities alone do not prove crystallographic equivalence."
+      ],
+      "validation_tests": [
+        "Verify allowed permutations and equal energies for symmetry-related configurations."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "fcc-four-site",
+      "title": "Four-sublattice FCC ordering candidate",
+      "topic": "ordering",
+      "trigger": "ordering",
+      "requires": [
+        "crystallography",
+        "ordering_data"
+      ],
+      "method_kind": "model_family",
+      "source_ids": [
+        "enoki-2020-lro-sro"
+      ],
+      "description": "Consider a four-sublattice representation when the target ordering requires distinctions lost in a two-site description.",
+      "applicability": "FCC ordering and intended multicomponent extension.",
+      "limitations": [
+        "Do not force this model on every FCC solution or infer parameters from its name."
+      ],
+      "validation_tests": [
+        "Reproduce disordered and ordered limits and relevant ordering transitions."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "sro-correction",
+      "title": "Explicit SRO contribution review",
+      "topic": "ordering",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "approximation",
+      "source_ids": [
+        "sro2004"
+      ],
+      "description": "Consider a documented SRO approximation and separate it from existing energetic contributions.",
+      "applicability": "Short-range order affects thermodynamic observables beyond the chosen baseline.",
+      "limitations": [
+        "A generic reciprocal interaction is not proof of a validated SRO treatment."
+      ],
+      "validation_tests": [
+        "Compare random and ordered limits and independently measured thermochemistry."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "thermal-vacancy-reference",
+      "title": "Consistent thermal-vacancy reference conventions",
+      "topic": "vacancies",
+      "trigger": "vacancy",
+      "requires": [
+        "defect_data"
+      ],
+      "method_kind": "conditional_reparameterization",
+      "source_ids": [
+        "thermal2022",
+        "vacancies2019"
+      ],
+      "description": "Evaluate the vacancy reference and interactions together rather than prescribing a universal reference energy.",
+      "applicability": "Thermal-vacancy model within the source formulation and validity domain.",
+      "limitations": [
+        "Zero and positive reference conventions can be equivalent under the prescribed mapping; neither is universally safe."
+      ],
+      "validation_tests": [
+        "Reproduce vacancy concentrations, heat capacity and high-temperature phase stability."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "vacancy-double-count",
+      "title": "Avoid double-counting thermal vacancies",
+      "topic": "vacancies",
+      "trigger": "vacancy",
+      "requires": [
+        "defect_data"
+      ],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "thermal2022"
+      ],
+      "description": "Check whether existing heat-capacity functions already include vacancy contributions before adding an explicit term.",
+      "applicability": "An existing unary description is extended with thermal vacancies.",
+      "limitations": [
+        "Do not subtract an arbitrary correction without refitting or a justified decomposition."
+      ],
+      "validation_tests": [
+        "Compare original and revised Cp plus held-out vacancy concentration data."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "defect-mechanism",
+      "title": "Distinguish antisites and vacancy accommodation",
+      "topic": "vacancies",
+      "trigger": "vacancy",
+      "requires": [
+        "site_occupancy",
+        "defect_data"
+      ],
+      "method_kind": "model_selection",
+      "source_ids": [
+        "vacancies2019",
+        "joubert-crivello-2019-sublattices"
+      ],
+      "description": "Require occupancy and composition evidence before selecting a nonstoichiometry mechanism.",
+      "applicability": "Ordered or nonstoichiometric compounds.",
+      "limitations": [
+        "This is a synthesis for model screening; abstract-level sources do not supply a universal defect-selection algorithm."
+      ],
+      "validation_tests": [
+        "Predict both homogeneity range and independent site/defect observations."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "terminal-multisite",
+      "title": "Multisite terminal substitutional solutions",
+      "topic": "sublattices",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "model_selection",
+      "source_ids": [
+        "joubert-crivello-2019-sublattices"
+      ],
+      "description": "Allow multiple sublattices when terminal solid solutions show distinct site occupancies.",
+      "applicability": "An elemental structure has multiple inequivalent sites and appreciable substitution.",
+      "limitations": [
+        "Terminal solution does not automatically mean one-sublattice ideal configurational entropy."
+      ],
+      "validation_tests": [
+        "Compare site occupancy, entropy and phase boundaries with the single-site alternative."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "unary-consistency",
+      "title": "Common unary functions and reference states",
+      "topic": "references",
+      "trigger": "always",
+      "requires": [
+        "endmember_energies"
+      ],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "dinsdale-1991-sgte-unary",
+        "espei-unaries"
+      ],
+      "description": "Identify exact unary functions and versions before combining fitted energies.",
+      "applicability": "Any assessment importing DFT, another database or a subsystem.",
+      "limitations": [
+        "A matching reference-state label alone does not establish matching functions."
+      ],
+      "validation_tests": [
+        "Compare unary G,H,S and transitions across imported components."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "reference-change",
+      "title": "Controlled replacement of lattice stabilities",
+      "topic": "references",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "conditional_reparameterization",
+      "source_ids": [
+        "unstable2023"
+      ],
+      "description": "Propagate a changed elemental reference through affected assessment parameters.",
+      "applicability": "Replacing a lattice stability in an existing database.",
+      "limitations": [
+        "Adding an energy offset to one term may change phase equilibria unintentionally."
+      ],
+      "validation_tests": [
+        "Demonstrate intended preservation or documented changes of assessed equilibria."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "mechanical-instability",
+      "title": "Retain phase identity during atomistic relaxation",
+      "topic": "atomistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "enoki-2020-lro-sro",
+        "unstable2025"
+      ],
+      "description": "Distinguish constrained reference energies, relaxed transformed structures and physical metastable phases.",
+      "applicability": "Relaxation changes topology or harmonic modes indicate instability.",
+      "limitations": [
+        "A high-symmetry stationary structure is not necessarily mechanically stable."
+      ],
+      "validation_tests": [
+        "Record strain/site mapping and stability diagnostics; do not label transformed energy as the original endmember."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "unstable-reference",
+      "title": "Inflection-detection reference candidate",
+      "topic": "atomistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "specialized_method",
+      "source_ids": [
+        "unstable2023",
+        "unstable2025"
+      ],
+      "description": "Evaluate a documented unstable-phase reference construction instead of assigning a collapsed structure energy.",
+      "applicability": "Mechanically unstable reference phases needed by CALPHAD.",
+      "limitations": [
+        "Abstract screening only; method equations and examples must be reproduced before execution."
+      ],
+      "validation_tests": [
+        "Reproduce published reference energy and finite-temperature treatment."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "magnetic-consistency",
+      "title": "Magnetic state and thermodynamic contribution consistency",
+      "topic": "magnetism",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "xiong-2012-magnetism"
+      ],
+      "description": "Track magnetic state in atomistic energies and the selected CALPHAD magnetic contribution.",
+      "applicability": "Magnetic phases or mixed ferro/antiferromagnetic systems.",
+      "limitations": [
+        "Do not mix spin-polarized energies with a second unexamined ordering contribution."
+      ],
+      "validation_tests": [
+        "Test transition behavior, entropy and limiting magnetic states."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "low-temperature",
+      "title": "Low-temperature and third-law domain checks",
+      "topic": "temperature",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "roslyakova-2016-segmented"
+      ],
+      "description": "Use a temperature model whose domain includes the intended low-temperature application.",
+      "applicability": "Extending a database below its assessed temperature interval.",
+      "limitations": [
+        "Do not extrapolate a high-temperature polynomial to zero kelvin by default."
+      ],
+      "validation_tests": [
+        "Check Cp and entropy limits and compare independent low-temperature measurements."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "high-temperature",
+      "title": "Spurious solid restabilization scan",
+      "topic": "temperature",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "sundman-2020-high-temperature"
+      ],
+      "description": "Check whether extrapolated solid functions spuriously undercut the liquid at high temperature.",
+      "applicability": "Solid descriptions used well above their stable domain.",
+      "limitations": [
+        "Do not suppress a phase merely to hide an unexplained model artifact."
+      ],
+      "validation_tests": [
+        "Reproduce a documented extrapolation treatment and scan competing Gibbs energies."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "ionic-liquid",
+      "title": "Two-sublattice ionic liquid candidate",
+      "topic": "ionic",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "model_family",
+      "source_ids": [
+        "ionic1991"
+      ],
+      "description": "Use the appropriate ionic-liquid formalism and its multicomponent-compatible expressions.",
+      "applicability": "Metal/oxide or ionic liquid descriptions requiring varying ionic character.",
+      "limitations": [
+        "Current executable schema does not support charged species or variable site ratios; this entry is catalog-only."
+      ],
+      "validation_tests": [
+        "Check charge balance and metallic/ionic limiting cases."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "charge-domain",
+      "title": "Charge-constrained admissible model domain",
+      "topic": "ionic",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "constraint_family",
+      "source_ids": [
+        "myhill2021",
+        "ionic1991"
+      ],
+      "description": "Construct the feasible occupancy domain with charge and stoichiometric constraints.",
+      "applicability": "Charged species in solids or ionic-liquid modeling.",
+      "limitations": [
+        "Fixed-site and variable-ratio models require different implementations; catalog-only in v0.1."
+      ],
+      "validation_tests": [
+        "Verify feasible endmembers, constraint rank and neutrality throughout sampled states."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "mqm-pair",
+      "title": "Modified quasichemical pair model",
+      "topic": "liquids",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "model_family",
+      "source_ids": [
+        "mqm2000"
+      ],
+      "description": "Consider pair-based configurational treatment where liquid SRO motivates it.",
+      "applicability": "Liquid or solid solutions within the pair approximation assumptions.",
+      "limitations": [
+        "Not interchangeable with a random-mixing polynomial merely because both fit one dataset."
+      ],
+      "validation_tests": [
+        "Recover random limit and reproduce pair fractions and thermochemistry."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "mqm-quadruplet",
+      "title": "Two-sublattice quadruplet treatment",
+      "topic": "liquids",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "model_family",
+      "source_ids": [
+        "mqm2001"
+      ],
+      "description": "Consider separate first- and second-neighbor SRO within a documented quadruplet model.",
+      "applicability": "Two-sublattice solutions with both SRO contributions.",
+      "limitations": [
+        "Requires model-specific constituent definitions and normalization; catalog-only."
+      ],
+      "validation_tests": [
+        "Recover pair-model limit and verify quadruplet/site balances."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "geometric-extrapolation",
+      "title": "Choose and document multicomponent interpolation",
+      "topic": "extrapolation",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "modeling_convention",
+      "source_ids": [
+        "interpolation2019"
+      ],
+      "description": "Record geometric interpolation conventions and test binary boundaries and ternary interiors.",
+      "applicability": "Combining lower-order interaction descriptions.",
+      "limitations": [
+        "Muggianu, Toop and Kohler assumptions are not universally interchangeable."
+      ],
+      "validation_tests": [
+        "Recover subsystem limits and compare independent higher-component equilibria."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "staged-assessment",
+      "title": "Stage parameter assessment",
+      "topic": "assessment",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "assessment_practice",
+      "source_ids": [
+        "hari-kumar-2001-guidelines"
+      ],
+      "description": "Organize evidence and constrain models before progressively fitting additional terms.",
+      "applicability": "New or revised thermodynamic assessments.",
+      "limitations": [
+        "This workflow does not determine a universal parameter order."
+      ],
+      "validation_tests": [
+        "Compare independent thermochemical and constitutional observations after each stage."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "aicc-selection",
+      "title": "Complexity-controlled parameter selection",
+      "topic": "statistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "statistical_method",
+      "source_ids": [
+        "espei2019"
+      ],
+      "description": "Compare candidate parameter terms with a documented complexity penalty.",
+      "applicability": "A specified model family with suitable thermochemical data.",
+      "limitations": [
+        "AICc does not choose the correct crystal model; invalid small-sample denominators and dependent data need handling.",
+        "A within-subsystem complexity score does not test extrapolation to higher-order systems; see parsimony-for-extrapolation."
+      ],
+      "validation_tests": [
+        "Verify score definition, identifiable terms and held-out predictions."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "dataset-weighting",
+      "title": "Dataset-level weighting and outlier review",
+      "topic": "statistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "statistical_method",
+      "source_ids": [
+        "paulson-2020-weighting"
+      ],
+      "description": "Estimate or review dataset weights while preserving source-level disagreements.",
+      "applicability": "Conflicting thermochemical datasets with documented uncertainty.",
+      "limitations": [
+        "Downweighting can conceal model discrepancy or a genuine transition; inspect physical causes."
+      ],
+      "validation_tests": [
+        "Compare inferred weights against methods and source quality, and test sensitivity."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "information-design",
+      "title": "Sensitivity-guided measurements and calculations",
+      "topic": "statistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "statistical_method",
+      "source_ids": [
+        "otis-2021-sensitivity"
+      ],
+      "description": "Use parameter sensitivity and information diagnostics to identify informative additional observations.",
+      "applicability": "A fitted candidate and explicit observation/error model.",
+      "limitations": [
+        "Local sensitivity does not prove global identifiability; account for topology changes."
+      ],
+      "validation_tests": [
+        "Compare rank/conditioning and uncertainty reduction across candidate observations."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "posterior-checks",
+      "title": "Parameter uncertainty and prediction propagation",
+      "topic": "statistics",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "statistical_method",
+      "source_ids": [
+        "espei2019",
+        "otis-2021-sensitivity"
+      ],
+      "description": "Propagate parameter uncertainty to the observables used for decisions.",
+      "applicability": "A justified likelihood, priors and validated candidate model.",
+      "limitations": [
+        "Conditional parameter uncertainty omits unmodeled model-form error."
+      ],
+      "validation_tests": [
+        "Check convergence, predictive residuals and sensitivity to priors/data selection."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "topology-review",
+      "title": "Ternary topology and cross-section consistency",
+      "topic": "assessment",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "dovbenko-2020-ternary"
+      ],
+      "description": "Cross-check phase-diagram sections, reactions and bounding subsystems before fitting.",
+      "applicability": "Constitutional data from multiple diagram representations.",
+      "limitations": [
+        "A low optimization residual cannot resolve contradictory interpretations."
+      ],
+      "validation_tests": [
+        "Test phase-rule consistency and compatible phase fields and reaction connections."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "steering-acceptance",
+      "title": "Acceptance gate for steered or adaptive refits",
+      "topic": "assessment",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "assessment_practice",
+      "source_ids": [
+        "orchid-pi-rules-20261030",
+        "espei2019"
+      ],
+      "description": "Accept a fit whose objective was steered (re-weighted data, points added from an expected diagram, penalty terms on unattested phases) only if, against a control fit with the same evidence, constraints, optimiser, seeds and budget but no steering, the data-only misfit of every evidence class (phase boundaries, invariants, thermochemistry, first-principles energies; each against its own uncertainty) is no worse. Independent held-out evidence, preferably regions of the diagram excluded from both fitting and steering, ranks the accepted fits; it does not reject them.",
+      "applicability": "Any assessment loop that changes weights, adds evidence-derived points or adds penalty terms in response to a diagnosis of the calculated diagram.",
+      "limitations": [
+        "A diagram-agreement score measured against the evidence used for steering is not independent and never justifies a fit on its own.",
+        "The tolerance for 'no worse' must be stated and justified before the comparison (for example, the change expected from noise).",
+        "A second assessment overlaid on the same diagram is not an independent hold-out: where it disagrees with the primary evidence it rewards matching the alternative.",
+        "Held-out regions must be chosen before fitting and never used for steering; with little evidence the ranking has low power."
+      ],
+      "validation_tests": [
+        "Report data-only misfit per evidence class and the count of points beyond 2 sigma for steered and control fits; label each steered fit accepted or rejected with the numbers behind the label.",
+        "For each held-out region, refit without that region's evidence and steering and score only that region; rank accepted fits by held-out performance, with ties where differences are within tolerance."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "pi_rule_literature_support_pending",
+      "priority": "P0",
+      "evidence_maturity": "project_rule_not_numerically_reproduced"
+    },
+    {
+      "id": "parsimony-for-extrapolation",
+      "title": "Parsimony for extrapolation to higher-order systems",
+      "topic": "extrapolation",
+      "trigger": "always",
+      "requires": [],
+      "method_kind": "model_selection",
+      "source_ids": [
+        "orchid-pi-rules-20261030",
+        "espei2019",
+        "interpolation2019",
+        "sundman-2020-high-temperature"
+      ],
+      "description": "Prefer the simplest model that describes the data, because empirical complexity in a binary or ternary description is inherited by every higher-order system built on it. Parsimony targets empirical terms (high-order excess terms, temperature dependence without thermochemical support, large compensating parameters), not physically motivated structure such as an order-disorder partition or a magnetic contribution with a known transition temperature, which is judged by whether each parameter is physically constrained and supported by data.",
+      "applicability": "Any lower-order description intended for combination into multicomponent databases.",
+      "limitations": [
+        "A complexity criterion within the fitted subsystem (for example AICc) is necessary but does not test extrapolation.",
+        "A ternary check without ternary parameters or data detects breakage, not accuracy.",
+        "Physically motivated models add parameters yet may extrapolate better; parameter count alone is not the criterion."
+      ],
+      "validation_tests": [
+        "Report parameter count and highest excess-term order per phase, separating physical from empirical parameters.",
+        "Scan every phase's Gibbs energy over the full composition range and a wide temperature range, including metastable regions: no inverted miscibility gaps, no spurious restabilization, no implausibly large or compensating parameters.",
+        "Check sublattice models and phase names against the conventions of neighbouring systems so the description can be merged.",
+        "Where neighbouring descriptions exist, combine them without higher-order parameters and check sections for spurious phases."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "pi_rule_literature_support_pending",
+      "priority": "P0",
+      "evidence_maturity": "project_rule_not_numerically_reproduced"
+    }
+  ],
+  "scope": "Curated research catalog plus conservative screening; no recipe is numerically certified."
+}

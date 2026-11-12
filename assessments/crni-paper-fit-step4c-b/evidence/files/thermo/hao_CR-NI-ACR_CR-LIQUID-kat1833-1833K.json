@@ -1,0 +1,47 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "LIQUID"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1833.0,
+  "X_NI": [
+   0.3,
+   0.5,
+   0.5998,
+   0.7,
+   0.7999,
+   0.9001
+  ]
+ },
+ "reference_state": {
+  "phases": [
+   "LIQUID"
+  ],
+  "conditions": {
+   "P": 101325,
+   "T": 1833.0,
+   "X_CR": 1.0
+  }
+ },
+ "output": "ACR_CR",
+ "values": [
+  [
+   [
+    0.6682,
+    0.4264,
+    0.2314,
+    0.1685,
+    0.1063,
+    0.0424
+   ]
+  ]
+ ],
+ "reference": "Hao, Ruban, Xiong, Calphad 73 (2021) 102268, Figure 18(a), series 'Katayama et al., 1987 (1833 K)'; original: I. Katayama, T. Nakanishi, N. Kemori, Z. Kozuka, Thermodynamic study of liquid Ni-Cr alloys equilibrated with Cr2O3 by EMF method, Trans. Japan Inst. Met. 28 (1987) 558\u2013563. https://doi.org/10.2320/ma",
+ "comment": "Activity of Cr relative to liquid Cr (caption), liquid alloys (p.14), read from the vector layer (record ids: CAND-CRNI-49839E113D,CAND-CRNI-55B47FF5BD,CAND-CRNI-4E797445EB,CAND-CRNI-10618FA9A9,CAND-CRNI-1E99266C04,CAND-CRNI-2B3D99659A). T from the series legend. Restricted: local only. | REBUILD set C/D: weight 0.172419 (ORCHID Hao records, sigma_mu ~2900 J/mol, mean of per-value weights). | crni-paper-fit-20261106: set E file unchanged",
+ "weight": 0.172419
+}

@@ -1,0 +1,53 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-environment_check",
+ "version": "1.0.0",
+ "title": "verify_build (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-environment_check",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "verify_build"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T15:09:55-0600",
+ "finished": "2026-11-07T15:09:55-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> -I -c <environment_check.code>",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [],
+ "outputs": [],
+ "results": {
+  "returncode": 0,
+  "wall_s": null
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/logs/environment_check.log",
+   "sha256": "6c43d77c82f13756caaf5a481a053ea56d9ea3069b92ab1dd6ac5db31d397f38",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item environment_check (reproduce.environment_check)"
+ ]
+}

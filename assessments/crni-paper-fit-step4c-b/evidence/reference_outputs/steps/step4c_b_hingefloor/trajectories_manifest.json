@@ -1,0 +1,54 @@
+{
+ "step": "step4c_b_hingefloor",
+ "format": "jsonl: header line (names_all, labels_all, free, free_labels, theta_fixed_all), then one line per evaluation {eval, stage, t_s, logpost, parts by category, theta_free, topology every 10 evaluations}; final line stage 'final'",
+ "files": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s0_start/trajectory.jsonl",
+   "sha256": "6adb005b6cbc224ec3d7d652abf73ff2a89cc466c17be69890ff738a6b935c8c",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s1_perturbed/trajectory.jsonl",
+   "sha256": "3dfd17c4ceb488b9ebc8f25b41e7b2504ce51273edd7df2ecfc0bb03c7f8abb2",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s2_perturbed/trajectory.jsonl",
+   "sha256": "590e8f5ba7b1d33a19ba7ef776af5575daea82cc8686c37195b510115fec075f",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s3_perturbed/trajectory.jsonl",
+   "sha256": "d6ef225551ab180e48f8c815d7312fbb4dda595775f3629da9d8141673fbc961",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s4_perturbed/trajectory.jsonl",
+   "sha256": "89203f246172db693500aaa5d24dfdeb8c96221933e29aeb8fa4c4524f0cc33a",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s5_perturbed/trajectory.jsonl",
+   "sha256": "4ae1ba3713c933a475b4f1890ccd90a3b450344fba996a6a1cfe586d73227577",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s6_perturbed/trajectory.jsonl",
+   "sha256": "ca27b9128e5822a2228bc19cfc15795c0336154b88ea956354d5be1b6de80643",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/s7_perturbed/trajectory.jsonl",
+   "sha256": "7ed657ef7c49b8a8f09e6304c2e21e0d7f59448ab564ec0704a76bae0240380a",
+   "storage_class": "local",
+   "role": "per-evaluation trajectory"
+  }
+ ]
+}

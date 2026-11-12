@@ -1,0 +1,53 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "LIQUID"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1873.0,
+  "X_NI": [
+   0.519,
+   0.7095,
+   0.7148,
+   0.759,
+   0.7982,
+   0.8401,
+   0.8546,
+   0.8771,
+   0.9338
+  ]
+ },
+ "reference_state": {
+  "phases": [
+   "LIQUID"
+  ],
+  "conditions": {
+   "P": 101325,
+   "T": 1873.0,
+   "X_CR": 1.0
+  }
+ },
+ "output": "ACR_CR",
+ "values": [
+  [
+   [
+    0.5653,
+    0.3002,
+    0.2848,
+    0.2206,
+    0.1692,
+    0.1204,
+    0.0928,
+    0.0758,
+    0.0316
+   ]
+  ]
+ ],
+ "reference": "Hao, Ruban, Xiong, Calphad 73 (2021) 102268, Figure 18(a), series 'Pei and Wijk, 1994 (1873 K)'; original: W. Pei, O. Wijk, Activity-composition relationships in liquid nickel-chromium alloys, Scand. J. Metall. 23 (1994) 224\u2013227.",
+ "comment": "Activity of Cr relative to liquid Cr (caption), liquid alloys (p.14), read from the vector layer (record ids: CAND-CRNI-11E35AD591,CAND-CRNI-EBD976EB78,CAND-CRNI-4D06C7C11C,CAND-CRNI-B83F0565A1,CAND-CRNI-38CCFDDBC7,CAND-CRNI-F34E29F6E9,CAND-CRNI-73A681AB68,CAND-CRNI-0E9E1310A6,CAND-CRNI-A713C628CC). T from the series legend. Restricted: local only. | REBUILD set C/D: weight 0.1724 (ORCHID Hao records, sigma_mu ~2900 J/mol, mean of per-value weights). | crni-paper-fit-20261106: set E file unchanged",
+ "weight": 0.1724
+}

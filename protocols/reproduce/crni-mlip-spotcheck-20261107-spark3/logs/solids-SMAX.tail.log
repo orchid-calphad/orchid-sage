@@ -1,0 +1,19 @@
+2026-11-07 20:49:00.863679: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-07 20:49:00.874233: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8473] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-07 20:49:00.877530: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1471] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+Using cached GRACE model from /root/.cache/grace/GRACE-2L-SMAX-OMAT-large
+Model license: Academic Software License
+2026-11-07 20:49:07.350844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7113 MB memory:  -> device: 0, name: NVIDIA GB10, pci bus id: 000f:01:00.0, compute capability: 12.1
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-11-07 20:49:25.512619: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-11-07 20:49:25.724587: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 90701
+BCC_A2 x0.0000_pure computed {'s0_unrelaxed': -9.51452, 's1_volume': -9.52457, 's2_volume_ions': -9.52457, 's3_full': -9.52457}
+BCC_A2 x1.0000_pure computed {'s0_unrelaxed': -5.39477, 's1_volume': -5.395, 's2_volume_ions': -5.395, 's3_full': -5.395}
+BCC_A2 x0.2500_s2026110501 computed {'s0_unrelaxed': -8.39159, 's1_volume': -8.39162, 's2_volume_ions': -8.41078, 's3_full': -8.41092}
+elastic BCC_A2 x0.0000_pure 450.0 97.3 114.0
+elastic BCC_A2 x0.2500_s2026110501 283.0 171.9 108.8
+DONE 39.63935899734497

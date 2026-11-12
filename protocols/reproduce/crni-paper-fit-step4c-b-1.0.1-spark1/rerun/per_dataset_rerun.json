@@ -1,0 +1,200 @@
+{
+ "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json": {
+  "type": "ActivityResidual",
+  "n": 13,
+  "rms_z": 0.6602808160540706,
+  "max_abs_z": 1.6286632049788925,
+  "mean_z": 0.41743616924678606,
+  "rms_residual": 1914.8143665568052,
+  "sigma": 2900.0
+ },
+ "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json": {
+  "type": "ActivityResidual",
+  "n": 13,
+  "rms_z": 0.6793565059655972,
+  "max_abs_z": 1.7490234299607732,
+  "mean_z": 0.33669691997061874,
+  "rms_residual": 1970.1338673002317,
+  "sigma": 2900.0
+ },
+ "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json": {
+  "type": "ActivityResidual",
+  "n": 13,
+  "rms_z": 0.6527012003874672,
+  "max_abs_z": 1.4560588917537072,
+  "mean_z": 0.25860681738782954,
+  "rms_residual": 1892.8334811236548,
+  "sigma": 2900.0
+ },
+ "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json": {
+  "type": "ActivityResidual",
+  "n": 13,
+  "rms_z": 2.5622376258771666,
+  "max_abs_z": 8.921968414215236,
+  "mean_z": 0.8761742335856852,
+  "rms_residual": 7430.489115043783,
+  "sigma": 2900.0
+ },
+ "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json": {
+  "type": "ActivityResidual",
+  "n": 13,
+  "rms_z": 0.6859740549442295,
+  "max_abs_z": 1.627938786921852,
+  "mean_z": 0.4718787087137347,
+  "rms_residual": 1989.3247593382655,
+  "sigma": 2900.0
+ },
+ "thermo/dft_HM_MIX_BCC_A2_liu2016.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 3,
+  "rms_z": 0.5501496934479936,
+  "max_abs_z": 0.5981935240104167,
+  "mean_z": -0.5464102330150463,
+  "rms_residual": 3961.077792825554,
+  "sigma": 7200.0
+ },
+ "thermo/dft_HM_MIX_FCC_A1_liu2016.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 3,
+  "rms_z": 1.6424654019453357,
+  "max_abs_z": 2.369945635286458,
+  "mean_z": 1.461678938136574,
+  "rms_residual": 11825.750894006418,
+  "sigma": 7200.0
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json": {
+  "type": "ActivityResidual",
+  "n": 6,
+  "rms_z": 0.976358407722753,
+  "max_abs_z": 1.5662724605836733,
+  "mean_z": -0.5561974000713602,
+  "rms_residual": 2831.353875508943,
+  "sigma": 2899.912422644836
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json": {
+  "type": "ActivityResidual",
+  "n": 7,
+  "rms_z": 1.3971459507694703,
+  "max_abs_z": 2.9143378159949913,
+  "mean_z": -1.0217947878882137,
+  "rms_residual": 4051.577400445048,
+  "sigma": 2899.8956037582648
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json": {
+  "type": "ActivityResidual",
+  "n": 7,
+  "rms_z": 0.7930228248331853,
+  "max_abs_z": 1.3815258997503197,
+  "mean_z": 0.22204187642808865,
+  "rms_residual": 2299.9501880312796,
+  "sigma": 2900.232018561485
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json": {
+  "type": "ActivityResidual",
+  "n": 6,
+  "rms_z": 1.568047958037392,
+  "max_abs_z": 2.247579934654486,
+  "mean_z": 1.3801736450815643,
+  "rms_residual": 4547.201752815502,
+  "sigma": 2899.912422644836
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json": {
+  "type": "ActivityResidual",
+  "n": 9,
+  "rms_z": 0.9119964466250036,
+  "max_abs_z": 1.3219750571538078,
+  "mean_z": -0.5291280466512768,
+  "rms_residual": 2645.0012953161354,
+  "sigma": 2900.232018561485
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json": {
+  "type": "ActivityResidual",
+  "n": 3,
+  "rms_z": 1.4674365434224996,
+  "max_abs_z": 1.6383213297940629,
+  "mean_z": -1.4606377159647261,
+  "rms_residual": 4255.758336202045,
+  "sigma": 2900.131085925084
+ },
+ "thermo/hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json": {
+  "type": "ActivityResidual",
+  "n": 10,
+  "rms_z": 0.9076660376814741,
+  "max_abs_z": 1.944295732352805,
+  "mean_z": 0.14022913511548843,
+  "rms_residual": 2632.3352232840725,
+  "sigma": 2900.114264502022
+ },
+ "thermo/hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 19,
+  "rms_z": 2.2099512877299747,
+  "max_abs_z": 4.314825879080876,
+  "mean_z": -1.5638840435293977,
+  "rms_residual": 2209.9512877299753,
+  "sigma": 1000.0
+ },
+ "thermo/hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 24,
+  "rms_z": 1.1467530890525046,
+  "max_abs_z": 1.9276645412817888,
+  "mean_z": 0.9854277938965321,
+  "rms_residual": 1146.7530890525045,
+  "sigma": 1000.0
+ },
+ "thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 8,
+  "rms_z": 0.24065792644018766,
+  "max_abs_z": 0.36332879836658166,
+  "mean_z": -0.21316459685409894,
+  "rms_residual": 842.3027425406567,
+  "sigma": 3500.0
+ },
+ "thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 6,
+  "rms_z": 0.412540118015934,
+  "max_abs_z": 0.767418848873141,
+  "mean_z": 0.14679712861218672,
+  "rms_residual": 1443.890413055769,
+  "sigma": 3500.0
+ },
+ "thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 11,
+  "rms_z": 0.21559500313968397,
+  "max_abs_z": 0.43025712424332074,
+  "mean_z": -0.18362965751954288,
+  "rms_residual": 754.5825109888939,
+  "sigma": 3500.0
+ },
+ "thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 4,
+  "rms_z": 0.08315218476680596,
+  "max_abs_z": 0.12051825475657825,
+  "mean_z": -0.0037761766657183372,
+  "rms_residual": 291.0326466838209,
+  "sigma": 3500.0
+ },
+ "thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 24,
+  "rms_z": 0.3586557034661223,
+  "max_abs_z": 0.6631902257436304,
+  "mean_z": 0.15700726979034094,
+  "rms_residual": 358.6557034661223,
+  "sigma": 1000.0
+ },
+ "thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json": {
+  "type": "FixedConfigurationPropertyResidual",
+  "n": 28,
+  "rms_z": 0.3789252353780607,
+  "max_abs_z": 0.6796840258142766,
+  "mean_z": 0.3399281715842756,
+  "rms_residual": 378.9252353780607,
+  "sigma": 1000.0
+ }
+}

@@ -1,0 +1,1120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orchid-project.org/schema/assessment/1.0.0-draft.2/assessment-results.schema.json",
+  "title": "orchid-assessment-schema 1.0.0-draft.2: assessment results (dashboard data)",
+  "description": "Everything the assessment dashboard shows, as data. Generated from campaign files by a documented extractor (never computed for display); a quantity that is not on disk is a `pending` object. One document per artifact (the pick of a specific protocol).",
+  "type": "object",
+  "required": [
+    "type",
+    "schema_version",
+    "id",
+    "system",
+    "specific_protocol",
+    "generated_utc",
+    "snapshot",
+    "pick",
+    "steps",
+    "states_evaluated",
+    "invariants",
+    "objective_components",
+    "per_dataset_residuals",
+    "oneshot_shifts",
+    "checks",
+    "uq",
+    "trajectory",
+    "projection",
+    "decisions",
+    "artifacts",
+    "figures",
+    "provenance"
+  ],
+  "properties": {
+    "type": {
+      "const": "assessment_results"
+    },
+    "schema_version": {
+      "enum": [
+        "orchid-assessment-schema@1.0.0-draft",
+        "orchid-assessment-schema@1.0.0-draft.2"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "system": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "specific_protocol": {
+      "$ref": "common.schema.json#/$defs/protocol_ref"
+    },
+    "general_protocol": {
+      "$ref": "common.schema.json#/$defs/protocol_ref"
+    },
+    "generated_utc": {
+      "$ref": "common.schema.json#/$defs/date"
+    },
+    "snapshot": {
+      "type": "object",
+      "required": [
+        "frozen",
+        "note"
+      ],
+      "properties": {
+        "frozen": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        },
+        "underlying_data_utc": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "status_banner": {
+      "type": "string"
+    },
+    "pick": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "label",
+            "artifact",
+            "step",
+            "start"
+          ],
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "artifact": {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "step": {
+              "type": "string"
+            },
+            "start": {
+              "type": "string"
+            },
+            "objective": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "objective_name": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        }
+      ]
+    },
+    "steps": {
+      "anyOf": [
+        {
+          "description": "the step sequence one-shot -> ... -> final, one row per step run (failed and side branches included)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "step",
+              "general_step",
+              "role",
+              "starts",
+              "pick",
+              "objective",
+              "topology_ok"
+            ],
+            "properties": {
+              "step": {
+                "type": "string"
+              },
+              "general_step": {
+                "type": "string"
+              },
+              "role": {
+                "enum": [
+                  "lineage",
+                  "side_branch",
+                  "failed",
+                  "superseded"
+                ]
+              },
+              "data_added": {
+                "type": "string"
+              },
+              "free_parameters": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "starts": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "modes": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "pick": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "objective": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "objective_name": {
+                "type": "string"
+              },
+              "topology_ok": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "n_topology_ok": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "key_results": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        }
+      ]
+    },
+    "states_evaluated": {
+      "description": "expected vs predicted assemblage at every observed state (fit and coverage); state_id / observation ids by ORCHID's own fields",
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "T_K",
+              "expected",
+              "match",
+              "orchid_link",
+              "predicted",
+              "x"
+            ],
+            "properties": {
+              "observation_id": {
+                "$ref": "common.schema.json#/$defs/orchid_observation_id"
+              },
+              "collection": {
+                "enum": [
+                  "fit",
+                  "coverage"
+                ]
+              },
+              "T_K": {
+                "type": "number"
+              },
+              "x": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "expected": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "predicted": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "match": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "orchid_ids": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/orchid_observation_id"
+                }
+              },
+              "state_ids": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/state_id"
+                }
+              },
+              "contains_expected": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "excluded": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "excluded_present": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "kind": {
+                "type": "string"
+              },
+              "source_file": {
+                "type": "string"
+              },
+              "zpf_certainty": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "certainty_tier"
+                    ],
+                    "properties": {
+                      "certainty_tier": {
+                        "enum": [
+                          "certain",
+                          "less_certain",
+                          "uncertain"
+                        ]
+                      },
+                      "energy_scale_J_per_mol_atom": {
+                        "type": "number"
+                      },
+                      "certainty_basis": {
+                        "type": "string"
+                      },
+                      "distance_sigma": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      }
+                    },
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              "exclusions": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "common.schema.json#/$defs/exclusion_entry"
+                    }
+                  }
+                ]
+              },
+              "orchid_link": {
+                "enum": [
+                  "present",
+                  "missing",
+                  "provisional"
+                ],
+                "description": "PI 6 Nov: link to ORCHID records/states is required; missing needs missing_reason and intake_ref; provisional: ids computed offline for unreleased data, each orchid_links item with its pid (common.schema.json orchid_link)"
+              },
+              "orchid_links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^ORC-[A-Z0-9]+$"
+                    },
+                    "observation_id": {
+                      "type": "string"
+                    },
+                    "state_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "state_class_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "paper_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "pid": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "in_release": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "orchid_release": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "missing_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "intake_ref": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "orchid_link": {
+                      "const": "missing"
+                    }
+                  },
+                  "required": [
+                    "orchid_link"
+                  ]
+                },
+                "then": {
+                  "required": [
+                    "missing_reason",
+                    "intake_ref"
+                  ],
+                  "properties": {
+                    "missing_reason": {
+                      "type": "string"
+                    },
+                    "intake_ref": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "invariants": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "reaction",
+              "observed_K",
+              "calculated_K"
+            ],
+            "properties": {
+              "reaction": {
+                "type": "string"
+              },
+              "orchid_ids": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/orchid_record_id"
+                }
+              },
+              "observed_K": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "observed_basis": {
+                "type": "string"
+              },
+              "sigma_K": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "calculated_K": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "dT_K": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "pass": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      ]
+    },
+    "objective_components": {
+      "type": "object",
+      "required": [
+        "name",
+        "components"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "total": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "components": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "per_dataset_residuals": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "dataset",
+              "n",
+              "rms_z"
+            ],
+            "properties": {
+              "dataset": {
+                "type": "string"
+              },
+              "group": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "n": {
+                "type": "integer"
+              },
+              "rms_z": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max_abs_z": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "rms_residual": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "unit": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      ]
+    },
+    "oneshot_shifts": {
+      "description": "one-shot energies: how far each moved, in units of its own sigma, per step",
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "step",
+              "id",
+              "phase",
+              "shift_sigma"
+            ],
+            "properties": {
+              "step": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "phase": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "string"
+              },
+              "x": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "shift_J": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sigma_J": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "shift_sigma": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      ]
+    },
+    "checks": {
+      "type": "object",
+      "required": [
+        "pure_elements",
+        "liquid_convexity",
+        "gaps",
+        "plausibility"
+      ],
+      "properties": {
+        "pure_elements": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "liquid_convexity": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "gaps": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "plausibility": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "topology": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "data_consistency": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "uq": {
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "object",
+          "required": [
+            "method",
+            "summary"
+          ],
+          "properties": {
+            "method": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "object"
+            },
+            "modes": {
+              "type": "array"
+            },
+            "files": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "trajectory": {
+      "description": "REQUIRED record (PI, 6 Nov): per step and start, evaluation index, objective and components, parameter vector, topology class where evaluated, wall time. A start whose history was not saved has recorded=false and only its start and end points (never interpolated).",
+      "type": "object",
+      "required": [
+        "parameter_names",
+        "parameter_units",
+        "objective_name",
+        "runs"
+      ],
+      "properties": {
+        "parameter_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parameter_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parameter_units": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "phase_of_parameter": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "objective_name": {
+          "type": "string"
+        },
+        "component_note": {
+          "type": "string"
+        },
+        "oneshot_theta": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "runs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trajectory_run"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "projection": {
+      "description": "deterministic 2-D projection of all retained parameter vectors (fixed basis, stated)",
+      "oneOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "object",
+          "required": [
+            "method",
+            "scale",
+            "center",
+            "basis",
+            "explained_variance_ratio",
+            "n_vectors"
+          ],
+          "properties": {
+            "method": {
+              "type": "string"
+            },
+            "scale": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "scale_basis": {
+              "type": "string"
+            },
+            "center": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "basis": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "explained_variance_ratio": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "n_vectors": {
+              "type": "integer"
+            },
+            "sign_convention": {
+              "type": "string"
+            },
+            "uq_points": {
+              "type": "array"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/decision"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "orchid_intake": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/pending"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "computation": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/file_ref"
+      }
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "panel",
+          "file"
+        ],
+        "properties": {
+          "panel": {
+            "type": "string"
+          },
+          "caption": {
+            "type": "string"
+          },
+          "file": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          },
+          "embedded": {
+            "type": "string",
+            "description": "data: URI, for the standalone HTML"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "extractor",
+        "inputs"
+      ],
+      "properties": {
+        "extractor": {
+          "$ref": "common.schema.json#/$defs/file_ref"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "orchid_release": {
+      "description": "ORCHID release tag of the records used (badge and statements), or a description when unreleased",
+      "type": "string"
+    },
+    "states_summary": {
+      "type": "object",
+      "description": "counts from evaluate_states.py and the tier counts"
+    },
+    "evidence_bundle": {
+      "$ref": "common.schema.json#/$defs/file_ref"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "trajectory_point": {
+      "type": "object",
+      "required": [
+        "eval",
+        "objective"
+      ],
+      "properties": {
+        "eval": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "objective": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "components": {
+          "type": "object",
+          "additionalProperties": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "theta": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "topology_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "t_s": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "stage": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "trajectory_run": {
+      "type": "object",
+      "required": [
+        "step",
+        "start",
+        "recorded",
+        "points"
+      ],
+      "properties": {
+        "step": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "recorded": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/file_ref"
+        },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/trajectory_point"
+          }
+        },
+        "final_topology_class": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "is_pick": {
+          "type": "boolean"
+        },
+        "wall_s": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "n_eval": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

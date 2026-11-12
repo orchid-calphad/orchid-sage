@@ -1,0 +1,35 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1123
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.977
+    ]
+   ]
+  ]
+ ],
+ "reference": "collins1988electron",
+ "comment": "From Figure 1. Converted from weight percent. | REBUILD set D, observation (i): the known phase at its printed composition (single-phase), derived from the same parent points as the (ii) file; parent indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]; weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]); values unchanged | step4c: sigma_DF = max(converted 1945, tier less_certain 50) = 1945 J/mol",
+ "weight": 0.5141976745706213
+}

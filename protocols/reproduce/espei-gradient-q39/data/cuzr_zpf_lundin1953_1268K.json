@@ -1,0 +1,57 @@
+{
+ "components": [
+  "CU",
+  "VA",
+  "ZR"
+ ],
+ "phases": [
+  "BCC_A2",
+  "CUZR2",
+  "LIQUID"
+ ],
+ "output": "ZPF",
+ "reference": "1953, Lundin CE, McPherson DJ, Hansen M. Trans AIME 1953;197: 273\u20138.",
+ "tags": [
+  "experimental",
+  "invariant_table",
+  "via_assessment",
+  "orchid_caveat",
+  "orchid"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1268
+ },
+ "values": [
+  [
+   [
+    "LIQUID",
+    [
+     "ZR"
+    ],
+    [
+     0.724
+    ]
+   ],
+   [
+    "CUZR2",
+    [
+     "ZR"
+    ],
+    [
+     null
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "ZR"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "comment": "Q39 minimal reproducer: region 0 of 1953, Lundin CE, McPherson DJ, Hansen M. Trans AIME 1953;197: 273\u20138. (ORCHID bundle file invariants__CU-ZR__CuZr-10Zho.zpf-05.json)"
+}

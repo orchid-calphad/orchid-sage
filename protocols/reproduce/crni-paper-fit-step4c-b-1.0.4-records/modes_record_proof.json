@@ -1,0 +1,40 @@
+{
+ "general_protocol": "orchid-calphad-fit@2.1.2",
+ "general_sha256": "7e782887b184ecbfa6d7d67961dca9e0f4d1abeb5ec7b6dc751f7e9a11144179",
+ "command": "PY -c \"import json,sys; tol=json.loads(sys.argv[1]); m=json.load(open('steps/step4c_b_hingefloor/multistart.json')); m=[x for x in m if x['final']=='converged']; m.sort(key=lambda x:-x['logpost']); modes=[]; [modes.append(x) for x in m if all(max(abs(a-b)/s for a,b,s in zip(x['theta'],y['theta'],tol))>1 for y in modes)]; json.dump([{'name':chr(65+i)+'_'+x['start'],'start':x['start'],'theta':x['theta'],'logpost':x['logpost'],'grad_norm_q':x['grad_norm_q']} for i,x in enumerate(modes)], open('results/uq/modes_step4c_b_hingefloor.json','w'), indent=1)\" '[50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03]'",
+ "multistart": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/steps/step4c_b_hingefloor/multistart.json",
+ "multistart_sha256": "ac39ad7804cd57907c023b20305b434a78a2dc5401fa46f5043165d151c42150",
+ "recorded_modes": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/results/uq/modes_step4c_b.json",
+ "recorded_sha256": "a1e7f9f23fe8a90df761067ee4e8a00d4ea0ed80f1721751d146e5af6efede6f",
+ "new_modes": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/results/uq/modes_step4c_b@1.1.0.json",
+ "new_sha256": "039e3a45724238984e514141a279b8c5ad3e3b21839ce851e199a9150e56bf03",
+ "names_recorded": [
+  "A_s4",
+  "A2_s5_flat"
+ ],
+ "names_new": [
+  "A_s4_perturbed",
+  "B_s5_perturbed"
+ ],
+ "starts_recorded": [
+  "s4_perturbed",
+  "s5_perturbed"
+ ],
+ "starts_new": [
+  "s4_perturbed",
+  "s5_perturbed"
+ ],
+ "theta_bit_identical_in_order": true,
+ "fields_new": [
+  "grad_norm_q",
+  "logpost",
+  "name",
+  "start",
+  "theta"
+ ],
+ "fields_recorded": [
+  "name",
+  "theta"
+ ],
+ "note": "laplace3.py reads name and theta only; the weights depend on theta only (seeded draws, default_rng(20261106))"
+}

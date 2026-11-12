@@ -1,0 +1,84 @@
+{
+ "step": "step3b_thermo_crni2free",
+ "rule": "fit_protocol 10a: eligible if grad_norm_q < threshold; rank plausible, topology class (ok; no wrong temperatures), then objective (no grid tie-breaks)",
+ "threshold": 0.001,
+ "n_starts": 8,
+ "n_eligible": 0,
+ "pick": null,
+ "pick_objective": null,
+ "note": "no start converged below the threshold; the threshold is not loosened (PI rule): refit with tighter convergence or report",
+ "starts": [
+  {
+   "start": "s1_perturbed",
+   "objective": -3941.8007861388533,
+   "grad_norm_q": 1.3200422847050417,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s4_perturbed",
+   "objective": -3941.8014779524465,
+   "grad_norm_q": 1.3184670094211544,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s7_perturbed",
+   "objective": -3941.802048847888,
+   "grad_norm_q": 1.3025608320323587,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s3_perturbed",
+   "objective": -3941.8105090142926,
+   "grad_norm_q": 0.07159056030096689,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s6_perturbed",
+   "objective": -3941.811102301341,
+   "grad_norm_q": 1.3359950165578678,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s5_perturbed",
+   "objective": -3941.837174223396,
+   "grad_norm_q": 1.2017341677013391,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s2_perturbed",
+   "objective": -3941.8387268591714,
+   "grad_norm_q": 1.3388316889244378,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  },
+  {
+   "start": "s0_start",
+   "objective": -3942.370964320506,
+   "grad_norm_q": 0.08334730923017264,
+   "eligible": false,
+   "plausible": false,
+   "topology_ok": false,
+   "no_wrong_temperatures": false
+  }
+ ]
+}

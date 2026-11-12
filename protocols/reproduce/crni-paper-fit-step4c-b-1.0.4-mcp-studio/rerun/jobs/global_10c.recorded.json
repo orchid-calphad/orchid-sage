@@ -1,0 +1,22 @@
+{
+ "executed": true,
+ "item": "global_10c",
+ "returncode": 0,
+ "wall_s": 5488.83,
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/global_10c.log",
+ "log_tail": "",
+ "outputs": [
+  {
+   "path": "steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+   "exists": true
+  },
+  {
+   "path": "steps/step4c_b_hingefloor_10c/anneal_7201/status.json",
+   "exists": true
+  }
+ ],
+ "run_card": "<home>/mcp-rerun-crni-1.0.4-20261107/run/run_cards/crni-paper-fit-step4c-b-global_10c.json",
+ "detached": true,
+ "next": "compare_outputs(protocol, run_root)",
+ "recorded": "2026-11-07T17:34:22-0600"
+}

@@ -1,0 +1,172 @@
+{
+ "rule": "fit_protocol 10a: eligible starts (smooth or kink-stationary, on-boundary points within own sigma, no failed equilibria), then the highest objective (scripts/check10a_ms.py); never a start label",
+ "check10a": "results/check10a_rerun.json",
+ "pick": "s1_perturbed",
+ "n_eligible": 8,
+ "kinds": {
+  "smooth": 8,
+  "kink": 0,
+  "not_stationary": 0
+ },
+ "pick_found": true,
+ "pick_logpost": -5657.288636863667,
+ "pick_kind": "smooth",
+ "pick_eligible": true,
+ "pick_n_boundary_points": 8,
+ "pick_n_failed_equilibria": 0,
+ "gap_to_runner_up": 3.4515323932282627e-09,
+ "topology": {
+  "ok": false,
+  "n_bad": 1,
+  "T_liquid_min": 1614.0,
+  "T_CrNi2_max": 860.0,
+  "spurious_severity": "high-T only"
+ },
+ "T_liquid_min": 1614.0,
+ "T_CrNi2_max": 860.0,
+ "pick_tdb": {
+  "source": "steps/step4c_b_hingefloor/s1_perturbed.tdb",
+  "copy": "tdb/step4c_b_hingefloor_pick10a.tdb"
+ },
+ "parameters": {
+  "reference_tdb": "reference/step4c_b_hingefloor_pick.tdb",
+  "reference_modes": "reference/modes_step4c_b.json",
+  "tol_a": 50.0,
+  "tol_b": 0.03,
+  "undetermined_rule": "symbols where the two recorded minima of the basin (A_s4 and A2_s5_flat) differ by more than the 10b tolerance; reported, not failed",
+  "undetermined": [
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011",
+   "VV0013"
+  ],
+  "undetermined_beyond_tol": [],
+  "determined_outside_tol": [],
+  "determined_within_tol": true,
+  "max_determined_diff_over_tol": 0.0196053799999936,
+  "max_diff_over_tol_to_each_recorded_mode": {
+   "A_s4": 0.038727825484722686,
+   "A2_s5_flat": 5.9136368837493665
+  },
+  "symbols": {
+   "VV0000": {
+    "reference": -12848.367188,
+    "rerun": -12848.383835,
+    "diff": -0.016647000000375556,
+    "tol": 50.0,
+    "diff_over_tol": 0.00033294000000751113,
+    "status": "within"
+   },
+   "VV0001": {
+    "reference": 3.003633,
+    "rerun": 3.003634,
+    "diff": 9.999999996956888e-07,
+    "tol": 0.03,
+    "diff_over_tol": 3.333333332318963e-05,
+    "status": "within"
+   },
+   "VV0002": {
+    "reference": -453.88706,
+    "rerun": -453.84525,
+    "diff": 0.041809999999998126,
+    "tol": 50.0,
+    "diff_over_tol": 0.0008361999999999625,
+    "status": "within"
+   },
+   "VV0003": {
+    "reference": 2.293144,
+    "rerun": 2.293112,
+    "diff": -3.2000000000032e-05,
+    "tol": 0.03,
+    "diff_over_tol": 0.0010666666666677336,
+    "status": "within"
+   },
+   "VV0004": {
+    "reference": 19756.000766,
+    "rerun": 19756.062347,
+    "diff": 0.06158099999811384,
+    "tol": 50.0,
+    "diff_over_tol": 0.0012316199999622768,
+    "status": "undetermined"
+   },
+   "VV0005": {
+    "reference": -11.83813,
+    "rerun": -11.838177,
+    "diff": -4.7000000000352316e-05,
+    "tol": 0.03,
+    "diff_over_tol": 0.0015666666666784106,
+    "status": "undetermined"
+   },
+   "VV0006": {
+    "reference": 21426.687295,
+    "rerun": 21426.612662,
+    "diff": -0.07463300000017625,
+    "tol": 50.0,
+    "diff_over_tol": 0.001492660000003525,
+    "status": "undetermined"
+   },
+   "VV0007": {
+    "reference": -2.49193,
+    "rerun": -2.491886,
+    "diff": 4.399999999993298e-05,
+    "tol": 0.03,
+    "diff_over_tol": 0.0014666666666644328,
+    "status": "undetermined"
+   },
+   "VV0008": {
+    "reference": 6499.63701,
+    "rerun": 6499.624102,
+    "diff": -0.01290800000060699,
+    "tol": 50.0,
+    "diff_over_tol": 0.00025816000001213977,
+    "status": "undetermined"
+   },
+   "VV0009": {
+    "reference": -9.651811,
+    "rerun": -9.651811,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0010": {
+    "reference": 33652.533367,
+    "rerun": 33652.576586,
+    "diff": 0.04321899999922607,
+    "tol": 50.0,
+    "diff_over_tol": 0.0008643799999845214,
+    "status": "undetermined"
+   },
+   "VV0011": {
+    "reference": -18.944874,
+    "rerun": -18.944898,
+    "diff": -2.3999999999801958e-05,
+    "tol": 0.03,
+    "diff_over_tol": 0.0007999999999933987,
+    "status": "undetermined"
+   },
+   "VV0012": {
+    "reference": -41000.225021,
+    "rerun": -40999.244752,
+    "diff": 0.9802689999996801,
+    "tol": 50.0,
+    "diff_over_tol": 0.0196053799999936,
+    "status": "within"
+   },
+   "VV0013": {
+    "reference": 25.776031,
+    "rerun": 25.774869,
+    "diff": -0.0011620000000007735,
+    "tol": 0.03,
+    "diff_over_tol": 0.03873333333335912,
+    "status": "undetermined"
+   }
+  }
+ },
+ "other_tdb_lines_identical": true
+}

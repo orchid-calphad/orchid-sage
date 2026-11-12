@@ -1,0 +1,281 @@
+{
+  "tool_version": "0.1.0",
+  "schema_version": 1,
+  "input_sha256": "9f75771a129659c3c6c5c7463e7c6b7a43baec3877105fe97d6126c3bf6e9e2a",
+  "library_sha256": "815a13d226f1bab87e671ba379c4a708a06cf96a09974edfeaae43f07ccc041e",
+  "advisory_only": true,
+  "ranking": "fewest missing evidence requirements, conflicts last; not scientific confidence",
+  "audit": {
+    "tool_version": "0.1.0",
+    "schema_version": 1,
+    "input_sha256": "9f75771a129659c3c6c5c7463e7c6b7a43baec3877105fe97d6126c3bf6e9e2a",
+    "library_sha256": "815a13d226f1bab87e671ba379c4a708a06cf96a09974edfeaae43f07ccc041e",
+    "advisory_only": true,
+    "phase": "SIGMA",
+    "findings": [
+      {
+        "code": "temperature_scope_missing",
+        "severity": "review",
+        "message": "State the intended temperature domain before validation."
+      }
+    ],
+    "metadata_ready": true,
+    "scientifically_validated": false
+  },
+  "candidates": [
+    {
+      "id": "cef-baseline",
+      "title": "Crystallography-informed CEF baseline",
+      "trigger": "always",
+      "requires": [
+        "crystallography",
+        "phase_equilibria"
+      ],
+      "method_kind": "model_family",
+      "source_ids": [
+        "dupin2018"
+      ],
+      "description": "Use an explicit site and constituent specification as a candidate CEF representation.",
+      "limitations": [
+        "Crystal structure alone does not fix thermodynamic parameterization."
+      ],
+      "validation_tests": [
+        "Site ratios and atomic composition agree.",
+        "Reference states and pure limits are consistent."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "phase_equilibria"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 1
+    },
+    {
+      "id": "database-compatibility",
+      "title": "Subsystem compatibility review",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "assessment_practice",
+      "source_ids": [
+        "assessment2007"
+      ],
+      "description": "Review subsystem descriptions together before combining them.",
+      "limitations": [
+        "Guidance source remains a bibliographic lead in this release.",
+        "Structural preflight cannot certify Gibbs-energy equivalence."
+      ],
+      "validation_tests": [
+        "Compare shared references and phase identities.",
+        "Test binary limits and multicomponent extrapolation."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "phase_equilibria"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 0
+    },
+    {
+      "id": "staged-assessment",
+      "title": "Stage parameter assessment",
+      "topic": "assessment",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "assessment_practice",
+      "source_ids": [
+        "hari-kumar-2001-guidelines"
+      ],
+      "description": "Organize evidence and constrain models before progressively fitting additional terms.",
+      "applicability": "New or revised thermodynamic assessments.",
+      "limitations": [
+        "This workflow does not determine a universal parameter order."
+      ],
+      "validation_tests": [
+        "Compare independent thermochemical and constitutional observations after each stage."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "phase_equilibria"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 0
+    },
+    {
+      "id": "topology-review",
+      "title": "Ternary topology and cross-section consistency",
+      "topic": "assessment",
+      "trigger": "always",
+      "requires": [
+        "phase_equilibria"
+      ],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "dovbenko-2020-ternary"
+      ],
+      "description": "Cross-check phase-diagram sections, reactions and bounding subsystems before fitting.",
+      "applicability": "Constitutional data from multiple diagram representations.",
+      "limitations": [
+        "A low optimization residual cannot resolve contradictory interpretations."
+      ],
+      "validation_tests": [
+        "Test phase-rule consistency and compatible phase fields and reaction connections."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "phase_equilibria"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 0
+    },
+    {
+      "id": "unary-consistency",
+      "title": "Common unary functions and reference states",
+      "topic": "references",
+      "trigger": "always",
+      "requires": [
+        "endmember_energies"
+      ],
+      "method_kind": "consistency_check",
+      "source_ids": [
+        "dinsdale-1991-sgte-unary",
+        "espei-unaries"
+      ],
+      "description": "Identify exact unary functions and versions before combining fitted energies.",
+      "applicability": "Any assessment importing DFT, another database or a subsystem.",
+      "limitations": [
+        "A matching reference-state label alone does not establish matching functions."
+      ],
+      "validation_tests": [
+        "Compare unary G,H,S and transitions across imported components."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "endmember_energies"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 0
+    },
+    {
+      "id": "ebef-multisite",
+      "title": "Effective Bond Energy Formalism",
+      "trigger": "multisite",
+      "requires": [
+        "crystallography",
+        "endmember_energies",
+        "phase_equilibria"
+      ],
+      "method_kind": "constrained_parameterization",
+      "source_ids": [
+        "dupin2018",
+        "santos2023"
+      ],
+      "description": "Consider effective-bond parameterization for complex multisublattice phases.",
+      "limitations": [
+        "Not an exact reconstruction of arbitrary independently specified endmember energies.",
+        "Matrix construction, rank tests and published numerical reproduction are not implemented."
+      ],
+      "validation_tests": [
+        "Reproduce published parameter mapping.",
+        "Test independent higher-order endmember energies and ternary equilibria."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "endmember_energies",
+        "phase_equilibria"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 1
+    },
+    {
+      "id": "site-merging",
+      "title": "Evidence-supported sublattice reduction",
+      "trigger": "multisite",
+      "requires": [
+        "crystallography",
+        "site_occupancy",
+        "phase_equilibria"
+      ],
+      "method_kind": "approximation",
+      "source_ids": [
+        "santos2023"
+      ],
+      "description": "Consider combining sites only when occupancy evidence supports the reduction over the intended domain.",
+      "limitations": [
+        "Successful binary fitting does not establish multicomponent transferability."
+      ],
+      "validation_tests": [
+        "Compare occupancy and equilibrium predictions before and after reduction."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "topic": "foundations",
+      "priority": "P0",
+      "applicability": "See trigger and required evidence; domain review required.",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced",
+      "missing_verified_evidence": [
+        "phase_equilibria",
+        "site_occupancy"
+      ],
+      "conflicting_evidence": [],
+      "screening_status": "needs_evidence",
+      "verified_requirement_count": 1
+    }
+  ],
+  "manual_context_recipes": [
+    "reciprocal-zero",
+    "independent-basis",
+    "basis-change",
+    "sro-correction",
+    "terminal-multisite",
+    "reference-change",
+    "mechanical-instability",
+    "unstable-reference",
+    "magnetic-consistency",
+    "low-temperature",
+    "high-temperature",
+    "ionic-liquid",
+    "charge-domain",
+    "mqm-pair",
+    "mqm-quadruplet",
+    "geometric-extrapolation",
+    "aicc-selection",
+    "dataset-weighting",
+    "information-design",
+    "posterior-checks"
+  ],
+  "context_note": "Manual-context recipes require information absent from v1; discover them with search, not automatic applicability claims."
+}

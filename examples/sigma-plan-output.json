@@ -1,0 +1,96 @@
+{
+  "tool_version": "0.1.0",
+  "schema_version": 1,
+  "input_sha256": "9f75771a129659c3c6c5c7463e7c6b7a43baec3877105fe97d6126c3bf6e9e2a",
+  "library_sha256": "815a13d226f1bab87e671ba379c4a708a06cf96a09974edfeaae43f07ccc041e",
+  "advisory_only": true,
+  "formal_endmembers": 1024,
+  "all_vacancy_corners": 0,
+  "nonempty_endmembers": 1024,
+  "preview": [
+    {
+      "occupants": {
+        "2a": "Co",
+        "4f": "Co",
+        "8i1": "Co",
+        "8i2": "Co",
+        "8j": "Co"
+      },
+      "atomic_fractions": {
+        "Co": 1.0,
+        "Cr": 0.0,
+        "Ni": 0.0,
+        "Re": 0.0
+      },
+      "status": "formal_configuration_requires_structure_and_stability_review"
+    },
+    {
+      "occupants": {
+        "2a": "Co",
+        "4f": "Co",
+        "8i1": "Co",
+        "8i2": "Co",
+        "8j": "Cr"
+      },
+      "atomic_fractions": {
+        "Co": 0.7333333333333333,
+        "Cr": 0.26666666666666666,
+        "Ni": 0.0,
+        "Re": 0.0
+      },
+      "status": "formal_configuration_requires_structure_and_stability_review"
+    },
+    {
+      "occupants": {
+        "2a": "Co",
+        "4f": "Co",
+        "8i1": "Co",
+        "8i2": "Co",
+        "8j": "Ni"
+      },
+      "atomic_fractions": {
+        "Co": 0.7333333333333333,
+        "Cr": 0.0,
+        "Ni": 0.26666666666666666,
+        "Re": 0.0
+      },
+      "status": "formal_configuration_requires_structure_and_stability_review"
+    },
+    {
+      "occupants": {
+        "2a": "Co",
+        "4f": "Co",
+        "8i1": "Co",
+        "8i2": "Co",
+        "8j": "Re"
+      },
+      "atomic_fractions": {
+        "Co": 0.7333333333333333,
+        "Cr": 0.0,
+        "Ni": 0.0,
+        "Re": 0.26666666666666666
+      },
+      "status": "formal_configuration_requires_structure_and_stability_review"
+    }
+  ],
+  "truncated": true,
+  "independent_energy_parameters": null,
+  "calculation_count": null,
+  "reason": "No certified energy relationships or structure mapping supplied; corner count is not a calculation budget.",
+  "required_checks": [
+    "reference and normalization",
+    "site mapping",
+    "magnetic state",
+    "relaxation preserves intended structure",
+    "held-out energies and phase equilibria"
+  ],
+  "recipes": [
+    "cef-baseline",
+    "database-compatibility",
+    "staged-assessment",
+    "topology-review",
+    "unary-consistency",
+    "ebef-multisite",
+    "site-merging"
+  ]
+}

@@ -1,0 +1,15 @@
+FROM nvcr.io/nvidia/tensorflow:25.02-tf2-py3
+RUN printf 'numpy<2\n' > /tmp/cuzr-constraints.txt && python -m pip install -c /tmp/cuzr-constraints.txt ase pymatgen openpyxl matscipy questionary rich tf_keras==2.17.0 --no-deps && python -m pip install --no-deps materialsframework==1.0.0 tensorpotential==0.6.2.1
+RUN python -m pip install -c /tmp/cuzr-constraints.txt monty ruamel.yaml spglib palettable uncertainties bibtexparser orjson networkx tqdm requests pyyaml scipy pandas sympy scikit-learn prompt_toolkit markdown-it-py
+RUN python -m pip install -c /tmp/cuzr-constraints.txt pymatgen-core && python -c "from materialsframework.calculators.grace import GraceCalculator"
+RUN python -m pip install -c /tmp/cuzr-constraints.txt matscipy==1.1.1 'typing_extensions>=4.13.1'
+## sha256 Dockerfile
+561dee68e160691581e3a0091fe0c8c73ddfdf91b0af270906b32a04440d151e  <home>/runs/cuzr-fresh-phaseforge-20261104/code/Dockerfile
+analyze_fresh_vibrational_before_zero_bin_review.py
+analyze_fresh_vibrational.py
+await_fresh_analysis.py
+Dockerfile
+entropy_pilot_source.py
+__pycache__
+run_liquid.py
+vibrational_pilot_functions.py

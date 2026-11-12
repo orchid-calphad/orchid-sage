@@ -1,0 +1,132 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-uq-laplace-step4",
+ "version": "1.0.0",
+ "title": "Cr-Ni UQ: Laplace mixture at the step-4 modes, 1000 classified draws",
+ "status": "complete",
+ "run_id": "crni-uq-laplace-step4",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "laplace"
+ },
+ "host": "mac-studio",
+ "started": "2026-11-06",
+ "finished": "2026-11-06",
+ "pids": [
+  32519
+ ],
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215"
+ },
+ "command": "cd <home>/ScientificRuns/crni-paper-fit-20261106 && PYTHONPATH=<home>/src/PhaseForgePlus/src <fit-python> scripts/laplace.py steps/configs/step4_solid.json results/uq/modes_step4.json results/uq/laplace_step4.json 1000 && <fit-python> scripts/classify_draws.py results/uq/laplace_step4.draws.npy results/uq/classified_mixture_draws.json",
+ "seeds": {
+  "draws": "numpy default_rng(20261106) for the mixture draws and default_rng(20261106) for the independent-marginal permutation (scripts/laplace.py lines 122 and 143)"
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/modes_step4.json",
+   "sha256": "2317ccd37ff4221723d735f6a7d16219df9d00d4d60509c2fcaf60fea5296376",
+   "storage_class": "local",
+   "role": "modes"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step4_solid.json",
+   "sha256": "05420968dabe23d81d98fba38afb64d2027f16a8ee35cfa730262832abfa3208",
+   "storage_class": "local"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/laplace.py",
+   "sha256": "bfec7090830d5c54984ff3a18fbd1862443580ca57523671bd7c1214c3726f27",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/laplace.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/classify_draws.py",
+   "sha256": "a77747ae4a8570b4857e42d2089c7dc78c9bcaf94bb424c6052b5db352427281",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/classify_draws.py)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/laplace_step4.json",
+   "sha256": "479bd600977b040c955f021053a8690d7076f1cb8feebafa6bacb8adfa5a2bf6",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/laplace_step4.draws.npy",
+   "sha256": "fcf597f211e7ca815ad888d8b421084db4cd50012f8c29e5d4dcc9994f9585fb",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/classified_mixture_draws.json",
+   "sha256": "c41e0b28b85c8fe3653415d4bacbd38e45bb99cffa64f193e171ef486b89a96e",
+   "storage_class": "local"
+  }
+ ],
+ "results": {
+  "modes": [
+   {
+    "name": "A_main_s1_perturbed",
+    "logpost": -6332.243665831225,
+    "positive_definite_fd": true,
+    "log_evidence": -6266.457370051974
+   },
+   {
+    "name": "B_s2_perturbed",
+    "logpost": -6332.9945641336435,
+    "positive_definite_fd": true,
+    "log_evidence": -6268.671170189655
+   },
+   {
+    "name": "C_s3_perturbed",
+    "logpost": -6342.84240805583,
+    "positive_definite_fd": false,
+    "log_evidence": -6283.940224839238
+   },
+   {
+    "name": "D_s7_perturbed",
+    "logpost": -6344.538282020446,
+    "positive_definite_fd": false,
+    "log_evidence": -6285.390842653083
+   },
+   {
+    "name": "E_s6_perturbed",
+    "logpost": -6350.596228225422,
+    "positive_definite_fd": false,
+    "log_evidence": -6293.368241518644
+   }
+  ],
+  "n": 1000,
+  "P_ok_strict": 0.201,
+  "P_ok_apart_from_CrNi2_window": 0.596,
+  "P_CrNi2_in_800_930": 0.337,
+  "P_CrNi2_within_25K_of_863": 0.126,
+  "P_gap_by_phase": {
+   "BCC_A2": 0.093,
+   "FCC_A1": 0.0,
+   "LIQUID": 0.0
+  },
+  "P_nirich_bcc_field": 0.282
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit"
+ },
+ "converted_from": [
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/laplace.log",
+   "sha256": "9bed24e028427ca711230640f5df6c30690bd5c56e300ad332f874863d80a790",
+   "storage_class": "local",
+   "role": "run log (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/logs/laplace.log)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/laplace_step4.json",
+   "sha256": "479bd600977b040c955f021053a8690d7076f1cb8feebafa6bacb8adfa5a2bf6",
+   "storage_class": "local"
+  }
+ ]
+}

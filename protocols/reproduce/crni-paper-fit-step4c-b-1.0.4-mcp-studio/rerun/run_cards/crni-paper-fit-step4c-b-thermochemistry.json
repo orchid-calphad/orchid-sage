@@ -1,0 +1,78 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-thermochemistry",
+ "version": "1.0.0",
+ "title": "per_dataset (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-thermochemistry",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "per_dataset"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T17:34:46-0600",
+ "finished": "2026-11-07T17:34:49-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> scripts/per_dataset.py tdb/step4c_b_hingefloor_pick10a.tdb results/per_dataset_rerun.json && <fit-python> -I scripts/thermo_compare.py results/per_dataset_rerun.json reference/per_dataset_step4c_b_hingefloor.json results/thermo_compare.json 0.1 thermo",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/per_dataset_step4c_b_hingefloor.json",
+   "sha256": "4805d18b35097dd8b5c616e803ddfbf12cd276af3594836ce8684a8ae5b7dac3",
+   "storage_class": "local",
+   "role": "input"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/scripts/thermo_compare.py",
+   "sha256": "4a98e8e8b0a9b40deb9ef49ceb508d2a236ecaba9fae1a9ce2233805bb4761d7",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/thermo_compare.json",
+   "sha256": "ca10a4dbfb0a47342d5a8b0993bb6af4e7830a3a96b920a69e324b9c46cf6db7",
+   "storage_class": "local",
+   "role": "output"
+  }
+ ],
+ "results": {
+  "returncode": 0,
+  "wall_s": 3.43
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/thermochemistry.log",
+   "sha256": "ddae413d0655dec9232fa44a0696ade14ce6679dc6d25998e162cd981349b9a8",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item thermochemistry (reproduce.plan of the specific protocol)",
+  "run detached by sage_mcp (start_step / step_status); pids = [job wrapper, command shell]"
+ ],
+ "pids": [
+  18277,
+  18278
+ ]
+}

@@ -1,0 +1,1756 @@
+{
+ "inputs": {
+  "C_Cr_GPa": {
+   "C11": 394.0,
+   "C12": 88.0,
+   "C44": 104.0,
+   "T_K": 4.2,
+   "source": "Palmer & Lee, Phil. Mag. 24 (1971) 311, doi:10.1080/14786437108227390, as tabulated (B=190, C'=153, C44=104 GPa, a0=2.884 A, 4.2 K) in Bienvenu, Fu, Clouet, Acta Mater. (2020), arXiv:2105.09651 Table 1; C11=B+4C'/3, C12=B-2C'/3",
+   "limitation": "4.2 K (antiferromagnetic SDW state); no Cr-Ni bcc composition dependence found. Katahara et al., J. Phys. F 9 (1979) 2167 report paramagnetic Cr moduli 80-700 K, decreasing linearly above ~550 K (abstract; values not retrieved). Softening to 1200-1700 K is treated as a sensitivity factor 0.7-1.0 on Y (assumed, not measured)."
+  },
+  "a_Cr_A": {
+   "value": 2.884,
+   "T_K": 4.2,
+   "source": "experimental, Palmer & Lee via arXiv:2105.09651 Table 1"
+  },
+  "a_Ni_bcc_A": {
+   "base": {
+    "value": 2.8063354536193676,
+    "source": "experimental fcc Ni a=3.524 A (room-T handbook value, not re-looked-up here) scaled by the Materials Project volume ratio V(bcc Ni, mp-aaacfkfg, 10.5974 A^3/at) / V(fcc Ni, mp-aaaaaaax, 10.4920 A^3/at)"
+   },
+   "high": {
+    "value": 2.7674287025265465,
+    "source": "Materials Project bcc Ni mp-aaacfkfg, V=10.5974 A^3/atom, raw (MP fcc Ni is 4% below experiment, so raw MP Ni exaggerates the mismatch)"
+   }
+  },
+  "lattice_Cr_Ni_bcc_experimental": "none found (web search; Jette 1934 and Taylor 1952 not held locally); Vegard used"
+ },
+ "construction": "Cahn (1962) coherent spinodal and coherent miscibility gap for BCC_A2 of the two Cr-Ni set E fits.\n\nCoherent spinodal (Kunselman et al., 02_theory.tex; Cahn 1962):  d2G/dx2 + 2 eta^2 Y V_m = 0\n  Y (cubic): (C11+2C12)(C11-C12)/C11           if 2C44 - C11 + C12 > 0   (soft <100>)\n             6(C11+2C12)C44/(4C44+C11+2C12)    if 2C44 - C11 + C12 < 0   (soft <111>)\n  eta = (1/a) da/dx (Vegard), V_m = a^3 N_A / 2 (bcc).\nCoherent miscibility gap (Cahn 1962, constant eta, Y, V_m): common tangent of\n  G_coh(x; x0) = G_chem(x) + eta^2 Y V_m (x - x0)^2 .\nExpanding, the x0-dependent terms are linear in x (-2k x0 x + k x0^2), and linear terms do not change\na common-tangent construction, so the coherent tie-line ends are those of G_chem + k x^2 (k = eta^2 Y V_m),\nthe same for every overall composition x0; an alloy x0 lies in the coherent gap when it falls between them.\nBCC_A2 alone is considered (metastable bcc+bcc w.r.t. FCC/LIQUID); the stable diagram is overlaid.",
+ "Y_closed_form": [
+  360.73022312373223,
+  "<111>"
+ ],
+ "Y_numeric_min_over_n_GPa": {
+  "Y_min": 360.73340175385397,
+  "n_min": [
+   1.0,
+   1.0,
+   0.99
+  ]
+ },
+ "cases": {
+  "base": {
+   "eta": -0.026929454362216453,
+   "Y_GPa": 360.73022312373223,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.222818052942766e-06,
+   "k_J": 1889.4887616323645,
+   "shift_2k_J": 3778.977523264729
+  },
+  "low": {
+   "eta": -0.026929454362216453,
+   "Y_GPa": 252.51115618661254,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.222818052942766e-06,
+   "k_J": 1322.642133142655,
+   "shift_2k_J": 2645.28426628531
+  },
+  "high": {
+   "eta": -0.04042000605875638,
+   "Y_GPa": 360.73022312373223,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.54784486532519e-06,
+   "k_J": 4448.342765567984,
+   "shift_2k_J": 8896.685531135969
+  }
+ },
+ "cases_eta_at_x0.2": {
+  "base": {
+   "eta": -0.02707527885949466,
+   "Y_GPa": 360.73022312373223,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.106741549655099e-06,
+   "k_J": 1879.3121813575049,
+   "shift_2k_J": 3758.6243627150097
+  },
+  "low": {
+   "eta": -0.02707527885949466,
+   "Y_GPa": 252.51115618661254,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.106741549655099e-06,
+   "k_J": 1315.5185269502533,
+   "shift_2k_J": 2631.0370539005066
+  },
+  "high": {
+   "eta": -0.04074942445543227,
+   "Y_GPa": 360.73022312373223,
+   "soft_dir": "<111>",
+   "V_m_m3": 7.366270296041373e-06,
+   "k_J": 4412.382357260849,
+   "shift_2k_J": 8824.764714521698
+  }
+ },
+ "n_observed_bcc_states": 74,
+ "per_state_base": [
+  {
+   "T": 1721.0,
+   "x_Ni": 0.2045,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 37879.8,
+    "coh": 41658.8
+   },
+   "gapmode": {
+    "chem": 35532.9,
+    "coh": 39311.9
+   }
+  },
+  {
+   "T": 1701.0,
+   "x_Ni": 0.219,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 34291.0,
+    "coh": 38069.9
+   },
+   "gapmode": {
+    "chem": 31709.7,
+    "coh": 35488.6
+   }
+  },
+  {
+   "T": 1701.0,
+   "x_Ni": 0.2478,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 32775.6,
+    "coh": 36554.6
+   },
+   "gapmode": {
+    "chem": 30455.8,
+    "coh": 34234.7
+   }
+  },
+  {
+   "T": 1671.0,
+   "x_Ni": 0.2663,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 30100.6,
+    "coh": 33879.6
+   },
+   "gapmode": {
+    "chem": 27642.2,
+    "coh": 31421.2
+   }
+  },
+  {
+   "T": 1636.0,
+   "x_Ni": 0.3109,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 29418.9,
+    "coh": 33197.9
+   },
+   "gapmode": {
+    "chem": 27387.3,
+    "coh": 31166.3
+   }
+  },
+  {
+   "T": 1636.0,
+   "x_Ni": 0.3293,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 31007.5,
+    "coh": 34786.5
+   },
+   "gapmode": {
+    "chem": 29299.5,
+    "coh": 33078.5
+   }
+  },
+  {
+   "T": 1599.0,
+   "x_Ni": 0.3805,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 34301.0,
+    "coh": 38080.0
+   },
+   "gapmode": {
+    "chem": 33668.6,
+    "coh": 37447.6
+   }
+  },
+  {
+   "T": 1584.0,
+   "x_Ni": 0.3655,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 31272.2,
+    "coh": 35051.2
+   },
+   "gapmode": {
+    "chem": 30344.9,
+    "coh": 34123.8
+   }
+  },
+  {
+   "T": 1573.0,
+   "x_Ni": 0.3479,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 28309.8,
+    "coh": 32088.8
+   },
+   "gapmode": {
+    "chem": 26958.3,
+    "coh": 30737.3
+   }
+  },
+  {
+   "T": 1547.0,
+   "x_Ni": 0.348,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 26424.6,
+    "coh": 30203.6
+   },
+   "gapmode": {
+    "chem": 25088.2,
+    "coh": 28867.1
+   }
+  },
+  {
+   "T": 1537.0,
+   "x_Ni": 0.3311,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 23716.5,
+    "coh": 27495.5
+   },
+   "gapmode": {
+    "chem": 21868.6,
+    "coh": 25647.6
+   }
+  },
+  {
+   "T": 1522.0,
+   "x_Ni": 0.3207,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 21455.4,
+    "coh": 25234.3
+   },
+   "gapmode": {
+    "chem": 19243.3,
+    "coh": 23022.3
+   }
+  },
+  {
+   "T": 1511.0,
+   "x_Ni": 0.3116,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 19679.3,
+    "coh": 23458.3
+   },
+   "gapmode": {
+    "chem": 17124.4,
+    "coh": 20903.3
+   }
+  },
+  {
+   "T": 1496.0,
+   "x_Ni": 0.2986,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 17276.3,
+    "coh": 21055.2
+   },
+   "gapmode": {
+    "chem": 14190.1,
+    "coh": 17969.1
+   }
+  },
+  {
+   "T": 1486.0,
+   "x_Ni": 0.2849,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 15339.1,
+    "coh": 19118.1
+   },
+   "gapmode": {
+    "chem": 11683.2,
+    "coh": 15462.2
+   }
+  },
+  {
+   "T": 1470.0,
+   "x_Ni": 0.266,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 12753.4,
+    "coh": 16532.3
+   },
+   "gapmode": {
+    "chem": 8229.9,
+    "coh": 12008.8
+   }
+  },
+  {
+   "T": 1462.0,
+   "x_Ni": 0.249,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 11315.9,
+    "coh": 15094.9
+   },
+   "gapmode": {
+    "chem": 6024.2,
+    "coh": 9803.2
+   }
+  },
+  {
+   "T": 1447.0,
+   "x_Ni": 0.236,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 9671.5,
+    "coh": 13450.5
+   },
+   "gapmode": {
+    "chem": 3642.4,
+    "coh": 7421.3
+   }
+  },
+  {
+   "T": 1437.0,
+   "x_Ni": 0.2191,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 8803.3,
+    "coh": 12582.2
+   },
+   "gapmode": {
+    "chem": 1894.9,
+    "coh": 5673.8
+   }
+  },
+  {
+   "T": 1434.0,
+   "x_Ni": 0.1903,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 10217.4,
+    "coh": 13996.4
+   },
+   "gapmode": {
+    "chem": 1991.8,
+    "coh": 5770.8
+   }
+  },
+  {
+   "T": 1421.0,
+   "x_Ni": 0.176,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 10660.2,
+    "coh": 14439.2
+   },
+   "gapmode": {
+    "chem": 1518.6,
+    "coh": 5297.5
+   }
+  },
+  {
+   "T": 1398.0,
+   "x_Ni": 0.1617,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "correct": {
+    "chem": 10730.3,
+    "coh": 14509.3
+   },
+   "gapmode": {
+    "chem": 384.9,
+    "coh": 4163.8
+   }
+  },
+  {
+   "T": 1473.0,
+   "x_Ni": 0.278,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 13755.3,
+    "coh": 17534.3
+   },
+   "gapmode": {
+    "chem": 9729.7,
+    "coh": 13508.7
+   }
+  },
+  {
+   "T": 1424.0,
+   "x_Ni": 0.221,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 7517.8,
+    "coh": 11296.8
+   },
+   "gapmode": {
+    "chem": 482.5,
+    "coh": 4261.4
+   }
+  },
+  {
+   "T": 1374.0,
+   "x_Ni": 0.134,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 16243.2,
+    "coh": 20022.2
+   },
+   "gapmode": {
+    "chem": 3886.9,
+    "coh": 7665.8
+   }
+  },
+  {
+   "T": 1323.0,
+   "x_Ni": 0.084,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 47027.8,
+    "coh": 50806.8
+   },
+   "gapmode": {
+    "chem": 30339.4,
+    "coh": 34118.4
+   }
+  },
+  {
+   "T": 1273.0,
+   "x_Ni": 0.068,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 64511.9,
+    "coh": 68290.9
+   },
+   "gapmode": {
+    "chem": 45078.0,
+    "coh": 48856.9
+   }
+  },
+  {
+   "T": 1225.0,
+   "x_Ni": 0.039,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 159733.3,
+    "coh": 163512.3
+   },
+   "gapmode": {
+    "chem": 136492.9,
+    "coh": 140271.9
+   }
+  },
+  {
+   "T": 1171.0,
+   "x_Ni": 0.034,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 179793.6,
+    "coh": 183572.5
+   },
+   "gapmode": {
+    "chem": 154002.6,
+    "coh": 157781.6
+   }
+  },
+  {
+   "T": 1123.0,
+   "x_Ni": 0.023,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 293179.8,
+    "coh": 296958.7
+   },
+   "gapmode": {
+    "chem": 264506.8,
+    "coh": 268285.7
+   }
+  },
+  {
+   "T": 1071.0,
+   "x_Ni": 0.019,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 351038.9,
+    "coh": 354817.9
+   },
+   "gapmode": {
+    "chem": 319812.5,
+    "coh": 323591.5
+   }
+  },
+  {
+   "T": 1023.0,
+   "x_Ni": 0.015,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "correct": {
+    "chem": 444826.2,
+    "coh": 448605.2
+   },
+   "gapmode": {
+    "chem": 411164.3,
+    "coh": 414943.3
+   }
+  },
+  {
+   "T": 1556.0,
+   "x_Ni": 0.353,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "correct": {
+    "chem": 27692.9,
+    "coh": 31471.9
+   },
+   "gapmode": {
+    "chem": 26492.4,
+    "coh": 30271.4
+   }
+  },
+  {
+   "T": 1512.0,
+   "x_Ni": 0.328,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "correct": {
+    "chem": 21481.3,
+    "coh": 25260.3
+   },
+   "gapmode": {
+    "chem": 19485.2,
+    "coh": 23264.2
+   }
+  },
+  {
+   "T": 1481.0,
+   "x_Ni": 0.303,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "correct": {
+    "chem": 16477.7,
+    "coh": 20256.7
+   },
+   "gapmode": {
+    "chem": 13468.4,
+    "coh": 17247.4
+   }
+  },
+  {
+   "T": 1403.0,
+   "x_Ni": 0.203,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "correct": {
+    "chem": 6049.9,
+    "coh": 9828.9
+   },
+   "gapmode": {
+    "chem": -2190.1,
+    "coh": 1588.9
+   }
+  },
+  {
+   "T": 1347.0,
+   "x_Ni": 0.102,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "correct": {
+    "chem": 31663.4,
+    "coh": 35442.4
+   },
+   "gapmode": {
+    "chem": 16790.4,
+    "coh": 20569.3
+   }
+  },
+  {
+   "T": 1616.15,
+   "x_Ni": 0.44,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 44405.2,
+    "coh": 48184.2
+   },
+   "gapmode": {
+    "chem": 44892.7,
+    "coh": 48671.6
+   }
+  },
+  {
+   "T": 1616.15,
+   "x_Ni": 0.42,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 41201.0,
+    "coh": 44979.9
+   },
+   "gapmode": {
+    "chem": 41284.7,
+    "coh": 45063.7
+   }
+  },
+  {
+   "T": 1617.15,
+   "x_Ni": 0.401,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 38408.6,
+    "coh": 42187.6
+   },
+   "gapmode": {
+    "chem": 38101.4,
+    "coh": 41880.4
+   }
+  },
+  {
+   "T": 1618.15,
+   "x_Ni": 0.371,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 34375.3,
+    "coh": 38154.2
+   },
+   "gapmode": {
+    "chem": 33462.9,
+    "coh": 37241.9
+   }
+  },
+  {
+   "T": 1613.15,
+   "x_Ni": 0.352,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 31707.4,
+    "coh": 35486.3
+   },
+   "gapmode": {
+    "chem": 30421.5,
+    "coh": 34200.5
+   }
+  },
+  {
+   "T": 1611.15,
+   "x_Ni": 0.323,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 28525.7,
+    "coh": 32304.6
+   },
+   "gapmode": {
+    "chem": 26637.5,
+    "coh": 30416.5
+   }
+  },
+  {
+   "T": 1615.15,
+   "x_Ni": 0.304,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 27247.8,
+    "coh": 31026.7
+   },
+   "gapmode": {
+    "chem": 24984.7,
+    "coh": 28763.7
+   }
+  },
+  {
+   "T": 1322.0,
+   "x_Ni": 0.112,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 20629.3,
+    "coh": 24408.2
+   },
+   "gapmode": {
+    "chem": 5550.0,
+    "coh": 9329.0
+   }
+  },
+  {
+   "T": 1404.0,
+   "x_Ni": 0.114,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 30826.1,
+    "coh": 34605.1
+   },
+   "gapmode": {
+    "chem": 18336.7,
+    "coh": 22115.7
+   }
+  },
+  {
+   "T": 1487.0,
+   "x_Ni": 0.281,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 15138.1,
+    "coh": 18917.0
+   },
+   "gapmode": {
+    "chem": 11345.3,
+    "coh": 15124.2
+   }
+  },
+  {
+   "T": 1496.0,
+   "x_Ni": 0.294,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "correct": {
+    "chem": 16881.6,
+    "coh": 20660.6
+   },
+   "gapmode": {
+    "chem": 13630.3,
+    "coh": 17409.2
+   }
+  },
+  {
+   "T": 797.15,
+   "x_Ni": 0.016,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 275418.2,
+    "coh": 279197.1
+   },
+   "gapmode": {
+    "chem": 232147.3,
+    "coh": 235926.2
+   }
+  },
+  {
+   "T": 797.15,
+   "x_Ni": 0.016,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 275418.2,
+    "coh": 279197.1
+   },
+   "gapmode": {
+    "chem": 232147.3,
+    "coh": 235926.2
+   }
+  },
+  {
+   "T": 948.15,
+   "x_Ni": 0.018,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 310930.7,
+    "coh": 314709.7
+   },
+   "gapmode": {
+    "chem": 274364.9,
+    "coh": 278143.9
+   }
+  },
+  {
+   "T": 948.15,
+   "x_Ni": 0.018,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 310930.7,
+    "coh": 314709.7
+   },
+   "gapmode": {
+    "chem": 274364.9,
+    "coh": 278143.9
+   }
+  },
+  {
+   "T": 1018.15,
+   "x_Ni": 0.022,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 263986.1,
+    "coh": 267765.0
+   },
+   "gapmode": {
+    "chem": 230804.3,
+    "coh": 234583.3
+   }
+  },
+  {
+   "T": 1018.15,
+   "x_Ni": 0.022,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 263986.1,
+    "coh": 267765.0
+   },
+   "gapmode": {
+    "chem": 230804.3,
+    "coh": 234583.3
+   }
+  },
+  {
+   "T": 1128.15,
+   "x_Ni": 0.027,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 235985.8,
+    "coh": 239764.8
+   },
+   "gapmode": {
+    "chem": 207865.7,
+    "coh": 211644.7
+   }
+  },
+  {
+   "T": 1143.15,
+   "x_Ni": 0.025,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 269384.9,
+    "coh": 273163.9
+   },
+   "gapmode": {
+    "chem": 241723.7,
+    "coh": 245502.7
+   }
+  },
+  {
+   "T": 1165.15,
+   "x_Ni": 0.044,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 115604.5,
+    "coh": 119383.5
+   },
+   "gapmode": {
+    "chem": 90368.1,
+    "coh": 94147.1
+   }
+  },
+  {
+   "T": 1223.15,
+   "x_Ni": 0.048,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 112453.2,
+    "coh": 116232.1
+   },
+   "gapmode": {
+    "chem": 89783.5,
+    "coh": 93562.4
+   }
+  },
+  {
+   "T": 1252.15,
+   "x_Ni": 0.058,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 84529.3,
+    "coh": 88308.3
+   },
+   "gapmode": {
+    "chem": 63662.8,
+    "coh": 67441.8
+   }
+  },
+  {
+   "T": 1302.15,
+   "x_Ni": 0.074,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 58614.0,
+    "coh": 62393.0
+   },
+   "gapmode": {
+    "chem": 40602.2,
+    "coh": 44381.1
+   }
+  },
+  {
+   "T": 1302.15,
+   "x_Ni": 0.074,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 58614.0,
+    "coh": 62393.0
+   },
+   "gapmode": {
+    "chem": 40602.2,
+    "coh": 44381.1
+   }
+  },
+  {
+   "T": 1302.15,
+   "x_Ni": 0.071,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 64098.8,
+    "coh": 67877.7
+   },
+   "gapmode": {
+    "chem": 45903.1,
+    "coh": 49682.1
+   }
+  },
+  {
+   "T": 1386.15,
+   "x_Ni": 0.092,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 47523.4,
+    "coh": 51302.4
+   },
+   "gapmode": {
+    "chem": 33389.3,
+    "coh": 37168.3
+   }
+  },
+  {
+   "T": 1386.15,
+   "x_Ni": 0.094,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "correct": {
+    "chem": 45310.5,
+    "coh": 49089.5
+   },
+   "gapmode": {
+    "chem": 31277.1,
+    "coh": 35056.0
+   }
+  },
+  {
+   "T": 1373.15,
+   "x_Ni": 0.124,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "correct": {
+    "chem": 20721.4,
+    "coh": 24500.4
+   },
+   "gapmode": {
+    "chem": 7821.8,
+    "coh": 11600.7
+   }
+  },
+  {
+   "T": 1273.15,
+   "x_Ni": 0.08,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "correct": {
+    "chem": 44007.5,
+    "coh": 47786.5
+   },
+   "gapmode": {
+    "chem": 25360.0,
+    "coh": 29138.9
+   }
+  },
+  {
+   "T": 1173.15,
+   "x_Ni": 0.0405,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "correct": {
+    "chem": 136005.9,
+    "coh": 139784.9
+   },
+   "gapmode": {
+    "chem": 110810.4,
+    "coh": 114589.4
+   }
+  },
+  {
+   "T": 1023.15,
+   "x_Ni": 0.014,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "correct": {
+    "chem": 485176.1,
+    "coh": 488955.1
+   },
+   "gapmode": {
+    "chem": 451422.9,
+    "coh": 455201.9
+   }
+  },
+  {
+   "T": 1650.0,
+   "x_Ni": 0.36,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "correct": {
+    "chem": 35282.2,
+    "coh": 39061.2
+   },
+   "gapmode": {
+    "chem": 34085.5,
+    "coh": 37864.5
+   }
+  },
+  {
+   "T": 1669.0,
+   "x_Ni": 0.338,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "correct": {
+    "chem": 34316.2,
+    "coh": 38095.2
+   },
+   "gapmode": {
+    "chem": 32788.6,
+    "coh": 36567.6
+   }
+  },
+  {
+   "T": 1767.0,
+   "x_Ni": 0.229,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "correct": {
+    "chem": 39756.7,
+    "coh": 43535.7
+   },
+   "gapmode": {
+    "chem": 38262.6,
+    "coh": 42041.6
+   }
+  },
+  {
+   "T": 1822.0,
+   "x_Ni": 0.17,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "correct": {
+    "chem": 56286.3,
+    "coh": 60065.2
+   },
+   "gapmode": {
+    "chem": 56021.4,
+    "coh": 59800.4
+   }
+  },
+  {
+   "T": 1940.0,
+   "x_Ni": 0.089,
+   "file": "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "correct": {
+    "chem": 140885.2,
+    "coh": 144664.2
+   },
+   "gapmode": {
+    "chem": 145112.0,
+    "coh": 148891.0
+   }
+  },
+  {
+   "T": 1473.0,
+   "x_Ni": 0.282,
+   "file": "zhang2014 (tie-line BCC end)",
+   "correct": {
+    "chem": 14042.7,
+    "coh": 17821.7
+   },
+   "gapmode": {
+    "chem": 10172.7,
+    "coh": 13951.7
+   }
+  }
+ ],
+ "results": {
+  "correct": {
+   "chemical": {
+    "spinodal_top_K": 1345.0,
+    "gap_top_K": 1345.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.11870830428571427,
+       0.34140512285714286
+      ],
+      "binodal": [
+       0.06375908928571428,
+       0.44050370714285714
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.1354080657142857,
+       0.31700547142857144
+      ],
+      "binodal": [
+       0.0860587707142857,
+       0.3958043457142857
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.15910772714285715,
+       0.28545592214285714
+      ],
+      "binodal": [
+       0.120758275,
+       0.3380551707142857
+      ]
+     },
+     "1350": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 6049.883963845299,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 34295.97669811653
+    }
+   },
+   "base": {
+    "spinodal_top_K": 1306.0,
+    "gap_top_K": 1306.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.12780817428571428,
+       0.31765546214285717
+      ],
+      "binodal": [
+       0.07755889214285713,
+       0.400754275
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.14910787,
+       0.2884558792857143
+      ],
+      "binodal": [
+       0.10805845642857143,
+       0.34720504
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.19030728142857142,
+       0.2391065842857143
+      ],
+      "binodal": [
+       0.17350752142857143,
+       0.25805631357142855
+      ]
+     },
+     "1350": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 9828.861487110029,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 38074.95422138125
+    }
+   },
+   "low": {
+    "spinodal_top_K": 1318.0,
+    "gap_top_K": 1318.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.12485821642857142,
+       0.32500535714285717
+      ],
+      "binodal": [
+       0.07300895714285714,
+       0.41310409857142855
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.14445793642857144,
+       0.29755574928571427
+      ],
+      "binodal": [
+       0.100458565,
+       0.36280481714285717
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.17695747214285715,
+       0.2570563278571429
+      ],
+      "binodal": [
+       0.15070784714285715,
+       0.28910587
+      ]
+     },
+     "1350": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 8695.16823013061,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 36941.26096440184
+    }
+   },
+   "high": {
+    "spinodal_top_K": 1254.0,
+    "gap_top_K": 1254.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.14510792714285714,
+       0.2804059942857143
+      ],
+      "binodal": [
+       0.10525849642857142,
+       0.3374551792857143
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.18815731214285714,
+       0.22910672714285715
+      ],
+      "binodal": [
+       0.173957515,
+       0.24485650214285715
+      ]
+     },
+     "1300": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1350": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 14946.569494981268,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 43192.6622292525
+    }
+   }
+  },
+  "gapmode": {
+   "chemical": {
+    "spinodal_top_K": 1421.0,
+    "gap_top_K": 1421.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.08940872285714285,
+       0.348255025
+      ],
+      "binodal": [
+       0.03525949642857143,
+       0.46750332142857143
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.10095855785714285,
+       0.3322552535714286
+      ],
+      "binodal": [
+       0.04775931785714286,
+       0.4371037557142857
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.11530835285714285,
+       0.3132055257142857
+      ],
+      "binodal": [
+       0.06510906999999999,
+       0.40090427285714286
+      ]
+     },
+     "1350": {
+      "spinodal": [
+       0.13455807785714285,
+       0.2889558721428572
+      ],
+      "binodal": [
+       0.0909587007142857,
+       0.3552049257142857
+      ]
+     },
+     "1400": {
+      "spinodal": [
+       0.16590763,
+       0.25225639642857145
+      ],
+      "binodal": [
+       0.13805802785714286,
+       0.2871058985714286
+      ]
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": -2190.084734674354,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 1,
+     "median_curvature_J": 30438.642493618416
+    }
+   },
+   "base": {
+    "spinodal_top_K": 1389.0,
+    "gap_top_K": 1389.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.09375866071428571,
+       0.33250525000000003
+      ],
+      "binodal": [
+       0.041059413571428574,
+       0.44165369071428573
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.10665847642857142,
+       0.31475550357142856
+      ],
+      "binodal": [
+       0.0560092,
+       0.4080041714285714
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.12345823642857143,
+       0.29285581642857145
+      ],
+      "binodal": [
+       0.07770888999999999,
+       0.36670476142857145
+      ]
+     },
+     "1350": {
+      "spinodal": [
+       0.1481578835714286,
+       0.2627062471428572
+      ],
+      "binodal": [
+       0.11325838214285713,
+       0.31040556571428574
+      ]
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 1588.892788590375,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 34217.62001688314
+    }
+   },
+   "low": {
+    "spinodal_top_K": 1399.0,
+    "gap_top_K": 1399.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.09240867999999999,
+       0.3373051814285714
+      ],
+      "binodal": [
+       0.039209440000000005,
+       0.44955357785714284
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.10485850214285714,
+       0.32010542714285717
+      ],
+      "binodal": [
+       0.05335923785714286,
+       0.41695404357142857
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.12080827428571428,
+       0.2991557264285714
+      ],
+      "binodal": [
+       0.07355894928571428,
+       0.3773546092857143
+      ]
+     },
+     "1350": {
+      "spinodal": [
+       0.14345795071428571,
+       0.2712061257142857
+      ],
+      "binodal": [
+       0.10550849285714285,
+       0.32490535857142855
+      ]
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 455.199531610956,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 33083.92675990373
+    }
+   },
+   "high": {
+    "spinodal_top_K": 1347.0,
+    "gap_top_K": 1347.0,
+    "at_T": {
+     "1200": {
+      "spinodal": [
+       0.10065856214285714,
+       0.31010557
+      ],
+      "binodal": [
+       0.05080927428571429,
+       0.4045542207142857
+      ]
+     },
+     "1250": {
+      "spinodal": [
+       0.11625833928571427,
+       0.2891558692857143
+      ],
+      "binodal": [
+       0.07060899142857142,
+       0.36500478571428574
+      ]
+     },
+     "1300": {
+      "spinodal": [
+       0.1387080185714286,
+       0.2610562707142857
+      ],
+      "binodal": [
+       0.10225853928571428,
+       0.312555535
+      ]
+     },
+     "1350": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1400": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1450": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1500": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1550": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1600": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1650": {
+      "spinodal": null,
+      "binodal": null
+     },
+     "1700": {
+      "spinodal": null,
+      "binodal": null
+     }
+    },
+    "observed_states": {
+     "min_curvature_J": 6706.600796461615,
+     "argmin": [
+      1403.0,
+      0.203
+     ],
+     "n_negative": 0,
+     "median_curvature_J": 39335.32802475439
+    }
+   }
+  }
+ },
+ "stable_with_coherent_bcc": {
+  "correct": {
+   "chemical": {
+    "bcc_bcc_stable": false
+   },
+   "base": {
+    "bcc_bcc_stable": false
+   },
+   "low": {
+    "bcc_bcc_stable": false
+   },
+   "high": {
+    "bcc_bcc_stable": false
+   }
+  },
+  "gapmode": {
+   "chemical": {
+    "bcc_bcc_stable": true,
+    "T_range_K": [
+     1364.0,
+     1420.0
+    ],
+    "x0_range": [
+     0.10249999999999995,
+     0.33749999999999986
+    ],
+    "n_T_x0": 1901
+   },
+   "base": {
+    "bcc_bcc_stable": true,
+    "T_range_K": [
+     1344.0,
+     1388.0
+    ],
+    "x0_range": [
+     0.17499999999999993,
+     0.31749999999999984
+    ],
+    "n_T_x0": 432
+   },
+   "low": {
+    "bcc_bcc_stable": true,
+    "T_range_K": [
+     1348.0,
+     1398.0
+    ],
+    "x0_range": [
+     0.15499999999999994,
+     0.32749999999999985
+    ],
+    "n_T_x0": 719
+   },
+   "high": {
+    "bcc_bcc_stable": false
+   }
+  }
+ },
+ "stable_with_coherent_bcc_note": "Stable competition: for each alloy x0 (0.02-0.45 step 0.0025) and T (1300-1450 K, 2 K, cached ref grid), lower hull of G_BCC(x)+k(x-x0)^2 (coherent BCC, Cahn), G_FCC(x) and G_LIQ(x) (incoherent, no penalty); reports the T range and x0 range where x0 falls in a BCC+BCC tie-line."
+}

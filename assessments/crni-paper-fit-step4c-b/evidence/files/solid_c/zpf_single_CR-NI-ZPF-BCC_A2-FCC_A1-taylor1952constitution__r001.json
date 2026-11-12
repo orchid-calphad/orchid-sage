@@ -1,0 +1,35 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "FCC_A1"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1373.15
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     0.5155
+    ]
+   ]
+  ]
+ ],
+ "reference": "taylor1952constitution",
+ "comment": "Taken as mean composition single-phase/two-phase alloy regions, table 2. | REBUILD set D, observation (i): the known phase at its printed composition (single-phase), derived from the same parent points as the (ii) file; parent indices [0, 1, 2, 3, 4, 5, 6, 7, 8]; weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [0, 1, 2, 3, 4, 5, 6, 7, 8]); values unchanged | step4c: sigma_DF = max(converted 313, tier uncertain 100) = 313 J/mol",
+ "weight": 3.1918456107000357
+}

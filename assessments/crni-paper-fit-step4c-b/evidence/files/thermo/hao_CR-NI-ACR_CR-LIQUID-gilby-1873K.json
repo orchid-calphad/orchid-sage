@@ -1,0 +1,47 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "LIQUID"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1873.0,
+  "X_NI": [
+   0.4928,
+   0.5982,
+   0.7007,
+   0.8005,
+   0.9498,
+   0.9695
+  ]
+ },
+ "reference_state": {
+  "phases": [
+   "LIQUID"
+  ],
+  "conditions": {
+   "P": 101325,
+   "T": 1873.0,
+   "X_CR": 1.0
+  }
+ },
+ "output": "ACR_CR",
+ "values": [
+  [
+   [
+    0.6452,
+    0.4365,
+    0.3133,
+    0.1423,
+    0.0247,
+    0.0162
+   ]
+  ]
+ ],
+ "reference": "Hao, Ruban, Xiong, Calphad 73 (2021) 102268, Figure 18(a), series 'Gilby and Pierre, 1969 (1873 K)'; original: S.W. Gilby, G.R.S. Pierre, Equilibrium vapor compositions and activities of components for Fe\u2013Cr\u2013Ni alloys at 1600 \u00b0C, Trans. Met. Soc. AIME. 245 (1969) 1749\u20131758.",
+ "comment": "Activity of Cr relative to liquid Cr (caption), liquid alloys (p.14), read from the vector layer (record ids: CAND-CRNI-D076A92CDF,CAND-CRNI-75A4CD02C7,CAND-CRNI-11CF0443A1,CAND-CRNI-436CB82695,CAND-CRNI-F8059AD112,CAND-CRNI-F1BCBB69B3). T from the series legend. Restricted: local only. | REBUILD set C/D: weight 0.172419 (ORCHID Hao records, sigma_mu ~2900 J/mol, mean of per-value weights). | crni-paper-fit-20261106: set E file unchanged",
+ "weight": 0.172419
+}

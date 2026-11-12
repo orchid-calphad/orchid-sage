@@ -1,0 +1,9 @@
+{"start": "s6_perturbed", "logpost": -3941.811102301341, "grad_norm_q": 0.08944738993146925, "status": "stalled (no further improvement)", "n_evals": 48, "seconds": 93.1}
+{"start": "s4_perturbed", "logpost": -3941.8014779524465, "grad_norm_q": 0.08837904361997376, "status": "stalled (no further improvement)", "n_evals": 48, "seconds": 93.3}
+{"start": "s0_start", "logpost": -3942.3709643205057, "grad_norm_q": 0.20705136227452692, "status": "stalled (no further improvement)", "n_evals": 57, "seconds": 118.2}
+{"start": "s7_perturbed", "logpost": -3941.802048847886, "grad_norm_q": 0.17660304828546977, "status": "stalled (no further improvement)", "n_evals": 82, "seconds": 152.1}
+{"start": "s2_perturbed", "logpost": -3941.83872685917, "grad_norm_q": 0.22226673706848013, "status": "stalled (no further improvement)", "n_evals": 97, "seconds": 196.3}
+{"start": "s1_perturbed", "logpost": -3941.8007860897387, "grad_norm_q": 0.1815970452175377, "status": "stalled (no further improvement)", "n_evals": 98, "seconds": 197.1}
+{"start": "s3_perturbed", "logpost": -3941.810513018748, "grad_norm_q": 0.20992168391450805, "status": "stalled (no further improvement)", "n_evals": 99, "seconds": 200.3}
+{"start": "s5_perturbed", "logpost": -3941.837174223381, "grad_norm_q": 0.1602244756151737, "status": "stalled (no further improvement)", "n_evals": 172, "seconds": 312.2}
+{"step": "step3b_thermo_crni2free", "n_starts": 8, "n_converged": 0}

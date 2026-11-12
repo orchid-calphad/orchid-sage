@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use ORCHID-SAGE, please cite the paper and this software."
+title: "ORCHID-SAGE: Systematic Assessment of Gibbs Energies"
+abstract: >-
+  A standard, tools and an MCP server for fully reproducible CALPHAD assessments: general and specific protocols,
+  their schema and validator, a reproduction tool that reruns a protocol and compares the result within declared
+  tolerances, and the Cr-Ni assessment that accompanies the paper.
+type: software
+authors:
+  - family-names: "Arróyave"
+    given-names: "Raymundo"
+    orcid: "https://orcid.org/0000-0001-7548-8686"
+    affiliation: "Texas A&M University"
+    email: "rarroyave@tamu.edu"
+version: "1.0.0"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - CALPHAD
+  - thermodynamics
+  - reproducibility
+  - phase diagrams
+  - ORCHID
+preferred-citation:
+  type: article
+  title: "ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram"
+  authors:
+    - family-names: "Arróyave"
+      given-names: "Raymundo"
+      orcid: "https://orcid.org/0000-0001-7548-8686"
+      affiliation: "Texas A&M University"
+  status: preprint
+  notes: "DOI pending"

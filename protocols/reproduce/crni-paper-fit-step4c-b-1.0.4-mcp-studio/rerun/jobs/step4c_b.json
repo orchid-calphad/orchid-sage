@@ -1,0 +1,19 @@
+{
+ "item": "step4c_b",
+ "command": "<fit-python> scripts/fit3.py steps/configs/step4c_b_hingefloor.json 4 7 && <fit-python> scripts/evaluate.py step4c_b_hingefloor",
+ "cwd": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/step4c_b.log",
+ "env": {
+  "PYTHONPATH": "<home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src",
+  "OMP_NUM_THREADS": "1"
+ },
+ "launched": "2026-11-07T15:09:59-0600",
+ "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)",
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "python": "<fit-python>",
+ "inputs": [
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/tdb/step1_oneshot.tdb"
+ ],
+ "pin_note": null,
+ "wrapper_pid": 44427
+}

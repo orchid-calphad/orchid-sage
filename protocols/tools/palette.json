@@ -1,0 +1,209 @@
+{
+ "name": "ORCHID assessment palette",
+ "version": "1.2.0",
+ "sources": {
+  "site_tokens": "<home>/projects/orchid-project.org/index.html :root tokens (PI, 6 Nov 2026: dashboards use ORCHID's colours)",
+  "data_colours": "<home>/projects/2026_arroyave_nicr_paper/scripts/style.py (sha256 1a22f8a496912939f92ffc3f7cb0b9cb53c7f4aa8365a160f37a6c09ec3497a4): Okabe-Ito with fixed meanings; ACCENT #7B3FA0 = ORCHID accent, refined model only",
+  "logo": "<home>/projects/orchid-brand/design-system/assets/Logos/orchid-icon.svg and orchid-icon-512.png (copies in tools/assets/, identical)",
+  "brand_rules": "PI 6 Nov 2026 via coordinator: class colours fixed (<home>/projects/ORCHID_paper/figures-DD/STYLE.md) and never reused; topology classes, steps and starts use neutral inks, line styles, markers or the orchid accent",
+  "source_of_truth": {
+   "path": "<home>/projects/orchid-brand/design-system/tokens.json",
+   "sha256": "8c54f829a92f04a9e0625502b7a7cbcff3ce8d368f0effaa5269e9d9abb85fc1",
+   "commit": "b4080013d0a3546fa1805dff8bfb55b78c4e7728",
+   "rule": "brand wins (PI 6 Nov 2026); this file adds only dashboard rules the brand does not define: status/topology markers, dark neutral inks, step ramp, start markers"
+  },
+  "fonts": "<home>/projects/orchid-brand/design-system/fonts/ (copies in tools/assets/, identical sha256)"
+ },
+ "font_stack": "'IBM Plex Sans',system-ui,-apple-system,\"Segoe UI\",sans-serif",
+ "mono_stack": "ui-monospace,\"SF Mono\",Menlo,Consolas,monospace",
+ "figure_font": "Arial (paper style.py)",
+ "ui": {
+  "light": {
+   "bg": "#fbfaf7",
+   "card": "#ffffff",
+   "fg": "#1d1b20",
+   "muted": "#5e5a66",
+   "line": "#e2dfe6",
+   "accent": "#7b3fa0",
+   "accent2": "#f2eaf7",
+   "ok": "#1f6f4a"
+  },
+  "dark": {
+   "bg": "#141218",
+   "card": "#1c1922",
+   "fg": "#ece8f1",
+   "muted": "#a69fb0",
+   "line": "#2e2a35",
+   "accent": "#c79ae6",
+   "accent2": "#2a2133",
+   "ok": "#7fd1a6"
+  }
+ },
+ "data": {
+  "comment": "evidence-class colours, fixed meanings (STYLE.md); never reused for anything else. Dark variants lightened for >= 3:1 on the dark card.",
+  "experimental": {
+   "light": "#0072B2",
+   "dark": "#56B4E9",
+   "label": "Experimental"
+  },
+  "model": {
+   "light": "#D55E00",
+   "dark": "#F08A4B",
+   "label": "Model (CALPHAD)"
+  },
+  "dft": {
+   "light": "#009E73",
+   "dark": "#3CC9A0",
+   "label": "DFT / MP / MLIP"
+  },
+  "oqmd": {
+   "light": "#56B4E9",
+   "dark": "#8ACEF2",
+   "label": "DFT (OQMD)"
+  },
+  "lit_dft": {
+   "light": "#CC79A7",
+   "dark": "#E0A3C6",
+   "label": "DFT (literature)"
+  },
+  "assessed": {
+   "light": "#E69F00",
+   "dark": "#F2B33D",
+   "label": "Assessed diagram"
+  },
+  "unspecified": {
+   "light": "#999999",
+   "dark": "#B3B3B3",
+   "label": "Unspecified"
+  },
+  "orchid": {
+   "light": "#7b3fa0",
+   "dark": "#c79ae6",
+   "label": "ORCHID object (our fit, pick, protocol)"
+  }
+ },
+ "status": {
+  "comment": "status by shape and line style first; colour from neutral inks, the site ok token and the orchid accent only",
+  "match": {
+   "light": "#1f6f4a",
+   "dark": "#7fd1a6",
+   "marker": "circle",
+   "fill": true,
+   "line": "solid",
+   "label": "match"
+  },
+  "mismatch": {
+   "light": "#1d1b20",
+   "dark": "#ece8f1",
+   "marker": "cross",
+   "fill": false,
+   "line": "dashed",
+   "label": "mismatch"
+  },
+  "pending": {
+   "light": "#5e5a66",
+   "dark": "#a69fb0",
+   "marker": "ring",
+   "fill": false,
+   "line": "dotted",
+   "label": "pending"
+  }
+ },
+ "topology_class": {
+  "comment": "class of a start at the end of a fit (the campaign stated check)",
+  "ok": {
+   "light": "#7B3FA0",
+   "dark": "#C79AE6",
+   "marker": "circle",
+   "fill": true,
+   "label": "right topology"
+  },
+  "wrong": {
+   "light": "#4D4D4D",
+   "dark": "#C9C3D1",
+   "marker": "triangle",
+   "fill": false,
+   "label": "wrong topology"
+  },
+  "unknown": {
+   "light": "#5e5a66",
+   "dark": "#a69fb0",
+   "marker": "square",
+   "fill": false,
+   "label": "not evaluated"
+  }
+ },
+ "phases": {
+  "comment": "phases by line style and marker in neutral ink (paper convention); no class colours",
+  "line_style": {
+   "BCC_A2": "solid",
+   "FCC_A1": "dashed",
+   "HCP_A3": "dashdot",
+   "LIQUID": "dotted",
+   "compound": "dashdot"
+  },
+  "dash": {
+   "solid": "",
+   "dashed": "5 3",
+   "dashdot": "6 2 1.5 2",
+   "dotted": "1.5 2.5"
+  }
+ },
+ "steps": {
+  "comment": "step sequence one-shot -> liquidus -> thermo -> solid -> final: neutral to accent ramp (light / dark)",
+  "light": [
+   "#9e9aa6",
+   "#8a74a0",
+   "#7d5a9e",
+   "#7b3fa0",
+   "#4f2768"
+  ],
+  "dark": [
+   "#77717f",
+   "#9c86b3",
+   "#b294cf",
+   "#c79ae6",
+   "#e3c9f5"
+  ]
+ },
+ "fonts": {
+  "ui": "IBM Plex Sans Regular/SemiBold + IBM Plex Serif Italic, embedded from <home>/projects/orchid-project.org/assets/logo/fonts/ (SIL OFL 1.1)",
+  "figures": "Arial, pdf.fonttype 42"
+ },
+ "neutral": {
+  "ink": {
+   "light": "#1d1b20",
+   "dark": "#ece8f1"
+  },
+  "ink2": {
+   "light": "#4D4D4D",
+   "dark": "#C9C3D1"
+  },
+  "muted": {
+   "light": "#5e5a66",
+   "dark": "#a69fb0"
+  },
+  "grey_l": {
+   "light": "#E8E8E8",
+   "dark": "#2e2a35"
+  },
+  "grey_m": {
+   "light": "#BDBDBD",
+   "dark": "#5a5463"
+  }
+ },
+ "starts": {
+  "comment": "starts: neutral ink, distinguished by marker/dash; the pick in the orchid accent",
+  "markers": [
+   "circle",
+   "square",
+   "diamond",
+   "triangle",
+   "triangle-down",
+   "plus",
+   "star",
+   "hexagon"
+  ]
+ },
+ "sync_differences": []
+}

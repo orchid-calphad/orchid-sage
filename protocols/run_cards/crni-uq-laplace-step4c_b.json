@@ -1,0 +1,200 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-uq-laplace-step4c_b",
+ "version": "1.0.0",
+ "title": "Cr-Ni UQ: Laplace mixture at the step4c_b pick (s4) and its flat-basin neighbour (s5), 1000 classified draws",
+ "status": "complete",
+ "run_id": "crni-uq-laplace-step4c_b",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "laplace"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Mac Studio M1 Max (10 cores)",
+ "pids": [
+  96588
+ ],
+ "started": "2026-11-06",
+ "finished": "2026-11-06",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "cd <home>/ScientificRuns/crni-paper-fit-20261106 && PYTHONPATH=<home>/src/PhaseForgePlus/src <fit-python> -W ignore scripts/laplace2.py steps/configs/step4c_b_hingefloor.json results/uq/modes_step4c_b.json results/uq/laplace_step4c_b.json 1000 && <fit-python> -W ignore scripts/classify_draws.py results/uq/laplace_step4c_b.draws.npy results/uq/classified_mixture_draws_step4c_b.json",
+ "threads": "1 process for the Hessians; 4 worker processes for the classification",
+ "seeds": {
+  "draws": "numpy default_rng(20261106) for the mixture draws and for the independent-marginal permutation (laplace2.py)"
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/modes_step4c_b.json",
+   "sha256": "a1e7f9f23fe8a90df761067ee4e8a00d4ea0ed80f1721751d146e5af6efede6f",
+   "storage_class": "local",
+   "role": "modes"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step4c_b_hingefloor.json",
+   "sha256": "1ad9a2353d0e17d1a5d418bd32ae53c21f1280656e68d58c4378be33ab608e24",
+   "storage_class": "local",
+   "role": "objective config"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/laplace2.py",
+   "sha256": "196ca84202274c358ff981ff0c17fe80e62b44f7c2b23eb39037a79b1217186b",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/classify_draws.py",
+   "sha256": "a77747ae4a8570b4857e42d2089c7dc78c9bcaf94bb424c6052b5db352427281",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model2.py",
+   "sha256": "a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89",
+   "storage_class": "local",
+   "role": "code"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/laplace_step4c_b.json",
+   "sha256": "911c92160eac849837897b04dfd4c7cb2d26bb0e2f111f97cfa6c8ca47a16e96",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/laplace_step4c_b.draws.npy",
+   "sha256": "d6911272a53c257657e4d38c14e7505a4c48d4846768fca250eef326d5d3623d",
+   "storage_class": "local"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/uq/classified_mixture_draws_step4c_b.json",
+   "sha256": "a07d4f39462d6f31f0d46b8ac3f6bdca92182e81d9eff5306e42c5cced843c90",
+   "storage_class": "local"
+  }
+ ],
+ "results": {
+  "modes": [
+   {
+    "name": "A_s4",
+    "logpost": -5657.288636859774,
+    "grad_norm_q": 4.5368712701211385e-05,
+    "positive_definite_fd": false,
+    "log_evidence": -5603.533391034632
+   },
+   {
+    "name": "A2_s5_flat",
+    "logpost": -5657.293148835046,
+    "grad_norm_q": 0.0004537643404965795,
+    "positive_definite_fd": false,
+    "log_evidence": -5604.719570205386
+   }
+  ],
+  "weights": {
+   "names": [
+    "A_s4",
+    "A2_s5_flat"
+   ],
+   "laplace": [
+    0.7660570156257861,
+    0.233942984374214
+   ],
+   "height_only": [
+    0.5011279919044149,
+    0.4988720080955851
+   ]
+  },
+  "mixture": {
+   "n": 1000,
+   "P_topology_ok": 0.989,
+   "se_ok": 0.0032983329122452166,
+   "P_FCC_x052_1473K": 1.0,
+   "se_fcc": 0.0,
+   "P_gap": 0.003,
+   "P_eutectic_ok": 1.0,
+   "P_crni2_ok": 0.992,
+   "regions_at_point": {
+    "FCC_A1": 1.0
+   },
+   "T_eut_5_50_95": [
+    1610.0,
+    1615.0,
+    1620.0
+   ],
+   "T_CrNi2_5_50_95": [
+    830.0,
+    860.0,
+    885.0
+   ],
+   "failure_counts": {
+    "eutectic": 0,
+    "crni2": 8,
+    "gap": 3,
+    "bad_sequence": 3
+   }
+  },
+  "independent_marginals": {
+   "n": 1000,
+   "P_topology_ok": 0.044,
+   "se_ok": 0.006485676526007136,
+   "P_FCC_x052_1473K": 0.469,
+   "se_fcc": 0.01578096955196353,
+   "P_gap": 0.199,
+   "P_eutectic_ok": 0.661,
+   "P_crni2_ok": 0.13,
+   "regions_at_point": {
+    "BCC_A2": 0.147,
+    "BCC_A2+CRNI2": 0.105,
+    "BCC_A2+FCC_A1": 0.273,
+    "CRNI2+FCC_A1": 0.006,
+    "FCC_A1": 0.469
+   },
+   "T_eut_5_50_95": [
+    1540.0,
+    1635.0,
+    1730.0
+   ],
+   "T_CrNi2_5_50_95": [
+    632.75,
+    965.0,
+    1852.2499999999995
+   ],
+   "failure_counts": {
+    "eutectic": 339,
+    "crni2": 870,
+    "gap": 199,
+    "bad_sequence": 608
+   }
+  },
+  "n": 1000,
+  "P_ok_strict": 0.989,
+  "P_ok_apart_from_CrNi2_window": 0.996,
+  "P_CrNi2_in_800_930": 0.992,
+  "P_CrNi2_within_25K_of_863": 0.871,
+  "P_gap_by_phase": {
+   "BCC_A2": 0.003,
+   "FCC_A1": 0.0,
+   "LIQUID": 0.0
+  },
+  "P_nirich_bcc_field": 0.0
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/laplace_step4c_b.log",
+   "sha256": "7d62af61613cc0aa783c298db647e6a1ee0d053bb10175d1c95c3b014e85f5f0",
+   "storage_class": "local",
+   "role": "run log"
+  }
+ ],
+ "notes": [
+  "the finite-difference Hessian is not positive definite along the flat s4-s5 direction; the 3 softest eigenvalues are repaired by line scans as in laplace/scripts/hessian_mode.py"
+ ]
+}

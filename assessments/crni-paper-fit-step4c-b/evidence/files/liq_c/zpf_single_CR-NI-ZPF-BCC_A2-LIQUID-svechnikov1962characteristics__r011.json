@@ -1,0 +1,35 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1669
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     0.662
+    ]
+   ]
+  ]
+ ],
+ "reference": "svechnikov1962characteristics",
+ "comment": "Unable to get the original article. Digitized from Figure 1 in F. Tang, B. Hallstedt, Calphad Comput. Coupling Phase Diagrams Thermochem. 55 (2016) 260\u2013269. doi:10.1016/j.calphad.2016.10.003. | REBUILD set D, observation (i): the known phase at its printed composition (single-phase), derived from the same parent points as the (ii) file; parent indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]; weight 1. | crni-paper-fit-20261106: rows with LIQUID of set E file (indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]); values unchanged | step4c: sigma_DF = max(converted 88, tier uncertain 100) = 100 J/mol",
+ "weight": 10.0
+}

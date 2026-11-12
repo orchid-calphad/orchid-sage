@@ -1,0 +1,48 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "LIQUID"
+ ],
+ "solver": {
+  "mode": "manual",
+  "sublattice_site_ratios": [
+   1
+  ],
+  "sublattice_configurations": [
+   [
+    [
+     "CR",
+     "NI"
+    ]
+   ]
+  ],
+  "sublattice_occupancies": [
+   [
+    [
+     0.25,
+     0.75
+    ]
+   ]
+  ]
+ },
+ "conditions": {
+  "P": 101325,
+  "T": 1900.0
+ },
+ "output": "SM_MIX",
+ "values": [
+  [
+   [
+    3.6755853972637835
+   ]
+  ]
+ ],
+ "weight": 0.6885467844569656,
+ "tags": [
+  "provisional"
+ ],
+ "reference": "GRACE-2L-SMAX-OMAT-large liquid MD Cr25Ni75_N108_T1900: vibrational (VACF) + corrected chemical excess entropy (provisional; correction ours); value = S_ex -0.9999 + S_ideal 4.6755; u 0.290 J/mol-atom/K; S_el,ex = 0 (PI 6 Nov)"
+}

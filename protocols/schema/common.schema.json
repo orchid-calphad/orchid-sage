@@ -1,0 +1,618 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orchid-project.org/schema/assessment/1.0.0-draft.2/common.schema.json",
+  "title": "orchid-assessment-schema 1.0.0-draft.2: shared definitions",
+  "description": "Definitions shared by the four document types (general_protocol, specific_protocol, run_card, assessment_results). ORCHID concepts that already exist are named exactly as in orchid-data-next literature/SCHEMA.md and espei/SCHEMA.md (branch schema/excluded-phases); they are not redefined here.",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "semver": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9A-Za-z.-]+)?$"
+    },
+    "protocol_ref": {
+      "description": "protocol id @ semantic version, e.g. orchid-calphad-fit@2.0.0 (Y32 id@semver)",
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*@[0-9]+\\.[0-9]+\\.[0-9]+(-[0-9A-Za-z.-]+)?$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}([T ][0-9:.]+(Z|[+-][0-9:]+)?)?$"
+    },
+    "orchid_record_id": {
+      "description": "ORCHID literature record id, field `id` of literature/SCHEMA.md (`ORC-` + 10 characters)",
+      "type": "string",
+      "pattern": "^ORC-[0-9A-Z]{10}$"
+    },
+    "state_id": {
+      "description": "field `state_id` of literature/SCHEMA.md (Y25 registry, graph/SCHEMA.md): `S-` + ten hex",
+      "type": "string",
+      "pattern": "^S-[0-9a-f]{10}$"
+    },
+    "state_class_id": {
+      "description": "field `state_class_id` of literature/SCHEMA.md: `C-` + ten hex",
+      "type": "string",
+      "pattern": "^C-[0-9a-f]{10}$"
+    },
+    "storage_class": {
+      "description": "public: may be redistributed; local: our own files on the Studio, not yet released; restricted: publisher PDFs, <home>/data/private exports and other material that is referenced by path + sha256 only and never copied or quoted beyond 500 characters; remote_record: a file on another host known only from a run card (hash recorded there, existence not checkable from the Studio)",
+      "enum": [
+        "public",
+        "local",
+        "restricted",
+        "remote_record"
+      ]
+    },
+    "file_ref": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256",
+        "storage_class"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "storage_class": {
+          "$ref": "#/$defs/storage_class"
+        },
+        "role": {
+          "type": "string"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "media_type": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "hash_source": {
+          "description": "where the hash comes from when the file is not on this host (e.g. the run card that recorded it)",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "description": "decisions log entry (Y32): who decided what, when, why, with the source of the record",
+      "type": "object",
+      "required": [
+        "date",
+        "who",
+        "decision",
+        "why",
+        "source"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "date": {
+          "$ref": "#/$defs/date"
+        },
+        "who": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file_ref"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "pending": {
+      "description": "a quantity that is not on disk: shown as pending, never invented",
+      "type": "object",
+      "required": [
+        "status",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "const": "pending"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "person": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "orcid": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "code_ref": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "git",
+            "file_set",
+            "container_image",
+            "package"
+          ]
+        },
+        "repository": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "path": {
+          "type": "string"
+        },
+        "entry_points": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/file_ref"
+          }
+        },
+        "image": {
+          "type": "string"
+        },
+        "digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "environment": {
+      "description": "environment lock (Y32): interpreter, package versions, lockfile hash; container digest for GPU/MLIP steps",
+      "type": "object",
+      "required": [
+        "id",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "venv",
+            "container",
+            "system"
+          ]
+        },
+        "path": {
+          "type": "string"
+        },
+        "python": {
+          "type": "string"
+        },
+        "packages": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "lockfile": {
+          "$ref": "#/$defs/file_ref"
+        },
+        "image": {
+          "type": "string"
+        },
+        "digest": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/pending"
+            }
+          ]
+        },
+        "hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "verify_command": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tolerance": {
+      "description": "comparison rule for a numerical step (Y32 reproduce rule): deterministic steps are compared byte for byte; numerical steps against these tolerances on physical quantities",
+      "type": "object",
+      "required": [
+        "quantity",
+        "rule"
+      ],
+      "properties": {
+        "quantity": {
+          "type": "string"
+        },
+        "rule": {
+          "enum": [
+            "byte_identical",
+            "absolute",
+            "relative",
+            "categorical_identical",
+            "set_identical"
+          ]
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "check": {
+      "type": "object",
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "gate",
+            "ranking",
+            "report"
+          ]
+        },
+        "threshold": {},
+        "unit": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "orchid_observation_id": {
+      "description": "ORC id of a record, optionally with the row suffix used in the ESPEI bundle and the Y25 registry (ORC-XXXXXXXXXX.abcdef)",
+      "type": "string",
+      "pattern": "^ORC-[0-9A-Z]{10}(\\.[0-9a-f]{6})?$"
+    },
+    "certainty": {
+      "description": "certainty tier of the energy scale of a ZPF or exclusion observation (fit_protocol item 8, PI 6 Nov 2026; 3x reading pending PI)",
+      "type": "object",
+      "required": [
+        "certainty_tier",
+        "energy_scale_J_per_mol_atom",
+        "certainty_basis"
+      ],
+      "properties": {
+        "certainty_tier": {
+          "enum": [
+            "certain",
+            "less_certain",
+            "uncertain"
+          ]
+        },
+        "energy_scale_J_per_mol_atom": {
+          "enum": [
+            10,
+            50,
+            100,
+            10.0,
+            50.0,
+            100.0
+          ]
+        },
+        "certainty_basis": {
+          "type": "string"
+        },
+        "distance_to_boundary_sigma": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "certainty_rule": {
+          "type": "string"
+        }
+      }
+    },
+    "exclusion_entry": {
+      "description": "one excluded phase at an observed state with its own certainty tier (PI 6 Nov 2026: tiers per excluded phase)",
+      "type": "object",
+      "required": [
+        "phase",
+        "certainty_tier",
+        "energy_scale_J_per_mol_atom",
+        "certainty_basis"
+      ],
+      "properties": {
+        "phase": {
+          "type": "string"
+        },
+        "certainty_tier": {
+          "enum": [
+            "certain",
+            "less_certain",
+            "uncertain"
+          ]
+        },
+        "energy_scale_J_per_mol_atom": {
+          "enum": [
+            10,
+            50,
+            100,
+            10.0,
+            50.0,
+            100.0
+          ]
+        },
+        "certainty_basis": {
+          "type": "string"
+        },
+        "distance_sigma": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "n_independent_sources": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "pending_file": {
+      "description": "a file of a draft that does not exist yet (G11)",
+      "type": "object",
+      "required": [
+        "path",
+        "status"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "status": {
+          "const": "pending"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "storage_class": {
+          "$ref": "#/$defs/storage_class"
+        }
+      },
+      "additionalProperties": false
+    },
+    "compute": {
+      "description": "step-level compute record (G14)",
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "estimate_s": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "measured": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "host",
+              "wall_s"
+            ],
+            "properties": {
+              "host": {
+                "type": "string"
+              },
+              "wall_s": {
+                "type": "number"
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "orchid_link": {
+      "description": "link from an evidence item to ORCHID (PI 6 Nov 2026): ORC record ids (ORCHID literature `id`), observation ids, S-/C- state ids (Y25 state registry `state_id`/`state_class_id`), release, and the resolvable chain record -> state -> paper_id (DOI) -> locator; or orchid_link=missing with missing_reason and intake_ref",
+      "type": "object",
+      "required": [
+        "orchid_link"
+      ],
+      "properties": {
+        "orchid_link": {
+          "enum": [
+            "present",
+            "missing",
+            "provisional"
+          ],
+          "description": "provisional (PI 6 Nov 2026): ORCHID-compatible ids computed offline (orchid_ids, docs/ID_SCHEME.md) for data ORCHID has not released, in the local:<ORCID>/<dataset-uuid> namespace or under a dataset DOI; every orchid_links item carries the full locator (pid) its id recomputes from"
+        },
+        "orchid_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "state_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "orchid_release": {
+          "type": "string"
+        },
+        "orchid_links": {
+          "type": "array"
+        },
+        "missing_reason": {
+          "enum": [
+            "new extraction pending intake (ORC id not in the local registry or literature checkout)",
+            "dataset without row-level ORC ids (ESPEI-format data; pending intake)",
+            "exclusion added by the campaign",
+            "computed one-shot observation (produced_by the specific protocol)",
+            "new extraction pending intake",
+            "dataset without row-level ORC ids (pending intake)",
+            "exclusions added by the campaign"
+          ]
+        },
+        "intake_ref": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "orchid_link": {
+                "const": "missing"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "missing_reason",
+              "intake_ref"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "orchid_link": {
+                "const": "provisional"
+              }
+            },
+            "required": [
+              "orchid_link"
+            ]
+          },
+          "then": {
+            "required": [
+              "orchid_links"
+            ],
+            "properties": {
+              "orchid_links": {
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "pid"
+                  ],
+                  "properties": {
+                    "pid": {
+                      "type": "string",
+                      "pattern": "^(local:[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|doi:10\\.[^/]+/.+)/"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "energies": {"AC": 1000, "BD": null, "AD": 2000, "BC": 3000},
+  "delta": 0,
+  "energy_basis": "J/mol_formula",
+  "reference_state": "Illustrative common reference at 298.15 K and 1 bar",
+  "assumption": "Illustrative zero reciprocal energy; no symmetry or empirical validation claimed"
+}

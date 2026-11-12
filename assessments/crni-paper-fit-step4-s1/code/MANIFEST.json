@@ -1,0 +1,287 @@
+{
+ "artifact": "crni-paper-fit-step4-s1",
+ "created": "2026-11-06T08:10:13-0600",
+ "rule": "byte-identical copies of the code that produced the pick; sources only read",
+ "files": [
+  {
+   "path": "scripts/make_base.py",
+   "sha256": "758be969fcd704d357245d5bea1e0a4eca626a41872069f3ee5312f6155b35c2",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/make_base.py",
+   "original_mtime": "2026-11-06T03:44:15-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/build_data.py",
+   "sha256": "c9b51c7d218a61aa22ef42330b520c11ef5c7b2ef5c7d84971b8f279471aea8d",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_data.py",
+   "original_mtime": "2026-11-06T03:46:27-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/pd4.py",
+   "sha256": "c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/pd4.py",
+   "original_mtime": "2026-11-06T03:47:21-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/build_hinge.py",
+   "sha256": "daac454ccc1f0aa97390795d26b7d5e69e64c713fa04ad26f2fb59c5cdd902ba",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_hinge.py",
+   "original_mtime": "2026-11-06T03:48:29-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/evaluate.py",
+   "sha256": "6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/evaluate.py",
+   "original_mtime": "2026-11-06T03:51:43-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/data_consistency.py",
+   "sha256": "1d46efa73a8074a1dda9e7f023e21feec99a9dfcee59e37452c550493ee2b011",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/data_consistency.py",
+   "original_mtime": "2026-11-06T03:52:46-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/fig_steps.py",
+   "sha256": "62c4b3ddda271e139212c4242da0e65fa4d32a3aea5bdd978a6193a9e11877b7",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/fig_steps.py",
+   "original_mtime": "2026-11-06T03:55:26-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/laplace.py",
+   "sha256": "bfec7090830d5c54984ff3a18fbd1862443580ca57523671bd7c1214c3726f27",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/laplace.py",
+   "original_mtime": "2026-11-06T04:09:17-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/summarize.py",
+   "sha256": "c2dcf225104497a9e6c7a020356be78e5cd2d15982390eaf8c887c571e5e67e4",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/summarize.py",
+   "original_mtime": "2026-11-06T04:47:55-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/physics.py",
+   "sha256": "aaeb1a663ef0156486b6e73e866f646ff8fc2f9b08b5d43e8b1a604dbd38ca23",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/physics.py",
+   "original_mtime": "2026-11-06T05:03:16-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/per_dataset.py",
+   "sha256": "9afecb92069e98a777e5f22080834ace88133fc67fadda89616ca4ccdd302600",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/per_dataset.py",
+   "original_mtime": "2026-11-06T05:17:01-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/classify_draws.py",
+   "sha256": "a77747ae4a8570b4857e42d2089c7dc78c9bcaf94bb424c6052b5db352427281",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/classify_draws.py",
+   "original_mtime": "2026-11-06T05:39:52-0600",
+   "used_for": "fit sequence, checks, UQ",
+   "note": ""
+  },
+  {
+   "path": "scripts/style.py",
+   "sha256": "1a22f8a496912939f92ffc3f7cb0b9cb53c7f4aa8365a160f37a6c09ec3497a4",
+   "original": "<home>/projects/2026_arroyave_nicr_paper/scripts/style.py",
+   "original_mtime": "2026-11-05T14:50:51-0600",
+   "used_for": "figure style imported by evaluate.py and fig_steps.py",
+   "note": "copied from the Cr-Ni paper repo; evaluate.py inserts that path first, so a staged root without it falls back to this copy"
+  },
+  {
+   "path": "scripts/fit.py",
+   "sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py",
+   "original_mtime": "2026-11-06T06:55:44-0600",
+   "used_for": "multistart fit",
+   "note": "EDITED 06:55 CST by the rerun agent (per-evaluation trajectory recording) AFTER the step-4 fit (04:47-05:16); the pre-edit file was not retained. Equivalence is tested by the independent rerun (G)."
+  },
+  {
+   "path": "scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py",
+   "original_mtime": "2026-11-06T06:55:44-0600",
+   "used_for": "objective",
+   "note": "EDITED 06:55 CST with fit.py (component bookkeeping for the trajectory); pre-edit file not retained; see fit.py note"
+  },
+  {
+   "path": "oneshot_code/gen_sqs.py",
+   "sha256": "164c4da409be5ac446c90a245dd620e1a921b39248cde2b2a2798e4727f4f131",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/gen_sqs.py",
+   "original_mtime": "2026-11-05T11:08:58-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/gen_sqs_fullrange.py",
+   "sha256": "74044addcf7efc1c400c5dba87a6875f429f0096719a6c96bc0893dfac0b9188",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/gen_sqs_fullrange.py",
+   "original_mtime": "2026-11-05T21:41:01-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/relax_solids.py",
+   "sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/relax_solids.py",
+   "original_mtime": "2026-11-05T11:11:08-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/relax_solids_v2.py",
+   "sha256": "d9ead6af2c41937533e95b798edca91ab21c13f66b7403b73983ee1adbcfe342",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/relax_solids_v2.py",
+   "original_mtime": "2026-11-05T11:24:56-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/run_liquid.py",
+   "sha256": "a4b6d40caa19b978a4e982bb1a372044862edcf719ae41d4e96cc4bfe9cd3f85",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/run_liquid.py",
+   "original_mtime": "2026-11-05T11:11:39-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/launch_liquid.sh",
+   "sha256": "ae9b59f9edf1e7f789e25e752cb057f34700e1dc27d894d35282f857a41a8d78",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/launch_liquid.sh",
+   "original_mtime": "2026-11-05T11:12:30-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/collect.sh",
+   "sha256": "e3df4f5bae9e7ccc5ce2548f20be26aa68ec50873051a450184153e5e87020a6",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/collect.sh",
+   "original_mtime": "2026-11-05T11:22:39-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/analyze_solids.py",
+   "sha256": "50582a792056afb1a4197858a7c88d1abb5411291c424bd17cbf0490090a2eef",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/analyze_solids.py",
+   "original_mtime": "2026-11-05T22:13:25-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/analyze_liquid.py",
+   "sha256": "d346522d19a969e9f30af0f2dd75a2f56b22f30f82773c52e6c887522c57f258",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/analyze_liquid.py",
+   "original_mtime": "2026-11-06T00:35:40-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "oneshot_code/build_tdb.py",
+   "sha256": "79b9da97306aeba303cfd7ba5bbb93980684f28bf728451aee47b7d07c9abbc8",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/code/build_tdb.py",
+   "original_mtime": "2026-11-05T22:13:25-0600",
+   "used_for": "one-shot",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/PLAN.md",
+   "sha256": "5bafd64614ffe567aeb732ec9fa39ddba615c6d80e0f17c943394558eb030bfb",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/PLAN.md",
+   "original_mtime": "2026-11-06T05:43:02-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/REPORT.md",
+   "sha256": "4bb7427edf1b2b57ac7c3a28131fee6f01ab336c2d7ed076e17508b61af6540e",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/REPORT.md",
+   "original_mtime": "2026-11-06T05:45:41-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step2.log",
+   "sha256": "d0c0a292f74d6e8e25f456e3bc6cd3b10d5a803eeec9bdefd374464a000ef2c7",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/step2.log",
+   "original_mtime": "2026-11-06T03:53:42-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step3.log",
+   "sha256": "8a13b9917b28994a07651a97ced814ed0ad8f9d070188873e0a68dcbf4e79e93",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/step3.log",
+   "original_mtime": "2026-11-06T04:15:36-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step3b.log",
+   "sha256": "00f09d797a571054a3c96f2734f15f9ad0e5e17f3346aadbf4adeb211ec08ed7",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/step3b.log",
+   "original_mtime": "2026-11-06T04:47:24-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step4.log",
+   "sha256": "e92d0d7baa699876a81f2431f47105930ecd6e8082b35432c23e09bdff5b21c7",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/step4.log",
+   "original_mtime": "2026-11-06T05:16:28-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/laplace.log",
+   "sha256": "9bed24e028427ca711230640f5df6c30690bd5c56e300ad332f874863d80a790",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/laplace.log",
+   "original_mtime": "2026-11-06T05:39:29-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-phaseforge/PLAN.md",
+   "sha256": "8f10d54e699b0fdb2aa62814371d2159167922d6ba5d1f9869f565f58e1bea80",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/PLAN.md",
+   "original_mtime": "2026-11-06T03:36:34-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-phaseforge/results/NOT_USED.md",
+   "sha256": "2b3b55ea34fceb046dfc7b9f57eb7e11fe84621019d50a91df86ecef9a5b3033",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/results/NOT_USED.md",
+   "original_mtime": "2026-11-05T22:08:42-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-phaseforge/provenance/potential_sha256.txt",
+   "sha256": "bd774abc6bb5ffc12f5accb42476cf34fc96cc7c8e17a2b30e72623dd9d3432c",
+   "original": "<home>/ScientificRuns/crni-phaseforge-20261105/provenance/potential_sha256.txt",
+   "original_mtime": "2026-11-05T11:04:41-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,1080 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-step4_solid",
+ "version": "1.0.0",
+ "title": "Cr-Ni step4_solid: 8 starts, pick s1_perturbed",
+ "status": "complete",
+ "run_id": "crni-step4_solid",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4-s1@0.1.0-draft",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "fit_solid"
+ },
+ "status_note": "role in the specific protocol: accepted",
+ "host": "mac-studio",
+ "hardware_class": "Mac Studio M1 Max (10 cores)",
+ "pids": [
+  18544
+ ],
+ "started": "2026-11-06T10:47:46Z",
+ "finished": "2026-11-06T11:16:28Z",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "cd <home>/ScientificRuns/crni-paper-fit-20261106 && PYTHONPATH=<home>/src/PhaseForgePlus/src <fit-python> scripts/fit.py steps/configs/step4_solid.json 4; <fit-python> scripts/evaluate.py step4_solid",
+ "threads": "4 worker processes",
+ "config": {
+  "start_tdb": "tdb/step3b_thermo_crni2free_pick.tdb",
+  "groups": [
+   "oneshot",
+   "liq",
+   "thermo",
+   "solid"
+  ],
+  "free": [
+   "VV0000",
+   "VV0001",
+   "VV0002",
+   "VV0003",
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011",
+   "VV0012",
+   "VV0013"
+  ],
+  "hinge": "data/hinge/step4_hinge.json",
+  "note": "0.1 step 4: + solid-only ZPF rows, CrNi2 ordering ZPF, excluded phases (set E hinge + CRNI2 above 895 K + new BCC_A2 exclusions at observed single-phase fcc states), CRNI2 a,b free.",
+  "name": "step4_solid",
+  "wall_s": 5400
+ },
+ "seeds": {
+  "rule": "s0 = start TDB; s1..s7 a(1 + 0.1 N(0,1)) [+ N(0, 2 kJ) where a = 0], b + N(0, 3 J/K), seed 1000 + k (fit.py)",
+  "starting_vectors": {
+   "s0_start": [
+    -13045.084925,
+    2.740694,
+    -1108.038515,
+    1.458471,
+    18293.8993,
+    -11.501371,
+    29139.817163,
+    -7.550019,
+    -4997.98685,
+    -3.333819,
+    7819.511869,
+    -4.551654,
+    -35570.326025,
+    11.309535
+   ],
+   "s1_perturbed": [
+    -14261.307459362912,
+    2.3361667744793544,
+    -986.4012480893387,
+    5.086411907558078,
+    15513.115054911113,
+    -12.599087735255841,
+    29394.89710469921,
+    -9.570595971001847,
+    -4841.949382927495,
+    -1.3785653048177235,
+    7899.179686401067,
+    1.8033302005623488,
+    -34948.87511290833,
+    11.150468861704459
+   ],
+   "s2_perturbed": [
+    -13184.671654877111,
+    -2.1544257792031822,
+    -1254.498598706543,
+    1.7065305537988027,
+    16141.093215443529,
+    -8.032322544996491,
+    31999.026093868248,
+    -11.900716889830196,
+    -5552.635170026641,
+    -5.169298382513762,
+    7054.098195938194,
+    -2.3511229228904336,
+    -32952.51766099986,
+    6.892609939868313
+   ],
+   "s3_perturbed": [
+    -11712.226454816247,
+    2.3790027089248547,
+    -950.1686771984112,
+    0.2664198615054756,
+    18200.27255130768,
+    -7.0409193415805085,
+    33470.408217498734,
+    -5.851768355806137,
+    -5275.219372633706,
+    -2.4246787205195615,
+    8156.095247025177,
+    -5.3984816002583,
+    -31553.829335695053,
+    16.44261115175578
+   ],
+   "s4_perturbed": [
+    -13062.87867551435,
+    2.552551223438906,
+    -1135.6461235182585,
+    1.6072250408631348,
+    20457.45609959696,
+    -7.286567912988421,
+    29154.74189921577,
+    -8.37347645032678,
+    -5223.350001460906,
+    -6.517345220454538,
+    8030.799734291492,
+    -7.553829526295479,
+    -37363.532768148085,
+    10.26027368116211
+   ],
+   "s5_perturbed": [
+    -12117.44024526838,
+    2.1961115741994424,
+    -1044.0367099060393,
+    0.9873376075675705,
+    20165.62865663269,
+    -13.385232616132607,
+    27617.34908828082,
+    -1.6553546408544388,
+    -3994.6523157735874,
+    -5.240361178808637,
+    8467.346712959987,
+    -6.099216749911121,
+    -33823.65324645586,
+    6.05382515662819
+   ],
+   "s6_perturbed": [
+    -14570.023468523748,
+    -3.2529919673168517,
+    -1204.9120985645654,
+    6.856902771034192,
+    19472.18081139328,
+    -7.123075706451188,
+    27849.03569026887,
+    -12.949340610697915,
+    -4811.323254116837,
+    0.9392937821987672,
+    8908.762969643341,
+    -5.545865527900672,
+    -29980.2794014267,
+    14.87970035274114
+   ],
+   "s7_perturbed": [
+    -11642.951412933484,
+    -1.077221852309759,
+    -1122.2122202759854,
+    3.888919856176951,
+    19267.578318537246,
+    -10.742030250409702,
+    25367.727925807245,
+    -3.4260327634016976,
+    -4011.4385539825034,
+    -5.4320234290752065,
+    7354.6974262097065,
+    1.3747283543991484,
+    -37684.04144049863,
+    12.687352804253075
+   ]
+  }
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step3b_thermo_crni2free_pick.tdb",
+   "sha256": "5b48923dc9f3755368aeafc65f61ef1157b185f77cb15fabbfa72808ad26d5c7",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step4_solid.json",
+   "sha256": "05420968dabe23d81d98fba38afb64d2027f16a8ee35cfa730262832abfa3208",
+   "storage_class": "local",
+   "role": "step config"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/hinge/step4_hinge.json",
+   "sha256": "910febb05db9e444e33b4b8df090367bec28bfd0c863f970fc05c43f28f6a435",
+   "storage_class": "local",
+   "role": "hinge sidecar"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_FORM_CRNI2.json",
+   "sha256": "0407f83e3aa6c06b7be4d0444e457b3582c68b54b2b87743cc62317f3f5af04e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.25.json",
+   "sha256": "5fbaf17f2b8c79ed79e8f582d1345ece6f43af26dc8ee9da37e3b633ccabc300",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.50.json",
+   "sha256": "b98c26406e3fc68b7975524b8dc80ffdd4d73142c50c87fe39678befda46c04d",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.75.json",
+   "sha256": "5e7b373353fd239cd783415aa22d207310ecf47f37ff7b28a6b3f0350c14b881",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.25.json",
+   "sha256": "4d5b09ab408961024ef30d1e7d3000648bea99b98083e0c9c70bd77f54d755e7",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.50.json",
+   "sha256": "be498f5e8d0944c89d21e5b0068d78d4275e94da3650577f9d37dd55c2141e5b",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.75.json",
+   "sha256": "97d67c738f6e20d45803e1e9fcf9656778f54dc276639d9c6894007e1a7ed61a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.25.json",
+   "sha256": "8aa6da998b442c75e1d71d61d48fb0bdebed9af674436260c19ae0058aa9265e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.50.json",
+   "sha256": "26ba116eccd6bba8a4c73118cb3bda46beef0650623546d6bc1d8b95ff46a32d",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/oneshot_HM_MIX_LIQUID_x0.75.json",
+   "sha256": "3b1774f3c8dee36e028f782d51b4e484fb13ba283fd651be35000f7bb80dc529",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T1900.json",
+   "sha256": "b167783975d1db6d0a8f8fe22e3d91f10acb6e663d8c31b028bcc5ec0081fc58",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T2200.json",
+   "sha256": "39d82c33c9388a5de24ffac889b739fe87e8ec8f7335422be7a6065d9cf22fc2",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T1900.json",
+   "sha256": "80954104eab4b42e098745fc57a64aef08c5d285282537a3e19732626dd331da",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T2200.json",
+   "sha256": "a4126814222fd3bca5ddf32c79b95fa17c27a60fc5255164cb031d5332681d41",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T1900.json",
+   "sha256": "5f7e4c9e59fc545ce415d13a980aa9dbf26730364dd4dd5ed837e2101d8594c0",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T2200.json",
+   "sha256": "9ec555bb54aebd2eca22ab0319440a0302dbe63a5b61d771873540c9af795178",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "ad20881c1726a8481af66175ec6cdd7d367a4a0fd5a441d1dbbb56a9d880ac53",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "c2aeff6a69b7c9b03dfcedf8ba8a3bb8681f8ecf92942a6acc59be769a8a54a9",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "5976b3a7ceea051e32518eaa0c82289af9e09414b9a62a854011163f53d3840a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "sha256": "77219f188a5729583d93e732b1999b4cbfce6da2ce474eced8a59675a5ccca6c",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "1aee85f4de822f8b3c498dec1535d551dd5d5207596079d25a4e6c29342727af",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "1693a17839afb34d8c861484a6f069e90facb3bab705e420357e28f7bdf9684c",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "97e201bc33b744db6da09b5df04ffb9c0375f738cf765f58fe9fe4a1da4191dd",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json",
+   "sha256": "a2e09434ef90d2c848decb6aec8705e092f7c2647ad473c3f408b1a19edecf31",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json",
+   "sha256": "21a248eb182f1587c370f1a24e69cf311ca47ade87a7f855a5c20b42eaad167a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json",
+   "sha256": "9dfeefef578205182384241618c2b2a3e32a1349f2614a251cc46cb98556be33",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json",
+   "sha256": "ef389ce5534bc4e160d90f3707e7beadfdcb1709fdf34c4f168726caa01cf21e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json",
+   "sha256": "0848e5e31cef7ffa64a277a4cafbe5f2e729c91a03a72ab1002a4e6c7a3ada76",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/dft_HM_MIX_BCC_A2_liu2016.json",
+   "sha256": "e53c9c40836797914e19b1e80c431e8acb89ca6e2c4b34ed0858f4e0eeb48793",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/dft_HM_MIX_FCC_A1_liu2016.json",
+   "sha256": "b2dfac152afeca3c2fe03552507b1d8ee63450af335b5c5c43997769f4eb1769",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "sha256": "27661334b763672edb255713bbd8f7122bd28f038a29ce94898aaefbd0dc26f5",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "sha256": "cfc8770074e73268f7b0099e63db525abfb246bcbcc917719231b6411d33a0d3",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "sha256": "ee1eb445ef0d1f03e55646f2dd3b6ca9d597eb9d6ef8f49588b07ce1e11b402a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "sha256": "e8b729ed59ca32bf73d7c555d29f338a976240f594904c1e38c7f356f8274087",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "sha256": "0b76c94f147daa472db0b34f74003132025498ff7f3f45f7b6328e779b9f9953",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json",
+   "sha256": "5ac5eb73db303f0cef7d73b650b5ea1f8dd2dc1a5c5a9c6ba6bbaf681cc4bb2f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "sha256": "e11c12d954a93a9b1964272c8640c770d1a4ce2f39d92bc6eb91c350b31583f5",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "sha256": "ef59165ec9a891b9e9d0a3dd89604b8aeaf828320ddb9c736d064bedff2e0064",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "sha256": "ce1455109a8b540245297ad8b8a354d1f2482e03f80ffe2060a60592a8f5b565",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json",
+   "sha256": "306dc441045f903a6114a3a951b38255c54abf68a1cb7f56239a7175d39fc61f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json",
+   "sha256": "dc930752bfe72ace0c0b21dd25ac355bf35f4405c8f7f949cdb3f29f7c298d76",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json",
+   "sha256": "0334e2dfff499acaac85d05217d9452bfc10c7fa41ed258442f1e4dc7087db97",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json",
+   "sha256": "76ecb8be3cc23570f4dac669201d3c8f2f25e04cde2e9a025bfb254eb3458473",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "sha256": "6f0e5743b3d17939fd254f3be725660a5079c750fcf3578f8090555055050127",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "sha256": "c0203d9338d8f8cc8e524413bfd84241adc95faacd33f19cc13b6922c0b7c1ca",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "3d56cf29d5f13ce89c94744845802d7cc41464cdf532da79fcc7bd4d08c8d561",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "sha256": "24ccfaec1aa1c51a50bbcde26011a60235a7ff4595a7c2b411a69558cf2c649f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "sha256": "460a295c3368d7627f13e7205df5b0f9f937fdf02436a145f1725790134ed4b8",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "sha256": "589126aad1772de8ed1c430f31f4179c5a366a216bff61b09aab8eb9fa99290b",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "69ec1d82acd09098b861a8dd18a8f2906f6322f51f15773787ccc025b39cab7e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "sha256": "4b8a881e76550184ed1a2e04114c89da03c54bdf2defbb245199a647dda79e7f",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "sha256": "adc872436986435dd55179fddc5e25493011868642e0aefe362ac0adde95fbb5",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "sha256": "54a06c882d30ba2e525630e4d4cece1365345e7c24a05469af96f2788491131a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json",
+   "sha256": "ec01dc99ae158f1db750a0a23510caaf4504fde272fab3dc7ff35688fb6ba4ff",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_CRNI2_ordering_ORC-X3KVP7D3PO.json",
+   "sha256": "b1be6fc0c6b128c3d6210dd480925a518286801a97c483f474d93d77a2f86c88",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "95e8f86c1a20779a05cc259784a6f39a5a5588b48745a2556dc94fe09275d4cd",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "sha256": "e46e140276515d643b864df33a4b3df8bb7be7ae845c623467ee5d7a96c58468",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "sha256": "0c55e37aafc2b40eecee58cfc0224eb9963ea8a63ea4f25727d265233226f393",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "sha256": "08e5e094ed04b31ed3674ed34202bb52601351ab0f1dad4bb6577c9976df708e",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "c4c9d6717bee595e855026e580648318263dace4f48ac2df1ac08224a7ca696a",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "sha256": "15030df01e26d9af22b3463e1bf808dfff5205016ef47bd25c52ff6ba934b68c",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "sha256": "d29290aa0085c64059de30f5926b112114304f6f983416fb66d9360163daf405",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/data/solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "sha256": "89206468927282126c31e8ac64f3d008ee94ea869c67e79ada615ec2b62a950d",
+   "storage_class": "local",
+   "role": "data file read by the objective (hash from run_card.json)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/fit.py",
+   "sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/evaluate.py",
+   "sha256": "6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/evaluate.py)"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/scripts/pd4.py",
+   "sha256": "c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4",
+   "storage_class": "local",
+   "role": "code (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/scripts/pd4.py)"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/multistart.json",
+   "sha256": "513fbcc399f92ecfb89e686551d8a1c7ef34db7cc48ea8a64ff199d1264864e9",
+   "storage_class": "local",
+   "role": "all starts"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/run_card.json",
+   "sha256": "c403a5bf12d7fce6e2b6d887178fe9d7681ddc1e6850df930664c941a6b03361",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/evaluation.json",
+   "sha256": "e44b68e8073d84b51548d5c40dea4687e6a402dc3f4fe01c6d2c23b7f89f4db6",
+   "storage_class": "local",
+   "role": "evaluation and ranking"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s0_start.tdb",
+   "sha256": "3555bf1d5026ce2a1ba36b9699e095a72283fa5ca5f0427ee6ef56cfdc7eac82",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s1_perturbed.tdb",
+   "sha256": "1cd18d3fd257ccaba21fc81f1bb25aa460b9156ce5427bb644f0a30ecd190597",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s2_perturbed.tdb",
+   "sha256": "851c8dd1373920b972b80c8620f6692c913989b814a7e5b2a96ae768f754f976",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s3_perturbed.tdb",
+   "sha256": "95470df17c1744fe4911f93f08a02794fadfc4063b6e7bb29da2c90b5cc40b99",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s4_perturbed.tdb",
+   "sha256": "dfee33a0ca71aa8c77963b5cc794274ff4b9994e6598e7a983adb71fcddc891c",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s5_perturbed.tdb",
+   "sha256": "3143d34dfd88d226f6552a4a433a15d8f899661a9234c40ded6aeb099cc26e30",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s6_perturbed.tdb",
+   "sha256": "5265815e768221eee4c90cfd9ece878e4dcaab79b417565827e147054d496dce",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/s7_perturbed.tdb",
+   "sha256": "468fa9cd3fad9ad0e488c32bb5b709a46dc13beeecefa40f1bfdb43b920c4d5a",
+   "storage_class": "local",
+   "role": "start TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/step4_solid_pick.tdb",
+   "sha256": "d46bf5ddddbaeb1e749a38b7ecb4a2664184dcbe55ebb0a545697ebf0027d872",
+   "storage_class": "local",
+   "role": "pick TDB"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/tdb/CrNi_paper_fit_FINAL_step4_s1.tdb",
+   "sha256": "d46bf5ddddbaeb1e749a38b7ecb4a2664184dcbe55ebb0a545697ebf0027d872",
+   "storage_class": "local",
+   "role": "the pick (artifact)"
+  }
+ ],
+ "results": {
+  "s1_perturbed": {
+   "logpost": -6332.243665831225,
+   "log_prior": -113.81721056233862,
+   "components": {
+    "ActivityResidual": -1086.236180771365,
+    "FixedConfigurationPropertyResidual": -1246.2114845402048,
+    "ZPFResidual": -3885.4347827915685,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -0.5440071657485109
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 125,
+   "wall_s": 527.3,
+   "grad_norm_q": 5.965555097554606e-05,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1620.0,
+    "T_CrNi2_max": 780.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +13.7, FCC_A1_x0.50 +10.1",
+    "BCC_A2 S_ex(0.5) = +3.26 J/mol-atom/K (|.| > 2.5)"
+   ],
+   "max_abs_shift_sigma": 1.4140454100963165
+  },
+  "s0_start": {
+   "logpost": -6332.243665831498,
+   "log_prior": -113.81721428169391,
+   "components": {
+    "ActivityResidual": -1086.2361590762578,
+    "FixedConfigurationPropertyResidual": -1246.2115130293712,
+    "ZPFResidual": -3885.434748867535,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -0.5440305766404495
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 132,
+   "wall_s": 553.2,
+   "grad_norm_q": 9.542902705290035e-05,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1620.0,
+    "T_CrNi2_max": 780.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +13.7, FCC_A1_x0.50 +10.1",
+    "BCC_A2 S_ex(0.5) = +3.26 J/mol-atom/K (|.| > 2.5)"
+   ],
+   "max_abs_shift_sigma": 1.4140463946173707
+  },
+  "s5_perturbed": {
+   "logpost": -6332.243665831628,
+   "log_prior": -113.81721770138651,
+   "components": {
+    "ActivityResidual": -1086.2361530190572,
+    "FixedConfigurationPropertyResidual": -1246.2115209355961,
+    "ZPFResidual": -3885.4347573867108,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -0.5440167888771729
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 110,
+   "wall_s": 506.1,
+   "grad_norm_q": 6.797051519692148e-05,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1620.0,
+    "T_CrNi2_max": 780.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +13.7, FCC_A1_x0.50 +10.1",
+    "BCC_A2 S_ex(0.5) = +3.26 J/mol-atom/K (|.| > 2.5)"
+   ],
+   "max_abs_shift_sigma": 1.4140477699754672
+  },
+  "s4_perturbed": {
+   "logpost": -6332.243665832286,
+   "log_prior": -113.81720815252295,
+   "components": {
+    "ActivityResidual": -1086.236180440852,
+    "FixedConfigurationPropertyResidual": -1246.2114915890565,
+    "ZPFResidual": -3885.4347568048897,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -0.5440288449652892
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 116,
+   "wall_s": 534.5,
+   "grad_norm_q": 4.707022400617931e-05,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1620.0,
+    "T_CrNi2_max": 780.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +13.7, FCC_A1_x0.50 +10.1",
+    "BCC_A2 S_ex(0.5) = +3.26 J/mol-atom/K (|.| > 2.5)"
+   ],
+   "max_abs_shift_sigma": 1.4140449485342497
+  },
+  "s2_perturbed": {
+   "logpost": -6332.9945641336435,
+   "log_prior": -113.66823729786917,
+   "components": {
+    "ActivityResidual": -1086.343905477578,
+    "FixedConfigurationPropertyResidual": -1245.6249603866065,
+    "ZPFResidual": -3886.720020470815,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -0.6374405007750102
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 146,
+   "wall_s": 617.6,
+   "grad_norm_q": 0.00017688561311348964,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1622.0,
+    "T_CrNi2_max": 774.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +13.4, FCC_A1_x0.50 +10.1",
+    "BCC_A2 S_ex(0.5) = +3.36 J/mol-atom/K (|.| > 2.5)"
+   ],
+   "max_abs_shift_sigma": 1.383817095220135
+  },
+  "s3_perturbed": {
+   "logpost": -6342.84240805583,
+   "log_prior": -113.18036225369784,
+   "components": {
+    "ActivityResidual": -1088.521465829094,
+    "FixedConfigurationPropertyResidual": -1247.7658606386028,
+    "ZPFResidual": -3891.301430949119,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -2.0732883853159594
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "ABNORMAL: "
+   ],
+   "n_eval": 171,
+   "wall_s": 724.3,
+   "grad_norm_q": 1.3396505527688949,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1588.0,
+    "T_CrNi2_max": 662.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 2,
+    "bad": [
+     [
+      1740.0,
+      [
+       "BCC_A2",
+       "BCC_A2+LIQUID",
+       "LIQUID",
+       "FCC_A1+LIQUID",
+       "FCC_A1",
+       "LIQUID"
+      ]
+     ],
+     [
+      2176.0,
+      [
+       "BCC_A2",
+       "LIQUID"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     1740.0,
+     2176.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +11.2",
+    "liquid S_ex beyond 3u: Cr75Ni25_N108_T2200 z=-3.1"
+   ],
+   "max_abs_shift_sigma": 1.1538408212002509
+  },
+  "s7_perturbed": {
+   "logpost": -6344.538282020446,
+   "log_prior": -113.10728235765458,
+   "components": {
+    "ActivityResidual": -1088.540557180254,
+    "FixedConfigurationPropertyResidual": -1248.1444695700463,
+    "ZPFResidual": -3892.4737829846717,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -2.2721899278198627
+   },
+   "termination": "converged",
+   "messages": [
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 213,
+   "wall_s": 995.7,
+   "grad_norm_q": 2.374822015398541,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1582.0,
+    "T_CrNi2_max": 676.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 1,
+    "bad": [
+     [
+      2176.0,
+      [
+       "BCC_A2",
+       "LIQUID"
+      ]
+     ]
+    ],
+    "bad_T_range": [
+     2176.0,
+     2176.0
+    ],
+    "spurious_severity": "high-T only",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +10.6"
+   ],
+   "max_abs_shift_sigma": 1.0980462446507198
+  },
+  "s6_perturbed": {
+   "logpost": -6350.596228225422,
+   "log_prior": -113.07950729882722,
+   "components": {
+    "ActivityResidual": -1088.000368509519,
+    "FixedConfigurationPropertyResidual": -1247.179160562213,
+    "ZPFResidual": -3897.4004229791576,
+    "EquilibriumPropertyResidual": 0.0,
+    "HingePenalty": -4.936768875705422
+   },
+   "termination": "converged",
+   "messages": [
+    "ABNORMAL: ",
+    "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   ],
+   "n_eval": 142,
+   "wall_s": 687.9,
+   "grad_norm_q": 6.095393188334916,
+   "n_nonfinite": 0,
+   "topology": {
+    "ok": false,
+    "T_liquid_min": 1570.0,
+    "T_CrNi2_max": 728.0,
+    "gaps": [],
+    "n_gap_T": 0,
+    "n_bad": 0,
+    "bad": [],
+    "bad_T_range": null,
+    "spurious_severity": "none",
+    "eutectic_ok": true,
+    "crni2_ok": false
+   },
+   "plausible": false,
+   "plausibility_notes": [
+    "one-shot solid/compound value moved > 10 kJ/mol-atom: FCC_A1_x0.25 +10.4",
+    "liquid S_ex beyond 3u: Cr75Ni25_N108_T2200 z=-3.2"
+   ],
+   "max_abs_shift_sigma": 1.0688959326897236
+  }
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "fit.py of 6 Nov kept only theta0 and theta per start (multistart.json); the rerun agents now record trajectories"
+ },
+ "ranking": {
+  "pick": "s1_perturbed",
+  "rule": "PLAN.md ranking (0.3): plausible, topology, quantitative",
+  "order": [
+   "s1_perturbed",
+   "s0_start",
+   "s5_perturbed",
+   "s4_perturbed",
+   "s2_perturbed",
+   "s6_perturbed",
+   "s7_perturbed",
+   "s3_perturbed"
+  ]
+ },
+ "converted_from": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/run_card.json",
+   "sha256": "c403a5bf12d7fce6e2b6d887178fe9d7681ddc1e6850df930664c941a6b03361",
+   "storage_class": "local",
+   "role": "campaign run card"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4_solid/multistart.json",
+   "sha256": "513fbcc399f92ecfb89e686551d8a1c7ef34db7cc48ea8a64ff199d1264864e9",
+   "storage_class": "local",
+   "role": "campaign multistart record"
+  },
+  {
+   "path": "assessments/crni-paper-fit-step4-s1/code/records/crni-paper-fit/logs/step4.log",
+   "sha256": "e92d0d7baa699876a81f2431f47105930ecd6e8082b35432c23e09bdff5b21c7",
+   "storage_class": "local",
+   "role": "run log (snapshot of <home>/ScientificRuns/crni-paper-fit-20261106/logs/step4.log)"
+  }
+ ],
+ "notes": []
+}

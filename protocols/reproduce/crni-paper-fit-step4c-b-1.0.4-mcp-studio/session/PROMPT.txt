@@ -1,0 +1,25 @@
+You are reproducing the ORCHID-SAGE assessment crni-paper-fit-step4c-b@1.0.4. You have only the orchid-sage MCP tools. Do not
+guess: every command, path, tolerance and decision comes from a tool result. Never run a step the tools refuse. LOCAL work only:
+no remote or cloud agents, no `rm` (move aside), stop only processes you started, by exact PID; never touch other jobs on the host.
+1. Read: get_protocol("crni-paper-fit-step4c-b@1.0.4"), then get_steps. Note the reproduce items (step4c_b, check10a, global_10c,
+   evaluate_states, phase_sequence, pure_elements, thermochemistry, laplace_weights) and the judgement steps.
+2. Validate: validate("crni-paper-fit-step4c-b@1.0.4"). Report every error.
+3. Verify inputs: verify_inputs(...). The rerun needs only `bundle_manifests` to be ok (`rerun_ready: true`); the six manifests are
+   the 0.2.0 code snapshot, the 1.0.0, 1.0.1, 1.0.3 and 1.0.4 addendum snapshots and evidence bundle 1.2.0.
+4. Plan: plan_reproduction(..., run_root=<a NEW directory outside the repository, <home>/ScientificRuns and <home>/data/private>).
+5. Run in plan order, one call each: stage, environment_check, then step4c_b (numerical, allow_long=true), check10a (numerical,
+   allow_long=true), global_10c (numerical, allow_long=true), evaluate_states, phase_sequence, pure_elements, thermochemistry
+   (allow_long=true), laplace_weights (allow_long=true). Pass python= and the PhaseForge+ source the tools ask for. check10a must
+   run before global_10c, phase_sequence, pure_elements and thermochemistry: it writes the 10a pick they use (results/pick10a_start.txt, tdb/step4c_b_hingefloor_pick10a.tdb).
+6. Judgement steps are never executed: get_step returns the recorded decision and its source (get_decisions lists them, the agent
+   decisions labelled).
+7. Compare: compare_outputs(...).
+8. Report: items run; PASS/FAIL per check with reference, rerun value and tolerance; what was not run and why; the report path;
+   and every choice the tools did not settle. The verdict is by predictions only (PI, 6 Nov: "this is too strict"): objective
+   of the 10a pick (by rule), diagram topology and phase sequence, eutectic and CrNi2 top, thermochemistry, pure elements and
+   Laplace weight within tolerance, plus the byte checks of data identity (staged inputs, evidence bundle, evaluated states).
+   Parameters (results/pick10a_rerun.json; flat directions undetermined), start and mode labels, cache files, timestamps,
+   the environment check and the PhaseForge+ pin are notes, never failures.
+Use run_root=<home>/mcp-rerun-crni-1.0.4-20261107/run. The operator provides: python=<fit-python> and the PhaseForge+ source at <home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src (an export of commit c66656f). nproc=4.
+Long items (needs_allow_long) start detached: run_step returns at once with status "running". Then call step_status(protocol, run_root, item, wait_s=900) repeatedly until its status is "finished" (each call returns within 15 min; the item keeps running between calls); that call writes the run card. Never start an item twice, and start the next item only after the previous one has finished.
+This is the only rerun of 1.0.4 the PI allows: do not start any item twice and do not retry a failed item; report it instead. Report the host each item ran on (from its run card).

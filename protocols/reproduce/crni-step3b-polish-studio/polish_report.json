@@ -1,0 +1,127 @@
+{
+ "step": "step3b_thermo_crni2free",
+ "settings": {
+  "method": "L-BFGS-B continued from the endpoint",
+  "ftol": 0.0,
+  "gtol": 0.0,
+  "maxcor": 20,
+  "threshold_grad_norm": 0.001,
+  "max_evals_per_start": 1000,
+  "stall_rule": "two successive restarts improving the objective by < 1e-12",
+  "nonfinite": "returns (1e12, 0)",
+  "rule": "fit_protocol 10a + polish_starts (6 Nov 2026)",
+  "gradient": "analytic (gradient ESPEI) for every term except ActivityResidual, whose analytic gradient failed the term-by-term check; those by central finite differences, step 0.0001 in the optimiser coordinates",
+  "fd_terms": [
+   "ActivityResidual"
+  ],
+  "fd_step_optimiser_coordinates": 0.0001
+ },
+ "n_starts": 8,
+ "n_converged": 0,
+ "starts": [
+  {
+   "start": "s7_perturbed",
+   "logpost_before": -3941.800881989772,
+   "grad_norm_before": 0.08669751425414361,
+   "logpost_after": -3941.800881989772,
+   "grad_norm_after": 1.3149806776142343,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s5_perturbed",
+   "logpost_before": -3941.8014471203537,
+   "grad_norm_before": 0.0683921452789814,
+   "logpost_after": -3941.8014471203537,
+   "grad_norm_after": 1.3286876364555513,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s4_perturbed",
+   "logpost_before": -3941.801688838515,
+   "grad_norm_before": 0.20401455079361858,
+   "logpost_after": -3941.8016888384905,
+   "grad_norm_after": 0.07916313356470739,
+   "status": "stalled (no further improvement)",
+   "n_evals": 147,
+   "max_abs_change": {
+    "a_J_per_mol": 6.020250964411389e-08,
+    "b_J_per_mol_K": 7.247447086911052e-11
+   }
+  },
+  {
+   "start": "s1_perturbed",
+   "logpost_before": -3941.805376728839,
+   "grad_norm_before": 0.06611348026428097,
+   "logpost_after": -3941.8053767288384,
+   "grad_norm_after": 1.3320740113053986,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s3_perturbed",
+   "logpost_before": -3941.8101206302736,
+   "grad_norm_before": 0.06870331358206111,
+   "logpost_after": -3941.810120630274,
+   "grad_norm_after": 1.3342775768520816,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s6_perturbed",
+   "logpost_before": -3941.811102301057,
+   "grad_norm_before": 0.08944731234055751,
+   "logpost_after": -3941.811102301057,
+   "grad_norm_after": 1.3359957080666731,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s2_perturbed",
+   "logpost_before": -3941.838726859463,
+   "grad_norm_before": 0.2222666345318605,
+   "logpost_after": -3941.838726859463,
+   "grad_norm_after": 1.3388290836665182,
+   "status": "stalled (no further improvement)",
+   "n_evals": 63,
+   "max_abs_change": {
+    "a_J_per_mol": 0.0,
+    "b_J_per_mol_K": 0.0
+   }
+  },
+  {
+   "start": "s0_start",
+   "logpost_before": -3942.3709643204684,
+   "grad_norm_before": 0.20705137483023986,
+   "logpost_after": -3942.370964319946,
+   "grad_norm_after": 0.08334730899521312,
+   "status": "stalled (no further improvement)",
+   "n_evals": 123,
+   "max_abs_change": {
+    "a_J_per_mol": 9.647447285487942e-07,
+    "b_J_per_mol_K": 1.6958665582933463e-09
+   }
+  }
+ ]
+}

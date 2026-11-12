@@ -1,0 +1,138 @@
+{
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "run_root": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "created": "2026-11-07T17:46:32-0600",
+ "checks": [
+  {
+   "item": "stage",
+   "status": "ran (no output to compare)"
+  },
+  {
+   "item": "environment_check",
+   "status": "ran (no output to compare)"
+  },
+  {
+   "item": "check10a",
+   "rule": "json_tol",
+   "path": "results/pick10a_rerun.json",
+   "pass": true,
+   "reference": -5657.288636859774,
+   "rerun": -5657.288636859774,
+   "diff": 0.0,
+   "abs_tol": 0.01
+  },
+  {
+   "item": "check10a",
+   "rule": "json_equal",
+   "path": "results/pick10a_rerun.json",
+   "pass": true,
+   "reference": true
+  },
+  {
+   "item": "check10a",
+   "rule": "json_tol",
+   "path": "results/pick10a_rerun.json",
+   "pass": true,
+   "reference": 1614,
+   "rerun": 1614.0,
+   "diff": 0.0,
+   "abs_tol": 2
+  },
+  {
+   "item": "check10a",
+   "rule": "json_tol",
+   "path": "results/pick10a_rerun.json",
+   "pass": true,
+   "reference": 860,
+   "rerun": 860.0,
+   "diff": 0.0,
+   "abs_tol": 2
+  },
+  {
+   "item": "global_10c",
+   "rule": "json_tol",
+   "path": "steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+   "pass": true,
+   "reference": -5657.288636859766,
+   "rerun": -5657.288636859772,
+   "diff": -6.366462912410498e-12,
+   "abs_tol": 0.01
+  },
+  {
+   "item": "global_10c",
+   "rule": "json_tol",
+   "path": "steps/step4c_b_hingefloor_10c/anneal_7201/status.json",
+   "pass": true,
+   "reference": -5657.288636859768,
+   "rerun": -5657.288636859772,
+   "diff": -3.637978807091713e-12,
+   "abs_tol": 0.01
+  },
+  {
+   "item": "evaluate_states",
+   "rule": "files_equal",
+   "path": "evaluate/states_evaluated@1.2.0.json",
+   "pass": true,
+   "reference": "reference/states_evaluated@1.2.0.json",
+   "rerun": "cf2c98793814d32c0b5d58a4347914e8ab9b11e7a337c43afd0154ae0b520940"
+  },
+  {
+   "item": "phase_sequence",
+   "rule": "sequence_equal",
+   "path": "phase_sequence_rerun.json",
+   "pass": true,
+   "reference": "phase_sequence_reference.json"
+  },
+  {
+   "item": "pure_elements",
+   "rule": "json_equal",
+   "path": "results/physics_rerun.json",
+   "pass": true,
+   "reference": true
+  },
+  {
+   "item": "pure_elements",
+   "rule": "json_equal",
+   "path": "results/physics_rerun.json",
+   "pass": true,
+   "reference": "BCC_A2"
+  },
+  {
+   "item": "pure_elements",
+   "rule": "json_equal",
+   "path": "results/physics_rerun.json",
+   "pass": true,
+   "reference": "FCC_A1"
+  },
+  {
+   "item": "thermochemistry",
+   "rule": "json_equal",
+   "path": "results/thermo_compare.json",
+   "pass": true,
+   "reference": true
+  },
+  {
+   "item": "laplace_weights",
+   "rule": "json_tol",
+   "path": "results/uq/laplace_step4c_b.json",
+   "pass": true,
+   "reference": 0.7660570156257861,
+   "rerun": 0.7660570156257861,
+   "diff": 0.0,
+   "abs_tol": 0.01
+  }
+ ],
+ "pass": true,
+ "scope": "pass covers the compared checks only; items listed in not_run were not reproduced",
+ "compared": 13,
+ "not_run": [],
+ "running_or_unrecorded": [],
+ "plan_compare_report": "<home>/mcp-rerun-crni-1.0.4-20261107/run/comparison/plan_compare.json",
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ }
+}

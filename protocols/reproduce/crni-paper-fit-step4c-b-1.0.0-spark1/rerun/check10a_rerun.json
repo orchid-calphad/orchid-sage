@@ -1,0 +1,2211 @@
+{
+ "config": "steps/configs/step4c_b_hingefloor.json",
+ "multistart": "<home>/orchid-protocols-work-20261106/rerun-crni4cb-1.0.0/steps/step4c_b_hingefloor/multistart.json",
+ "model_module": "model2",
+ "host": "spark1",
+ "rule": "fit_protocol 10a with the kink rule (PI 6 Nov 2026, orchid-sage 6b8f443); tests scripts/kink10a.py; eligible = (smooth or kink-stationary) and every boundary point |r| <= sigma and no failed equilibrium",
+ "espei_version": "0.8.11.dev82+g9039ea215",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "kinds": {
+  "smooth": 8,
+  "kink": 0,
+  "not_stationary": 0
+ },
+ "n_eligible": 8,
+ "pick": "s1_perturbed",
+ "pick_logpost": -5657.288636863667,
+ "gap_to_runner_up": 3.4515323932282627e-09,
+ "n_failed_equilibria_total": 0,
+ "rows": [
+  {
+   "start": "s1_perturbed",
+   "logpost": -5657.288636863667,
+   "logpost_multistart_file": -5657.288636863667,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.0002272345868527275,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "+p13",
+    "step": 1e-05,
+    "improvement": 2.801243681460619e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -1.0746618499979377e-05,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.0483262064128263e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.0490901079028845e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -0.005193361910642125,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.670746516397655e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006556512526003644
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.00951452249137219,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.514522491372191e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004413449642015621
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009514522578683682,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.514522578683682e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044134483323432505
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.0710121612646617,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.000710121612646617,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016999821236822754
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.1679519452154636e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.1679519452154636e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.3139040675014257e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -0.005193361910642125,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.670746516397655e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006556512526003644
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.0710121612646617,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.000710121612646617,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016999821236822754
+    }
+   ],
+   "n_boundary_points": 8,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12848.383835089538,
+    3.0036343204058227,
+    -453.84524974675,
+    2.293111775819098,
+    19756.06234686935,
+    -11.838177073835089,
+    21426.612661709965,
+    -2.4918856794497275,
+    6499.624101536139,
+    -9.651810787534513,
+    33652.576586059055,
+    -18.94489764853382,
+    -40999.24475168242,
+    25.774869329801103
+   ],
+   "seconds": 661.9
+  },
+  {
+   "start": "s2_perturbed",
+   "logpost": -5657.288636867119,
+   "logpost_multistart_file": -5657.288636867119,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.0005278633247047895,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "+p6",
+    "step": 1e-05,
+    "improvement": 4.720277502201498e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -1.1083087883889675e-05,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.0811485935487817e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.072608913294971e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -0.0052067028591409326,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6776072536891616e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.000656469666864723
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009511102995020337,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.511102995020337e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044126115972176194
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009511102995020337,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.511102995020337e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044126110151410103
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.07105704603600316,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007105704603600316,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0017004986584652215
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.1395204132422805e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.1395204132422803e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.3084892998449504e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -0.0052067028591409326,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6776072536891616e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.000656469666864723
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.07105704603600316,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007105704603600316,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0017004986584652215
+    }
+   ],
+   "n_boundary_points": 8,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12848.350526244376,
+    3.0036253392947674,
+    -453.8478559499887,
+    2.2931138729009173,
+    19755.983898876144,
+    -11.838112410403355,
+    21426.845802089927,
+    -2.492047801442159,
+    6499.771207416127,
+    -9.651890099293546,
+    33652.38869641887,
+    -18.944795442004043,
+    -41000.758061216526,
+    25.77671684523253
+   ],
+   "seconds": 647.8
+  },
+  {
+   "start": "s3_perturbed",
+   "logpost": -5657.288636877991,
+   "logpost_multistart_file": -5657.288636877991,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.00044769687709324187,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "-p2",
+    "step": 1e-05,
+    "improvement": 8.594724931754172e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -1.0668038157746196e-05,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.0406607410320565e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.0435298210941255e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -0.005229451126069762,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.689305813446716e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006578565953532234
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009515414494671859,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.515414494671859e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044136494398117065
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009515414480119944,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.515414480119944e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004413648712215945
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.0710126583580859,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.000710126583580859,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016999849467538297
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.156712045893073e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.156712045893073e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.3117620255798101e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -0.005229451126069762,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.689305813446716e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006578565953532234
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.0710126583580859,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.000710126583580859,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016999849467538297
+    }
+   ],
+   "n_boundary_points": 8,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12848.444208868783,
+    3.0036601395555316,
+    -453.85377902752884,
+    2.2930979692835183,
+    19755.90727074935,
+    -11.838091736783433,
+    21426.951552533115,
+    -2.4921211115608983,
+    6499.394549547001,
+    -9.651680120116293,
+    33652.9870183307,
+    -18.945166100376312,
+    -41000.07268097582,
+    25.77571319004192
+   ],
+   "seconds": 569.6
+  },
+  {
+   "start": "s6_perturbed",
+   "logpost": -5657.288636881297,
+   "logpost_multistart_file": -5657.288636881297,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.0006112483522134356,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "-p13",
+    "step": 0.0001,
+    "improvement": 8.410097507294267e-09
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -1.0664691217243671e-05,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.0403342489880607e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.0433086319826543e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -0.005249026187811978,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6993725156823458e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006590541743207723
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009524969573249109,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.524969573249109e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044158630771562457
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.009524969558697194,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.524969558697194e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00044158629316370934
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.07098174320708495,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007098174320708494,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016996266931528226
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.1429415685124695e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.1429415685124697e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.3091499567963183e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -0.005249026187811978,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6993725156823458e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006590541743207723
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.07098174320708495,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007098174320708494,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016996266931528226
+    }
+   ],
+   "n_boundary_points": 8,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12848.405184104991,
+    3.0036537793233626,
+    -453.8020079326533,
+    2.293117597303922,
+    19755.924519339915,
+    -11.838087372032657,
+    21426.618471017606,
+    -2.4918587858807584,
+    6499.571207921962,
+    -9.651773186963263,
+    33652.62850534776,
+    -18.94491957995159,
+    -41001.40131428962,
+    25.777438269680818
+   ],
+   "seconds": 594.3
+  },
+  {
+   "start": "s7_perturbed",
+   "logpost": -5657.288636903301,
+   "logpost_multistart_file": -5657.288636903301,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.00037126045673782014,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "+p3",
+    "step": 1e-05,
+    "improvement": 1.115949999075383e-09
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -1.077092019841075e-05,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.0506968225583607e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.050804323516786e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -0.005233092262642458,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6911783101039066e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006580790068255737
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.00953795296663884,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.537952966638841e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.000441883661551401
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.00953795296663884,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 9.537952966638841e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004418836469994858
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.07096283584542107,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007096283584542107,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016994016477838159
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.121043846476823e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.1210438464768233e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.3049633707851171e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -0.005233092262642458,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 2.6911783101039066e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0006580790068255737
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.07096283584542107,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0007096283584542107,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016994016477838159
+    }
+   ],
+   "n_boundary_points": 8,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12848.333481139933,
+    3.0036527540434257,
+    -453.7996826681624,
+    2.293118500459483,
+    19755.80645199773,
+    -11.837971398242422,
+    21426.195660085934,
+    -2.4916059015182355,
+    6499.44928341868,
+    -9.651654409852547,
+    33652.035187974354,
+    -18.944546944218036,
+    -41000.84621919982,
+    25.776754905619313
+   ],
+   "seconds": 499.8
+  },
+  {
+   "start": "s4_perturbed",
+   "logpost": -5657.293148832628,
+   "logpost_multistart_file": -5657.293148832628,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.0002504970304742927,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "-p10",
+    "step": 1e-05,
+    "improvement": 2.1191226551309228e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -0.00019252749916631728,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.878094238029956e-06,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 6.955453136470169e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -9.546056389808655e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.909170068847511e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.872213372029364e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 67,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -1.3425338955566986,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 0.0069041360613755,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.034193389656138606
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010875928608584218,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010875928608584218,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004712405934697017
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010875928608584218,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010875928608584218,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00047124056436587125
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.06983300710271578,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006983300710271578,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.001685216004261747
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.764239954762161e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.764239954762161e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.4246455975808203e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -9.546056389808655e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.909170068847511e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 2.872213372029364e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.06983300710271578,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006983300710271578,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.001685216004261747
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 208,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2",
+      "FCC_A1"
+     ],
+     "residual": -0.007616500894073397,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.59176542990248e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00025521784846205264
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 392,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.007616500894073397,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.59176542990248e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00025521784846205264
+    }
+   ],
+   "n_boundary_points": 11,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12846.777079634918,
+    3.003831505929548,
+    -451.41856439924413,
+    2.2946118457867413,
+    19886.697478195278,
+    -11.91759813268781,
+    21140.6900235899,
+    -2.3145263710587973,
+    6397.038223966365,
+    -9.58559155453622,
+    33946.84799023103,
+    -19.10466657741327,
+    -40980.629309811186,
+    25.67746885992776
+   ],
+   "seconds": 494.6
+  },
+  {
+   "start": "s5_perturbed",
+   "logpost": -5657.293148836689,
+   "logpost_multistart_file": -5657.293148836689,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.00020977970141969885,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "+p13",
+    "step": 1e-05,
+    "improvement": 1.8553691916167736e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -0.00019319041166454554,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.884560909797011e-06,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 6.966506771277636e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -9.560608305037022e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.9166535598061205e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 3.0454975785687566e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 67,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -1.3421192780224374,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 0.0069020038426811006,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.034193389656138606
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010882546412176453,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010882546412176453,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004713829985121265
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010882546412176453,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010882546412176453,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004713829548563808
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.06981863011606038,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006981863011606038,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016850460087880492
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.797552199102938e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.7975521991029384e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.4304358046501875e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -9.560608305037022e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.9166535598061205e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 3.0454975785687566e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.06981863011606038,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006981863011606038,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016850460087880492
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 208,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2",
+      "FCC_A1"
+     ],
+     "residual": -0.007622107907081954,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.598826566543631e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0002553118974901736
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 392,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.007622107907081954,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.598826566543631e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0002553118974901736
+    }
+   ],
+   "n_boundary_points": 11,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12846.76843859435,
+    3.003836014320104,
+    -451.3246360603698,
+    2.294575304274089,
+    19886.818352773385,
+    -11.917663791013833,
+    21140.45856221112,
+    -2.3143643327921786,
+    6397.150696670893,
+    -9.585650161489147,
+    33946.48369194777,
+    -19.10443481716007,
+    -40980.274294151415,
+    25.67712469087176
+   ],
+   "seconds": 474.8
+  },
+  {
+   "start": "s0_start",
+   "logpost": -5657.293148846702,
+   "logpost_multistart_file": -5657.293148846702,
+   "kind": "smooth",
+   "eligible": true,
+   "grad_norm_scaled_analytic": 0.0005251872214876279,
+   "kink_stationary_test": true,
+   "n_directions": 46,
+   "steps": [
+    1e-06,
+    1e-05,
+    0.0001
+   ],
+   "improvement_tolerance": 1e-06,
+   "worst_direction": {
+    "dir": "-p3",
+    "step": 1e-05,
+    "improvement": 9.968061931431293e-10
+   },
+   "n_violations": 0,
+   "violations_first": [],
+   "eligible_stationarity": true,
+   "boundary_points": [
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 45,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1636.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "LIQUID",
+      "BCC_A2"
+     ],
+     "residual": -0.0001926016848301515,
+     "sigma": 102.51216114068416,
+     "abs_residual_over_sigma": 1.8788179147431258e-06,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 6.956681318115443e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 66,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -9.546056389808655e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.909170068847511e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 4.053537850268185e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 67,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "FCC_A1",
+      "LIQUID"
+     ],
+     "residual": -1.3399292662652442,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 0.006890741453554304,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.03419338971434627
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 83,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010887029464356601,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010887029464356601,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004714784590760246
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 85,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1616.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_NI": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.010887029508012347,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.00010887029508012347,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0004714784736279398
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 86,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -0.06981532214558683,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006981532214558684,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016850046522449702
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 117,
+     "reference": "svechnikov1962characteristics",
+     "region": 0,
+     "conditions": {
+      "T": 1650.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "LIQUID",
+     "composition": {
+      "X_CR": null
+     },
+     "region_phases": [
+      "BCC_A2",
+      "LIQUID"
+     ],
+     "residual": -3.809982445091009e-05,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 3.809982445091009e-07,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 1.4325836673378944e-05
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 162,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1674.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "FCC_A1",
+     "composition": {
+      "X_NI": 0.727
+     },
+     "region_phases": [
+      "FCC_A1"
+     ],
+     "residual": -9.546056389808655e-09,
+     "sigma": 194.45356864667983,
+     "abs_residual_over_sigma": 4.909170068847511e-11,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 4.053537850268185e-06
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 172,
+     "reference": "jenkins1937some_alloys",
+     "region": 0,
+     "conditions": {
+      "T": 1617.15,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.401
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.06981532214558683,
+     "sigma": 100.0,
+     "abs_residual_over_sigma": 0.0006981532214558684,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.0016850046522449702
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 208,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2",
+      "FCC_A1"
+     ],
+     "residual": -0.00760617274499964,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.578758777028898e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00025504826044198126
+    },
+    {
+     "group": "zpf",
+     "kind": "zpf_vertex",
+     "index": 392,
+     "reference": "bechtoldt1961redetermination",
+     "region": 0,
+     "conditions": {
+      "T": 1486.0,
+      "P": 101325.0,
+      "N": 1.0
+     },
+     "phase": "BCC_A2",
+     "composition": {
+      "X_NI": 0.2849
+     },
+     "region_phases": [
+      "BCC_A2"
+     ],
+     "residual": -0.00760617274499964,
+     "sigma": 79.40666345247388,
+     "abs_residual_over_sigma": 9.578758777028898e-05,
+     "within_own_uncertainty": true,
+     "max_one_step_change": 0.00025504826044198126
+    }
+   ],
+   "n_boundary_points": 11,
+   "n_boundary_points_outside_own_uncertainty": 0,
+   "hinge_unequal_sides": [],
+   "failed_equilibria": [],
+   "n_failed_equilibria": 0,
+   "theta": [
+    -12846.736834225369,
+    3.003805705572717,
+    -451.3900242876223,
+    2.2946503619540692,
+    19886.64988839086,
+    -11.917569883291954,
+    21140.554127740426,
+    -2.3143958358614776,
+    6397.226571185069,
+    -9.585711538000805,
+    33946.66932231939,
+    -19.104535498897192,
+    -40980.76485406228,
+    25.677697756925856
+   ],
+   "seconds": 476.2
+  }
+ ]
+}

@@ -1,0 +1,356 @@
+# Specific protocol (Y32 level 2) for ONE artifact: the Cr-Ni TDB picked as step 4 on 6 Nov 2026 by the PI (step4c-b, start s4,
+# hinge floor), the worked example of the unified ORCHID + PhaseForge + PhaseForge+ Cr-Ni paper. New version of the Cr-Ni specific
+# protocol; crni-paper-fit-step4-s1@0.1.0-draft (step-4 pick s1) is kept unchanged. Back-filled from the campaign files (read only).
+type: specific_protocol
+schema_version: orchid-assessment-schema@1.0.0-draft.2
+id: crni-paper-fit-step4c-b
+version: 0.2.0-draft
+title: Cr-Ni liquidus-first fit from the PhaseForge one-shot to the step-4 pick step4c-b s4 (hinge floor; step4c_b_hingefloor_pick.tdb)
+status: draft
+status_note: >-
+  DRAFT. Reproduces the CURRENT Cr-Ni pick tdb/step4c_b_hingefloor_pick.tdb (PI decision 6 Nov 2026: step4c-b is the step-4 pick and
+  the hinge floor is a protocol rule, fit_protocol item 8, bef0bae). Steps 1-3b are unchanged from crni-paper-fit-step4-s1@0.1.0-draft
+  (same run cards, same files); step 4 is step4c_b_hingefloor. Draft until the PI approves it and an independent rerun has passed (Y32).
+system: CR-NI
+purpose: >-
+  Rebuild the Cr-Ni TDB tdb/step4c_b_hingefloor_pick.tdb from its inputs: the PhaseForge one-shot (128-atom m_scraps SQS over the whole
+  range, staged relaxation with GRACE-2L-SMAX-OMAT-large and the relaxation midpoint rule for the anchors, 100 ps liquid MD at 1900 and
+  2200 K with the corrected Hong-Liu entropy), set E Cr-Ni data with ORCHID-rule sigmas, two ORCHID records (eutectic ORC-SV7H3CNRYS,
+  CrNi2 ordering ORC-X3KVP7D3PO), excluded phases at every observed state with per-phase certainty tiers, per-record ZPF scales sigma_DF
+  floored at the tier, the hinge floor sigma = max(tier, converted state uncertainty), the smooth hinge onset, 17 kinetically limited
+  CrNi2 absences suspended, and the sequence step 2 -> 3b -> 4c-b with gradient ESPEI on the Studio, followed by the physics checks and
+  the Laplace-mixture UQ.
+licence: CC-BY-4.0
+created: '2026-11-06'
+maintainers:
+  - {name: Raymundo Arróyave, role: PI, email: rarroyave@tamu.edu}
+  - {name: Claude (ORCHID agent), role: maintainer}
+rationale_document:
+  path: <home>/ScientificRuns/crni-paper-fit-20261106/PLAN.md
+  sha256: 339344d43324c3e673a700a4ee2ee5dd5fb39e04611a653bdc002a829a7963e9
+  storage_class: local
+  role: campaign plan with run log (written before any fit)
+supersedes:
+  - {path: protocols/specific/crni-paper-fit-step4-s1@0.1.0-draft.yaml, relation: 'previous version of the Cr-Ni specific protocol (step-4 pick s1, CrNi2 top 780 K); kept unchanged; steps 1-3b shared', storage_class: local}
+changelog:
+  - {version: 0.2.0-draft, date: '2026-11-06', who: 'PI (decision); agent (document)', change: 'step-4 pick = step4c_b_hingefloor s4 (was step4_solid s1); new run cards, evidence bundle crni-paper-fit-step4c-b@1.0.0, code snapshot, dashboard; overrides updated to the item-8 rules now applied', bump: minor, why: 'PI 6 Nov: hinge floor adopted after the step-4c test (0 of 8 starts stationary without it, 8 of 8 with it; CrNi2 860 K vs 863 K)'}
+instantiates:
+  - protocol: orchid-calphad-fit@2.0.0
+    file: {path: <orchid-sage>/protocols/general/orchid-calphad-fit@2.0.0.yaml, sha256: 27b54fa9cd3f4fe50aa67654b42979a92c644e17fd4f914d501d798dbd19e4b7, storage_class: local}
+artifact:
+  kind: tdb
+  file: {path: <home>/ScientificRuns/crni-paper-fit-20261106/tdb/step4c_b_hingefloor_pick.tdb, sha256: 3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78, storage_class: local, role: 'final pick (byte-identical to steps/step4c_b_hingefloor/s4_perturbed.tdb and the bundle artifact copy)'}
+  produced_by: crni-paper-fit-step4c-b@0.2.0-draft
+  tdb_provenance: {generation_method: phaseforge_plus, potential: GRACE-2L-SMAX-OMAT-large, parents: 'CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb (84ec5ae4...) -> step1_oneshot.tdb -> step2 s7 -> step3b s1 -> step4c-b s4'}
+
+inputs:
+  - id: oneshot_results
+    name: PhaseForge one-shot energetics and liquid results (crni-phaseforge-20261105)
+    kind: campaign_dataset
+    storage_class: local
+    files:
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/solids_GRACE-2L-SMAX-OMAT-large.json, sha256: 1a254993067fb230851265157722982a792f8f48066428068246bac605e3bc3e, storage_class: local, role: staged SQS energies (value potential)}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/solids_GRACE-2L-OMAT.json, sha256: ba7e4dc6fc171a9e797fe92e53ec89300a83ddf784b154837efad070e06ec3e7, storage_class: local, role: cross-check potential}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_checks_enthalpy.json, sha256: 88bc894ceada3bfe87195d8f6de558e30774e6ab44e9a05012787983085c638e, storage_class: local, role: liquid H_mix 1900/2200 K}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_excess_entropy.json, sha256: 8f8c1869df94e0ae7bad683d5a6500341460a3a4b85a604abc73ed6af1aab082, storage_class: local, role: liquid S_ex (provisional)}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/liquid_ideal_mixing_check.json, sha256: 7df7b32826ab40becdefca9579cb4cdd750b2d1c6380d6b5ccfa8446c675a043, storage_class: local, role: ideal-mixing check}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/results/oneshot_tdb.json, sha256: 51ab0531d7300f6e9ca96d7d43270f334e963cbf4aaf129aaef1044df43d42aa, storage_class: local, role: one-shot build record}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb, sha256: 84ec5ae41a42650e0915683f4e3a2fd552e33b98b9c7c62b3b28b3ad3e70aaf8, storage_class: local, role: one-shot TDB with S_ex (start)}
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_GRACE-2L-SMAX-OMAT-large.tdb, sha256: 108378d67447667b534a46f13421d0a270947c8f45a8702701bbbd7a8bebdbac, storage_class: local, role: one-shot TDB without S_ex (comparison start)}
+  - id: unaries
+    name: SGTE91 unaries of the Kunselman et al. Cr-Ni model form (LIQUID, BCC_A2, FCC_A1; no magnetic terms)
+    kind: unary_tdb
+    storage_class: local
+    files:
+      - {path: <home>/ScientificRuns/cr-ni-rebuild-20261105/inputs/cr-ni-model.tdb, sha256: f9a7769eb204a82578e288f20df9f7f27a0e3bc5ea3b1e61ad960425dab11233, storage_class: local}
+  - id: mlip_weights
+    name: GRACE potentials (hash list)
+    kind: mlip_weights
+    storage_class: public
+    files:
+      - {path: <home>/ScientificRuns/crni-phaseforge-20261105/provenance/potential_sha256.txt, sha256: bd774abc6bb5ffc12f5accb42476cf34fc96cc7c8e17a2b30e72623dd9d3432c, storage_class: local}
+  - id: sigma_mlip
+    name: sigma_MLIP = 9.687 kJ/mol-atom
+    kind: calibration
+    storage_class: local
+    files:
+      - {path: <home>/projects/orchid-phaseforge-demo/results/sigma_mlip.json, sha256: deb9e596c03bc640163cf06e9d7b4b333bf0327fe2461d7f183a9303e0018375, storage_class: local}
+  - id: set_e
+    name: set E Cr-Ni datasets with ORCHID-rule sigmas and the set E hinge (cr-ni-rebuild-20261105)
+    kind: campaign_dataset
+    storage_class: local
+    files:
+      - {path: <home>/ScientificRuns/cr-ni-rebuild-20261105/inputs/derived/setE_orchid_sigmas/BUILD_LOG.json, sha256: 546a0fb42cc4f4cb4e290ad00946afc9e7cb85e70875c8656241a7de94a27c06, storage_class: local, role: build log with the sigma basis per file}
+    note: the individual set E files read by each step are hashed in the step run cards (data_files)
+  - id: orchid_records_restricted
+    name: private ORCHID exports read for the CrNi2 ordering record, the eutectic, Pugliese gamma states and Curie marks
+    kind: restricted_source
+    storage_class: restricted
+    files:
+      - {path: <home>/data/private/crni-assessment-export-20261105/records.jsonl, sha256: bb4aab0d9f917b4da9093304748cbf7d3692efd27808be54e224d0dddbbf7424, storage_class: restricted, role: 'Hao et al. 2021 assessment export (ORC-X3KVP7D3PO; Curie marks of Fig. 13(a)); hash only'}
+      - {path: <home>/data/private/crni-pugliese-export-20261105/records.jsonl, sha256: c1d698974d373b27694792ac3cd460ddf62afd406904737e4835eade1aa6c400, storage_class: restricted, role: 'Pugliese & Fitterer 1970 export (Table II states, Table III limits); hash only'}
+    orchid: {record_ids: [ORC-SV7H3CNRYS, ORC-X3KVP7D3PO]}
+  - id: coherent_inputs
+    name: Cahn coherent-strain inputs (k = eta^2 Y V_m; base/low/high)
+    kind: campaign_dataset
+    storage_class: local
+    files:
+      - {path: <home>/ScientificRuns/cr-ni-coherent-20261105/results.json, sha256: c7d7369ef5944b00bfe1da81b7c6a99958a604814e096ae34f2b91d338b70255, storage_class: local}
+
+  - id: step4c_inputs
+    name: 'step-4c data build (tiers3, per-record sigma_DF, completed exclusions, hinge floor) - derived files of the campaign'
+    kind: campaign_dataset
+    storage_class: local
+    files:
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/step4c_build.json, sha256: fea24302a699a357dbb3b04f9f17253cc60c7034c81432308213593ab52230e6, storage_class: local, role: step-4c build record}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/tiers3.json, sha256: 509c66c81a04cdc7e1d431d98a93860b9d3fb0fdb2f0f5795bbc7f69c5950fda, storage_class: local, role: per-excluded-phase tiers}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/zpf_sigma_conversion.json, sha256: b52523f841d0188334fb53ed1cdc77aab7abb7f76bf2804ab16b47aaf86ab4fb, storage_class: local, role: per-record sigma_DF}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/hinge_observed_sigma.json, sha256: 66a38330f4c693da85fcbbf488279c718c63877ea3f13cf654c05b42792bb749, storage_class: local, role: 'converted state uncertainty per (state, excluded phase)'}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/step4c_b_hinge_floor.json, sha256: 8f7dd81cd84c61cf81f9b751e661e133db8306ec4f334176eb2d4687929ad28f, storage_class: local, role: 'hinge floor - 868 of 878 scales raised'}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/data/hinge/step4c_hinge_floor.json, sha256: 4ab667e875b304bfff96022d67e82af617429e3a0162e58d839c0238b65604df, storage_class: local, role: hinge sidecar read by the objective}
+      - {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/check10a_step4c_b_hingefloor.json, sha256: 97799d5164702165a9d48548796de333d56f7bc4d7e731f0c5f69f1aaa2bf042, storage_class: local, role: 'fit_protocol 10a with the kink rule (PI 6 Nov, 6b8f443): 8 of 8 smooth and kink-stationary, 8-11 on-boundary ZPF vertices per endpoint all within their own sigma, no failed equilibria; pick s4 (scripts/check10a.py, kink10a.py)'}
+    note: the 367 data files read by step 4c-b are hashed in its run card (data_files)
+
+code:
+  - id: snapshot
+    kind: file_set
+    repository: orchid-sage (github orchid-calphad, private until release)
+    path: assessments/crni-paper-fit-step4c-b/code/
+    note: 'byte-identical snapshot of the launch-time code of step 4c-b (code_used/step4c_b_hingefloor/) and the data builders upstream of it (MANIFEST.json maps each file to its original path, sha256 and mtime); steps 1-3b code is the crni-paper-fit-step4-s1 snapshot (commit 94cc153)'
+    files:
+      - {path: assessments/crni-paper-fit-step4c-b/code/MANIFEST.json, sha256: c924795cf274ca0aba2e167d7e2e60e4844f1493a5569a1d0d24492604ab4b35, storage_class: local, role: manifest}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/apply_pick_rule.py, sha256: 8f4155f3c881b29878dfc85b87545bbe488fb34a3bae9f9c882b5d9f54c8cc4a, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/apply_pick_rule.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_hinge_complete.py, sha256: c9ad96ae9b722efb8535be5fa3b3d1b09a2b793fd06231b0423fa325b7586ae6, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_hinge_complete.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_step4c_floor.py, sha256: ccdc7cdb00c4d8862247214ba5b54c43a6cb721ecfcd7194ab6e9905062937bb, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_step4c_floor.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_step4c_v2.py, sha256: 566745452c1c351f532ad25637cb7b8f560f60e2e52ded8cad7b161775a36089, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_step4c_v2.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_tiers3.py, sha256: f60f28d88d3a4f1c651de07b308fff0153c1f1069755475021f7a9971b4862e2, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_tiers3.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_zpf_sigma.py, sha256: 1bd9c6dad6467abca835797353a9c3b8880054bc7a2f0a93173bed78e028c6a2, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_zpf_sigma.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/classify_draws.py, sha256: a77747ae4a8570b4857e42d2089c7dc78c9bcaf94bb424c6052b5db352427281, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/classify_draws.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/compare_tests_v3.py, sha256: b860ce540e8f8ecc6048024f862ed9ba0730f3bf4b424b42c38b6180cf7b55d3, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/compare_tests_v3.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/emit_run_cards_v5.py, sha256: 9202ce08927888ce1d90c09ed8780348d199b82cd21c1e068bf7d6543c9218f0, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/emit_run_cards_v5.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/evaluate.py, sha256: 6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/evaluate.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/fit2.py, sha256: 829a58eb99cf6554d6c30eced5d82e084efe5860a48e3c1b26c1523255936cfd, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/fit2.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/laplace2.py, sha256: 196ca84202274c358ff981ff0c17fe80e62b44f7c2b23eb39037a79b1217186b, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/laplace2.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/model2.py, sha256: a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/model2.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/pd4.py, sha256: c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/pd4.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/per_dataset.py, sha256: 9afecb92069e98a777e5f22080834ace88133fc67fadda89616ca4ccdd302600, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/per_dataset.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/physics.py, sha256: aaeb1a663ef0156486b6e73e866f646ff8fc2f9b08b5d43e8b1a604dbd38ca23, storage_class: local, role: 'step 4c-b fit, data build, checks, UQ (launch-time copy); original <home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/physics.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_data.py, sha256: c9b51c7d218a61aa22ef42330b520c11ef5c7b2ef5c7d84971b8f279471aea8d, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_data.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_hinge.py, sha256: daac454ccc1f0aa97390795d26b7d5e69e64c713fa04ad26f2fb59c5cdd902ba, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_hinge.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_hinge_observed.py, sha256: e0bd85087e95c509605d56e6cd07c31d37944d3b72f69f58e831f35870d14811, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_hinge_observed.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_tiers.py, sha256: ab36123c0a3c7050f52c433bd24e195a4b65ff8e106efe53087050259734d518, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_tiers.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/build_tiers2.py, sha256: 496e5155081c8e5b5b668c6e1ac455f8f2a879f07fa193371f785e2912cf3cf6, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_tiers2.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/data_consistency.py, sha256: 1d46efa73a8074a1dda9e7f023e21feec99a9dfcee59e37452c550493ee2b011, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/data_consistency.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/model.py, sha256: 5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/fit.py, sha256: 3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/make_base.py, sha256: 758be969fcd704d357245d5bea1e0a4eca626a41872069f3ee5312f6155b35c2, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/make_base.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/summarize.py, sha256: c2dcf225104497a9e6c7a020356be78e5cd2d15982390eaf8c887c571e5e67e4, storage_class: local, role: 'data build upstream of step 4c-b; original <home>/ScientificRuns/crni-paper-fit-20261106/scripts/summarize.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/scripts/style.py, sha256: 1a22f8a496912939f92ffc3f7cb0b9cb53c7f4aa8365a160f37a6c09ec3497a4, storage_class: local, role: 'figure style imported by evaluate.py; original <home>/projects/2026_arroyave_nicr_paper/scripts/style.py'}
+      - {path: assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log, sha256: d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13, storage_class: local, role: 'campaign record (frozen copy); original <home>/ScientificRuns/crni-paper-fit-20261106/logs/step4c_b_hingefloor.log'}
+  - id: snapshot_steps_1_3b
+    kind: git
+    repository: orchid-sage (github orchid-calphad, private until release)
+    commit: 94cc153
+    path: assessments/crni-paper-fit-step4-s1/code/
+    note: code of steps 1-3b (unchanged lineage; see crni-paper-fit-step4-s1@0.1.0-draft)
+  - id: phaseforgeplus
+    kind: git
+    repository: <home>/src/PhaseForgePlus (local)
+    commit: c66656faad884c7ed11354417bc89074665a74f3
+    note: 'the spark1 copy used by the Cu-Zr fits is file-by-file identical (protocols/environment/pins/spark1_phaseforgeplus_files.sha256)'
+  - id: protocol_tools
+    kind: file_set
+    path: protocols/tools/
+    entry_points: [orchid_reproduce.py, evaluate_states.py, build_evidence_bundle.py, tdb_header.py, run_with_fixed_date.py]
+environment:
+  - id: fit_env
+    kind: venv
+    path: <fit-env>
+    python: 3.12.14
+    packages: {espei: 0.8.11.dev82+g9039ea215, pycalphad: 0.11.3.dev35+g9a6939dd2, numpy: 2.5.4, scipy: 1.18.1}
+    lockfile: {path: <orchid-sage>/protocols/environment/espei-pr268.lock.txt, sha256: e0138471ec8a9b1945b893c6547f212d955310491e534e89ed55e9172bdcafed, storage_class: local}
+    hosts: [mac-studio]
+    verify_command: <fit-python> -c "import espei; print(espei.__version__)"
+
+
+overrides:
+  - {parameter: certainty_tiers, value: 'per excluded phase (tiers3: 10 / 50 / 100 J/mol-atom); ZPF records 100, 50 when replicated (Karmazin 550 C and Zhang at 100); observed states at confidence 1.0', general_default: certainty tiers per excluded phase (item 8), reason: applied as written, source: 'results/tiers3.json; fit_protocol item 8', conforms: true}
+  - {parameter: hinge_sigma_floor, value: 'hinge sigma = max(tier, converted state uncertainty), converted at the step-4 s1 pick (build_hinge_observed.py; 868 of 878 scales raised)', general_default: 'max(tier, converted state uncertainty) at the previous accepted step', reason: 'the conversion was evaluated at the step-4 s1 pick (the then-current step-4 fit), not at the step-3b pick the fit started from', source: 'scripts/build_step4c_floor.py; results/hinge_observed_sigma.json', conforms: true}
+  - {parameter: ZPF driving-force scale, value: 'per-record sigma_DF = sqrt((|dS| sigma_T)^2 + (G'''' sigma_x |dx|)^2), floored at the record tier', general_default: weights from uncertainties (item 8 per-record ZPF scale), reason: applied as written, source: results/zpf_sigma_conversion.json, conforms: true}
+  - {parameter: hinge onset, value: 'smooth (softplus) onset of width sigma/5', general_default: smooth hinge (item 8), reason: applied as written, source: steps/configs/step4c_b_hingefloor.json hinge_smooth, conforms: true}
+  - {parameter: kinetically limited absences, value: 'CRNI2 exclusions dropped at 17 short-anneal states below 900 K; 12 Jette/Karmazin rows below 900 K enter as metastable bcc+fcc with CRNI2 suspended (data/zpf_susp)', general_default: item 8 kinetically limited absences, reason: applied as written; recorded as a decision, source: 'steps/configs/step4c_b_hingefloor.json note; scripts/model2.py', conforms: true}
+  - {parameter: phases, value: 'LIQUID, BCC_A2, FCC_A1 (disordered), CRNI2 stoichiometric 1:2 (Pt2Mo type) on SGTE fcc references; no FCC_L12; no magnetic terms', general_default: disordered unless evidence requires ordering, reason: PI decision 6 Nov (FCC_A1 only); CrNi2 is a known ordered compound, source: crni-phaseforge-20261105 PLAN.md "PI decision (6 Nov) - disordered fcc only", conforms: true}
+  - {parameter: liquid temperatures, value: '2200 K (primary) and 1900 K (secondary); 864-atom check at x_Ni 0.5, 2200 K', general_default: one T just above the highest melting point, reason: 1900 K tests the temperature dependence; pure Cr crystallised at 1900 K after 82 ps and is analysed over 80 ps, source: crni-phaseforge-20261105 PLAN.md, conforms: true}
+  - {parameter: prior, value: 'weak Normal prior centred at the one-shot (sd 50 kJ/mol on a-terms, 30 J/mol/K on b-terms)', general_default: none stated, reason: kept so that the Laplace step has a proper posterior (the rebuild's prior form), source: PLAN.md multistart section; scripts/model2.py, conforms: true}
+  - {parameter: step-2 free set, value: '12 symbols (liquid, bcc, fcc a,b); CRNI2 a,b NOT free in step 2', general_default: every phase free (held = anchored), reason: planned before the 6 Nov rule; step 3a showed fixing CrNi2 breaks the topology; step 3b and 4c-b free it, source: steps/configs/step2_liquidus.json; PLAN.md run log, conforms: false}
+  - {parameter: step-2 pick, value: s7_perturbed (converged best start of the single mode), general_default: ranker pick, reason: 'the mechanical ranker chose s2 on a 1-temperature grid difference although s2 had not converged (|g| 0.011)', source: PLAN.md run log, conforms: true}
+  - {parameter: step-3b pick, value: 's1_perturbed (campaign ranker of 6 Nov)', general_default: 'fit_protocol 10a - converged starts only', reason: 'no step-3b start meets 10a (Q36, Q39, DR-convergence-nonsmooth of 0.1.0-draft); step 4c-b starts from this TDB', source: 'OPEN_QUESTIONS Q36, Q39', conforms: false}
+  - {parameter: accepted topology, value: 'stated in PLAN.md before ranking (bcc | bcc+CrNi2 | CrNi2 | CrNi2+fcc | fcc below T_CrNi2 in 800-930 K; eutectic 1560-1680 K; no same-phase gap; no spurious field)', general_default: R2, reason: stated before ranking, source: PLAN.md, conforms: true}
+  - {parameter: plausibility thresholds, value: 'one-shot solid/compound within 10 kJ/mol-atom; |S_ex(0.5)| <= 2.5 J/mol-atom/K for bcc/fcc; liquid S_ex within 3u; thermochemistry RMSE by dataset within ~2 sigma; pure elements = SGTE', general_default: R1, reason: stated before ranking, source: PLAN.md, conforms: true}
+  - {parameter: liquid entropy estimator, value: 'corrected Hong-Liu chemical term (hongliu_mixing.py) + the campaign VACF estimator (pre-PR scripts)', general_default: 'MLIPentropy (PhaseForge PR #11, a08ff3e)', reason: 'the Cr-Ni liquid analysis (5-6 Nov) predates the packaged MLIPentropy; Cu-Zr validation agreed within 0.1 J/mol-atom/K', source: 'crni-phaseforge-20261105 PLAN.md; cuzr-protocol-oneshot PLAN.md Run 2 item 2', conforms: true}
+
+evidence_selection:
+  orchid: {repository: 'set E (cr-ni-rebuild-20261105, ESPEI-format Cr-Ni datasets with ORCHID-rule sigmas) + ORCHID records from private exports', commit: none (not a git checkout; every file hashed in the run card), query: 'set E files split by phase content into data/{liq_c,solid_c,zpf_susp,thermo,oneshot_relax} (step-4c build); + ORC-SV7H3CNRYS (eutectic, accepted) and ORC-X3KVP7D3PO (CrNi2 ordering, single reader)'}
+  manifest: {path: <home>/ScientificRuns/crni-paper-fit-20261106/results/step4c_build.json, sha256: fea24302a699a357dbb3b04f9f17253cc60c7034c81432308213593ab52230e6, storage_class: local}
+  bundle: {manifest: {path: assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.0.0.json, sha256: 60a4a11e771160c7f0eff9ccc0840af55337a9f71e9f22f25e8068ccb2d36d7a, storage_class: local}, states: {path: assessments/crni-paper-fit-step4c-b/evidence/states@1.0.0.json, sha256: 7121c9a34d5315b6acacd2a1607f77f9ac69e9bd2cb5a1d9843cc8f3e9ea0205, storage_class: local}, states_evaluated: {path: assessments/crni-paper-fit-step4c-b/evidence/states_evaluated@1.0.0.json, sha256: b610e5ecb4c0bb61ff6ee0c6837c42aeaac4f06ff379dc80b87e32f52b1ef7b6, storage_class: local}, bundle_sha256: 262e943ade58a21eecbcc76d04c8c15c1d7d34da08682ae033aa847488d686d8, intake: {path: assessments/crni-paper-fit-step4c-b/intake/intake_manifest.json, sha256: 4f93ef9bd0809d733a28289997b012a8faed7b1568df6e3d3ec036a2357a6025, storage_class: local}}
+  digest_source: {path: <orchid-sage>/protocols/run_cards/crni-step4c_b_hingefloor.json, sha256: 6abdca1d7a0717962c4c3c76bf9a4a9ad8048b10d945ba238bc1ed7beb81d86c, storage_class: local}
+  result_sha256: dac8043938d25f42611f0e287819ccce4a1abb67f7f22cfe089c3d97998b054e
+  exclusions:
+    - {what: Hao Fig. 16 boundary marks (CrNi2 + fcc and bcc + fcc), reason: 'single-reader figure marks; CrNi2 composition spread 0.65-0.76 against a stoichiometric model', source: PLAN.md step-4 exclusions paragraph}
+    - {what: ORCHID model-class CrNi2 temperatures 807/820/863 K, reason: calculated stays out, source: PLAN.md}
+    - {what: L1_2 / L1_0 / D0_22 ordered fcc cells, reason: 'computed, NOT USED (PI 6 Nov: disordered FCC_A1 only)', source: crni-phaseforge-20261105 results/NOT_USED.md}
+    - {what: CRNI2 exclusions at 17 short-anneal states below 900 K, reason: 'kinetically limited absences (PI 6 Nov, item 8): another source reports CrNi2 there', source: steps/configs/step4c_b_hingefloor.json}
+  interpretations:
+    - {what: BCC_A2 exclusions at 17 Pugliese 1970 activity states, label: 'phase from the same paper''s Table III gamma limits (Table II prints no phase per row); assumed', source: scripts/build_hinge.py; build_hinge_complete.py}
+    - {what: fcc Curie-temperature marks (Hao Fig. 13(a)) as single-phase fcc states at T >= 298.15 K, label: 'expected FCC_A1; penalize BCC_A2, CRNI2, LIQUID; single reader', source: scripts/build_hinge.py}
+    - {what: CrNi2 ordering at 863 K, record_ids: [ORC-X3KVP7D3PO], label: 'ZPF CRNI2 (x 2/3) + FCC_A1 at zero phase fraction; CRNI2 excluded above it', source: scripts/build_data.py; scripts/build_hinge_complete.py}
+    - {what: eutectic 1618 K, record_ids: [ORC-SV7H3CNRYS], label: three-phase ZPF with the printed compositions, source: scripts/build_data.py}
+    - {what: partial tie-lines of set E, label: '(i) known phase + (ii) ZPF vertex pair with a null partner composition (fit_protocol 0.4a)', source: scripts/build_data.py}
+    - {what: 12 Jette/Karmazin rows below 900 K, label: 'metastable bcc + fcc with CRNI2 suspended (data/zpf_susp, evaluated without CRNI2)', source: scripts/model2.py; scripts/build_step4c_v2.py}
+  single_reader_flags:
+    - {what: CrNi2 ordering record, record_ids: [ORC-X3KVP7D3PO], note: 'single reader, not yet accepted; enters labelled (PI 6 Nov: second reading before release, not before fitting)'}
+    - {what: fcc Curie marks of Hao Fig. 13(a), note: single reader; enters labelled}
+    - {what: Pugliese gamma assignments, note: inference from Table III limits; PI to confirm as data}
+
+run_sequence:
+  - {run_id: crni-oneshot-solids-liquid, step: staged_relax, status: accepted, run_card: {path: <orchid-sage>/protocols/run_cards/crni-oneshot-solids-liquid.json, sha256: e83021e6d8f76c0995b11c590224df14f47b591910247899d82c1b82ed48374e, storage_class: local}, summary: 'solids both potentials, 128-atom SQS over the whole range; liquid 100 ps at 1900/2200 K; ideal-mixing check passed'}
+  - {run_id: crni-oneshot-build, step: build_oneshot_tdb, status: accepted, run_card: {path: <orchid-sage>/protocols/run_cards/crni-oneshot-build.json, sha256: b4eb7593d5ecf0524218e2ff74b189c5f4cf4f8995e4ab0b130a8178766dd894, storage_class: local}, summary: one-shot TDBs with and without S_ex; VV base}
+  - {run_id: crni-data-build, step: build_datasets, status: accepted, summary: 'build_data.py, build_hinge.py, data_consistency.py (steps 2-3b inputs; outputs hashed via the step run cards)'}
+  - {run_id: crni-step1_oneshot, step: oneshot_diagram, status: accepted, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step1_oneshot.json, sha256: db87872065cd1f7358f81b7e78e4ccde8b6612f38ac6eeb17dff6c9de193fdf6, storage_class: local}, summary: 'Cr-rich fcc too stable; liquid down only to 1730 K; CrNi2 to 1156 K; pure elements exact'}
+  - {run_id: crni-step2_liquidus, step: fit_liquidus, status: accepted, starts: 9, pick: s7_perturbed, start_from: crni-step1_oneshot, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step2_liquidus.json, sha256: 14597a3cdfdf0a0eaf35cc996abe0730fd5d3b9bfb1daf40486d82aad81307f8, storage_class: local}, summary: 'one mode (logpost -1703.68); eutectic 1616 K; CrNi2 (not free) to 1664 K'}
+  - {run_id: crni-step3_thermo, step: fit_thermo, status: failed, starts: 8, pick: s4_perturbed, start_from: crni-step2_liquidus, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step3_thermo.json, sha256: 63cd15cad2617ed84a815a6e30609cf33a2fc7cc5a34993e8816f174b18cfb84, storage_class: local}, summary: 'CRNI2 fixed: CrNi2 stable to 1828 K above the liquidus; reported, not continued'}
+  - {run_id: crni-step3b_thermo_crni2free, step: fit_thermo, status: accepted, starts: 8, pick: s1_perturbed, start_from: crni-step2_liquidus, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step3b_thermo_crni2free.json, sha256: c175574c89f0c6b26364b28797f0f9da1a10bf67980b510ead4d21c377fd57c7, storage_class: local}, summary: 'CRNI2 free, anchored at sigma 9.7 kJ: one mode in 7/8; eutectic 1626 K; CrNi2 top 1074 K'}
+  - {run_id: crni-step4_solid, step: fit_solid, status: superseded, starts: 8, pick: s1_perturbed, start_from: crni-step3b_thermo_crni2free, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step4_solid.json, sha256: fe424cea8c2666838869370bcd22025e6ee5bb56ec68c40fc1b691a161e4775b, storage_class: local}, summary: 'the 0.1.0-draft pick (CrNi2 top 780 K)', superseded_by: crni-step4c_b_hingefloor, superseded_because: 'PI 6 Nov: step4c-b (hinge floor) is the step-4 pick'}
+  - {run_id: crni-step4c-data-build, step: build_datasets, status: accepted, summary: 'build_hinge_complete.py, build_tiers3.py, build_zpf_sigma.py, build_hinge_observed.py, build_step4c_v2.py, build_step4c_floor.py: data/{liq_c,solid_c,zpf_susp,oneshot_relax}, data/hinge/step4c_hinge_floor.json (no run cards; every output hashed in the step-4c-b run card)'}
+  - {run_id: crni-step4c_b_hingefloor, step: fit_solid, status: accepted, starts: 8, pick: s4_perturbed, start_from: crni-step3b_thermo_crni2free, run_card: {path: <orchid-sage>/protocols/run_cards/crni-step4c_b_hingefloor.json, sha256: 6abdca1d7a0717962c4c3c76bf9a4a9ad8048b10d945ba238bc1ed7beb81d86c, storage_class: local}, summary: 'logpost -5657.2886; 8 of 8 starts converged (|g|_q 4.5e-05 to 9.9e-04, all < 1e-3; 10a with the kink rule (PI 6 Nov): 8 of 8 smooth, each also kink-stationary (0 violations in 46 directions x 3 steps); on-boundary data points: 8 ZPF vertices (Jenkins 1937, Svechnikov 1962; 11 at s5), |r|/sigma <= 0.007; no failed equilibria; results/check10a_step4c_b_hingefloor.json) in one mode (spread 4.5e-03); eutectic 1614 K, CrNi2 top 860 K'}
+  - {run_id: crni-step5-physics-residuals, step: physics_checks, status: accepted, start_from: crni-step4c_b_hingefloor, summary: 'results/physics_step4c_b.json, per_dataset_step4c_b_hingefloor.json (no run cards)'}
+  - {run_id: crni-uq-laplace-step4c_b, step: laplace, status: accepted, start_from: crni-step4c_b_hingefloor, run_card: {path: <orchid-sage>/protocols/run_cards/crni-uq-laplace-step4c_b.json, sha256: 2b8a77f98cc8fca16eea8cedf3d2a1a4cf0ed61f1a9c9b5b143e9c0968c5f66a, storage_class: local}, summary: 'weights 0.766 / 0.234 (A_s4 / A2_s5_flat, same basin); P(accepted topology) 0.989, P(CrNi2 within 25 K of 863 K) 0.871'}
+
+acceptance_target:
+  text: >-
+    Reproduced when (1) the deterministic files (data/<group>/, data/hinge/step4c_hinge_floor.json, configs) are byte-identical to the
+    hashes in the step-4c-b run card; (2) rerunning step 4c-b from the step-3b pick with the same build returns the s4 start with logpost
+    within 0.01 of -5657.2886, converged under 10a (|g|_q < 1e-3), and every parameter within 50 J/mol (a-terms) and 0.03 J/mol/K
+    (b-terms) (fit_protocol 10b; or the pick TDB byte-identical, sha256 36922433...); (3) the reproduced diagram over 600-2200 K has the
+    same phase sequence on heating at every x of a 0.01 grid, eutectic within 2 K of 1614 K and CrNi2 top within 2 K of
+    860 K (pd4 grid, 2 K steps); (4) pure elements exact; (5) the Laplace mixture weight of the main mode within 0.01 and
+    P(accepted topology) within 0.03 with new draws.
+  tolerances:
+    - {quantity: logpost of the s4 start, rule: absolute, value: 0.01, unit: log-units}
+    - {quantity: fitted a-terms of the pick (J/mol), rule: absolute, value: 50, unit: J/mol, note: 'fit_protocol 10b'}
+    - {quantity: fitted b-terms of the pick, rule: absolute, value: 0.03, unit: J/mol/K, note: 'fit_protocol 10b'}
+    - {quantity: eutectic and CrNi2 top temperatures, rule: absolute, value: 2, unit: K}
+    - {quantity: phase sequence on heating 600-2200 K on a 0.01 grid, rule: categorical_identical}
+    - {quantity: Laplace mixture weight of the main mode, rule: absolute, value: 0.01}
+    - {quantity: P(accepted topology) from 1000 new draws, rule: absolute, value: 0.03}
+  reference_values:
+    logpost: -5657.288636859774
+    grad_norm_q: 4.5368712701211385e-05
+    T_eutectic_K: 1614
+    T_CrNi2_top_K: 860
+    mixture_weights: {A_s4: 0.7661, A2_s5_flat: 0.2339}
+    P_ok_strict: 0.989
+    P_CrNi2_within_25K_of_863: 0.871
+    source: steps/step4c_b_hingefloor/evaluation.json, multistart.json, results/uq/laplace_step4c_b.json, results/uq/classified_mixture_draws_step4c_b.json
+
+reproduce:
+  command: see REPRODUCE.md (planned single command - orchid reproduce crni-paper-fit-step4c-b@0.2.0-draft)
+  byte_identical_expected: [data/<group>/*.json and data/hinge/step4c_hinge_floor.json as in the step-4c-b run card, every run card conversion]
+  not_reproducible:
+    - 'Steps 1-3b: reproduced by crni-paper-fit-step4-s1@0.1.0-draft (unchanged); the step-3b pick does not meet 10a and its intermediate pick is machine-dependent (Q36, Q39); this plan starts from the frozen step-3b pick TDB in the bundle'
+    - 'MLIP solids and liquid MD on the GPU (spark1): within the tolerances only; container digest not recorded'
+    - 'No independent rerun of step 4c-b on a second machine yet'
+    - 'Restricted inputs (two private exports) cannot be redistributed; a third party needs the ORCHID records they produce (ORC ids listed) or the papers'
+  independent_rerun: 'not yet run for step 4c-b (pending; Y32)'
+  stage:
+    manifests: [assessments/crni-paper-fit-step4c-b/code/MANIFEST.json, assessments/crni-paper-fit-step4c-b/evidence/MANIFEST@1.0.0.json]
+    copy: {assessments/crni-paper-fit-step4c-b/code/scripts: scripts, assessments/crni-paper-fit-step4c-b/evidence/files/oneshot_relax: data/oneshot_relax, assessments/crni-paper-fit-step4c-b/evidence/files/liq_c: data/liq_c, assessments/crni-paper-fit-step4c-b/evidence/files/solid_c: data/solid_c, assessments/crni-paper-fit-step4c-b/evidence/files/zpf_susp: data/zpf_susp, assessments/crni-paper-fit-step4c-b/evidence/files/thermo: data/thermo, assessments/crni-paper-fit-step4c-b/evidence/hinge: data/hinge, assessments/crni-paper-fit-step4c-b/evidence/model_inputs/tdb: tdb, assessments/crni-paper-fit-step4c-b/evidence/model_inputs/steps/configs: steps/configs, assessments/crni-paper-fit-step4c-b/evidence/oneshot: results}
+    mkdirs: [results/uq, figures, logs, data/cache]
+  environment_check: {code: 'import espei, pycalphad; print(espei.__version__, pycalphad.__version__)', expected: 0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2}
+  plan:
+    - id: step4c_b
+      step: fit_solid
+      kind: numerical
+      command: '{PY} scripts/fit2.py steps/configs/step4c_b_hingefloor.json {NPROC} 7 && {PY} scripts/evaluate.py step4c_b_hingefloor'
+      env: {PYTHONPATH: '{PFP}', OMP_NUM_THREADS: '1'}
+      compute: {class: cpu, estimate_s: 5600, measured: [{host: mac-studio, wall_s: 5673, source: 'run card crni-step4c_b_hingefloor (17:25:26-18:59:59 UTC, 4 workers)'}]}
+      expect:
+        - {rule: json_tol, path: steps/step4c_b_hingefloor/multistart.json, json_path: '[start=s4_perturbed].logpost', reference_value: -5657.288636859774, abs_tol: 0.01}
+        - {rule: tdb_abs, path: tdb/step4c_b_hingefloor_pick.tdb, reference: assessments/crni-paper-fit-step4c-b/evidence/artifact/step4c_b_hingefloor_pick.tdb, abs_tol: {default: 50, ranges: {'0:13:odd': 0.03}}}
+        - {rule: json_tol, path: steps/step4c_b_hingefloor/evaluation.json, json_path: 'evaluations[start=s4_perturbed].topology.T_liquid_min', reference_value: 1614, abs_tol: 2}
+        - {rule: json_tol, path: steps/step4c_b_hingefloor/evaluation.json, json_path: 'evaluations[start=s4_perturbed].topology.T_CrNi2_max', reference_value: 860, abs_tol: 2}
+    - id: evaluate_states
+      step: evaluate_states
+      kind: deterministic
+      cwd: evaluate
+      copy: {assessments/crni-paper-fit-step4c-b/evidence/artifact/step4c_b_hingefloor_pick.tdb: {to: evaluate/step4c_b_hingefloor_pick.tdb, sha256: 3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78}, assessments/crni-paper-fit-step4c-b/evidence/states@1.0.0.json: {to: evaluate/states@1.0.0.json, sha256: 7121c9a34d5315b6acacd2a1607f77f9ac69e9bd2cb5a1d9843cc8f3e9ea0205}, assessments/crni-paper-fit-step4c-b/evidence/states_evaluated@1.0.0.json: {to: reference/states_evaluated@1.0.0.json, sha256: b610e5ecb4c0bb61ff6ee0c6837c42aeaac4f06ff379dc80b87e32f52b1ef7b6}}
+      command: '{PY} -I {REPO}/protocols/tools/evaluate_states.py step4c_b_hingefloor_pick.tdb states@1.0.0.json states_evaluated@1.0.0.json --nproc 4'
+      expected: {result: pass, reason: deterministic}
+      expect:
+        - {rule: files_equal, path: evaluate/states_evaluated@1.0.0.json, reference_path: reference/states_evaluated@1.0.0.json}
+    - id: phase_sequence
+      step: final_pick
+      kind: deterministic
+      copy: {assessments/crni-paper-fit-step4c-b/evidence/artifact/step4c_b_hingefloor_pick.tdb: {to: reference/step4c_b_hingefloor_pick.tdb, sha256: 3692243331691fd6f48921a805f77ef136a280be8e23a0e454685eb4853f7b78}}
+      command: '{PY} -I {REPO}/protocols/tools/phase_sequence.py crni tdb/step4c_b_hingefloor_pick.tdb phase_sequence_rerun.json && {PY} -I {REPO}/protocols/tools/phase_sequence.py crni reference/step4c_b_hingefloor_pick.tdb phase_sequence_reference.json'
+      expected: {result: pass, reason: 'acceptance target - identical phase order on heating at every x of a 0.01 grid, transition temperatures within 10 K (two grid steps)'}
+      expect:
+        - {rule: sequence_equal, path: phase_sequence_rerun.json, reference_path: phase_sequence_reference.json, abs_tol: 10}
+    - id: pure_elements
+      step: physics_checks
+      kind: deterministic
+      command: '{PY} scripts/physics.py tdb/step4c_b_hingefloor_pick.tdb results/physics_rerun.json'
+      env: {PYTHONPATH: '{PFP}'}
+      expected: {result: pass, reason: acceptance target - pure elements equal SGTE (unary limits exact)}
+      expect:
+        - {rule: json_equal, path: results/physics_rerun.json, json_paths: [unary.ok], reference_value: true}
+        - {rule: json_equal, path: results/physics_rerun.json, json_paths: [unary.CR.stable_below_Tm], reference_value: BCC_A2}
+        - {rule: json_equal, path: results/physics_rerun.json, json_paths: [unary.NI.stable_below_Tm], reference_value: FCC_A1}
+    - id: laplace_weights
+      step: laplace
+      kind: numerical
+      copy: {assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/results/uq/modes_step4c_b.json: {to: results/uq/modes_step4c_b.json, sha256: a1e7f9f23fe8a90df761067ee4e8a00d4ea0ed80f1721751d146e5af6efede6f}}
+      command: '{PY} scripts/laplace2.py steps/configs/step4c_b_hingefloor.json results/uq/modes_step4c_b.json results/uq/laplace_step4c_b.json 1000'
+      env: {PYTHONPATH: '{PFP}', OMP_NUM_THREADS: '1'}
+      expected: {result: pass, reason: 'acceptance target - mixture weight of the main mode within 0.01 (0.766)'}
+      compute: {class: cpu, estimate_s: 1800}
+      expect:
+        - {rule: json_tol, path: results/uq/laplace_step4c_b.json, json_path: 'weights.laplace[0]', reference_value: 0.7660570156257861, abs_tol: 0.01}
+
+dashboard:
+  data: {path: <orchid-sage>/protocols/dashboards/crni-paper-fit-step4c-b/dashboard_data.json, sha256: d18b9b6491140954afeb20c8d492b99035043082ede4e9d7b603d748319ed392, storage_class: local}
+  html: {path: <orchid-sage>/protocols/dashboards/crni-paper-fit-step4c-b/dashboard.html, sha256: 679f876a2c58b28ef2bd1bcc16378680ace1602e0be1ec235fde9d3ce7de6357, storage_class: local}
+
+decision_requests:
+  - id: DR-convergence-nonsmooth
+    step: polish_starts
+    question: 'Every step-3b start (8 of 8 on spark1, and on the Studio) stalls under polish_starts with the verified gradient at |g| 0.07-1.34; at the s0 endpoint the logpost decreases on BOTH sides of the gradient direction, linearly in the step over four decades - a kink of the ESPEI activity term (equilibrium-based chemical potentials: the derivative jumps where the stable assemblage at an activity point changes). A gradient-norm threshold cannot be met at such a point. How should convergence be judged for these objectives (e.g. a non-smooth stationarity test such as the minimum-norm element of sampled gradients in a small ball, or one-sided directional derivatives all <= 0), and does the step-4 artifact need to change? (carried from 0.1.0-draft: step 4c-b starts from the same step-3b pick; step 4c-b itself meets 10a in 8 of 8 starts) Not decided by the agent; the 10a threshold is not loosened.'
+    evidence: [{path: protocols/reproduce/crni-step3b-polish-spark1/polish_report.json, sha256: 0d5b1ea2708cdf370021c3da55e946f38da674a8fe17c48d3b3cd471a7b358f8, storage_class: local}, {path: protocols/reproduce/crni-step3b-polish-spark1/diagnostics/gradient_diagnostics.json, sha256: e9f63054a5e8d125863abfd107f32abdc5188c62ebcc97d6e4738212a98f372e, storage_class: local}]
+    blocks: [pick_thermo]
+    status: open
+decisions:
+  - {date: '2026-11-05', who: PI, decision: SGTE references for every end-member including fcc Cr (7.3 kJ); no inflection detection, why: compatibility with existing databases, source: crni-phaseforge-20261105 PLAN.md "PI ruling on references (5 Nov)", applies_to: [build_oneshot_tdb]}
+  - {date: '2026-11-05', who: PI, decision: ordered fcc cells computed for the record; then disordered FCC_A1 only (6 Nov), why: CrNi2 is the real ordered phase; no evidence for a partitioned L1_2, source: crni-phaseforge-20261105 PLAN.md, applies_to: [build_oneshot_tdb, staged_relax]}
+  - {date: '2026-11-06', who: PI, decision: bcc and fcc SQS over the whole composition range, why: each RK fit extrapolated over half the range, source: 'crni-phaseforge-20261105 PLAN.md "Extension (PI decision, 6 Nov)"', applies_to: [gen_sqs, staged_relax]}
+  - {date: '2026-11-06', who: PI, decision: '"held" never means fixed: CRNI2 free in step 3b and 4, anchored by its one-shot HM_FORM at sigma 9.7 kJ', why: step 3a with CRNI2 fixed left it stable above the liquidus, source: PLAN.md run log; fit_protocol 0.1, quote: held never means fixed, applies_to: [fit_thermo, fit_solid]}
+  - {date: '2026-11-06', who: agent, decision: step-2 pick s7_perturbed instead of the ranker's s2_perturbed, why: s2 not converged (|g| 0.011); the ranker's choice rested on a 1-temperature grid difference, source: PLAN.md run log, applies_to: [pick_liquidus]}
+  - {date: '2026-11-06', who: PI, decision: excess electronic entropy of the liquid taken as zero (assumption), why: metallic liquid, source: PLAN.md model section; memory hong-liu-entropy-correction, applies_to: [liquid_entropy]}
+  - {date: '2026-11-06', who: PI, decision: single-reader records (Curie marks; CrNi2 at 863 K) may enter the fit labelled; a second reading before release, why: avoid blocking the fit, source: memory exclusions-required-held-free, applies_to: [build_datasets, exclusions_every_state]}
+  - {date: '2026-11-06', who: PI, decision: test the ZPF driving-force sigma from each record's sigma_T on Cr-Ni only (one measured change), why: CrNi2 83 K miss attributed to the default 1000 J/mol scale, source: REPORT.md open decision 1; memory exclusions-required-held-free item 3, applies_to: [fit_solid]}
+  - {date: '2026-11-06', who: agent (reported to the PI), decision: 'step-4 pick = s1_perturbed (main mode; logpost -6332.2437; 4 of 8 starts)', why: 'protocol 0.3 ranking of evaluate.py; the higher-objective modes were absent in the original run; under fit_protocol 10a the same mode is picked (5 eligible starts)', source: REPORT.md Pick; steps/step4_solid/evaluation.json, applies_to: [pick_solid, final_pick]}
+
+  - {date: '2026-11-06', who: PI, decision: 'step-4 pick = step4c-b (step4c_b_hingefloor, start s4_perturbed); the hinge floor sigma = max(tier, converted state uncertainty) adopted as a protocol rule', why: '0 of 8 starts stationary without the floor (step4c), 8 of 8 with it, one mode, CrNi2 860 K vs 863 K observed', source: 'coordinator message 6 Nov 2026; fit_protocol item 8 (commit bef0bae)', applies_to: [classify_certainty, fit_solid, pick_solid, final_pick]}
+  - {date: '2026-11-06', who: PI, decision: 'per-record ZPF scale sigma_DF floored at the tier, smooth hinge onset (sigma/5), kinetically limited absences (CrNi2 suspended at short-anneal states)', why: 'Cr-Ni test: one mode in 8 of 8 starts, phase-boundary misfit halved, thermochemistry unchanged', source: 'fit_protocol item 8 (commit b31a0ca)', applies_to: [fit_solid]}
+  - {date: '2026-11-06', who: PI, decision: '10a accepts kink-stationary endpoints; central FD is not a gradient; failed equilibria are failures', why: 'local kinks are inevitable (data points on model phase boundaries)', source: 'fit_protocol 10a (orchid-sage 6b8f443)', quote: local kinks are inevitable, applies_to: [pick_solid, final_pick]}
+  - {date: '2026-11-06', who: agent (labelled), decision: 'new specific protocol id crni-paper-fit-step4c-b (version 0.2.0-draft, supersedes crni-paper-fit-step4-s1@0.1.0-draft) rather than a 0.2.0 of the old id', why: 'a specific protocol names ONE artifact; the old id names the step-4 s1 TDB, which stays reproducible under its own document', source: this document, applies_to: [final_pick]}
+
+limitations:
+  - '10a applied as revised by the PI on 6 Nov (kink rule, 6b8f443): eligibility kind smooth for all 8 starts; the directional test is coordinate, +-gradient and 16 seeded random directions only (numpy default_rng(20261106)); "within its own uncertainty" read as |residual| <= sigma of the on-boundary data point (agent reading). An earlier agent check that used central FD as a corrected gradient (results/grad_verify_step4c_b_hingefloor.json) is superseded by this rule.'
+  - 'Notes, not rejections (plausibility thresholds stated before ranking): fcc one-shot enthalpies moved +14.5 (x 0.25) and +11.4 kJ (x 0.5) (> 10 kJ) while fcc calorimetry is met; bcc S_ex(0.5) +2.96 J/mol-atom/K (> 2.5); liquid S_ex Cr75Ni25 2200 K at z -3.1 (> 3u).'
+  - 'Strict topology flag false only for a BCC_A2 + LIQUID sliver at 2176 K (one grid temperature, above every stated window; severity high-T only); eutectic and CrNi2 window both met.'
+  - 'Steps 2 and 3b did not meet the 10a rule (step 2 CRNI2 not free; step 3b no converged start, Q36/Q39); step 4c-b starts from the step-3b pick.'
+  - 'The hinge-floor conversion was evaluated at the step-4 s1 pick, not at the step-3b start (recorded as an override, conforms).'
+  - 'Liquid S_ex at 1900 vs 2200 K inconsistent with H_mix(T) (Cp_ex -16 vs +4.8 J/mol-atom/K, 6.5 sigma at x_Ni 0.25); read as sampling/reference error; no T^2 or T ln T term.'
+  - 'Possible double counting - ORCHID eutectic vs Jenkins arrests; 6 duplicate row pairs in Jette kept.'
+  - 'No independent rerun of step 4c-b yet.'
+open_questions: [Q05, Q10, Q11, Q12, Q25, Q26, Q27, Q36, Q39]

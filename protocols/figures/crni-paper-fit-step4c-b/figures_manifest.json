@@ -1,0 +1,108 @@
+{
+ "style": {
+  "path": "<home>/projects/2026_arroyave_nicr_paper/scripts/style.py",
+  "sha256": "1a22f8a496912939f92ffc3f7cb0b9cb53c7f4aa8365a160f37a6c09ec3497a4"
+ },
+ "palette": {
+  "path": "<orchid-sage>/protocols/tools/palette.json",
+  "sha256": "9997b9cd1b3ed57170a6b36fd30967da3f2df99a090203bcfd960b77da87f96d"
+ },
+ "panels": {
+  "steps": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_steps.pdf",
+     "sha256": "3e4e8c29f79cd49c31f7dfb5db48a6a46e99ee72daebf7eb7060f34ce6ae38fe"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_steps.png",
+     "sha256": "05ea2f85d9418bc52f72719fc354e2e6c6eec56856ec5adf575515edba799a9b"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "oneshot_shifts": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_oneshot_shifts.pdf",
+     "sha256": "63bd2b4e08c3cc991d323bd4313256c3d2bc45e0593ac2cd0ff23c865b33cfda"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_oneshot_shifts.png",
+     "sha256": "e37fd62f122b68e3e511a69ae345ba38681fd93a15c0954b0c13b6cd6d2bca5c"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "residuals": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_residuals.pdf",
+     "sha256": "1c9f34da34ed48e68150601d88e7e83f263924ded5c974beeb2c28dfc68c2d4f"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_residuals.png",
+     "sha256": "70606470b964e6c0d6918b32cded74ed47c391b0215f78faf88dbdcfd134a69f"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "invariants": {
+   "orchid_badge": {
+    "release": "unreleased",
+    "drawn": true,
+    "spec": "orchid-brand figures.md (proposed values)"
+   },
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_invariants.pdf",
+     "sha256": "fef6a2719111d2dee722290f78ef675cad62dd1bdc23f9c84d212c6e53e3d476"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_invariants.png",
+     "sha256": "754ba5ff9c700dd3fed13128c74f99e25406221c830d420783b87c7e83f9b7cf"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "projection": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_projection.pdf",
+     "sha256": "ea358da3c045ba2ffabab3eb25dcfa8ba617eb818a50004a60288d1394747251"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_projection.png",
+     "sha256": "47fb97350841a7382e45829eb6879de3e3ee91ef8948f80623e471832b656085"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "distance": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_distance.pdf",
+     "sha256": "78d9d801e41db230b791bb2b79e9866321961b9424398e832149855acc7c5fda"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_distance.png",
+     "sha256": "2d2f8f8e42356b5746cf0306f5d09192c61d99a207018d7e6712b6f9267edc14"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  },
+  "trajectory": {
+   "files": [
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_trajectory.pdf",
+     "sha256": "970075cb3df20857ed6cedaa2f6df30276be6c5c36ee2694698c1857f9608938"
+    },
+    {
+     "path": "figures/crni-paper-fit-step4c-b/fig_trajectory.png",
+     "sha256": "c15d5b3ac242bd6171b03f4eb85c96c66d12daae1d14c28f75d014775d90d4be"
+    }
+   ],
+   "source": "crni-paper-fit-step4c-b-results"
+  }
+ }
+}

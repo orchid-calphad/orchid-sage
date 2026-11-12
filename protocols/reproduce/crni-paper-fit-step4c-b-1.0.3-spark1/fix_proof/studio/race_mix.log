@@ -1,0 +1,6 @@
+{'proc': 0, 'code': 'model3 (in memory)', 'iter': 1000, 'empty': 0, 'partial': 0, 'parse_error': 0}
+{'proc': 1, 'code': 'model2 (shared file)', 'iter': 1000, 'empty': 16, 'partial': 0, 'parse_error': 0}
+{'proc': 2, 'code': 'model3 (in memory)', 'iter': 1000, 'empty': 0, 'partial': 0, 'parse_error': 0}
+{'proc': 3, 'code': 'model2 (shared file)', 'iter': 1000, 'empty': 10, 'partial': 0, 'parse_error': 0}
+SUMMARY {"nproc": 4, "iter": 1000, "mix": true, "model3_reads": 2000, "model3_bad": 0, "model2_reads": 2000, "model2_bad": 26}
+JSON {"nproc": 4, "iter": 1000, "mix": true, "rows": [{"proc": 0, "code": "model3 (in memory)", "iter": 1000, "empty": 0, "partial": 0, "parse_error": 0}, {"proc": 1, "code": "model2 (shared file)", "iter": 1000, "empty": 16, "partial": 0, "parse_error": 0}, {"proc": 2, "code": "model3 (in memory)", "iter": 1000, "empty": 0, "partial": 0, "parse_error": 0}, {"proc": 3, "code": "model2 (shared file)", "iter": 1000, "empty": 10, "partial": 0, "parse_error": 0}], "model3_reads": 2000, "model3_bad": 0, "model2_reads": 2000, "model2_bad": 26}

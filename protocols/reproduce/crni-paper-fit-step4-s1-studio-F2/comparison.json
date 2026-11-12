@@ -1,0 +1,74 @@
+{
+ "check": "F: determinism on the Studio (mac-studio, M1 Max) and on spark1 for the Cu-Zr evaluation",
+ "deterministic": [
+  {
+   "step": "build_oneshot_tdb (Cr-Ni build_tdb.py via run_with_fixed_date.py --date 2026-11-05)",
+   "file": "CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb",
+   "reference": "84ec5ae41a42650e0915683f4e3a2fd552e33b98b9c7c62b3b28b3ad3e70aaf8",
+   "rerun": "84ec5ae41a42650e0915683f4e3a2fd552e33b98b9c7c62b3b28b3ad3e70aaf8",
+   "pass": true
+  },
+  {
+   "step": "build_oneshot_tdb (no S_ex variant)",
+   "file": "CrNi_PhaseForge_oneshot_GRACE-2L-SMAX-OMAT-large.tdb",
+   "reference": "108378d67447667b534a46f13421d0a270947c8f45a8702701bbbd7a8bebdbac",
+   "rerun": "108378d67447667b534a46f13421d0a270947c8f45a8702701bbbd7a8bebdbac",
+   "pass": true
+  },
+  {
+   "step": "make_base (Cr-Ni step-1 base)",
+   "file": "step1_oneshot.tdb",
+   "reference": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+   "rerun": "1df91950d34492326eb72cf58761d5b79fecc5c774ce710ce77a6cd2eb887238",
+   "pass": true
+  },
+  {
+   "step": "make_base (no S_ex)",
+   "file": "step1_oneshot_noSex.tdb",
+   "reference": "390508b0f4bb13ff886dffcdcafe2b685c189d5019ebb1f085ac573edb204482",
+   "rerun": "390508b0f4bb13ff886dffcdcafe2b685c189d5019ebb1f085ac573edb204482",
+   "pass": true
+  },
+  {
+   "step": "evaluate_states (both picks, spark1, run twice)",
+   "file": "states_evaluated.json",
+   "reference": "crni 09b27871..., cuzr 2f82ba7b...",
+   "rerun": "identical (sha256 equal on the second run)",
+   "pass": true
+  },
+  {
+   "step": "evaluate_step.py on the Cu-Zr pick (invariants, liquid stability, pure elements, formation energies; spark1)",
+   "file": "eval.json",
+   "reference": "run-1 eval.json",
+   "rerun": "identical apart from the two path fields (tdb, evaluator_python)",
+   "pass": true
+  },
+  {
+   "step": "evidence bundles rebuilt (snapshot and bundle builders, freeze guards on)",
+   "file": "MANIFEST.json bundle_sha256",
+   "reference": "cuzr d4af472b..., crni 4b4fe39b...",
+   "rerun": "identical",
+   "pass": true
+  },
+  {
+   "step": "tdb_header.py run twice",
+   "file": "release/*.tdb",
+   "reference": "first write",
+   "rerun": "cmp identical",
+   "pass": true
+  }
+ ],
+ "optimizer_same_machine": {
+  "step": "Cr-Ni step 2, start s0_start, Studio, current scripts (fit.py/model.py of 06:55)",
+  "reference_logpost": -1703.6767365508058,
+  "rerun_logpost": -1703.6767365508058,
+  "nfev": [
+   113,
+   113
+  ],
+  "max_abs_dtheta": 0.0,
+  "bit_identical": true,
+  "note": "also shows that the in-place 06:55 edit (trajectory recording) did not change the optimisation path"
+ },
+ "pass": true
+}

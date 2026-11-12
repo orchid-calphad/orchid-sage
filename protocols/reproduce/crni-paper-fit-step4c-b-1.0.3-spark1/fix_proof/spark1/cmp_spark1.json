@@ -1,0 +1,105 @@
+{
+ "a": {
+  "model": "model2",
+  "host": "spark1",
+  "n_zpf_susp_records": 12,
+  "n_residual_objects": 20
+ },
+ "b": {
+  "model": "model3",
+  "host": "spark1",
+  "n_zpf_susp_records": 12,
+  "n_residual_objects": 20
+ },
+ "bit_identical_all": true,
+ "rows": [
+  {
+   "start": "s0_start",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.293148846702,
+   "grad_norm": 0.0005251872214876279,
+   "file_logpost": -5657.293148846702,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s1_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636863667,
+   "grad_norm": 0.0002272345868527275,
+   "file_logpost": -5657.288636863667,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s2_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636867119,
+   "grad_norm": 0.0005278633247047895,
+   "file_logpost": -5657.288636867119,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s3_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636877991,
+   "grad_norm": 0.00044769687709324187,
+   "file_logpost": -5657.288636877991,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s4_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.293148832628,
+   "grad_norm": 0.0002504970304742927,
+   "file_logpost": -5657.293148832628,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s5_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.293148836689,
+   "grad_norm": 0.00020977970141969885,
+   "file_logpost": -5657.293148836689,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s6_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636881297,
+   "grad_norm": 0.0006112483522134356,
+   "file_logpost": -5657.288636881297,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s7_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636903301,
+   "grad_norm": 0.00037126045673782014,
+   "file_logpost": -5657.288636903301,
+   "reevaluation_minus_file": 0.0
+  }
+ ]
+}

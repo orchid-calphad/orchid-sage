@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "phase": "FCC_A1",
+  "elements": [
+    "Cu",
+    "Ni"
+  ],
+  "sublattices": [
+    {
+      "id": "metal",
+      "site_ratio": 1,
+      "constituents": [
+        "Cu",
+        "Ni"
+      ]
+    }
+  ],
+  "reference_state": "SER 298.15 K; numerical unary functions must be supplied separately",
+  "energy_basis": "J/mol_atoms",
+  "vacancy_role": "none",
+  "ordered": false,
+  "evidence": [],
+  "validity": {
+    "temperature_K": null,
+    "composition_scope": "Unspecified; demonstration only"
+  }
+}

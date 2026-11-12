@@ -1,0 +1,55 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "LIQUID"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1873.0,
+  "X_NI": [
+   0.2996,
+   0.3717,
+   0.5753,
+   0.6015,
+   0.6493,
+   0.6905,
+   0.739,
+   0.7868,
+   0.7927,
+   0.8575
+  ]
+ },
+ "reference_state": {
+  "phases": [
+   "LIQUID"
+  ],
+  "conditions": {
+   "P": 101325,
+   "T": 1873.0,
+   "X_CR": 1.0
+  }
+ },
+ "output": "ACR_CR",
+ "values": [
+  [
+   [
+    0.7402,
+    0.6806,
+    0.2685,
+    0.3458,
+    0.2966,
+    0.2599,
+    0.22,
+    0.1125,
+    0.1649,
+    0.1076
+   ]
+  ]
+ ],
+ "reference": "Hao, Ruban, Xiong, Calphad 73 (2021) 102268, Figure 18(a), series 'Sudavtsova, 1999 (1873 K)'; original: V.S. Sudavtsova, Thermodynamic properties of melts of Ni-Cr(Mo, W) binary systems, Russ. Met. (1999) 118\u2013120.",
+ "comment": "Activity of Cr relative to liquid Cr (caption), liquid alloys (p.14), read from the vector layer (record ids: CAND-CRNI-645B06BE02,CAND-CRNI-05529A043F,CAND-CRNI-A4F91FE992,CAND-CRNI-F5FCAE7686,CAND-CRNI-C200C9840F,CAND-CRNI-4CCC5D269E,CAND-CRNI-19AFE075D4,CAND-CRNI-29BABD2572,CAND-CRNI-8B5FC12C0B,CAND-CRNI-EFC6BF036D). T from the series legend. Restricted: local only. | REBUILD set C/D: weight 0.172407 (ORCHID Hao records, sigma_mu ~2900 J/mol, mean of per-value weights). | crni-paper-fit-20261106: set E file unchanged",
+ "weight": 0.172407
+}

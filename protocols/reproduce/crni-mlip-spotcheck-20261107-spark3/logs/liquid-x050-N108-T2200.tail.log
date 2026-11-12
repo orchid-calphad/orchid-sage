@@ -1,0 +1,20 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+Using cached GRACE model from /root/.cache/grace/GRACE-2L-SMAX-OMAT-large
+Model license: Academic Software License
+2026-11-07 20:49:07.361244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6998 MB memory:  -> device: 0, name: NVIDIA GB10, pci bus id: 000f:01:00.0, compute capability: 12.1
+/campaign/code/run_liquid.py:62: DeprecationWarning: Use thermalize_momenta
+  MaxwellBoltzmannDistribution(atoms, temperature_K=3500, rng=np.random.default_rng(a.seed)); Stationary(atoms)
+START premelt 2000
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-11-07 20:49:25.421257: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-11-07 20:49:25.652066: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 90701
+END premelt
+START density 10000
+END density
+START equilibrate 5000
+END equilibrate
+START production 100000
+END production

@@ -1,0 +1,45 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2",
+  "LIQUID"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1782
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "LIQUID",
+    [
+     "CR"
+    ],
+    [
+     0.671
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "CR"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "reference": "svechnikov1962characteristics",
+ "comment": "Unable to get the original article. Digitized from Figure 1 in F. Tang, B. Hallstedt, Calphad Comput. Coupling Phase Diagrams Thermochem. 55 (2016) 260\u2013269. doi:10.1016/j.calphad.2016.10.003. | REBUILD set D, observation (ii): values as printed, null vertex kept (ESPEI zero-phase-fraction condition of the partner phase), weight 1. | crni-paper-fit-20261106: rows with LIQUID of set E file (indices [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]); values unchanged | step4c: sigma_DF = max(converted 211, tier uncertain 100) = 211 J/mol",
+ "weight": 4.735454522097212
+}

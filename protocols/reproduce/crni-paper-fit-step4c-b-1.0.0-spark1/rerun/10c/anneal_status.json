@@ -1,0 +1,14 @@
+{
+ "termination": "thermodynamic evaluation budget reached",
+ "completed": true,
+ "best_logpost": -5657.293148832564,
+ "best_evaluation": 33,
+ "improvement_over_start": 6.366462912410498e-11,
+ "accepted": false,
+ "acceptance_note": "global-search result; 10a eligibility, topology and physics checks are separate",
+ "evaluations": 1500,
+ "cache_hits": 4,
+ "elapsed_s": 5840.05579996109,
+ "cpu_s": 5839.036870512,
+ "finished": "2026-11-06T21:26:52-0600"
+}

@@ -1,0 +1,44 @@
+{
+ "input": "assessments/crni-paper-fit-step4c-b/evidence/hinge/step4c_hinge_floor.json",
+ "input_sha256": "4ab667e875b304bfff96022d67e82af617429e3a0162e58d839c0238b65604df",
+ "output": "assessments/crni-paper-fit-step4c-b/evidence/hinge_labels/step4c_hinge_floor@1.1.0.json",
+ "output_sha256": "0f7a220bbb5684d2e6b5b6b2a55e5b6be3b2e1dde408bddc60926d58ef543818",
+ "fit_projection_keys": [
+  "T",
+  "x",
+  "expected",
+  "sigma",
+  "tie_line",
+  "confidence",
+  "penalize",
+  "element",
+  "margin_J_per_mol_atom"
+ ],
+ "fit_projection_sha256": {
+  "input": "a27a2da8e2b86024999d22e8b1517e0f263f30bd303d5339a1601f9155c890c7",
+  "output": "a27a2da8e2b86024999d22e8b1517e0f263f30bd303d5339a1601f9155c890c7"
+ },
+ "fit_projection_bytes_identical": true,
+ "n_scalars_compared": 3305,
+ "scalars_identical": true,
+ "n_sigma_values": 878,
+ "n_cells": 366,
+ "rest_identical_without_label_keys": true,
+ "changed_keys": [
+  "cells[*].orchid.basis"
+ ],
+ "added_keys": [
+  "cells[*].orchid.observed_state",
+  "cells[*].orchid.basis_superseded",
+  "cells[*].orchid.phase_assignment",
+  "cells[*].orchid.second_reading",
+  "relabel"
+ ],
+ "counts": {
+  "cells": 366,
+  "set_e_option_c": 290,
+  "campaign_with_phase_assignment": 76,
+  "dench_second_reading_disagree": 3
+ },
+ "ok": true
+}

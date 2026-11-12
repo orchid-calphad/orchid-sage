@@ -1,0 +1,19 @@
+== GRACE-2L-OMAT
+{
+  "model_name": "GRACE-2L-OMAT",
+  "payload": "model",
+  "url": "https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models/resolve/kk/models/GRACE-2L-OMAT-model.tar.gz",
+  "tag": "kk",
+  "downloaded_at": "2026-10-23T23:11:53Z",
+  "tensorpotential_version": "0.6.2.1"
+}
+== GRACE-2L-SMAX-OMAT-large
+{
+  "model_name": "GRACE-2L-SMAX-OMAT-large",
+  "payload": "model",
+  "url": "https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models/resolve/model-v5-uq-v6/models/GRACE-2L-SMAX-OMAT-large-model.tar.gz",
+  "tag": "model-v5-uq-v6",
+  "downloaded_at": "2026-10-27T16:15:26Z",
+  "tensorpotential_version": "0.6.2.1",
+  "kokkos_url": "https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models/resolve/kk-v3-uq-v6/kokkos/GRACE-2L-SMAX-OMAT-large-kokkos.npz"
+}

@@ -1,0 +1,231 @@
+{
+ "artifact": "crni-paper-fit-step4c-b",
+ "created": "2026-11-06T14:43:25-0600",
+ "rule": "byte-identical copies of the code that produced the pick; sources only read",
+ "files": [
+  {
+   "path": "scripts/apply_pick_rule.py",
+   "sha256": "8f4155f3c881b29878dfc85b87545bbe488fb34a3bae9f9c882b5d9f54c8cc4a",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/apply_pick_rule.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_hinge_complete.py",
+   "sha256": "c9ad96ae9b722efb8535be5fa3b3d1b09a2b793fd06231b0423fa325b7586ae6",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_hinge_complete.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_step4c_floor.py",
+   "sha256": "ccdc7cdb00c4d8862247214ba5b54c43a6cb721ecfcd7194ab6e9905062937bb",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_step4c_floor.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_step4c_v2.py",
+   "sha256": "566745452c1c351f532ad25637cb7b8f560f60e2e52ded8cad7b161775a36089",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_step4c_v2.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_tiers3.py",
+   "sha256": "f60f28d88d3a4f1c651de07b308fff0153c1f1069755475021f7a9971b4862e2",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_tiers3.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_zpf_sigma.py",
+   "sha256": "1bd9c6dad6467abca835797353a9c3b8880054bc7a2f0a93173bed78e028c6a2",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/build_zpf_sigma.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/classify_draws.py",
+   "sha256": "a77747ae4a8570b4857e42d2089c7dc78c9bcaf94bb424c6052b5db352427281",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/classify_draws.py",
+   "original_mtime": "2026-11-06T13:01:06-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/compare_tests_v3.py",
+   "sha256": "b860ce540e8f8ecc6048024f862ed9ba0730f3bf4b424b42c38b6180cf7b55d3",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/compare_tests_v3.py",
+   "original_mtime": "2026-11-06T13:33:25-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/emit_run_cards_v5.py",
+   "sha256": "9202ce08927888ce1d90c09ed8780348d199b82cd21c1e068bf7d6543c9218f0",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/emit_run_cards_v5.py",
+   "original_mtime": "2026-11-06T13:33:25-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/evaluate.py",
+   "sha256": "6c546829f1359ac64b1497ae64ad81bce5cc44b1d4ed40431b6bd810cfd19201",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/evaluate.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/fit2.py",
+   "sha256": "829a58eb99cf6554d6c30eced5d82e084efe5860a48e3c1b26c1523255936cfd",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/fit2.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/laplace2.py",
+   "sha256": "196ca84202274c358ff981ff0c17fe80e62b44f7c2b23eb39037a79b1217186b",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/laplace2.py",
+   "original_mtime": "2026-11-06T13:01:06-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/model2.py",
+   "sha256": "a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/model2.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/pd4.py",
+   "sha256": "c9261d79490b353510d5c9815e1b0f73833f35eb37a308bdb3fe96844f5310a4",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/pd4.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/per_dataset.py",
+   "sha256": "9afecb92069e98a777e5f22080834ace88133fc67fadda89616ca4ccdd302600",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/per_dataset.py",
+   "original_mtime": "2026-11-06T11:25:23-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/physics.py",
+   "sha256": "aaeb1a663ef0156486b6e73e866f646ff8fc2f9b08b5d43e8b1a604dbd38ca23",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/code_used/step4c_b_hingefloor/physics.py",
+   "original_mtime": "2026-11-06T13:33:25-0600",
+   "used_for": "step 4c-b fit, data build, checks, UQ (launch-time copy)",
+   "note": "code_used/step4c_b_hingefloor/ (copied at launch, 6 Nov 17:25 UTC)"
+  },
+  {
+   "path": "scripts/build_data.py",
+   "sha256": "c9b51c7d218a61aa22ef42330b520c11ef5c7b2ef5c7d84971b8f279471aea8d",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_data.py",
+   "original_mtime": "2026-11-06T03:46:27-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/build_hinge.py",
+   "sha256": "daac454ccc1f0aa97390795d26b7d5e69e64c713fa04ad26f2fb59c5cdd902ba",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_hinge.py",
+   "original_mtime": "2026-11-06T03:48:29-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/build_hinge_observed.py",
+   "sha256": "e0bd85087e95c509605d56e6cd07c31d37944d3b72f69f58e831f35870d14811",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_hinge_observed.py",
+   "original_mtime": "2026-11-06T07:28:08-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/build_tiers.py",
+   "sha256": "ab36123c0a3c7050f52c433bd24e195a4b65ff8e106efe53087050259734d518",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_tiers.py",
+   "original_mtime": "2026-11-06T07:44:52-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/build_tiers2.py",
+   "sha256": "496e5155081c8e5b5b668c6e1ac455f8f2a879f07fa193371f785e2912cf3cf6",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/build_tiers2.py",
+   "original_mtime": "2026-11-06T09:10:20-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/data_consistency.py",
+   "sha256": "1d46efa73a8074a1dda9e7f023e21feec99a9dfcee59e37452c550493ee2b011",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/data_consistency.py",
+   "original_mtime": "2026-11-06T03:52:46-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py",
+   "original_mtime": "2026-11-06T06:55:44-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/fit.py",
+   "sha256": "3a4e10dc76023d40a7a17d2e7809706c3a282fd4a4275a7c6b7972843936d674",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit.py",
+   "original_mtime": "2026-11-06T06:55:44-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/make_base.py",
+   "sha256": "758be969fcd704d357245d5bea1e0a4eca626a41872069f3ee5312f6155b35c2",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/make_base.py",
+   "original_mtime": "2026-11-06T03:44:15-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/summarize.py",
+   "sha256": "c2dcf225104497a9e6c7a020356be78e5cd2d15982390eaf8c887c571e5e67e4",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/summarize.py",
+   "original_mtime": "2026-11-06T04:47:55-0600",
+   "used_for": "data build upstream of step 4c-b",
+   "note": "live scripts/ copy (not in the launch snapshot)"
+  },
+  {
+   "path": "scripts/style.py",
+   "sha256": "1a22f8a496912939f92ffc3f7cb0b9cb53c7f4aa8365a160f37a6c09ec3497a4",
+   "original": "<home>/projects/2026_arroyave_nicr_paper/scripts/style.py",
+   "original_mtime": "2026-11-05T14:50:51-0600",
+   "used_for": "figure style imported by evaluate.py",
+   "note": "copied from the Cr-Ni paper repo"
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step4c_b_hingefloor.log",
+   "sha256": "d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/step4c_b_hingefloor.log",
+   "original_mtime": "2026-11-06T12:59:59-0600",
+   "used_for": "campaign record (frozen copy)",
+   "note": ""
+  }
+ ]
+}

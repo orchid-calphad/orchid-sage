@@ -1,0 +1,19 @@
+{
+ "item": "laplace_weights",
+ "command": "<fit-python> scripts/laplace3.py steps/configs/step4c_b_hingefloor.json results/uq/modes_step4c_b@1.1.0.json results/uq/laplace_step4c_b.json 1000",
+ "cwd": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/laplace_weights.log",
+ "env": {
+  "PYTHONPATH": "<home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src",
+  "OMP_NUM_THREADS": "1"
+ },
+ "launched": "2026-11-07T17:34:57-0600",
+ "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)",
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "python": "<fit-python>",
+ "inputs": [
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/uq/modes_step4c_b@1.1.0.json"
+ ],
+ "pin_note": null,
+ "wrapper_pid": 18364
+}

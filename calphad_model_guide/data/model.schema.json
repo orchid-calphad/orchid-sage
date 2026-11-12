@@ -1,0 +1,286 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "phase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "elements": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Ac",
+          "Ag",
+          "Al",
+          "Am",
+          "Ar",
+          "As",
+          "At",
+          "Au",
+          "B",
+          "Ba",
+          "Be",
+          "Bh",
+          "Bi",
+          "Bk",
+          "Br",
+          "C",
+          "Ca",
+          "Cd",
+          "Ce",
+          "Cf",
+          "Cl",
+          "Cm",
+          "Cn",
+          "Co",
+          "Cr",
+          "Cs",
+          "Cu",
+          "Db",
+          "Ds",
+          "Dy",
+          "Er",
+          "Es",
+          "Eu",
+          "F",
+          "Fe",
+          "Fl",
+          "Fm",
+          "Fr",
+          "Ga",
+          "Gd",
+          "Ge",
+          "H",
+          "He",
+          "Hf",
+          "Hg",
+          "Ho",
+          "Hs",
+          "I",
+          "In",
+          "Ir",
+          "K",
+          "Kr",
+          "La",
+          "Li",
+          "Lr",
+          "Lu",
+          "Lv",
+          "Mc",
+          "Md",
+          "Mg",
+          "Mn",
+          "Mo",
+          "Mt",
+          "N",
+          "Na",
+          "Nb",
+          "Nd",
+          "Ne",
+          "Nh",
+          "Ni",
+          "No",
+          "Np",
+          "O",
+          "Og",
+          "Os",
+          "P",
+          "Pa",
+          "Pb",
+          "Pd",
+          "Pm",
+          "Po",
+          "Pr",
+          "Pt",
+          "Pu",
+          "Ra",
+          "Rb",
+          "Re",
+          "Rf",
+          "Rg",
+          "Rh",
+          "Rn",
+          "Ru",
+          "S",
+          "Sb",
+          "Sc",
+          "Se",
+          "Sg",
+          "Si",
+          "Sm",
+          "Sn",
+          "Sr",
+          "Ta",
+          "Tb",
+          "Tc",
+          "Te",
+          "Th",
+          "Ti",
+          "Tl",
+          "Tm",
+          "Ts",
+          "U",
+          "V",
+          "W",
+          "Xe",
+          "Y",
+          "Yb",
+          "Zn",
+          "Zr"
+        ]
+      }
+    },
+    "sublattices": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "site_ratio": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "constituents": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "site_ratio",
+          "constituents"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "reference_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "energy_basis": {
+      "enum": [
+        "J/mol_atoms",
+        "J/mol_formula",
+        "unknown"
+      ]
+    },
+    "vacancy_role": {
+      "enum": [
+        "none",
+        "interstitial_empty",
+        "constitutional",
+        "thermal",
+        "unknown"
+      ]
+    },
+    "ordered": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "crystallography",
+              "site_occupancy",
+              "phase_equilibria",
+              "endmember_energies",
+              "defect_data",
+              "ordering_data"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "reported",
+              "verified",
+              "conflicting"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "source",
+          "locator",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "validity": {
+      "type": "object",
+      "properties": {
+        "temperature_K": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          ]
+        },
+        "composition_scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "temperature_K",
+        "composition_scope"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "phase",
+    "elements",
+    "sublattices",
+    "reference_state",
+    "energy_basis",
+    "vacancy_role",
+    "ordered",
+    "evidence",
+    "validity"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CALPHAD Model Guide input v1"
+}

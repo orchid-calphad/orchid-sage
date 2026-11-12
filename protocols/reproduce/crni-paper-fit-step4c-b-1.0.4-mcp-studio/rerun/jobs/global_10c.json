@@ -1,0 +1,17 @@
+{
+ "item": "global_10c",
+ "command": "mkdir -p steps/step4c_b_hingefloor_10c && P=$(cat results/pick10a_start.txt) && (<fit-python> -u scripts/run_global_crni2.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json \"$P\" basin 7201 1500 steps/step4c_b_hingefloor_10c/basin_7201 > logs/10c_basin.log 2>&1 & <fit-python> -u scripts/run_global_crni2.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json \"$P\" anneal 7201 1500 steps/step4c_b_hingefloor_10c/anneal_7201 > logs/10c_anneal.log 2>&1; wait)",
+ "cwd": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/global_10c.log",
+ "env": {
+  "PYTHONPATH": "<home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src",
+  "OMP_NUM_THREADS": "1"
+ },
+ "launched": "2026-11-07T16:02:50-0600",
+ "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)",
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "python": "<fit-python>",
+ "inputs": [],
+ "pin_note": null,
+ "wrapper_pid": 70098
+}

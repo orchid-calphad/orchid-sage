@@ -1,0 +1,4 @@
+{
+ "_note": "copy to local/backends.json (gitignored). Remote backends are never enabled by the server and never contacted by it; host names live only here.",
+ "gpu1": {"kind": "ssh", "host": "<ssh host alias>", "workdir": "sage-runs", "gpu": true, "enabled": false}
+}

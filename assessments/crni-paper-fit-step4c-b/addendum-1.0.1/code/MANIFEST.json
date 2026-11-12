@@ -1,0 +1,28 @@
+{
+ "artifact": "crni-paper-fit-step4c-b/addendum-1.0.1",
+ "created": "2026-11-06T22:00:43-0600",
+ "rule": "code added or changed for the plan fixes of 1.0.1 (no change to data, objective, starts, seeds or settings); the 0.2.0-draft snapshot and the 1.0.0 addendum stay frozen",
+ "files": [
+  {
+   "path": "scripts/physics.py",
+   "sha256": "d9711402194a31df4d2ea5b127a63e127944dbf8e977651c305b103aa9848830",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/code/scripts/physics.py (sha256 aaeb1a663ef0156486b6e73e866f646ff8fc2f9b08b5d43e8b1a604dbd38ca23)",
+   "used_for": "pure_elements (1.0.1)",
+   "note": "1.0.1 code version: the Cahn inputs are read from the staged copy inputs/cr-ni-coherent/results.json (evidence bundle model_inputs/cr-ni-coherent/results.json, sha256 c7d7369e...) instead of <home>/ScientificRuns/cr-ni-coherent-20261105/results.json; no other change"
+  },
+  {
+   "path": "scripts/pick10a.py",
+   "sha256": "6f1f173bd62ba8c1489c999c6af4c2922bd6a36675ccc612e59be2703297dff2",
+   "derived_from": "new in 1.0.1",
+   "used_for": "check10a (1.0.1)",
+   "note": "reads the 10a pick made by check10a_ms.py (rule, not label), copies its TDB, writes its predictions and the 10b parameter comparison with undetermined flat directions; standard library only"
+  },
+  {
+   "path": "scripts/thermo_compare.py",
+   "sha256": "4a98e8e8b0a9b40deb9ef49ceb508d2a236ecaba9fae1a9ce2233805bb4761d7",
+   "derived_from": "new in 1.0.1",
+   "used_for": "thermochemistry (1.0.1)",
+   "note": "per_dataset.py outputs at the rerun 10a pick vs the recorded pick: every thermo dataset present, |delta rms_z| within the stated tolerance; standard library only"
+  }
+ ]
+}

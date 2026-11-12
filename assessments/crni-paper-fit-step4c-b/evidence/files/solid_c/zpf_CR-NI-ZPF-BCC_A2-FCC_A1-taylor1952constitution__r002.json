@@ -1,0 +1,45 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2",
+  "FCC_A1"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1273.15
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     0.542
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "NI"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "reference": "taylor1952constitution",
+ "comment": "Taken as mean composition single-phase/two-phase alloy regions, table 2. | REBUILD set D, observation (ii): values as printed, null vertex kept (ESPEI zero-phase-fraction condition of the partner phase), weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [0, 1, 2, 3, 4, 5, 6, 7, 8]); values unchanged | step4c: sigma_DF = max(converted 371, tier less_certain 50) = 371 J/mol",
+ "weight": 2.6938154751007906
+}

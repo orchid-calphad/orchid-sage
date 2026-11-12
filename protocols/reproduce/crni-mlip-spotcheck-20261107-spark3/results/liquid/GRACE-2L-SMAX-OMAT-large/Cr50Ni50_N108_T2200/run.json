@@ -1,0 +1,28 @@
+{
+  "input": "inputs/structures/LIQUID/x0.5000_s2026110521/POSCAR",
+  "input_sha256": "ed8bd81337edde63522aaa3fff0e64d8557f83ecccfc293b376994afd34f29bc",
+  "size": 108,
+  "target_T_K": 2200.0,
+  "pressure_Pa": 101325,
+  "timestep_fs": 1.0,
+  "seed": 2026110503,
+  "stages": {
+    "premelt": 2000,
+    "density": 10000,
+    "equilibrate": 5000,
+    "production": 100000
+  },
+  "thermostat": "NoseHooverChainNVT (ase)",
+  "barostat": "IsotropicMTKNPT (ase), density stage only",
+  "thermostat_damping_fs": 100,
+  "barostat_damping_fs": 1000,
+  "velocity_interval_fs": 2,
+  "position_interval_fs": 10,
+  "nvt_volume": "mean NPT volume over the last 5 ps of the density stage",
+  "model": "GRACE-2L-SMAX-OMAT-large",
+  "runner_sha256": "a4b6d40caa19b978a4e982bb1a372044862edcf719ae41d4e96cc4bfe9cd3f85",
+  "fit_ready": false,
+  "started_unix": 1794084564.7611148,
+  "x_Ni": 0.5,
+  "cell_size_acceptance": "108 provisional until the 108 vs 864 vibrational-entropy check (<5 %) passes"
+}

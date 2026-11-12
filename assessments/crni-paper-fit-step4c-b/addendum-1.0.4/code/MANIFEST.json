@@ -1,0 +1,63 @@
+{
+ "artifact": "crni-paper-fit-step4c-b/addendum-1.0.4",
+ "created": "2026-11-07T15:01:43-0600",
+ "rule": "record fixes of 1.0.4 (no change to data, objective, starts, seeds, settings or the artifact); the 0.2.0-draft snapshot and the 1.0.0, 1.0.1 and 1.0.3 addenda stay frozen; staged after them",
+ "files": [
+  {
+   "path": "scripts/pick10a2.py",
+   "sha256": "efeef92d61720f0564cac5000fc7b7f78a7cd775fcfd66ded63a3a36f715ca68",
+   "used_for": "check10a (1.0.4)",
+   "note": "pick10a.py of 1.0.1 with the rule text naming check10a_ms2.py (the checker that makes the pick since 1.0.3); no other change",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/addendum-1.0.1/code/scripts/pick10a.py (sha256 6f1f173bd62ba8c1489c999c6af4c2922bd6a36675ccc612e59be2703297dff2)"
+  },
+  {
+   "path": "scripts/relabel_hinge_observed.py",
+   "sha256": "61fc0d49f5b51b435ebb41695f485be1a54c2c0b64d52ddedde17077c5bb13fb",
+   "used_for": "record fix (1.0.4): evidence/hinge_labels/step4c_hinge_floor@1.1.0.json",
+   "note": "new version of the hinge sidecar with the observed-state basis label; proof that every number the objective reads is identical (protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/hinge_relabel_proof.json)"
+  },
+  {
+   "path": "scripts/redact_home_paths.py",
+   "sha256": "e241be2f74d1b2b2c80d6334bbcb2a78a8dfcddb78fc52ffaf091e3b9ea4cd68",
+   "used_for": "record fix (1.0.4): <home>/ versions of five record files",
+   "note": "new versions with /Users/<name>/ written as <home>/; proof in protocols/reproduce/crni-paper-fit-step4c-b-1.0.4-records/home_path_proof.json"
+  },
+  {
+   "path": "scripts/record_modes_2_1_2.py",
+   "sha256": "e0b0b0626b9fb35bff076e53d81ef513f6dffb3185c9fa7ca974e7e6bcd344b0",
+   "used_for": "record fix (1.0.4): evidence/reference_outputs/results/uq/modes_step4c_b@1.1.0.json",
+   "note": "re-records the Laplace modes under the names of the orchid-calphad-fit@2.1.2 modes command (theta bit-identical); proof modes_record_proof.json"
+  },
+  {
+   "path": "records/crni-paper-fit/logs/step4c_b_hingefloor@1.1.0.log",
+   "sha256": "e317a0e79a6adf88d1ad3b9f9e77b7abcef0295c116067677d33c0d66e1d5990",
+   "used_for": "campaign record (crate copy)",
+   "note": "the frozen campaign log with the interpreter path written as <home>/ (redact_home_paths.py); the original stays in the 0.2.0-draft snapshot",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log (sha256 d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13)"
+  }
+ ],
+ "crate_substitutes": [
+  {
+   "original": "assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log",
+   "replacement": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/records/crni-paper-fit/logs/step4c_b_hingefloor@1.1.0.log",
+   "original_sha256": "d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13",
+   "replacement_sha256": "e317a0e79a6adf88d1ad3b9f9e77b7abcef0295c116067677d33c0d66e1d5990",
+   "reason": "personal home path written as <home>/ (redact_home_paths.py; nothing else differs)"
+  },
+  {
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2.json",
+   "replacement": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2@1.1.0.json",
+   "original_sha256": "4e2cfbf4e7ef6319bdb30a25d2b5d2dd5f774f7a5dbe28f9764e3b6e62c024c6",
+   "replacement_sha256": "2960db17136edd6653d961b4c7af8b33fa8c3a6123fdf36a70f9f79ca07d4fdd",
+   "reason": "personal home path written as <home>/ (redact_home_paths.py; nothing else differs)"
+  },
+  {
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3.json",
+   "replacement": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3@1.1.0.json",
+   "original_sha256": "173c4f45095918154d2babaac7408047aaca2c61a5727d440baa5badcfa931cf",
+   "replacement_sha256": "41e3062939c3d4f2bfdf8cbd451b237cd84485da14457cef2a4dfad29a9d0f96",
+   "reason": "personal home path written as <home>/ (redact_home_paths.py; nothing else differs)"
+  }
+ ],
+ "crate_substitutes_note": "tools/build_crate.py --substitutes: in the RO-Crate each original is replaced by its replacement, recorded in the crate as prov:wasDerivedFrom the original's sha256; the repo keeps both"
+}

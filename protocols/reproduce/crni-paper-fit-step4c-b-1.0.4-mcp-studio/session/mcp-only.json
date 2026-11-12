@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "orchid-sage": {
+      "command": "<home>/projects/orchid-mcp/.venv/bin/python",
+      "args": ["-m", "sage_mcp"],
+      "env": {"PYTHONPATH": "<orchid-sage>", "SAGE_REPO": "<orchid-sage>"}
+    }
+  }
+}

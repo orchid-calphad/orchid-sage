@@ -1,0 +1,19 @@
+{
+ "item": "thermochemistry",
+ "command": "<fit-python> scripts/per_dataset.py tdb/step4c_b_hingefloor_pick10a.tdb results/per_dataset_rerun.json && <fit-python> -I scripts/thermo_compare.py results/per_dataset_rerun.json reference/per_dataset_step4c_b_hingefloor.json results/thermo_compare.json 0.1 thermo",
+ "cwd": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/thermochemistry.log",
+ "env": {
+  "PYTHONPATH": "<home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src"
+ },
+ "launched": "2026-11-07T17:34:46-0600",
+ "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)",
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "python": "<fit-python>",
+ "inputs": [
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/per_dataset_step4c_b_hingefloor.json",
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/scripts/thermo_compare.py"
+ ],
+ "pin_note": null,
+ "wrapper_pid": 18277
+}

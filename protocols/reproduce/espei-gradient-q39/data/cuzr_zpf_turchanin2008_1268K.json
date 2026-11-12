@@ -1,0 +1,56 @@
+{
+ "components": [
+  "CU",
+  "VA",
+  "ZR"
+ ],
+ "phases": [
+  "BCC_A2",
+  "CUZR2",
+  "LIQUID"
+ ],
+ "output": "ZPF",
+ "reference": "Turchanin 2008, doi:10.1007/s11106-008-9039-x",
+ "tags": [
+  "experimental",
+  "invariant_table",
+  "via_assessment",
+  "orchid"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": 1268.0
+ },
+ "values": [
+  [
+   [
+    "LIQUID",
+    [
+     "ZR"
+    ],
+    [
+     0.72
+    ]
+   ],
+   [
+    "CUZR2",
+    [
+     "ZR"
+    ],
+    [
+     null
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "ZR"
+    ],
+    [
+     0.94
+    ]
+   ]
+  ]
+ ],
+ "comment": "Q39 minimal reproducer: region 4 of Turchanin 2008, doi:10.1007/s11106-008-9039-x (ORCHID bundle file invariants__CU-ZR__CuZr-08Tur.zpf-09.json)"
+}

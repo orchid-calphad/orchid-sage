@@ -1,0 +1,1511 @@
+{
+ "states": [
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 9,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 10,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 11,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 12,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 13,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 14,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 15,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 16,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 17,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 18,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 19,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 20,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 21,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 22,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "index": 23,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 9,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 10,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 11,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 12,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 13,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 14,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 15,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 16,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 17,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 18,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 19,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "index": 20,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 9,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 10,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 11,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 12,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 13,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 14,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 15,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 16,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 17,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 18,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 19,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 20,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 21,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 22,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 23,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 24,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 25,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 26,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 27,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 28,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 29,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 30,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 31,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 32,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 33,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 34,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 35,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 36,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 37,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 38,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 39,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 40,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 41,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 42,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 43,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 44,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 45,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 46,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 47,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "index": 48,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 9,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 10,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 11,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 12,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 13,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 14,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 15,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 16,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 17,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 18,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 19,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 20,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 21,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 22,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 23,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 24,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 25,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 26,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "index": 27,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 0,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 1,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 2,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 3,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 4,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 5,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 6,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 7,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 8,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 9,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 10,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 11,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 12,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 13,
+   "has_cells": true
+  },
+  {
+   "dataset": "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "index": 14,
+   "has_cells": true
+  }
+ ],
+ "added": {
+  "crni2_to_existing": 6,
+  "pugliese_alpha": [
+   [
+    1448.15,
+    0.1,
+    "ORC-B7C474NDYU.6f37f5"
+   ],
+   [
+    1273.15,
+    0.02,
+    "ORC-CCFSBKA7WL.3ffd99"
+   ],
+   [
+    1173.15,
+    0.02,
+    "ORC-DEBYPTLOXA.fa3882"
+   ],
+   [
+    1073.15,
+    0.02,
+    "ORC-FAUJCKSXKY.da6dec"
+   ],
+   [
+    1373.15,
+    0.02,
+    "ORC-LTDKXCUMXB.e058de"
+   ],
+   [
+    1373.15,
+    0.05,
+    "ORC-NQRPTQ67RA.04cf91"
+   ],
+   [
+    1448.15,
+    0.02,
+    "ORC-NVQ6QTBEX5.d2663a"
+   ],
+   [
+    1273.15,
+    0.05,
+    "ORC-QL6C66VORP.b01fb8"
+   ],
+   [
+    1448.15,
+    0.05,
+    "ORC-SRKKCKZIV2.992d2e"
+   ]
+  ],
+  "pugliese_two_phase": [
+   [
+    1073.15,
+    0.2,
+    "ORC-4CM5YKPYTE.64e24c"
+   ],
+   [
+    1448.15,
+    0.45,
+    "ORC-4D4BWL3W2X.39c32e"
+   ],
+   [
+    1073.15,
+    0.05,
+    "ORC-6T42KSSLTZ.cd0910"
+   ],
+   [
+    1373.15,
+    0.15,
+    "ORC-7QLJM6VWRE.f75eb5"
+   ],
+   [
+    1273.15,
+    0.2,
+    "ORC-APKS22TNRN.c16e8b"
+   ],
+   [
+    1373.15,
+    0.35,
+    "ORC-AU5T2NJXUI.af5e0e"
+   ],
+   [
+    1073.15,
+    0.55,
+    "ORC-BSJDW62TTY.f23e50"
+   ],
+   [
+    1373.15,
+    0.25,
+    "ORC-BTKRJNERB6.1a4dd5"
+   ],
+   [
+    1173.15,
+    0.15,
+    "ORC-BY7ABI47AL.835b0c"
+   ],
+   [
+    1173.15,
+    0.45,
+    "ORC-BZZTGMJBUF.7863a3"
+   ],
+   [
+    1273.15,
+    0.3,
+    "ORC-CQBKGUGLLE.6bfadf"
+   ],
+   [
+    1373.15,
+    0.3,
+    "ORC-CUVUK63FAN.9ca280"
+   ],
+   [
+    1373.15,
+    0.2,
+    "ORC-DRIDJIGNJN.fa8be9"
+   ],
+   [
+    1173.15,
+    0.1,
+    "ORC-DRIJSJVAMC.aa2b57"
+   ],
+   [
+    1073.15,
+    0.35,
+    "ORC-EFIXP3YNAJ.b5ca29"
+   ],
+   [
+    1448.15,
+    0.15,
+    "ORC-EG7FAQWFNC.7ef9dc"
+   ],
+   [
+    1448.15,
+    0.3,
+    "ORC-FEBGDJSFRR.59a7f5"
+   ],
+   [
+    1173.15,
+    0.05,
+    "ORC-FR7HA5XMRE.6b9a15"
+   ],
+   [
+    1173.15,
+    0.2,
+    "ORC-FUISKP6R6I.210613"
+   ],
+   [
+    1273.15,
+    0.55,
+    "ORC-GNQP2VAU3C.304a44"
+   ],
+   [
+    1373.15,
+    0.45,
+    "ORC-HAVARFZ3AD.054663"
+   ],
+   [
+    1448.15,
+    0.25,
+    "ORC-HMQXEEQMTA.14aba5"
+   ],
+   [
+    1173.15,
+    0.3,
+    "ORC-I3JYIGR3EU.dfe6f0"
+   ],
+   [
+    1373.15,
+    0.1,
+    "ORC-JYIFYDPSBR.88693a"
+   ],
+   [
+    1073.15,
+    0.45,
+    "ORC-K3KFAOBW6L.c75ac4"
+   ],
+   [
+    1173.15,
+    0.55,
+    "ORC-K6W3RGHGM3.a46e8f"
+   ],
+   [
+    1273.15,
+    0.1,
+    "ORC-N6MWXMEDVE.7ce39a"
+   ],
+   [
+    1073.15,
+    0.25,
+    "ORC-NYC6KGMLTP.d2b50f"
+   ],
+   [
+    1273.15,
+    0.35,
+    "ORC-PH7OVDJMLH.07e381"
+   ],
+   [
+    1073.15,
+    0.1,
+    "ORC-RGMSO6WHQB.18b546"
+   ],
+   [
+    1173.15,
+    0.25,
+    "ORC-RWCMV7LRXZ.4f0987"
+   ],
+   [
+    1173.15,
+    0.35,
+    "ORC-SDRSJRB7KH.cafc61"
+   ],
+   [
+    1273.15,
+    0.25,
+    "ORC-U5DYECC3KP.2d2e0a"
+   ],
+   [
+    1273.15,
+    0.45,
+    "ORC-U75OXWUGW6.42e16b"
+   ],
+   [
+    1073.15,
+    0.3,
+    "ORC-VNGUR25FZA.cf9eb3"
+   ],
+   [
+    1273.15,
+    0.15,
+    "ORC-VNKQBNNFO6.ebe67b"
+   ],
+   [
+    1073.15,
+    0.15,
+    "ORC-WP65G24OHH.b6160c"
+   ],
+   [
+    1448.15,
+    0.2,
+    "ORC-YMXZBFJS76.e8a65b"
+   ],
+   [
+    1448.15,
+    0.35,
+    "ORC-YRSDNYFDJO.e2cdd9"
+   ]
+  ]
+ },
+ "lacking": [
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "index": 1,
+   "T": 1873.0,
+   "x_Ni": 0.5982,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "index": 2,
+   "T": 1873.0,
+   "x_Ni": 0.7007,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "index": 3,
+   "T": 1873.0,
+   "x_Ni": 0.8005,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "index": 5,
+   "T": 1873.0,
+   "x_Ni": 0.9695,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "index": 0,
+   "T": 1733.0,
+   "x_Ni": 0.2996,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (not above liquidus observation(s) up to 1815 K); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "index": 2,
+   "T": 1733.0,
+   "x_Ni": 0.5998,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "index": 3,
+   "T": 1733.0,
+   "x_Ni": 0.7,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "index": 6,
+   "T": 1733.0,
+   "x_Ni": 0.9799,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "index": 0,
+   "T": 1783.0,
+   "x_Ni": 0.2996,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (not above liquidus observation(s) up to 1815 K); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "index": 2,
+   "T": 1783.0,
+   "x_Ni": 0.5998,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "index": 3,
+   "T": 1783.0,
+   "x_Ni": 0.7,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "index": 6,
+   "T": 1783.0,
+   "x_Ni": 0.9799,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "index": 2,
+   "T": 1833.0,
+   "x_Ni": 0.5998,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "index": 3,
+   "T": 1833.0,
+   "x_Ni": 0.7,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "index": 3,
+   "T": 1873.0,
+   "x_Ni": 0.759,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "index": 6,
+   "T": 1873.0,
+   "x_Ni": 0.8546,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "index": 3,
+   "T": 1873.0,
+   "x_Ni": 0.6015,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "index": 4,
+   "T": 1873.0,
+   "x_Ni": 0.6493,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "index": 9,
+   "T": 1873.0,
+   "x_Ni": 0.8575,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 1,
+   "T": 1960.0,
+   "x_Ni": 0.6529,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 4,
+   "T": 1960.0,
+   "x_Ni": 0.699,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 9,
+   "T": 1960.0,
+   "x_Ni": 0.8029,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 12,
+   "T": 1960.0,
+   "x_Ni": 0.8672,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 15,
+   "T": 1960.0,
+   "x_Ni": 0.921,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "index": 18,
+   "T": 1960.0,
+   "x_Ni": 0.9777,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 0,
+   "T": 2200.0,
+   "x_Ni": 0.0529,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 3,
+   "T": 2200.0,
+   "x_Ni": 0.1267,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 5,
+   "T": 2200.0,
+   "x_Ni": 0.1847,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 7,
+   "T": 2200.0,
+   "x_Ni": 0.2535,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 13,
+   "T": 2200.0,
+   "x_Ni": 0.6943,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "index": 19,
+   "T": 2200.0,
+   "x_Ni": 0.8599,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 0,
+   "T": 1729.0,
+   "x_Ni": 0.977,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 5,
+   "T": 1729.0,
+   "x_Ni": 0.865,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 8,
+   "T": 1729.0,
+   "x_Ni": 0.801,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 12,
+   "T": 1729.0,
+   "x_Ni": 0.706,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 14,
+   "T": 1729.0,
+   "x_Ni": 0.645,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 15,
+   "T": 1729.0,
+   "x_Ni": 0.649,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "index": 20,
+   "T": 1729.0,
+   "x_Ni": 0.543,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 0,
+   "T": 1990.0,
+   "x_Ni": 0.968,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 6,
+   "T": 1990.0,
+   "x_Ni": 0.856,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 8,
+   "T": 1990.0,
+   "x_Ni": 0.809,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 9,
+   "T": 1990.0,
+   "x_Ni": 0.813,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 15,
+   "T": 1990.0,
+   "x_Ni": 0.702,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 21,
+   "T": 1990.0,
+   "x_Ni": 0.598,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 24,
+   "T": 1990.0,
+   "x_Ni": 0.537,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "dataset": "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "index": 25,
+   "T": 1990.0,
+   "x_Ni": 0.538,
+   "reason": "rule 0.4a: liquid thermochemical state not above every liquidus observation at that composition (no liquidus observation within 0.02); no exclusion added"
+  },
+  {
+   "record": "ORC-2GJWAW5E4P",
+   "T": 19.0021,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-2QHGF7HZM7",
+   "T": 60.8927,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-33Z77DDXXI",
+   "T": 60.8927,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-4C3NNSLLFS",
+   "T": 10.1452,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-5QLGA5KKN6",
+   "T": 29.7735,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-BRPTR74YD5",
+   "T": 129.8324,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-CFXHCL7A2H",
+   "T": 254.72,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-CQMU7ZYPWP",
+   "T": 176.033,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-FPTRXBVWO2",
+   "T": 43.1788,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-GFJFZ2DSOE",
+   "T": 111.083,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-GNMFWCF3VN",
+   "T": 215.2997,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-IE5E6TXFBV",
+   "T": 27.8591,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-KNXB5AWCS4",
+   "T": 235.1578,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-MIE34PM4JP",
+   "T": 108.5281,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-P5NAGF7RRU",
+   "T": 159.919,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-Q5CIARVBNF",
+   "T": 80.0428,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-RP76YE6HQ7",
+   "T": 7.033,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-TZCNYZX7XA",
+   "T": 133.6627,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-UOIYTLSTNO",
+   "T": 11.1031,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-X3UCRP3NPY",
+   "T": 273.6977,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-X5PWUM6GOX",
+   "T": 184.1704,
+   "reason": "fcc Curie mark below 298.15 K (SGTE unaries not valid); no cell"
+  },
+  {
+   "record": "ORC-SV7H3CNRYS",
+   "reason": "eutectic: three expected phases; the hinge takes one or two (CRNI2 excluded at 1618 K by the neighbouring cells)"
+  },
+  {
+   "record": "ORC-X3KVP7D3PO",
+   "reason": "CRNI2 ordering at 863 K: a stoichiometric expected phase needs a partner with a known tie-line end (fcc composition not printed); LIQUID/BCC_A2 exclusions not formed"
+  }
+ ],
+ "n_cells": 366,
+ "n_zpf_parent_states": 164,
+ "n_zpf_parent_states_without_cells": 0
+}

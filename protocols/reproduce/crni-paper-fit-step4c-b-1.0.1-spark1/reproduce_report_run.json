@@ -1,0 +1,243 @@
+{
+ "specific_protocol": "crni-paper-fit-step4c-b@1.0.1",
+ "spec_sha256": "046e81046fdbf6f2afc1cec1f94c05eb92396b16597fd5c0c4966450ab42cb0d",
+ "root": "<home>/orchid-protocols-work-20261106/rerun-crni4cb-1.0.1",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-06T22:05:00-0600",
+ "items": [
+  {
+   "id": "step4c_b",
+   "step": "fit_solid",
+   "kind": "numerical",
+   "checks": [],
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/fit2.py steps/configs/step4c_b_hingefloor.json 4 7 && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/evaluate.py step4c_b_hingefloor",
+   "returncode": 0,
+   "wall_s": 2305.6,
+   "pass": null
+  },
+  {
+   "id": "check10a",
+   "step": "pick_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": -5657.288636859774,
+     "rerun": -5657.288636863667,
+     "diff": -3.893546818289906e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/pick10a_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/pick10a_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/pick10a_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": 1614,
+     "rerun": 1614.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": 860,
+     "rerun": 860.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "the 10a pick (by the rule; s4 on the Studio, s1 in the 1.0.0 spark1 rerun, both mode A) reproduces the recorded pick within the tolerances; flat directions undetermined"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/check10a_ms.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json results/check10a_rerun.json 4 model2 && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I scripts/pick10a.py results/check10a_rerun.json steps/step4c_b_hingefloor/evaluation.json steps/step4c_b_hingefloor reference/step4c_b_hingefloor_pick.tdb reference/modes_step4c_b.json results/pick10a_rerun.json tdb/step4c_b_hingefloor_pick10a.tdb results/pick10a_start.txt 50 0.03",
+   "returncode": 0,
+   "wall_s": 1913.0,
+   "pass": true
+  },
+  {
+   "id": "global_10c",
+   "step": "global_search",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+     "reference": -5657.288636859766,
+     "rerun": -5657.288636863626,
+     "diff": -3.86080500902608e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/anneal_7201/status.json",
+     "reference": -5657.288636859768,
+     "rerun": -5657.288636863596,
+     "diff": -3.828063199762255e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "from the 10a pick (results/pick10a_start.txt, written by item check10a): no better optimum than the recorded pick beyond 0.01 log-units"
+   },
+   "command": "mkdir -p steps/step4c_b_hingefloor_10c && P=$(cat results/pick10a_start.txt) && (<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/run_global_crni.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json \"$P\" basin 7201 1500 steps/step4c_b_hingefloor_10c/basin_7201 > logs/10c_basin.log 2>&1 & <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/run_global_crni.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json \"$P\" anneal 7201 1500 steps/step4c_b_hingefloor_10c/anneal_7201 > logs/10c_anneal.log 2>&1; wait)",
+   "returncode": 0,
+   "wall_s": 5170.9,
+   "pass": true
+  },
+  {
+   "id": "evaluate_states",
+   "step": "evaluate_states",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "files_equal",
+     "path": "evaluate/states_evaluated@1.0.0.json",
+     "reference": "reference/states_evaluated@1.0.0.json",
+     "rerun": "b610e5ecb4c0bb61ff6ee0c6837c42aeaac4f06ff379dc80b87e32f52b1ef7b6",
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "deterministic"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo11-crni4cb-1.0.1/protocols/tools/evaluate_states.py step4c_b_hingefloor_pick.tdb states@1.0.0.json states_evaluated@1.0.0.json --nproc 4",
+   "returncode": 0,
+   "wall_s": 2.8,
+   "pass": true
+  },
+  {
+   "id": "phase_sequence",
+   "step": "final_pick",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "sequence_equal",
+     "path": "phase_sequence_rerun.json",
+     "reference": "phase_sequence_reference.json",
+     "abs_tol_K": 10,
+     "compositions": 99,
+     "differing_compositions": [],
+     "n_differing": 0,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - identical phase order on heating at every x of a 0.01 grid, transition temperatures within 10 K (two grid steps); at the 10a pick (item check10a)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo11-crni4cb-1.0.1/protocols/tools/phase_sequence.py crni tdb/step4c_b_hingefloor_pick10a.tdb phase_sequence_rerun.json && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo11-crni4cb-1.0.1/protocols/tools/phase_sequence.py crni reference/step4c_b_hingefloor_pick.tdb phase_sequence_reference.json",
+   "returncode": 0,
+   "wall_s": 0.8,
+   "pass": true
+  },
+  {
+   "id": "pure_elements",
+   "step": "physics_checks",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": "BCC_A2",
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": "FCC_A1",
+     "differences": [],
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - pure elements equal SGTE (unary limits exact); at the 10a pick; Cahn inputs from the staged copy (physics.py 1.0.1)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/physics.py tdb/step4c_b_hingefloor_pick10a.tdb results/physics_rerun.json",
+   "returncode": 0,
+   "wall_s": 2.0,
+   "pass": true
+  },
+  {
+   "id": "laplace_weights",
+   "step": "laplace",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "results/uq/laplace_step4c_b.json",
+     "reference": 0.7660570156257861,
+     "rerun": 0.7660570169113187,
+     "diff": 1.285532569283987e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - mixture weight of the main mode within 0.01 (0.766); uses the recorded modes, so it tests the Hessian and mixture code, not the mode finding"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/laplace2.py steps/configs/step4c_b_hingefloor.json results/uq/modes_step4c_b.json results/uq/laplace_step4c_b.json 1000",
+   "returncode": 0,
+   "wall_s": 555.6,
+   "pass": true
+  }
+ ],
+ "staged_files": 408,
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "phaseforgeplus": {
+  "path": "<home>/orchid-crni-mcmc-20261105/src/PhaseForgePlus",
+  "pin": "protocols/environment/pins/spark1_phaseforgeplus_src_files.sha256",
+  "pinned_files": 10,
+  "mismatch": [],
+  "pass": true
+ },
+ "finished": "2026-11-07T00:50:53-0600",
+ "pass": true,
+ "unexpected_failures": [],
+ "expected_failures": []
+}

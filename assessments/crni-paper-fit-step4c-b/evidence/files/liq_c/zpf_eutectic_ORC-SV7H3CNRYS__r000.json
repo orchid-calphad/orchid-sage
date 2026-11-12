@@ -1,0 +1,52 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2",
+  "FCC_A1",
+  "LIQUID"
+ ],
+ "conditions": {
+  "P": 101325,
+  "T": [
+   1618.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "LIQUID",
+    [
+     "NI"
+    ],
+    [
+     0.46
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "NI"
+    ],
+    [
+     0.38
+    ]
+   ],
+   [
+    "FCC_A1",
+    [
+     "NI"
+    ],
+    [
+     0.5
+    ]
+   ]
+  ]
+ ],
+ "reference": "ORCHID ORC-SV7H3CNRYS (Hao, Ruban, Xiong, Calphad 73 (2021) 102268, p. 13, citing [158,159]); eutectic 1618 K, L 0.46, bcc 0.38, fcc 0.50 x_Ni; sigma_eff 11 K",
+ "comment": "crni-paper-fit-20261106: three-phase invariant; possible overlap with Jenkins 1937 arrests near 1618 K (flagged in data_consistency.json, counted as printed) | step4c: sigma_DF = max(converted 81, tier uncertain 100) = 100 J/mol",
+ "weight": 10.0
+}

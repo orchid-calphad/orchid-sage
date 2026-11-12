@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "phase": "B2",
+  "elements": [
+    "Ni",
+    "Al"
+  ],
+  "sublattices": [
+    {
+      "id": "a",
+      "site_ratio": 1,
+      "constituents": [
+        "Ni",
+        "Al",
+        "VA"
+      ]
+    },
+    {
+      "id": "b",
+      "site_ratio": 1,
+      "constituents": [
+        "Ni",
+        "Al",
+        "VA"
+      ]
+    }
+  ],
+  "reference_state": "SER 298.15 K; numerical unary functions must be supplied separately",
+  "energy_basis": "J/mol_atoms",
+  "vacancy_role": "unknown",
+  "ordered": true,
+  "evidence": [],
+  "validity": {
+    "temperature_K": null,
+    "composition_scope": "Unspecified; demonstration only"
+  }
+}

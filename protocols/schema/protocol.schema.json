@@ -1,0 +1,1583 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orchid-project.org/schema/assessment/1.0.0-draft.2/protocol.schema.json",
+  "title": "orchid-assessment-schema 1.0.0-draft.2: general protocol, specific protocol and run card",
+  "description": "One schema for three document types, selected by `type` (Y32 design, ORCHID_COORDINATION.md 30 Oct 2026). Steps follow schema.org HowTo: a protocol has HowToSection `sections`, each with HowToStep `steps` carrying name, text, supply (inputs), tool and result (outputs).",
+  "type": "object",
+  "required": [
+    "type",
+    "schema_version",
+    "id",
+    "version",
+    "title",
+    "status"
+  ],
+  "properties": {
+    "type": {
+      "enum": [
+        "general_protocol",
+        "specific_protocol",
+        "run_card"
+      ]
+    },
+    "schema_version": {
+      "enum": [
+        "orchid-assessment-schema@1.0.0-draft",
+        "orchid-assessment-schema@1.0.0-draft.2"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "version": {
+      "$ref": "common.schema.json#/$defs/semver"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved",
+        "superseded",
+        "withdrawn",
+        "complete",
+        "failed",
+        "stopped",
+        "running"
+      ]
+    },
+    "status_note": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "general_protocol"
+          }
+        }
+      },
+      "then": {
+        "$ref": "#/$defs/general_protocol"
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "specific_protocol"
+          }
+        }
+      },
+      "then": {
+        "$ref": "#/$defs/specific_protocol"
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "run_card"
+          }
+        }
+      },
+      "then": {
+        "$ref": "#/$defs/run_card"
+      }
+    }
+  ],
+  "$defs": {
+    "input": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "kind"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string",
+          "description": "e.g. orchid_evidence, unary_tdb, mlip_weights, structure_set, campaign_dataset, tdb, hinge_sidecar, restricted_source"
+        },
+        "required_hashes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "storage_class": {
+          "$ref": "common.schema.json#/$defs/storage_class"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          }
+        },
+        "orchid": {
+          "type": "object",
+          "description": "ORCHID identity of an input, using ORCHID's own field names",
+          "properties": {
+            "release": {
+              "type": "string"
+            },
+            "repository": {
+              "type": "string"
+            },
+            "commit": {
+              "type": "string"
+            },
+            "record_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/orchid_record_id"
+              }
+            },
+            "state_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/state_id"
+              }
+            },
+            "query": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "parameter": {
+      "type": "object",
+      "required": [
+        "default",
+        "text"
+      ],
+      "properties": {
+        "default": {},
+        "unit": {
+          "type": "string"
+        },
+        "allowed": {
+          "description": "allowed range [min, max], or list of allowed values"
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "frozen": {
+          "type": "boolean",
+          "description": "true: may change only by an explicit PI decision recorded in decisions (fit_protocol 0.0a)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tool": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "command": {
+          "type": "string",
+          "description": "exact command line; {placeholders} name parameters or inputs"
+        },
+        "code": {
+          "type": "string",
+          "description": "id of an entry in `code`"
+        },
+        "environment": {
+          "type": "string",
+          "description": "id of an entry in `environment`"
+        },
+        "host_class": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "placeholders": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "meaning"
+            ],
+            "properties": {
+              "meaning": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "step": {
+      "description": "schema.org HowToStep",
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "text",
+        "kind",
+        "supply",
+        "tool",
+        "result"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "imperative, unambiguous, enough for a human to execute"
+        },
+        "kind": {
+          "enum": [
+            "deterministic",
+            "numerical",
+            "judgement"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "supply": {
+          "description": "inputs: `input:<id>`, `param:<name>`, or `<step_id>.<result_id>` of an EARLIER step (validator checks the order)",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(input:[a-z0-9_]+|param:[a-z0-9_.]+|[a-z0-9_]+\\.[a-z0-9_]+)$"
+          }
+        },
+        "tool": {
+          "$ref": "#/$defs/tool"
+        },
+        "result": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/result"
+          }
+        },
+        "decision_rule": {
+          "type": "string"
+        },
+        "decided_by": {
+          "type": "string"
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "ids of hard gates checked here"
+        },
+        "ranking_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tolerances": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/tolerance"
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "description": "section of the prose rationale document (fit_protocol.md)"
+        },
+        "note": {
+          "type": "string"
+        },
+        "compute": {
+          "$ref": "common.schema.json#/$defs/compute"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "judgement"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "decision_rule",
+              "decided_by"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "numerical"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "tolerances"
+            ]
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "section": {
+      "description": "schema.org HowToSection",
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "steps"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/step"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "common_fields": {
+      "properties": {
+        "purpose": {
+          "type": "string"
+        },
+        "licence": {
+          "const": "CC-BY-4.0"
+        },
+        "maintainers": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/person"
+          }
+        },
+        "created": {
+          "$ref": "common.schema.json#/$defs/date"
+        },
+        "rationale_document": {
+          "$ref": "common.schema.json#/$defs/file_ref"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "relation"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "sha256": {
+                "$ref": "common.schema.json#/$defs/sha256"
+              },
+              "relation": {
+                "type": "string"
+              },
+              "storage_class": {
+                "$ref": "common.schema.json#/$defs/storage_class"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/input"
+          }
+        },
+        "code": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/code_ref"
+          }
+        },
+        "environment": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/environment"
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/parameter"
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          }
+        },
+        "gates": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/check"
+          }
+        },
+        "ranking_criteria": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/check"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "lands": {
+                "type": "string"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "file": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "tolerances": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/tolerance"
+          }
+        },
+        "compute": {
+          "type": "object"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "decisions": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/decision"
+          }
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "ids in protocols/OPEN_QUESTIONS.md"
+        },
+        "standards": {
+          "type": "object"
+        },
+        "changelog": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "version",
+              "date",
+              "who",
+              "change",
+              "why"
+            ],
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "common.schema.json#/$defs/date"
+              },
+              "who": {
+                "type": "string"
+              },
+              "change": {
+                "type": "string"
+              },
+              "bump": {
+                "enum": [
+                  "major",
+                  "minor",
+                  "patch",
+                  "draft"
+                ]
+              },
+              "why": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "decision_requests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "step",
+              "question",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "step": {
+                "type": "string"
+              },
+              "question": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/file_ref"
+                }
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "status": {
+                "enum": [
+                  "open",
+                  "decided"
+                ]
+              },
+              "decision_id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "general_protocol": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common_fields"
+        }
+      ],
+      "required": [
+        "purpose",
+        "licence",
+        "maintainers",
+        "rationale_document",
+        "inputs",
+        "code",
+        "environment",
+        "parameters",
+        "sections",
+        "gates",
+        "ranking_criteria",
+        "outputs",
+        "tolerances",
+        "compute",
+        "limitations",
+        "citations",
+        "decisions"
+      ],
+      "properties": {
+        "type": true,
+        "schema_version": true,
+        "id": true,
+        "version": true,
+        "title": true,
+        "status": true,
+        "status_note": true,
+        "purpose": true,
+        "licence": true,
+        "maintainers": true,
+        "created": true,
+        "rationale_document": true,
+        "supersedes": true,
+        "inputs": true,
+        "code": true,
+        "environment": true,
+        "parameters": true,
+        "sections": true,
+        "gates": true,
+        "ranking_criteria": true,
+        "outputs": true,
+        "tolerances": true,
+        "compute": true,
+        "limitations": true,
+        "citations": true,
+        "decisions": true,
+        "open_questions": true,
+        "standards": true,
+        "changelog": true,
+        "decision_requests": true
+      },
+      "additionalProperties": false
+    },
+    "run_ref": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "step",
+        "status"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string"
+        },
+        "step": {
+          "type": "string",
+          "description": "general-protocol step id (or specific-protocol step id) this run executes"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "side_branch",
+            "failed",
+            "superseded",
+            "stopped",
+            "not_run"
+          ]
+        },
+        "run_card": {
+          "$ref": "common.schema.json#/$defs/file_ref"
+        },
+        "starts": {
+          "type": "integer"
+        },
+        "pick": {
+          "type": "string"
+        },
+        "start_from": {
+          "type": "string",
+          "description": "run_id whose pick this run starts from"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "superseded_because": {
+          "type": "string"
+        },
+        "superseded_by": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "specific_protocol": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common_fields"
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "not": {
+                  "const": "draft"
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "run_sequence": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ],
+      "required": [
+        "purpose",
+        "licence",
+        "maintainers",
+        "instantiates",
+        "artifact",
+        "inputs",
+        "code",
+        "environment",
+        "overrides",
+        "evidence_selection",
+        "run_sequence",
+        "acceptance_target",
+        "reproduce",
+        "decisions",
+        "limitations"
+      ],
+      "properties": {
+        "type": true,
+        "schema_version": true,
+        "id": true,
+        "version": true,
+        "title": true,
+        "status": true,
+        "status_note": true,
+        "purpose": true,
+        "licence": true,
+        "maintainers": true,
+        "created": true,
+        "rationale_document": true,
+        "supersedes": true,
+        "inputs": true,
+        "code": true,
+        "environment": true,
+        "parameters": true,
+        "sections": true,
+        "gates": true,
+        "ranking_criteria": true,
+        "outputs": true,
+        "tolerances": true,
+        "compute": true,
+        "limitations": true,
+        "citations": true,
+        "decisions": true,
+        "open_questions": true,
+        "standards": true,
+        "system": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z]?(-[A-Z][A-Z]?)+$"
+        },
+        "instantiates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "protocol",
+              "file"
+            ],
+            "properties": {
+              "protocol": {
+                "$ref": "common.schema.json#/$defs/protocol_ref"
+              },
+              "file": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "artifact": {
+          "type": "object",
+          "required": [
+            "kind",
+            "file",
+            "produced_by"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "file": {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "produced_by": {
+              "$ref": "common.schema.json#/$defs/protocol_ref"
+            },
+            "tdb_provenance": {
+              "type": "object",
+              "description": "fields of phases/tdb_provenance.schema.json (orchid-data-next) where they apply: generation_method, potential, parents"
+            }
+          },
+          "additionalProperties": false
+        },
+        "overrides": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "parameter",
+              "value",
+              "reason",
+              "source"
+            ],
+            "properties": {
+              "parameter": {
+                "type": "string"
+              },
+              "value": {},
+              "general_default": {},
+              "reason": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string"
+              },
+              "conforms": {
+                "type": "boolean",
+                "description": "false: departs from the general protocol as now written (e.g. it predates a later PI rule)"
+              },
+              "general_step": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "parameter",
+                  "threshold",
+                  "skip_step",
+                  "add_step",
+                  "reorder_step",
+                  "tool",
+                  "data_selection",
+                  "binding"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "evidence_selection": {
+          "type": "object",
+          "required": [
+            "orchid",
+            "manifest",
+            "exclusions",
+            "interpretations",
+            "single_reader_flags"
+          ],
+          "properties": {
+            "orchid": {
+              "type": "object",
+              "required": [
+                "repository",
+                "commit"
+              ],
+              "properties": {
+                "repository": {
+                  "type": "string"
+                },
+                "commit": {
+                  "type": "string"
+                },
+                "release": {
+                  "type": "string"
+                },
+                "query": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "manifest": {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "result_sha256": {
+              "description": "sha256 over the sorted list `sha256  path` of every data file the objective read (see validate.py evidence_digest)",
+              "$ref": "common.schema.json#/$defs/sha256"
+            },
+            "data_files": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            },
+            "exclusions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "what",
+                  "reason",
+                  "source"
+                ],
+                "properties": {
+                  "what": {
+                    "type": "string"
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "common.schema.json#/$defs/orchid_record_id"
+                    }
+                  },
+                  "reason": {
+                    "type": "string"
+                  },
+                  "source": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "interpretations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "what",
+                  "label",
+                  "source"
+                ],
+                "properties": {
+                  "what": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "common.schema.json#/$defs/orchid_record_id"
+                    }
+                  },
+                  "source": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "single_reader_flags": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "what",
+                  "note"
+                ],
+                "properties": {
+                  "what": {
+                    "type": "string"
+                  },
+                  "record_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "common.schema.json#/$defs/orchid_record_id"
+                    }
+                  },
+                  "note": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "note": {
+              "type": "string"
+            },
+            "digest_source": {
+              "description": "run card whose inputs with role 'data file read by the objective' define the evidence digest (result_sha256)",
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "bundle": {
+              "type": "object",
+              "required": [
+                "manifest",
+                "bundle_sha256"
+              ],
+              "properties": {
+                "manifest": {
+                  "$ref": "common.schema.json#/$defs/file_ref"
+                },
+                "states": {
+                  "$ref": "common.schema.json#/$defs/file_ref"
+                },
+                "states_evaluated": {
+                  "$ref": "common.schema.json#/$defs/file_ref"
+                },
+                "bundle_sha256": {
+                  "$ref": "common.schema.json#/$defs/sha256"
+                },
+                "intake": {
+                  "$ref": "common.schema.json#/$defs/file_ref"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "run_sequence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/run_ref"
+          }
+        },
+        "acceptance_target": {
+          "type": "object",
+          "required": [
+            "text",
+            "tolerances"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "tolerances": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/tolerance"
+              }
+            },
+            "reference_values": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        },
+        "reproduce": {
+          "type": "object",
+          "required": [
+            "command",
+            "byte_identical_expected",
+            "not_reproducible"
+          ],
+          "properties": {
+            "command": {
+              "type": "string"
+            },
+            "byte_identical_expected": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "not_reproducible": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "independent_rerun": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "common.schema.json#/$defs/pending"
+                }
+              ]
+            },
+            "stage": {
+              "type": "object",
+              "required": [
+                "copy"
+              ],
+              "properties": {
+                "manifests": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "copy": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "mkdirs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "repo path -> run-root path; staged files are checked against the listed manifests (tools/orchid_reproduce.py)"
+            },
+            "environment_check": {
+              "type": "object",
+              "required": [
+                "code",
+                "expected"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "expected": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "plan": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "step",
+                  "kind"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "step": {
+                    "type": "string"
+                  },
+                  "kind": {
+                    "enum": [
+                      "deterministic",
+                      "numerical"
+                    ]
+                  },
+                  "command": {
+                    "type": "string"
+                  },
+                  "env": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "expect": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "rule",
+                        "path"
+                      ],
+                      "properties": {
+                        "rule": {
+                          "enum": [
+                            "byte",
+                            "tdb_tol",
+                            "tdb_abs",
+                            "json_tol",
+                            "json_equal",
+                            "files_equal",
+                            "sequence_equal"
+                          ]
+                        },
+                        "path": {
+                          "type": "string"
+                        },
+                        "sha256": {
+                          "$ref": "common.schema.json#/$defs/sha256"
+                        },
+                        "reference": {
+                          "type": "string"
+                        },
+                        "rel_tol": {
+                          "type": "number"
+                        },
+                        "json_path": {
+                          "type": "string"
+                        },
+                        "reference_value": {
+                          "type": [
+                            "number",
+                            "string",
+                            "boolean",
+                            "null"
+                          ]
+                        },
+                        "abs_tol": {
+                          "type": [
+                            "number",
+                            "object"
+                          ]
+                        },
+                        "reference_path": {
+                          "type": "string"
+                        },
+                        "json_paths": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "cwd": {
+                    "type": "string",
+                    "description": "working directory relative to the run root"
+                  },
+                  "copy": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "object",
+                      "required": [
+                        "to",
+                        "sha256"
+                      ],
+                      "properties": {
+                        "to": {
+                          "type": "string"
+                        },
+                        "sha256": {
+                          "$ref": "common.schema.json#/$defs/sha256"
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "description": "repo path -> {to: root-relative path, sha256}, copied and hash-checked before the command"
+                  },
+                  "expected": {
+                    "type": "object",
+                    "required": [
+                      "result"
+                    ],
+                    "properties": {
+                      "result": {
+                        "enum": [
+                          "pass",
+                          "fail",
+                          "partial"
+                        ]
+                      },
+                      "reason": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "description": "the result the protocol owner expects, so an agent can tell an expected FAIL from a new one"
+                  },
+                  "compute": {
+                    "$ref": "common.schema.json#/$defs/compute"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "reports": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "dashboard": {
+          "type": "object",
+          "required": [
+            "data",
+            "html"
+          ],
+          "properties": {
+            "data": {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "html": {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            "figures": {
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/$defs/file_ref"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "changelog": true,
+        "decision_requests": true,
+        "step_sequence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "G12: the order of general/specific step ids when the specific protocol skips, adds or reorders steps"
+        }
+      },
+      "additionalProperties": false
+    },
+    "run_card": {
+      "required": [
+        "executes",
+        "run_id",
+        "host",
+        "started",
+        "interpreter",
+        "packages",
+        "command",
+        "seeds",
+        "inputs",
+        "outputs",
+        "results"
+      ],
+      "properties": {
+        "type": true,
+        "schema_version": true,
+        "id": true,
+        "version": true,
+        "title": true,
+        "status": true,
+        "status_note": true,
+        "run_id": {
+          "type": "string"
+        },
+        "executes": {
+          "type": "object",
+          "required": [
+            "specific_protocol",
+            "general_protocol",
+            "step"
+          ],
+          "properties": {
+            "specific_protocol": {
+              "$ref": "common.schema.json#/$defs/protocol_ref"
+            },
+            "general_protocol": {
+              "$ref": "common.schema.json#/$defs/protocol_ref"
+            },
+            "step": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "host": {
+          "type": "string"
+        },
+        "hardware_class": {
+          "type": "string"
+        },
+        "pids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "started": {
+          "$ref": "common.schema.json#/$defs/date"
+        },
+        "finished": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/date"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            }
+          ]
+        },
+        "interpreter": {
+          "type": "string"
+        },
+        "packages": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "command": {
+          "type": "string"
+        },
+        "threads": {
+          "type": "string"
+        },
+        "config": {
+          "type": "object"
+        },
+        "seeds": {
+          "type": "object"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          }
+        },
+        "results": {
+          "type": "object",
+          "description": "per start: objective, components, termination, evaluations, wall time, topology and ranking, copied from the campaign files"
+        },
+        "trajectory": {
+          "oneOf": [
+            {
+              "$ref": "common.schema.json#/$defs/file_ref"
+            },
+            {
+              "$ref": "common.schema.json#/$defs/pending"
+            },
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "reason"
+              ],
+              "properties": {
+                "status": {
+                  "const": "not_recorded"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        },
+        "gates": {
+          "type": "object"
+        },
+        "ranking": {
+          "type": "object"
+        },
+        "converted_from": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "common.schema.json#/$defs/file_ref"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recorded_by": {
+          "type": "object",
+          "required": [
+            "tool",
+            "version"
+          ],
+          "properties": {
+            "tool": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "converted_from"
+          ]
+        },
+        {
+          "required": [
+            "recorded_by"
+          ]
+        }
+      ]
+    }
+  }
+}

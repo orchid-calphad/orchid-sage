@@ -1,0 +1,239 @@
+{
+ "rule": "every reference dataset of group 'thermo' present, same number of points, |delta rms_z| <= 0.1",
+ "group": "thermo",
+ "n_reference": 22,
+ "n_compared": 22,
+ "missing": [],
+ "all_present": true,
+ "all_n_equal": true,
+ "max_abs_diff_rms_z": 7.796687788969026e-06,
+ "tol_z": 0.1,
+ "within_tol": true,
+ "not_judged": [
+  "liq",
+  "oneshot",
+  "solid"
+ ],
+ "rows": [
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 11,
+   "rms_z_reference": 0.21559399720186892,
+   "rms_z_rerun": 0.21558620051407995,
+   "diff_rms_z": -7.796687788969026e-06,
+   "diff_rms_residual": -0.0272884072613806,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/dft_HM_MIX_FCC_A1_liu2016.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 3,
+   "rms_z_reference": 1.6424655252058153,
+   "rms_z_rerun": 1.6424682837120164,
+   "diff_rms_z": 2.7585062010171413e-06,
+   "diff_rms_residual": 0.019861244645653642,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 8,
+   "rms_z_reference": 0.24065846964527332,
+   "rms_z_rerun": 0.2406557431740105,
+   "diff_rms_z": -2.726471262815e-06,
+   "diff_rms_residual": -0.009542649419813642,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json",
+   "type": "ActivityResidual",
+   "n": 13,
+   "rms_z_reference": 0.6859746753361967,
+   "rms_z_rerun": 0.6859770753493912,
+   "diff_rms_z": 2.4000131945145498e-06,
+   "diff_rms_residual": 0.006960038264196555,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 24,
+   "rms_z_reference": 1.146756090688736,
+   "rms_z_rerun": 1.146758285511362,
+   "diff_rms_z": 2.1948226260892767e-06,
+   "diff_rms_residual": 0.0021948226258245995,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json",
+   "type": "ActivityResidual",
+   "n": 13,
+   "rms_z_reference": 0.6602815224699855,
+   "rms_z_rerun": 0.6602836863647944,
+   "diff_rms_z": 2.1638948088931187e-06,
+   "diff_rms_residual": 0.006275294945453425,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 4,
+   "rms_z_reference": 0.08315203145157486,
+   "rms_z_rerun": 0.08314992653927022,
+   "diff_rms_z": -2.1049123046373852e-06,
+   "diff_rms_residual": -0.007367193066215805,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json",
+   "type": "ActivityResidual",
+   "n": 13,
+   "rms_z_reference": 0.6793572604450172,
+   "rms_z_rerun": 0.6793590117390771,
+   "diff_rms_z": 1.751294059881836e-06,
+   "diff_rms_residual": 0.0050787527734428295,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "type": "ActivityResidual",
+   "n": 7,
+   "rms_z_reference": 1.3971449732009782,
+   "rms_z_rerun": 1.397143607047078,
+   "diff_rms_z": -1.3661539002285394e-06,
+   "diff_rms_residual": -0.0039617036895833735,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 24,
+   "rms_z_reference": 0.3586584594339304,
+   "rms_z_rerun": 0.3586571647503398,
+   "diff_rms_z": -1.2946835905580656e-06,
+   "diff_rms_residual": -0.0012946835905722764,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json",
+   "type": "ActivityResidual",
+   "n": 13,
+   "rms_z_reference": 0.6527019413584894,
+   "rms_z_rerun": 0.6527031414703628,
+   "diff_rms_z": 1.20011187343394e-06,
+   "diff_rms_residual": 0.0034803244329850713,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 28,
+   "rms_z_reference": 0.3789301281939987,
+   "rms_z_rerun": 0.3789312476803793,
+   "diff_rms_z": 1.119486380596335e-06,
+   "diff_rms_residual": 0.0011194863805599198,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "type": "ActivityResidual",
+   "n": 6,
+   "rms_z_reference": 0.9763564107550287,
+   "rms_z_rerun": 0.9763574870947208,
+   "diff_rms_z": 1.0763396921520396e-06,
+   "diff_rms_residual": 0.0031212908443194465,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json",
+   "type": "ActivityResidual",
+   "n": 3,
+   "rms_z_reference": 1.467433633117168,
+   "rms_z_rerun": 1.4674344120811749,
+   "diff_rms_z": 7.789640068533998e-07,
+   "diff_rms_residual": 0.002259097730529902,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "type": "ActivityResidual",
+   "n": 9,
+   "rms_z_reference": 0.911994486980609,
+   "rms_z_rerun": 0.9119950307719862,
+   "diff_rms_z": 5.437913771499936e-07,
+   "diff_rms_residual": 0.0015771211633364146,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "type": "ActivityResidual",
+   "n": 6,
+   "rms_z_reference": 1.5680501776699058,
+   "rms_z_rerun": 1.5680506369431813,
+   "diff_rms_z": 4.5927327541051e-07,
+   "diff_rms_residual": 0.0013318522778718034,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/dft_HM_MIX_BCC_A2_liu2016.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 3,
+   "rms_z_reference": 0.5501513920293795,
+   "rms_z_rerun": 0.5501517025877591,
+   "diff_rms_z": 3.105583796791933e-07,
+   "diff_rms_residual": 0.0022360203333846584,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json",
+   "type": "ActivityResidual",
+   "n": 13,
+   "rms_z_reference": 2.5622378244240385,
+   "rms_z_rerun": 2.5622380829665117,
+   "diff_rms_z": 2.585424732082231e-07,
+   "diff_rms_residual": 0.0007497731721741729,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "type": "ActivityResidual",
+   "n": 10,
+   "rms_z_reference": 0.9076666855548393,
+   "rms_z_rerun": 0.9076664381910122,
+   "diff_rms_z": -2.473638270883427e-07,
+   "diff_rms_residual": -0.0007173833628257853,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "type": "ActivityResidual",
+   "n": 7,
+   "rms_z_reference": 0.7930242004677647,
+   "rms_z_rerun": 0.7930239965450673,
+   "diff_rms_z": -2.039226973948871e-07,
+   "diff_rms_residual": -0.0005914231364840816,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 19,
+   "rms_z_reference": 2.2099464220415106,
+   "rms_z_rerun": 2.209946219681207,
+   "diff_rms_z": -2.0236030362497104e-07,
+   "diff_rms_residual": -0.00020236030331943766,
+   "n_equal": true
+  },
+  {
+   "dataset": "thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json",
+   "type": "FixedConfigurationPropertyResidual",
+   "n": 6,
+   "rms_z_reference": 0.412538619393635,
+   "rms_z_rerun": 0.4125386514425147,
+   "diff_rms_z": 3.2048879716750633e-08,
+   "diff_rms_residual": 0.00011217107885386213,
+   "n_equal": true
+  }
+ ]
+}

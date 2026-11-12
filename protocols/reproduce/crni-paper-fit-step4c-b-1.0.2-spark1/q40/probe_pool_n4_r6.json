@@ -1,0 +1,482 @@
+[
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073200.0039463,
+  "s": 6.4,
+  "round": 0
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073200.003948,
+  "s": 6.4,
+  "round": 0
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073200.0235357,
+  "s": 6.6,
+  "round": 0
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073200.0235364,
+  "s": 6.6,
+  "round": 0
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073206.3986104,
+  "s": 5.4,
+  "round": 0
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073206.4080033,
+  "s": 5.4,
+  "round": 0
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073206.5974638,
+  "s": 5.6,
+  "round": 0
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073206.632167,
+  "s": 5.6,
+  "round": 0
+ },
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073212.3098853,
+  "s": 6.4,
+  "round": 1
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073212.3098886,
+  "s": 6.4,
+  "round": 1
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073212.3123415,
+  "s": 6.5,
+  "round": 1
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073212.3123434,
+  "s": 6.6,
+  "round": 1
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073218.6964622,
+  "s": 5.4,
+  "round": 1
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073218.7034163,
+  "s": 5.4,
+  "round": 1
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073218.8679793,
+  "s": 5.6,
+  "round": 1
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073218.9089386,
+  "s": 5.6,
+  "round": 1
+ },
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073224.591494,
+  "s": 6.4,
+  "round": 2
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073224.592375,
+  "s": 6.6,
+  "round": 2
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073224.5923777,
+  "s": 6.6,
+  "round": 2
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073224.6054378,
+  "s": 6.4,
+  "round": 2
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073230.9721317,
+  "s": 5.4,
+  "round": 2
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073230.9968803,
+  "s": 5.4,
+  "round": 2
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073231.1704485,
+  "s": 5.6,
+  "round": 2
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073231.1970334,
+  "s": 5.6,
+  "round": 2
+ },
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073236.8726175,
+  "s": 6.4,
+  "round": 3
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073236.8726175,
+  "s": 6.4,
+  "round": 3
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073236.8747551,
+  "s": 6.5,
+  "round": 3
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073236.8907714,
+  "s": 6.6,
+  "round": 3
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073243.2564201,
+  "s": 5.4,
+  "round": 3
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073243.2883859,
+  "s": 5.4,
+  "round": 3
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073243.4093924,
+  "s": 5.5,
+  "round": 3
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073243.504113,
+  "s": 5.6,
+  "round": 3
+ },
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073249.1946023,
+  "s": 6.4,
+  "round": 4
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073249.1946008,
+  "s": 6.4,
+  "round": 4
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073249.2123141,
+  "s": 6.6,
+  "round": 4
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073249.2131524,
+  "s": 6.6,
+  "round": 4
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073255.571399,
+  "s": 5.4,
+  "round": 4
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073255.5965266,
+  "s": 5.4,
+  "round": 4
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073255.7719853,
+  "s": 5.6,
+  "round": 4
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073255.8379393,
+  "s": 5.6,
+  "round": 4
+ },
+ {
+  "start": "s1_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636863667,
+  "file": -5657.288636863667,
+  "gnorm": 0.0002272345868527275,
+  "t_build_start": 1794073261.5786045,
+  "s": 6.4,
+  "round": 5
+ },
+ {
+  "start": "s2_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636867119,
+  "file": -5657.288636867119,
+  "gnorm": 0.0005278633247047895,
+  "t_build_start": 1794073261.578607,
+  "s": 6.4,
+  "round": 5
+ },
+ {
+  "start": "s3_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636877991,
+  "file": -5657.288636877991,
+  "gnorm": 0.00044769687709324187,
+  "t_build_start": 1794073261.5812397,
+  "s": 6.6,
+  "round": 5
+ },
+ {
+  "start": "s6_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636881297,
+  "file": -5657.288636881297,
+  "gnorm": 0.0006112483522134356,
+  "t_build_start": 1794073261.5812376,
+  "s": 6.6,
+  "round": 5
+ },
+ {
+  "start": "s7_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.288636903301,
+  "file": -5657.288636903301,
+  "gnorm": 0.00037126045673782014,
+  "t_build_start": 1794073267.944122,
+  "s": 5.4,
+  "round": 5
+ },
+ {
+  "start": "s4_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148832628,
+  "file": -5657.293148832628,
+  "gnorm": 0.0002504970304742927,
+  "t_build_start": 1794073267.9482412,
+  "s": 5.4,
+  "round": 5
+ },
+ {
+  "start": "s5_perturbed",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148836689,
+  "file": -5657.293148836689,
+  "gnorm": 0.00020977970141969885,
+  "t_build_start": 1794073268.1878548,
+  "s": 5.6,
+  "round": 5
+ },
+ {
+  "start": "s0_start",
+  "n_zpf_susp_records": 12,
+  "logpost": -5657.293148846702,
+  "file": -5657.293148846702,
+  "gnorm": 0.0005251872214876279,
+  "t_build_start": 1794073268.2117097,
+  "s": 5.6,
+  "round": 5
+ }
+]

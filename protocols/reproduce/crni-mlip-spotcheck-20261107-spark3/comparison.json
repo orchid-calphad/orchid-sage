@@ -1,0 +1,100 @@
+{
+ "check": "crni GPU spot check (7 Nov 2026)",
+ "original_host": "spark1",
+ "rerun_host": "spark3",
+ "model": "GRACE-2L-SMAX-OMAT-large",
+ "solids": [
+  {
+   "cell": "BCC_A2/x0.2500_s2026110501",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -8.391590408980846,
+   "E_spark3_eV_atom": -8.391590859740973,
+   "diff_kJ_mol_atom": -4.34917404204607e-05,
+   "tol_kJ_mol_atom": 0.1,
+   "lattice_kept_spark1": true,
+   "lattice_kept_spark3": true,
+   "pass": true
+  },
+  {
+   "cell": "BCC_A2/x0.2500_s2026110501",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -8.39162303507328,
+   "E_spark3_eV_atom": -8.39162303507328,
+   "diff_kJ_mol_atom": 0.0,
+   "tol_kJ_mol_atom": 0.1,
+   "lattice_kept_spark1": true,
+   "lattice_kept_spark3": true,
+   "pass": true
+  },
+  {
+   "cell": "BCC_A2/x0.2500_s2026110501",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -8.41078296303749,
+   "E_spark3_eV_atom": -8.410782929509878,
+   "diff_kJ_mol_atom": 3.2349228411912917e-06,
+   "tol_kJ_mol_atom": 0.1,
+   "lattice_kept_spark1": true,
+   "lattice_kept_spark3": true,
+   "pass": true
+  },
+  {
+   "cell": "BCC_A2/x0.2500_s2026110501",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -8.410920966416597,
+   "E_spark3_eV_atom": -8.410921033471823,
+   "diff_kJ_mol_atom": -6.469845682382583e-06,
+   "tol_kJ_mol_atom": 0.1,
+   "lattice_kept_spark1": true,
+   "lattice_kept_spark3": true,
+   "pass": true
+  }
+ ],
+ "liquid": {
+  "state": "Cr50Ni50_N108_T2200",
+  "seed": 2026110503,
+  "input_sha256": "ed8bd81337edde63522aaa3fff0e64d8557f83ecccfc293b376994afd34f29bc",
+  "runner_sha256": "a4b6d40caa19b978a4e982bb1a372044862edcf719ae41d4e96cc4bfe9cd3f85",
+  "production_ps": 100.0,
+  "H_spark1_eV_atom": -6.619229202537169,
+  "SE_spark1_eV_atom": 0.005230529035996626,
+  "H_spark3_eV_atom": -6.68807275745706,
+  "SE_spark3_eV_atom": 0.004452156128585695,
+  "V_spark1_A3_atom": 12.804371968232791,
+  "V_spark3_A3_atom": 12.899930086876099,
+  "diff_kJ_mol_atom": -6.642393252505887,
+  "combined_SE_kJ_mol_atom": 0.6627364449977068,
+  "tol_rule": "|dH| <= 2 x combined block SE",
+  "tol_kJ_mol_atom": 1.3254728899954136,
+  "z": -10.02267689160941,
+  "pass": false,
+  "note": "MD trajectories diverge across GPUs (chaotic dynamics); the mean enthalpy is compared within its statistical error"
+ },
+ "solids_input_sha256": "23e7ac6647691c3fc3563d468bc5a1e8f6b0822f83f50696dc7cf8ee45667585",
+ "solids_runner_sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+ "overall": "FAIL",
+ "liquid_diagnostic": {
+  "spark1": {
+   "E_UK_eV_atom": -6.630634331272541,
+   "E_SE": 0.0012569364113680698,
+   "pV_eV_atom": 0.011405128735373344,
+   "p_GPa": 0.14270930604903959,
+   "V_A3_atom": 12.804371968232793,
+   "T_K": 2206.584890994895,
+   "nvt_volume_from_density_stage": 12.804371968232797
+  },
+  "spark3": {
+   "E_UK_eV_atom": -6.625329527236687,
+   "E_SE": 0.0013093962557069868,
+   "pV_eV_atom": -0.06274323022037247,
+   "p_GPa": -0.7792734890072366,
+   "V_A3_atom": 12.899930086876099,
+   "T_K": 2193.8917051809062,
+   "nvt_volume_from_density_stage": 12.899930086876099
+  },
+  "dE_UK_kJ_mol_atom": 0.5118357785942793,
+  "combined_SE_E_kJ_mol_atom": 0.17512573358706637,
+  "z_E": 2.922676000325289,
+  "d_pV_kJ_mol_atom": -7.154229031100308,
+  "reading": "the enthalpy difference is mostly the <p>V term: the NVT volume taken from 5 ps of NPT differs by +0.096 A3/atom between the runs, so <p> is +0.14 GPa (spark1) and -0.78 GPa (spark3); the block SE of the production run does not contain this volume uncertainty. Not a verdict change; a note for the PI."
+ }
+}

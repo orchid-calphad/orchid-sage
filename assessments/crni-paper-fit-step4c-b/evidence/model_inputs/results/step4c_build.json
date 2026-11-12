@@ -1,0 +1,5172 @@
+{
+ "zpf_rows": [
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1721,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 94.29990091394914,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1701,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 90.80272423186584,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1701,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 90.50676190008134,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1671,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 86.93699688679226,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1636,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 83.32602750405027,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1636,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 83.90429416153792,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1716.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 316.79506734547516,
+   "tier": "uncertain",
+   "sigma_used": 316.79506734547516,
+   "weight": 3.15661480584061,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1708.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 240.2671667636041,
+   "tier": "uncertain",
+   "sigma_used": 240.2671667636041,
+   "weight": 4.162033512401999,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1701.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 201.7173911338963,
+   "tier": "uncertain",
+   "sigma_used": 201.7173911338963,
+   "weight": 4.9574307618137805,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1697.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 174.9640887295837,
+   "tier": "uncertain",
+   "sigma_used": 174.9640887295837,
+   "weight": 5.715458567875338,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 172.40393435004236,
+   "tier": "uncertain",
+   "sigma_used": 172.40393435004236,
+   "weight": 5.800331667429574,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 168.06008093762293,
+   "tier": "uncertain",
+   "sigma_used": 168.06008093762293,
+   "weight": 5.950252995362768,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1669.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 158.01194379573076,
+   "tier": "uncertain",
+   "sigma_used": 158.01194379573076,
+   "weight": 6.328635519431022,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 7,
+   "T": 1660.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 147.98587495053175,
+   "tier": "uncertain",
+   "sigma_used": 147.98587495053175,
+   "weight": 6.7574016799527445,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 8,
+   "T": 1650.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 142.1364953453863,
+   "tier": "uncertain",
+   "sigma_used": 142.1364953453863,
+   "weight": 7.035490762383285,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 9,
+   "T": 1629.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 135.94160044472932,
+   "tier": "uncertain",
+   "sigma_used": 135.94160044472932,
+   "weight": 7.356099948275779,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 10,
+   "T": 1625.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 136.38447200050462,
+   "tier": "uncertain",
+   "sigma_used": 136.38447200050462,
+   "weight": 7.332213010263368,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 11,
+   "T": 1622.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 135.97699746909007,
+   "tier": "uncertain",
+   "sigma_used": 135.97699746909007,
+   "weight": 7.354185035798554,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 12,
+   "T": 1618.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 139.0652981516026,
+   "tier": "uncertain",
+   "sigma_used": 139.0652981516026,
+   "weight": 7.190866544649017,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 13,
+   "T": 1619.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 135.93921861551854,
+   "tier": "uncertain",
+   "sigma_used": 135.93921861551854,
+   "weight": 7.3562288365680075,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 14,
+   "T": 1618.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 141.75246464474603,
+   "tier": "uncertain",
+   "sigma_used": 141.75246464474603,
+   "weight": 7.054551061994988,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 15,
+   "T": 1627.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 96.45797903825571,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 16,
+   "T": 1636.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 102.51216114068416,
+   "tier": "uncertain",
+   "sigma_used": 102.51216114068416,
+   "weight": 9.754940183415258,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 17,
+   "T": 1670.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 143.9770943961221,
+   "tier": "less_certain",
+   "sigma_used": 143.9770943961221,
+   "weight": 6.945549249998853,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 18,
+   "T": 1684.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 146.47001666158516,
+   "tier": "uncertain",
+   "sigma_used": 146.47001666158516,
+   "weight": 6.827335879332026,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 19,
+   "T": 1748.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 184.39148299225724,
+   "tier": "uncertain",
+   "sigma_used": 184.39148299225724,
+   "weight": 5.4232439794520815,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 20,
+   "T": 1792.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 186.86137472327164,
+   "tier": "uncertain",
+   "sigma_used": 186.86137472327164,
+   "weight": 5.351560757170542,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 21,
+   "T": 1808.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 196.18350778779185,
+   "tier": "uncertain",
+   "sigma_used": 196.18350778779185,
+   "weight": 5.097268426261813,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 22,
+   "T": 1703.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 652.5468898247631,
+   "tier": "uncertain",
+   "sigma_used": 652.5468898247631,
+   "weight": 1.5324569246947803,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 23,
+   "T": 1706.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 279.64532875022235,
+   "tier": "uncertain",
+   "sigma_used": 279.64532875022235,
+   "weight": 3.5759581769849422,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 24,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 313.24321027087365,
+   "tier": "uncertain",
+   "sigma_used": 313.24321027087365,
+   "weight": 3.192407583664019,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 25,
+   "T": 1680.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 234.18746634472183,
+   "tier": "uncertain",
+   "sigma_used": 234.18746634472183,
+   "weight": 4.2700833465101375,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 26,
+   "T": 1655.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 250.06234511722124,
+   "tier": "uncertain",
+   "sigma_used": 250.06234511722124,
+   "weight": 3.999002726824912,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 27,
+   "T": 1674.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 194.45356864667983,
+   "tier": "uncertain",
+   "sigma_used": 194.45356864667983,
+   "weight": 5.142615828341983,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 28,
+   "T": 1659.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 179.50618200094166,
+   "tier": "uncertain",
+   "sigma_used": 179.50618200094166,
+   "weight": 5.570838780330998,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 29,
+   "T": 1647.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 160.54360575177554,
+   "tier": "uncertain",
+   "sigma_used": 160.54360575177554,
+   "weight": 6.228837301350698,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 30,
+   "T": 1628.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 149.87930060017231,
+   "tier": "uncertain",
+   "sigma_used": 149.87930060017231,
+   "weight": 6.672035404459649,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 31,
+   "T": 1634.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 131.172989616741,
+   "tier": "uncertain",
+   "sigma_used": 131.172989616741,
+   "weight": 7.623520687618563,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 32,
+   "T": 1625.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 128.25741199568165,
+   "tier": "uncertain",
+   "sigma_used": 128.25741199568165,
+   "weight": 7.796820350886773,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 33,
+   "T": 1602.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 125.56729255676476,
+   "tier": "uncertain",
+   "sigma_used": 125.56729255676476,
+   "weight": 7.96385730422541,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 34,
+   "T": 1612.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 124.90864730456451,
+   "tier": "uncertain",
+   "sigma_used": 124.90864730456451,
+   "weight": 8.005850848434072,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 35,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 80.82021369479538,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 36,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 81.1723965526986,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 37,
+   "T": 1617.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 81.82251976127202,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 38,
+   "T": 1618.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 82.43287457126688,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 39,
+   "T": 1613.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 82.23463837961093,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 40,
+   "T": 1611.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 80.84172599297027,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 41,
+   "T": 1615.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 79.6602599628902,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 0,
+   "T": 2055,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 197.36874646439492,
+   "tier": "uncertain",
+   "sigma_used": 197.36874646439492,
+   "weight": 5.066658312998906,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 1,
+   "T": 1985,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 210.0718778771351,
+   "tier": "uncertain",
+   "sigma_used": 210.0718778771351,
+   "weight": 4.760275435748095,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 2,
+   "T": 1934,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 217.50359206661793,
+   "tier": "uncertain",
+   "sigma_used": 217.50359206661793,
+   "weight": 4.5976252185008315,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 3,
+   "T": 1815,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 218.84449516256797,
+   "tier": "uncertain",
+   "sigma_used": 218.84449516256797,
+   "weight": 4.569454668060776,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 4,
+   "T": 1782,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 211.17297090145541,
+   "tier": "uncertain",
+   "sigma_used": 211.17297090145541,
+   "weight": 4.735454522097212,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 5,
+   "T": 1747,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 198.08516418758597,
+   "tier": "uncertain",
+   "sigma_used": 198.08516418758597,
+   "weight": 5.048333650333365,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 6,
+   "T": 1725,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 191.05634688889472,
+   "tier": "uncertain",
+   "sigma_used": 191.05634688889472,
+   "weight": 5.234057995369981,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 7,
+   "T": 1703,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 179.5053594619375,
+   "tier": "uncertain",
+   "sigma_used": 179.5053594619375,
+   "weight": 5.570864307324713,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 8,
+   "T": 1682,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 159.01945532050405,
+   "tier": "less_certain",
+   "sigma_used": 159.01945532050405,
+   "weight": 6.288538707320421,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 9,
+   "T": 1660,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 144.77059177991035,
+   "tier": "uncertain",
+   "sigma_used": 144.77059177991035,
+   "weight": 6.907480225820068,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 10,
+   "T": 1650,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 85.73604843114165,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 11,
+   "T": 1669,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 87.81692336616395,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 12,
+   "T": 1767,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 98.05743416978235,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 13,
+   "T": 1822,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 109.15011258863598,
+   "tier": "uncertain",
+   "sigma_used": 109.15011258863598,
+   "weight": 9.16169462663581,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 14,
+   "T": 1940,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "sigma_conv": 171.74312671823066,
+   "tier": "uncertain",
+   "sigma_used": 171.74312671823066,
+   "weight": 5.822649319996626,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "row": 0,
+   "T": 1618.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "sigma_conv": 81.02212379167668,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1721,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 94.29990091394914,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1701,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 90.80272423186584,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1701,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 90.50676190008134,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1671,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 86.93699688679226,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1636,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 83.32602750405027,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1636,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 83.90429416153792,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1716.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 316.79506734547516,
+   "tier": "uncertain",
+   "sigma_used": 316.79506734547516,
+   "weight": 3.15661480584061,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1708.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 240.2671667636041,
+   "tier": "uncertain",
+   "sigma_used": 240.2671667636041,
+   "weight": 4.162033512401999,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1701.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 201.7173911338963,
+   "tier": "uncertain",
+   "sigma_used": 201.7173911338963,
+   "weight": 4.9574307618137805,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1697.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 174.9640887295837,
+   "tier": "uncertain",
+   "sigma_used": 174.9640887295837,
+   "weight": 5.715458567875338,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 172.40393435004236,
+   "tier": "uncertain",
+   "sigma_used": 172.40393435004236,
+   "weight": 5.800331667429574,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 168.06008093762293,
+   "tier": "uncertain",
+   "sigma_used": 168.06008093762293,
+   "weight": 5.950252995362768,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1669.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 158.01194379573076,
+   "tier": "uncertain",
+   "sigma_used": 158.01194379573076,
+   "weight": 6.328635519431022,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 7,
+   "T": 1660.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 147.98587495053175,
+   "tier": "uncertain",
+   "sigma_used": 147.98587495053175,
+   "weight": 6.7574016799527445,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 8,
+   "T": 1650.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 142.1364953453863,
+   "tier": "uncertain",
+   "sigma_used": 142.1364953453863,
+   "weight": 7.035490762383285,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 9,
+   "T": 1629.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 135.94160044472932,
+   "tier": "uncertain",
+   "sigma_used": 135.94160044472932,
+   "weight": 7.356099948275779,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 10,
+   "T": 1625.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 136.38447200050462,
+   "tier": "uncertain",
+   "sigma_used": 136.38447200050462,
+   "weight": 7.332213010263368,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 11,
+   "T": 1622.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 135.97699746909007,
+   "tier": "uncertain",
+   "sigma_used": 135.97699746909007,
+   "weight": 7.354185035798554,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 12,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 139.0652981516026,
+   "tier": "uncertain",
+   "sigma_used": 139.0652981516026,
+   "weight": 7.190866544649017,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 13,
+   "T": 1619.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 135.93921861551854,
+   "tier": "uncertain",
+   "sigma_used": 135.93921861551854,
+   "weight": 7.3562288365680075,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 14,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 93.44915786903763,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 15,
+   "T": 1627.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 96.45797903825571,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 16,
+   "T": 1636.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 102.51216114068416,
+   "tier": "uncertain",
+   "sigma_used": 102.51216114068416,
+   "weight": 9.754940183415258,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 17,
+   "T": 1670.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 143.9770943961221,
+   "tier": "less_certain",
+   "sigma_used": 143.9770943961221,
+   "weight": 6.945549249998853,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 18,
+   "T": 1684.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 146.47001666158516,
+   "tier": "uncertain",
+   "sigma_used": 146.47001666158516,
+   "weight": 6.827335879332026,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 19,
+   "T": 1748.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 184.39148299225724,
+   "tier": "uncertain",
+   "sigma_used": 184.39148299225724,
+   "weight": 5.4232439794520815,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 20,
+   "T": 1792.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 186.86137472327164,
+   "tier": "uncertain",
+   "sigma_used": 186.86137472327164,
+   "weight": 5.351560757170542,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 21,
+   "T": 1808.15,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 196.18350778779185,
+   "tier": "uncertain",
+   "sigma_used": 196.18350778779185,
+   "weight": 5.097268426261813,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 22,
+   "T": 1703.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 652.5468898247631,
+   "tier": "uncertain",
+   "sigma_used": 652.5468898247631,
+   "weight": 1.5324569246947803,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 23,
+   "T": 1706.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 279.64532875022235,
+   "tier": "uncertain",
+   "sigma_used": 279.64532875022235,
+   "weight": 3.5759581769849422,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 24,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 313.24321027087365,
+   "tier": "uncertain",
+   "sigma_used": 313.24321027087365,
+   "weight": 3.192407583664019,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 25,
+   "T": 1680.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 234.18746634472183,
+   "tier": "uncertain",
+   "sigma_used": 234.18746634472183,
+   "weight": 4.2700833465101375,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 26,
+   "T": 1655.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 250.06234511722124,
+   "tier": "uncertain",
+   "sigma_used": 250.06234511722124,
+   "weight": 3.999002726824912,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 27,
+   "T": 1674.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 194.45356864667983,
+   "tier": "uncertain",
+   "sigma_used": 194.45356864667983,
+   "weight": 5.142615828341983,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 28,
+   "T": 1659.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 179.50618200094166,
+   "tier": "uncertain",
+   "sigma_used": 179.50618200094166,
+   "weight": 5.570838780330998,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 29,
+   "T": 1647.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 160.54360575177554,
+   "tier": "uncertain",
+   "sigma_used": 160.54360575177554,
+   "weight": 6.228837301350698,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 30,
+   "T": 1628.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 149.87930060017231,
+   "tier": "uncertain",
+   "sigma_used": 149.87930060017231,
+   "weight": 6.672035404459649,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 31,
+   "T": 1634.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 131.172989616741,
+   "tier": "uncertain",
+   "sigma_used": 131.172989616741,
+   "weight": 7.623520687618563,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 32,
+   "T": 1625.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 74.94917985018446,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 33,
+   "T": 1602.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 67.94785683070165,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 34,
+   "T": 1612.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 55.92623537253738,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 35,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 63.26323810179034,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 36,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 67.53056421677678,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 37,
+   "T": 1617.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 81.82251976127202,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 38,
+   "T": 1618.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 82.43287457126688,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 39,
+   "T": 1613.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 82.23463837961093,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 40,
+   "T": 1611.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 85.25266500926902,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 41,
+   "T": 1615.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 90.1661988846524,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 0,
+   "T": 2055,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 197.36874646439492,
+   "tier": "uncertain",
+   "sigma_used": 197.36874646439492,
+   "weight": 5.066658312998906,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 1,
+   "T": 1985,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 210.0718778771351,
+   "tier": "uncertain",
+   "sigma_used": 210.0718778771351,
+   "weight": 4.760275435748095,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 2,
+   "T": 1934,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 217.50359206661793,
+   "tier": "uncertain",
+   "sigma_used": 217.50359206661793,
+   "weight": 4.5976252185008315,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 3,
+   "T": 1815,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 218.84449516256797,
+   "tier": "uncertain",
+   "sigma_used": 218.84449516256797,
+   "weight": 4.569454668060776,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 4,
+   "T": 1782,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 211.17297090145541,
+   "tier": "uncertain",
+   "sigma_used": 211.17297090145541,
+   "weight": 4.735454522097212,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 5,
+   "T": 1747,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 198.08516418758597,
+   "tier": "uncertain",
+   "sigma_used": 198.08516418758597,
+   "weight": 5.048333650333365,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 6,
+   "T": 1725,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 191.05634688889472,
+   "tier": "uncertain",
+   "sigma_used": 191.05634688889472,
+   "weight": 5.234057995369981,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 7,
+   "T": 1703,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 179.5053594619375,
+   "tier": "uncertain",
+   "sigma_used": 179.5053594619375,
+   "weight": 5.570864307324713,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 8,
+   "T": 1682,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 159.01945532050405,
+   "tier": "less_certain",
+   "sigma_used": 159.01945532050405,
+   "weight": 6.288538707320421,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 9,
+   "T": 1660,
+   "phases": [
+    "LIQUID"
+   ],
+   "sigma_conv": 144.77059177991035,
+   "tier": "uncertain",
+   "sigma_used": 144.77059177991035,
+   "weight": 6.907480225820068,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 10,
+   "T": 1650,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 85.73604843114165,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 11,
+   "T": 1669,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 87.81692336616395,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 12,
+   "T": 1767,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 98.05743416978235,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 13,
+   "T": 1822,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 109.15011258863598,
+   "tier": "uncertain",
+   "sigma_used": 109.15011258863598,
+   "weight": 9.16169462663581,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 14,
+   "T": 1940,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 171.74312671823066,
+   "tier": "uncertain",
+   "sigma_used": 171.74312671823066,
+   "weight": 5.822649319996626,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1599,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 72.4490899670227,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1584,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 72.91087161760112,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1573,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 74.57215237270177,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1547,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 72.079788021869,
+   "tier": "less_certain",
+   "sigma_used": 72.079788021869,
+   "weight": 13.873514718114876,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1537,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 73.81197488569065,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1522,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 74.599153902477,
+   "tier": "less_certain",
+   "sigma_used": 74.599153902477,
+   "weight": 13.404977773706303,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 6,
+   "T": 1511,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 75.42458449805554,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 7,
+   "T": 1496,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 77.10301720626673,
+   "tier": "less_certain",
+   "sigma_used": 77.10301720626673,
+   "weight": 12.969661061703857,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 8,
+   "T": 1486,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 79.40666345247388,
+   "tier": "less_certain",
+   "sigma_used": 79.40666345247388,
+   "weight": 12.593401567596597,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 9,
+   "T": 1470,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 83.22401399061106,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 10,
+   "T": 1462,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 87.40587523681027,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 11,
+   "T": 1447,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 91.90839651225633,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 12,
+   "T": 1437,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 97.83926532529819,
+   "tier": "less_certain",
+   "sigma_used": 97.83926532529819,
+   "weight": 10.22084534951461,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 13,
+   "T": 1434,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 110.52475487266643,
+   "tier": "uncertain",
+   "sigma_used": 110.52475487266643,
+   "weight": 9.047746825153169,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 14,
+   "T": 1421,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 118.91768843354487,
+   "tier": "uncertain",
+   "sigma_used": 118.91768843354487,
+   "weight": 8.409177921069606,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 15,
+   "T": 1398,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 129.92520515648215,
+   "tier": "uncertain",
+   "sigma_used": 129.92520515648215,
+   "weight": 7.696735970480849,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 16,
+   "T": 1595,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 83.88132336115495,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 17,
+   "T": 1521,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 137.65627274867612,
+   "tier": "less_certain",
+   "sigma_used": 137.65627274867612,
+   "weight": 7.264470990186805,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1073,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 500.615607768427,
+   "tier": "less_certain",
+   "sigma_used": 500.615607768427,
+   "weight": 1.9975405969814997,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1173,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 477.50175369217425,
+   "tier": "less_certain",
+   "sigma_used": 477.50175369217425,
+   "weight": 2.094233146303079,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1273,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 385.740835608857,
+   "tier": "less_certain",
+   "sigma_used": 385.740835608857,
+   "weight": 2.5924141487939445,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1373,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 338.6020726936706,
+   "tier": "less_certain",
+   "sigma_used": 338.6020726936706,
+   "weight": 2.9533191927761426,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1548,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 121.65206955784262,
+   "tier": "uncertain",
+   "sigma_used": 121.65206955784262,
+   "weight": 8.220164306572064,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 0,
+   "T": 1025,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 526.7303921275987,
+   "tier": "less_certain",
+   "sigma_used": 526.7303921275987,
+   "weight": 1.898504462521603,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 1,
+   "T": 1073,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 510.0335373975169,
+   "tier": "less_certain",
+   "sigma_used": 510.0335373975169,
+   "weight": 1.960655381806013,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 2,
+   "T": 1123,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 483.39583605691485,
+   "tier": "uncertain",
+   "sigma_used": 483.39583605691485,
+   "weight": 2.0686980015323515,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 3,
+   "T": 1174,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 462.1215343675298,
+   "tier": "less_certain",
+   "sigma_used": 462.1215343675298,
+   "weight": 2.1639329172760213,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 4,
+   "T": 1219,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 423.47303325108805,
+   "tier": "uncertain",
+   "sigma_used": 423.47303325108805,
+   "weight": 2.3614254544682525,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 5,
+   "T": 1274,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 388.0590433135276,
+   "tier": "less_certain",
+   "sigma_used": 388.0590433135276,
+   "weight": 2.576927447589624,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 6,
+   "T": 1323,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 359.7950695816011,
+   "tier": "uncertain",
+   "sigma_used": 359.7950695816011,
+   "weight": 2.7793599316490942,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 7,
+   "T": 1371,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 331.71592360178744,
+   "tier": "less_certain",
+   "sigma_used": 331.71592360178744,
+   "weight": 3.0146276643639895,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 8,
+   "T": 1424,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 276.7383389493187,
+   "tier": "uncertain",
+   "sigma_used": 276.7383389493187,
+   "weight": 3.6135217252392993,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 9,
+   "T": 1469,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 212.6170570209162,
+   "tier": "less_certain",
+   "sigma_used": 212.6170570209162,
+   "weight": 4.703291513914732,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 10,
+   "T": 1525,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 132.74579074407416,
+   "tier": "less_certain",
+   "sigma_used": 132.74579074407416,
+   "weight": 7.5331955491375195,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 11,
+   "T": 1473,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 80.777825925399,
+   "tier": "less_certain",
+   "sigma_used": 80.777825925399,
+   "weight": 12.379634987001669,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 12,
+   "T": 1424,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 97.70420432440616,
+   "tier": "less_certain",
+   "sigma_used": 97.70420432440616,
+   "weight": 10.234974092616438,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 13,
+   "T": 1374,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 159.5937815083496,
+   "tier": "less_certain",
+   "sigma_used": 159.5937815083496,
+   "weight": 6.2659082988623975,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 14,
+   "T": 1323,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 311.37598954306907,
+   "tier": "uncertain",
+   "sigma_used": 311.37598954306907,
+   "weight": 3.211551415597128,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 15,
+   "T": 1273,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 425.9994216256523,
+   "tier": "uncertain",
+   "sigma_used": 425.9994216256523,
+   "weight": 2.347421027436867,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 16,
+   "T": 1225,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 997.8090659507474,
+   "tier": "less_certain",
+   "sigma_used": 997.8090659507474,
+   "weight": 1.0021957447812573,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 17,
+   "T": 1171,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1172.7904338417875,
+   "tier": "less_certain",
+   "sigma_used": 1172.7904338417875,
+   "weight": 0.8526672550732134,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 18,
+   "T": 1123,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1944.7773676437687,
+   "tier": "less_certain",
+   "sigma_used": 1944.7773676437687,
+   "weight": 0.5141976745706213,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 19,
+   "T": 1071,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2406.269336422701,
+   "tier": "uncertain",
+   "sigma_used": 2406.269336422701,
+   "weight": 0.41558107600982763,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 20,
+   "T": 1023,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 3123.251737321076,
+   "tier": "less_certain",
+   "sigma_used": 3123.251737321076,
+   "weight": 0.32017912230723217,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 0,
+   "T": 1556,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 72.11184976520327,
+   "tier": "less_certain",
+   "sigma_used": 72.11184976520327,
+   "weight": 13.867346396688028,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 1,
+   "T": 1512,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 72.92788453520703,
+   "tier": "less_certain",
+   "sigma_used": 72.92788453520703,
+   "weight": 13.712176163799665,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 2,
+   "T": 1481,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 75.87159585968396,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 3,
+   "T": 1403,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 106.17701793605588,
+   "tier": "uncertain",
+   "sigma_used": 106.17701793605588,
+   "weight": 9.418233996760398,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 4,
+   "T": 1347,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 230.6350546332031,
+   "tier": "uncertain",
+   "sigma_used": 230.6350546332031,
+   "weight": 4.33585432878093,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1515,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 143.95196810014113,
+   "tier": "less_certain",
+   "sigma_used": 143.95196810014113,
+   "weight": 6.946761570528466,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1507,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 159.48338921400935,
+   "tier": "uncertain",
+   "sigma_used": 159.48338921400935,
+   "weight": 6.270245477778936,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1403,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 297.13969798094735,
+   "tier": "uncertain",
+   "sigma_used": 297.13969798094735,
+   "weight": 3.3654203958439783,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1322,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 198.56377215344196,
+   "tier": "uncertain",
+   "sigma_used": 198.56377215344196,
+   "weight": 5.0361654049724685,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1404,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 201.33159933675364,
+   "tier": "uncertain",
+   "sigma_used": 201.33159933675364,
+   "weight": 4.966930195231639,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1487,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 80.23781279842873,
+   "tier": "less_certain",
+   "sigma_used": 80.23781279842873,
+   "weight": 12.462951881704116,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1496,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 77.92094245305208,
+   "tier": "less_certain",
+   "sigma_used": 77.92094245305208,
+   "weight": 12.833520341498785,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 2,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2325.742070017213,
+   "tier": "uncertain",
+   "sigma_used": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 3,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2325.742070017213,
+   "tier": "uncertain",
+   "sigma_used": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 4,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1904.2429373351463,
+   "tier": "less_certain",
+   "sigma_used": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 5,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1904.2429373351463,
+   "tier": "less_certain",
+   "sigma_used": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 6,
+   "T": 1128.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1573.310374647038,
+   "tier": "less_certain",
+   "sigma_used": 1573.310374647038,
+   "weight": 0.6356024952955284,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 7,
+   "T": 1143.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 1766.990369815169,
+   "tier": "uncertain",
+   "sigma_used": 1766.990369815169,
+   "weight": 0.5659340407749942,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 8,
+   "T": 1165.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 791.6113200663667,
+   "tier": "less_certain",
+   "sigma_used": 791.6113200663667,
+   "weight": 1.2632462101680941,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 9,
+   "T": 1223.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 724.9170229701275,
+   "tier": "less_certain",
+   "sigma_used": 724.9170229701275,
+   "weight": 1.3794682264499782,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 10,
+   "T": 1252.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 547.0415065667751,
+   "tier": "uncertain",
+   "sigma_used": 547.0415065667751,
+   "weight": 1.8280148544412766,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 11,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 378.56793398079753,
+   "tier": "uncertain",
+   "sigma_used": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 12,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 378.56793398079753,
+   "tier": "uncertain",
+   "sigma_used": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 13,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 406.08858423442985,
+   "tier": "uncertain",
+   "sigma_used": 406.08858423442985,
+   "weight": 2.462516896123119,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 14,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 281.2960208445693,
+   "tier": "uncertain",
+   "sigma_used": 281.2960208445693,
+   "weight": 3.5549738563580755,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 15,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 271.33494922752004,
+   "tier": "uncertain",
+   "sigma_used": 271.33494922752004,
+   "weight": 3.685481737044788,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 570.6969933341056,
+   "tier": "uncertain",
+   "sigma_used": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 568.1013076173389,
+   "tier": "uncertain",
+   "sigma_used": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 18,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 460.01521874012815,
+   "tier": "uncertain",
+   "sigma_used": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 19,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 460.01521874012815,
+   "tier": "uncertain",
+   "sigma_used": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 20,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 433.0535408988431,
+   "tier": "uncertain",
+   "sigma_used": 433.0535408988431,
+   "weight": 2.309183289263509,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 21,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 431.18978245673185,
+   "tier": "uncertain",
+   "sigma_used": 431.18978245673185,
+   "weight": 2.319164415961888,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 22,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 301.0397152355236,
+   "tier": "uncertain",
+   "sigma_used": 301.0397152355236,
+   "weight": 3.3218208408735466,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 23,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 299.8193464137545,
+   "tier": "uncertain",
+   "sigma_used": 299.8193464137545,
+   "weight": 3.3353418048613426,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 24,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 326.5943596824827,
+   "tier": "uncertain",
+   "sigma_used": 326.5943596824827,
+   "weight": 3.0619022354587107,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 25,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 243.70582240196117,
+   "tier": "uncertain",
+   "sigma_used": 243.70582240196117,
+   "weight": 4.103307791927226,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 26,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 233.78350571135613,
+   "tier": "uncertain",
+   "sigma_used": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 27,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 233.78350571135613,
+   "tier": "uncertain",
+   "sigma_used": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 620.4492482616511,
+   "tier": "uncertain",
+   "sigma_used": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 594.0344629952532,
+   "tier": "uncertain",
+   "sigma_used": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 2,
+   "T": 975,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 525.0364869103147,
+   "tier": "uncertain",
+   "sigma_used": 525.0364869103147,
+   "weight": 1.9046295351485112,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 3,
+   "T": 1077,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 473.65261286698035,
+   "tier": "uncertain",
+   "sigma_used": 473.65261286698035,
+   "weight": 2.111251944641627,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 4,
+   "T": 1070,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 473.5655884959708,
+   "tier": "uncertain",
+   "sigma_used": 473.5655884959708,
+   "weight": 2.111639917030222,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 5,
+   "T": 1175,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 422.85916306667804,
+   "tier": "less_certain",
+   "sigma_used": 422.85916306667804,
+   "weight": 2.3648535667236237,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 6,
+   "T": 1230,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 401.5419621993606,
+   "tier": "uncertain",
+   "sigma_used": 401.5419621993606,
+   "weight": 2.4903997443323553,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 0,
+   "T": 1473.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 213.64950253266787,
+   "tier": "less_certain",
+   "sigma_used": 213.64950253266787,
+   "weight": 4.680563203497728,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 1,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 313.29836150210286,
+   "tier": "uncertain",
+   "sigma_used": 313.29836150210286,
+   "weight": 3.1918456107000357,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 2,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 371.2206753740564,
+   "tier": "less_certain",
+   "sigma_used": 371.2206753740564,
+   "weight": 2.6938154751007906,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 3,
+   "T": 1173.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 439.0689970413921,
+   "tier": "less_certain",
+   "sigma_used": 439.0689970413921,
+   "weight": 2.2775463691091073,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 4,
+   "T": 1023.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 534.1658518358751,
+   "tier": "less_certain",
+   "sigma_used": 534.1658518358751,
+   "weight": 1.872077738708117,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 5,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 175.807844399241,
+   "tier": "less_certain",
+   "sigma_used": 175.807844399241,
+   "weight": 5.688028332394008,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 6,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 323.86491040941974,
+   "tier": "uncertain",
+   "sigma_used": 323.86491040941974,
+   "weight": 3.087707151527567,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 7,
+   "T": 1173.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 906.6940741769484,
+   "tier": "less_certain",
+   "sigma_used": 906.6940741769484,
+   "weight": 1.1029078368111649,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 8,
+   "T": 1023.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 3398.205080543547,
+   "tier": "less_certain",
+   "sigma_used": 3398.205080543547,
+   "weight": 0.29427299892096237,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json",
+   "row": 0,
+   "T": 1473.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 100.719194306734,
+   "tier": "uncertain",
+   "sigma_used": 100.719194306734,
+   "weight": 9.928594116376296,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_CRNI2_ordering_ORC-X3KVP7D3PO.json",
+   "row": 0,
+   "T": 863.0,
+   "phases": [
+    "CRNI2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 191.00160952986027,
+   "tier": "uncertain",
+   "sigma_used": 191.00160952986027,
+   "weight": 5.235557974937718,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1599,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 72.4490899670227,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1584,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 72.91087161760112,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1573,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 74.57215237270177,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1547,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 72.079788021869,
+   "tier": "less_certain",
+   "sigma_used": 72.079788021869,
+   "weight": 13.873514718114876,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1537,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 73.81197488569065,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1522,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 74.599153902477,
+   "tier": "less_certain",
+   "sigma_used": 74.599153902477,
+   "weight": 13.404977773706303,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 6,
+   "T": 1511,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 75.42458449805554,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 7,
+   "T": 1496,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 77.10301720626673,
+   "tier": "less_certain",
+   "sigma_used": 77.10301720626673,
+   "weight": 12.969661061703857,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 8,
+   "T": 1486,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 79.40666345247388,
+   "tier": "less_certain",
+   "sigma_used": 79.40666345247388,
+   "weight": 12.593401567596597,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 9,
+   "T": 1470,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 83.22401399061106,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 10,
+   "T": 1462,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 87.40587523681027,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 11,
+   "T": 1447,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 91.90839651225633,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 12,
+   "T": 1437,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 97.83926532529819,
+   "tier": "less_certain",
+   "sigma_used": 97.83926532529819,
+   "weight": 10.22084534951461,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 13,
+   "T": 1434,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 110.52475487266643,
+   "tier": "uncertain",
+   "sigma_used": 110.52475487266643,
+   "weight": 9.047746825153169,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 14,
+   "T": 1421,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 118.91768843354487,
+   "tier": "uncertain",
+   "sigma_used": 118.91768843354487,
+   "weight": 8.409177921069606,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 15,
+   "T": 1398,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 129.92520515648215,
+   "tier": "uncertain",
+   "sigma_used": 129.92520515648215,
+   "weight": 7.696735970480849,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 16,
+   "T": 1595,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 83.88132336115495,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 17,
+   "T": 1521,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 137.65627274867612,
+   "tier": "less_certain",
+   "sigma_used": 137.65627274867612,
+   "weight": 7.264470990186805,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1073,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 500.615607768427,
+   "tier": "less_certain",
+   "sigma_used": 500.615607768427,
+   "weight": 1.9975405969814997,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1173,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 477.50175369217425,
+   "tier": "less_certain",
+   "sigma_used": 477.50175369217425,
+   "weight": 2.094233146303079,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1273,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 385.740835608857,
+   "tier": "less_certain",
+   "sigma_used": 385.740835608857,
+   "weight": 2.5924141487939445,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1373,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 338.6020726936706,
+   "tier": "less_certain",
+   "sigma_used": 338.6020726936706,
+   "weight": 2.9533191927761426,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1548,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 121.65206955784262,
+   "tier": "uncertain",
+   "sigma_used": 121.65206955784262,
+   "weight": 8.220164306572064,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 0,
+   "T": 1025,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 526.7303921275987,
+   "tier": "less_certain",
+   "sigma_used": 526.7303921275987,
+   "weight": 1.898504462521603,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 1,
+   "T": 1073,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 510.0335373975169,
+   "tier": "less_certain",
+   "sigma_used": 510.0335373975169,
+   "weight": 1.960655381806013,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 2,
+   "T": 1123,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 483.39583605691485,
+   "tier": "uncertain",
+   "sigma_used": 483.39583605691485,
+   "weight": 2.0686980015323515,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 3,
+   "T": 1174,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 462.1215343675298,
+   "tier": "less_certain",
+   "sigma_used": 462.1215343675298,
+   "weight": 2.1639329172760213,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 4,
+   "T": 1219,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 423.47303325108805,
+   "tier": "uncertain",
+   "sigma_used": 423.47303325108805,
+   "weight": 2.3614254544682525,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 5,
+   "T": 1274,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 388.0590433135276,
+   "tier": "less_certain",
+   "sigma_used": 388.0590433135276,
+   "weight": 2.576927447589624,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 6,
+   "T": 1323,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 359.7950695816011,
+   "tier": "uncertain",
+   "sigma_used": 359.7950695816011,
+   "weight": 2.7793599316490942,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 7,
+   "T": 1371,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 331.71592360178744,
+   "tier": "less_certain",
+   "sigma_used": 331.71592360178744,
+   "weight": 3.0146276643639895,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 8,
+   "T": 1424,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 276.7383389493187,
+   "tier": "uncertain",
+   "sigma_used": 276.7383389493187,
+   "weight": 3.6135217252392993,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 9,
+   "T": 1469,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 212.6170570209162,
+   "tier": "less_certain",
+   "sigma_used": 212.6170570209162,
+   "weight": 4.703291513914732,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 10,
+   "T": 1525,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 132.74579074407416,
+   "tier": "less_certain",
+   "sigma_used": 132.74579074407416,
+   "weight": 7.5331955491375195,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 11,
+   "T": 1473,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 80.777825925399,
+   "tier": "less_certain",
+   "sigma_used": 80.777825925399,
+   "weight": 12.379634987001669,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 12,
+   "T": 1424,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 97.70420432440616,
+   "tier": "less_certain",
+   "sigma_used": 97.70420432440616,
+   "weight": 10.234974092616438,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 13,
+   "T": 1374,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 159.5937815083496,
+   "tier": "less_certain",
+   "sigma_used": 159.5937815083496,
+   "weight": 6.2659082988623975,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 14,
+   "T": 1323,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 311.37598954306907,
+   "tier": "uncertain",
+   "sigma_used": 311.37598954306907,
+   "weight": 3.211551415597128,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 15,
+   "T": 1273,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 425.9994216256523,
+   "tier": "uncertain",
+   "sigma_used": 425.9994216256523,
+   "weight": 2.347421027436867,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 16,
+   "T": 1225,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 997.8090659507474,
+   "tier": "less_certain",
+   "sigma_used": 997.8090659507474,
+   "weight": 1.0021957447812573,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 17,
+   "T": 1171,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1172.7904338417875,
+   "tier": "less_certain",
+   "sigma_used": 1172.7904338417875,
+   "weight": 0.8526672550732134,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 18,
+   "T": 1123,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1944.7773676437687,
+   "tier": "less_certain",
+   "sigma_used": 1944.7773676437687,
+   "weight": 0.5141976745706213,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 19,
+   "T": 1071,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2406.269336422701,
+   "tier": "uncertain",
+   "sigma_used": 2406.269336422701,
+   "weight": 0.41558107600982763,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 20,
+   "T": 1023,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 3123.251737321076,
+   "tier": "less_certain",
+   "sigma_used": 3123.251737321076,
+   "weight": 0.32017912230723217,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 0,
+   "T": 1556,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 72.11184976520327,
+   "tier": "less_certain",
+   "sigma_used": 72.11184976520327,
+   "weight": 13.867346396688028,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 1,
+   "T": 1512,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 72.92788453520703,
+   "tier": "less_certain",
+   "sigma_used": 72.92788453520703,
+   "weight": 13.712176163799665,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 2,
+   "T": 1481,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 75.87159585968396,
+   "tier": "uncertain",
+   "sigma_used": 100.0,
+   "weight": 10.0,
+   "floor_active": true,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 3,
+   "T": 1403,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 106.17701793605588,
+   "tier": "uncertain",
+   "sigma_used": 106.17701793605588,
+   "weight": 9.418233996760398,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 4,
+   "T": 1347,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 230.6350546332031,
+   "tier": "uncertain",
+   "sigma_used": 230.6350546332031,
+   "weight": 4.33585432878093,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1515,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 143.95196810014113,
+   "tier": "less_certain",
+   "sigma_used": 143.95196810014113,
+   "weight": 6.946761570528466,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1507,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 159.48338921400935,
+   "tier": "uncertain",
+   "sigma_used": 159.48338921400935,
+   "weight": 6.270245477778936,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1403,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 297.13969798094735,
+   "tier": "uncertain",
+   "sigma_used": 297.13969798094735,
+   "weight": 3.3654203958439783,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1322,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 198.56377215344196,
+   "tier": "uncertain",
+   "sigma_used": 198.56377215344196,
+   "weight": 5.0361654049724685,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1404,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 201.33159933675364,
+   "tier": "uncertain",
+   "sigma_used": 201.33159933675364,
+   "weight": 4.966930195231639,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1487,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 80.23781279842873,
+   "tier": "less_certain",
+   "sigma_used": 80.23781279842873,
+   "weight": 12.462951881704116,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1496,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 77.92094245305208,
+   "tier": "less_certain",
+   "sigma_used": 77.92094245305208,
+   "weight": 12.833520341498785,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 2,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2325.742070017213,
+   "tier": "uncertain",
+   "sigma_used": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 3,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2325.742070017213,
+   "tier": "uncertain",
+   "sigma_used": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 4,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1904.2429373351463,
+   "tier": "less_certain",
+   "sigma_used": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 5,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1904.2429373351463,
+   "tier": "less_certain",
+   "sigma_used": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 6,
+   "T": 1128.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1573.310374647038,
+   "tier": "less_certain",
+   "sigma_used": 1573.310374647038,
+   "weight": 0.6356024952955284,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 7,
+   "T": 1143.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 1766.990369815169,
+   "tier": "uncertain",
+   "sigma_used": 1766.990369815169,
+   "weight": 0.5659340407749942,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 8,
+   "T": 1165.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 791.6113200663667,
+   "tier": "less_certain",
+   "sigma_used": 791.6113200663667,
+   "weight": 1.2632462101680941,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 9,
+   "T": 1223.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 724.9170229701275,
+   "tier": "less_certain",
+   "sigma_used": 724.9170229701275,
+   "weight": 1.3794682264499782,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 10,
+   "T": 1252.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 547.0415065667751,
+   "tier": "uncertain",
+   "sigma_used": 547.0415065667751,
+   "weight": 1.8280148544412766,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 11,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 378.56793398079753,
+   "tier": "uncertain",
+   "sigma_used": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 12,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 378.56793398079753,
+   "tier": "uncertain",
+   "sigma_used": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 13,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 406.08858423442985,
+   "tier": "uncertain",
+   "sigma_used": 406.08858423442985,
+   "weight": 2.462516896123119,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 14,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 281.2960208445693,
+   "tier": "uncertain",
+   "sigma_used": 281.2960208445693,
+   "weight": 3.5549738563580755,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 15,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 271.33494922752004,
+   "tier": "uncertain",
+   "sigma_used": 271.33494922752004,
+   "weight": 3.685481737044788,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 570.6969933341056,
+   "tier": "uncertain",
+   "sigma_used": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 568.1013076173389,
+   "tier": "uncertain",
+   "sigma_used": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 18,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 460.01521874012815,
+   "tier": "uncertain",
+   "sigma_used": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 19,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 460.01521874012815,
+   "tier": "uncertain",
+   "sigma_used": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 20,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 433.0535408988431,
+   "tier": "uncertain",
+   "sigma_used": 433.0535408988431,
+   "weight": 2.309183289263509,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 21,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 431.18978245673185,
+   "tier": "uncertain",
+   "sigma_used": 431.18978245673185,
+   "weight": 2.319164415961888,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 22,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 301.0397152355236,
+   "tier": "uncertain",
+   "sigma_used": 301.0397152355236,
+   "weight": 3.3218208408735466,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 23,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 299.8193464137545,
+   "tier": "uncertain",
+   "sigma_used": 299.8193464137545,
+   "weight": 3.3353418048613426,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 24,
+   "T": 1302.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 326.5943596824827,
+   "tier": "uncertain",
+   "sigma_used": 326.5943596824827,
+   "weight": 3.0619022354587107,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 25,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 243.70582240196117,
+   "tier": "uncertain",
+   "sigma_used": 243.70582240196117,
+   "weight": 4.103307791927226,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 26,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 233.78350571135613,
+   "tier": "uncertain",
+   "sigma_used": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 27,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 233.78350571135613,
+   "tier": "uncertain",
+   "sigma_used": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 620.4492482616511,
+   "tier": "uncertain",
+   "sigma_used": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 594.0344629952532,
+   "tier": "uncertain",
+   "sigma_used": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 2,
+   "T": 975,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 525.0364869103147,
+   "tier": "uncertain",
+   "sigma_used": 525.0364869103147,
+   "weight": 1.9046295351485112,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 3,
+   "T": 1077,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 473.65261286698035,
+   "tier": "uncertain",
+   "sigma_used": 473.65261286698035,
+   "weight": 2.111251944641627,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 4,
+   "T": 1070,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 473.5655884959708,
+   "tier": "uncertain",
+   "sigma_used": 473.5655884959708,
+   "weight": 2.111639917030222,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 5,
+   "T": 1175,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 422.85916306667804,
+   "tier": "less_certain",
+   "sigma_used": 422.85916306667804,
+   "weight": 2.3648535667236237,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 6,
+   "T": 1230,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 401.5419621993606,
+   "tier": "uncertain",
+   "sigma_used": 401.5419621993606,
+   "weight": 2.4903997443323553,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 0,
+   "T": 1473.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 213.64950253266787,
+   "tier": "less_certain",
+   "sigma_used": 213.64950253266787,
+   "weight": 4.680563203497728,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 1,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 313.29836150210286,
+   "tier": "uncertain",
+   "sigma_used": 313.29836150210286,
+   "weight": 3.1918456107000357,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 2,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 371.2206753740564,
+   "tier": "less_certain",
+   "sigma_used": 371.2206753740564,
+   "weight": 2.6938154751007906,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 3,
+   "T": 1173.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 439.0689970413921,
+   "tier": "less_certain",
+   "sigma_used": 439.0689970413921,
+   "weight": 2.2775463691091073,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 4,
+   "T": 1023.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 534.1658518358751,
+   "tier": "less_certain",
+   "sigma_used": 534.1658518358751,
+   "weight": 1.872077738708117,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 5,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 175.807844399241,
+   "tier": "less_certain",
+   "sigma_used": 175.807844399241,
+   "weight": 5.688028332394008,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 6,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 323.86491040941974,
+   "tier": "uncertain",
+   "sigma_used": 323.86491040941974,
+   "weight": 3.087707151527567,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 7,
+   "T": 1173.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 906.6940741769484,
+   "tier": "less_certain",
+   "sigma_used": 906.6940741769484,
+   "weight": 1.1029078368111649,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 8,
+   "T": 1023.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 3398.205080543547,
+   "tier": "less_certain",
+   "sigma_used": 3398.205080543547,
+   "weight": 0.29427299892096237,
+   "floor_active": false,
+   "suspended_CRNI2": false
+  }
+ ],
+ "suspended_rows": [
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 570.6969933341056,
+   "tier": "uncertain",
+   "sigma_used": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 568.1013076173389,
+   "tier": "uncertain",
+   "sigma_used": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 620.4492482616511,
+   "tier": "uncertain",
+   "sigma_used": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "sigma_conv": 594.0344629952532,
+   "tier": "uncertain",
+   "sigma_used": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2"
+   ],
+   "sigma_conv": 2278.2107777609135,
+   "tier": "uncertain",
+   "sigma_used": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 570.6969933341056,
+   "tier": "uncertain",
+   "sigma_used": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 568.1013076173389,
+   "tier": "uncertain",
+   "sigma_used": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 620.4492482616511,
+   "tier": "uncertain",
+   "sigma_used": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875,
+   "phases": [
+    "FCC_A1"
+   ],
+   "sigma_conv": 594.0344629952532,
+   "tier": "uncertain",
+   "sigma_used": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "suspended_CRNI2": true
+  }
+ ],
+ "dropped_crni2_exclusions": [
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json#0",
+   "T": 797.15,
+   "x": 0.016,
+   "expected": [
+    "BCC_A2"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json#1",
+   "T": 797.15,
+   "x": 0.016,
+   "expected": [
+    "BCC_A2"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json#16",
+   "T": 797.15,
+   "x": 0.649,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json#17",
+   "T": 797.15,
+   "x": 0.648,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json#0",
+   "T": 826.0,
+   "x": 0.6671,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json#1",
+   "T": 875.0,
+   "x": 0.6564,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-2DHRS54FM4",
+   "T": 340.58,
+   "x": 0.941438,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-3DHRKUJ5M3",
+   "T": 507.09,
+   "x": 0.967526,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-3LOS72PGLC",
+   "T": 547.58,
+   "x": 0.980627,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-52HXTTKZAO",
+   "T": 390.03,
+   "x": 0.949414,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-BHAVW6OGXV",
+   "T": 350.54,
+   "x": 0.932325,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-GFFRNQHEW3",
+   "T": 506.41,
+   "x": 0.967641,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-IQINPGNSAL",
+   "T": 518.1,
+   "x": 0.974019,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-SERUDTXZOJ",
+   "T": 349.68,
+   "x": 0.93278,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-SYDYEYFHYV",
+   "T": 323.73,
+   "x": 0.944286,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-TZSHZWDOFK",
+   "T": 571.68,
+   "x": 0.982905,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  },
+  {
+   "state": "ORC-ZRIRMTYM5U",
+   "T": 451.02,
+   "x": 0.961033,
+   "expected": [
+    "FCC_A1"
+   ],
+   "remaining_penalize": [
+    "BCC_A2",
+    "LIQUID"
+   ]
+  }
+ ],
+ "summary": {
+  "zpf_rows": 329,
+  "zpf_by_sigma_basis": {
+   "tier floor": 59,
+   "converted": 270
+  },
+  "zpf_by_tier": {
+   "uncertain": 241,
+   "less_certain": 88
+  },
+  "suspended_rows": 12,
+  "dropped_crni2_exclusions": 17,
+  "hinge_cells": 366,
+  "exclusions_by_tier": {
+   "certain": 673,
+   "less_certain": 186,
+   "uncertain": 19
+  }
+ }
+}

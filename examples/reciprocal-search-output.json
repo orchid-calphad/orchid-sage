@@ -1,0 +1,78 @@
+{
+  "recipes": [
+    {
+      "id": "reciprocal-zero",
+      "title": "Zero-reciprocal-energy endmember estimate",
+      "topic": "endmembers",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "assumption",
+      "source_ids": [
+        "enoki-2020-lro-sro"
+      ],
+      "description": "Close a reciprocal square by explicitly assuming its reciprocal energy is zero.",
+      "applicability": "A missing hypothetical endmember and three compatible reference energies.",
+      "limitations": [
+        "Zero reciprocal energy is an assumption, not symmetry or a general identity; original cited method still needs tracing."
+      ],
+      "validation_tests": [
+        "With consistent labels check G(A:C)+G(B:D)-G(A:D)-G(B:C)=0 and validate withheld energies."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P0",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    },
+    {
+      "id": "sro-correction",
+      "title": "Explicit SRO contribution review",
+      "topic": "ordering",
+      "trigger": "manual",
+      "requires": [],
+      "method_kind": "approximation",
+      "source_ids": [
+        "sro2004"
+      ],
+      "description": "Consider a documented SRO approximation and separate it from existing energetic contributions.",
+      "applicability": "Short-range order affects thermodynamic observables beyond the chosen baseline.",
+      "limitations": [
+        "A generic reciprocal interaction is not proof of a validated SRO treatment."
+      ],
+      "validation_tests": [
+        "Compare random and ordered limits and independently measured thermochemistry."
+      ],
+      "implementation_status": "advisory_screening_only",
+      "review_status": "agent_curated_requires_domain_review",
+      "priority": "P1",
+      "evidence_maturity": "source_backed_candidate_not_numerically_reproduced"
+    }
+  ],
+  "sources": [
+    {
+      "id": "enoki-2020-lro-sro",
+      "title": "Calphad Modeling of LRO and SRO Using ab initio Data",
+      "doi": "10.3390/met10080998",
+      "url": "https://www.mdpi.com/2075-4701/10/8/998",
+      "access": "primary article indexed passages inspected; direct full-text request rate-limited",
+      "locators": [
+        "Sections 2.3, 4.2, 5.2.1, 5.2.2; indexed passages"
+      ],
+      "checked": "2026-10-27",
+      "inherited_from": "open-tdb/catalog/calphad-best-practices.json",
+      "year": 2020
+    },
+    {
+      "id": "sro2004",
+      "title": "A description of the effect of short range ordering in the compound energy formalism",
+      "doi": "",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0364591604000148",
+      "access": "publisher abstract and introduction inspected",
+      "locators": [
+        "Reciprocal interaction parameters; SRO approximation"
+      ],
+      "checked": "2026-10-27"
+    }
+  ],
+  "count": 2,
+  "advisory_only": true
+}

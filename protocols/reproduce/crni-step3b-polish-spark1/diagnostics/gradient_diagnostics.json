@@ -1,0 +1,20 @@
+{
+ "host": "spark1", "date": "2026-11-06", "build": "gradient ESPEI 0.8.11.dev82+g9039ea215, pycalphad 0.11.3.dev35+g9a6939dd2",
+ "root": "<home>/orchid-protocols-work-20261106/step3b-spark1 (staged from crni-paper-fit-step4-s1@0.1.0-draft; step-3b multistart rerun from the reference step-2 pick)",
+ "coordinates": "optimiser q = theta/scale (a /1000, b /1); FD central, step h in q",
+ "s1_perturbed_endpoint": {
+  "script": "fd_check.py step3b_thermo_crni2free s1_perturbed",
+  "logpost": -3941.8007861388533, "analytic_grad_norm_q": 0.0788, "fd_grad_norm_q": {"h=1e-3": 1.3237, "h=1e-4": 1.3200},
+  "largest_fd_components": {"VV0008": -0.49, "VV0009": -0.53, "VV0010": 0.16, "VV0011": 0.17, "VV0012": 0.74, "VV0013": 0.79},
+  "per_term (parts_check.py)": {"thermo:ActivityResidual": {"analytic": 2.7596, "fd": 3.4839, "diff": 1.3467},
+                                "zpf:ZPFResidual": {"diff": "< 1e-4"}, "thermo:FixedConfigurationPropertyResidual": {"diff": "< 1e-4"},
+                                "oneshot_anchor:FixedConfigurationPropertyResidual": {"diff": "< 1e-4"}, "S_ex:FixedConfigurationPropertyResidual": {"diff": "< 1e-4"}}},
+ "s0_start_endpoint": {
+  "per_term (parts_check.py)": {"thermo:ActivityResidual": {"analytic": 2.8221, "fd": 2.7583, "diff": 0.1270}, "other terms": "diff < 1e-4"},
+  "two_sided_probe (line_probe.py, d = verified-gradient direction)": {"step 1e-7": {"+d": -4.401e-09, "-d": -2.021e-08, "activity +d": 1.543e-07, "activity -d": -1.789e-07},
+     "step 1e-5": {"+d": -3.554e-07, "-d": -2.022e-06}, "step 1e-3": {"+d": -4.653e-05, "-d": -2.132e-04},
+     "reading": "logpost decreases on both sides, linearly in the step over four decades: a kink (non-differentiable ridge) in the activity term at the endpoint; the other terms are smooth"}},
+ "term_cost_s (time_terms.py)": {"ZPFResidual": 1.28, "ActivityResidual": 2.81, "thermo FixedConfiguration": 0.44},
+ "cu_zr_H1_s1 (polish_starts.py cuzr-gradcheck, spark1 root cuzr run 1 machine)": {"ZPFResidual": {"analytic": 8.554, "fd(h=1e-4)": 8.690, "fd(h=1e-5)": 8.690, "diff": 0.307},
+     "HingePenalty": {"diff": 3.4e-10}, "FixedConfigurationPropertyResidual": {"diff": 2.9e-10}, "total_scaled": {"analytic": 0.434, "fd": 0.150}}
+}

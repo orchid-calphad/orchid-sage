@@ -1,0 +1,45 @@
+{
+ "components": [
+  "CR",
+  "NI"
+ ],
+ "phases": [
+  "BCC_A2",
+  "FCC_A1"
+ ],
+ "broadcast_conditions": false,
+ "conditions": {
+  "T": [
+   1173
+  ],
+  "P": [
+   101325.0
+  ]
+ },
+ "output": "ZPF",
+ "values": [
+  [
+   [
+    "FCC_A1",
+    [
+     "CR"
+    ],
+    [
+     0.3975
+    ]
+   ],
+   [
+    "BCC_A2",
+    [
+     "NI"
+    ],
+    [
+     null
+    ]
+   ]
+  ]
+ ],
+ "reference": "bechtoldt1961redetermination",
+ "comment": "Digitized from figure 5, points in figure 4 were too far apart to identify a boundary properly. | REBUILD set D, observation (ii): values as printed, null vertex kept (ESPEI zero-phase-fraction condition of the partner phase), weight 1. | crni-paper-fit-20261106: rows without LIQUID of set E file (indices [0, 1, 2, 3, 4]); values unchanged | step4c: sigma_DF = max(converted 478, tier less_certain 50) = 478 J/mol",
+ "weight": 2.094233146303079
+}

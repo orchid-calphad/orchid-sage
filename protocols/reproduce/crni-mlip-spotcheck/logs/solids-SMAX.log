@@ -1,0 +1,50 @@
+2026-11-06 14:06:04.401266: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-11-06 14:06:04.407690: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8473] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-11-06 14:06:04.410964: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1471] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793973965.612149     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973965.644351     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973965.647490     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+WARNING:tensorflow:UserWarning: enabling the new type promotion must happen at the beginning of the program. Please ensure no TF APIs have been used yet.
+[tensorpotential] Info: tf.experimental.numpy behavior enabled.
+[tensorpotential] Info: TensorFloat-32 execution disabled.
+Using cached GRACE model from /root/.cache/grace/GRACE-2L-SMAX-OMAT-large
+Model license: Academic Software License
+I0000 00:00:1793973969.634493     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973969.637820     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973969.640502     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973969.820374     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973969.823530     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+I0000 00:00:1793973969.826120     158 cuda_executor.cc:1015] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2026-11-06 14:06:09.828771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 79778 MB memory:  -> device: 0, name: NVIDIA GB10, pci bus id: 000f:01:00.0, compute capability: 12.1
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793973987.976401     158 service.cc:146] XLA service 0x329a51a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1793973987.976462     158 service.cc:154]   StreamExecutor device (0): NVIDIA GB10, Compute Capability 12.1
+2026-11-06 14:06:28.370802: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-11-06 14:06:28.869650: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 90701
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+I0000 00:00:1793973991.595586     158 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+BCC_A2 x0.0000_pure computed {'s0_unrelaxed': -9.51452, 's1_volume': -9.52457, 's2_volume_ions': -9.52457, 's3_full': -9.52457}
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+BCC_A2 x1.0000_pure computed {'s0_unrelaxed': -5.39477, 's1_volume': -5.395, 's2_volume_ions': -5.395, 's3_full': -5.395}
+BCC_A2 x0.1250_s2026110501 computed {'s0_unrelaxed': -8.93972, 's1_volume': -8.93974, 's2_volume_ions': -8.95203, 's3_full': -8.95205}
+BCC_A2 x0.2500_s2026110501 computed {'s0_unrelaxed': -8.39159, 's1_volume': -8.39162, 's2_volume_ions': -8.41078, 's3_full': -8.41092}
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+'+ptx85' is not a recognized feature for this target (ignoring feature)
+BCC_A2 x0.5000_s2026110501 computed {'s0_unrelaxed': -7.37161, 's1_volume': -7.37189, 's2_volume_ions': -7.39898, 's3_full': -7.41833}
+FCC_A1 x0.0000_pure computed {'s0_unrelaxed': -9.13193, 's1_volume': -9.13285, 's2_volume_ions': -9.13285, 's3_full': -9.13285}
+FCC_A1 x1.0000_pure computed {'s0_unrelaxed': -5.48768, 's1_volume': -5.48864, 's2_volume_ions': -5.48864, 's3_full': -5.48864}
+FCC_A1 x0.5000_s2026110511 computed {'s0_unrelaxed': -7.40277, 's1_volume': -7.40453, 's2_volume_ions': -7.41353, 's3_full': -7.41523}
+elastic BCC_A2 x0.0000_pure 450.0 97.3 114.0
+elastic BCC_A2 x0.1250_s2026110501 359.6 147.0 104.2
+elastic BCC_A2 x0.2500_s2026110501 283.0 171.9 108.8
+elastic BCC_A2 x0.5000_s2026110501 168.9 202.9 69.1
+DONE 145.80101919174194

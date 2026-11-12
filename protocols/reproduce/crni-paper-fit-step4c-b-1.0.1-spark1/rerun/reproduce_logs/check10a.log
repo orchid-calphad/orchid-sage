@@ -1,0 +1,10 @@
+s1_perturbed -5657.28864 smooth elig True |g| 2.3e-04 worst {'dir': '+p13', 'step': 1e-05, 'improvement': 2.801243681460619e-10} bp 8 out 0 failed 0
+s2_perturbed -5657.28864 smooth elig True |g| 5.3e-04 worst {'dir': '+p6', 'step': 1e-05, 'improvement': 4.720277502201498e-10} bp 8 out 0 failed 0
+s3_perturbed -5657.28864 smooth elig True |g| 4.5e-04 worst {'dir': '-p2', 'step': 1e-05, 'improvement': 8.594724931754172e-10} bp 8 out 0 failed 0
+s6_perturbed -5657.28864 smooth elig True |g| 6.1e-04 worst {'dir': '-p13', 'step': 0.0001, 'improvement': 8.410097507294267e-09} bp 8 out 0 failed 0
+s7_perturbed -5657.28864 smooth elig True |g| 3.7e-04 worst {'dir': '+p3', 'step': 1e-05, 'improvement': 1.115949999075383e-09} bp 8 out 0 failed 0
+s4_perturbed -5657.29315 smooth elig True |g| 2.5e-04 worst {'dir': '-p10', 'step': 1e-05, 'improvement': 2.1191226551309228e-10} bp 11 out 0 failed 0
+s5_perturbed -5657.29315 smooth elig True |g| 2.1e-04 worst {'dir': '+p13', 'step': 1e-05, 'improvement': 1.8553691916167736e-10} bp 11 out 0 failed 0
+s0_start -5657.29315 smooth elig True |g| 5.3e-04 worst {'dir': '-p3', 'step': 1e-05, 'improvement': 9.968061931431293e-10} bp 11 out 0 failed 0
+kinds {'smooth': 8, 'kink': 0, 'not_stationary': 0} eligible 8 pick s1_perturbed gap 3.4515323932282627e-09
+10a pick s1_perturbed logpost -5657.2886369 smooth Teut 1614.0 TCrNi2 860.0 determined within tol True undetermined ['VV0004', 'VV0005', 'VV0006', 'VV0007', 'VV0008', 'VV0009', 'VV0010', 'VV0011', 'VV0013'] nearest mode A_s4

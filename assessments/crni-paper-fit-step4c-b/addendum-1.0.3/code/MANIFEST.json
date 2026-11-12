@@ -1,0 +1,52 @@
+{
+ "artifact": "crni-paper-fit-step4c-b/addendum-1.0.3",
+ "created": "2026-11-07T11:52:30-0600",
+ "rule": "code added for the Q40 fix of 1.0.3 (no change to data, objective, starts, seeds or settings); the 0.2.0-draft snapshot and the 1.0.0 and 1.0.1 addenda stay frozen; staged after them, and the plan calls only these new versions",
+ "files": [
+  {
+   "path": "scripts/model3.py",
+   "sha256": "a326d108139548ef15d7186f7efa4ba67c12d7346d17f59810027093ae9d2d66",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model3.py",
+   "original_mtime": "2026-11-07T11:48:17-0600",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/code/scripts/model2.py (sha256 a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89)",
+   "used_for": "step4c_b, check10a, global_10c, laplace_weights (objective module, 1.0.3)",
+   "note": "model2 with the no-CRNI2 database of zpf_susp built in memory (Database.from_string of the same text) instead of the shared cache file, and the fail-closed record check (DataLossError) in GradTarget; objective bit-identical to model2 when no race occurs (fix_proof)"
+  },
+  {
+   "path": "scripts/fit3.py",
+   "sha256": "c8c63705d8518f7b78080dcadcf4ba59e59f10de2d3ef47cfa5ce1da733e0274",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/fit3.py",
+   "original_mtime": "2026-11-07T11:48:26-0600",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/code/scripts/fit2.py (sha256 829a58eb99cf6554d6c30eced5d82e084efe5860a48e3c1b26c1523255936cfd)",
+   "used_for": "step4c_b (1.0.3)",
+   "note": "fit2 importing model3 instead of model2; no other change"
+  },
+  {
+   "path": "scripts/laplace3.py",
+   "sha256": "9178dddb2b496462058de76743e303a3c2614e7d296a106ad9e7aad7635c513f",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/laplace3.py",
+   "original_mtime": "2026-11-07T11:48:26-0600",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/code/scripts/laplace2.py (sha256 196ca84202274c358ff981ff0c17fe80e62b44f7c2b23eb39037a79b1217186b)",
+   "used_for": "laplace_weights (1.0.3)",
+   "note": "laplace2 importing model3 instead of model2; no other change"
+  },
+  {
+   "path": "scripts/check10a_ms2.py",
+   "sha256": "f6f88d86ed7affba3fe34ed01eaec507f6973be9788fad7b07ab6fe66abac0f3",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/check10a_ms2.py",
+   "original_mtime": "2026-11-07T11:48:45-0600",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/check10a_ms.py (sha256 4a1a15b570257c104852ffecd0f88c6227c017dff9a8b5b2e3f726ff308e4ad2)",
+   "used_for": "check10a (1.0.3)",
+   "note": "check10a_ms with model3 by default, re-evaluation vs multistart file |d| > 1e-6 = failure of the check (exit 3, no pick), per-row record counts"
+  },
+  {
+   "path": "scripts/run_global_crni2.py",
+   "sha256": "3b40a8c4ff6e7894831a00e696fdb00ccc74823047e9913acb1c6a60e2579d3d",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/run_global_crni2.py",
+   "original_mtime": "2026-11-07T11:48:30-0600",
+   "derived_from": "assessments/crni-paper-fit-step4c-b/addendum-1.0.0/code/scripts/run_global_crni.py (sha256 a8b3b251068b96cb9f383e5219d8c9f76c1aa03c3fdc116d11990e9b96d542fb)",
+   "used_for": "global_10c (1.0.3)",
+   "note": "run_global_crni with model3 instead of model2 (and model3.py in code_sha256); no other change"
+  }
+ ]
+}

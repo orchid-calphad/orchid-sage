@@ -1,0 +1,172 @@
+{
+ "rule": "fit_protocol 10a: eligible starts (smooth or kink-stationary, on-boundary points within own sigma, no failed equilibria), then the highest objective (scripts/check10a_ms2.py); never a start label",
+ "check10a": "results/check10a_rerun.json",
+ "pick": "s4_perturbed",
+ "n_eligible": 8,
+ "kinds": {
+  "smooth": 8,
+  "kink": 0,
+  "not_stationary": 0
+ },
+ "pick_found": true,
+ "pick_logpost": -5657.288636859774,
+ "pick_kind": "smooth",
+ "pick_eligible": true,
+ "pick_n_boundary_points": 8,
+ "pick_n_failed_equilibria": 0,
+ "gap_to_runner_up": 1.8690116121433675e-09,
+ "topology": {
+  "ok": false,
+  "n_bad": 1,
+  "T_liquid_min": 1614.0,
+  "T_CrNi2_max": 860.0,
+  "spurious_severity": "high-T only"
+ },
+ "T_liquid_min": 1614.0,
+ "T_CrNi2_max": 860.0,
+ "pick_tdb": {
+  "source": "steps/step4c_b_hingefloor/s4_perturbed.tdb",
+  "copy": "tdb/step4c_b_hingefloor_pick10a.tdb"
+ },
+ "parameters": {
+  "reference_tdb": "reference/step4c_b_hingefloor_pick.tdb",
+  "reference_modes": "reference/modes_step4c_b@1.1.0.json",
+  "tol_a": 50.0,
+  "tol_b": 0.03,
+  "undetermined_rule": "symbols where the two recorded minima of the basin (A_s4_perturbed and B_s5_perturbed) differ by more than the 10b tolerance; reported, not failed",
+  "undetermined": [
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011",
+   "VV0013"
+  ],
+  "undetermined_beyond_tol": [],
+  "determined_outside_tol": [],
+  "determined_within_tol": true,
+  "max_determined_diff_over_tol": 0.0,
+  "max_diff_over_tol_to_each_recorded_mode": {
+   "A_s4_perturbed": 1.4974948407224058e-05,
+   "B_s5_perturbed": 5.915103550416031
+  },
+  "symbols": {
+   "VV0000": {
+    "reference": -12848.367188,
+    "rerun": -12848.367188,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "within"
+   },
+   "VV0001": {
+    "reference": 3.003633,
+    "rerun": 3.003633,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "within"
+   },
+   "VV0002": {
+    "reference": -453.88706,
+    "rerun": -453.88706,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "within"
+   },
+   "VV0003": {
+    "reference": 2.293144,
+    "rerun": 2.293144,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "within"
+   },
+   "VV0004": {
+    "reference": 19756.000766,
+    "rerun": 19756.000766,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0005": {
+    "reference": -11.83813,
+    "rerun": -11.83813,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0006": {
+    "reference": 21426.687295,
+    "rerun": 21426.687295,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0007": {
+    "reference": -2.49193,
+    "rerun": -2.49193,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0008": {
+    "reference": 6499.63701,
+    "rerun": 6499.63701,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0009": {
+    "reference": -9.651811,
+    "rerun": -9.651811,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0010": {
+    "reference": 33652.533367,
+    "rerun": 33652.533367,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0011": {
+    "reference": -18.944874,
+    "rerun": -18.944874,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   },
+   "VV0012": {
+    "reference": -41000.225021,
+    "rerun": -41000.225021,
+    "diff": 0.0,
+    "tol": 50.0,
+    "diff_over_tol": 0.0,
+    "status": "within"
+   },
+   "VV0013": {
+    "reference": 25.776031,
+    "rerun": 25.776031,
+    "diff": 0.0,
+    "tol": 0.03,
+    "diff_over_tol": 0.0,
+    "status": "undetermined"
+   }
+  }
+ },
+ "other_tdb_lines_identical": true
+}

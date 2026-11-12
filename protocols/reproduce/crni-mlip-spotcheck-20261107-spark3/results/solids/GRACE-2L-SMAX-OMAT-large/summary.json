@@ -1,0 +1,11 @@
+{
+ "model": "GRACE-2L-SMAX-OMAT-large",
+ "started_unix": 1794084564.8272455,
+ "BCC_A2_pure_volumes_A3_atom": {
+  "Cr": 11.571613535618795,
+  "Ni": 10.874254689347017
+ },
+ "FCC_A1_pure_volumes_A3_atom": {},
+ "finished_unix": 1794084604.466604,
+ "elapsed_s": 39.63935899734497
+}

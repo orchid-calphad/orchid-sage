@@ -1,0 +1,143 @@
+{
+ "setE_reference": "<home>/ScientificRuns/cr-ni-rebuild-20261105/results/data_consistency.json",
+ "items": {
+  "1_uncertainty_present": {
+   "files_without_weight": [
+    "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json (ZPF)",
+    "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json (ZPF)",
+    "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json (ZPF)",
+    "liq/zpf_eutectic_ORC-SV7H3CNRYS.json (ZPF)",
+    "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json (ZPF)",
+    "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json (ZPF)",
+    "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json (ZPF)",
+    "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json (ZPF)",
+    "solid/zpf_CRNI2_ordering_ORC-X3KVP7D3PO.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json (ZPF)",
+    "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json (ZPF)"
+   ],
+   "note": "all non-ZPF observations carry weight = default ESPEI sd / sigma (ORCHID rule, sigma_MLIP, MD u). ZPF files carry no weight, i.e. ESPEI's 1000 J/mol driving-force scale (weight 1), as in set E and the Cu-Zr campaign ('ZPF weight 1, no multipliers'); ORCHID's temperature/composition sigma (e.g. 11 K, 0.011) is not converted to a driving-force sigma. FLAG (not changed): this is the one software-default scale left in the objective."
+  },
+  "2_within_series": {
+   "pugliese1970 1448.15 K, x_Cr 0.95": "a_Cr = 0.112 among 0.979-0.998 (cell potential 1.236 V agrees with neighbours): magnitude_suspect in the ORCHID reading, kept at its sigma (set E flag, unchanged)"
+  },
+  "3_cross_quantity_liquid_T_dependence": {
+   "rows": [
+    {
+     "x_Ni": 0.25,
+     "dH_mix_2200_minus_1900_J": -4773.63004063582,
+     "sd_J": 719.084460502156,
+     "dS_ex_2200_minus_1900": 0.7002265147122265,
+     "sd_S": 0.30256598361907333,
+     "Tbar_dS_J": 1435.4643551600643,
+     "sd_TdS_J": 620.2602664191003,
+     "Cp_ex_from_H": -15.912100135452732,
+     "Cp_ex_from_S": 4.784881183866881,
+     "z_dH": -6.638483102947691,
+     "z_dS": 2.31429358428409,
+     "z_consistency": -6.5384059403829085
+    },
+    {
+     "x_Ni": 0.5,
+     "dH_mix_2200_minus_1900_J": -1115.832989185059,
+     "sd_J": 891.3797813832197,
+     "dS_ex_2200_minus_1900": 0.7259233991231488,
+     "sd_S": 0.3658626314120391,
+     "Tbar_dS_J": 1488.1429682024552,
+     "sd_TdS_J": 750.0183943946802,
+     "Cp_ex_from_H": -3.71944329728353,
+     "Cp_ex_from_S": 4.96047656067485,
+     "z_dH": -1.251804239326069,
+     "z_dS": 1.9841419614828189,
+     "z_consistency": -2.235287368190341
+    },
+    {
+     "x_Ni": 0.75,
+     "dH_mix_2200_minus_1900_J": -256.7458892102037,
+     "sd_J": 949.3238553997899,
+     "dS_ex_2200_minus_1900": 0.322353168988752,
+     "sd_S": 0.3752734966497277,
+     "Tbar_dS_J": 660.8239964269416,
+     "sd_TdS_J": 769.3106681319418,
+     "Cp_ex_from_H": -0.855819630700679,
+     "Cp_ex_from_S": 2.202746654756472,
+     "z_dH": -0.270451319378338,
+     "z_dS": 0.8589819741244066,
+     "z_consistency": -0.7509331802255274
+    }
+   ],
+   "finding": "S_ex(2200) - S_ex(1900) is +0.32 to +0.73 J/mol-atom/K (0.9-2.3 sd), i.e. Cp_ex = +2.2 to +5.0 J/mol-atom/K, but the same runs give H_mix(2200) - H_mix(1900) of -4.8, -1.1, -0.3 kJ/mol-atom (x_Ni 0.25, 0.5, 0.75), i.e. Cp_ex of -16, -4, -1 J/mol-atom/K. The two estimates of Cp_ex have opposite signs (dH - T dS = -6.5, -2.2, -0.8 sd; the Cr-rich state fails clearly), so the 1900-2200 K difference is not a thermodynamically consistent temperature dependence of the excess Gibbs energy. The Cr-rich 1900 K reference is an undercooled liquid that crystallised after 82 ps (analysed over 80 ps). Read as a sampling/reference effect, not as evidence for a T^2 or T ln T term; no term added. All six S_ex values stay in the fit at their u (flag).",
+   "decision": "L0, L1 of the liquid kept a + bT; reported, no extra term"
+  },
+  "4_basis_units": {
+   "CRNI2 one-shot": "MLIP H_f relative to MLIP fcc Cr and fcc Ni (-14.496 kJ/mol-atom, s2) entered on the TDB's SER basis as HM_FORM = -14.496 + 7.284/3 = -12.068 kJ/mol-atom (GFCCCR enthalpy 7284 J); residual at the one-shot = 0 (checked)",
+   "solutions": "HM_MIX relative to same-lattice end-members (ESPEI _MIX), per mole of atoms",
+   "liquid S_ex": "SM_MIX value = S_ex + S_ideal (pycalphad SM_MIX includes ideal mixing)"
+  },
+  "5_duplicates": {
+   "eutectic": "ORC-SV7H3CNRYS (1618 K; L 0.46, bcc 0.38, fcc 0.50; Hao citing [158,159]) may re-quote the arrests of Jenkins 1937 (rows at 1611-1619 K, L 0.44-0.46) or Bechtoldt 1961; the original of [158,159] is not resolved here. Counted as printed; FLAG.",
+   "jette1934": "6 identical row pairs in the ESPEI-datasets file (set F found them); set E counts them twice; kept as set E (frozen); FLAG",
+   "CrNi2": "ORC-X3KVP7D3PO (text, 863 K) and the 9 Fig. 16(b) ordering marks (774-876 K) may share sources; only the text record is used"
+  },
+  "6_cross_source": {
+   "MLIP_vs_DFT_Liu2016": {
+    "BCC_A2": [
+     {
+      "x_Ni": 0.25,
+      "DFT_Liu2016_J": 10020.0,
+      "MLIP_s2_J": 7815.695163501609,
+      "diff_J": -2204.3048364983906
+     },
+     {
+      "x_Ni": 0.5,
+      "DFT_Liu2016_J": 9150.0,
+      "MLIP_s2_J": 6046.38745318909,
+      "diff_J": -3103.6125468109103
+     },
+     {
+      "x_Ni": 0.75,
+      "DFT_Liu2016_J": 4980.0,
+      "MLIP_s2_J": 240.08725695334002,
+      "diff_J": -4739.91274304666
+     }
+    ],
+    "FCC_A1": [
+     {
+      "x_Ni": 0.25,
+      "DFT_Liu2016_J": -12690.0,
+      "MLIP_s2_J": -10096.428449687104,
+      "diff_J": 2593.571550312896
+     },
+     {
+      "x_Ni": 0.5,
+      "DFT_Liu2016_J": -9030.0,
+      "MLIP_s2_J": -9758.238922651797,
+      "diff_J": -728.2389226517971
+     },
+     {
+      "x_Ni": 0.75,
+      "DFT_Liu2016_J": -5790.0,
+      "MLIP_s2_J": -7053.577534730126,
+      "diff_J": -1263.577534730126
+     }
+    ]
+   },
+   "note": "MLIP (GRACE SMAX, s2, SQS 128) vs DFT SQS (Liu 2016) mixing enthalpies; disagreement reported, not settled. The fcc Cr-rich MLIP values use MLIP fcc Cr (37.8 kJ above bcc), the DFT ones their own fcc Cr: comparable as mixing energies.",
+   "CrNi2_ordering": "text 863 K (ORC-X3KVP7D3PO, sigma 16 K) vs Fig. 16(b) marks 774-876 K (mean ~838 K): spread > sigma; reported"
+  },
+  "7_pull_at_reference": "per-dataset log-likelihood of the pick by residual type in steps/*/evaluation.json; the set E pull at the Kunselman et al. reference is in the set E file (different model: no CRNI2, liquid L0 only)"
+ }
+}

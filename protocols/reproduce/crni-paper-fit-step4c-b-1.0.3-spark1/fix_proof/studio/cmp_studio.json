@@ -1,0 +1,105 @@
+{
+ "a": {
+  "model": "model2",
+  "host": "mac-studio",
+  "n_zpf_susp_records": 12,
+  "n_residual_objects": 20
+ },
+ "b": {
+  "model": "model3",
+  "host": "mac-studio",
+  "n_zpf_susp_records": 12,
+  "n_residual_objects": 20
+ },
+ "bit_identical_all": true,
+ "rows": [
+  {
+   "start": "s0_start",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.293148846691,
+   "grad_norm": 0.0005251872234656241,
+   "file_logpost": -5657.293148846702,
+   "reevaluation_minus_file": 1.0913936421275139e-11
+  },
+  {
+   "start": "s1_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636863667,
+   "grad_norm": 0.0002272345839313659,
+   "file_logpost": -5657.288636863667,
+   "reevaluation_minus_file": 0.0
+  },
+  {
+   "start": "s2_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636867111,
+   "grad_norm": 0.0005278633192894917,
+   "file_logpost": -5657.288636867119,
+   "reevaluation_minus_file": 8.185452315956354e-12
+  },
+  {
+   "start": "s3_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.288636877992,
+   "grad_norm": 0.00044769686859849367,
+   "file_logpost": -5657.288636877991,
+   "reevaluation_minus_file": -9.094947017729282e-13
+  },
+  {
+   "start": "s4_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.29314883263,
+   "grad_norm": 0.0002504970201398902,
+   "file_logpost": -5657.293148832628,
+   "reevaluation_minus_file": -2.7284841053187847e-12
+  },
+  {
+   "start": "s5_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.293148836694,
+   "grad_norm": 0.0002097797078234073,
+   "file_logpost": -5657.293148836689,
+   "reevaluation_minus_file": -4.547473508864641e-12
+  },
+  {
+   "start": "s6_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.28863688129,
+   "grad_norm": 0.0006112483675923797,
+   "file_logpost": -5657.288636881297,
+   "reevaluation_minus_file": 7.275957614183426e-12
+  },
+  {
+   "start": "s7_perturbed",
+   "identical_logpost": true,
+   "identical_grad": true,
+   "identical_value_only": true,
+   "identical_parts": true,
+   "logpost": -5657.28863690331,
+   "grad_norm": 0.0003712604435446522,
+   "file_logpost": -5657.288636903301,
+   "reevaluation_minus_file": -9.094947017729282e-12
+  }
+ ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-30",
+  "tool": "calphad-model-guide",
+  "version": "0.2.0",
+  "source_count": 43,
+  "recipe_count": 36,
+  "tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 17
+  },
+  "scientific_recipe_reproductions": 0,
+  "MCP_server_implemented": false,
+  "public_repository_created": false,
+  "runtime_dependencies": "Python standard library",
+  "authorial_audit": {
+    "paragraphs": 13,
+    "slop_hits": 0,
+    "low_priority_bridge_findings": 3,
+    "semantic_model": "unavailable",
+    "held_out_voice_score": "not run; no authorial-voice certification claimed"
+  },
+  "limits": [
+    "Fixed-site neutral-element input only",
+    "Recipes advisory until reproduced and reviewed",
+    "Read statuses vary; not all source records represent full-text inspection"
+  ],
+  "implemented_math": [
+    "exact composition and occupancy ranks",
+    "explicit reciprocal relation"
+  ],
+  "v02_document_audit": {
+    "parsed_paragraphs": 0,
+    "semantic_model": "unavailable",
+    "interpretation": "No meaningful prose coverage; no voice certification claimed"
+  },
+  "calculation_checks": {
+    "PhaseForge_translation": "passed",
+    "PhaseForge_cell_extensivity": "passed",
+    "VISION": "H200 cluster identified; no jobs submitted"
+  },
+  "matched_reference_pilot": {
+    "models": 6,
+    "compounds": 4,
+    "single_point_calculations": 48,
+    "initial_relaxations": 12,
+    "converged": 12,
+    "additional_SevenNet_refinement": {
+      "converged": true,
+      "fmax": 0.001,
+      "steps": 16,
+      "spacegroups": {
+        "0.001": "P4/mmm",
+        "0.01": "Pm-3m",
+        "0.05": "Pm-3m"
+      },
+      "energy_eV_cell": -10.841922760009766
+    },
+    "experimental_validation": "pending adjudication",
+    "VISION_jobs_submitted": 0
+  },
+  "nial_B2_benchmark": {
+    "model": "(Ni,Al)0.5:(Ni,Al)0.5",
+    "potentials": [
+      "grace-smax-large",
+      "mace-mpa-0"
+    ],
+    "endmembers": 4,
+    "SQS_cells": 4,
+    "SQS_atoms": 16,
+    "static_calculations": 16,
+    "constrained_relaxations_converged": 16,
+    "partial_order_SQS_quality": "not converged; mean absolute correlation error 0.107143",
+    "finite_temperature_model_fitted": false
+  },
+  "nial_B2_size_convergence": {
+    "sizes_atoms": [
+      32,
+      64,
+      128
+    ],
+    "new_SQS_cells": 12,
+    "new_static_calculations": 24,
+    "all_four_model_order_groups_pass_provisional_gates": true,
+    "largest_64_to_128_mean_change_meV_atom": 1.808,
+    "relaxed_energy_convergence_tested": true,
+    "finite_temperature_fit": false
+  },
+  "nial_B2_relaxed_convergence": {
+    "runs": 16,
+    "force_converged": 13,
+    "all_four_model_order_groups_fail_energy_screen": true,
+    "extended_correlations_fail": true,
+    "interaction_fitting": "deferred",
+    "site_assignment_flags": "present in disordered cells; not proof of phase transformation"
+  },
+  "nial_B2_volume_relaxation": {
+    "status": "completed",
+    "runs": 16,
+    "converged": 15,
+    "protocol": "benchmarks/nial-b2/convergence/VOLUME_RELAXATION_PROTOCOL.md",
+    "shape": "fixed; uniform scaling only",
+    "atomic_positions": "free; exact ideal positions not required",
+    "step_limit": 240,
+    "energy_screen_pass_groups": 0,
+    "extended_SQS_correlations": "unchanged; deficiencies remain",
+    "finite_temperature_model_fitted": false
+  },
+  "nial_B2_VASP": {
+    "status": "32 input sets staged, not submitted",
+    "access": "Awaiting reachable authenticated VISION SSH master",
+    "configuration_spread": "not evidence of potential error; paired DFT test required",
+    "execution_target": "VISION",
+    "documented_vasp": "6.6.1 OpenACC",
+    "documentation_commit": "bfe5f1308bc79b4fa361a6a74471aa2bc9599a0d",
+    "job_scripts": "VISION module/MPI setup staged; syntax checked only"
+  }
+}

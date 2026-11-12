@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "phase": "SIGMA",
+  "elements": [
+    "Co",
+    "Cr",
+    "Ni",
+    "Re"
+  ],
+  "sublattices": [
+    {
+      "id": "2a",
+      "site_ratio": 2,
+      "constituents": [
+        "Co",
+        "Cr",
+        "Ni",
+        "Re"
+      ]
+    },
+    {
+      "id": "4f",
+      "site_ratio": 4,
+      "constituents": [
+        "Co",
+        "Cr",
+        "Ni",
+        "Re"
+      ]
+    },
+    {
+      "id": "8i1",
+      "site_ratio": 8,
+      "constituents": [
+        "Co",
+        "Cr",
+        "Ni",
+        "Re"
+      ]
+    },
+    {
+      "id": "8i2",
+      "site_ratio": 8,
+      "constituents": [
+        "Co",
+        "Cr",
+        "Ni",
+        "Re"
+      ]
+    },
+    {
+      "id": "8j",
+      "site_ratio": 8,
+      "constituents": [
+        "Co",
+        "Cr",
+        "Ni",
+        "Re"
+      ]
+    }
+  ],
+  "reference_state": "SER 298.15 K; numerical unary functions must be supplied separately",
+  "energy_basis": "J/mol_atoms",
+  "vacancy_role": "none",
+  "ordered": false,
+  "evidence": [
+    {
+      "kind": "crystallography",
+      "source": "doi:10.6028/jres.123.020",
+      "locator": "Table 1: sigma Wyckoff sites and multiplicities",
+      "status": "verified"
+    }
+  ],
+  "validity": {
+    "temperature_K": null,
+    "composition_scope": "Unspecified; demonstration only"
+  }
+}

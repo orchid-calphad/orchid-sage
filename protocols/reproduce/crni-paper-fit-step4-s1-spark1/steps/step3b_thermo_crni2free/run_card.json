@@ -1,0 +1,356 @@
+{
+ "step": "step3b_thermo_crni2free",
+ "config": {
+  "start_tdb": "tdb/step2_liquidus_pick.tdb",
+  "groups": [
+   "oneshot",
+   "liq",
+   "thermo"
+  ],
+  "free": [
+   "VV0000",
+   "VV0001",
+   "VV0002",
+   "VV0003",
+   "VV0004",
+   "VV0005",
+   "VV0006",
+   "VV0007",
+   "VV0008",
+   "VV0009",
+   "VV0010",
+   "VV0011",
+   "VV0012",
+   "VV0013"
+  ],
+  "hinge": null,
+  "note": "0.1 step 3, variant b (after 3a broke topology: CRNI2 fixed at its one-shot became stable to 1828 K, above the liquidus): CRNI2 a,b free, held only through its one-shot HM_FORM observation (sigma 9.7 kJ/mol-atom) as 0.1 'held: one-shot energies kept through their assigned uncertainty (observations, not a penalty)'; data as 3a.",
+  "name": "step3b_thermo_crni2free",
+  "wall_s": 5400,
+  "held_rule": "held never means fixed (protocol 0.1, PI 6 Nov): every compound stays free, anchored by its one-shot observation and sigma; CRNI2 a,b free"
+ },
+ "espei_version": "0.8.11.dev82+g9039ea215",
+ "espei_file": "<home>/orchid-crni-mcmc-20261105/env/grad/lib/python3.12/site-packages/espei/__init__.py",
+ "pycalphad_version": "0.11.3.dev35+g9a6939dd2",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "host": "spark1",
+ "start_tdb": "tdb/step2_liquidus_pick.tdb",
+ "start_tdb_sha256": "586549f5828c169d0997693cbef8ef187352ece495394bdaf582bfdd3a5904de",
+ "hinge_sha256": null,
+ "data_files": [
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_FORM_CRNI2.json",
+   "sha256": "0407f83e3aa6c06b7be4d0444e457b3582c68b54b2b87743cc62317f3f5af04e"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.25.json",
+   "sha256": "5fbaf17f2b8c79ed79e8f582d1345ece6f43af26dc8ee9da37e3b633ccabc300"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.50.json",
+   "sha256": "b98c26406e3fc68b7975524b8dc80ffdd4d73142c50c87fe39678befda46c04d"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_BCC_A2_x0.75.json",
+   "sha256": "5e7b373353fd239cd783415aa22d207310ecf47f37ff7b28a6b3f0350c14b881"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.25.json",
+   "sha256": "4d5b09ab408961024ef30d1e7d3000648bea99b98083e0c9c70bd77f54d755e7"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.50.json",
+   "sha256": "be498f5e8d0944c89d21e5b0068d78d4275e94da3650577f9d37dd55c2141e5b"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_FCC_A1_x0.75.json",
+   "sha256": "97d67c738f6e20d45803e1e9fcf9656778f54dc276639d9c6894007e1a7ed61a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.25.json",
+   "sha256": "8aa6da998b442c75e1d71d61d48fb0bdebed9af674436260c19ae0058aa9265e"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.50.json",
+   "sha256": "26ba116eccd6bba8a4c73118cb3bda46beef0650623546d6bc1d8b95ff46a32d"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/oneshot_HM_MIX_LIQUID_x0.75.json",
+   "sha256": "3b1774f3c8dee36e028f782d51b4e484fb13ba283fd651be35000f7bb80dc529"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T1900.json",
+   "sha256": "b167783975d1db6d0a8f8fe22e3d91f10acb6e663d8c31b028bcc5ec0081fc58"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr25Ni75_N108_T2200.json",
+   "sha256": "39d82c33c9388a5de24ffac889b739fe87e8ec8f7335422be7a6065d9cf22fc2"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T1900.json",
+   "sha256": "80954104eab4b42e098745fc57a64aef08c5d285282537a3e19732626dd331da"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr50Ni50_N108_T2200.json",
+   "sha256": "a4126814222fd3bca5ddf32c79b95fa17c27a60fc5255164cb031d5332681d41"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T1900.json",
+   "sha256": "5f7e4c9e59fc545ce415d13a980aa9dbf26730364dd4dd5ed837e2101d8594c0"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/oneshot/provisional_SM_MIX_LIQUID_Cr75Ni25_N108_T2200.json",
+   "sha256": "9ec555bb54aebd2eca22ab0319440a0302dbe63a5b61d771873540c9af795178"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "ad20881c1726a8481af66175ec6cdd7d367a4a0fd5a441d1dbbb56a9d880ac53"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "c2aeff6a69b7c9b03dfcedf8ba8a3bb8681f8ecf92942a6acc59be769a8a54a9"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "5976b3a7ceea051e32518eaa0c82289af9e09414b9a62a854011163f53d3840a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "sha256": "77219f188a5729583d93e732b1999b4cbfce6da2ce474eced8a59675a5ccca6c"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "sha256": "1aee85f4de822f8b3c498dec1535d551dd5d5207596079d25a4e6c29342727af"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "sha256": "1693a17839afb34d8c861484a6f069e90facb3bab705e420357e28f7bdf9684c"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "sha256": "97e201bc33b744db6da09b5df04ffb9c0375f738cf765f58fe9fe4a1da4191dd"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json",
+   "sha256": "a2e09434ef90d2c848decb6aec8705e092f7c2647ad473c3f408b1a19edecf31"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json",
+   "sha256": "21a248eb182f1587c370f1a24e69cf311ca47ade87a7f855a5c20b42eaad167a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json",
+   "sha256": "9dfeefef578205182384241618c2b2a3e32a1349f2614a251cc46cb98556be33"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json",
+   "sha256": "ef389ce5534bc4e160d90f3707e7beadfdcb1709fdf34c4f168726caa01cf21e"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json",
+   "sha256": "0848e5e31cef7ffa64a277a4cafbe5f2e729c91a03a72ab1002a4e6c7a3ada76"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/dft_HM_MIX_BCC_A2_liu2016.json",
+   "sha256": "e53c9c40836797914e19b1e80c431e8acb89ca6e2c4b34ed0858f4e0eeb48793"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/dft_HM_MIX_FCC_A1_liu2016.json",
+   "sha256": "b2dfac152afeca3c2fe03552507b1d8ee63450af335b5c5c43997769f4eb1769"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+   "sha256": "27661334b763672edb255713bbd8f7122bd28f038a29ce94898aaefbd0dc26f5"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+   "sha256": "cfc8770074e73268f7b0099e63db525abfb246bcbcc917719231b6411d33a0d3"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+   "sha256": "ee1eb445ef0d1f03e55646f2dd3b6ca9d597eb9d6ef8f49588b07ce1e11b402a"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+   "sha256": "e8b729ed59ca32bf73d7c555d29f338a976240f594904c1e38c7f356f8274087"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+   "sha256": "0b76c94f147daa472db0b34f74003132025498ff7f3f45f7b6328e779b9f9953"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json",
+   "sha256": "5ac5eb73db303f0cef7d73b650b5ea1f8dd2dc1a5c5a9c6ba6bbaf681cc4bb2f"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+   "sha256": "e11c12d954a93a9b1964272c8640c770d1a4ce2f39d92bc6eb91c350b31583f5"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+   "sha256": "ef59165ec9a891b9e9d0a3dd89604b8aeaf828320ddb9c736d064bedff2e0064"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+   "sha256": "ce1455109a8b540245297ad8b8a354d1f2482e03f80ffe2060a60592a8f5b565"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json",
+   "sha256": "306dc441045f903a6114a3a951b38255c54abf68a1cb7f56239a7175d39fc61f"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json",
+   "sha256": "dc930752bfe72ace0c0b21dd25ac355bf35f4405c8f7f949cdb3f29f7c298d76"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json",
+   "sha256": "0334e2dfff499acaac85d05217d9452bfc10c7fa41ed258442f1e4dc7087db97"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json",
+   "sha256": "76ecb8be3cc23570f4dac669201d3c8f2f25e04cde2e9a025bfb254eb3458473"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+   "sha256": "6f0e5743b3d17939fd254f3be725660a5079c750fcf3578f8090555055050127"
+  },
+  {
+   "path": "<home>/orchid-protocols-work-20261106/reproduce-crni-step4s1-c/data/thermo/non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json",
+   "sha256": "c0203d9338d8f8cc8e524413bfd84241adc95faacd33f19cc13b6922c0b7c1ca"
+  }
+ ],
+ "starts": {
+  "s0_start": [
+   -24151.96649,
+   2.809163,
+   17236.442866,
+   -1.610245,
+   16663.185282,
+   -16.838213,
+   33430.203433,
+   -3.86012,
+   -37294.237437,
+   10.070363,
+   -314.220712,
+   8.982533,
+   -43487.554,
+   0.0
+  ],
+  "s1_perturbed": [
+   -26403.70851109044,
+   2.4046357744793543,
+   15344.275966474846,
+   2.017695907558078,
+   14130.27951132143,
+   -17.93592973525584,
+   33722.83994114906,
+   -5.880696971001848,
+   -36129.90897421702,
+   12.025616695182277,
+   -317.4220983175388,
+   15.337517200562349,
+   -42727.780809308926,
+   -0.1590661382955422
+  ],
+  "s2_perturbed": [
+   -24410.400531773066,
+   -2.0859567792031823,
+   19514.748927371347,
+   -1.3621854462011973,
+   14702.2798416174,
+   -13.36916454499649,
+   36710.38654745491,
+   -8.210817889830198,
+   -41432.94103144958,
+   8.234883617486238,
+   -283.4631873164582,
+   11.183064077109567,
+   -40287.074968374145,
+   -4.416925060131687
+  ],
+  "s3_perturbed": [
+   -21684.282048475317,
+   2.4474717089248545,
+   14780.648773380603,
+   -2.8022961384945244,
+   16577.904400366886,
+   -12.377761341580507,
+   38398.4068752936,
+   -2.1618693558061377,
+   -39362.90544967393,
+   10.97950327948044,
+   -327.74604074970387,
+   8.1357053997417,
+   -38577.06719298541,
+   5.13307615175578
+  ],
+  "s4_perturbed": [
+   -24184.91024380649,
+   2.6210202234389053,
+   17665.90173448695,
+   -1.4614909591368652,
+   18633.88312113236,
+   -12.62340991298842,
+   33447.325605218386,
+   -4.683577450326781,
+   -38975.863886284,
+   6.886836779545463,
+   -322.71114267919063,
+   5.980357473704522,
+   -45679.89193418164,
+   -1.0492613188378914
+  ],
+  "s5_perturbed": [
+   -22434.50406270922,
+   2.2645805741994423,
+   16240.842585063087,
+   -2.0813783924324296,
+   18368.069109983524,
+   -18.722074616132605,
+   31683.575539852638,
+   2.0345443591455608,
+   -29807.503783792883,
+   8.163820821191363,
+   -340.25342725611847,
+   7.434970250088879,
+   -41352.107540389756,
+   -5.25570984337181
+  ],
+  "s6_perturbed": [
+   -26975.272341532815,
+   -3.184522967316852,
+   18743.390472722236,
+   3.7881867710341917,
+   17736.435047767605,
+   -12.459917706451186,
+   31949.374401727295,
+   -9.259441610697916,
+   -35901.38133820677,
+   14.343475782198768,
+   -357.9913798018899,
+   7.9883214720993285,
+   -36653.27718639124,
+   3.5701653527411397
+  ],
+  "s7_perturbed": [
+   -21556.024662665634,
+   -1.008752852309759,
+   17456.926412268287,
+   0.8202038561769514,
+   17550.070774535867,
+   -16.0788722504097,
+   29102.7325411476,
+   0.263866236598302,
+   -29932.76020647382,
+   7.972158570924794,
+   -295.54252241370716,
+   14.908915354399149,
+   -46071.739289938705,
+   1.377817804253075
+  ]
+ },
+ "nproc": 4,
+ "started_utc": "2026-11-06T14:05:19Z",
+ "pid": 1784472,
+ "finished_utc": "2026-11-06T14:22:27Z"
+}

@@ -1,0 +1,63 @@
+{
+ "multistart": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/steps/step4c_b_hingefloor/multistart.json",
+ "multistart_sha256": "ac39ad7804cd57907c023b20305b434a78a2dc5401fa46f5043165d151c42150",
+ "recorded_modes": "assessments/crni-paper-fit-step4c-b/evidence/reference_outputs/results/uq/modes_step4c_b.json",
+ "tolerances": [
+  50.0,
+  0.03,
+  50.0,
+  0.03,
+  50.0,
+  0.03,
+  50.0,
+  0.03,
+  50.0,
+  0.03,
+  50.0,
+  0.03,
+  50.0,
+  0.03
+ ],
+ "versions": {
+  "2.1.1": {
+   "command": "PY -c \"import json; m=json.load(open('steps/step4c_b_hingefloor/multistart.json')); m=[x for x in m if x['final']=='converged']; m.sort(key=lambda x:-x['logpost']); modes=[]; [modes.append(x) for x in m if all(abs(x['logpost']-y['logpost'])>0.5 for y in modes)]; json.dump([{'name':chr(65+i)+'_'+x['start'],'theta':x['theta'],'logpost':x['logpost'],'grad_norm_q':x['grad_norm_q']} for i,x in enumerate(modes)], open('results/uq/modes_step4c_b_hingefloor.json','w'), indent=1)\"",
+   "n_modes": 1,
+   "names": [
+    "A_s4_perturbed"
+   ],
+   "starts": [
+    "s4_perturbed"
+   ],
+   "recorded_names": [
+    "A_s4",
+    "A2_s5_flat"
+   ],
+   "recorded_starts": [
+    "s4_perturbed",
+    "s5_perturbed"
+   ],
+   "theta_bit_identical_to_recorded_in_order": false
+  },
+  "2.1.2": {
+   "command": "PY -c \"import json,sys; tol=json.loads(sys.argv[1]); m=json.load(open('steps/step4c_b_hingefloor/multistart.json')); m=[x for x in m if x['final']=='converged']; m.sort(key=lambda x:-x['logpost']); modes=[]; [modes.append(x) for x in m if all(max(abs(a-b)/s for a,b,s in zip(x['theta'],y['theta'],tol))>1 for y in modes)]; json.dump([{'name':chr(65+i)+'_'+x['start'],'start':x['start'],'theta':x['theta'],'logpost':x['logpost'],'grad_norm_q':x['grad_norm_q']} for i,x in enumerate(modes)], open('results/uq/modes_step4c_b_hingefloor.json','w'), indent=1)\" '[50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03]'",
+   "n_modes": 2,
+   "names": [
+    "A_s4_perturbed",
+    "B_s5_perturbed"
+   ],
+   "starts": [
+    "s4_perturbed",
+    "s5_perturbed"
+   ],
+   "recorded_names": [
+    "A_s4",
+    "A2_s5_flat"
+   ],
+   "recorded_starts": [
+    "s4_perturbed",
+    "s5_perturbed"
+   ],
+   "theta_bit_identical_to_recorded_in_order": true
+  }
+ }
+}

@@ -1,0 +1,312 @@
+{
+ "specific_protocol": "crni-paper-fit-step4c-b@1.0.0",
+ "spec_sha256": "7387d3eedaa6d501e420d330d58dde978f8a1d67ce564e665d0f56d65165d3e4",
+ "root": "<home>/orchid-protocols-work-20261106/rerun-crni4cb-1.0.0",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-06T18:55:13-0600",
+ "items": [
+  {
+   "id": "step4c_b",
+   "step": "fit_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor/multistart.json",
+     "reference": -5657.288636859774,
+     "rerun": -5657.293148832628,
+     "diff": -0.004511972853833868,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "tdb_abs",
+     "path": "tdb/step4c_b_hingefloor_pick.tdb",
+     "reference": "assessments/crni-paper-fit-step4c-b/evidence/artifact/step4c_b_hingefloor_pick.tdb (sha256 3692243331691fd6)",
+     "rerun_sha256": "9547bd6917472f890df7f0d27810d121869f3cf8fa8572b8b9934bc07a87c53a",
+     "byte_identical": false,
+     "worst_diff_over_tol": 0.03873333333335912,
+     "other_lines_identical": true,
+     "params": {
+      "VV0000": [
+       -12848.367188,
+       -12848.383835,
+       50
+      ],
+      "VV0001": [
+       3.003633,
+       3.003634,
+       0.03
+      ],
+      "VV0002": [
+       -453.88706,
+       -453.84525,
+       50
+      ],
+      "VV0003": [
+       2.293144,
+       2.293112,
+       0.03
+      ],
+      "VV0004": [
+       19756.000766,
+       19756.062347,
+       50
+      ],
+      "VV0005": [
+       -11.83813,
+       -11.838177,
+       0.03
+      ],
+      "VV0006": [
+       21426.687295,
+       21426.612662,
+       50
+      ],
+      "VV0007": [
+       -2.49193,
+       -2.491886,
+       0.03
+      ],
+      "VV0008": [
+       6499.63701,
+       6499.624102,
+       50
+      ],
+      "VV0009": [
+       -9.651811,
+       -9.651811,
+       0.03
+      ],
+      "VV0010": [
+       33652.533367,
+       33652.576586,
+       50
+      ],
+      "VV0011": [
+       -18.944874,
+       -18.944898,
+       0.03
+      ],
+      "VV0012": [
+       -41000.225021,
+       -40999.244752,
+       50
+      ],
+      "VV0013": [
+       25.776031,
+       25.774869,
+       0.03
+      ]
+     },
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor/evaluation.json",
+     "reference": 1614,
+     "rerun": 1614.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor/evaluation.json",
+     "reference": 860,
+     "rerun": 860.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/fit2.py steps/configs/step4c_b_hingefloor.json 4 7 && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/evaluate.py step4c_b_hingefloor",
+   "returncode": 0,
+   "wall_s": 2109.2,
+   "pass": true
+  },
+  {
+   "id": "check10a",
+   "step": "pick_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_equal",
+     "path": "results/check10a_rerun.json",
+     "reference": "s4_perturbed",
+     "differences": [
+      {
+       "path": "pick",
+       "rerun": "s1_perturbed",
+       "reference": "s4_perturbed"
+      }
+     ],
+     "pass": false
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "10a pick s4 (8 of 8 smooth on both machines)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/check10a_ms.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json results/check10a_rerun.json 4 model2",
+   "returncode": 0,
+   "wall_s": 1140.6,
+   "pass": false
+  },
+  {
+   "id": "global_10c",
+   "step": "fit_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+     "reference": -5657.288636859766,
+     "rerun": -5657.289734957976,
+     "diff": -0.0010980982106048032,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/anneal_7201/status.json",
+     "reference": -5657.288636859768,
+     "rerun": -5657.293148832564,
+     "diff": -0.004511972795626207,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "no better optimum than s4 beyond 0.01 log-units"
+   },
+   "command": "mkdir -p steps/step4c_b_hingefloor_10c && (<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/run_global_crni.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json s4_perturbed basin 7201 1500 steps/step4c_b_hingefloor_10c/basin_7201 > logs/10c_basin.log 2>&1 & <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -u scripts/run_global_crni.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json s4_perturbed anneal 7201 1500 steps/step4c_b_hingefloor_10c/anneal_7201 > logs/10c_anneal.log 2>&1; wait)",
+   "returncode": 0,
+   "wall_s": 5847.4,
+   "pass": true
+  },
+  {
+   "id": "evaluate_states",
+   "step": "evaluate_states",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "files_equal",
+     "path": "evaluate/states_evaluated@1.0.0.json",
+     "reference": "reference/states_evaluated@1.0.0.json",
+     "rerun": "b610e5ecb4c0bb61ff6ee0c6837c42aeaac4f06ff379dc80b87e32f52b1ef7b6",
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "deterministic"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo10-crni4cb-1.0.0/protocols/tools/evaluate_states.py step4c_b_hingefloor_pick.tdb states@1.0.0.json states_evaluated@1.0.0.json --nproc 4",
+   "returncode": 0,
+   "wall_s": 5.7,
+   "pass": true
+  },
+  {
+   "id": "phase_sequence",
+   "step": "final_pick",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "sequence_equal",
+     "path": "phase_sequence_rerun.json",
+     "reference": "phase_sequence_reference.json",
+     "abs_tol_K": 10,
+     "compositions": 99,
+     "differing_compositions": [],
+     "n_differing": 0,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - identical phase order on heating at every x of a 0.01 grid, transition temperatures within 10 K (two grid steps)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo10-crni4cb-1.0.0/protocols/tools/phase_sequence.py crni tdb/step4c_b_hingefloor_pick.tdb phase_sequence_rerun.json && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I <home>/orchid-protocols-work-20261106/repo10-crni4cb-1.0.0/protocols/tools/phase_sequence.py crni reference/step4c_b_hingefloor_pick.tdb phase_sequence_reference.json",
+   "returncode": 0,
+   "wall_s": 1.3,
+   "pass": true
+  },
+  {
+   "id": "pure_elements",
+   "step": "physics_checks",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "command exit code",
+     "pass": false
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - pure elements equal SGTE (unary limits exact)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/physics.py tdb/step4c_b_hingefloor_pick.tdb results/physics_rerun.json",
+   "returncode": 1,
+   "wall_s": 0.2
+  },
+  {
+   "id": "laplace_weights",
+   "step": "laplace",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "results/uq/laplace_step4c_b.json",
+     "reference": 0.7660570156257861,
+     "rerun": 0.7660570169113187,
+     "diff": 1.285532569283987e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - mixture weight of the main mode within 0.01 (0.766)"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/laplace2.py steps/configs/step4c_b_hingefloor.json results/uq/modes_step4c_b.json results/uq/laplace_step4c_b.json 1000",
+   "returncode": 0,
+   "wall_s": 1045.8,
+   "pass": true
+  }
+ ],
+ "staged_files": 405,
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "phaseforgeplus": {
+  "path": "<home>/orchid-crni-mcmc-20261105/src/PhaseForgePlus",
+  "pinned_files": 406,
+  "mismatch": [
+   "./.github/dependabot.yml",
+   "./.github/workflows/lint.yml",
+   "./.github/workflows/release.yml",
+   "./.github/workflows/tests.yml",
+   "./.gitignore",
+   "./.gitmodules",
+   "./.pre-commit-config.yaml",
+   "./.pytest_cache/.gitignore",
+   "./.pytest_cache/CACHEDIR.TAG",
+   "./.pytest_cache/README.md"
+  ],
+  "pass": false
+ },
+ "finished": "2026-11-06T21:44:25-0600",
+ "pass": false,
+ "unexpected_failures": [
+  "check10a"
+ ],
+ "expected_failures": []
+}

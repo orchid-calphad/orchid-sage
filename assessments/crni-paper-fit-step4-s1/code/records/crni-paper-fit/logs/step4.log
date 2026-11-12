@@ -1,0 +1,9 @@
+espei 0.8.11.dev82+g9039ea215 <fit-python>
+{"step": "step4_solid", "start": "s1_perturbed", "logpost": -6332.243665831225, "grad_norm_q": 5.965555097554606e-05, "nfev": 125, "seconds": 527.3030519578606, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s0_start", "logpost": -6332.243665831498, "grad_norm_q": 9.542902705290035e-05, "nfev": 132, "seconds": 553.2277030823752, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s2_perturbed", "logpost": -6332.9945641336435, "grad_norm_q": 0.00017688561311348964, "nfev": 146, "seconds": 617.6305557498708, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s3_perturbed", "logpost": -6342.84240805583, "grad_norm_q": 1.3396505527688949, "nfev": 171, "seconds": 724.2713890420273, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s5_perturbed", "logpost": -6332.243665831628, "grad_norm_q": 6.797051519692148e-05, "nfev": 110, "seconds": 506.1312846252695, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s4_perturbed", "logpost": -6332.243665832286, "grad_norm_q": 4.707022400617931e-05, "nfev": 116, "seconds": 534.4608189994469, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s6_perturbed", "logpost": -6350.596228225422, "grad_norm_q": 6.095393188334916, "nfev": 142, "seconds": 687.9381242915988, "final": "converged", "n_nonfinite": 0}
+{"step": "step4_solid", "start": "s7_perturbed", "logpost": -6344.538282020446, "grad_norm_q": 2.374822015398541, "nfev": 213, "seconds": 995.717726457864, "final": "converged", "n_nonfinite": 0}

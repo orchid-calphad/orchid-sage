@@ -1,0 +1,285 @@
+{
+ "oneshot": {
+  "sigma_MLIP_J": 9686.929176396277,
+  "observations": [
+   {
+    "id": "BCC_A2_x0.25",
+    "phase": "BCC_A2",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.25,
+    "value": 7815.695163501609,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     7803.496089749541,
+     9717.570640858923
+    ]
+   },
+   {
+    "id": "BCC_A2_x0.50",
+    "phase": "BCC_A2",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.5,
+    "value": 6046.38745318909,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     4089.1369260721353,
+     8672.420536955864
+    ]
+   },
+   {
+    "id": "BCC_A2_x0.75",
+    "phase": "BCC_A2",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.75,
+    "value": 240.08725695334002,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     -1493.8209622849263,
+     3606.431534337062
+    ]
+   },
+   {
+    "id": "FCC_A1_x0.25",
+    "phase": "FCC_A1",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.25,
+    "value": -10096.428449687104,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     -18223.600405427012,
+     -6388.036550485115
+    ]
+   },
+   {
+    "id": "FCC_A1_x0.50",
+    "phase": "FCC_A1",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.5,
+    "value": -9758.238922651797,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     -9883.920347698408,
+     -8664.559315015897
+    ]
+   },
+   {
+    "id": "FCC_A1_x0.75",
+    "phase": "FCC_A1",
+    "output": "HM_MIX",
+    "T_K": 298.15,
+    "x_Ni": 0.75,
+    "value": -7053.577534730126,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "interval_J": [
+     -7058.437826581079,
+     -6655.871987121548
+    ]
+   },
+   {
+    "id": "CRNI2",
+    "phase": "CRNI2",
+    "output": "HM_FORM",
+    "T_K": 298.15,
+    "x_Ni": 0.6666666666666666,
+    "value": -12067.851343643677,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP",
+    "value_fcc_refs": -14495.851343643677,
+    "note": "SER basis of the TDB = MLIP H_f vs fcc Cr, fcc Ni (s2) + 7284/3 J (SGTE fcc-bcc Cr enthalpy), as the one-shot TDB"
+   },
+   {
+    "id": "LIQUID_x0.25",
+    "phase": "LIQUID",
+    "output": "HM_MIX",
+    "T_K": 2200.0,
+    "x_Ni": 0.25,
+    "value": -4206.339101696466,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP (MD block SE 391 J)"
+   },
+   {
+    "id": "LIQUID_x0.50",
+    "phase": "LIQUID",
+    "output": "HM_MIX",
+    "T_K": 2200.0,
+    "x_Ni": 0.5,
+    "value": -3178.542597170786,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP (MD block SE 629 J)"
+   },
+   {
+    "id": "LIQUID_x0.75",
+    "phase": "LIQUID",
+    "output": "HM_MIX",
+    "T_K": 2200.0,
+    "x_Ni": 0.75,
+    "value": -4282.469072786866,
+    "sigma": 9686.929176396277,
+    "sigma_basis": "sigma_MLIP (MD block SE 725 J)"
+   }
+  ],
+  "liquid_S_ex": [
+   {
+    "state": "Cr75Ni25_N108_T2200",
+    "x_Ni": 0.25,
+    "T_K": 2200,
+    "S_ex": -0.1368960358414549,
+    "u": 0.20503700498866223,
+    "weight": 0.9754336784770108
+   },
+   {
+    "state": "Cr50Ni50_N108_T2200",
+    "x_Ni": 0.5,
+    "T_K": 2200,
+    "S_ex": -0.2561065338314634,
+    "u": 0.2242046429887408,
+    "weight": 0.8920421867001376
+   },
+   {
+    "state": "Cr25Ni75_N108_T2200",
+    "x_Ni": 0.75,
+    "T_K": 2200,
+    "S_ex": -0.6775759724681703,
+    "u": 0.23761148849737843,
+    "weight": 0.8417101431617294
+   },
+   {
+    "state": "Cr75Ni25_N108_T1900",
+    "x_Ni": 0.25,
+    "T_K": 1900,
+    "S_ex": -0.8371225505536815,
+    "u": 0.22249944051313172,
+    "weight": 0.8988786647676814
+   },
+   {
+    "state": "Cr50Ni50_N108_T1900",
+    "x_Ni": 0.5,
+    "T_K": 1900,
+    "S_ex": -0.9820299329546123,
+    "u": 0.2891154494765592,
+    "weight": 0.6917651767212653
+   },
+   {
+    "state": "Cr25Ni75_N108_T1900",
+    "x_Ni": 0.75,
+    "T_K": 1900,
+    "S_ex": -0.9999291414569222,
+    "u": 0.2904668274033601,
+    "weight": 0.6885467844569656
+   }
+  ]
+ },
+ "zpf_split": {
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json": {
+   "liq": 6,
+   "solid": 18
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json": {
+   "liq": 0,
+   "solid": 5
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json": {
+   "liq": 0,
+   "solid": 21
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json": {
+   "liq": 0,
+   "solid": 5
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json": {
+   "liq": 42,
+   "solid": 7
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json": {
+   "liq": 0,
+   "solid": 28
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json": {
+   "liq": 0,
+   "solid": 7
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json": {
+   "liq": 0,
+   "solid": 9
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json": {
+   "liq": 0,
+   "solid": 1
+  },
+  "zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json": {
+   "liq": 15,
+   "solid": 0
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json": {
+   "liq": 6,
+   "solid": 18
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json": {
+   "liq": 0,
+   "solid": 5
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json": {
+   "liq": 0,
+   "solid": 21
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json": {
+   "liq": 0,
+   "solid": 5
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json": {
+   "liq": 42,
+   "solid": 7
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json": {
+   "liq": 0,
+   "solid": 28
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json": {
+   "liq": 0,
+   "solid": 7
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json": {
+   "liq": 0,
+   "solid": 9
+  },
+  "zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json": {
+   "liq": 15,
+   "solid": 0
+  }
+ },
+ "thermo_files": [
+  "activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-0.json",
+  "activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-1.json",
+  "activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-2.json",
+  "activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities-3.json",
+  "activity_CR-NI-ACR_CR-BCC_A2-pugliese1970activities.json",
+  "dft_HM_MIX_BCC_A2_liu2016.json",
+  "dft_HM_MIX_FCC_A1_liu2016.json",
+  "hao_CR-NI-ACR_CR-LIQUID-gilby-1873K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-kat1733-1733K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-kat1783-1783K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-kat1833-1833K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-pei-1873K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-sud1833-1833K.json",
+  "hao_CR-NI-ACR_CR-LIQUID-sud1873-1873K.json",
+  "hao_CR-NI-HM_MIX-LIQUID-batalin-1960K.json",
+  "hao_CR-NI-HM_MIX-LIQUID-sudavtsova-2200K.json",
+  "non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-dench1963adiabatic.json",
+  "non-equilibrium-thermochemical_BCC_A2_HM_CR-NI-HM_FORM-BCC_A2-watson1995enthapies.json",
+  "non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-dench1963adiabatic.json",
+  "non-equilibrium-thermochemical_FCC_A1_HM_CR-NI-HM_FORM-FCC_A1-watson1995enthapies.json",
+  "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-saltykov2002enthalpy.json",
+  "non-equilibrium-thermochemical_LIQUID_HM_CR-NI-HM_MIX-LIQUID-thiedemann1998mixing.json"
+ ]
+}

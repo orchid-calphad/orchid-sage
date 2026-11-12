@@ -1,0 +1,6306 @@
+{
+ "summary": {
+  "n": 329,
+  "sigma_DF_J_percentiles_0_5_50_95_100": [
+   55.92623537253738,
+   74.57215237270177,
+   196.18350778779185,
+   1904.2429373351463,
+   3398.205080543547
+  ],
+  "weight_percentiles": [
+   0.29427299892096237,
+   0.5251430793801076,
+   5.097268426261813,
+   13.409831528023117,
+   17.880695765391188
+  ],
+  "n_floor_active": 0,
+  "n_with_notes": 176,
+  "source_model": "tdb/step4_solid_pick.tdb (step4_solid s1)"
+ },
+ "rows": [
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1721.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.143329289810977,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 82.29326863697563,
+   "sigma_DF_x_part": 46.0465986737695,
+   "sigma_DF": 94.29990091394914,
+   "weight": 10.604465013303919,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1701.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.041776868771293,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.66842990034068,
+   "sigma_DF_x_part": 41.68619849952857,
+   "sigma_DF": 90.80272423186584,
+   "weight": 11.012885444345129,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1701.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.297086951731144,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 84.7533912276983,
+   "sigma_DF_x_part": 31.75431663636819,
+   "sigma_DF": 90.50676190008134,
+   "weight": 11.048898214964215,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1671.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.07108713051041,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 81.13739408816656,
+   "sigma_DF_x_part": 31.2212220817136,
+   "sigma_DF": 86.93699688679226,
+   "weight": 11.502582741639689,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1636.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.854993337232684,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 77.67989339572294,
+   "sigma_DF_x_part": 30.15063882631449,
+   "sigma_DF": 83.32602750405027,
+   "weight": 12.001052131657092,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1636.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.97051167102944,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 79.52818673647104,
+   "sigma_DF_x_part": 26.743187789694726,
+   "sigma_DF": 83.90429416153792,
+   "weight": 11.918341128938359,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1716.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 11.290313791913404,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 180.64502067061446,
+   "sigma_DF_x_part": 260.24313862489714,
+   "sigma_DF": 316.79506734547516,
+   "weight": 3.15661480584061,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1708.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 11.063854212475869,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 177.0216673996139,
+   "sigma_DF_x_part": 162.4550420752462,
+   "sigma_DF": 240.2671667636041,
+   "weight": 4.162033512401999,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1701.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 10.721473412954523,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 171.54357460727238,
+   "sigma_DF_x_part": 106.1259058704541,
+   "sigma_DF": 201.7173911338963,
+   "weight": 4.9574307618137805,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1697.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 10.46027831820073,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 167.3644530912117,
+   "sigma_DF_x_part": 51.00560936263026,
+   "sigma_DF": 174.9640887295837,
+   "weight": 5.715458567875338,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.980525255377813,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 159.688404086045,
+   "sigma_DF_x_part": 64.98253749912907,
+   "sigma_DF": 172.40393435004236,
+   "weight": 5.800331667429574,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.956630980177666,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 159.30609568284265,
+   "sigma_DF_x_part": 53.532781387196266,
+   "sigma_DF": 168.06008093762293,
+   "weight": 5.950252995362768,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1669.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.465297324525167,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 151.44475719240268,
+   "sigma_DF_x_part": 45.080593397152334,
+   "sigma_DF": 158.01194379573076,
+   "weight": 6.328635519431022,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 7,
+   "T": 1660.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.167516000267346,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 146.68025600427754,
+   "sigma_DF_x_part": 19.614323424325157,
+   "sigma_DF": 147.98587495053175,
+   "weight": 6.7574016799527445,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 8,
+   "T": 1650.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.883200104167912,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 142.1312016666866,
+   "sigma_DF_x_part": 1.2267118050661778,
+   "sigma_DF": 142.1364953453863,
+   "weight": 7.035490762383285,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 9,
+   "T": 1629.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.407932161319309,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 134.52691458110894,
+   "sigma_DF_x_part": 19.560878936322077,
+   "sigma_DF": 135.94160044472932,
+   "weight": 7.356099948275779,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 10,
+   "T": 1625.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.335673364177444,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 133.3707738268391,
+   "sigma_DF_x_part": 28.512469056301562,
+   "sigma_DF": 136.38447200050462,
+   "weight": 7.332213010263368,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 11,
+   "T": 1622.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.274391100310652,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.39025760497043,
+   "sigma_DF_x_part": 31.025208008948127,
+   "sigma_DF": 135.97699746909007,
+   "weight": 7.354185035798554,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 12,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.312413587805715,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.99861740489143,
+   "sigma_DF_x_part": 40.62665280799581,
+   "sigma_DF": 139.0652981516026,
+   "weight": 7.190866544649017,
+   "floor_active": false,
+   "notes": [
+    "LIQUID+FCC_A1 field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 13,
+   "T": 1619.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.223070062419902,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 131.56912099871843,
+   "sigma_DF_x_part": 34.19119122555299,
+   "sigma_DF": 135.93921861551854,
+   "weight": 7.3562288365680075,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 14,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.328031016164438,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 133.248496258631,
+   "sigma_DF_x_part": 48.359068205183355,
+   "sigma_DF": 141.75246464474603,
+   "weight": 7.054551061994988,
+   "floor_active": false,
+   "notes": [
+    "LIQUID+FCC_A1 field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 15,
+   "T": 1627.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 5.463238373936726,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 87.41181398298761,
+   "sigma_DF_x_part": 40.78377736733261,
+   "sigma_DF": 96.45797903825571,
+   "weight": 10.367208705496463,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 16,
+   "T": 1636.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 5.696710663871287,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 91.1473706219406,
+   "sigma_DF_x_part": 46.913750760733194,
+   "sigma_DF": 102.51216114068416,
+   "weight": 9.754940183415258,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 17,
+   "T": 1670.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.648221521074376,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 106.37154433719002,
+   "sigma_DF_x_part": 97.02833743845699,
+   "sigma_DF": 143.9770943961221,
+   "weight": 6.945549249998853,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 18,
+   "T": 1684.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.937315811982979,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 110.99705299172767,
+   "sigma_DF_x_part": 95.56735848602614,
+   "sigma_DF": 146.47001666158516,
+   "weight": 6.827335879332026,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 19,
+   "T": 1748.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.156831696533168,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 130.50930714453068,
+   "sigma_DF_x_part": 130.2595092449624,
+   "sigma_DF": 184.39148299225724,
+   "weight": 5.4232439794520815,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 20,
+   "T": 1792.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.576185932556157,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 137.21897492089852,
+   "sigma_DF_x_part": 126.83897778336424,
+   "sigma_DF": 186.86137472327164,
+   "weight": 5.351560757170542,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 21,
+   "T": 1808.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.773550836581876,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.37681338531002,
+   "sigma_DF_x_part": 137.0486008382006,
+   "sigma_DF": 196.18350778779185,
+   "weight": 5.097268426261813,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 22,
+   "T": 1703.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 10.295438373219397,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 164.72701397151036,
+   "sigma_DF_x_part": 631.4130615437103,
+   "sigma_DF": 652.5468898247631,
+   "weight": 1.5324569246947803,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 23,
+   "T": 1706.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 10.673656709938475,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 170.7785073590156,
+   "sigma_DF_x_part": 221.44121413153104,
+   "sigma_DF": 279.64532875022235,
+   "weight": 3.5759581769849422,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 24,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.675198883649763,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 154.8031821383962,
+   "sigma_DF_x_part": 272.31834969503853,
+   "sigma_DF": 313.24321027087365,
+   "weight": 3.192407583664019,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 25,
+   "T": 1680.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.495612697005669,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 151.9298031520907,
+   "sigma_DF_x_part": 178.21645352527693,
+   "sigma_DF": 234.18746634472183,
+   "weight": 4.2700833465101375,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 26,
+   "T": 1655.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.404220843053778,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 134.46753348886045,
+   "sigma_DF_x_part": 210.83087744195927,
+   "sigma_DF": 250.06234511722124,
+   "weight": 3.999002726824912,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 27,
+   "T": 1674.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.213015529278753,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 147.40824846846004,
+   "sigma_DF_x_part": 126.81876297650031,
+   "sigma_DF": 194.45356864667983,
+   "weight": 5.142615828341983,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 28,
+   "T": 1659.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.60539428093027,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 137.68630849488432,
+   "sigma_DF_x_part": 115.17356393550882,
+   "sigma_DF": 179.50618200094166,
+   "weight": 5.570838780330998,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 29,
+   "T": 1647.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.237257025153164,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 131.79611240245063,
+   "sigma_DF_x_part": 91.67351909565892,
+   "sigma_DF": 160.54360575177554,
+   "weight": 6.228837301350698,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 30,
+   "T": 1628.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 7.726772289829853,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 123.62835663727765,
+   "sigma_DF_x_part": 84.73390220899132,
+   "sigma_DF": 149.87930060017231,
+   "weight": 6.672035404459649,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 31,
+   "T": 1634.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.023948610955728,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 128.38317777529164,
+   "sigma_DF_x_part": 26.909345389873575,
+   "sigma_DF": 131.172989616741,
+   "weight": 7.623520687618563,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 32,
+   "T": 1625.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 7.8256660122108785,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 125.21065619537406,
+   "sigma_DF_x_part": 27.78948194828144,
+   "sigma_DF": 128.25741199568165,
+   "weight": 7.796820350886773,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 33,
+   "T": 1602.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 7.774384876094733,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 124.39015801751573,
+   "sigma_DF_x_part": 17.153237257544582,
+   "sigma_DF": 125.56729255676476,
+   "weight": 7.96385730422541,
+   "floor_active": false,
+   "notes": [
+    "FCC_A1+LIQUID field taken at 1622 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 34,
+   "T": 1612.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 7.785319389114169,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 124.5651102258267,
+   "sigma_DF_x_part": 9.257617721840555,
+   "sigma_DF": 124.90864730456451,
+   "weight": 8.005850848434072,
+   "floor_active": false,
+   "notes": [
+    "FCC_A1+LIQUID field taken at 1622 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 35,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.050320541702982,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.80512866724771,
+   "sigma_DF_x_part": 1.5614489238945584,
+   "sigma_DF": 80.82021369479538,
+   "weight": 12.37314224107771,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1621 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 36,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.034292509920286,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.54868015872458,
+   "sigma_DF_x_part": 10.04331054961687,
+   "sigma_DF": 81.1723965526986,
+   "weight": 12.319458861249485,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1621 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 37,
+   "T": 1617.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.017473085054594,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.27956936087351,
+   "sigma_DF_x_part": 15.815039782322701,
+   "sigma_DF": 81.82251976127202,
+   "weight": 12.221574242856756,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1622 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 38,
+   "T": 1618.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.933595627242706,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 78.9375300358833,
+   "sigma_DF_x_part": 23.749634984905335,
+   "sigma_DF": 82.43287457126688,
+   "weight": 12.131082474085694,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 39,
+   "T": 1613.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.840957165003264,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 77.45531464005222,
+   "sigma_DF_x_part": 27.626255327783575,
+   "sigma_DF": 82.23463837961093,
+   "weight": 12.160325863948078,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 40,
+   "T": 1611.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.598721940986479,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 73.57955105578367,
+   "sigma_DF_x_part": 33.48782357741109,
+   "sigma_DF": 80.84172599297027,
+   "weight": 12.369849699732496,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1621 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 41,
+   "T": 1615.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.415226481646485,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 70.64362370634376,
+   "sigma_DF_x_part": 36.81352261047225,
+   "sigma_DF": 79.6602599628902,
+   "weight": 12.553310778371184,
+   "floor_active": false,
+   "notes": [
+    "BCC_A2+LIQUID field taken at 1620 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 0,
+   "T": 2055.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.611411326648813,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 153.782581226381,
+   "sigma_DF_x_part": 123.71475171651167,
+   "sigma_DF": 197.36874646439492,
+   "weight": 5.066658312998906,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 1,
+   "T": 1985.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.600790570840417,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 153.61264913344667,
+   "sigma_DF_x_part": 143.2946192326515,
+   "sigma_DF": 210.0718778771351,
+   "weight": 4.760275435748095,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 2,
+   "T": 1934.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.552626115828032,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 152.8420178532485,
+   "sigma_DF_x_part": 154.74860303223744,
+   "sigma_DF": 217.50359206661793,
+   "weight": 4.5976252185008315,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 3,
+   "T": 1815.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.025885711174327,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 144.41417137878923,
+   "sigma_DF_x_part": 164.43071540298342,
+   "sigma_DF": 218.84449516256797,
+   "weight": 4.569454668060776,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 4,
+   "T": 1782.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.700731744907554,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 139.21170791852086,
+   "sigma_DF_x_part": 158.78955890660876,
+   "sigma_DF": 211.17297090145541,
+   "weight": 4.735454522097212,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 5,
+   "T": 1747.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.257239804589958,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.11583687343932,
+   "sigma_DF_x_part": 147.59111734265605,
+   "sigma_DF": 198.08516418758597,
+   "weight": 5.048333650333365,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 6,
+   "T": 1725.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 7.920929858161571,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 126.73487773058514,
+   "sigma_DF_x_part": 142.97132038679402,
+   "sigma_DF": 191.05634688889472,
+   "weight": 5.234057995369981,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 7,
+   "T": 1703.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 7.501969389449405,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 120.03151023119048,
+   "sigma_DF_x_part": 133.47138505005114,
+   "sigma_DF": 179.5053594619375,
+   "weight": 5.570864307324713,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 8,
+   "T": 1682.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.98104695125573,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 111.69675122009168,
+   "sigma_DF_x_part": 113.1857894671709,
+   "sigma_DF": 159.01945532050405,
+   "weight": 6.288538707320421,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 9,
+   "T": 1660.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.445159678015031,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 103.1225548482405,
+   "sigma_DF_x_part": 101.60838019512504,
+   "sigma_DF": 144.77059177991035,
+   "weight": 6.907480225820068,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 10,
+   "T": 1650.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.285051998412015,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 84.56083197459223,
+   "sigma_DF_x_part": 14.146932400766163,
+   "sigma_DF": 85.73604843114165,
+   "weight": 11.663705270988125,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 11,
+   "T": 1669.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.410957335389491,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 86.57531736623186,
+   "sigma_DF_x_part": 14.714837832437835,
+   "sigma_DF": 87.81692336616395,
+   "weight": 11.387326743734478,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 12,
+   "T": 1767.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.872135702642916,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 93.95417124228666,
+   "sigma_DF_x_part": 28.069095142812763,
+   "sigma_DF": 98.05743416978235,
+   "weight": 10.198104901139283,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 13,
+   "T": 1822.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 6.040434171869187,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 96.64694674990699,
+   "sigma_DF_x_part": 50.72587862257838,
+   "sigma_DF": 109.15011258863598,
+   "weight": 9.16169462663581,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 14,
+   "T": 1940.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 6.781431686172172,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 108.50290697875475,
+   "sigma_DF_x_part": 133.12708496813835,
+   "sigma_DF": 171.74312671823066,
+   "weight": 5.822649319996626,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "liq/zpf_eutectic_ORC-SV7H3CNRYS.json",
+   "row": 0,
+   "T": 1618.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.855675410566259,
+   "sigma_T": 11.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 64.41242951622885,
+   "sigma_DF_x_part": 49.148992538307745,
+   "sigma_DF": 81.02212379167668,
+   "weight": 12.342307917911294,
+   "floor_active": false,
+   "notes": [
+    "LIQUID+BCC_A2 field taken at 1623 K",
+    "LIQUID+FCC_A1 field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1721.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.143329289810977,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 82.29326863697563,
+   "sigma_DF_x_part": 46.0465986737695,
+   "sigma_DF": 94.29990091394914,
+   "weight": 10.604465013303919,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1701.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.041776868771293,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.66842990034068,
+   "sigma_DF_x_part": 41.68619849952857,
+   "sigma_DF": 90.80272423186584,
+   "weight": 11.012885444345129,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1701.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.297086951731144,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 84.7533912276983,
+   "sigma_DF_x_part": 31.75431663636819,
+   "sigma_DF": 90.50676190008134,
+   "weight": 11.048898214964215,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1671.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.07108713051041,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 81.13739408816656,
+   "sigma_DF_x_part": 31.2212220817136,
+   "sigma_DF": 86.93699688679226,
+   "weight": 11.502582741639689,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1636.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.854993337232684,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 77.67989339572294,
+   "sigma_DF_x_part": 30.15063882631449,
+   "sigma_DF": 83.32602750405027,
+   "weight": 12.001052131657092,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1636.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.97051167102944,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 79.52818673647104,
+   "sigma_DF_x_part": 26.743187789694726,
+   "sigma_DF": 83.90429416153792,
+   "weight": 11.918341128938359,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1716.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 11.290313791913404,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 180.64502067061446,
+   "sigma_DF_x_part": 260.24313862489714,
+   "sigma_DF": 316.79506734547516,
+   "weight": 3.15661480584061,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1708.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 11.063854212475869,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 177.0216673996139,
+   "sigma_DF_x_part": 162.4550420752462,
+   "sigma_DF": 240.2671667636041,
+   "weight": 4.162033512401999,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1701.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 10.721473412954523,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 171.54357460727238,
+   "sigma_DF_x_part": 106.1259058704541,
+   "sigma_DF": 201.7173911338963,
+   "weight": 4.9574307618137805,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1697.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 10.46027831820073,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 167.3644530912117,
+   "sigma_DF_x_part": 51.00560936263026,
+   "sigma_DF": 174.9640887295837,
+   "weight": 5.715458567875338,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.980525255377813,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 159.688404086045,
+   "sigma_DF_x_part": 64.98253749912907,
+   "sigma_DF": 172.40393435004236,
+   "weight": 5.800331667429574,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1683.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.956630980177666,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 159.30609568284265,
+   "sigma_DF_x_part": 53.532781387196266,
+   "sigma_DF": 168.06008093762293,
+   "weight": 5.950252995362768,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1669.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.465297324525167,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 151.44475719240268,
+   "sigma_DF_x_part": 45.080593397152334,
+   "sigma_DF": 158.01194379573076,
+   "weight": 6.328635519431022,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 7,
+   "T": 1660.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 9.167516000267346,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 146.68025600427754,
+   "sigma_DF_x_part": 19.614323424325157,
+   "sigma_DF": 147.98587495053175,
+   "weight": 6.7574016799527445,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 8,
+   "T": 1650.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.883200104167912,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 142.1312016666866,
+   "sigma_DF_x_part": 1.2267118050661778,
+   "sigma_DF": 142.1364953453863,
+   "weight": 7.035490762383285,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 9,
+   "T": 1629.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.407932161319309,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 134.52691458110894,
+   "sigma_DF_x_part": 19.560878936322077,
+   "sigma_DF": 135.94160044472932,
+   "weight": 7.356099948275779,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 10,
+   "T": 1625.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.335673364177444,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 133.3707738268391,
+   "sigma_DF_x_part": 28.512469056301562,
+   "sigma_DF": 136.38447200050462,
+   "weight": 7.332213010263368,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 11,
+   "T": 1622.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.274391100310652,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.39025760497043,
+   "sigma_DF_x_part": 31.025208008948127,
+   "sigma_DF": 135.97699746909007,
+   "weight": 7.354185035798554,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 12,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.312413587805715,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.99861740489143,
+   "sigma_DF_x_part": 40.62665280799581,
+   "sigma_DF": 139.0652981516026,
+   "weight": 7.190866544649017,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick",
+    "LIQUID+FCC_A1 field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 13,
+   "T": 1619.15,
+   "phases": [
+    "LIQUID",
+    "FCC_A1"
+   ],
+   "dS": 8.223070062419902,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 131.56912099871843,
+   "sigma_DF_x_part": 34.19119122555299,
+   "sigma_DF": 135.93921861551854,
+   "weight": 7.3562288365680075,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 14,
+   "T": 1618.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 5.352481419656622,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 85.63970271450596,
+   "sigma_DF_x_part": 37.397679412008436,
+   "sigma_DF": 93.44915786903763,
+   "weight": 10.701006010149701,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick",
+    "LIQUID+BCC_A2 field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 15,
+   "T": 1627.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 5.463238373936726,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 87.41181398298761,
+   "sigma_DF_x_part": 40.78377736733261,
+   "sigma_DF": 96.45797903825571,
+   "weight": 10.367208705496463,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 16,
+   "T": 1636.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 5.696710663871287,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 91.1473706219406,
+   "sigma_DF_x_part": 46.913750760733194,
+   "sigma_DF": 102.51216114068416,
+   "weight": 9.754940183415258,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 17,
+   "T": 1670.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.648221521074376,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 106.37154433719002,
+   "sigma_DF_x_part": 97.02833743845699,
+   "sigma_DF": 143.9770943961221,
+   "weight": 6.945549249998853,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 18,
+   "T": 1684.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.937315811982979,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 110.99705299172767,
+   "sigma_DF_x_part": 95.56735848602614,
+   "sigma_DF": 146.47001666158516,
+   "weight": 6.827335879332026,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 19,
+   "T": 1748.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.156831696533168,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 130.50930714453068,
+   "sigma_DF_x_part": 130.2595092449624,
+   "sigma_DF": 184.39148299225724,
+   "weight": 5.4232439794520815,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 20,
+   "T": 1792.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.576185932556157,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 137.21897492089852,
+   "sigma_DF_x_part": 126.83897778336424,
+   "sigma_DF": 186.86137472327164,
+   "weight": 5.351560757170542,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 21,
+   "T": 1808.15,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.773550836581876,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.37681338531002,
+   "sigma_DF_x_part": 137.0486008382006,
+   "sigma_DF": 196.18350778779185,
+   "weight": 5.097268426261813,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 22,
+   "T": 1703.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 10.295438373219397,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 164.72701397151036,
+   "sigma_DF_x_part": 631.4130615437103,
+   "sigma_DF": 652.5468898247631,
+   "weight": 1.5324569246947803,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 23,
+   "T": 1706.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 10.673656709938475,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 170.7785073590156,
+   "sigma_DF_x_part": 221.44121413153104,
+   "sigma_DF": 279.64532875022235,
+   "weight": 3.5759581769849422,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 24,
+   "T": 1683.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.675198883649763,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 154.8031821383962,
+   "sigma_DF_x_part": 272.31834969503853,
+   "sigma_DF": 313.24321027087365,
+   "weight": 3.192407583664019,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 25,
+   "T": 1680.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.495612697005669,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 151.9298031520907,
+   "sigma_DF_x_part": 178.21645352527693,
+   "sigma_DF": 234.18746634472183,
+   "weight": 4.2700833465101375,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 26,
+   "T": 1655.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.404220843053778,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 134.46753348886045,
+   "sigma_DF_x_part": 210.83087744195927,
+   "sigma_DF": 250.06234511722124,
+   "weight": 3.999002726824912,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 27,
+   "T": 1674.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 9.213015529278753,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 147.40824846846004,
+   "sigma_DF_x_part": 126.81876297650031,
+   "sigma_DF": 194.45356864667983,
+   "weight": 5.142615828341983,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 28,
+   "T": 1659.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.60539428093027,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 137.68630849488432,
+   "sigma_DF_x_part": 115.17356393550882,
+   "sigma_DF": 179.50618200094166,
+   "weight": 5.570838780330998,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 29,
+   "T": 1647.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.237257025153164,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 131.79611240245063,
+   "sigma_DF_x_part": 91.67351909565892,
+   "sigma_DF": 160.54360575177554,
+   "weight": 6.228837301350698,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 30,
+   "T": 1628.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 7.726772289829853,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 123.62835663727765,
+   "sigma_DF_x_part": 84.73390220899132,
+   "sigma_DF": 149.87930060017231,
+   "weight": 6.672035404459649,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 31,
+   "T": 1634.15,
+   "phases": [
+    "FCC_A1",
+    "LIQUID"
+   ],
+   "dS": 8.023948610955728,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 128.38317777529164,
+   "sigma_DF_x_part": 26.909345389873575,
+   "sigma_DF": 131.172989616741,
+   "weight": 7.623520687618563,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 32,
+   "T": 1625.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.0867676305906,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 33.3882820894496,
+   "sigma_DF_x_part": 67.10143202146013,
+   "sigma_DF": 74.94917985018446,
+   "weight": 13.342374152711143,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick",
+    "FCC_A1+BCC_A2 field taken at 1615 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 33,
+   "T": 1602.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 1.9089614921688753,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 30.543383874702005,
+   "sigma_DF_x_part": 60.696070295927086,
+   "sigma_DF": 67.94785683070165,
+   "weight": 14.717167643588702,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 34,
+   "T": 1612.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.133138476551539,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 34.13021562482462,
+   "sigma_DF_x_part": 44.30431338309429,
+   "sigma_DF": 55.92623537253738,
+   "weight": 17.880695765391188,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 35,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.517695105362061,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 56.28312168579298,
+   "sigma_DF_x_part": 28.886805092049162,
+   "sigma_DF": 63.26323810179034,
+   "weight": 15.8069683121658,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 36,
+   "T": 1616.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.6037865503829885,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 57.660584806127815,
+   "sigma_DF_x_part": 35.15158692365901,
+   "sigma_DF": 67.53056421677678,
+   "weight": 14.808109655206577,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 37,
+   "T": 1617.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.017473085054594,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 80.27956936087351,
+   "sigma_DF_x_part": 15.815039782322701,
+   "sigma_DF": 81.82251976127202,
+   "weight": 12.221574242856756,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick",
+    "BCC_A2+LIQUID field taken at 1622 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 38,
+   "T": 1618.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.933595627242706,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 78.9375300358833,
+   "sigma_DF_x_part": 23.749634984905335,
+   "sigma_DF": 82.43287457126688,
+   "weight": 12.131082474085694,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick",
+    "BCC_A2+LIQUID field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 39,
+   "T": 1613.15,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 4.840957165003264,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 77.45531464005222,
+   "sigma_DF_x_part": 27.626255327783575,
+   "sigma_DF": 82.23463837961093,
+   "weight": 12.160325863948078,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick",
+    "BCC_A2+LIQUID field taken at 1623 K"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 40,
+   "T": 1611.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.34889291822023,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 69.58228669152368,
+   "sigma_DF_x_part": 49.25771279669054,
+   "sigma_DF": 85.25266500926902,
+   "weight": 11.729838590867228,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 41,
+   "T": 1615.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.6209866189917,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 73.9357859038672,
+   "sigma_DF_x_part": 51.60855533808522,
+   "sigma_DF": 90.1661988846524,
+   "weight": 11.09063055080405,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 0,
+   "T": 2055.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.611411326648813,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 153.782581226381,
+   "sigma_DF_x_part": 123.71475171651167,
+   "sigma_DF": 197.36874646439492,
+   "weight": 5.066658312998906,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 1,
+   "T": 1985.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.600790570840417,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 153.61264913344667,
+   "sigma_DF_x_part": 143.2946192326515,
+   "sigma_DF": 210.0718778771351,
+   "weight": 4.760275435748095,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 2,
+   "T": 1934.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.552626115828032,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 152.8420178532485,
+   "sigma_DF_x_part": 154.74860303223744,
+   "sigma_DF": 217.50359206661793,
+   "weight": 4.5976252185008315,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 3,
+   "T": 1815.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 9.025885711174327,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 144.41417137878923,
+   "sigma_DF_x_part": 164.43071540298342,
+   "sigma_DF": 218.84449516256797,
+   "weight": 4.569454668060776,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 4,
+   "T": 1782.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.700731744907554,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 139.21170791852086,
+   "sigma_DF_x_part": 158.78955890660876,
+   "sigma_DF": 211.17297090145541,
+   "weight": 4.735454522097212,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 5,
+   "T": 1747.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 8.257239804589958,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 132.11583687343932,
+   "sigma_DF_x_part": 147.59111734265605,
+   "sigma_DF": 198.08516418758597,
+   "weight": 5.048333650333365,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 6,
+   "T": 1725.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 7.920929858161571,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 126.73487773058514,
+   "sigma_DF_x_part": 142.97132038679402,
+   "sigma_DF": 191.05634688889472,
+   "weight": 5.234057995369981,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 7,
+   "T": 1703.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 7.501969389449405,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 120.03151023119048,
+   "sigma_DF_x_part": 133.47138505005114,
+   "sigma_DF": 179.5053594619375,
+   "weight": 5.570864307324713,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 8,
+   "T": 1682.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.98104695125573,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 111.69675122009168,
+   "sigma_DF_x_part": 113.1857894671709,
+   "sigma_DF": 159.01945532050405,
+   "weight": 6.288538707320421,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 9,
+   "T": 1660.0,
+   "phases": [
+    "LIQUID",
+    "BCC_A2"
+   ],
+   "dS": 6.445159678015031,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 103.1225548482405,
+   "sigma_DF_x_part": 101.60838019512504,
+   "sigma_DF": 144.77059177991035,
+   "weight": 6.907480225820068,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 10,
+   "T": 1650.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.285051998412015,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 84.56083197459223,
+   "sigma_DF_x_part": 14.146932400766163,
+   "sigma_DF": 85.73604843114165,
+   "weight": 11.663705270988125,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 11,
+   "T": 1669.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.410957335389491,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 86.57531736623186,
+   "sigma_DF_x_part": 14.714837832437835,
+   "sigma_DF": 87.81692336616395,
+   "weight": 11.387326743734478,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 12,
+   "T": 1767.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 5.872135702642916,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 93.95417124228666,
+   "sigma_DF_x_part": 28.069095142812763,
+   "sigma_DF": 98.05743416978235,
+   "weight": 10.198104901139283,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 13,
+   "T": 1822.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 6.040434171869187,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 96.64694674990699,
+   "sigma_DF_x_part": 50.72587862257838,
+   "sigma_DF": 109.15011258863598,
+   "weight": 9.16169462663581,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "liq/zpf_single_CR-NI-ZPF-BCC_A2-LIQUID-svechnikov1962characteristics.json",
+   "row": 14,
+   "T": 1940.0,
+   "phases": [
+    "BCC_A2",
+    "LIQUID"
+   ],
+   "dS": 6.781431686172172,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 108.50290697875475,
+   "sigma_DF_x_part": 133.12708496813835,
+   "sigma_DF": 171.74312671823066,
+   "weight": 5.822649319996626,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner LIQUID from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1599.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.7456335280789315,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 59.9301364492629,
+   "sigma_DF_x_part": 40.709327951005015,
+   "sigma_DF": 72.4490899670227,
+   "weight": 13.802795873007915,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1584.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.7897937957420096,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 60.63670073187215,
+   "sigma_DF_x_part": 40.48685866292527,
+   "sigma_DF": 72.91087161760112,
+   "weight": 13.715375743205271,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1573.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.90313906666283,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 62.45022506660528,
+   "sigma_DF_x_part": 40.75506469909962,
+   "sigma_DF": 74.57215237270177,
+   "weight": 13.409831528023117,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1547.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.847288639040375,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 61.556618224646,
+   "sigma_DF_x_part": 37.50038125169864,
+   "sigma_DF": 72.079788021869,
+   "weight": 13.873514718114876,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1537.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.9882055035540844,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 63.81128805686535,
+   "sigma_DF_x_part": 37.098883447478315,
+   "sigma_DF": 73.81197488569065,
+   "weight": 13.547937195132036,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1522.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.0964470508334125,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 65.5431528133346,
+   "sigma_DF_x_part": 35.62483518913902,
+   "sigma_DF": 74.599153902477,
+   "weight": 13.404977773706303,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 6,
+   "T": 1511.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.197812936613782,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 67.16500698582051,
+   "sigma_DF_x_part": 34.31806788411903,
+   "sigma_DF": 75.42458449805554,
+   "weight": 13.258276550741625,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 7,
+   "T": 1496.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.374653230018482,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 69.99445168029571,
+   "sigma_DF_x_part": 32.336542738589294,
+   "sigma_DF": 77.10301720626673,
+   "weight": 12.969661061703857,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 8,
+   "T": 1486.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.576206863925195,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 73.21930982280313,
+   "sigma_DF_x_part": 30.730292379455435,
+   "sigma_DF": 79.40666345247388,
+   "weight": 12.593401567596597,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 9,
+   "T": 1470.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.897379648232312,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 78.358074371717,
+   "sigma_DF_x_part": 28.040126345398185,
+   "sigma_DF": 83.22401399061106,
+   "weight": 12.015762663319933,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 10,
+   "T": 1462.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.1990738842351,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 83.1851821477616,
+   "sigma_DF_x_part": 26.83304859602368,
+   "sigma_DF": 87.40587523681027,
+   "weight": 11.440878514066503,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 11,
+   "T": 1447.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.5305332002432985,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 88.48853120389278,
+   "sigma_DF_x_part": 24.838139922945647,
+   "sigma_DF": 91.90839651225633,
+   "weight": 10.880398722511128,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 12,
+   "T": 1437.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.916134155558087,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 94.65814648892939,
+   "sigma_DF_x_part": 24.74585101940284,
+   "sigma_DF": 97.83926532529819,
+   "weight": 10.22084534951461,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 13,
+   "T": 1434.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 6.597573843799282,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 105.5611815007885,
+   "sigma_DF_x_part": 32.749937401781246,
+   "sigma_DF": 110.52475487266643,
+   "weight": 9.047746825153169,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 14,
+   "T": 1421.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 7.053393884383796,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 112.85430215014074,
+   "sigma_DF_x_part": 37.48763941064294,
+   "sigma_DF": 118.91768843354487,
+   "weight": 8.409177921069606,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 15,
+   "T": 1398.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 7.669894810806841,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 122.71831697290946,
+   "sigma_DF_x_part": 42.670523951440984,
+   "sigma_DF": 129.92520515648215,
+   "weight": 7.696735970480849,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 16,
+   "T": 1595.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 1.700224842941348,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 27.203597487061568,
+   "sigma_DF_x_part": 79.34759411967434,
+   "sigma_DF": 83.88132336115495,
+   "weight": 11.921604952445174,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 17,
+   "T": 1521.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.11342319275883028,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 1.8147710841412845,
+   "sigma_DF_x_part": 137.64430984595793,
+   "sigma_DF": 137.65627274867612,
+   "weight": 7.264470990186805,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1073.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.054881171203702,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 208.87809873925923,
+   "sigma_DF_x_part": 454.95706018087446,
+   "sigma_DF": 500.615607768427,
+   "weight": 1.9975405969814997,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1173.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.063825156028985,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 193.02120249646376,
+   "sigma_DF_x_part": 436.75020339539736,
+   "sigma_DF": 477.50175369217425,
+   "weight": 2.094233146303079,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1273.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.01920456163406,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 160.30727298614497,
+   "sigma_DF_x_part": 350.85263357136836,
+   "sigma_DF": 385.740835608857,
+   "weight": 2.5924141487939445,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1373.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.676111267444351,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 122.81778027910961,
+   "sigma_DF_x_part": 315.54263813272865,
+   "sigma_DF": 338.6020726936706,
+   "weight": 2.9533191927761426,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1548.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.5971531111215569,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 9.55444977794491,
+   "sigma_DF_x_part": 121.27629000405194,
+   "sigma_DF": 121.65206955784262,
+   "weight": 8.220164306572064,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 0,
+   "T": 1025.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.531926866050279,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.51082985680446,
+   "sigma_DF_x_part": 480.1749332749595,
+   "sigma_DF": 526.7303921275987,
+   "weight": 1.898504462521603,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 1,
+   "T": 1073.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.113997755895321,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 209.82396409432513,
+   "sigma_DF_x_part": 464.8742984527835,
+   "sigma_DF": 510.0335373975169,
+   "weight": 1.960655381806013,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 2,
+   "T": 1123.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.535658185038642,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 200.57053096061827,
+   "sigma_DF_x_part": 439.821550662697,
+   "sigma_DF": 483.39583605691485,
+   "weight": 2.0686980015323515,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 3,
+   "T": 1174.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.943105171675136,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 191.08968274680217,
+   "sigma_DF_x_part": 420.7624575386052,
+   "sigma_DF": 462.1215343675298,
+   "weight": 2.1639329172760213,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 4,
+   "T": 1219.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.11137276614972,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 177.78196425839553,
+   "sigma_DF_x_part": 384.3474769987488,
+   "sigma_DF": 423.47303325108805,
+   "weight": 2.3614254544682525,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 5,
+   "T": 1274.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.011872185268238,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 160.18995496429181,
+   "sigma_DF_x_part": 353.45296635613124,
+   "sigma_DF": 388.0590433135276,
+   "weight": 2.576927447589624,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 6,
+   "T": 1323.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.91701015969447,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 142.67216255511153,
+   "sigma_DF_x_part": 330.2985711853399,
+   "sigma_DF": 359.7950695816011,
+   "weight": 2.7793599316490942,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 7,
+   "T": 1371.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.614955395280575,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 121.8392863244892,
+   "sigma_DF_x_part": 308.52980776405707,
+   "sigma_DF": 331.71592360178744,
+   "weight": 3.0146276643639895,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 8,
+   "T": 1424.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.395448247841962,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 86.3271719654714,
+   "sigma_DF_x_part": 262.92913042276604,
+   "sigma_DF": 276.7383389493187,
+   "weight": 3.6135217252392993,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 9,
+   "T": 1469.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.618336309812868,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 41.89338095700589,
+   "sigma_DF_x_part": 208.44893275866565,
+   "sigma_DF": 212.6170570209162,
+   "weight": 4.703291513914732,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 10,
+   "T": 1525.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.022610529337292462,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 0.3617684693966794,
+   "sigma_DF_x_part": 132.745297784306,
+   "sigma_DF": 132.74579074407416,
+   "weight": 7.5331955491375195,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 11,
+   "T": 1473.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.717416789911496,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 75.47866863858394,
+   "sigma_DF_x_part": 28.77547118260461,
+   "sigma_DF": 80.777825925399,
+   "weight": 12.379634987001669,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 12,
+   "T": 1424.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.954152352506611,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 95.26643764010578,
+   "sigma_DF_x_part": 21.689107912248122,
+   "sigma_DF": 97.70420432440616,
+   "weight": 10.234974092616438,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 13,
+   "T": 1374.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 8.849205312190078,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 141.58728499504124,
+   "sigma_DF_x_part": 73.64248654050049,
+   "sigma_DF": 159.5937815083496,
+   "weight": 6.2659082988623975,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 14,
+   "T": 1323.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 11.82400876248208,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 189.18414019971328,
+   "sigma_DF_x_part": 247.3143100607417,
+   "sigma_DF": 311.37598954306907,
+   "weight": 3.211551415597128,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 15,
+   "T": 1273.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 13.594229676784572,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 217.50767482855315,
+   "sigma_DF_x_part": 366.28666180474914,
+   "sigma_DF": 425.9994216256523,
+   "weight": 2.347421027436867,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 16,
+   "T": 1225.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.22222337161376,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 275.5555739458202,
+   "sigma_DF_x_part": 959.0057652386103,
+   "sigma_DF": 997.8090659507474,
+   "weight": 1.0021957447812573,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 17,
+   "T": 1171.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 18.890056413355754,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 302.24090261369207,
+   "sigma_DF_x_part": 1133.1759962592168,
+   "sigma_DF": 1172.7904338417875,
+   "weight": 0.8526672550732134,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 18,
+   "T": 1123.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 21.835944421847593,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 349.3751107495615,
+   "sigma_DF_x_part": 1913.1377477035358,
+   "sigma_DF": 1944.7773676437687,
+   "weight": 0.5141976745706213,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 19,
+   "T": 1071.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 23.91388390005489,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 382.62214240087826,
+   "sigma_DF_x_part": 2375.6541026741897,
+   "sigma_DF": 2406.269336422701,
+   "weight": 0.41558107600982763,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 20,
+   "T": 1023.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.133936380585048,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 418.14298208936077,
+   "sigma_DF_x_part": 3095.1345465437416,
+   "sigma_DF": 3123.251737321076,
+   "weight": 0.32017912230723217,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 0,
+   "T": 1556.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.821820092935924,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 61.149121486974785,
+   "sigma_DF_x_part": 38.22177151742769,
+   "sigma_DF": 72.11184976520327,
+   "weight": 13.867346396688028,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 1,
+   "T": 1512.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.0196345204823665,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 64.31415232771786,
+   "sigma_DF_x_part": 34.3826431960603,
+   "sigma_DF": 72.92788453520703,
+   "weight": 13.712176163799665,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 2,
+   "T": 1481.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.340821234431303,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 69.45313975090085,
+   "sigma_DF_x_part": 30.54112697719338,
+   "sigma_DF": 75.87159585968396,
+   "weight": 13.180162993399904,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 3,
+   "T": 1403.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 6.511442706660974,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 104.18308330657558,
+   "sigma_DF_x_part": 20.480339121427242,
+   "sigma_DF": 106.17701793605588,
+   "weight": 9.418233996760398,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 4,
+   "T": 1347.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.520284438677539,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 168.32455101884062,
+   "sigma_DF_x_part": 157.66855726480884,
+   "sigma_DF": 230.6350546332031,
+   "weight": 4.33585432878093,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1515.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.310602406539104,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 4.969638504625664,
+   "sigma_DF_x_part": 143.86615937404247,
+   "sigma_DF": 143.95196810014113,
+   "weight": 6.946761570528466,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1507.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.6847431679314772,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 10.955890686903635,
+   "sigma_DF_x_part": 159.10663057975873,
+   "sigma_DF": 159.48338921400935,
+   "weight": 6.270245477778936,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1403.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 6.350827168165918,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 101.61323469065469,
+   "sigma_DF_x_part": 279.2252686486496,
+   "sigma_DF": 297.13969798094735,
+   "weight": 3.3654203958439783,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1322.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.363534743952144,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 165.8165559032343,
+   "sigma_DF_x_part": 109.23571485642223,
+   "sigma_DF": 198.56377215344196,
+   "weight": 5.0361654049724685,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1404.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 9.311946021716253,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 148.99113634746004,
+   "sigma_DF_x_part": 135.41068710182248,
+   "sigma_DF": 201.33159933675364,
+   "weight": 4.966930195231639,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1487.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.630505299976364,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 74.08808479962183,
+   "sigma_DF_x_part": 30.806854649570106,
+   "sigma_DF": 80.23781279842873,
+   "weight": 12.462951881704116,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1496.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.433320315521214,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 70.93312504833942,
+   "sigma_DF_x_part": 32.25158978482294,
+   "sigma_DF": 77.92094245305208,
+   "weight": 12.833520341498785,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 29.94641947382081,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 479.14271158113297,
+   "sigma_DF_x_part": 2227.2553984320402,
+   "sigma_DF": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 29.94641947382081,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 479.14271158113297,
+   "sigma_DF_x_part": 2227.2553984320402,
+   "sigma_DF": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 2,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.576379806483054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 425.22207690372886,
+   "sigma_DF_x_part": 2286.5393855260027,
+   "sigma_DF": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 3,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.576379806483054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 425.22207690372886,
+   "sigma_DF_x_part": 2286.5393855260027,
+   "sigma_DF": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 4,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 24.155892645607885,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 386.49428232972616,
+   "sigma_DF_x_part": 1864.6080912935072,
+   "sigma_DF": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 5,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 24.155892645607885,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 386.49428232972616,
+   "sigma_DF_x_part": 1864.6080912935072,
+   "sigma_DF": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 6,
+   "T": 1128.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 20.901717359856473,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 334.42747775770357,
+   "sigma_DF_x_part": 1537.3561061421728,
+   "sigma_DF": 1573.310374647038,
+   "weight": 0.6356024952955284,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 7,
+   "T": 1143.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 21.054933031101633,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 336.87892849762613,
+   "sigma_DF_x_part": 1734.5799360519075,
+   "sigma_DF": 1766.990369815169,
+   "weight": 0.5659340407749942,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 8,
+   "T": 1165.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.682562107834265,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 282.92099372534824,
+   "sigma_DF_x_part": 739.3268515120205,
+   "sigma_DF": 791.6113200663667,
+   "weight": 1.2632462101680941,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 9,
+   "T": 1223.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 16.212086131164995,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 259.3933780986399,
+   "sigma_DF_x_part": 676.9193198531478,
+   "sigma_DF": 724.9170229701275,
+   "weight": 1.3794682264499782,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 10,
+   "T": 1252.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 14.774373230935641,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 236.38997169497026,
+   "sigma_DF_x_part": 493.32969826364416,
+   "sigma_DF": 547.0415065667751,
+   "weight": 1.8280148544412766,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 11,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.730084577095973,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 203.68135323353556,
+   "sigma_DF_x_part": 319.10435124492614,
+   "sigma_DF": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 12,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.730084577095973,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 203.68135323353556,
+   "sigma_DF_x_part": 319.10435124492614,
+   "sigma_DF": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 13,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.938002212047508,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 207.00803539276012,
+   "sigma_DF_x_part": 349.3645825328512,
+   "sigma_DF": 406.08858423442985,
+   "weight": 2.462516896123119,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 14,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.561695454988836,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 168.98712727982138,
+   "sigma_DF_x_part": 224.87952809604928,
+   "sigma_DF": 281.2960208445693,
+   "weight": 3.5549738563580755,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 15,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.457436676177934,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 167.31898681884695,
+   "sigma_DF_x_part": 213.60480173024058,
+   "sigma_DF": 271.33494922752004,
+   "weight": 3.685481737044788,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.609963821512356,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 233.7594211441977,
+   "sigma_DF_x_part": 520.6261530377799,
+   "sigma_DF": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.600215276099132,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 233.6034444175861,
+   "sigma_DF_x_part": 517.8499072827667,
+   "sigma_DF": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 18,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.519373319952484,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.30997311923974,
+   "sigma_DF_x_part": 405.9852177132583,
+   "sigma_DF": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 19,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.519373319952484,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.30997311923974,
+   "sigma_DF_x_part": 405.9852177132583,
+   "sigma_DF": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 20,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.878603907275481,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 206.0576625164077,
+   "sigma_DF_x_part": 380.8879218396144,
+   "sigma_DF": 433.0535408988431,
+   "weight": 2.309183289263509,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 21,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.862140687099947,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.79425099359915,
+   "sigma_DF_x_part": 378.91074774023923,
+   "sigma_DF": 431.18978245673185,
+   "weight": 2.319164415961888,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 22,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.785922398724415,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.57475837959063,
+   "sigma_DF_x_part": 266.20226793850736,
+   "sigma_DF": 301.0397152355236,
+   "weight": 3.3218208408735466,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 23,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.764379909593297,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.23007855349275,
+   "sigma_DF_x_part": 265.0040859172782,
+   "sigma_DF": 299.8193464137545,
+   "weight": 3.3353418048613426,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 24,
+   "T": 1302.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.78617550130266,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.57880802084256,
+   "sigma_DF_x_part": 294.7905604184944,
+   "sigma_DF": 326.5943596824827,
+   "weight": 3.0619022354587107,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 25,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 6.1070544295622025,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 97.71287087299524,
+   "sigma_DF_x_part": 223.25931724874016,
+   "sigma_DF": 243.70582240196117,
+   "weight": 4.103307791927226,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 26,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.649604286895155,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 90.39366859032248,
+   "sigma_DF_x_part": 215.60081683860716,
+   "sigma_DF": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 27,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.649604286895155,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 90.39366859032248,
+   "sigma_DF_x_part": 215.60081683860716,
+   "sigma_DF": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.70136149133247,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 235.22178386131952,
+   "sigma_DF_x_part": 574.1323732951719,
+   "sigma_DF": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.48495865227008,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 231.7593384363213,
+   "sigma_DF_x_part": 546.9593698563153,
+   "sigma_DF": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 2,
+   "T": 975.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.75620344755138,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 220.09925516082208,
+   "sigma_DF_x_part": 476.67560296786365,
+   "sigma_DF": 525.0364869103147,
+   "weight": 1.9046295351485112,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 3,
+   "T": 1077.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.819128389621532,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.10605423394452,
+   "sigma_DF_x_part": 426.9406331005515,
+   "sigma_DF": 473.65261286698035,
+   "weight": 2.111251944641627,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 4,
+   "T": 1070.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.870783107043685,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.93252971269897,
+   "sigma_DF_x_part": 426.44596353308765,
+   "sigma_DF": 473.5655884959708,
+   "weight": 2.111639917030222,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 5,
+   "T": 1175.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.55001943588744,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 184.80031097419905,
+   "sigma_DF_x_part": 380.34026457014875,
+   "sigma_DF": 422.85916306667804,
+   "weight": 2.3648535667236237,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 6,
+   "T": 1230.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.755396978800853,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 172.08635166081365,
+   "sigma_DF_x_part": 362.79778800177866,
+   "sigma_DF": 401.5419621993606,
+   "weight": 2.4903997443323553,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 0,
+   "T": 1473.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.4679008372616664,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 39.48641339618666,
+   "sigma_DF_x_part": 209.9688860035265,
+   "sigma_DF": 213.64950253266787,
+   "weight": 4.680563203497728,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 1,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.323187603069158,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 117.17100164910653,
+   "sigma_DF_x_part": 290.56293585460514,
+   "sigma_DF": 313.29836150210286,
+   "weight": 3.1918456107000357,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 2,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 9.841359060027054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 157.46174496043287,
+   "sigma_DF_x_part": 336.1704756506528,
+   "sigma_DF": 371.2206753740564,
+   "weight": 2.6938154751007906,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 3,
+   "T": 1173.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.74566451182289,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 187.93063218916623,
+   "sigma_DF_x_part": 396.8169119983601,
+   "sigma_DF": 439.0689970413921,
+   "weight": 2.2775463691091073,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 4,
+   "T": 1023.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.572994911342622,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 217.16791858148196,
+   "sigma_DF_x_part": 488.0279217488819,
+   "sigma_DF": 534.1658518358751,
+   "weight": 1.872077738708117,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 5,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 9.235250522465808,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 147.76400835945293,
+   "sigma_DF_x_part": 95.25857434297058,
+   "sigma_DF": 175.807844399241,
+   "weight": 5.688028332394008,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 6,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.760261899148393,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 204.1641903863743,
+   "sigma_DF_x_part": 251.40696799885595,
+   "sigma_DF": 323.86491040941974,
+   "weight": 3.087707151527567,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 7,
+   "T": 1173.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.982157828627745,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 287.7145252580439,
+   "sigma_DF_x_part": 859.8339933400704,
+   "sigma_DF": 906.6940741769484,
+   "weight": 1.1029078368111649,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 8,
+   "T": 1023.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.505487173028413,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 424.0877947684546,
+   "sigma_DF_x_part": 3371.638668623968,
+   "sigma_DF": 3398.205080543547,
+   "weight": 0.29427299892096237,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CR-NI-ZPF-BCC_A2-FCC_A1-zhang2014impurity.json",
+   "row": 0,
+   "T": 1473.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 1.0263802266334068,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 16.42208362613451,
+   "sigma_DF_x_part": 99.37138054376564,
+   "sigma_DF": 100.719194306734,
+   "weight": 9.928594116376296,
+   "floor_active": false,
+   "notes": []
+  },
+  {
+   "file": "solid/zpf_CRNI2_ordering_ORC-X3KVP7D3PO.json",
+   "row": 0,
+   "T": 863.0,
+   "phases": [
+    "CRNI2",
+    "FCC_A1"
+   ],
+   "dS": 11.937600595616267,
+   "sigma_T": 16.0,
+   "sigma_x": 0.0,
+   "sigma_DF_T_part": 191.00160952986027,
+   "sigma_DF_x_part": 0.0,
+   "sigma_DF": 191.00160952986027,
+   "weight": 5.235557974937718,
+   "floor_active": false,
+   "notes": [
+    "CRNI2+FCC_A1 field taken at 778 K"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1599.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.7456335280789315,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 59.9301364492629,
+   "sigma_DF_x_part": 40.709327951005015,
+   "sigma_DF": 72.4490899670227,
+   "weight": 13.802795873007915,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1584.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.7897937957420096,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 60.63670073187215,
+   "sigma_DF_x_part": 40.48685866292527,
+   "sigma_DF": 72.91087161760112,
+   "weight": 13.715375743205271,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1573.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.90313906666283,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 62.45022506660528,
+   "sigma_DF_x_part": 40.75506469909962,
+   "sigma_DF": 74.57215237270177,
+   "weight": 13.409831528023117,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1547.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.847288639040375,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 61.556618224646,
+   "sigma_DF_x_part": 37.50038125169864,
+   "sigma_DF": 72.079788021869,
+   "weight": 13.873514718114876,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1537.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.9882055035540844,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 63.81128805686535,
+   "sigma_DF_x_part": 37.098883447478315,
+   "sigma_DF": 73.81197488569065,
+   "weight": 13.547937195132036,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 5,
+   "T": 1522.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.0964470508334125,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 65.5431528133346,
+   "sigma_DF_x_part": 35.62483518913902,
+   "sigma_DF": 74.599153902477,
+   "weight": 13.404977773706303,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 6,
+   "T": 1511.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.197812936613782,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 67.16500698582051,
+   "sigma_DF_x_part": 34.31806788411903,
+   "sigma_DF": 75.42458449805554,
+   "weight": 13.258276550741625,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 7,
+   "T": 1496.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.374653230018482,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 69.99445168029571,
+   "sigma_DF_x_part": 32.336542738589294,
+   "sigma_DF": 77.10301720626673,
+   "weight": 12.969661061703857,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 8,
+   "T": 1486.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.576206863925195,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 73.21930982280313,
+   "sigma_DF_x_part": 30.730292379455435,
+   "sigma_DF": 79.40666345247388,
+   "weight": 12.593401567596597,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 9,
+   "T": 1470.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.897379648232312,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 78.358074371717,
+   "sigma_DF_x_part": 28.040126345398185,
+   "sigma_DF": 83.22401399061106,
+   "weight": 12.015762663319933,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 10,
+   "T": 1462.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.1990738842351,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 83.1851821477616,
+   "sigma_DF_x_part": 26.83304859602368,
+   "sigma_DF": 87.40587523681027,
+   "weight": 11.440878514066503,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 11,
+   "T": 1447.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.5305332002432985,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 88.48853120389278,
+   "sigma_DF_x_part": 24.838139922945647,
+   "sigma_DF": 91.90839651225633,
+   "weight": 10.880398722511128,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 12,
+   "T": 1437.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.916134155558087,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 94.65814648892939,
+   "sigma_DF_x_part": 24.74585101940284,
+   "sigma_DF": 97.83926532529819,
+   "weight": 10.22084534951461,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 13,
+   "T": 1434.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 6.597573843799282,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 105.5611815007885,
+   "sigma_DF_x_part": 32.749937401781246,
+   "sigma_DF": 110.52475487266643,
+   "weight": 9.047746825153169,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 14,
+   "T": 1421.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 7.053393884383796,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 112.85430215014074,
+   "sigma_DF_x_part": 37.48763941064294,
+   "sigma_DF": 118.91768843354487,
+   "weight": 8.409177921069606,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 15,
+   "T": 1398.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 7.669894810806841,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 122.71831697290946,
+   "sigma_DF_x_part": 42.670523951440984,
+   "sigma_DF": 129.92520515648215,
+   "weight": 7.696735970480849,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 16,
+   "T": 1595.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 1.700224842941348,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 27.203597487061568,
+   "sigma_DF_x_part": 79.34759411967434,
+   "sigma_DF": 83.88132336115495,
+   "weight": 11.921604952445174,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-LIQUID-bechtoldt1961redetermination.json",
+   "row": 17,
+   "T": 1521.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.11342319275883028,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 1.8147710841412845,
+   "sigma_DF_x_part": 137.64430984595793,
+   "sigma_DF": 137.65627274867612,
+   "weight": 7.264470990186805,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 0,
+   "T": 1073.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.054881171203702,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 208.87809873925923,
+   "sigma_DF_x_part": 454.95706018087446,
+   "sigma_DF": 500.615607768427,
+   "weight": 1.9975405969814997,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 1,
+   "T": 1173.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.063825156028985,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 193.02120249646376,
+   "sigma_DF_x_part": 436.75020339539736,
+   "sigma_DF": 477.50175369217425,
+   "weight": 2.094233146303079,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 2,
+   "T": 1273.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.01920456163406,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 160.30727298614497,
+   "sigma_DF_x_part": 350.85263357136836,
+   "sigma_DF": 385.740835608857,
+   "weight": 2.5924141487939445,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 3,
+   "T": 1373.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.676111267444351,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 122.81778027910961,
+   "sigma_DF_x_part": 315.54263813272865,
+   "sigma_DF": 338.6020726936706,
+   "weight": 2.9533191927761426,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-bechtoldt1961redetermination.json",
+   "row": 4,
+   "T": 1548.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.5971531111215569,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 9.55444977794491,
+   "sigma_DF_x_part": 121.27629000405194,
+   "sigma_DF": 121.65206955784262,
+   "weight": 8.220164306572064,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 0,
+   "T": 1025.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.531926866050279,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.51082985680446,
+   "sigma_DF_x_part": 480.1749332749595,
+   "sigma_DF": 526.7303921275987,
+   "weight": 1.898504462521603,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 1,
+   "T": 1073.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.113997755895321,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 209.82396409432513,
+   "sigma_DF_x_part": 464.8742984527835,
+   "sigma_DF": 510.0335373975169,
+   "weight": 1.960655381806013,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 2,
+   "T": 1123.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.535658185038642,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 200.57053096061827,
+   "sigma_DF_x_part": 439.821550662697,
+   "sigma_DF": 483.39583605691485,
+   "weight": 2.0686980015323515,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 3,
+   "T": 1174.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.943105171675136,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 191.08968274680217,
+   "sigma_DF_x_part": 420.7624575386052,
+   "sigma_DF": 462.1215343675298,
+   "weight": 2.1639329172760213,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 4,
+   "T": 1219.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.11137276614972,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 177.78196425839553,
+   "sigma_DF_x_part": 384.3474769987488,
+   "sigma_DF": 423.47303325108805,
+   "weight": 2.3614254544682525,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 5,
+   "T": 1274.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.011872185268238,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 160.18995496429181,
+   "sigma_DF_x_part": 353.45296635613124,
+   "sigma_DF": 388.0590433135276,
+   "weight": 2.576927447589624,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 6,
+   "T": 1323.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.91701015969447,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 142.67216255511153,
+   "sigma_DF_x_part": 330.2985711853399,
+   "sigma_DF": 359.7950695816011,
+   "weight": 2.7793599316490942,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 7,
+   "T": 1371.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.614955395280575,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 121.8392863244892,
+   "sigma_DF_x_part": 308.52980776405707,
+   "sigma_DF": 331.71592360178744,
+   "weight": 3.0146276643639895,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 8,
+   "T": 1424.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.395448247841962,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 86.3271719654714,
+   "sigma_DF_x_part": 262.92913042276604,
+   "sigma_DF": 276.7383389493187,
+   "weight": 3.6135217252392993,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 9,
+   "T": 1469.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.618336309812868,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 41.89338095700589,
+   "sigma_DF_x_part": 208.44893275866565,
+   "sigma_DF": 212.6170570209162,
+   "weight": 4.703291513914732,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 10,
+   "T": 1525.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.022610529337292462,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 0.3617684693966794,
+   "sigma_DF_x_part": 132.745297784306,
+   "sigma_DF": 132.74579074407416,
+   "weight": 7.5331955491375195,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 11,
+   "T": 1473.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.717416789911496,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 75.47866863858394,
+   "sigma_DF_x_part": 28.77547118260461,
+   "sigma_DF": 80.777825925399,
+   "weight": 12.379634987001669,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 12,
+   "T": 1424.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 5.954152352506611,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 95.26643764010578,
+   "sigma_DF_x_part": 21.689107912248122,
+   "sigma_DF": 97.70420432440616,
+   "weight": 10.234974092616438,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 13,
+   "T": 1374.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 8.849205312190078,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 141.58728499504124,
+   "sigma_DF_x_part": 73.64248654050049,
+   "sigma_DF": 159.5937815083496,
+   "weight": 6.2659082988623975,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 14,
+   "T": 1323.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 11.82400876248208,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 189.18414019971328,
+   "sigma_DF_x_part": 247.3143100607417,
+   "sigma_DF": 311.37598954306907,
+   "weight": 3.211551415597128,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 15,
+   "T": 1273.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 13.594229676784572,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 217.50767482855315,
+   "sigma_DF_x_part": 366.28666180474914,
+   "sigma_DF": 425.9994216256523,
+   "weight": 2.347421027436867,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 16,
+   "T": 1225.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.22222337161376,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 275.5555739458202,
+   "sigma_DF_x_part": 959.0057652386103,
+   "sigma_DF": 997.8090659507474,
+   "weight": 1.0021957447812573,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 17,
+   "T": 1171.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 18.890056413355754,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 302.24090261369207,
+   "sigma_DF_x_part": 1133.1759962592168,
+   "sigma_DF": 1172.7904338417875,
+   "weight": 0.8526672550732134,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 18,
+   "T": 1123.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 21.835944421847593,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 349.3751107495615,
+   "sigma_DF_x_part": 1913.1377477035358,
+   "sigma_DF": 1944.7773676437687,
+   "weight": 0.5141976745706213,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 19,
+   "T": 1071.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 23.91388390005489,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 382.62214240087826,
+   "sigma_DF_x_part": 2375.6541026741897,
+   "sigma_DF": 2406.269336422701,
+   "weight": 0.41558107600982763,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-collins1988electron.json",
+   "row": 20,
+   "T": 1023.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.133936380585048,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 418.14298208936077,
+   "sigma_DF_x_part": 3095.1345465437416,
+   "sigma_DF": 3123.251737321076,
+   "weight": 0.32017912230723217,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 0,
+   "T": 1556.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 3.821820092935924,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 61.149121486974785,
+   "sigma_DF_x_part": 38.22177151742769,
+   "sigma_DF": 72.11184976520327,
+   "weight": 13.867346396688028,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 1,
+   "T": 1512.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.0196345204823665,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 64.31415232771786,
+   "sigma_DF_x_part": 34.3826431960603,
+   "sigma_DF": 72.92788453520703,
+   "weight": 13.712176163799665,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 2,
+   "T": 1481.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.340821234431303,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 69.45313975090085,
+   "sigma_DF_x_part": 30.54112697719338,
+   "sigma_DF": 75.87159585968396,
+   "weight": 13.180162993399904,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 3,
+   "T": 1403.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 6.511442706660974,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 104.18308330657558,
+   "sigma_DF_x_part": 20.480339121427242,
+   "sigma_DF": 106.17701793605588,
+   "weight": 9.418233996760398,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-dench1963adiabatic.json",
+   "row": 4,
+   "T": 1347.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.520284438677539,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 168.32455101884062,
+   "sigma_DF_x_part": 157.66855726480884,
+   "sigma_DF": 230.6350546332031,
+   "weight": 4.33585432878093,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 0,
+   "T": 1515.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.310602406539104,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 4.969638504625664,
+   "sigma_DF_x_part": 143.86615937404247,
+   "sigma_DF": 143.95196810014113,
+   "weight": 6.946761570528466,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 1,
+   "T": 1507.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 0.6847431679314772,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 10.955890686903635,
+   "sigma_DF_x_part": 159.10663057975873,
+   "sigma_DF": 159.48338921400935,
+   "weight": 6.270245477778936,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 2,
+   "T": 1403.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 6.350827168165918,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 101.61323469065469,
+   "sigma_DF_x_part": 279.2252686486496,
+   "sigma_DF": 297.13969798094735,
+   "weight": 3.3654203958439783,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 3,
+   "T": 1322.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.363534743952144,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 165.8165559032343,
+   "sigma_DF_x_part": 109.23571485642223,
+   "sigma_DF": 198.56377215344196,
+   "weight": 5.0361654049724685,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 4,
+   "T": 1404.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 9.311946021716253,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 148.99113634746004,
+   "sigma_DF_x_part": 135.41068710182248,
+   "sigma_DF": 201.33159933675364,
+   "weight": 4.966930195231639,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 5,
+   "T": 1487.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.630505299976364,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 74.08808479962183,
+   "sigma_DF_x_part": 30.806854649570106,
+   "sigma_DF": 80.23781279842873,
+   "weight": 12.462951881704116,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jenkins1937some_alloys.json",
+   "row": 6,
+   "T": 1496.0,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 4.433320315521214,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 70.93312504833942,
+   "sigma_DF_x_part": 32.25158978482294,
+   "sigma_DF": 77.92094245305208,
+   "weight": 12.833520341498785,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 0,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 29.94641947382081,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 479.14271158113297,
+   "sigma_DF_x_part": 2227.2553984320402,
+   "sigma_DF": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 1,
+   "T": 797.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 29.94641947382081,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 479.14271158113297,
+   "sigma_DF_x_part": 2227.2553984320402,
+   "sigma_DF": 2278.2107777609135,
+   "weight": 0.43894094864340283,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 2,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.576379806483054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 425.22207690372886,
+   "sigma_DF_x_part": 2286.5393855260027,
+   "sigma_DF": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 3,
+   "T": 948.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.576379806483054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 425.22207690372886,
+   "sigma_DF_x_part": 2286.5393855260027,
+   "sigma_DF": 2325.742070017213,
+   "weight": 0.429970293306256,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 4,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 24.155892645607885,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 386.49428232972616,
+   "sigma_DF_x_part": 1864.6080912935072,
+   "sigma_DF": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 5,
+   "T": 1018.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 24.155892645607885,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 386.49428232972616,
+   "sigma_DF_x_part": 1864.6080912935072,
+   "sigma_DF": 1904.2429373351463,
+   "weight": 0.5251430793801076,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 6,
+   "T": 1128.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 20.901717359856473,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 334.42747775770357,
+   "sigma_DF_x_part": 1537.3561061421728,
+   "sigma_DF": 1573.310374647038,
+   "weight": 0.6356024952955284,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 7,
+   "T": 1143.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 21.054933031101633,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 336.87892849762613,
+   "sigma_DF_x_part": 1734.5799360519075,
+   "sigma_DF": 1766.990369815169,
+   "weight": 0.5659340407749942,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 8,
+   "T": 1165.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.682562107834265,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 282.92099372534824,
+   "sigma_DF_x_part": 739.3268515120205,
+   "sigma_DF": 791.6113200663667,
+   "weight": 1.2632462101680941,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 9,
+   "T": 1223.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 16.212086131164995,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 259.3933780986399,
+   "sigma_DF_x_part": 676.9193198531478,
+   "sigma_DF": 724.9170229701275,
+   "weight": 1.3794682264499782,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 10,
+   "T": 1252.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 14.774373230935641,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 236.38997169497026,
+   "sigma_DF_x_part": 493.32969826364416,
+   "sigma_DF": 547.0415065667751,
+   "weight": 1.8280148544412766,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 11,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.730084577095973,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 203.68135323353556,
+   "sigma_DF_x_part": 319.10435124492614,
+   "sigma_DF": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 12,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.730084577095973,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 203.68135323353556,
+   "sigma_DF_x_part": 319.10435124492614,
+   "sigma_DF": 378.56793398079753,
+   "weight": 2.6415338179454046,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 13,
+   "T": 1302.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.938002212047508,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 207.00803539276012,
+   "sigma_DF_x_part": 349.3645825328512,
+   "sigma_DF": 406.08858423442985,
+   "weight": 2.462516896123119,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 14,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.561695454988836,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 168.98712727982138,
+   "sigma_DF_x_part": 224.87952809604928,
+   "sigma_DF": 281.2960208445693,
+   "weight": 3.5549738563580755,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 15,
+   "T": 1386.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 10.457436676177934,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 167.31898681884695,
+   "sigma_DF_x_part": 213.60480173024058,
+   "sigma_DF": 271.33494922752004,
+   "weight": 3.685481737044788,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 16,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.609963821512356,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 233.7594211441977,
+   "sigma_DF_x_part": 520.6261530377799,
+   "sigma_DF": 570.6969933341056,
+   "weight": 1.7522433299636566,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 17,
+   "T": 797.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.600215276099132,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 233.6034444175861,
+   "sigma_DF_x_part": 517.8499072827667,
+   "sigma_DF": 568.1013076173389,
+   "weight": 1.760249424867684,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 18,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.519373319952484,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.30997311923974,
+   "sigma_DF_x_part": 405.9852177132583,
+   "sigma_DF": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 19,
+   "T": 948.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.519373319952484,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 216.30997311923974,
+   "sigma_DF_x_part": 405.9852177132583,
+   "sigma_DF": 460.01521874012815,
+   "weight": 2.1738411236453463,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 20,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.878603907275481,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 206.0576625164077,
+   "sigma_DF_x_part": 380.8879218396144,
+   "sigma_DF": 433.0535408988431,
+   "weight": 2.309183289263509,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 21,
+   "T": 1018.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.862140687099947,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.79425099359915,
+   "sigma_DF_x_part": 378.91074774023923,
+   "sigma_DF": 431.18978245673185,
+   "weight": 2.319164415961888,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 22,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.785922398724415,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.57475837959063,
+   "sigma_DF_x_part": 266.20226793850736,
+   "sigma_DF": 301.0397152355236,
+   "weight": 3.3218208408735466,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 23,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.764379909593297,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.23007855349275,
+   "sigma_DF_x_part": 265.0040859172782,
+   "sigma_DF": 299.8193464137545,
+   "weight": 3.3353418048613426,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 24,
+   "T": 1302.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 8.78617550130266,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 140.57880802084256,
+   "sigma_DF_x_part": 294.7905604184944,
+   "sigma_DF": 326.5943596824827,
+   "weight": 3.0619022354587107,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 25,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 6.1070544295622025,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 97.71287087299524,
+   "sigma_DF_x_part": 223.25931724874016,
+   "sigma_DF": 243.70582240196117,
+   "weight": 4.103307791927226,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 26,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.649604286895155,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 90.39366859032248,
+   "sigma_DF_x_part": 215.60081683860716,
+   "sigma_DF": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-jette1934xray.json",
+   "row": 27,
+   "T": 1386.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 5.649604286895155,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 90.39366859032248,
+   "sigma_DF_x_part": 215.60081683860716,
+   "sigma_DF": 233.78350571135613,
+   "weight": 4.277461735194711,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 0,
+   "T": 826.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.70136149133247,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 235.22178386131952,
+   "sigma_DF_x_part": 574.1323732951719,
+   "sigma_DF": 620.4492482616511,
+   "weight": 1.6117353720739584,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 1,
+   "T": 875.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 14.48495865227008,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 231.7593384363213,
+   "sigma_DF_x_part": 546.9593698563153,
+   "sigma_DF": 594.0344629952532,
+   "weight": 1.6834040149081229,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 2,
+   "T": 975.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.75620344755138,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 220.09925516082208,
+   "sigma_DF_x_part": 476.67560296786365,
+   "sigma_DF": 525.0364869103147,
+   "weight": 1.9046295351485112,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 3,
+   "T": 1077.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.819128389621532,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.10605423394452,
+   "sigma_DF_x_part": 426.9406331005515,
+   "sigma_DF": 473.65261286698035,
+   "weight": 2.111251944641627,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 4,
+   "T": 1070.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 12.870783107043685,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 205.93252971269897,
+   "sigma_DF_x_part": 426.44596353308765,
+   "sigma_DF": 473.5655884959708,
+   "weight": 2.111639917030222,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 5,
+   "T": 1175.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.55001943588744,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 184.80031097419905,
+   "sigma_DF_x_part": 380.34026457014875,
+   "sigma_DF": 422.85916306667804,
+   "weight": 2.3648535667236237,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-karmazin1982lattice.json",
+   "row": 6,
+   "T": 1230.0,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 10.755396978800853,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 172.08635166081365,
+   "sigma_DF_x_part": 362.79778800177866,
+   "sigma_DF": 401.5419621993606,
+   "weight": 2.4903997443323553,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 0,
+   "T": 1473.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 2.4679008372616664,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 39.48641339618666,
+   "sigma_DF_x_part": 209.9688860035265,
+   "sigma_DF": 213.64950253266787,
+   "weight": 4.680563203497728,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 1,
+   "T": 1373.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 7.323187603069158,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 117.17100164910653,
+   "sigma_DF_x_part": 290.56293585460514,
+   "sigma_DF": 313.29836150210286,
+   "weight": 3.1918456107000357,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 2,
+   "T": 1273.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 9.841359060027054,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 157.46174496043287,
+   "sigma_DF_x_part": 336.1704756506528,
+   "sigma_DF": 371.2206753740564,
+   "weight": 2.6938154751007906,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 3,
+   "T": 1173.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 11.74566451182289,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 187.93063218916623,
+   "sigma_DF_x_part": 396.8169119983601,
+   "sigma_DF": 439.0689970413921,
+   "weight": 2.2775463691091073,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 4,
+   "T": 1023.15,
+   "phases": [
+    "FCC_A1",
+    "BCC_A2"
+   ],
+   "dS": 13.572994911342622,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 217.16791858148196,
+   "sigma_DF_x_part": 488.0279217488819,
+   "sigma_DF": 534.1658518358751,
+   "weight": 1.872077738708117,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner BCC_A2 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 5,
+   "T": 1373.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 9.235250522465808,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 147.76400835945293,
+   "sigma_DF_x_part": 95.25857434297058,
+   "sigma_DF": 175.807844399241,
+   "weight": 5.688028332394008,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 6,
+   "T": 1273.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 12.760261899148393,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 204.1641903863743,
+   "sigma_DF_x_part": 251.40696799885595,
+   "sigma_DF": 323.86491040941974,
+   "weight": 3.087707151527567,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 7,
+   "T": 1173.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 17.982157828627745,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 287.7145252580439,
+   "sigma_DF_x_part": 859.8339933400704,
+   "sigma_DF": 906.6940741769484,
+   "weight": 1.1029078368111649,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  },
+  {
+   "file": "solid/zpf_single_CR-NI-ZPF-BCC_A2-FCC_A1-taylor1952constitution.json",
+   "row": 8,
+   "T": 1023.15,
+   "phases": [
+    "BCC_A2",
+    "FCC_A1"
+   ],
+   "dS": 26.505487173028413,
+   "sigma_T": 16.0,
+   "sigma_x": 0.011,
+   "sigma_DF_T_part": 424.0877947684546,
+   "sigma_DF_x_part": 3371.638668623968,
+   "sigma_DF": 3398.205080543547,
+   "weight": 0.29427299892096237,
+   "floor_active": false,
+   "notes": [
+    "single-phase row: partner FCC_A1 from the pick"
+   ]
+  }
+ ]
+}

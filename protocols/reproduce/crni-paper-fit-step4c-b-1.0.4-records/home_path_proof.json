@@ -1,0 +1,104 @@
+{
+ "by": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/scripts/redact_home_paths.py",
+ "rule": "/Users/<name>/ -> <home>/ ; nothing else changes",
+ "files": [
+  {
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/oneshot/oneshot_parameters.json",
+   "original_sha256": "49eb44a0bd3ee09f173ddff4e6b3d304fc30453f7d7a930963640a599c2857e2",
+   "new": "assessments/crni-paper-fit-step4c-b/evidence/oneshot_redacted/oneshot_parameters@1.1.0.json",
+   "new_sha256": "f52e38a9b87d6259f09c1956054c1603c8560f554ff3d721eeb921d0f81b7417",
+   "home_prefixes_replaced": 1,
+   "n_lines_changed": 2,
+   "changed_lines": [
+    {
+     "line": 66,
+     "old": " \"src\": \"<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb\",",
+     "new": " \"src\": \"<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_Sex_GRACE-2L-SMAX-OMAT-large.tdb\","
+    },
+    {
+     "line": 68,
+     "old": " \"src_noSex\": \"<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_GRACE-2L-SMAX-OMAT-large.tdb\",",
+     "new": " \"src_noSex\": \"<home>/ScientificRuns/crni-phaseforge-20261105/tdb/CrNi_PhaseForge_oneshot_GRACE-2L-SMAX-OMAT-large.tdb\","
+    }
+   ],
+   "line_count_equal": true,
+   "json_scalars_identical": true,
+   "json_equal_after_mapping_back": true,
+   "ok": true
+  },
+  {
+   "original": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs/results/data_consistency.json",
+   "original_sha256": "6717ba9f456509d117b54056bcd6963722d48e07b20716b8986d9eea0780daf0",
+   "new": "assessments/crni-paper-fit-step4c-b/evidence/model_inputs_redacted/results/data_consistency@1.1.0.json",
+   "new_sha256": "5283405743295162a27db11188fab6e06615cc042716f5238dfa45bbf7690539",
+   "home_prefixes_replaced": 1,
+   "n_lines_changed": 1,
+   "changed_lines": [
+    {
+     "line": 2,
+     "old": " \"setE_reference\": \"<home>/ScientificRuns/cr-ni-rebuild-20261105/results/data_consistency.json\",",
+     "new": " \"setE_reference\": \"<home>/ScientificRuns/cr-ni-rebuild-20261105/results/data_consistency.json\","
+    }
+   ],
+   "line_count_equal": true,
+   "json_scalars_identical": true,
+   "json_equal_after_mapping_back": true,
+   "ok": true
+  },
+  {
+   "original": "assessments/crni-paper-fit-step4c-b/code/records/crni-paper-fit/logs/step4c_b_hingefloor.log",
+   "original_sha256": "d780dcc2fb1c6d4f079027d87607095692c5e2ecef9d8609927fe29b91576b13",
+   "new": "assessments/crni-paper-fit-step4c-b/addendum-1.0.4/code/records/crni-paper-fit/logs/step4c_b_hingefloor@1.1.0.log",
+   "new_sha256": "e317a0e79a6adf88d1ad3b9f9e77b7abcef0295c116067677d33c0d66e1d5990",
+   "home_prefixes_replaced": 1,
+   "n_lines_changed": 1,
+   "changed_lines": [
+    {
+     "line": 1,
+     "old": "espei 0.8.11.dev82+g9039ea215 <home>/.venvs/espei-pr268/bin/python",
+     "new": "espei 0.8.11.dev82+g9039ea215 <fit-python>"
+    }
+   ],
+   "line_count_equal": true,
+   "ok": true
+  },
+  {
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2.json",
+   "original_sha256": "4e2cfbf4e7ef6319bdb30a25d2b5d2dd5f774f7a5dbe28f9764e3b6e62c024c6",
+   "new": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model2@1.1.0.json",
+   "new_sha256": "2960db17136edd6653d961b4c7af8b33fa8c3a6123fdf36a70f9f79ca07d4fdd",
+   "home_prefixes_replaced": 1,
+   "n_lines_changed": 1,
+   "changed_lines": [
+    {
+     "line": 4,
+     "old": " \"python\": \"<home>/.venvs/espei-pr268/bin/python\",",
+     "new": " \"python\": \"<fit-python>\","
+    }
+   ],
+   "line_count_equal": true,
+   "json_scalars_identical": true,
+   "json_equal_after_mapping_back": true,
+   "ok": true
+  },
+  {
+   "original": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3.json",
+   "original_sha256": "173c4f45095918154d2babaac7408047aaca2c61a5727d440baa5badcfa931cf",
+   "new": "protocols/reproduce/crni-paper-fit-step4c-b-1.0.3-spark1/fix_proof/studio/id_studio_model3@1.1.0.json",
+   "new_sha256": "41e3062939c3d4f2bfdf8cbd451b237cd84485da14457cef2a4dfad29a9d0f96",
+   "home_prefixes_replaced": 1,
+   "n_lines_changed": 1,
+   "changed_lines": [
+    {
+     "line": 4,
+     "old": " \"python\": \"<home>/.venvs/espei-pr268/bin/python\",",
+     "new": " \"python\": \"<fit-python>\","
+    }
+   ],
+   "line_count_equal": true,
+   "json_scalars_identical": true,
+   "json_equal_after_mapping_back": true,
+   "ok": true
+  }
+ ]
+}

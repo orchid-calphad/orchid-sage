@@ -1,0 +1,9 @@
+{
+ "document": "docs/fit_protocol.md",
+ "rule": "fit_protocol.md is the living prose protocol. When a general protocol pins it by sha256 and the text later changes, the exact pinned bytes are kept as a frozen file NAME@VERSION.md, recovered from git history (never retyped). The protocol YAMLs keep their pin on docs/fit_protocol.md; protocols/tools/validate.py resolves a pin that does not match the living file by hash to the frozen version. VERSION is the general protocol version that pins the text.",
+ "versions": [
+  {"file": "docs/fit_protocol@2.0.0.md", "sha256": "d85b4dd42d4bf4fbfd342f386bbb6673fc3bb19a25989a665362aafc9fd66074", "pinned_by": ["orchid-calphad-fit@2.0.0"], "recovered_from_commit": "420de17", "prose_version": "2.1 (6 Nov 2026), with item 10c"},
+  {"file": "docs/fit_protocol@2.1.0.md", "sha256": "6049494ef94b0831a1f106667e7a8752e7e4cec3a3f0ab89e2e7cacdbf934ec9", "pinned_by": ["orchid-calphad-fit@2.1.0"], "recovered_from_commit": "f42412e", "prose_version": "2.1 with items 8b and 10c"},
+  {"file": "docs/fit_protocol.md", "sha256": "c2f0e42b5337c5e656805c89efa303bc3f59440ad628f357e0149c3382565207", "pinned_by": ["orchid-calphad-fit@2.1.1", "orchid-calphad-fit@2.1.2"], "recovered_from_commit": null, "prose_version": "2.1 with items 8b, 10c and the single-source definition of item 8 (7ba6726); current text"}
+ ]
+}

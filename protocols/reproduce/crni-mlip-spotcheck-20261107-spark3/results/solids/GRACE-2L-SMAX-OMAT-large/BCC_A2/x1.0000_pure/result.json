@@ -1,0 +1,196 @@
+{
+ "lattice": "BCC_A2",
+ "cell": "x1.0000_pure",
+ "x_Ni": 1.0,
+ "n_atoms": 128,
+ "model": "GRACE-2L-SMAX-OMAT-large",
+ "input_sha256": "e1f0e1599deebcee19398638d8ada7b24b9cf6b639d2449ba47c85077e758a94",
+ "runner_sha256": "b763dbf81439edcdfc3b84baafacf73f249cf30945bcc9e4b6800e1bbfc2a928",
+ "fmax_eV_A": 0.005,
+ "optimizer": "FIRE + ase FrechetCellFilter",
+ "stages": {
+  "s0_unrelaxed": {
+   "energy_eV_atom": -5.394769161939621,
+   "volume_A3_atom": 10.940000000000012,
+   "max_force_eV_A": 4.262047357324536e-07,
+   "stress_GPa_voigt": [
+    1.106934045888789,
+    1.106934054563756,
+    1.1069352196583766,
+    7.124205592335178e-08,
+    -5.0078627577524505e-08,
+    -1.459014550102621e-07
+   ],
+   "cell_A": [
+    [
+     11.187741690314509,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     11.187741690314509,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     11.187741690314509
+    ]
+   ],
+   "lattice_check": {
+    "nn_distance_A": 2.422217128697656,
+    "disp_rms_over_d1": 0.0,
+    "disp_max_over_d1": 0.0,
+    "coordination_cut_A": 3.376199715135524,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   }
+  },
+  "s1_volume": {
+   "energy_eV_atom": -5.395001355558634,
+   "volume_A3_atom": 10.874254689347017,
+   "max_force_eV_A": 2.658827141792017e-07,
+   "stress_GPa_voigt": [
+    0.01600660691704567,
+    0.01600668829213511,
+    0.01600492189400032,
+    9.204140872837693e-08,
+    5.645725910807582e-08,
+    6.036674221556921e-08
+   ],
+   "cell_A": [
+    [
+     11.165285263277585,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     11.165285263277585,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     11.165285263277585
+    ]
+   ],
+   "nfev": 13,
+   "lattice_check": {
+    "nn_distance_A": 2.4173551696246034,
+    "disp_rms_over_d1": 2.1046477210122497e-16,
+    "disp_max_over_d1": 5.568374467197262e-16,
+    "coordination_cut_A": 3.3694228887961506,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   }
+  },
+  "s2_volume_ions": {
+   "energy_eV_atom": -5.395001355558634,
+   "volume_A3_atom": 10.874254689347017,
+   "max_force_eV_A": 2.658827141792017e-07,
+   "stress_GPa_voigt": [
+    0.01600660691704567,
+    0.01600668829213511,
+    0.01600492189400032,
+    9.204140872837693e-08,
+    5.645725910807582e-08,
+    6.036674221556921e-08
+   ],
+   "cell_A": [
+    [
+     11.165285263277585,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     11.165285263277585,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     11.165285263277585
+    ]
+   ],
+   "converged": true,
+   "steps": 0,
+   "lattice_check": {
+    "nn_distance_A": 2.4173551696246034,
+    "disp_rms_over_d1": 2.1046477210122497e-16,
+    "disp_max_over_d1": 5.568374467197262e-16,
+    "coordination_cut_A": 3.3694228887961506,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   }
+  },
+  "s3_full": {
+   "energy_eV_atom": -5.395001355558634,
+   "volume_A3_atom": 10.874254689347017,
+   "max_force_eV_A": 2.658827141792017e-07,
+   "stress_GPa_voigt": [
+    0.01600660691704567,
+    0.01600668829213511,
+    0.01600492189400032,
+    9.204140872837693e-08,
+    5.645725910807582e-08,
+    6.036674221556921e-08
+   ],
+   "cell_A": [
+    [
+     11.165285263277585,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     11.165285263277585,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     11.165285263277585
+    ]
+   ],
+   "converged": true,
+   "steps": 0,
+   "lattice_check": {
+    "nn_distance_A": 2.4173551696246034,
+    "disp_rms_over_d1": 2.1046477210122497e-16,
+    "disp_max_over_d1": 5.568374467197262e-16,
+    "coordination_cut_A": 3.3694228887961506,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0,
+    "strain_from_s2": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   }
+  }
+ },
+ "started_unix": 1794084568.8162673,
+ "failures": [],
+ "status": "computed",
+ "finished_unix": 1794084572.9837797
+}

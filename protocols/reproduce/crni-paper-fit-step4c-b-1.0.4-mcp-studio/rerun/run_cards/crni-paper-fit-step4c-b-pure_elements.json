@@ -1,0 +1,79 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-pure_elements",
+ "version": "1.0.0",
+ "title": "physics_checks (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-pure_elements",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "physics_checks"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T17:34:38-0600",
+ "finished": "2026-11-07T17:34:41-0600",
+ "interpreter": "<fit-python>",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "symengine": "0.13.0"
+ },
+ "command": "<fit-python> scripts/physics.py tdb/step4c_b_hingefloor_pick10a.tdb results/physics_rerun.json",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/inputs/cr-ni-coherent/results.json",
+   "sha256": "c7d7369ef5944b00bfe1da81b7c6a99958a604814e096ae34f2b91d338b70255",
+   "storage_class": "local",
+   "role": "input"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/physics_rerun.json",
+   "sha256": "07ddba9aad6278ae31e30389ee0a1fb22949de105a59d9953db2099eb6009664",
+   "storage_class": "local",
+   "role": "output"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/physics_rerun.json",
+   "sha256": "07ddba9aad6278ae31e30389ee0a1fb22949de105a59d9953db2099eb6009664",
+   "storage_class": "local",
+   "role": "output"
+  },
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/results/physics_rerun.json",
+   "sha256": "07ddba9aad6278ae31e30389ee0a1fb22949de105a59d9953db2099eb6009664",
+   "storage_class": "local",
+   "role": "output"
+  }
+ ],
+ "results": {
+  "returncode": 0,
+  "wall_s": 2.55
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/pure_elements.log",
+   "sha256": "c58ccb5b98f2605c7cc9f52fad10085b0c5d65285929b6e7a736a40889b3fc2c",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item pure_elements (reproduce.plan of the specific protocol)"
+ ]
+}

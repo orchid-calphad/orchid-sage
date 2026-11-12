@@ -1,0 +1,10 @@
+== spark1 PhaseForgePlus copy <home>/runs/cuzr-protocol-oneshot-20261106/src/PhaseForgePlus
+not a git repo
+5d05a3aabb8885c020ca06966530d64e78c48e8ba92759910ec6b178e5e46806  tree-sha256 (sorted file list incl. paths)
+c86ed6bf5c60e108773ca79116492237df6712a8d0b2472b0af9e329cdf41353  ./tests/test_hinge.py
+afb095c26cd59593498d0d7f874643b21f2bddb93fd16b2a505ada34381d825c  ./tests/data/hinge_synthetic.tdb
+892c139fca17f4bb14da06efd4329ab2e27cf102a5d647dfdc8bb69e5126b9fc  ./src/phaseforgeplus/utils/hinge.py
+== other copies
+ls: cannot access '<home>/src/PhaseForgePlus': No such file or directory
+<home>/orchid-crni-mcmc-20261105/src/PhaseForgePlus
+spark1 copy file-by-file identical to Studio <home>/src/PhaseForgePlus @ c66656faad884c7ed11354417bc89074665a74f3 (406 files, diff empty, 2026-11-06T13:40:59Z)

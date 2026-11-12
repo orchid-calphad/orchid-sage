@@ -1,0 +1,280 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft.2",
+ "id": "crni-step4c_b-check10a",
+ "version": "1.0.0",
+ "title": "Cr-Ni step 4c-b: 10a with the kink rule on the 8 starts, Studio and spark1",
+ "status": "complete",
+ "run_id": "crni-step4c_b-check10a",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.0",
+  "general_protocol": "orchid-calphad-fit@2.0.0",
+  "step": "pick_solid"
+ },
+ "host": "mac-studio and spark1",
+ "hardware_class": "Mac Studio M1 Max (10 cores); DGX Spark GB10 (20 Arm cores), CPU only",
+ "pids": [],
+ "started": "2026-11-06T16:58-0600",
+ "finished": "2026-11-06T17:45-0600",
+ "interpreter": "<fit-python> (Studio, check10a.py, coordinator); <home>/orchid-crni-mcmc-20261105/env/grad/bin/python (spark1, check10a_ms.py)",
+ "packages": {
+  "espei": "0.8.11.dev82+g9039ea215",
+  "pycalphad": "0.11.3.dev35+g9a6939dd2"
+ },
+ "command": "spark1: cd <home>/orchid-protocols-work-20261106/crni-10c-spark1 && OMP_NUM_THREADS=1 PY -u scripts/check10a_ms.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json results/check10a_step4c_b_multistart.json 2 model2",
+ "threads": "OMP_NUM_THREADS=1; 2 workers (spark1)",
+ "seeds": {
+  "rule": "none (deterministic evaluation); random directions numpy default_rng(20261106)"
+ },
+ "inputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/check10a_ms.py",
+   "sha256": "4a1a15b570257c104852ffecd0f88c6227c017dff9a8b5b2e3f726ff308e4ad2",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/kink10a.py",
+   "sha256": "2f148157aeeb4c01a55576f2b70630fe7b6a258f2fc50a9f8fbbc933e897e101",
+   "storage_class": "local",
+   "role": "code"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model.py",
+   "sha256": "5c470aa6424c760a648937bdc10628d1c49e48bc0f9db6671aaee2fc8a581068",
+   "storage_class": "local",
+   "role": "code (step 3b objective)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/model2.py",
+   "sha256": "a269c0c72e88400470c9ad5e4aedf7656e1eb6c602b0a2f7831361bae8862e89",
+   "storage_class": "local",
+   "role": "code (step 4c-b objective)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/step4c_b_hingefloor/multistart.json",
+   "sha256": "ac39ad7804cd57907c023b20305b434a78a2dc5401fa46f5043165d151c42150",
+   "storage_class": "local",
+   "role": "starts"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/steps/configs/step4c_b_hingefloor.json",
+   "sha256": "1ad9a2353d0e17d1a5d418bd32ae53c21f1280656e68d58c4378be33ab608e24",
+   "storage_class": "local",
+   "role": "objective config"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/check10a_step4c_b_hingefloor.json",
+   "sha256": "97799d5164702165a9d48548796de333d56f7bc4d7e731f0c5f69f1aaa2bf042",
+   "storage_class": "local",
+   "role": "10a result (Studio)"
+  },
+  {
+   "path": "<home>/ScientificRuns/crni-paper-fit-20261106/results/check10a_step4c_b_hingefloor_spark1.json",
+   "sha256": "fa47f2386c86fe7808a71069d3504b7549498f156aa6c0b1ec95579840b94e94",
+   "storage_class": "local",
+   "role": "10a result (spark1)"
+  }
+ ],
+ "results": {
+  "studio": {
+   "kinds": {
+    "smooth": 8,
+    "kink": 0,
+    "not_stationary": 0
+   },
+   "n_eligible": 8,
+   "pick": "s4_perturbed",
+   "pick_logpost": -5657.288636859774,
+   "gap_to_runner_up": 1.8690116121433675e-09,
+   "n_failed_equilibria_total": 0,
+   "host": null,
+   "per_start": {
+    "s4_perturbed": {
+     "logpost": -5657.288636859774,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 4.5368712701211385e-05,
+     "worst_improvement": 7.275957614183426e-12,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s1_perturbed": {
+     "logpost": -5657.288636861643,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0004148527196700923,
+     "worst_improvement": 3.4651748137548566e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s3_perturbed": {
+     "logpost": -5657.2886368629,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0008634463920760293,
+     "worst_improvement": 2.0372681319713593e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s2_perturbed": {
+     "logpost": -5657.288636863603,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.00033919564067290354,
+     "worst_improvement": 1.053194864653051e-09,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s0_start": {
+     "logpost": -5657.288636866143,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.00048014862916066563,
+     "worst_improvement": 5.393303581513464e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s6_perturbed": {
+     "logpost": -5657.288636868062,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.00027910394159228635,
+     "worst_improvement": 1.8826540326699615e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s7_perturbed": {
+     "logpost": -5657.288636882263,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0009907310767645373,
+     "worst_improvement": 3.1250237952917814e-09,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s5_perturbed": {
+     "logpost": -5657.293148835046,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0004537643404965795,
+     "worst_improvement": 8.676579454913735e-10,
+     "n_boundary_points": 11,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    }
+   }
+  },
+  "spark1": {
+   "kinds": {
+    "smooth": 8,
+    "kink": 0,
+    "not_stationary": 0
+   },
+   "n_eligible": 8,
+   "pick": "s4_perturbed",
+   "pick_logpost": -5657.288636859775,
+   "gap_to_runner_up": 1.8671926227398217e-09,
+   "n_failed_equilibria_total": 0,
+   "host": "spark1",
+   "per_start": {
+    "s4_perturbed": {
+     "logpost": -5657.288636859775,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 4.536871778348376e-05,
+     "worst_improvement": 7.275957614183426e-12,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s1_perturbed": {
+     "logpost": -5657.288636861642,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.00041485274401975667,
+     "worst_improvement": 3.474269760772586e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s3_perturbed": {
+     "logpost": -5657.288636862898,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0008634463998722299,
+     "worst_improvement": 2.0372681319713593e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s2_perturbed": {
+     "logpost": -5657.288636863594,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0003391956410919685,
+     "worst_improvement": 1.0468284017406404e-09,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s0_start": {
+     "logpost": -5657.28863686615,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.00048014861213091693,
+     "worst_improvement": 5.402398528531194e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s6_perturbed": {
+     "logpost": -5657.288636868061,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.000279103930914848,
+     "worst_improvement": 1.8826540326699615e-10,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s7_perturbed": {
+     "logpost": -5657.2886368822565,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0009907310501299249,
+     "worst_improvement": 3.1241143005900085e-09,
+     "n_boundary_points": 8,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    },
+    "s5_perturbed": {
+     "logpost": -5657.293148835042,
+     "kind": "smooth",
+     "eligible": true,
+     "grad_norm_q": 0.0004537643415503016,
+     "worst_improvement": 8.640199666842818e-10,
+     "n_boundary_points": 11,
+     "n_boundary_points_outside_own_uncertainty": 0,
+     "n_failed_equilibria": 0
+    }
+   }
+  }
+ },
+ "notes": [
+  "8 of 8 smooth on both machines; pick s4_perturbed; gap 1.869e-9 (Studio) vs 1.867e-9 (spark1)"
+ ],
+ "recorded_by": {
+  "tool": "crni-paper-fit-20261106/scripts/emit_run_cards_10ac_v2.py",
+  "version": "2"
+ }
+}

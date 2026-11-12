@@ -1,0 +1,26 @@
+{
+ "start_tdb": "tdb/step2_liquidus_pick.tdb",
+ "groups": [
+  "oneshot",
+  "liq",
+  "thermo"
+ ],
+ "free": [
+  "VV0000",
+  "VV0001",
+  "VV0002",
+  "VV0003",
+  "VV0004",
+  "VV0005",
+  "VV0006",
+  "VV0007",
+  "VV0008",
+  "VV0009",
+  "VV0010",
+  "VV0011"
+ ],
+ "hinge": null,
+ "note": "0.1 step 3: + set E thermochemistry at its own sigma (activities, HM_MIX, HM_FORM, DFT Liu 2016). CRNI2 held (no calorimetry for it).",
+ "name": "step3_thermo",
+ "wall_s": 5400
+}

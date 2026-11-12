@@ -1,0 +1,230 @@
+{
+ "specific_protocol": "crni-paper-fit-step4c-b@1.0.3",
+ "spec_sha256": "ee75514ce9046579a5ee41ea24cc674e3ece8cee070a20a0d3f06935e18485cb",
+ "root": "<home>/orchid-protocols-work-20261106/rerun-crni4cb-1.0.3",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-07T14:00:33-0600",
+ "items": [
+  {
+   "id": "step4c_b",
+   "step": "fit_solid",
+   "kind": "numerical",
+   "checks": [],
+   "pass": null
+  },
+  {
+   "id": "check10a",
+   "step": "pick_solid",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": -5657.288636859774,
+     "rerun": -5657.288636863667,
+     "diff": -3.893546818289906e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/pick10a_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": 1614,
+     "rerun": 1614.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "results/pick10a_rerun.json",
+     "reference": 860,
+     "rerun": 860.0,
+     "diff": 0.0,
+     "abs_tol": 2,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "the 10a pick (by the rule; s4 on the Studio, s1 in the 1.0.0 spark1 rerun, both mode A) reproduces the recorded objective, eutectic and CrNi2 top; parameters (10b comparison, flat directions undetermined), start and mode labels and the TDB text are notes in results/pick10a_rerun.json, never failures (PI 6 Nov); check10a_ms2.py exits 3 (item fails, no pick) when a re-evaluation differs from its multistart value by more than 1e-6 (Q40)"
+   },
+   "pass": true
+  },
+  {
+   "id": "global_10c",
+   "step": "global_search",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/basin_7201/status.json",
+     "reference": -5657.288636859766,
+     "rerun": -5657.288636863626,
+     "diff": -3.86080500902608e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    },
+    {
+     "check": "json_tol",
+     "path": "steps/step4c_b_hingefloor_10c/anneal_7201/status.json",
+     "reference": -5657.288636859768,
+     "rerun": -5657.288636863596,
+     "diff": -3.828063199762255e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "from the 10a pick (results/pick10a_start.txt, written by item check10a): no better optimum than the recorded pick beyond 0.01 log-units"
+   },
+   "pass": true
+  },
+  {
+   "id": "evaluate_states",
+   "step": "evaluate_states",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "files_equal",
+     "path": "evaluate/states_evaluated@1.1.0.json",
+     "reference": "reference/states_evaluated@1.1.0.json",
+     "rerun": "e24d0853de4ad38f1992f8dd1b669d55843ff08c556706308bbeffdb3e4f50ad",
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "deterministic"
+   },
+   "pass": true
+  },
+  {
+   "id": "phase_sequence",
+   "step": "final_pick",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "sequence_equal",
+     "path": "phase_sequence_rerun.json",
+     "reference": "phase_sequence_reference.json",
+     "abs_tol_K": 10,
+     "compositions": 99,
+     "differing_compositions": [],
+     "n_differing": 0,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - identical phase order on heating at every x of a 0.01 grid, transition temperatures within 10 K (two grid steps); at the 10a pick (item check10a)"
+   },
+   "pass": true
+  },
+  {
+   "id": "pure_elements",
+   "step": "physics_checks",
+   "kind": "deterministic",
+   "checks": [
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": "BCC_A2",
+     "differences": [],
+     "pass": true
+    },
+    {
+     "check": "json_equal",
+     "path": "results/physics_rerun.json",
+     "reference": "FCC_A1",
+     "differences": [],
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - pure elements equal SGTE (unary limits exact); at the 10a pick; Cahn inputs from the staged copy (physics.py 1.0.1)"
+   },
+   "pass": true
+  },
+  {
+   "id": "thermochemistry",
+   "step": "per_dataset",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_equal",
+     "path": "results/thermo_compare.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "at the 10a pick: the 22 thermochemistry datasets (data/thermo: calorimetry and activities) with rms residual within 0.1 of their own sigma of the recorded pick"
+   },
+   "pass": true
+  },
+  {
+   "id": "laplace_weights",
+   "step": "laplace",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_tol",
+     "path": "results/uq/laplace_step4c_b.json",
+     "reference": 0.7660570156257861,
+     "rerun": 0.7660570169113187,
+     "diff": 1.285532569283987e-09,
+     "abs_tol": 0.01,
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "acceptance target - mixture weight of the main mode within 0.01 (0.766); uses the recorded modes, so it tests the Hessian and mixture code, not the mode finding"
+   },
+   "pass": true
+  }
+ ],
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "phaseforgeplus": {
+  "path": "<home>/orchid-crni-mcmc-20261105/src/PhaseForgePlus",
+  "pin": "protocols/environment/pins/spark1_phaseforgeplus_src_files.sha256",
+  "pinned_files": 10,
+  "mismatch": [],
+  "pass": true
+ },
+ "notes": [
+  "environment: match (note, not a failure)",
+  "phaseforgeplus: match (note, not a failure)"
+ ],
+ "finished": "2026-11-07T14:00:35-0600",
+ "pass": true,
+ "unexpected_failures": [],
+ "expected_failures": []
+}

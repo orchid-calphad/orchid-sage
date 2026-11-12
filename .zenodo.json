@@ -1,0 +1,23 @@
+{
+  "title": "ORCHID-SAGE: Systematic Assessment of Gibbs Energies",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "description": "<p>ORCHID-SAGE is a standard for fully reproducible CALPHAD assessments: general and specific protocols, their schema and validator, a reproduction tool that reruns a protocol and compares the result within declared tolerances, an MCP server for agents, and the Cr–Ni assessment that accompanies the paper <em>ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram</em>.</p><p>Code is released under the MIT licence; protocols, the schema, documentation and data under CC BY 4.0 (see LICENSES.md).</p>",
+  "creators": [
+    {
+      "name": "Arróyave, Raymundo",
+      "affiliation": "Texas A&M University",
+      "orcid": "0000-0001-7548-8686"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CALPHAD",
+    "thermodynamics",
+    "reproducibility",
+    "phase diagrams",
+    "ORCHID"
+  ],
+  "notes": "This work was supported by the U.S. National Science Foundation under awards OAC-2608825 (CSSI: Elements: PhaseForge) and DMR-2534344. Supplement to the paper ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram (DOI pending; to be added as related identifier, relation isSupplementTo). Protocols, schema and data are CC BY 4.0.",
+  "related_identifiers": []
+}

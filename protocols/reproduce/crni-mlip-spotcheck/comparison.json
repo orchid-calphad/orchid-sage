@@ -1,0 +1,1329 @@
+{
+ "check": "MLIP spot-check on a different GPU host (G2)",
+ "date": "2026-11-06T08:12:20-0600",
+ "original": "spark1 (GB10), image cuzr-phaseforge-grace-gpu:20261104 id sha256:ac223e2cfa3e...",
+ "rerun": "spark2 (GB10), independent build of the same Dockerfile, image id sha256:8eae0b91e288..., identical pip freeze",
+ "code": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/relax_solids.py (sha256 b763dbf8...)",
+ "potential": "GRACE-2L-SMAX-OMAT-large (saved_model.pb 8e1ce965...)",
+ "tolerance": "0.1 kJ/mol-atom per cell and stage (general protocol staged_relax); lattice-check verdicts categorical-identical; identical input structure sha256",
+ "rows": [
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.0000_pure",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -9.51452349126339,
+   "E_spark2_eV_atom": -9.514523521065712,
+   "diff_kJ_mol_atom": -2.875486969947815e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.498049532966813,
+    "disp_rms_over_d1": 0.0,
+    "disp_max_over_d1": 0.0,
+    "coordination_cut_A": 3.4818984729629143,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.498049532966813,
+    "disp_rms_over_d1": 0.0,
+    "disp_max_over_d1": 0.0,
+    "coordination_cut_A": 3.4818984729629143,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.0000_pure",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -9.524566181004047,
+   "E_spark2_eV_atom": -9.524565868079662,
+   "diff_kJ_mol_atom": 3.0192613184452058e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4679493705829714,
+    "disp_rms_over_d1": 2.061501386240271e-16,
+    "disp_max_over_d1": 5.454219995406668e-16,
+    "coordination_cut_A": 3.4399434564361755,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4679618722123813,
+    "disp_rms_over_d1": 5.956322789407911e-16,
+    "disp_max_over_d1": 1.2271932825036287e-15,
+    "coordination_cut_A": 3.43996088179295,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.0000_pure",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -9.524566181004047,
+   "E_spark2_eV_atom": -9.524565868079662,
+   "diff_kJ_mol_atom": 3.0192613184452058e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4679493705829714,
+    "disp_rms_over_d1": 2.061501386240271e-16,
+    "disp_max_over_d1": 5.454219995406668e-16,
+    "coordination_cut_A": 3.4399434564361755,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4679618722123813,
+    "disp_rms_over_d1": 5.956322789407911e-16,
+    "disp_max_over_d1": 1.2271932825036287e-15,
+    "coordination_cut_A": 3.43996088179295,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.0000_pure",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -9.524566181004047,
+   "E_spark2_eV_atom": -9.524565868079662,
+   "diff_kJ_mol_atom": 3.0192613184452058e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4679493705829714,
+    "disp_rms_over_d1": 2.061501386240271e-16,
+    "disp_max_over_d1": 5.454219995406668e-16,
+    "coordination_cut_A": 3.4399434564361755,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0,
+    "strain_from_s2": [
+     [
+      -1.1102230246251565e-16,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      -1.1102230246251565e-16,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      -1.1102230246251565e-16
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4679618722123813,
+    "disp_rms_over_d1": 5.956322789407911e-16,
+    "disp_max_over_d1": 1.2271932825036287e-15,
+    "coordination_cut_A": 3.43996088179295,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0,
+    "strain_from_s2": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.1250_s2026110501",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -8.939718667417765,
+   "E_spark2_eV_atom": -8.939718380570412,
+   "diff_kJ_mol_atom": 2.7676562085747718e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4617387076202206,
+    "disp_rms_over_d1": 4.1334045996667915e-16,
+    "disp_max_over_d1": 1.0935960638728822e-15,
+    "coordination_cut_A": 3.431286743428405,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.461737417400226,
+    "disp_rms_over_d1": 4.3492059878609006e-16,
+    "disp_max_over_d1": 1.0154825915343394e-15,
+    "coordination_cut_A": 3.4312849450593292,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.1250_s2026110501",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -8.939742051064968,
+   "E_spark2_eV_atom": -8.939742159098387,
+   "diff_kJ_mol_atom": -1.0423640266060829e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4631907560428243,
+    "disp_rms_over_d1": 1.0866599643198877e-16,
+    "disp_max_over_d1": 2.5372085841970123e-16,
+    "coordination_cut_A": 3.4333106765484693,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4631944383204942,
+    "disp_rms_over_d1": 4.271495245055651e-16,
+    "disp_max_over_d1": 9.953649565767797e-16,
+    "coordination_cut_A": 3.4333158090796005,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.1250_s2026110501",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -8.95202624052763,
+   "E_spark2_eV_atom": -8.952026184648275,
+   "diff_kJ_mol_atom": 5.391538068652153e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.461633639466894,
+    "disp_rms_over_d1": 0.020514694893998882,
+    "disp_max_over_d1": 0.05127563650125903,
+    "coordination_cut_A": 3.4311402945138436,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4616333815706986,
+    "disp_rms_over_d1": 0.020514504686593764,
+    "disp_max_over_d1": 0.05127518754259268,
+    "coordination_cut_A": 3.431139935046044,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.1250_s2026110501",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -8.952047012746334,
+   "E_spark2_eV_atom": -8.952046986669302,
+   "diff_kJ_mol_atom": 2.516051098704338e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4616816994873703,
+    "disp_rms_over_d1": 0.020508746666133126,
+    "disp_max_over_d1": 0.05123385115850997,
+    "coordination_cut_A": 3.431207282822001,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0012959000724533905,
+    "strain_from_s2": [
+     [
+      8.463681069803553e-05,
+      0.0007169589281230254,
+      -1.3411303748637366e-05
+     ],
+     [
+      0.0007169589281230254,
+      0.0004163662473803953,
+      -0.0003723972678809425
+     ],
+     [
+      -1.3411303748637366e-05,
+      -0.0003723972678809425,
+      -0.0004407532025030858
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4616818001505876,
+    "disp_rms_over_d1": 0.020508724807610137,
+    "disp_max_over_d1": 0.05123404339043208,
+    "coordination_cut_A": 3.4312074231311094,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.001295901055541783,
+    "strain_from_s2": [
+     [
+      8.478263053646184e-05,
+      0.0007169597110206887,
+      -1.341151332064503e-05
+     ],
+     [
+      0.0007169597110206887,
+      0.0004165124614103899,
+      -0.0003723967220151369
+     ],
+     [
+      -1.341151332064503e-05,
+      -0.0003723967220151369,
+      -0.0004406082421836155
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.2500_s2026110501",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -8.391590408980846,
+   "E_spark2_eV_atom": -8.391590062528849,
+   "diff_kJ_mol_atom": 3.342753602564335e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.455496548059493,
+    "disp_rms_over_d1": 2.1357234618719344e-16,
+    "disp_max_over_d1": 4.894536218914726e-16,
+    "coordination_cut_A": 3.4225861289867554,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.455481325573639,
+    "disp_rms_over_d1": 2.0719689437829624e-16,
+    "disp_max_over_d1": 5.481914549498888e-16,
+    "coordination_cut_A": 3.422564911172797,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.2500_s2026110501",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -8.39162303507328,
+   "E_spark2_eV_atom": -8.391622979193926,
+   "diff_kJ_mol_atom": 5.391538068652153e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4572134420257963,
+    "disp_rms_over_d1": 3.2970622996305757e-16,
+    "disp_max_over_d1": 6.651918207310824e-16,
+    "coordination_cut_A": 3.4249792162336723,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4571862049168307,
+    "disp_rms_over_d1": 4.2685097106132503e-16,
+    "disp_max_over_d1": 9.782341090673727e-16,
+    "coordination_cut_A": 3.4249412518751345,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.2500_s2026110501",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -8.41078296303749,
+   "E_spark2_eV_atom": -8.410783037543297,
+   "diff_kJ_mol_atom": -7.188717424869537e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4551462743238606,
+    "disp_rms_over_d1": 0.03227449648013797,
+    "disp_max_over_d1": 0.07771276051675845,
+    "coordination_cut_A": 3.422097901043665,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4551443627938214,
+    "disp_rms_over_d1": 0.03227449410477537,
+    "disp_max_over_d1": 0.0777127589015472,
+    "coordination_cut_A": 3.422095236663541,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.2500_s2026110501",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -8.410920966416597,
+   "E_spark2_eV_atom": -8.410920895636082,
+   "diff_kJ_mol_atom": 6.82928155362606e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.454948942400531,
+    "disp_rms_over_d1": 0.032114313817384506,
+    "disp_max_over_d1": 0.07627897758300126,
+    "coordination_cut_A": 3.4218228505639043,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.004304958235603952,
+    "strain_from_s2": [
+     [
+      0.001379768649358848,
+      -0.0016918945125273311,
+      0.0009013317974625097
+     ],
+     [
+      -0.0016918945125273311,
+      -0.0017938180834065065,
+      0.001737978816512528
+     ],
+     [
+      0.0009013317974625097,
+      0.001737978816512528,
+      0.0001915092223127024
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4549485798782906,
+    "disp_rms_over_d1": 0.03211432025453077,
+    "disp_max_over_d1": 0.07627894086468422,
+    "coordination_cut_A": 3.421822345263422,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.004305373749916934,
+    "strain_from_s2": [
+     [
+      0.0013807349194797647,
+      -0.0016919715153171416,
+      0.000901366361774158
+     ],
+     [
+      -0.0016919715153171416,
+      -0.001793585875536019,
+      0.001738057908737715
+     ],
+     [
+      0.000901366361774158,
+      0.001738057908737715,
+      0.00019220673935227417
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.5000_s2026110501",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -7.371615130454302,
+   "E_spark2_eV_atom": -7.371610943228006,
+   "diff_kJ_mol_atom": 0.000404005919277668,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.442916121290243,
+    "disp_rms_over_d1": 2.0826261713564307e-16,
+    "disp_max_over_d1": 5.510110923323706e-16,
+    "coordination_cut_A": 3.405050940761304,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.442872602135856,
+    "disp_rms_over_d1": 2.082663272812234e-16,
+    "disp_max_over_d1": 5.51020908454904e-16,
+    "coordination_cut_A": 3.404990281725042,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.5000_s2026110501",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -7.371887922286987,
+   "E_spark2_eV_atom": -7.3718879371881485,
+   "diff_kJ_mol_atom": -1.4377434849739075e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.448117028273378,
+    "disp_rms_over_d1": 2.142161313233831e-16,
+    "disp_max_over_d1": 4.909290140583582e-16,
+    "coordination_cut_A": 3.4123002085775003,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.448189426292891,
+    "disp_rms_over_d1": 2.078140275416308e-16,
+    "disp_max_over_d1": 5.498242358258826e-16,
+    "coordination_cut_A": 3.412401120328953,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.5000_s2026110501",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -7.398977275937796,
+   "E_spark2_eV_atom": -7.398977298289537,
+   "diff_kJ_mol_atom": -2.1566152274608614e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.44485698582144,
+    "disp_rms_over_d1": 0.08504455067189438,
+    "disp_max_over_d1": 0.1556140741895207,
+    "coordination_cut_A": 3.407756208674618,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": false
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4448567888184947,
+    "disp_rms_over_d1": 0.0850445441284148,
+    "disp_max_over_d1": 0.15561616710480233,
+    "coordination_cut_A": 3.4077559340826826,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": false
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x0.5000_s2026110501",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -7.418330781161785,
+   "E_spark2_eV_atom": -7.418330822139978,
+   "diff_kJ_mol_atom": -3.953794583678245e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4397895367797986,
+    "disp_rms_over_d1": 0.1583780985825302,
+    "disp_max_over_d1": 0.25651178632618465,
+    "coordination_cut_A": 3.4006929607897955,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 0.078125,
+    "shape_strain_dev_norm": 0.14797479042301487,
+    "strain_from_s2": [
+     [
+      0.06191423862634737,
+      0.03929945949264833,
+      -0.007142083320484144
+     ],
+     [
+      0.03929945949264833,
+      0.060618398699825105,
+      -0.004454045482978277
+     ],
+     [
+      -0.007142083320484144,
+      -0.004454045482978277,
+      -0.10605870135800899
+     ]
+    ],
+    "lattice_kept": false
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.439789545152605,
+    "disp_rms_over_d1": 0.15837864323320228,
+    "disp_max_over_d1": 0.2565123458605861,
+    "coordination_cut_A": 3.400692972460205,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 0.078125,
+    "shape_strain_dev_norm": 0.14797563256454363,
+    "strain_from_s2": [
+     [
+      0.06191481193324122,
+      0.03929976323582057,
+      -0.007142384164707246
+     ],
+     [
+      0.03929976323582057,
+      0.060618723785132,
+      -0.004454294698521623
+     ],
+     [
+      -0.007142384164707246,
+      -0.004454294698521623,
+      -0.10605909540266006
+     ]
+    ],
+    "lattice_kept": false
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x1.0000_pure",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -5.394769173115492,
+   "E_spark2_eV_atom": -5.39476914703846,
+   "diff_kJ_mol_atom": 2.516051098704338e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.422217128697656,
+    "disp_rms_over_d1": 0.0,
+    "disp_max_over_d1": 0.0,
+    "coordination_cut_A": 3.376199715135524,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.422217128697656,
+    "disp_rms_over_d1": 0.0,
+    "disp_max_over_d1": 0.0,
+    "coordination_cut_A": 3.376199715135524,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x1.0000_pure",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -5.395001146942377,
+   "E_spark2_eV_atom": -5.3950014635920525,
+   "diff_kJ_mol_atom": -3.0552049055695536e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4173590345083715,
+    "disp_rms_over_d1": 4.4290496212846343e-16,
+    "disp_max_over_d1": 1.0341250333991194e-15,
+    "coordination_cut_A": 3.3694282758522167,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4172571129265696,
+    "disp_rms_over_d1": 5.276845133670218e-16,
+    "disp_max_over_d1": 1.1137200699670752e-15,
+    "coordination_cut_A": 3.369286212776463,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x1.0000_pure",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -5.395001146942377,
+   "E_spark2_eV_atom": -5.3950014635920525,
+   "diff_kJ_mol_atom": -3.0552049055695536e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4173590345083715,
+    "disp_rms_over_d1": 4.4290496212846343e-16,
+    "disp_max_over_d1": 1.0341250333991194e-15,
+    "coordination_cut_A": 3.3694282758522167,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4172571129265696,
+    "disp_rms_over_d1": 5.276845133670218e-16,
+    "disp_max_over_d1": 1.1137200699670752e-15,
+    "coordination_cut_A": 3.369286212776463,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "BCC_A2",
+   "cell": "x1.0000_pure",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -5.395001146942377,
+   "E_spark2_eV_atom": -5.3950014635920525,
+   "diff_kJ_mol_atom": -3.0552049055695536e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4173590345083715,
+    "disp_rms_over_d1": 4.4290496212846343e-16,
+    "disp_max_over_d1": 1.0341250333991194e-15,
+    "coordination_cut_A": 3.3694282758522167,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0,
+    "strain_from_s2": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.4172571129265696,
+    "disp_rms_over_d1": 5.276845133670218e-16,
+    "disp_max_over_d1": 1.1137200699670752e-15,
+    "coordination_cut_A": 3.369286212776463,
+    "coordination_expected": 14,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.0,
+    "strain_from_s2": [
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.0000_pure",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -9.131930954754353,
+   "E_spark2_eV_atom": -9.131930887699127,
+   "diff_kJ_mol_atom": 6.469845682382583e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.5697965868506505,
+    "disp_rms_over_d1": 2.429287157773915e-16,
+    "disp_max_over_d1": 7.727453055749947e-16,
+    "coordination_cut_A": 3.102018886257465,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5697965868506505,
+    "disp_rms_over_d1": 2.429287157773915e-16,
+    "disp_max_over_d1": 7.727453055749947e-16,
+    "coordination_cut_A": 3.102018886257465,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.0000_pure",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -9.13285457342863,
+   "E_spark2_eV_atom": -9.132853604853153,
+   "diff_kJ_mol_atom": 9.345332652330399e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.560966711558494,
+    "disp_rms_over_d1": 4.702115727011556e-16,
+    "disp_max_over_d1": 1.257460087007893e-15,
+    "coordination_cut_A": 3.091360283915271,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5609693608788806,
+    "disp_rms_over_d1": 4.673808458034057e-16,
+    "disp_max_over_d1": 1.2233642220122328e-15,
+    "coordination_cut_A": 3.0913634819278757,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.0000_pure",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -9.13285457342863,
+   "E_spark2_eV_atom": -9.132853604853153,
+   "diff_kJ_mol_atom": 9.345332652330399e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.560966711558494,
+    "disp_rms_over_d1": 4.702115727011556e-16,
+    "disp_max_over_d1": 1.257460087007893e-15,
+    "coordination_cut_A": 3.091360283915271,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5609693608788806,
+    "disp_rms_over_d1": 4.673808458034057e-16,
+    "disp_max_over_d1": 1.2233642220122328e-15,
+    "coordination_cut_A": 3.0913634819278757,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.0000_pure",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -9.13285457342863,
+   "E_spark2_eV_atom": -9.132853604853153,
+   "diff_kJ_mol_atom": 9.345332652330399e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.560966711558494,
+    "disp_rms_over_d1": 4.702115727011556e-16,
+    "disp_max_over_d1": 1.257460087007893e-15,
+    "coordination_cut_A": 3.091360283915271,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 2.3354894553713498e-17,
+    "strain_from_s2": [
+     [
+      0.0,
+      -6.148506809863304e-18,
+      1.5327146303751485e-17
+     ],
+     [
+      -6.148506809863304e-18,
+      0.0,
+      -1.8847812684877434e-34
+     ],
+     [
+      1.5327146303751485e-17,
+      -1.8847812684877434e-34,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5609693608788806,
+    "disp_rms_over_d1": 4.673808458034057e-16,
+    "disp_max_over_d1": 1.2233642220122328e-15,
+    "coordination_cut_A": 3.0913634819278757,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 1.4284294576734032e-18,
+    "strain_from_s2": [
+     [
+      0.0,
+      -1.010052155967486e-18,
+      0.0
+     ],
+     [
+      -1.010052155967486e-18,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.5000_s2026110511",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -7.402770679444075,
+   "E_spark2_eV_atom": -7.402769301086664,
+   "diff_kJ_mol_atom": 0.00013299127236008644,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.5221192492100735,
+    "disp_rms_over_d1": 4.657851339377664e-16,
+    "disp_max_over_d1": 1.2309439075504241e-15,
+    "coordination_cut_A": 3.044467248682604,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.522125329730826,
+    "disp_rms_over_d1": 4.691177693241217e-16,
+    "disp_max_over_d1": 1.2376752358259665e-15,
+    "coordination_cut_A": 3.0444745885204374,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.5000_s2026110511",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -7.404533989727497,
+   "E_spark2_eV_atom": -7.404533993452787,
+   "diff_kJ_mol_atom": -3.5943587124347687e-07,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.5091732865924277,
+    "disp_rms_over_d1": 5.44130674520673e-16,
+    "disp_max_over_d1": 1.3659504746914548e-15,
+    "coordination_cut_A": 3.028840089417856,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5091999749661,
+    "disp_rms_over_d1": 4.853330032801968e-16,
+    "disp_max_over_d1": 1.1651912468976012e-15,
+    "coordination_cut_A": 3.028872305134695,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.5000_s2026110511",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -7.413528110831976,
+   "E_spark2_eV_atom": -7.413528151810169,
+   "diff_kJ_mol_atom": -3.953794583678245e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.5091789558830246,
+    "disp_rms_over_d1": 0.030993548330359028,
+    "disp_max_over_d1": 0.08743542751980506,
+    "coordination_cut_A": 3.02884693285698,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.5091825024789256,
+    "disp_rms_over_d1": 0.03099425861329196,
+    "disp_max_over_d1": 0.0874391606629709,
+    "coordination_cut_A": 3.0288512139769423,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x0.5000_s2026110511",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -7.415227185934782,
+   "E_spark2_eV_atom": -7.415227212011814,
+   "diff_kJ_mol_atom": -2.516051098704338e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.5092437563022565,
+    "disp_rms_over_d1": 0.034622432225503444,
+    "disp_max_over_d1": 0.0968887474297367,
+    "coordination_cut_A": 3.028925153882459,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.03181477714904585,
+    "strain_from_s2": [
+     [
+      -0.025542499519054962,
+      0.0004298821772151333,
+      0.0014253886079672203
+     ],
+     [
+      0.0004298821772151333,
+      0.012957326185932705,
+      0.0004280983961797821
+     ],
+     [
+      0.0014253886079672203,
+      0.0004280983961797821,
+      0.01369223843297096
+     ]
+    ],
+    "lattice_kept": false
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.509243756041217,
+    "disp_rms_over_d1": 0.034622419639233314,
+    "disp_max_over_d1": 0.09688877396416912,
+    "coordination_cut_A": 3.028925153567356,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 0.03181452183358331,
+    "strain_from_s2": [
+     [
+      -0.025543709181102214,
+      0.00042987912053262943,
+      0.001425383900001272
+     ],
+     [
+      0.00042987912053262943,
+      0.012955803043862235,
+      0.00042809571642824537
+     ],
+     [
+      0.001425383900001272,
+      0.00042809571642824537,
+      0.013690716663200764
+     ]
+    ],
+    "lattice_kept": false
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x1.0000_pure",
+   "stage": "s0_unrelaxed",
+   "E_spark1_eV_atom": -5.48767814040184,
+   "E_spark2_eV_atom": -5.487678125500679,
+   "diff_kJ_mol_atom": 1.4377434849739075e-06,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.491786182696606,
+    "disp_rms_over_d1": 3.365135646238163e-16,
+    "disp_max_over_d1": 1.0979620419761924e-15,
+    "coordination_cut_A": 3.0078519984000147,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.491786182696606,
+    "disp_rms_over_d1": 3.365135646238163e-16,
+    "disp_max_over_d1": 1.0979620419761924e-15,
+    "coordination_cut_A": 3.0078519984000147,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x1.0000_pure",
+   "stage": "s1_volume",
+   "E_spark1_eV_atom": -5.488644827157259,
+   "E_spark2_eV_atom": -5.48864471912384,
+   "diff_kJ_mol_atom": 1.0423640266060829e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4820367258056844,
+    "disp_rms_over_d1": 5.359854919969877e-16,
+    "disp_max_over_d1": 1.891158306468894e-15,
+    "coordination_cut_A": 2.9960833628740975,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.482046462287323,
+    "disp_rms_over_d1": 4.839857611875562e-16,
+    "disp_max_over_d1": 1.3194161486269948e-15,
+    "coordination_cut_A": 2.9960951158471083,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x1.0000_pure",
+   "stage": "s2_volume_ions",
+   "E_spark1_eV_atom": -5.488644827157259,
+   "E_spark2_eV_atom": -5.48864471912384,
+   "diff_kJ_mol_atom": 1.0423640266060829e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4820367258056844,
+    "disp_rms_over_d1": 5.359854919969877e-16,
+    "disp_max_over_d1": 1.891158306468894e-15,
+    "coordination_cut_A": 2.9960833628740975,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.482046462287323,
+    "disp_rms_over_d1": 4.839857611875562e-16,
+    "disp_max_over_d1": 1.3194161486269948e-15,
+    "coordination_cut_A": 2.9960951158471083,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  },
+  {
+   "lattice": "FCC_A1",
+   "cell": "x1.0000_pure",
+   "stage": "s3_full",
+   "E_spark1_eV_atom": -5.488644827157259,
+   "E_spark2_eV_atom": -5.48864471912384,
+   "diff_kJ_mol_atom": 1.0423640266060829e-05,
+   "lattice_check_spark1": {
+    "nn_distance_A": 2.4820367258056844,
+    "disp_rms_over_d1": 5.359854919969877e-16,
+    "disp_max_over_d1": 1.891158306468894e-15,
+    "coordination_cut_A": 2.9960833628740975,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 2.3340026088339926e-17,
+    "strain_from_s2": [
+     [
+      0.0,
+      -4.719978110671285e-18,
+      -1.5814557076851002e-17
+     ],
+     [
+      -4.719978110671285e-18,
+      0.0,
+      1.4928872646539678e-34
+     ],
+     [
+      -1.5814557076851002e-17,
+      1.4928872646539678e-34,
+      0.0
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "lattice_check_spark2": {
+    "nn_distance_A": 2.482046462287323,
+    "disp_rms_over_d1": 4.839857611875562e-16,
+    "disp_max_over_d1": 1.3194161486269948e-15,
+    "coordination_cut_A": 2.9960951158471083,
+    "coordination_expected": 12,
+    "coordination_fraction_ok": 1.0,
+    "shape_strain_dev_norm": 1.363286856690943e-16,
+    "strain_from_s2": [
+     [
+      0.0,
+      3.977978652181059e-18,
+      -6.24672554083214e-17
+     ],
+     [
+      3.977978652181059e-18,
+      0.0,
+      3.558261384018307e-17
+     ],
+     [
+      -6.24672554083214e-17,
+      3.558261384018307e-17,
+      -1.1102230246251565e-16
+     ]
+    ],
+    "lattice_kept": true
+   },
+   "pass": true,
+   "lattice_verdict_identical": true,
+   "lattice_verdict_fields": [
+    "lattice_kept"
+   ],
+   "input_sha256_identical": true
+  }
+ ],
+ "summary": {
+  "n": 32,
+  "pass": 32,
+  "max_abs_diff_kJ_mol_atom": 0.000404005919277668
+ },
+ "pass": true
+}

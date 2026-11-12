@@ -1,0 +1,47 @@
+{
+ "type": "run_card",
+ "schema_version": "orchid-assessment-schema@1.0.0-draft",
+ "id": "crni-paper-fit-step4c-b-stage",
+ "version": "1.0.0",
+ "title": "stage (crni-paper-fit-step4c-b@1.0.4)",
+ "status": "complete",
+ "status_note": "native run recorded by sage_mcp (not converted from campaign records)",
+ "run_id": "crni-paper-fit-step4c-b-stage",
+ "executes": {
+  "specific_protocol": "crni-paper-fit-step4c-b@1.0.4",
+  "general_protocol": "orchid-calphad-fit@2.1.2",
+  "step": "stage"
+ },
+ "host": "mac-studio",
+ "hardware_class": "Darwin arm64 CPU",
+ "started": "2026-11-07T15:09:50-0600",
+ "finished": "2026-11-07T15:09:50-0600",
+ "interpreter": "<home>/projects/orchid-mcp/.venv/bin/python",
+ "packages": {},
+ "command": "<home>/projects/orchid-mcp/.venv/bin/python <orchid-sage>/protocols/tools/orchid_reproduce.py <orchid-sage>/protocols/specific/crni-paper-fit-step4c-b@1.0.4.yaml --root <home>/mcp-rerun-crni-1.0.4-20261107/run --stage-only",
+ "threads": "unset",
+ "seeds": {
+  "note": "no random seed in this step"
+ },
+ "inputs": [],
+ "outputs": [],
+ "results": {
+  "returncode": 0,
+  "wall_s": null
+ },
+ "trajectory": {
+  "status": "not_recorded",
+  "reason": "not a fit step (no per-evaluation history)"
+ },
+ "converted_from": [
+  {
+   "path": "<home>/mcp-rerun-crni-1.0.4-20261107/run/logs/stage.log",
+   "sha256": "54e4b0f4a004883fb7c8a7793785d342a929941aa5c5a7aca84a152f70573114",
+   "storage_class": "local",
+   "role": "run log written by sage_mcp (native run; see SCHEMA_GAPS G3)"
+  }
+ ],
+ "notes": [
+  "reproduce item stage (orchid_reproduce.py --stage-only (reproduce.stage of the specific protocol))"
+ ]
+}

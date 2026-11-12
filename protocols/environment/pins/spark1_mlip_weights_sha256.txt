@@ -1,0 +1,41 @@
+62bea957be6f9af9f0de66b657c729e3c5c53c311e9478d5a874c98fdc327fca  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/fingerprint.pb
+7a2559b3cd56bafde9e1dbc91f49d2ef8d98558a909f27045fb86a218da20fb7  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/.grace_origin.json
+4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/metadata.yaml
+920ee71483d29bef4940343dc3a2f90fc326ae433e12916a96b4f40a14781073  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/saved_model.pb
+62c50ba3bdc3e93d7bfaa1b6b2c387929e6baa7c39c0c2e4bd3f76b7de69d078  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/variables/variables.data-00000-of-00001
+b524d57d33f69f54dd892d42c48517d7e7915bd8e33091edaebccc940bee5d69  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-OMAT/variables/variables.index
+5dad30a4ed99770d3552e564bec8ed8caced584e8c12b0b3ad5a1e8e344720ff  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/fingerprint.pb
+e2be62fff2f962b3b926f9cfbc808071df469a49504c08d378fda9b1d6fe8a0a  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/.grace_origin.json
+91732850c5c330ff6b47a9dc1395aec94471a6ae7f6cd1d9be5a825a9845f2af  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/metadata.json
+ca34ec6170f2254b717eeac7be5437c4660e54419d6cce87905b907c9a26e879  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/metadata.yaml
+8e1ce96504a08110253336874425e197d351132a067f7b9dae08af3e9e8ccca4  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/saved_model.pb
+04e3fba35ba976bc344dfef6198ad320a0e6547598b2b7ad1ff237b1b5015eed  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/variables/variables.data-00000-of-00001
+0192ab28fca9677b714be7c213f13e4252651c5f7a8265f5d96018b4fc9fe93d  cuzr-protocol-oneshot-20261106/inputs/potential/GRACE-2L-SMAX-OMAT-large/variables/variables.index
+62bea957be6f9af9f0de66b657c729e3c5c53c311e9478d5a874c98fdc327fca  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/fingerprint.pb
+7a2559b3cd56bafde9e1dbc91f49d2ef8d98558a909f27045fb86a218da20fb7  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/.grace_origin.json
+4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/metadata.yaml
+920ee71483d29bef4940343dc3a2f90fc326ae433e12916a96b4f40a14781073  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/saved_model.pb
+62c50ba3bdc3e93d7bfaa1b6b2c387929e6baa7c39c0c2e4bd3f76b7de69d078  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/variables/variables.data-00000-of-00001
+b524d57d33f69f54dd892d42c48517d7e7915bd8e33091edaebccc940bee5d69  crni-phaseforge-20261105/inputs/potential/GRACE-2L-OMAT/variables/variables.index
+5dad30a4ed99770d3552e564bec8ed8caced584e8c12b0b3ad5a1e8e344720ff  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/fingerprint.pb
+e2be62fff2f962b3b926f9cfbc808071df469a49504c08d378fda9b1d6fe8a0a  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/.grace_origin.json
+91732850c5c330ff6b47a9dc1395aec94471a6ae7f6cd1d9be5a825a9845f2af  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/metadata.json
+ca34ec6170f2254b717eeac7be5437c4660e54419d6cce87905b907c9a26e879  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/metadata.yaml
+8e1ce96504a08110253336874425e197d351132a067f7b9dae08af3e9e8ccca4  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/saved_model.pb
+04e3fba35ba976bc344dfef6198ad320a0e6547598b2b7ad1ff237b1b5015eed  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/variables/variables.data-00000-of-00001
+0192ab28fca9677b714be7c213f13e4252651c5f7a8265f5d96018b4fc9fe93d  crni-phaseforge-20261105/inputs/potential/GRACE-2L-SMAX-OMAT-large/variables/variables.index
+62bea957be6f9af9f0de66b657c729e3c5c53c311e9478d5a874c98fdc327fca  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/fingerprint.pb
+7a2559b3cd56bafde9e1dbc91f49d2ef8d98558a909f27045fb86a218da20fb7  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/.grace_origin.json
+4f5f4d3adf228da543fd58ea0a63441258526d3cf3d0c65e57fd844c1bd10336  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/metadata.yaml
+920ee71483d29bef4940343dc3a2f90fc326ae433e12916a96b4f40a14781073  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/saved_model.pb
+62c50ba3bdc3e93d7bfaa1b6b2c387929e6baa7c39c0c2e4bd3f76b7de69d078  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/variables/variables.data-00000-of-00001
+b524d57d33f69f54dd892d42c48517d7e7915bd8e33091edaebccc940bee5d69  cuzr-fresh-phaseforge-20261104/inputs/potential/GRACE-2L-OMAT/variables/variables.index
+{
+  "model_name": "GRACE-2L-SMAX-OMAT-large",
+  "payload": "model",
+  "url": "https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models/resolve/model-v5-uq-v6/models/GRACE-2L-SMAX-OMAT-large-model.tar.gz",
+  "tag": "model-v5-uq-v6",
+  "downloaded_at": "2026-10-27T16:15:26Z",
+  "tensorpotential_version": "0.6.2.1",
+  "kokkos_url": "https://huggingface.co/AMS-ICAMS-RUB/grace-foundation-models/resolve/kk-v3-uq-v6/kokkos/GRACE-2L-SMAX-OMAT-large-kokkos.npz"
+}

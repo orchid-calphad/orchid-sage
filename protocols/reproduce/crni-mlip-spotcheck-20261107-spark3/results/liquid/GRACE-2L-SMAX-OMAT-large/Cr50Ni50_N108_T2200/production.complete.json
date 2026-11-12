@@ -1,0 +1,5 @@
+{
+  "steps": 100000,
+  "finished_unix": 1794087782.1686404,
+  "restart_policy": "stage boundary only; no claim of thermostat-state restart"
+}

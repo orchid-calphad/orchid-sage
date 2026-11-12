@@ -1,0 +1,71 @@
+{
+ "artifact": "crni-paper-fit-step4c-b/addendum-1.0.0",
+ "created": "2026-11-06T18:48:09-0600",
+ "rule": "byte-identical copies of the code that produced the pick; sources only read",
+ "files": [
+  {
+   "path": "scripts/kink10a.py",
+   "sha256": "2f148157aeeb4c01a55576f2b70630fe7b6a258f2fc50a9f8fbbc933e897e101",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/kink10a.py",
+   "original_mtime": "2026-11-06T16:38:31-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "scripts/check10a.py",
+   "sha256": "e8c0605dfaa4e9c49cadced1d75ff98b55a9211046493cbd53075c8302fa6a1a",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/check10a.py",
+   "original_mtime": "2026-11-06T16:18:40-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "scripts/check10a_ms.py",
+   "sha256": "4a1a15b570257c104852ffecd0f88c6227c017dff9a8b5b2e3f726ff308e4ad2",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/check10a_ms.py",
+   "original_mtime": "2026-11-06T16:42:38-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "scripts/run_global_crni.py",
+   "sha256": "a8b3b251068b96cb9f383e5219d8c9f76c1aa03c3fdc116d11990e9b96d542fb",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/run_global_crni.py",
+   "original_mtime": "2026-11-06T16:47:56-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "scripts/emit_run_cards_10ac.py",
+   "sha256": "f51d60e60973566fc0215215deb7692bdaa3c7ca5cdef8b17f72cde81b6caba6",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/emit_run_cards_10ac.py",
+   "original_mtime": "2026-11-06T18:47:25-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "scripts/emit_run_cards_10ac_v2.py",
+   "sha256": "eab2bec79cf70a525e658056f4ab3b62de7a0a380ab4c766cb2e4fb20bb4df7b",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/scripts/emit_run_cards_10ac_v2.py",
+   "original_mtime": "2026-11-06T18:57:57-0600",
+   "used_for": "10a kink-rule check / 10c global search (1.0.0)",
+   "note": "live scripts/ copy as run on the Studio and spark1"
+  },
+  {
+   "path": "records/crni-paper-fit/logs/10c_basin_7201.log",
+   "sha256": "89e56033bd1d536e5b20bd90aee90a993ab4e1ea3f7fafaccdc1dcd0aa206376",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/10c_basin_7201.log",
+   "original_mtime": "2026-11-06T18:45:17-0600",
+   "used_for": "campaign record (frozen copy, 1.0.0)",
+   "note": ""
+  },
+  {
+   "path": "records/crni-paper-fit/logs/10c_anneal_7201.log",
+   "sha256": "a98677d3f21b332888cbf9c205b0b47e89e2d3a2e7f7d6ba688baeae03fe5126",
+   "original": "<home>/ScientificRuns/crni-paper-fit-20261106/logs/10c_anneal_7201.log",
+   "original_mtime": "2026-11-06T18:38:06-0600",
+   "used_for": "campaign record (frozen copy, 1.0.0)",
+   "note": ""
+  }
+ ]
+}

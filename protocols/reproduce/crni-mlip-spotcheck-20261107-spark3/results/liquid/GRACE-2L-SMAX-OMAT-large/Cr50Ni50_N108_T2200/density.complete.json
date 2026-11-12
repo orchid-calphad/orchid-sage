@@ -1,0 +1,8 @@
+{
+  "steps": 10000,
+  "finished_unix": 1794084920.1462686,
+  "npt_mean_volume_A3_atom_last5ps": 12.899930086876099,
+  "npt_volume_std_A3_atom": 0.15996961104180243,
+  "final_volume_A3_atom": 12.858958147475944,
+  "restart_policy": "stage boundary only; no claim of thermostat-state restart"
+}

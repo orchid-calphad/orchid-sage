@@ -1,0 +1,55 @@
+{
+ "specific_protocol": "crni-paper-fit-step4c-b@1.0.1",
+ "spec_sha256": "11d4ab393b35c7294d2371bf401ea512e51ae347767ec04161c9cb37af62e91e",
+ "root": "<home>/orchid-protocols-work-20261106/rerun-crni4cb-1.0.1",
+ "host": "spark1",
+ "machine": "aarch64",
+ "python": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python",
+ "started": "2026-11-07T00:51:15-0600",
+ "items": [
+  {
+   "id": "thermochemistry",
+   "step": "per_dataset",
+   "kind": "numerical",
+   "checks": [
+    {
+     "check": "json_equal",
+     "path": "results/thermo_compare.json",
+     "reference": true,
+     "differences": [],
+     "pass": true
+    }
+   ],
+   "expected": {
+    "result": "pass",
+    "reason": "at the 10a pick: the 22 thermochemistry datasets (data/thermo: calorimetry and activities) with rms residual within 0.1 of their own sigma of the recorded pick"
+   },
+   "command": "<home>/orchid-crni-mcmc-20261105/env/grad/bin/python scripts/per_dataset.py tdb/step4c_b_hingefloor_pick10a.tdb results/per_dataset_rerun.json && <home>/orchid-crni-mcmc-20261105/env/grad/bin/python -I scripts/thermo_compare.py results/per_dataset_rerun.json reference/per_dataset_step4c_b_hingefloor.json results/thermo_compare.json 0.1 thermo",
+   "returncode": 0,
+   "wall_s": 2.9,
+   "pass": true
+  }
+ ],
+ "environment": {
+  "command": "import espei, pycalphad; print(espei.__version__, pycalphad.__version__)",
+  "expected": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "got": "0.8.11.dev82+g9039ea215 0.11.3.dev35+g9a6939dd2",
+  "pass": true,
+  "stderr": ""
+ },
+ "phaseforgeplus": {
+  "path": "<home>/orchid-crni-mcmc-20261105/src/PhaseForgePlus",
+  "pin": "protocols/environment/pins/spark1_phaseforgeplus_src_files.sha256",
+  "pinned_files": 10,
+  "mismatch": [],
+  "pass": true
+ },
+ "notes": [
+  "environment: match (note, not a failure)",
+  "phaseforgeplus: match (note, not a failure)"
+ ],
+ "finished": "2026-11-07T00:51:19-0600",
+ "pass": true,
+ "unexpected_failures": [],
+ "expected_failures": []
+}

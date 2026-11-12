@@ -1,0 +1,20 @@
+{
+ "item": "check10a",
+ "command": "<fit-python> -u scripts/check10a_ms2.py steps/configs/step4c_b_hingefloor.json steps/step4c_b_hingefloor/multistart.json results/check10a_rerun.json 4 model3 && <fit-python> -I scripts/pick10a2.py results/check10a_rerun.json steps/step4c_b_hingefloor/evaluation.json steps/step4c_b_hingefloor reference/step4c_b_hingefloor_pick.tdb reference/modes_step4c_b@1.1.0.json results/pick10a_rerun.json tdb/step4c_b_hingefloor_pick10a.tdb results/pick10a_start.txt 50 0.03",
+ "cwd": "<home>/mcp-rerun-crni-1.0.4-20261107/run",
+ "log": "<home>/mcp-rerun-crni-1.0.4-20261107/run/reproduce_logs/check10a.log",
+ "env": {
+  "PYTHONPATH": "<home>/mcp-rerun-crni-1.0.4-20261107/pfp-c66656f/src",
+  "OMP_NUM_THREADS": "1"
+ },
+ "launched": "2026-11-07T15:42:19-0600",
+ "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)",
+ "protocol": "crni-paper-fit-step4c-b@1.0.4",
+ "python": "<fit-python>",
+ "inputs": [
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/step4c_b_hingefloor_pick.tdb",
+  "<home>/mcp-rerun-crni-1.0.4-20261107/run/reference/modes_step4c_b@1.1.0.json"
+ ],
+ "pin_note": null,
+ "wrapper_pid": 59993
+}
