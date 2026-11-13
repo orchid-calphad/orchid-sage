@@ -66,8 +66,8 @@ PROMPTS = {
                               ("run_root", "a new absolute directory for the rerun", True)], REPRODUCE),
     "explain_assessment": ("Explain an assessment (steps, runs, decisions, evidence, open questions) from the documents",
                            [("protocol", "specific protocol id@version", True)], EXPLAIN),
-    "run_fresh_assessment": ("Cold-start procedure for a fresh assessment of a binary system (decisions stay with people)",
-                             [("system", "binary system, alphabetical, e.g. AL-CU", True), ("assessment_id", "new protocol id, lower case", True),
+    "run_fresh_assessment": ("Cold-start procedure for a fresh assessment of a system of two or more elements (decisions stay with people)",
+                             [("system", "system, alphabetical, e.g. AL-CU or AL-C-TI", True), ("assessment_id", "new protocol id, lower case", True),
                               ("run_root", "a new absolute directory", True)], FRESH),
 }
 

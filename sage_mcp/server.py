@@ -169,7 +169,9 @@ def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[
                    general: str = "orchid-calphad-fit@2.0.0", title: str | None = None) -> dict:
     """Instantiate a new specific protocol (draft 0.1.0) from the general protocol in a fresh run root: fills what is
     known, opens a decision request for every required decision (established practice, phases if not given, T range if
-    not given, unaries), writes the PLAN.md draft. system: binary in alphabetical order, e.g. "AL-CU"."""
+    not given, unaries, and above two elements the lower-order sub-system descriptions), writes the PLAN.md draft.
+    system: two or more elements in alphabetical order, e.g. "AL-CU" or "AL-C-TI". Above two elements the evidence
+    steps are run by the system's own tool and recorded with record_external_run."""
     return _call(fresh.new_assessment, system=system, assessment_id=assessment_id, run_root=run_root, phases=phases, T_range=T_range,
                  general=general, title=title)
 

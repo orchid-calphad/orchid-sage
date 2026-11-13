@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import itertools
 import json
 import os
 import re
@@ -40,6 +41,10 @@ GPU_ENVS = {"mlip_container"}
 # steps the server carries out itself (no campaign script needed)
 INTERNAL = {"write_plan", "build_datasets", "exclusions_every_state", "classify_certainty"}
 GATHER_STEPS = ("build_datasets", "exclusions_every_state", "classify_certainty")
+# the evidence builder reads one mole fraction per ZPF vertex, so above two components these steps are run by the
+# system's own tool and recorded with record_external_run (local multicomponent branch)
+MULTI_NOTE = ("the generic evidence builder handles two components only (one mole fraction per state); build this step with the "
+              "system's own tool and record its run card with record_external_run")
 # protocol errors that are expected while an assessment is a draft in progress (reported as pending, not as errors)
 DRAFT_PENDING = (
     ("$.artifact.file.sha256", "the artifact (final TDB) does not exist until final_pick"),
@@ -177,10 +182,17 @@ def _params(spec: dict) -> dict:
     return p
 
 
+def elements_of(system: str) -> list[str]:
+    return system.split("-")
+
+
 def _bindings(root: Path, spec: dict, st: dict, nproc: int = 4) -> dict:
     sys_ = spec["system"]
-    b = {"campaign": str(root), "artifact": spec["id"], "EL": sys_.split("-")[1], "nproc": str(nproc), "version": spec["version"],
-         "system": sys_}
+    els = elements_of(sys_)
+    b = {"campaign": str(root), "artifact": spec["id"], "nproc": str(nproc), "version": spec["version"],
+         "system": sys_, "elements": ",".join(els), "n_components": str(len(els))}
+    if len(els) == 2:   # <EL> is the binary's composition axis; above two components it stays unbound on purpose
+        b["EL"] = els[1]
     b.update({k: str(v) for k, v in st.get("bindings", {}).items() if isinstance(v, (str, int, float))})
     b.update({k: str(v) for k, v in _overrides(spec, "binding:").items()})
     if st.get("bindings", {}).get("final_tdb"):
@@ -241,11 +253,13 @@ def sequence(root: Path, nproc: int = 4) -> list[dict]:
             mode = "judgement"
         elif comp["class"] == "GPU":
             mode = "job_spec"
+        elif sid in GATHER_STEPS and len(elements_of(spec["system"])) > 2:
+            mode = "external"
         elif sid in INTERNAL:
             mode = "internal"
         else:
             mode = "command"
-        exe_problems = []
+        exe_problems = [MULTI_NOTE] if mode == "external" else []
         if mode == "command":
             if not cmd:
                 exe_problems.append("no exact command in the protocol")
@@ -280,7 +294,8 @@ def next_step(assessment: str, nproc: int = 4) -> dict:
     nxt = next((x for x in todo if not x["blockers"]), todo[0])
     what = {"judgement": "run_step creates a decision request (or returns the open one); a person answers it with record_decision",
             "job_spec": "run_step writes the GPU job spec for an executor; record the finished run with record_external_run",
-            "internal": "run_step carries it out (server code)", "command": "run_step runs the bound command in the run root"}[nxt["mode"]]
+            "internal": "run_step carries it out (server code)", "command": "run_step runs the bound command in the run root",
+            "external": "run it with the system's own tool and record its run card with record_external_run"}[nxt["mode"]]
     return {"assessment": assessment, "next": nxt, "how": what, "open_decision_requests": open_rq, "counts": counts,
             "sequence": [{k: x[k] for k in ("id", "kind", "status", "mode")} | {"blocked": bool(x["blockers"])} for x in seq]}
 
@@ -293,9 +308,11 @@ def _copy_general_entries(gen: dict, key: str, ids: list[str]) -> list[dict]:
 def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[str] | None = None,
                    T_range: list[float] | None = None, general: str = DEFAULT_GENERAL, title: str | None = None) -> dict:
     system = system.upper().strip()
-    if not SYSTEM_RE.match(system) or system.count("-") != 1:
-        raise SageError(f"system must be a binary like 'AL-CU' (the general protocol is for binary systems), got {system!r}")
-    els = system.split("-")
+    if not SYSTEM_RE.match(system):
+        raise SageError(f"system must be two or more elements joined by '-', like 'AL-CU' or 'AL-C-TI', got {system!r}")
+    els = elements_of(system)
+    if len(set(els)) != len(els):
+        raise SageError(f"system {system!r} names an element twice")
     if els != sorted(els):
         raise SageError(f"write the system in alphabetical order: {'-'.join(sorted(els))}")
     if not ID_RE.match(assessment_id):
@@ -341,6 +358,12 @@ def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[
                       "byte_identical_expected": [], "not_reproducible": [], "independent_rerun": {"status": "pending", "reason": "not packaged yet"}},
         "decisions": [], "limitations": [], "open_questions": [],
     }
+    subs = _subsystems(els)
+    if subs:
+        spec["limitations"].append(
+            f"{gref} is written for binary systems. This {len(els)}-component assessment uses it on the local multicomponent branch. "
+            "Decisions, steps and run cards are recorded as for a binary, but the evidence steps (" + ", ".join(GATHER_STEPS) + ") and the "
+            "fit chain are run by the system's own tools and recorded with record_external_run. Lower-order sub-systems: " + ", ".join(subs) + ".")
     st = {"assessment": assessment_id, "system": system, "created": runner.now(), "current_spec": "", "versions": [],
           "steps": {}, "decision_requests": [], "bindings": {}, "events": [], "evidence_gaps": []}
     if phases:
@@ -361,11 +384,21 @@ def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[
                  evidence=[], blocks=["write_plan"], step=None)
     _request(st, "unaries", "Which TDB supplies the SGTE unaries of every end-member (sha256 recorded)? Answer with bindings={'unaries_tdb': path}.",
              evidence=[], blocks=["build_oneshot_tdb"], step=None)
+    if subs:
+        _request(st, "subsystems", f"Which description of each lower-order sub-system ({', '.join(subs)}) enters the assessment, with its sha256, "
+                 "and where is the written evaluation of each (loads, unaries match SGTE, its own published results reproduce, agrees with "
+                 "independent measurements, consistent with our phases)? Answer with bindings={'subsystem_tdbs': {system: path}}.",
+                 evidence=[], blocks=["build_oneshot_tdb"], step=None)
     _write_plan_draft(root, spec, st)
     save_state(root, st)
     return {"assessment": assessment_id, "run_root": str(root), "protocol": str(root / st["current_spec"]), "version": ver,
             "open_decision_requests": [r for r in st["decision_requests"] if r["status"] == "open"],
             "plan_draft": str(root / "PLAN.md"), "next": next_step(assessment_id)["next"], "validation": validate_assessment(assessment_id)}
+
+
+def _subsystems(els: list[str]) -> list[str]:
+    """Every lower-order sub-system of two or more elements, smallest first (AL-C-TI -> AL-C, AL-TI, C-TI)."""
+    return ["-".join(c) for k in range(2, len(els)) for c in itertools.combinations(els, k)]
 
 
 def _step_of(gen: dict, sid: str) -> dict:
@@ -476,6 +509,23 @@ def _preview(root: Path, spec: dict, st: dict, classes: list[str], odir: Path) -
             "next": "record_decision(assessment, <model_phases request>, decision, who, why, bindings={'phases': [...]}), then gather_evidence again"}
 
 
+def _multi_report(spec: dict, st: dict, classes: list[str], odir: Path) -> dict:
+    """Above two components nothing is frozen. Reports what ORCHID holds for the system and each lower-order sub-system."""
+    els = elements_of(spec["system"])
+    holdings, gaps = [], []
+    for sysname in [spec["system"]] + _subsystems(els):
+        found, g = _scan(odir, sysname, classes)
+        gaps += g
+        holdings.append({"system": sysname, "n_files": len(found),
+                         "by_class": {c: sum(1 for x in found if x[0] == c) for c in classes},
+                         "phases_in_data": sorted({ph for _, _, d in found for ph in (d.get("phases") or [])}),
+                         "files": [tilde(f) for _, f, _ in found]})
+    return {"assessment": st["assessment"], "preview": True, "frozen": False, "components": len(els),
+            "reason": MULTI_NOTE, "orchid_holdings": holdings, "gaps": gaps,
+            "orchid_context": _orchid_context(spec["system"], odir),
+            "next": "build the evidence bundle with the system's own tool, then record_external_run for each of " + ", ".join(GATHER_STEPS)}
+
+
 def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, orchid_data_dir: str | None = None) -> dict:
     root = _root_of(assessment)
     p, spec = current_spec(root)
@@ -484,7 +534,9 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     classes = evidence_classes or sel.get("evidence_classes") or ["experimental", "invariants"]
     odir = _orchid_dir(orchid_data_dir)
     beb = __import__("sage_mcp.repo", fromlist=["evidence_bundle_module"]).evidence_bundle_module()
-    system, el = spec["system"], spec["system"].split("-")[1]
+    if len(elements_of(spec["system"])) > 2:
+        return _multi_report(spec, st, classes, odir)
+    system, el = spec["system"], elements_of(spec["system"])[1]
     phases = st["bindings"].get("phases")
     if not phases:
         return _preview(root, spec, st, classes, odir)
