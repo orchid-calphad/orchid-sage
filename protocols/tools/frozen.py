@@ -132,7 +132,7 @@ def refuse(who, bad):
     print(msg, file=sys.stderr)
     log = os.environ.get("ORCHID_FROZEN_LOG")
     if log:
-        with open(log, "a") as f:
+        with open(log, "a", encoding="utf-8", newline="\n") as f:
             f.write(msg + "\n")
     sys.exit(EXIT_FROZEN)
 

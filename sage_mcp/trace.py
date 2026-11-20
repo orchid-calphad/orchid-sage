@@ -129,5 +129,5 @@ def record(root: Path, st: dict, keys: list[str], status: Literal["traced", "com
         st["traces"][k] = dict(item, **({"supersedes": prev} if prev else {}))
     out = root / "traces" / "TRACES.json"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(json.dumps({"rule": RULE, "traces": st["traces"]}, indent=1, ensure_ascii=False), encoding="utf-8")
+    out.write_text(json.dumps({"rule": RULE, "traces": st["traces"]}, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"recorded": len(keys), "status": status, "file": str(out), "summary": summary(root, st)["counts"]}

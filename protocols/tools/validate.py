@@ -65,7 +65,7 @@ def public_copies():
     global _PUB
     if _PUB is None:
         m = ROOT.parent / "PUBLIC_SUBSTITUTES.json"
-        _PUB = {r["path"]: (r["original_sha256"], r["sanitized_sha256"]) for r in json.loads(m.read_text())["files"]} if m.is_file() else {}
+        _PUB = {r["path"]: (r["original_sha256"], r["sanitized_sha256"]) for r in json.loads(m.read_text(encoding="utf-8"))["files"]} if m.is_file() else {}
     return _PUB
 
 
@@ -78,7 +78,7 @@ def frozen_version(f, sha):
         if not q.is_file():
             continue
         h = op.sha256_file(q)
-        if h == sha or (inside_checkout(q) and public_copies().get(str(q.resolve().relative_to(ROOT.parent.resolve()))) == (sha, h)):
+        if h == sha or (inside_checkout(q) and public_copies().get(q.resolve().relative_to(ROOT.parent.resolve()).as_posix()) == (sha, h)):
             return q                                          # the frozen version, or (public export) its public copy
     return None
 
@@ -114,7 +114,7 @@ def check_refs(doc, rel, errs, warns, stats):
             continue
         h = op.sha256_file(f)
         try:
-            pc = public_copies().get(str(f.resolve().relative_to(ROOT.parent.resolve())))
+            pc = public_copies().get(f.resolve().relative_to(ROOT.parent.resolve()).as_posix())
         except ValueError:
             pc = None
         fv = frozen_version(f, r["sha256"]) if h != r["sha256"] else None
@@ -191,7 +191,7 @@ def open_question_ids():
     f = ROOT / "OPEN_QUESTIONS.md"
     if not f.exists():
         return set()
-    return set(re.findall(r"^##+\s+(Q\d+)\b", f.read_text(), flags=re.M))
+    return set(re.findall(r"^##+\s+(Q\d+)\b", f.read_text(encoding="utf-8"), flags=re.M))
 
 
 def main():
@@ -216,7 +216,7 @@ def main():
         for e in V.validate(d, SCHEMA_OF[t]):
             errs.append(f"{rel}: schema: {e}")
         check_refs(d, rel, errs, warns, stats)
-        text = f.read_text()
+        text = f.read_text(encoding="utf-8")
         if HOME_RE.search(text):
             warns.append(f"{rel}: contains an absolute home path ({HOME_RE.search(text).group(0)}...); write ~ instead")
         for q in d.get("open_questions", []) if isinstance(d, dict) else []:
@@ -295,13 +295,13 @@ def main():
         stp = op.expand(b_["states"]["path"]) if b_.get("states") else None
         if not stp or not stp.exists():
             continue
-        S = json.loads(stp.read_text()); cov = S.get("link_coverage") or {}
+        S = json.loads(stp.read_text(encoding="utf-8")); cov = S.get("link_coverage") or {}
         chk = op.expand((cov.get("orchid_checkout") or {}).get("path") or localpaths.setting("orchid_data_next"))
         lit = set()
         for f in (chk / "literature/systems").glob("*.json") if chk.exists() else []:
             if any(f.name.startswith(sy) for sy in {d.get("system", "")}):
                 try:
-                    lit |= {r["id"] for r in json.loads(f.read_text()).get("records", [])}
+                    lit |= {r["id"] for r in json.loads(f.read_text(encoding="utf-8")).get("records", [])}
                 except Exception:  # noqa: BLE001
                     pass
         n_present = n_missing = n_provisional = 0

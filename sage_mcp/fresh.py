@@ -59,11 +59,11 @@ def today() -> str:
 
 # ------------------------------------------------------------------ state
 def load_state(root: Path) -> dict:
-    return json.loads((root / "sage_state.json").read_text())
+    return json.loads((root / "sage_state.json").read_text(encoding="utf-8"))
 
 
 def save_state(root: Path, st: dict) -> None:
-    (root / "sage_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False))
+    (root / "sage_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
 
 
 def event(st: dict, kind: str, **detail: Any) -> None:
@@ -81,7 +81,7 @@ def _write_spec(root: Path, spec: dict, st: dict, reason: str, new_version: bool
     if new_version and p.exists():
         raise SageError(f"version {spec['version']} already exists ({p}); versions are never overwritten")
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+    p.write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     st["current_spec"] = str(p.relative_to(root))
     if new_version:
         st["versions"].append({"version": spec["version"], "path": str(p.relative_to(root)), "created": runner.now(), "reason": reason})
@@ -108,7 +108,7 @@ def validate_assessment(assessment: str) -> dict:
     real += _check_order(spec)
     cards = []
     for c in sorted((root / "run_cards").glob("*.json")):
-        ce = schema_errors(json.loads(c.read_text()))
+        ce = schema_errors(json.loads(c.read_text(encoding="utf-8")))
         cards.append({"run_card": c.name, "ok": not ce, "errors": ce[:5]})
         real += [f"run_cards/{c.name}: {x}" for x in ce]
     return {"assessment": assessment, "protocol": tilde(p), "version": spec["version"], "ok": not real, "errors": real,
@@ -417,7 +417,7 @@ def _request(st: dict, key: str, question: str, evidence: list[str], blocks: lis
 
 
 def _write_plan_draft(root: Path, spec: dict, st: dict) -> Path:
-    tpl = (repo_root() / "protocols" / "templates" / "PLAN.template.md").read_text()
+    tpl = (repo_root() / "protocols" / "templates" / "PLAN.template.md").read_text(encoding="utf-8")
     b = st["bindings"]
     gen_ref = spec["instantiates"][0]["protocol"]
     t = tpl.replace("<System>", spec["system"]).replace("<date>", today()).replace("orchid-calphad-fit@<version>", gen_ref)
@@ -432,7 +432,7 @@ def _write_plan_draft(root: Path, spec: dict, st: dict) -> Path:
     if dec:
         extra += ["", "## Decisions recorded"] + dec
     p = root / "PLAN.md"
-    p.write_text(t + "\n".join(extra) + "\n")
+    p.write_text(t + "\n".join(extra) + "\n", encoding="utf-8", newline="\n")
     return p
 
 
@@ -489,7 +489,7 @@ def _scan(odir: Path, system: str, classes: list[str]) -> tuple[list[tuple[str, 
             gaps.append({"what": f"no ORCHID espei/{cls}/{system} directory", "effect": "that evidence class contributes nothing"})
             continue
         for f in sorted(d.glob("*.json")):
-            found.append((cls, f, json.loads(f.read_text())))
+            found.append((cls, f, json.loads(f.read_text(encoding="utf-8"))))
     return found, gaps
 
 
@@ -560,14 +560,14 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
             gaps.append({"what": f"no ORCHID espei/{cls}/{system} directory", "effect": "that evidence class contributes nothing"})
             continue
         for f in sorted(d.glob("*.json")):
-            obj = json.loads(f.read_text())
+            obj = json.loads(f.read_text(encoding="utf-8"))
             if beb.long_strings(obj):
                 held.append({"original": tilde(f), "reason": "contains a source-text field longer than 500 characters"}); continue
             g = _group(obj)
             dst = ev / "files" / g / f"{cls}__{f.name}"
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(f, dst)
-            txt = dst.read_text()
+            txt = dst.read_text(encoding="utf-8")
             man.append({"path": str(dst.relative_to(ev)), "sha256": sha256_file(dst), "original": tilde(f), "kind": "espei_dataset",
                         "orchid_ids": sorted(set(beb.ORC.findall(txt)))})
             data_refs.append({"path": tilde(dst), "sha256": sha256_file(dst), "storage_class": "public", "role": f"data file read by the objective ({g}; {cls})"})
@@ -622,7 +622,7 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
                  "builder": "sage_mcp gather_evidence (fit_protocol item 8, certainty-tiers@2; sidecar keys of espei/SCHEMA.md)", "cells": cells}
         hp = ev / "hinge" / "exclusions_every_state.json"
         hp.parent.mkdir(parents=True, exist_ok=True)
-        hp.write_text(json.dumps(hinge, indent=1))
+        hp.write_text(json.dumps(hinge, indent=1), encoding="utf-8", newline="\n")
         man.append({"path": "hinge/exclusions_every_state.json", "sha256": sha256_file(hp), "original": "derived by sage_mcp gather_evidence", "kind": "hinge_sidecar",
                     "orchid_ids": sorted({c["orchid"]["observation_id"] for c in cells if c["orchid"]["observation_id"]})})
     gaps.append({"what": "no Y25 state-id registry read", "effect": "states carry ORC ids, not state ids (state_ids empty)"})
@@ -635,10 +635,10 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     tiers = {"zpf": {k: sum(1 for s in states if (s.get("zpf_certainty") or {}).get("certainty_tier") == k) for k in beb.TIER},
              "exclusions": {k: sum(1 for s in states for e in s.get("exclusions", []) if e["certainty_tier"] == k) for k in beb.TIER}}
     (ev / "states.json").write_text(json.dumps({"artifact": spec["id"], "certainty_rule": beb.RULE2, "tier_energy_J_per_mol_atom": beb.TIER,
-                                                 "counts": tiers, "n_states": len(states), "states": states}, indent=1))
+                                                 "counts": tiers, "n_states": len(states), "states": states}, indent=1), encoding="utf-8", newline="\n")
     man.append({"path": "states.json", "sha256": sha256_file(ev / "states.json"), "original": "derived by sage_mcp gather_evidence", "kind": "states", "orchid_ids": []})
     ctx = _orchid_context(system, odir)
-    (ev / "orchid_context.json").write_text(json.dumps(ctx, indent=1))
+    (ev / "orchid_context.json").write_text(json.dumps(ctx, indent=1), encoding="utf-8", newline="\n")
     lines = sorted(f"{m['sha256']}  {m['path']}" for m in man)
     bundle = {"bundle": f"{spec['id']}-evidence", "version": "1.0.0", "created": runner.now(),
               "builder": "sage_mcp.fresh.gather_evidence (format of protocols/tools/build_evidence_bundle.py)",
@@ -646,7 +646,7 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
               "files": man, "held": held, "counts": {"files": len(man), "states": len(states), "tiers": tiers,
                                                       "orchid_ids": len({i for m in man for i in m["orchid_ids"]})},
               "bundle_sha256": hashlib.sha256(("\n".join(lines) + "\n").encode()).hexdigest()}
-    (ev / "MANIFEST.json").write_text(json.dumps(bundle, indent=1))
+    (ev / "MANIFEST.json").write_text(json.dumps(bundle, indent=1), encoding="utf-8", newline="\n")
     try:
         commit = subprocess.run(["git", "-C", str(odir), "rev-parse", "HEAD"], capture_output=True, text=True, timeout=20).stdout.strip() or "not a git checkout"
     except Exception:  # noqa: BLE001
@@ -662,11 +662,11 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     es["bundle"] = {"manifest": es["manifest"], "states": {"path": tilde(ev / "states.json"), "sha256": sha256_file(ev / "states.json"), "storage_class": "local"},
                     "bundle_sha256": bundle["bundle_sha256"]}
     sr = [{"what": f"{m['path']}", "note": "single-reader ORCHID extraction (tag single_reader_*)", "record_ids": [i for i in m["orchid_ids"] if re.fullmatch(r"ORC-[0-9A-Z]{10}", i)][:20]}
-          for m in man if m["kind"] == "espei_dataset" and "single_reader" in (ev / m["path"]).read_text()]
+          for m in man if m["kind"] == "espei_dataset" and "single_reader" in (ev / m["path"]).read_text(encoding="utf-8")]
     es["single_reader_flags"] = sr
     st["evidence_gaps"] = gaps
     log = root / "logs" / "gather_evidence.log"
-    log.write_text(json.dumps({"classes": classes, "counts": bundle["counts"], "gaps": gaps}, indent=1))
+    log.write_text(json.dumps({"classes": classes, "counts": bundle["counts"], "gaps": gaps}, indent=1), encoding="utf-8", newline="\n")
     rec = {"command": f"sage_mcp gather_evidence(assessment={assessment!r}, evidence_classes={classes})", "returncode": 0,
            "started": runner.now(), "finished": runner.now(), "wall_s": None, "log": str(log)}
     done = list(GATHER_STEPS)
@@ -735,7 +735,7 @@ def run_fresh_step(assessment: str, step_id: str, confirm: bool = False, allow_l
             ev = []
             for owner in _supply_owners(_step_def(spec, step_id)):
                 for c in st["steps"].get(owner, {}).get("run_cards", []):
-                    ev += [o["path"] for o in json.loads((root / c).read_text()).get("outputs", [])]
+                    ev += [o["path"] for o in json.loads((root / c).read_text(encoding="utf-8")).get("outputs", [])]
             rq = _request(st, step_id, f"{x['name']}. Rule: {x['decision_rule']}", evidence=ev,
                           blocks=[y for y in seq if step_id in _supply_owners(_step_def(spec, y))] + [step_id])
             save_state(root, st)
@@ -811,7 +811,7 @@ def _job_spec(root: Path, spec: dict, st: dict, x: dict, backend: str) -> dict:
            "after": "record the finished run with record_external_run(assessment, step, run_card) (schema-valid run card with outputs and hashes)",
            "general_compute": gen.get("compute")}
     jf = root / "jobs" / f"{x['id']}.json"
-    jf.write_text(json.dumps(job, indent=1))
+    jf.write_text(json.dumps(job, indent=1), encoding="utf-8", newline="\n")
     ent = st["steps"].setdefault(x["id"], {"status": "pending", "run_cards": [], "superseded_run_cards": []})
     ent["status"] = "job_spec_written"
     event(st, "job_spec_written", step=x["id"], backend=be["name"])
@@ -825,7 +825,7 @@ def record_external_run(assessment: str, step_id: str, run_card: str) -> dict:
     p, spec = current_spec(root)
     st = load_state(root)
     src = Path(os.path.expanduser(run_card))
-    card = json.loads(src.read_text())
+    card = json.loads(src.read_text(encoding="utf-8"))
     errs = schema_errors(card)
     if errs:
         raise SageError(f"refused: the run card is not schema-valid: {errs[:5]}")
@@ -1110,7 +1110,7 @@ def propose_general_change(change: dict, who: str, why: str, bump_kind: str | No
     d = state.general_dir()
     d.mkdir(parents=True, exist_ok=True)
     out = d / f"{key}.json"
-    out.write_text(json.dumps(new, indent=1, ensure_ascii=False))
+    out.write_text(json.dumps(new, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"proposed": key, "path": str(out), "bump": kind, "from": f"{g['id']}@{g['version']}", "changelog": new["decisions"][-1],
             "note": "specific protocols keep their version until migrate(assessment, to_version)"}
 
@@ -1197,7 +1197,7 @@ def package(assessment: str) -> dict:
         warnings.append("comparison_only is a recorded disposition; review fit selection separately (weights are unchanged)")
     report = root / "traces" / "TRACEABILITY.json"
     report.parent.mkdir(exist_ok=True)
-    report.write_text(json.dumps(tr, indent=1, ensure_ascii=False), encoding="utf-8")
+    report.write_text(json.dumps(tr, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     trace_report = {"traceability": tr, "traceability_status": "WARN" if warnings else "PASS",
                     "warnings": warnings, "traceability_report": str(report)}
     if missing:

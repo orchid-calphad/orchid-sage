@@ -84,7 +84,7 @@ class SchemaValidator:
 
     def _file(self, name):
         if name not in self.cache:
-            self.cache[name] = json.loads((self.dir / name).read_text())
+            self.cache[name] = json.loads((self.dir / name).read_text(encoding="utf-8"))
         return self.cache[name]
 
     def _resolve(self, ref, base):

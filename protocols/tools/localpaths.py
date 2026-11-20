@@ -57,7 +57,7 @@ def config():
     global _cfg
     if _cfg is None:
         p = Path(os.environ.get("ORCHID_SAGE_CONFIG") or REPO / "local" / "config.json")
-        _cfg = json.loads(p.read_text()) if p.is_file() else {}
+        _cfg = json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
     return _cfg
 
 

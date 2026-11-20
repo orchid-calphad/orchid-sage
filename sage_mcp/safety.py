@@ -81,7 +81,7 @@ def create_fresh_root(run_root: str, mode: str, ident: str, allow_existing_marke
 
 def write_marker(r: Path, mode: str, ident: str) -> None:
     (r / MARKER).write_text(json.dumps({"created_by": "sage_mcp", "mode": mode, "protocol_or_assessment": ident,
-                                        "created": time.strftime("%Y-%m-%dT%H:%M:%S%z")}, indent=1))
+                                        "created": time.strftime("%Y-%m-%dT%H:%M:%S%z")}, indent=1), encoding="utf-8", newline="\n")
 
 
 def require_marked_root(run_root: str) -> tuple[Path, dict]:
@@ -89,7 +89,7 @@ def require_marked_root(run_root: str) -> tuple[Path, dict]:
     m = r / MARKER
     if not m.is_file():
         raise SageError(f"refused: {r} is not a run root created by sage_mcp (no {MARKER}); stage it first")
-    return r, json.loads(m.read_text())
+    return r, json.loads(m.read_text(encoding="utf-8"))
 
 
 WRITE_FLAGS = {"--out", "--report", "-o", "--output", "--root"}

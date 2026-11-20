@@ -130,7 +130,7 @@ def render_md(d, general=None):
 def md_to_html(md, title):
     """Small Markdown subset -> HTML (headings, lists, tables, quotes, code spans, bold, italics)."""
     import re
-    pal = json.loads((Path(__file__).parent / "palette.json").read_text())
+    pal = json.loads((Path(__file__).parent / "palette.json").read_text(encoding="utf-8"))
     u, k = pal["ui"]["light"], pal["ui"]["dark"]
 
     def inline(s):
@@ -292,7 +292,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
         for c in d.get("code") or []:
             mf = REPO / str(c.get("path", "")) / "MANIFEST.json"
             if str(c.get("path", "")).startswith(f"assessments/{d['id']}/addendum-") and mf.exists():
-                for s_ in json.loads(mf.read_text()).get("crate_substitutes", []):
+                for s_ in json.loads(mf.read_text(encoding="utf-8")).get("crate_substitutes", []):
                     if op.sha256_file(REPO / s_["original"]) != s_["original_sha256"] or op.sha256_file(REPO / s_["replacement"]) != s_["replacement_sha256"]:
                         sys.exit(f"crate substitute {s_['original']} -> {s_['replacement']}: sha256 differs from {mf}")
                     subst[str((REPO / s_["original"]).resolve())] = s_; repl[str((REPO / s_["replacement"]).resolve())] = s_
@@ -315,7 +315,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
         mpath = op.expand(b_["manifest"]["path"]) if b_.get("manifest") else None
         if mpath is None or not mpath.exists():
             sys.exit("--pinned-evidence: the spec pins no evidence bundle manifest")
-        pin_ev = {str((mpath.parent / f["path"]).resolve()) for f in json.loads(mpath.read_text())["files"]} | {str(mpath.resolve())}
+        pin_ev = {str((mpath.parent / f["path"]).resolve()) for f in json.loads(mpath.read_text(encoding="utf-8"))["files"]} | {str(mpath.resolve())}
         if b_.get("intake"):
             ip = op.expand(b_["intake"]["path"]).resolve()
             v_ = ip.stem.split("@")[1] if "@" in ip.stem else None
@@ -382,7 +382,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                "instrument": {"@id": sp_rel}, "hadPlan": {"@id": f"#{g['id']}-step-{r['step']}" if f"#{g['id']}-step-{r['step']}" in graph else f"#{d['id']}-step-{r['step']}"},
                "actionStatus": {"@id": "http://schema.org/CompletedActionStatus" if r["status"] in ("accepted", "side_branch") else ("http://schema.org/FailedActionStatus" if r["status"] == "failed" else "http://schema.org/PotentialActionStatus")}}
         if r.get("run_card"):
-            rc_src = op.expand(r["run_card"]["path"]); rc = json.loads(rc_src.read_text())
+            rc_src = op.expand(r["run_card"]["path"]); rc = json.loads(rc_src.read_text(encoding="utf-8"))
             rel = add_file(rc_src, f"run_cards/{rc_src.name}", description=f"run card {r['run_id']}")
             act["subjectOf"] = {"@id": rel}
             if isinstance(rc.get("started"), str):
@@ -399,7 +399,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
     if reproduce_tree:  # run cards that execute this exact version but are not in its run sequence (checks after the freeze)
         seq = {op.expand(r['run_card']['path']).resolve() for r in d['run_sequence'] if r.get('run_card')}
         for rc_src in sorted((ROOT / 'run_cards').glob('*.json')):
-            rc = json.loads(rc_src.read_text())
+            rc = json.loads(rc_src.read_text(encoding="utf-8"))
             if rc_src.resolve() in seq or (rc.get('executes') or {}).get('specific_protocol') != f"{d['id']}@{d['version']}":
                 continue
             rel = add_file(rc_src, f'run_cards/{rc_src.name}', description=f"run card {rc.get('run_id')} (executes {d['id']}@{d['version']}; not in the run sequence)")
@@ -488,8 +488,8 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                                           "to its copy." if public else "") + "\n"), "build_crate.py")
     # self-check (--public: on the metadata as written, after sanitizing)
     if public:
-        graph = {e["@id"]: e for e in json.loads((out / "ro-crate-metadata.json").read_text())["@graph"][2:]}
-        parts = json.loads((out / "ro-crate-metadata.json").read_text())["@graph"][1]["hasPart"]
+        graph = {e["@id"]: e for e in json.loads((out / "ro-crate-metadata.json").read_text(encoding="utf-8"))["@graph"][2:]}
+        parts = json.loads((out / "ro-crate-metadata.json").read_text(encoding="utf-8"))["@graph"][1]["hasPart"]
     bad = [p["@id"] for p in parts if op.sha256_file(out / p["@id"]) != graph[p["@id"]]["sha256"]]
     leaked = [k for k, v in graph.items() if v.get("storageClass") == "restricted" and (out / Path(v["name"]).name).exists()]
     ids = set(graph) | {"./", "ro-crate-metadata.json"}
