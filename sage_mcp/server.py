@@ -184,6 +184,21 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     return _call(fresh.gather_evidence, assessment=assessment, evidence_classes=evidence_classes, orchid_data_dir=orchid_data_dir)
 
 
+def traceability(assessment: str) -> dict:
+    """Report local source checks alongside unchanged ORCHID evidence classes and provenance.
+    Missing checks produce a package warning, without blocking packaging."""
+    return _call(fresh.traceability, assessment=assessment)
+
+
+def record_trace(assessment: str, state_keys: list[str], status: Literal["traced", "comparison_only"], who: str, why: str,
+                 doi: str | None = None, page: str | None = None, locator: str | None = None, quote: str | None = None) -> dict:
+    """Record a named reader's source check (DOI, page and locator), or comparison_only with a reason.
+    Origin fields are recorded separately from the frozen bundle; evidence classes and fitting weights are unchanged.
+    A source can report its own work. state_keys are 'source_file#row' from traceability."""
+    return _call(fresh.record_trace, assessment=assessment, state_keys=state_keys, status=status, who=who, why=why,
+                 doi=doi, page=page, locator=locator, quote=quote)
+
+
 def next_step(assessment: str, nproc: int = 4) -> dict:
     """The next step of a fresh assessment (one-shot -> liquidus -> thermochemistry -> solid state + exclusions ->
     ambiguous structures -> checks -> ranking -> UQ -> package) with its bound command, inputs, compute class, mode
@@ -269,7 +284,7 @@ TOOLS: list[Callable[..., dict]] = [
     list_protocols, get_protocol, get_steps, get_step, get_run_cards, get_decisions, get_evidence_manifest, get_evidence_links, get_dashboard_data,
     get_open_questions, validate, verify_inputs, plan_reproduction, run_step, start_step, step_status, compare_outputs,
     new_assessment, gather_evidence, next_step, record_decision, record_external_run, modify_protocol, propose_general_change,
-    migrate, get_history, package, list_backends, compute_ids,
+    migrate, get_history, package, list_backends, compute_ids, traceability, record_trace,
 ]
 
 

@@ -47,6 +47,8 @@ PROFILES = [{"@id": "https://w3id.org/ro/wfrun/process/0.5"}, {"@id": "https://w
 
 # ------------------------------------------------------------------------------------------- rendering
 def _fr(r):
+    if isinstance(r, dict) and not r.get("path"):
+        return "not supplied"
     return f"`{r['path']}` (sha256 `{r['sha256'][:16]}…`, {r['storage_class']})" if isinstance(r, dict) and r.get("sha256") else (f"`{r['path']}`" if isinstance(r, dict) else str(r))
 
 
@@ -186,7 +188,7 @@ def person_id(p):
     return f"https://orcid.org/{p['orcid']}" if p.get("orcid") else "#person-" + p["name"].lower().replace(" ", "-")
 
 
-def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False, substitutes=False, reproduce_tree=False, public=False):
+def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False, substitutes=False, reproduce_tree=False, public=False, traceability_report=None):
     spec_path = Path(spec_path); out = Path(out)
     d = op.load_doc(spec_path)
     gen_path = op.expand(d["instantiates"][0]["file"]["path"]); g = op.load_doc(gen_path)
@@ -232,6 +234,9 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                                                                   ".tdb": "text/plain", ".pdf": "application/pdf", ".png": "image/png"}.get(dst.suffix, "application/octet-stream")}
         e.update(props); graph[rel] = e; parts.append({"@id": rel})
         return rel
+
+    if traceability_report is not None:
+        add_file(traceability_report, "evidence/TRACEABILITY.json", description="Local source checks and unchanged ORCHID evidence provenance")
 
     sp_rel = add_file(spec_path, f"protocol/{spec_path.name}", ("File", "SoftwareSourceCode", "ComputationalWorkflow", "HowTo"),
                       name=d["title"], version=d["version"], identifier=f"{d['id']}@{d['version']}", programmingLanguage={"@id": "#orchid-protocol-yaml"},
@@ -502,4 +507,5 @@ if __name__ == "__main__":
     else:
         fl = sys.argv[3:]
         sys.exit(0 if build(sys.argv[1], sys.argv[2], addenda="--addenda" in fl, decisions="--decisions" in fl, pinned_evidence="--pinned-evidence" in fl,
-                            substitutes="--substitutes" in fl, reproduce_tree="--reproduce-tree" in fl, public="--public" in fl) else 1)
+                            substitutes="--substitutes" in fl, reproduce_tree="--reproduce-tree" in fl, public="--public" in fl,
+                            traceability_report=fl[fl.index("--traceability-report") + 1] if "--traceability-report" in fl else None) else 1)

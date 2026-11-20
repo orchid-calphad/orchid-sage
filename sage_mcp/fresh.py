@@ -28,7 +28,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from . import backends, runner, safety, state
+from . import backends, runner, safety, state, trace
 from .repo import (
     SageError, find_protocol, general_protocols, iter_steps, load_doc, localpaths, orchidproto, repo_root, schema_errors,
     sha256_file, tilde, tools_dir,
@@ -296,7 +296,9 @@ def next_step(assessment: str, nproc: int = 4) -> dict:
             "job_spec": "run_step writes the GPU job spec for an executor; record the finished run with record_external_run",
             "internal": "run_step carries it out (server code)", "command": "run_step runs the bound command in the run root",
             "external": "run it with the system's own tool and record its run card with record_external_run"}[nxt["mode"]]
+    tr = trace.summary(_root_of(assessment), st)
     return {"assessment": assessment, "next": nxt, "how": what, "open_decision_requests": open_rq, "counts": counts,
+            "traceability": tr.get("counts") or tr["status"],
             "sequence": [{k: x[k] for k in ("id", "kind", "status", "mode")} | {"blocked": bool(x["blockers"])} for x in seq]}
 
 
@@ -570,10 +572,13 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
                         "orchid_ids": sorted(set(beb.ORC.findall(txt)))})
             data_refs.append({"path": tilde(dst), "sha256": sha256_file(dst), "storage_class": "public", "role": f"data file read by the objective ({g}; {cls})"})
             if obj.get("output") == "ZPF":
-                for s in beb.states_from_zpf(obj, dst.name, g, el):
+                new = beb.states_from_zpf(obj, dst.name, g, el)
+                for s in new:
                     s["source"] = "zpf"
-                    s["evidence_class"] = "assessed" if cls == "assessed" else s["evidence_class"]
-                    states.append(s)
+                    if cls == "assessed" and "evidence_class" not in beb.row_provenance(obj, s["row"]):
+                        s["evidence_class"] = "assessed"
+                trace.label_states(new, obj, cls)
+                states += new
     if not man:
         raise SageError(f"no ORCHID espei data for {system} in classes {classes} at {odir}")
     # exclusions at every observed state: declared phases minus the measured assemblage (fit_protocol item 8). Tiers are
@@ -676,10 +681,26 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     event(st, "evidence_gathered", classes=classes, files=len(man), states=len(states))
     save_state(root, st)
     return {"assessment": assessment, "preview": False, "bundle": tilde(ev / "MANIFEST.json"), "bundle_sha256": bundle["bundle_sha256"], "counts": bundle["counts"],
+            "traceability": trace.summary(root, st)["counts"],
             "held": held, "gaps": gaps, "steps_done": done, "orchid_context": ctx if "status" in ctx else {k: (len(v) if isinstance(v, list) else v) for k, v in ctx.items()},
             "not_done": {"partial_tielines": "no generic tool: the (i)/(ii) split is part of the system-specific build_data.py; states are labelled "
                                              "partial_tie_line in states.json but the datasets are not split",
                          "weights_from_sigma": "no generic tool (build_data.py writes the weights)", "data_consistency": "no generic tool (data_consistency.py)"}}
+
+
+def traceability(assessment: str) -> dict:
+    root = _root_of(assessment)
+    return {"assessment": assessment, **trace.summary(root, load_state(root))}
+
+
+def record_trace(assessment: str, state_keys: list[str], status: str, who: str, why: str, doi: str | None = None,
+                 page: str | None = None, locator: str | None = None, quote: str | None = None) -> dict:
+    root = _root_of(assessment)
+    st = load_state(root)
+    out = trace.record(root, st, state_keys, status, who, why, doi=doi, page=page, locator=locator, quote=quote)
+    event(st, "trace_recorded", status=status, states=len(state_keys), who=who)
+    save_state(root, st)
+    return {"assessment": assessment, **out}
 
 
 def _mark_done(root: Path, spec: dict, st: dict, sid: str, card: Path | None) -> None:
@@ -1167,15 +1188,28 @@ def package(assessment: str) -> dict:
     stale = [k for k, v in st["steps"].items() if v.get("status") == "stale"]
     if stale:
         missing.append(f"stale steps must be re-run first: {stale}")
+    tr = trace.summary(root, st)
+    warnings = []
+    if not tr["complete"]:
+        warnings.append(tr["reason"] if tr["status"] == "no_states" else
+                        f"{tr['counts']['untraced']} evidence states have no local source check; imported provenance retained")
+    if tr.get("counts", {}).get("comparison_only"):
+        warnings.append("comparison_only is a recorded disposition; review fit selection separately (weights are unchanged)")
+    report = root / "traces" / "TRACEABILITY.json"
+    report.parent.mkdir(exist_ok=True)
+    report.write_text(json.dumps(tr, indent=1, ensure_ascii=False), encoding="utf-8")
+    trace_report = {"traceability": tr, "traceability_status": "WARN" if warnings else "PASS",
+                    "warnings": warnings, "traceability_report": str(report)}
     if missing:
-        return {"packaged": False, "missing": missing}
+        return {"packaged": False, "missing": missing, **trace_report}
     f = Path(final)
     spec["artifact"]["file"] = {"path": tilde(f), "sha256": sha256_file(f), "storage_class": "local", "role": "final pick"}
     _write_spec(root, spec, st, "artifact pinned", new_version=False)
     save_state(root, st)
-    out = {"packaged": True, "artifact": spec["artifact"]["file"]}
-    res = subprocess.run([sys.executable, str(tools_dir() / "build_crate.py"), str(root / st["current_spec"]), str(root / "crate")],
+    out = {"packaged": True, "artifact": spec["artifact"]["file"], **trace_report}
+    res = subprocess.run([sys.executable, str(tools_dir() / "build_crate.py"), str(root / st["current_spec"]), str(root / "crate"), "--traceability-report", str(report)],
                          capture_output=True, text=True, cwd=root)
+    out["packaged"] = res.returncode == 0
     out["crate"] = {"returncode": res.returncode, "dir": str(root / "crate"), "log_tail": (res.stdout + res.stderr)[-800:]}
     out["dashboard"] = {"status": "pending", "reason": ("extract_dashboard_data.py knows only the cuzr and crni campaigns; an assessment_results "
                                                         "document for a fresh assessment needs its step results (SCHEMA_GAPS G7)")}

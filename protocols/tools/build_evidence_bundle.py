@@ -207,6 +207,20 @@ def vertex_x(v, elem):
     raise ValueError(f"ZPF vertex {v!r}: expected one component, cannot convert to x({elem})")
 
 
+def row_provenance(d, i):
+    """Copy canonical provenance with observation fields taking precedence over file metadata."""
+    import copy
+    meta = d.get("orchid") or {}
+    obs = meta.get("observations") or []
+    row = obs[i] if i < len(obs) and isinstance(obs[i], dict) else {}
+    out = {}
+    for source in (meta, d, row):
+        for key in ("evidence_class", "origin", "cited_sources", "paper"):
+            if key in source:
+                out[key] = copy.deepcopy(source[key])
+    return out
+
+
 def states_from_zpf(d, fname, group, elem):
     out = []
     T = d["conditions"]["T"]; T = T if isinstance(T, list) else [T]
@@ -237,7 +251,7 @@ def states_from_zpf(d, fname, group, elem):
         out.append({"source_file": f"{group}/{fname}", "row": i, "kind": kind, "T_K": float(t), "x": x, "element": elem,
                     "expected": sorted(v[0] for v in verts), "vertices": verts,
                     "orchid_ids": rid, "sigma_T_K": sT, "sigma_x": sx, "sigma_basis": basis, "evidence_class": "assessed" if "assessed" in fname else ("derived" if "derived" in fname else "experimental"),
-                    "reference": str(d.get("reference", ""))[:200]})
+                    "reference": str(d.get("reference", ""))[:200], **row_provenance(d, i)})
     return out
 
 
@@ -353,7 +367,7 @@ def classify(states, single_sources=None):
         if s.get("x") is None:
             s["zpf_certainty"] = {"certainty_tier": "uncertain", "energy_scale_J_per_mol_atom": 100, "certainty_basis": "no composition"}
             continue
-        assessed = "assessed" in s["source_file"] or s.get("evidence_class") == "assessed"
+        assessed = "assessed" in s["source_file"] or s.get("evidence_class") in ("assessed", "assessed_phase_diagram")
         # ZPF tier of the phases present
         if len(s["expected"]) >= 2 or s.get("kind") == "partial_tie_line":
             rep = [o for o in states if o is not s and o["expected"] == s["expected"] and o.get("x") is not None and src(o) != src(s)
