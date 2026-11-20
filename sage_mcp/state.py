@@ -27,7 +27,7 @@ def _registry_path() -> Path:
 
 def registry() -> dict:
     p = _registry_path()
-    return json.loads(p.read_text()) if p.is_file() else {}
+    return json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
 
 
 def register(assessment_id: str, run_root: Path) -> None:
@@ -36,7 +36,7 @@ def register(assessment_id: str, run_root: Path) -> None:
         raise SageError(f"assessment {assessment_id!r} already exists at {reg[assessment_id]}")
     reg[assessment_id] = str(run_root)
     state_dir().mkdir(parents=True, exist_ok=True)
-    _registry_path().write_text(json.dumps(reg, indent=1, sort_keys=True))
+    _registry_path().write_text(json.dumps(reg, indent=1, sort_keys=True), encoding="utf-8", newline="\n")
 
 
 def resolve(assessment: str) -> Path:

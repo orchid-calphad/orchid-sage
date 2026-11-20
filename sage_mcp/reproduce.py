@@ -231,7 +231,7 @@ def get_evidence_manifest(assessment: str, kind: str | None = None, limit: int =
     man_p = latest_manifest(ev)
     if man_p is None:
         return {"error": f"no evidence bundle at {tilde(ev)} (run gather_evidence for a fresh assessment)"}
-    m = json.loads(man_p.read_text())
+    m = json.loads(man_p.read_text(encoding="utf-8"))
     files = [f for f in m["files"] if kind in (None, "", f.get("kind"))]
     lines = sorted(f"{f['sha256']}  {f['path']}" for f in m["files"])
     import hashlib  # noqa: PLC0415
@@ -263,9 +263,9 @@ def get_evidence_links(assessment: str, link: str | None = None, reason: str | N
     man_p = latest_manifest(ev)
     if man_p is None:
         return {"error": f"no evidence bundle at {tilde(ev)}"}
-    m = json.loads(man_p.read_text())
+    m = json.loads(man_p.read_text(encoding="utf-8"))
     sp = ev / (f"states@{m['version']}.json" if "@" in man_p.name else "states.json")
-    S = json.loads(sp.read_text())
+    S = json.loads(sp.read_text(encoding="utf-8"))
     cov = S.get("link_coverage")
     rows = []
     for i, s_ in enumerate(S["states"]):
@@ -296,7 +296,7 @@ def get_dashboard_data(assessment: str, section: str | None = None, max_items: i
         p = repo_root() / "protocols" / "dashboards" / name / "dashboard_data.json"
     if not p.is_file():
         return {"error": f"no dashboard data at {tilde(p)}"}
-    d = json.loads(p.read_text())
+    d = json.loads(p.read_text(encoding="utf-8"))
     out: dict[str, Any] = {"path": tilde(p), "sha256": sha256_file(p), "id": d.get("id"), "specific_protocol": d.get("specific_protocol")}
     if not section:
         out["sections"] = {k: {"type": type(v).__name__, "items": len(v) if isinstance(v, (list, dict)) else None,
@@ -321,7 +321,7 @@ def get_dashboard_data(assessment: str, section: str | None = None, max_items: i
 
 def get_open_questions(ids: list[str] | None = None) -> dict:
     p = repo_root() / "protocols" / "OPEN_QUESTIONS.md"
-    text = p.read_text()
+    text = p.read_text(encoding="utf-8")
     parts = re.split(r"^###\s+(Q\d+)\s*$", text, flags=re.M)
     qs = []
     group = None
@@ -389,7 +389,7 @@ def verify_inputs(protocol: str, detail: bool = False) -> dict:
     bundles = []
     for m in ((d.get("reproduce") or {}).get("stage") or {}).get("manifests", []):
         mp = repo_root() / m
-        mm = json.loads(mp.read_text())
+        mm = json.loads(mp.read_text(encoding="utf-8"))
         bad = [f["path"] for f in mm["files"] if not (mp.parent / f["path"]).is_file() or sha256_file(mp.parent / f["path"]) != f["sha256"]]
         bundles.append({"manifest": m, "files": len(mm["files"]), "failing": bad, "ok": not bad})
     lp = localpaths()
@@ -427,7 +427,7 @@ def _measured_wall(d: dict) -> dict:
     out = {}
     for rep in sorted((repo_root() / "protocols" / "reproduce").glob("*/run_report.json")):
         try:
-            r = json.loads(rep.read_text())
+            r = json.loads(rep.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             continue
         if r.get("specific_protocol", "").split("@")[0] == d["id"]:
@@ -457,7 +457,7 @@ def repro_items(d: dict) -> list[dict]:
     spec_ids = {it["id"] for it in rp.get("plan", [])}   # an item the specific protocol declares wins over a binding
     man_p = adir / "evidence" / "MANIFEST.json"
     if man_p.is_file() and "evaluate_states" not in spec_ids:
-        man = {f["path"]: f["sha256"] for f in json.loads(man_p.read_text())["files"]}
+        man = {f["path"]: f["sha256"] for f in json.loads(man_p.read_text(encoding="utf-8"))["files"]}
         art = [p for p in man if p.startswith("artifact/") and p.endswith(".tdb")]
         if art and "states.json" in man and "states_evaluated.json" in man:
             tdb = Path(art[0]).name
@@ -478,7 +478,7 @@ def repro_items(d: dict) -> list[dict]:
     snap = next((c for c in d.get("code", []) if c.get("id") == "snapshot"), {})
     if rels and "tdb_header" not in spec_ids:
         ref = rels[0]
-        m = re.search(r"^\$ orchid release:\s+(.*)$", ref.read_text(errors="replace"), flags=re.M)
+        m = re.search(r"^\$ orchid release:\s+(.*)$", ref.read_text(errors="replace", encoding="utf-8"), flags=re.M)
         release = m.group(1).strip() if m else "unreleased"
         art_src = expand(d["artifact"]["file"]["path"])
         items.append({
@@ -553,7 +553,7 @@ def pfp_mismatch(pfp: str, d: dict | None = None) -> list[str]:
         return ["pin file missing"]
     root = Path(os.path.expanduser(pfp)).resolve().parent
     bad = []
-    for line in pin.read_text().splitlines():
+    for line in pin.read_text(encoding="utf-8").splitlines():
         if "  " not in line:
             continue
         h, rel_ = line.split("  ", 1)
@@ -676,7 +676,7 @@ def run_step(protocol: str, step_id: str, run_root: str, confirm: bool = False, 
             raise SageError(f"staging failed: {res.stdout[-500:]} {res.stderr[-500:]}")
         safety.write_marker(r, "reproduce", f"{d['id']}@{d['version']}")
         (r / "logs").mkdir(exist_ok=True)
-        (r / "logs" / "stage.log").write_text(res.stdout + res.stderr)
+        (r / "logs" / "stage.log").write_text(res.stdout + res.stderr, encoding="utf-8", newline="\n")
         rec = {"command": " ".join(shlex.quote(c) for c in cmd), "returncode": 0, "started": started, "finished": runner.now(),
                "wall_s": None, "log": str(r / "logs" / "stage.log")}
         card = _write_item_card(r, d, it, rec, sys.executable, [], [])
@@ -690,7 +690,7 @@ def run_step(protocol: str, step_id: str, run_root: str, confirm: bool = False, 
         res = subprocess.run([py, "-I", "-c", d["reproduce"]["environment_check"]["code"]], capture_output=True, text=True)
         got = res.stdout.strip()
         (r / "logs").mkdir(exist_ok=True)
-        (r / "logs" / "environment_check.log").write_text(res.stdout + res.stderr)
+        (r / "logs" / "environment_check.log").write_text(res.stdout + res.stderr, encoding="utf-8", newline="\n")
         ok = got == it["expected_stdout"]
         rec = {"command": f"{py} -I -c <environment_check.code>", "returncode": 0 if ok else 1, "started": runner.now(), "finished": runner.now(),
                "wall_s": None, "log": str(r / "logs" / "environment_check.log")}
@@ -773,7 +773,7 @@ def _finalize_job(r: Path, d: dict, it: dict, st: dict) -> dict:
            "log_tail": rec["log_tail"], "outputs": [{"path": str(o.relative_to(r)), "exists": o.is_file()} for o in outs],
            "run_card": str(card), "detached": True, "next": "compare_outputs(protocol, run_root)",
            **({"note": job["pin_note"]} if job.get("pin_note") else {})}
-    runner.job_files(r, it["id"])["recorded"].write_text(json.dumps({**res, "recorded": runner.now()}, indent=1))
+    runner.job_files(r, it["id"])["recorded"].write_text(json.dumps({**res, "recorded": runner.now()}, indent=1), encoding="utf-8", newline="\n")
     return res
 
 
@@ -831,7 +831,7 @@ def compare_outputs(protocol: str, run_root: str, python: str | None = None) -> 
     p, d = find_protocol(protocol)
     r, _ = safety.require_marked_root(run_root)
     items = repro_items(d)
-    ran = {json.loads(c.read_text())["run_id"].split(f"{d['id']}-", 1)[-1] for c in (r / "run_cards").glob("*.json")}
+    ran = {json.loads(c.read_text(encoding="utf-8"))["run_id"].split(f"{d['id']}-", 1)[-1] for c in (r / "run_cards").glob("*.json")}
     checks = []
     plan_ids = []
     for it in items:
@@ -856,7 +856,7 @@ def compare_outputs(protocol: str, run_root: str, python: str | None = None) -> 
         res = subprocess.run([sys.executable, str(tools_dir() / "orchid_reproduce.py"), str(p), "--root", str(r), "--compare-only",
                               "--only", ",".join(plan_ids), "--python", py, "--report", str(rep)], capture_output=True, text=True)
         if rep.is_file():
-            plan_report = json.loads(rep.read_text())
+            plan_report = json.loads(rep.read_text(encoding="utf-8"))
             for itr in plan_report.get("items", []):
                 for c in itr.get("checks", []):
                     checks.append({"item": itr["id"], "rule": c.get("check"), "path": c.get("path"), "pass": c.get("pass"),
@@ -872,12 +872,12 @@ def compare_outputs(protocol: str, run_root: str, python: str | None = None) -> 
               "plan_compare_report": str(r / "comparison" / "plan_compare.json") if plan_report else None,
               "environment": (plan_report or {}).get("environment")}
     (r / "comparison").mkdir(exist_ok=True)
-    (r / "comparison" / "comparison.json").write_text(json.dumps(report, indent=1))
+    (r / "comparison" / "comparison.json").write_text(json.dumps(report, indent=1), encoding="utf-8", newline="\n")
     md = [f"# Comparison: {report['protocol']}", "", f"run root `{r}`, {report['created']}", "",
           "| item | rule | path | result |", "|---|---|---|---|"]
     for c in checks:
         md.append(f"| {c['item']} | {c.get('rule', '')} | {c.get('path', '')} | {('PASS' if c['pass'] else 'FAIL') if 'pass' in c else c.get('status')} |")
     md += ["", f"**Overall ({len(compared)} compared): {'PASS' if report['pass'] else 'FAIL'}**"]
-    (r / "comparison" / "comparison.md").write_text("\n".join(md) + "\n")
+    (r / "comparison" / "comparison.md").write_text("\n".join(md) + "\n", encoding="utf-8", newline="\n")
     report["report"] = str(r / "comparison" / "comparison.json")
     return report

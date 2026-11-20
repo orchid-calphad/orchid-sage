@@ -13,6 +13,7 @@ EXPECTED = {
     "get_dashboard_data", "get_open_questions", "validate", "verify_inputs", "plan_reproduction", "run_step", "start_step", "step_status", "compare_outputs",
     "new_assessment", "gather_evidence", "next_step", "record_decision", "record_external_run", "modify_protocol",
     "propose_general_change", "migrate", "get_history", "package", "list_backends", "compute_ids",
+    "traceability", "record_trace",
 }
 
 

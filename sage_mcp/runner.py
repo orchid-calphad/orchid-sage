@@ -22,7 +22,7 @@ def now() -> str:
 
 def tail(path: Path, n: int = 40) -> str:
     try:
-        lines = path.read_text(errors="replace").splitlines()
+        lines = path.read_text(errors="replace", encoding="utf-8").splitlines()
     except FileNotFoundError:
         return ""
     return "\n".join(lines[-n:])
@@ -35,7 +35,7 @@ def run_command(cmd: str, root: Path, cwd: Path, log: Path, env_extra: dict | No
     log.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     started = now()
-    with open(log, "w") as lf:
+    with open(log, "w", encoding="utf-8", newline="\n") as lf:
         try:
             r = subprocess.run(cmd, shell=True, cwd=cwd, env=env, stdout=lf, stderr=subprocess.STDOUT, timeout=timeout)
             rc = r.returncode
@@ -65,12 +65,36 @@ def job_files(root: Path, item: str) -> dict[str, Path]:
             "recorded": j / f"{item}.recorded.json"}
 
 
+def _windows_pid_alive(pid: int) -> bool:
+    """Query a detached process without os.kill(pid, 0), which terminates it on Windows."""
+    import ctypes
+    from ctypes import wintypes
+    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel.OpenProcess.argtypes = (wintypes.DWORD, wintypes.BOOL, wintypes.DWORD)
+    kernel.OpenProcess.restype = wintypes.HANDLE
+    kernel.WaitForSingleObject.argtypes = (wintypes.HANDLE, wintypes.DWORD)
+    kernel.WaitForSingleObject.restype = wintypes.DWORD
+    kernel.CloseHandle.argtypes = (wintypes.HANDLE,)
+    kernel.CloseHandle.restype = wintypes.BOOL
+    handle = kernel.OpenProcess(0x00100000, False, pid)  # SYNCHRONIZE; read-only wait
+    if not handle:
+        return ctypes.get_last_error() != 87  # invalid PID is gone; access denied is unknown/alive
+    try:
+        return kernel.WaitForSingleObject(handle, 0) != 0  # signalled means exited
+    finally:
+        kernel.CloseHandle(handle)
+
+
 def pid_alive(pid: int | None) -> bool:
     if not pid:
         return False
     if pid in _LAUNCHED:
         return _LAUNCHED[pid].poll() is None
+    if os.name == "nt":
+        return _windows_pid_alive(pid)
     try:
+        if not hasattr(os, "WNOHANG"):
+            raise ChildProcessError
         got, _ = os.waitpid(pid, os.WNOHANG)   # reaps the wrapper if this server started it and it has ended
         return got == 0
     except ChildProcessError:
@@ -86,7 +110,7 @@ def pid_alive(pid: int | None) -> bool:
 
 def _read(p: Path) -> dict | None:
     try:
-        return json.loads(p.read_text())
+        return json.loads(p.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         return None
 
@@ -116,14 +140,14 @@ def start_detached(cmd: str, root: Path, cwd: Path, log: Path, item: str, env_ex
     f["job"].parent.mkdir(parents=True, exist_ok=True)
     job = {"item": item, "command": cmd, "cwd": str(cwd), "log": str(log), "env": {k: str(v) for k, v in (env_extra or {}).items()},
            "launched": now(), "launched_by": "sage_mcp start/status (detached; the run card is written by step_status)", **(meta or {})}
-    f["job"].write_text(json.dumps(job, indent=1))
+    f["job"].write_text(json.dumps(job, indent=1), encoding="utf-8", newline="\n")
     env = dict(os.environ)
     p = subprocess.Popen([sys.executable, "-I", str(Path(__file__).resolve().parent / "jobwrap.py"), str(f["job"])],
                          cwd=cwd, env=env, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                          start_new_session=True)
     _LAUNCHED[p.pid] = p
     job["wrapper_pid"] = p.pid
-    f["job"].write_text(json.dumps(job, indent=1))
+    f["job"].write_text(json.dumps(job, indent=1), encoding="utf-8", newline="\n")
     t_end = time.time() + 10
     while time.time() < t_end and not f["started"].is_file() and p.poll() is None:
         time.sleep(0.05)
@@ -189,5 +213,5 @@ def write_run_card(root: Path, run_id: str, specific: str, general: str, step: s
         raise SageError(f"run card for {run_id} is not schema-valid: {errs[:5]}")
     out = root / "run_cards" / f"{run_id}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(card, indent=1, ensure_ascii=False))
+    out.write_text(json.dumps(card, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return out
