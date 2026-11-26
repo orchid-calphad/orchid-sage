@@ -82,11 +82,15 @@ class FrozenGuard(unittest.TestCase):
 
 
 class PinnedRationale(unittest.TestCase):
-    """orchid-calphad-fit@2.0.0 and @2.1.0 pin earlier texts of docs/fit_protocol.md; the validator resolves them by hash."""
+    """orchid-calphad-fit@2.0.0 and @2.1.0 pin earlier texts of docs/fit_protocol.md; the validator resolves them by hash.
+    @2.1.1 and @2.1.2 pin the same bytes, kept once as fit_protocol@2.1.1.md: the expected file is the one that
+    docs/fit_protocol.versions.json indexes for that version, with the pinned sha256."""
 
     def test_frozen_versions_resolve(self):
+        import json
         import validate
         import orchidproto as op
+        index = json.loads((ROOT / "docs/fit_protocol.versions.json").read_text())["versions"]
         for v in ("2.0.0", "2.1.0", "2.1.1", "2.1.2"):
             g = op.load_doc(ROOT / f"protocols/general/orchid-calphad-fit@{v}.yaml")
             r = g["rationale_document"]
@@ -96,7 +100,11 @@ class PinnedRationale(unittest.TestCase):
                 continue                              # the living text (or, in a public copy, its sanitized copy)
             fv = validate.frozen_version(f, r["sha256"])
             self.assertIsNotNone(fv, v)
-            self.assertEqual(fv.name, f"fit_protocol@{v}.md")
+            entries = [e for e in index if f"orchid-calphad-fit@{v}" in e["pinned_by"]]
+            self.assertEqual(len(entries), 1, v)
+            self.assertEqual(entries[0]["sha256"], r["sha256"], v)
+            self.assertEqual(f"docs/{fv.name}", entries[0]["file"], v)
+            self.assertTrue(fv.name.startswith("fit_protocol@"), v)
 
     def test_unknown_hash_not_resolved(self):
         import validate
