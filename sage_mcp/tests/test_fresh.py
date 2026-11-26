@@ -150,28 +150,40 @@ class FreshAssessment(SageTestCase):
 
     def test_general_minor_version_and_migration(self):
         # orchid-calphad-fit@2.1.0 is a released general version (crni-paper-fit-step4c-b@1.0.1), so the next minor of 2.0.0
-        # is refused and the proposal starts from 2.1.0; the fresh assessment still instantiates the default 2.0.0
+        # is refused; 2.2.0 exists too (the next minor of 2.1.0, also refused), so the proposal starts from 2.2.0; the fresh
+        # assessment still instantiates the default 2.0.0
         self._decide_preflight()
         F.gather_evidence(self.a)
         with self.assertRaises(SageError):  # 2.1.0 exists: never edited in place
             F.propose_general_change({"type": "parameter_default", "parameter": "hull_tolerance_tau", "value": 50}, who="PI (test)", why="x")
-        base = "orchid-calphad-fit@2.1.0"
+        with self.assertRaises(SageError):  # 2.2.0 exists: never edited in place
+            F.propose_general_change({"type": "parameter_default", "parameter": "hull_tolerance_tau", "value": 50}, who="PI (test)", why="x", base="orchid-calphad-fit@2.1.0")
+        base = "orchid-calphad-fit@2.2.0"
         with self.assertRaises(SageError):
             F.propose_general_change({"type": "parameter_default", "parameter": "hull_tolerance_tau", "value": 50}, who="PI", why="x", bump_kind="patch", base=base)
         p = F.propose_general_change({"type": "parameter_default", "parameter": "hull_tolerance_tau", "value": 50}, who="PI (test)", why="tau 50 by default", base=base)
-        self.assertEqual(p["proposed"], "orchid-calphad-fit@2.2.0")
+        self.assertEqual(p["proposed"], "orchid-calphad-fit@2.3.0")
         self.assertTrue(Path(p["path"]).is_file())
-        self.assertFalse((Path(R.repo_root()) / "protocols/general/orchid-calphad-fit@2.2.0.yaml").exists())
+        self.assertFalse((Path(R.repo_root()) / "protocols/general/orchid-calphad-fit@2.3.0.yaml").exists())
         with self.assertRaises(SageError):
             F.propose_general_change({"type": "parameter_default", "parameter": "hull_tolerance_tau", "value": 60}, who="PI", why="again", base=base)
         maj = F.propose_general_change({"type": "parameter_default", "parameter": "sqs_seeds", "value": 3}, who="PI", why="frozen -> major", base=base)
         self.assertEqual(maj["proposed"], "orchid-calphad-fit@3.0.0")
         self.assertEqual(F.current_spec(self.root)[1]["instantiates"][0]["protocol"], "orchid-calphad-fit@2.0.0")  # not moved
-        mg = F.migrate(self.a, "2.2.0", who="PI (test)", why="adopt tau 50")
-        self.assertEqual(mg["changed_parameters"], ["hull_tolerance_tau"])
+        mg = F.migrate(self.a, "2.3.0", who="PI (test)", why="adopt tau 50")
+        self.assertEqual(mg["changed_parameters"], ["certainty_tiers", "hull_tolerance_tau", "mode_tolerances"])  # 2.0.0 -> 2.3.0: the proposed tau plus the 2.1.1 (certainty_tiers text) and 2.1.2 (mode_tolerances) changes
+        self.assertEqual(mg["changed_steps"], [
+            'ambiguous_structures', 'build_oneshot_tdb', 'check_gradients', 'classify_certainty',
+            'classify_draws', 'data_consistency', 'density_check_ordered', 'evaluate_states',
+            'fit_liquidus', 'fit_solid', 'fit_thermo', 'global_search',
+            'independent_rerun', 'laplace', 'mcmc_optional', 'modes',
+            'oneshot_diagram', 'per_dataset', 'physics_checks', 'pick_liquidus',
+            'pick_solid', 'pick_thermo', 'polish_starts', 'reproduce_reference',
+            'same_phase_split', 'topology_moves', 'weights_from_sigma',
+        ])
         self.assertIn("exclusions_every_state", mg["stale"])
         spec = F.current_spec(self.root)[1]
-        self.assertEqual(spec["instantiates"][0]["protocol"], "orchid-calphad-fit@2.2.0")
+        self.assertEqual(spec["instantiates"][0]["protocol"], "orchid-calphad-fit@2.3.0")
         self.assertEqual(spec["version"], "0.2.0")
         self.assertIn("migrate from orchid-calphad-fit@2.0.0", spec["decisions"][-1]["decision"])
         self.assertTrue(F.validate_assessment(self.a)["ok"])

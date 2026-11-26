@@ -91,7 +91,7 @@ class PinnedRationale(unittest.TestCase):
         import validate
         import orchidproto as op
         index = json.loads((ROOT / "docs/fit_protocol.versions.json").read_text())["versions"]
-        for v in ("2.0.0", "2.1.0", "2.1.1", "2.1.2"):
+        for v in ("2.0.0", "2.1.0", "2.1.1", "2.1.2", "2.2.0"):
             g = op.load_doc(ROOT / f"protocols/general/orchid-calphad-fit@{v}.yaml")
             r = g["rationale_document"]
             f = op.expand(r["path"])

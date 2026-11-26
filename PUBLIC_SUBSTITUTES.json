@@ -1,8 +1,8 @@
 {
  "by": "protocols/tools/public_sanitize.py export",
  "rule": "every file that held local information is its sanitized copy (rules in protocols/tools/public_sanitize.py: host and user names, scratch and session names, then the home-relative record paths as placeholders <fit-python>, <fit-env>, <orchid-sage>, <home>; second pass of 8 Nov 2026, PI rule of 7 Nov: no home path or machine-specific location in anything disseminated); original_sha256 identifies the original kept in the private repository; records that pin an original's sha256 are satisfied by its copy here (protocols/tools/validate.py reads this file)",
- "n_files": 1170,
- "n_changed": 434,
+ "n_files": 1187,
+ "n_changed": 437,
  "edited_in_public_copy": {
   "files": [
    "protocols/tools/public_sanitize.py",
@@ -20,8 +20,8 @@
   {
    "path": "README.md",
    "original": "README.md",
-   "original_sha256": "2ca53a2d88df8f2c2d05bac1a02e63c8027bab087e70441bdcbb18097b9602ed",
-   "sanitized_sha256": "654c0cc28637c8b416da75041f7bfaa3398fa2d288fa6f0f17f7dcade7801d05"
+   "original_sha256": "1565a2f5de68be2c6f36dbd6bee00eecd108a791bb1412b5ddaa88447463dba2",
+   "sanitized_sha256": "1565a2f5de68be2c6f36dbd6bee00eecd108a791bb1412b5ddaa88447463dba2"
   },
   {
    "path": "assessments/crni-paper-fit-step4-s1/code/oneshot_code/analyze_liquid.py",
@@ -146,8 +146,8 @@
   {
    "path": "docs/fit_protocol.md",
    "original": "docs/fit_protocol.md",
-   "original_sha256": "c2f0e42b5337c5e656805c89efa303bc3f59440ad628f357e0149c3382565207",
-   "sanitized_sha256": "2fd01974cfe440a90a2822cdf5935c0ca23e82f6ef6a4035481bde449bde8a08"
+   "original_sha256": "f347246f22b69b429de1ba8d72bc1e0956ec8357c1529b9957ff800758f62023",
+   "sanitized_sha256": "c5787810500e9905ca7fee825b5b64c22e8b6517198ff557c1b33f99db3d9758"
   },
   {
    "path": "docs/fit_protocol@2.0.0.md",
@@ -2620,6 +2620,24 @@
    "original": ".public-allow",
    "original_sha256": "ddfc409c7691fec809166b7bd00a13a0cb6e25243751100b8bb30b7cf17d9ad8",
    "sanitized_sha256": "a859f5466148f5c824136c25e6d8125fd3f2f60d57a75a59509901289e7a85da"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.2.0.yaml",
+   "original": "protocols/general/orchid-calphad-fit@2.2.0.yaml",
+   "original_sha256": "deb51b0911f3a6879f41fc675358dbadaf3e8c59bc933583c412aa329b08146d",
+   "sanitized_sha256": "3f81392bc4ef7a555e287cb0b45d7eddb8cf75fcc0d2c4693b877522edd6cbd2"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.2.0.md",
+   "original": "protocols/general/orchid-calphad-fit@2.2.0.md",
+   "original_sha256": "48f7459c5ddacdaac7f62574dab3f5d1515fcf67334103f66a8f10c2cb95f5a8",
+   "sanitized_sha256": "4f74053d8edb07faee8c2d70aed44937accd82e3aec5acac66172f5e6d2e912f"
+  },
+  {
+   "path": "protocols/general/orchid-calphad-fit@2.2.0.html",
+   "original": "protocols/general/orchid-calphad-fit@2.2.0.html",
+   "original_sha256": "39a23aee9b98e5b784b07faf06438d9db0315c27c7912b9fcbecad84addccc6d",
+   "sanitized_sha256": "9c26a04ffdc65a399b62c202ee81692b9c427feea2e66faa40cfd0194ed05d44"
   }
  ]
 }
