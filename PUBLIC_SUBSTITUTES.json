@@ -1,8 +1,8 @@
 {
  "by": "protocols/tools/public_sanitize.py export",
  "rule": "every file that held local information is its sanitized copy (rules in protocols/tools/public_sanitize.py: host and user names, scratch and session names, then the home-relative record paths as placeholders <fit-python>, <fit-env>, <orchid-sage>, <home>; second pass of 8 Nov 2026, PI rule of 7 Nov: no home path or machine-specific location in anything disseminated); original_sha256 identifies the original kept in the private repository; records that pin an original's sha256 are satisfied by its copy here (protocols/tools/validate.py reads this file)",
- "n_files": 1169,
- "n_changed": 433,
+ "n_files": 1170,
+ "n_changed": 434,
  "edited_in_public_copy": {
   "files": [
    "protocols/tools/public_sanitize.py",
@@ -160,6 +160,12 @@
    "original": "docs/fit_protocol@2.1.0.md",
    "original_sha256": "6049494ef94b0831a1f106667e7a8752e7e4cec3a3f0ab89e2e7cacdbf934ec9",
    "sanitized_sha256": "76b65ab1cd6def601b04736a9e007c6415de791692fe6a59449e643f9ea67d1f"
+  },
+  {
+   "path": "docs/fit_protocol@2.1.1.md",
+   "original": "docs/fit_protocol@2.1.1.md",
+   "original_sha256": "c2f0e42b5337c5e656805c89efa303bc3f59440ad628f357e0149c3382565207",
+   "sanitized_sha256": "2fd01974cfe440a90a2822cdf5935c0ca23e82f6ef6a4035481bde449bde8a08"
   },
   {
    "path": "protocols/BRIEF_rerun_agents.md",
