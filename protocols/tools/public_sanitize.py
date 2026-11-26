@@ -82,7 +82,7 @@ def placeholders(s, html=False):
 
 def _config():
     p = os.environ.get("ORCHID_SAGE_CONFIG") or str(Path(__file__).resolve().parents[2] / "local" / "config.json")
-    return json.loads(Path(p).read_text()) if Path(p).is_file() else {}
+    return json.loads(Path(p).read_text(encoding="utf-8")) if Path(p).is_file() else {}
 
 
 def _alt(names):
@@ -158,7 +158,7 @@ def export(out, repo=None):
     repo = Path(repo or Path(__file__).resolve().parents[2]); out = Path(out)
     if out.exists():
         raise SystemExit(f"{out} exists: the export goes to a new directory")
-    excl = [ln.split(" #")[0].strip() for ln in (repo / ".public-exclude").read_text().splitlines()
+    excl = [ln.split(" #")[0].strip() for ln in (repo / ".public-exclude").read_text(encoding="utf-8").splitlines()
             if ln.strip() and not ln.lstrip().startswith("#")] if (repo / ".public-exclude").is_file() else []
     files = subprocess.run(["git", "-C", str(repo), "ls-files", "-z"], capture_output=True, check=True).stdout.decode().split("\0")
     rows, binary, skipped, n = [], [], [], 0
@@ -181,13 +181,13 @@ def export(out, repo=None):
         "by": "protocols/tools/public_sanitize.py export", "rule": "every file that held local information is its sanitized copy (rules in "
         "protocols/tools/public_sanitize.py); original_sha256 identifies the original kept in the private repository; records that pin "
         "an original's sha256 are satisfied by its copy here (protocols/tools/validate.py reads this file)",
-        "n_files": n, "n_changed": len(rows), "files": rows}, indent=1) + "\n")   # only files in this copy; nothing about what was left out
+        "n_files": n, "n_changed": len(rows), "files": rows}, indent=1) + "\n", encoding="utf-8", newline="\n")   # only files in this copy; nothing about what was left out
     print(f"{out}: {n} files, {len(rows)} sanitized or renamed, {len(skipped)} excluded (.public-exclude)")
 
 
 if __name__ == "__main__":
     if sys.argv[1] == "text":
-        sys.stdout.write(sanitize_text(Path(sys.argv[2]).read_text(), Path(sys.argv[2]).suffix))
+        sys.stdout.write(sanitize_text(Path(sys.argv[2]).read_text(encoding="utf-8"), Path(sys.argv[2]).suffix))
     elif sys.argv[1] == "proof":
         a, b = Path(sys.argv[2]).read_bytes(), Path(sys.argv[3]).read_bytes()
         new, _ = sanitize_bytes(a, Path(sys.argv[2]).suffix)

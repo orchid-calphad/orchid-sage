@@ -24,13 +24,13 @@ def _now() -> str:
 
 def _write(p: Path, obj: dict) -> None:
     tmp = p.with_name(p.name + ".tmp")
-    tmp.write_text(json.dumps(obj, indent=1))
+    tmp.write_text(json.dumps(obj, indent=1), encoding="utf-8", newline="\n")
     os.replace(tmp, p)
 
 
 def main(job_path: str) -> int:
     jp = Path(job_path)
-    job = json.loads(jp.read_text())
+    job = json.loads(jp.read_text(encoding="utf-8"))
     stem = jp.name[: -len(".json")]
     env = dict(os.environ)
     env.update({k: str(v) for k, v in (job.get("env") or {}).items()})
@@ -40,7 +40,7 @@ def main(job_path: str) -> int:
     started = _now()
     rc = -1
     try:
-        with open(log, "w") as lf:
+        with open(log, "w", encoding="utf-8", newline="\n") as lf:
             p = subprocess.Popen(job["command"], shell=True, cwd=job["cwd"], env=env, stdout=lf, stderr=subprocess.STDOUT,
                                  stdin=subprocess.DEVNULL)
             _write(jp.with_name(stem + ".started.json"), {"wrapper_pid": os.getpid(), "pid": p.pid, "started": started})

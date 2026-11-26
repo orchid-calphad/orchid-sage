@@ -34,7 +34,7 @@ def configured() -> dict:
     if not p.is_file():
         return {}
     try:
-        d = json.loads(p.read_text())
+        d = json.loads(p.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         raise SageError(f"backend config {p} is not valid JSON: {exc}") from exc
     return {k: v for k, v in d.items() if isinstance(v, dict)} if isinstance(d, dict) else {}   # "_note" etc. skipped

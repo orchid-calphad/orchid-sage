@@ -47,6 +47,8 @@ PROFILES = [{"@id": "https://w3id.org/ro/wfrun/process/0.5"}, {"@id": "https://w
 
 # ------------------------------------------------------------------------------------------- rendering
 def _fr(r):
+    if isinstance(r, dict) and not r.get("path"):
+        return "not supplied"
     return f"`{r['path']}` (sha256 `{r['sha256'][:16]}…`, {r['storage_class']})" if isinstance(r, dict) and r.get("sha256") else (f"`{r['path']}`" if isinstance(r, dict) else str(r))
 
 
@@ -128,7 +130,7 @@ def render_md(d, general=None):
 def md_to_html(md, title):
     """Small Markdown subset -> HTML (headings, lists, tables, quotes, code spans, bold, italics)."""
     import re
-    pal = json.loads((Path(__file__).parent / "palette.json").read_text())
+    pal = json.loads((Path(__file__).parent / "palette.json").read_text(encoding="utf-8"))
     u, k = pal["ui"]["light"], pal["ui"]["dark"]
 
     def inline(s):
@@ -186,7 +188,7 @@ def person_id(p):
     return f"https://orcid.org/{p['orcid']}" if p.get("orcid") else "#person-" + p["name"].lower().replace(" ", "-")
 
 
-def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False, substitutes=False, reproduce_tree=False, public=False):
+def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False, substitutes=False, reproduce_tree=False, public=False, traceability_report=None):
     spec_path = Path(spec_path); out = Path(out)
     d = op.load_doc(spec_path)
     gen_path = op.expand(d["instantiates"][0]["file"]["path"]); g = op.load_doc(gen_path)
@@ -232,6 +234,9 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                                                                   ".tdb": "text/plain", ".pdf": "application/pdf", ".png": "image/png"}.get(dst.suffix, "application/octet-stream")}
         e.update(props); graph[rel] = e; parts.append({"@id": rel})
         return rel
+
+    if traceability_report is not None:
+        add_file(traceability_report, "evidence/TRACEABILITY.json", description="Local source checks and unchanged ORCHID evidence provenance")
 
     sp_rel = add_file(spec_path, f"protocol/{spec_path.name}", ("File", "SoftwareSourceCode", "ComputationalWorkflow", "HowTo"),
                       name=d["title"], version=d["version"], identifier=f"{d['id']}@{d['version']}", programmingLanguage={"@id": "#orchid-protocol-yaml"},
@@ -287,7 +292,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
         for c in d.get("code") or []:
             mf = REPO / str(c.get("path", "")) / "MANIFEST.json"
             if str(c.get("path", "")).startswith(f"assessments/{d['id']}/addendum-") and mf.exists():
-                for s_ in json.loads(mf.read_text()).get("crate_substitutes", []):
+                for s_ in json.loads(mf.read_text(encoding="utf-8")).get("crate_substitutes", []):
                     if op.sha256_file(REPO / s_["original"]) != s_["original_sha256"] or op.sha256_file(REPO / s_["replacement"]) != s_["replacement_sha256"]:
                         sys.exit(f"crate substitute {s_['original']} -> {s_['replacement']}: sha256 differs from {mf}")
                     subst[str((REPO / s_["original"]).resolve())] = s_; repl[str((REPO / s_["replacement"]).resolve())] = s_
@@ -310,7 +315,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
         mpath = op.expand(b_["manifest"]["path"]) if b_.get("manifest") else None
         if mpath is None or not mpath.exists():
             sys.exit("--pinned-evidence: the spec pins no evidence bundle manifest")
-        pin_ev = {str((mpath.parent / f["path"]).resolve()) for f in json.loads(mpath.read_text())["files"]} | {str(mpath.resolve())}
+        pin_ev = {str((mpath.parent / f["path"]).resolve()) for f in json.loads(mpath.read_text(encoding="utf-8"))["files"]} | {str(mpath.resolve())}
         if b_.get("intake"):
             ip = op.expand(b_["intake"]["path"]).resolve()
             v_ = ip.stem.split("@")[1] if "@" in ip.stem else None
@@ -377,7 +382,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                "instrument": {"@id": sp_rel}, "hadPlan": {"@id": f"#{g['id']}-step-{r['step']}" if f"#{g['id']}-step-{r['step']}" in graph else f"#{d['id']}-step-{r['step']}"},
                "actionStatus": {"@id": "http://schema.org/CompletedActionStatus" if r["status"] in ("accepted", "side_branch") else ("http://schema.org/FailedActionStatus" if r["status"] == "failed" else "http://schema.org/PotentialActionStatus")}}
         if r.get("run_card"):
-            rc_src = op.expand(r["run_card"]["path"]); rc = json.loads(rc_src.read_text())
+            rc_src = op.expand(r["run_card"]["path"]); rc = json.loads(rc_src.read_text(encoding="utf-8"))
             rel = add_file(rc_src, f"run_cards/{rc_src.name}", description=f"run card {r['run_id']}")
             act["subjectOf"] = {"@id": rel}
             if isinstance(rc.get("started"), str):
@@ -394,7 +399,7 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
     if reproduce_tree:  # run cards that execute this exact version but are not in its run sequence (checks after the freeze)
         seq = {op.expand(r['run_card']['path']).resolve() for r in d['run_sequence'] if r.get('run_card')}
         for rc_src in sorted((ROOT / 'run_cards').glob('*.json')):
-            rc = json.loads(rc_src.read_text())
+            rc = json.loads(rc_src.read_text(encoding="utf-8"))
             if rc_src.resolve() in seq or (rc.get('executes') or {}).get('specific_protocol') != f"{d['id']}@{d['version']}":
                 continue
             rel = add_file(rc_src, f'run_cards/{rc_src.name}', description=f"run card {rc.get('run_id')} (executes {d['id']}@{d['version']}; not in the run sequence)")
@@ -483,8 +488,8 @@ def build(spec_path, out, addenda=False, decisions=False, pinned_evidence=False,
                                           "to its copy." if public else "") + "\n"), "build_crate.py")
     # self-check (--public: on the metadata as written, after sanitizing)
     if public:
-        graph = {e["@id"]: e for e in json.loads((out / "ro-crate-metadata.json").read_text())["@graph"][2:]}
-        parts = json.loads((out / "ro-crate-metadata.json").read_text())["@graph"][1]["hasPart"]
+        graph = {e["@id"]: e for e in json.loads((out / "ro-crate-metadata.json").read_text(encoding="utf-8"))["@graph"][2:]}
+        parts = json.loads((out / "ro-crate-metadata.json").read_text(encoding="utf-8"))["@graph"][1]["hasPart"]
     bad = [p["@id"] for p in parts if op.sha256_file(out / p["@id"]) != graph[p["@id"]]["sha256"]]
     leaked = [k for k, v in graph.items() if v.get("storageClass") == "restricted" and (out / Path(v["name"]).name).exists()]
     ids = set(graph) | {"./", "ro-crate-metadata.json"}
@@ -502,4 +507,5 @@ if __name__ == "__main__":
     else:
         fl = sys.argv[3:]
         sys.exit(0 if build(sys.argv[1], sys.argv[2], addenda="--addenda" in fl, decisions="--decisions" in fl, pinned_evidence="--pinned-evidence" in fl,
-                            substitutes="--substitutes" in fl, reproduce_tree="--reproduce-tree" in fl, public="--public" in fl) else 1)
+                            substitutes="--substitutes" in fl, reproduce_tree="--reproduce-tree" in fl, public="--public" in fl,
+                            traceability_report=fl[fl.index("--traceability-report") + 1] if "--traceability-report" in fl else None) else 1)

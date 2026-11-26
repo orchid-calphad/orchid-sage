@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import itertools
 import json
 import os
 import re
@@ -27,7 +28,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from . import backends, runner, safety, state
+from . import backends, runner, safety, state, trace
 from .repo import (
     SageError, find_protocol, general_protocols, iter_steps, load_doc, localpaths, orchidproto, repo_root, schema_errors,
     sha256_file, tilde, tools_dir,
@@ -40,6 +41,10 @@ GPU_ENVS = {"mlip_container"}
 # steps the server carries out itself (no campaign script needed)
 INTERNAL = {"write_plan", "build_datasets", "exclusions_every_state", "classify_certainty"}
 GATHER_STEPS = ("build_datasets", "exclusions_every_state", "classify_certainty")
+# the evidence builder reads one mole fraction per ZPF vertex, so above two components these steps are run by the
+# system's own tool and recorded with record_external_run (local multicomponent branch)
+MULTI_NOTE = ("the generic evidence builder handles two components only (one mole fraction per state); build this step with the "
+              "system's own tool and record its run card with record_external_run")
 # protocol errors that are expected while an assessment is a draft in progress (reported as pending, not as errors)
 DRAFT_PENDING = (
     ("$.artifact.file.sha256", "the artifact (final TDB) does not exist until final_pick"),
@@ -54,11 +59,11 @@ def today() -> str:
 
 # ------------------------------------------------------------------ state
 def load_state(root: Path) -> dict:
-    return json.loads((root / "sage_state.json").read_text())
+    return json.loads((root / "sage_state.json").read_text(encoding="utf-8"))
 
 
 def save_state(root: Path, st: dict) -> None:
-    (root / "sage_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False))
+    (root / "sage_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
 
 
 def event(st: dict, kind: str, **detail: Any) -> None:
@@ -76,7 +81,7 @@ def _write_spec(root: Path, spec: dict, st: dict, reason: str, new_version: bool
     if new_version and p.exists():
         raise SageError(f"version {spec['version']} already exists ({p}); versions are never overwritten")
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(spec, indent=1, ensure_ascii=False))
+    p.write_text(json.dumps(spec, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     st["current_spec"] = str(p.relative_to(root))
     if new_version:
         st["versions"].append({"version": spec["version"], "path": str(p.relative_to(root)), "created": runner.now(), "reason": reason})
@@ -103,7 +108,7 @@ def validate_assessment(assessment: str) -> dict:
     real += _check_order(spec)
     cards = []
     for c in sorted((root / "run_cards").glob("*.json")):
-        ce = schema_errors(json.loads(c.read_text()))
+        ce = schema_errors(json.loads(c.read_text(encoding="utf-8")))
         cards.append({"run_card": c.name, "ok": not ce, "errors": ce[:5]})
         real += [f"run_cards/{c.name}: {x}" for x in ce]
     return {"assessment": assessment, "protocol": tilde(p), "version": spec["version"], "ok": not real, "errors": real,
@@ -177,10 +182,17 @@ def _params(spec: dict) -> dict:
     return p
 
 
+def elements_of(system: str) -> list[str]:
+    return system.split("-")
+
+
 def _bindings(root: Path, spec: dict, st: dict, nproc: int = 4) -> dict:
     sys_ = spec["system"]
-    b = {"campaign": str(root), "artifact": spec["id"], "EL": sys_.split("-")[1], "nproc": str(nproc), "version": spec["version"],
-         "system": sys_}
+    els = elements_of(sys_)
+    b = {"campaign": str(root), "artifact": spec["id"], "nproc": str(nproc), "version": spec["version"],
+         "system": sys_, "elements": ",".join(els), "n_components": str(len(els))}
+    if len(els) == 2:   # <EL> is the binary's composition axis; above two components it stays unbound on purpose
+        b["EL"] = els[1]
     b.update({k: str(v) for k, v in st.get("bindings", {}).items() if isinstance(v, (str, int, float))})
     b.update({k: str(v) for k, v in _overrides(spec, "binding:").items()})
     if st.get("bindings", {}).get("final_tdb"):
@@ -241,11 +253,13 @@ def sequence(root: Path, nproc: int = 4) -> list[dict]:
             mode = "judgement"
         elif comp["class"] == "GPU":
             mode = "job_spec"
+        elif sid in GATHER_STEPS and len(elements_of(spec["system"])) > 2:
+            mode = "external"
         elif sid in INTERNAL:
             mode = "internal"
         else:
             mode = "command"
-        exe_problems = []
+        exe_problems = [MULTI_NOTE] if mode == "external" else []
         if mode == "command":
             if not cmd:
                 exe_problems.append("no exact command in the protocol")
@@ -280,8 +294,11 @@ def next_step(assessment: str, nproc: int = 4) -> dict:
     nxt = next((x for x in todo if not x["blockers"]), todo[0])
     what = {"judgement": "run_step creates a decision request (or returns the open one); a person answers it with record_decision",
             "job_spec": "run_step writes the GPU job spec for an executor; record the finished run with record_external_run",
-            "internal": "run_step carries it out (server code)", "command": "run_step runs the bound command in the run root"}[nxt["mode"]]
+            "internal": "run_step carries it out (server code)", "command": "run_step runs the bound command in the run root",
+            "external": "run it with the system's own tool and record its run card with record_external_run"}[nxt["mode"]]
+    tr = trace.summary(_root_of(assessment), st)
     return {"assessment": assessment, "next": nxt, "how": what, "open_decision_requests": open_rq, "counts": counts,
+            "traceability": tr.get("counts") or tr["status"],
             "sequence": [{k: x[k] for k in ("id", "kind", "status", "mode")} | {"blocked": bool(x["blockers"])} for x in seq]}
 
 
@@ -293,9 +310,11 @@ def _copy_general_entries(gen: dict, key: str, ids: list[str]) -> list[dict]:
 def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[str] | None = None,
                    T_range: list[float] | None = None, general: str = DEFAULT_GENERAL, title: str | None = None) -> dict:
     system = system.upper().strip()
-    if not SYSTEM_RE.match(system) or system.count("-") != 1:
-        raise SageError(f"system must be a binary like 'AL-CU' (the general protocol is for binary systems), got {system!r}")
-    els = system.split("-")
+    if not SYSTEM_RE.match(system):
+        raise SageError(f"system must be two or more elements joined by '-', like 'AL-CU' or 'AL-C-TI', got {system!r}")
+    els = elements_of(system)
+    if len(set(els)) != len(els):
+        raise SageError(f"system {system!r} names an element twice")
     if els != sorted(els):
         raise SageError(f"write the system in alphabetical order: {'-'.join(sorted(els))}")
     if not ID_RE.match(assessment_id):
@@ -341,6 +360,12 @@ def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[
                       "byte_identical_expected": [], "not_reproducible": [], "independent_rerun": {"status": "pending", "reason": "not packaged yet"}},
         "decisions": [], "limitations": [], "open_questions": [],
     }
+    subs = _subsystems(els)
+    if subs:
+        spec["limitations"].append(
+            f"{gref} is written for binary systems. This {len(els)}-component assessment uses it on the local multicomponent branch. "
+            "Decisions, steps and run cards are recorded as for a binary, but the evidence steps (" + ", ".join(GATHER_STEPS) + ") and the "
+            "fit chain are run by the system's own tools and recorded with record_external_run. Lower-order sub-systems: " + ", ".join(subs) + ".")
     st = {"assessment": assessment_id, "system": system, "created": runner.now(), "current_spec": "", "versions": [],
           "steps": {}, "decision_requests": [], "bindings": {}, "events": [], "evidence_gaps": []}
     if phases:
@@ -361,11 +386,21 @@ def new_assessment(system: str, assessment_id: str, run_root: str, phases: list[
                  evidence=[], blocks=["write_plan"], step=None)
     _request(st, "unaries", "Which TDB supplies the SGTE unaries of every end-member (sha256 recorded)? Answer with bindings={'unaries_tdb': path}.",
              evidence=[], blocks=["build_oneshot_tdb"], step=None)
+    if subs:
+        _request(st, "subsystems", f"Which description of each lower-order sub-system ({', '.join(subs)}) enters the assessment, with its sha256, "
+                 "and where is the written evaluation of each (loads, unaries match SGTE, its own published results reproduce, agrees with "
+                 "independent measurements, consistent with our phases)? Answer with bindings={'subsystem_tdbs': {system: path}}.",
+                 evidence=[], blocks=["build_oneshot_tdb"], step=None)
     _write_plan_draft(root, spec, st)
     save_state(root, st)
     return {"assessment": assessment_id, "run_root": str(root), "protocol": str(root / st["current_spec"]), "version": ver,
             "open_decision_requests": [r for r in st["decision_requests"] if r["status"] == "open"],
             "plan_draft": str(root / "PLAN.md"), "next": next_step(assessment_id)["next"], "validation": validate_assessment(assessment_id)}
+
+
+def _subsystems(els: list[str]) -> list[str]:
+    """Every lower-order sub-system of two or more elements, smallest first (AL-C-TI -> AL-C, AL-TI, C-TI)."""
+    return ["-".join(c) for k in range(2, len(els)) for c in itertools.combinations(els, k)]
 
 
 def _step_of(gen: dict, sid: str) -> dict:
@@ -382,7 +417,7 @@ def _request(st: dict, key: str, question: str, evidence: list[str], blocks: lis
 
 
 def _write_plan_draft(root: Path, spec: dict, st: dict) -> Path:
-    tpl = (repo_root() / "protocols" / "templates" / "PLAN.template.md").read_text()
+    tpl = (repo_root() / "protocols" / "templates" / "PLAN.template.md").read_text(encoding="utf-8")
     b = st["bindings"]
     gen_ref = spec["instantiates"][0]["protocol"]
     t = tpl.replace("<System>", spec["system"]).replace("<date>", today()).replace("orchid-calphad-fit@<version>", gen_ref)
@@ -397,7 +432,7 @@ def _write_plan_draft(root: Path, spec: dict, st: dict) -> Path:
     if dec:
         extra += ["", "## Decisions recorded"] + dec
     p = root / "PLAN.md"
-    p.write_text(t + "\n".join(extra) + "\n")
+    p.write_text(t + "\n".join(extra) + "\n", encoding="utf-8", newline="\n")
     return p
 
 
@@ -454,7 +489,7 @@ def _scan(odir: Path, system: str, classes: list[str]) -> tuple[list[tuple[str, 
             gaps.append({"what": f"no ORCHID espei/{cls}/{system} directory", "effect": "that evidence class contributes nothing"})
             continue
         for f in sorted(d.glob("*.json")):
-            found.append((cls, f, json.loads(f.read_text())))
+            found.append((cls, f, json.loads(f.read_text(encoding="utf-8"))))
     return found, gaps
 
 
@@ -476,6 +511,23 @@ def _preview(root: Path, spec: dict, st: dict, classes: list[str], odir: Path) -
             "next": "record_decision(assessment, <model_phases request>, decision, who, why, bindings={'phases': [...]}), then gather_evidence again"}
 
 
+def _multi_report(spec: dict, st: dict, classes: list[str], odir: Path) -> dict:
+    """Above two components nothing is frozen. Reports what ORCHID holds for the system and each lower-order sub-system."""
+    els = elements_of(spec["system"])
+    holdings, gaps = [], []
+    for sysname in [spec["system"]] + _subsystems(els):
+        found, g = _scan(odir, sysname, classes)
+        gaps += g
+        holdings.append({"system": sysname, "n_files": len(found),
+                         "by_class": {c: sum(1 for x in found if x[0] == c) for c in classes},
+                         "phases_in_data": sorted({ph for _, _, d in found for ph in (d.get("phases") or [])}),
+                         "files": [tilde(f) for _, f, _ in found]})
+    return {"assessment": st["assessment"], "preview": True, "frozen": False, "components": len(els),
+            "reason": MULTI_NOTE, "orchid_holdings": holdings, "gaps": gaps,
+            "orchid_context": _orchid_context(spec["system"], odir),
+            "next": "build the evidence bundle with the system's own tool, then record_external_run for each of " + ", ".join(GATHER_STEPS)}
+
+
 def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, orchid_data_dir: str | None = None) -> dict:
     root = _root_of(assessment)
     p, spec = current_spec(root)
@@ -484,7 +536,9 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     classes = evidence_classes or sel.get("evidence_classes") or ["experimental", "invariants"]
     odir = _orchid_dir(orchid_data_dir)
     beb = __import__("sage_mcp.repo", fromlist=["evidence_bundle_module"]).evidence_bundle_module()
-    system, el = spec["system"], spec["system"].split("-")[1]
+    if len(elements_of(spec["system"])) > 2:
+        return _multi_report(spec, st, classes, odir)
+    system, el = spec["system"], elements_of(spec["system"])[1]
     phases = st["bindings"].get("phases")
     if not phases:
         return _preview(root, spec, st, classes, odir)
@@ -506,22 +560,25 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
             gaps.append({"what": f"no ORCHID espei/{cls}/{system} directory", "effect": "that evidence class contributes nothing"})
             continue
         for f in sorted(d.glob("*.json")):
-            obj = json.loads(f.read_text())
+            obj = json.loads(f.read_text(encoding="utf-8"))
             if beb.long_strings(obj):
                 held.append({"original": tilde(f), "reason": "contains a source-text field longer than 500 characters"}); continue
             g = _group(obj)
             dst = ev / "files" / g / f"{cls}__{f.name}"
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(f, dst)
-            txt = dst.read_text()
+            txt = dst.read_text(encoding="utf-8")
             man.append({"path": str(dst.relative_to(ev)), "sha256": sha256_file(dst), "original": tilde(f), "kind": "espei_dataset",
                         "orchid_ids": sorted(set(beb.ORC.findall(txt)))})
             data_refs.append({"path": tilde(dst), "sha256": sha256_file(dst), "storage_class": "public", "role": f"data file read by the objective ({g}; {cls})"})
             if obj.get("output") == "ZPF":
-                for s in beb.states_from_zpf(obj, dst.name, g, el):
+                new = beb.states_from_zpf(obj, dst.name, g, el)
+                for s in new:
                     s["source"] = "zpf"
-                    s["evidence_class"] = "assessed" if cls == "assessed" else s["evidence_class"]
-                    states.append(s)
+                    if cls == "assessed" and "evidence_class" not in beb.row_provenance(obj, s["row"]):
+                        s["evidence_class"] = "assessed"
+                trace.label_states(new, obj, cls)
+                states += new
     if not man:
         raise SageError(f"no ORCHID espei data for {system} in classes {classes} at {odir}")
     # exclusions at every observed state: declared phases minus the measured assemblage (fit_protocol item 8). Tiers are
@@ -565,7 +622,7 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
                  "builder": "sage_mcp gather_evidence (fit_protocol item 8, certainty-tiers@2; sidecar keys of espei/SCHEMA.md)", "cells": cells}
         hp = ev / "hinge" / "exclusions_every_state.json"
         hp.parent.mkdir(parents=True, exist_ok=True)
-        hp.write_text(json.dumps(hinge, indent=1))
+        hp.write_text(json.dumps(hinge, indent=1), encoding="utf-8", newline="\n")
         man.append({"path": "hinge/exclusions_every_state.json", "sha256": sha256_file(hp), "original": "derived by sage_mcp gather_evidence", "kind": "hinge_sidecar",
                     "orchid_ids": sorted({c["orchid"]["observation_id"] for c in cells if c["orchid"]["observation_id"]})})
     gaps.append({"what": "no Y25 state-id registry read", "effect": "states carry ORC ids, not state ids (state_ids empty)"})
@@ -578,10 +635,10 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     tiers = {"zpf": {k: sum(1 for s in states if (s.get("zpf_certainty") or {}).get("certainty_tier") == k) for k in beb.TIER},
              "exclusions": {k: sum(1 for s in states for e in s.get("exclusions", []) if e["certainty_tier"] == k) for k in beb.TIER}}
     (ev / "states.json").write_text(json.dumps({"artifact": spec["id"], "certainty_rule": beb.RULE2, "tier_energy_J_per_mol_atom": beb.TIER,
-                                                 "counts": tiers, "n_states": len(states), "states": states}, indent=1))
+                                                 "counts": tiers, "n_states": len(states), "states": states}, indent=1), encoding="utf-8", newline="\n")
     man.append({"path": "states.json", "sha256": sha256_file(ev / "states.json"), "original": "derived by sage_mcp gather_evidence", "kind": "states", "orchid_ids": []})
     ctx = _orchid_context(system, odir)
-    (ev / "orchid_context.json").write_text(json.dumps(ctx, indent=1))
+    (ev / "orchid_context.json").write_text(json.dumps(ctx, indent=1), encoding="utf-8", newline="\n")
     lines = sorted(f"{m['sha256']}  {m['path']}" for m in man)
     bundle = {"bundle": f"{spec['id']}-evidence", "version": "1.0.0", "created": runner.now(),
               "builder": "sage_mcp.fresh.gather_evidence (format of protocols/tools/build_evidence_bundle.py)",
@@ -589,7 +646,7 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
               "files": man, "held": held, "counts": {"files": len(man), "states": len(states), "tiers": tiers,
                                                       "orchid_ids": len({i for m in man for i in m["orchid_ids"]})},
               "bundle_sha256": hashlib.sha256(("\n".join(lines) + "\n").encode()).hexdigest()}
-    (ev / "MANIFEST.json").write_text(json.dumps(bundle, indent=1))
+    (ev / "MANIFEST.json").write_text(json.dumps(bundle, indent=1), encoding="utf-8", newline="\n")
     try:
         commit = subprocess.run(["git", "-C", str(odir), "rev-parse", "HEAD"], capture_output=True, text=True, timeout=20).stdout.strip() or "not a git checkout"
     except Exception:  # noqa: BLE001
@@ -605,11 +662,11 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     es["bundle"] = {"manifest": es["manifest"], "states": {"path": tilde(ev / "states.json"), "sha256": sha256_file(ev / "states.json"), "storage_class": "local"},
                     "bundle_sha256": bundle["bundle_sha256"]}
     sr = [{"what": f"{m['path']}", "note": "single-reader ORCHID extraction (tag single_reader_*)", "record_ids": [i for i in m["orchid_ids"] if re.fullmatch(r"ORC-[0-9A-Z]{10}", i)][:20]}
-          for m in man if m["kind"] == "espei_dataset" and "single_reader" in (ev / m["path"]).read_text()]
+          for m in man if m["kind"] == "espei_dataset" and "single_reader" in (ev / m["path"]).read_text(encoding="utf-8")]
     es["single_reader_flags"] = sr
     st["evidence_gaps"] = gaps
     log = root / "logs" / "gather_evidence.log"
-    log.write_text(json.dumps({"classes": classes, "counts": bundle["counts"], "gaps": gaps}, indent=1))
+    log.write_text(json.dumps({"classes": classes, "counts": bundle["counts"], "gaps": gaps}, indent=1), encoding="utf-8", newline="\n")
     rec = {"command": f"sage_mcp gather_evidence(assessment={assessment!r}, evidence_classes={classes})", "returncode": 0,
            "started": runner.now(), "finished": runner.now(), "wall_s": None, "log": str(log)}
     done = list(GATHER_STEPS)
@@ -624,10 +681,26 @@ def gather_evidence(assessment: str, evidence_classes: list[str] | None = None, 
     event(st, "evidence_gathered", classes=classes, files=len(man), states=len(states))
     save_state(root, st)
     return {"assessment": assessment, "preview": False, "bundle": tilde(ev / "MANIFEST.json"), "bundle_sha256": bundle["bundle_sha256"], "counts": bundle["counts"],
+            "traceability": trace.summary(root, st)["counts"],
             "held": held, "gaps": gaps, "steps_done": done, "orchid_context": ctx if "status" in ctx else {k: (len(v) if isinstance(v, list) else v) for k, v in ctx.items()},
             "not_done": {"partial_tielines": "no generic tool: the (i)/(ii) split is part of the system-specific build_data.py; states are labelled "
                                              "partial_tie_line in states.json but the datasets are not split",
                          "weights_from_sigma": "no generic tool (build_data.py writes the weights)", "data_consistency": "no generic tool (data_consistency.py)"}}
+
+
+def traceability(assessment: str) -> dict:
+    root = _root_of(assessment)
+    return {"assessment": assessment, **trace.summary(root, load_state(root))}
+
+
+def record_trace(assessment: str, state_keys: list[str], status: str, who: str, why: str, doi: str | None = None,
+                 page: str | None = None, locator: str | None = None, quote: str | None = None) -> dict:
+    root = _root_of(assessment)
+    st = load_state(root)
+    out = trace.record(root, st, state_keys, status, who, why, doi=doi, page=page, locator=locator, quote=quote)
+    event(st, "trace_recorded", status=status, states=len(state_keys), who=who)
+    save_state(root, st)
+    return {"assessment": assessment, **out}
 
 
 def _mark_done(root: Path, spec: dict, st: dict, sid: str, card: Path | None) -> None:
@@ -662,7 +735,7 @@ def run_fresh_step(assessment: str, step_id: str, confirm: bool = False, allow_l
             ev = []
             for owner in _supply_owners(_step_def(spec, step_id)):
                 for c in st["steps"].get(owner, {}).get("run_cards", []):
-                    ev += [o["path"] for o in json.loads((root / c).read_text()).get("outputs", [])]
+                    ev += [o["path"] for o in json.loads((root / c).read_text(encoding="utf-8")).get("outputs", [])]
             rq = _request(st, step_id, f"{x['name']}. Rule: {x['decision_rule']}", evidence=ev,
                           blocks=[y for y in seq if step_id in _supply_owners(_step_def(spec, y))] + [step_id])
             save_state(root, st)
@@ -738,7 +811,7 @@ def _job_spec(root: Path, spec: dict, st: dict, x: dict, backend: str) -> dict:
            "after": "record the finished run with record_external_run(assessment, step, run_card) (schema-valid run card with outputs and hashes)",
            "general_compute": gen.get("compute")}
     jf = root / "jobs" / f"{x['id']}.json"
-    jf.write_text(json.dumps(job, indent=1))
+    jf.write_text(json.dumps(job, indent=1), encoding="utf-8", newline="\n")
     ent = st["steps"].setdefault(x["id"], {"status": "pending", "run_cards": [], "superseded_run_cards": []})
     ent["status"] = "job_spec_written"
     event(st, "job_spec_written", step=x["id"], backend=be["name"])
@@ -752,7 +825,7 @@ def record_external_run(assessment: str, step_id: str, run_card: str) -> dict:
     p, spec = current_spec(root)
     st = load_state(root)
     src = Path(os.path.expanduser(run_card))
-    card = json.loads(src.read_text())
+    card = json.loads(src.read_text(encoding="utf-8"))
     errs = schema_errors(card)
     if errs:
         raise SageError(f"refused: the run card is not schema-valid: {errs[:5]}")
@@ -1037,7 +1110,7 @@ def propose_general_change(change: dict, who: str, why: str, bump_kind: str | No
     d = state.general_dir()
     d.mkdir(parents=True, exist_ok=True)
     out = d / f"{key}.json"
-    out.write_text(json.dumps(new, indent=1, ensure_ascii=False))
+    out.write_text(json.dumps(new, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     return {"proposed": key, "path": str(out), "bump": kind, "from": f"{g['id']}@{g['version']}", "changelog": new["decisions"][-1],
             "note": "specific protocols keep their version until migrate(assessment, to_version)"}
 
@@ -1115,15 +1188,28 @@ def package(assessment: str) -> dict:
     stale = [k for k, v in st["steps"].items() if v.get("status") == "stale"]
     if stale:
         missing.append(f"stale steps must be re-run first: {stale}")
+    tr = trace.summary(root, st)
+    warnings = []
+    if not tr["complete"]:
+        warnings.append(tr["reason"] if tr["status"] == "no_states" else
+                        f"{tr['counts']['untraced']} evidence states have no local source check; imported provenance retained")
+    if tr.get("counts", {}).get("comparison_only"):
+        warnings.append("comparison_only is a recorded disposition; review fit selection separately (weights are unchanged)")
+    report = root / "traces" / "TRACEABILITY.json"
+    report.parent.mkdir(exist_ok=True)
+    report.write_text(json.dumps(tr, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
+    trace_report = {"traceability": tr, "traceability_status": "WARN" if warnings else "PASS",
+                    "warnings": warnings, "traceability_report": str(report)}
     if missing:
-        return {"packaged": False, "missing": missing}
+        return {"packaged": False, "missing": missing, **trace_report}
     f = Path(final)
     spec["artifact"]["file"] = {"path": tilde(f), "sha256": sha256_file(f), "storage_class": "local", "role": "final pick"}
     _write_spec(root, spec, st, "artifact pinned", new_version=False)
     save_state(root, st)
-    out = {"packaged": True, "artifact": spec["artifact"]["file"]}
-    res = subprocess.run([sys.executable, str(tools_dir() / "build_crate.py"), str(root / st["current_spec"]), str(root / "crate")],
+    out = {"packaged": True, "artifact": spec["artifact"]["file"], **trace_report}
+    res = subprocess.run([sys.executable, str(tools_dir() / "build_crate.py"), str(root / st["current_spec"]), str(root / "crate"), "--traceability-report", str(report)],
                          capture_output=True, text=True, cwd=root)
+    out["packaged"] = res.returncode == 0
     out["crate"] = {"returncode": res.returncode, "dir": str(root / "crate"), "log_tail": (res.stdout + res.stderr)[-800:]}
     out["dashboard"] = {"status": "pending", "reason": ("extract_dashboard_data.py knows only the cuzr and crni campaigns; an assessment_results "
                                                         "document for a fresh assessment needs its step results (SCHEMA_GAPS G7)")}

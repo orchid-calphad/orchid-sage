@@ -52,11 +52,11 @@ def sha(p):
 
 
 def vv(tdb):
-    return {m.group(1): float(m.group(2)) for m in re.finditer(r"FUNCTION\s+(VV\d{4})\s+298\.15\s+([-+.\dEe]+);", Path(tdb).read_text())}
+    return {m.group(1): float(m.group(2)) for m in re.finditer(r"FUNCTION\s+(VV\d{4})\s+298\.15\s+([-+.\dEe]+);", Path(tdb).read_text(encoding="utf-8"))}
 
 
 def non_vv_lines(tdb):
-    return [l for l in Path(tdb).read_text().splitlines() if not re.match(r"\s*FUNCTION\s+VV\d{4}\s", l) and not l.startswith("$")]
+    return [l for l in Path(tdb).read_text(encoding="utf-8").splitlines() if not re.match(r"\s*FUNCTION\s+VV\d{4}\s", l) and not l.startswith("$")]
 
 
 def jget(obj, path):
@@ -82,7 +82,7 @@ def public_copies():
     global _PUB
     if _PUB is None:
         m = REPO / "PUBLIC_SUBSTITUTES.json"
-        _PUB = {r["path"]: (r["original_sha256"], r["sanitized_sha256"]) for r in json.loads(m.read_text())["files"]} if m.is_file() else {}
+        _PUB = {r["path"]: (r["original_sha256"], r["sanitized_sha256"]) for r in json.loads(m.read_text(encoding="utf-8"))["files"]} if m.is_file() else {}
     return _PUB
 
 
@@ -104,7 +104,7 @@ def stage(spec, root):
         sys.exit(f"root {root} is not empty; choose a fresh directory (nothing is overwritten)")
     manifests = {}
     for m in st.get("manifests", []):
-        d = json.loads((REPO / m).read_text())
+        d = json.loads((REPO / m).read_text(encoding="utf-8"))
         for f in d["files"]:
             manifests[str((REPO / m).parent / f["path"])] = f["sha256"]
     n = 0
@@ -117,7 +117,7 @@ def stage(spec, root):
             d.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(f, d)
             want = manifests.get(str(f))
-            if want and sha(d) != want and public_copies().get(str(f.relative_to(REPO))) != (want, sha(d)):
+            if want and sha(d) != want and public_copies().get(f.relative_to(REPO).as_posix()) != (want, sha(d)):
                 sys.exit(f"hash mismatch while staging {f}")
             n += 1
     for d in st.get("mkdirs", []):
@@ -135,7 +135,7 @@ def pfp_git(pfroot):
     eq = REPO / "protocols/environment/pins/phaseforgeplus_equivalence.json"
     same = []
     if eq.is_file():
-        e = json.loads(eq.read_text())
+        e = json.loads(eq.read_text(encoding="utf-8"))
         same = [x["commit"][:7] for x in e["commits"]] if e.get("tree") == t else []
     return {"git_commit": c, "git_tree": t, "same_tree_as": same}
 
@@ -185,7 +185,7 @@ def main():
     pin = pfp_pin(spec)
     pfroot = Path(pfp).expanduser().resolve().parent
     if pin.exists() and pfroot.exists():
-        want = {l.split("  ", 1)[1]: l.split("  ", 1)[0] for l in pin.read_text().splitlines() if "  " in l}
+        want = {l.split("  ", 1)[1]: l.split("  ", 1)[0] for l in pin.read_text(encoding="utf-8").splitlines() if "  " in l}
         bad = [rel for rel, h in want.items() if not (pfroot / rel).exists() or sha(pfroot / rel) != h]
         report["phaseforgeplus"] = {"path": str(pfroot), "pin": str(pin.relative_to(REPO)) if pin.is_relative_to(REPO) else str(pin),
                                     "pinned_files": len(want), "mismatch": bad[:10], "pass": not bad, **pfp_git(pfroot)}
@@ -211,7 +211,7 @@ def main():
             cmd = it["command"].replace("{PY}", py).replace("{NPROC}", nproc).replace("{PFP}", pfp).replace("{REPO}", str(REPO))
             env = dict(os.environ); env.update({k: str(v).replace("{PFP}", pfp) for k, v in (it.get("env") or {}).items()})
             t0 = time.time()
-            with open(logs / f"{it['id']}.log", "w") as lf:
+            with open(logs / f"{it['id']}.log", "w", encoding="utf-8", newline="\n") as lf:
                 r = subprocess.run(cmd, shell=True, cwd=root / it.get("cwd", "."), env=env, stdout=lf, stderr=subprocess.STDOUT)
             rec.update(command=cmd, returncode=r.returncode, wall_s=round(time.time() - t0, 1))
             if r.returncode != 0:
@@ -219,7 +219,7 @@ def main():
                 rec["pass"] = False      # a failed command fails its item (before 7 Nov the item had no verdict, so the overall verdict missed it)
                 if it.get("expected", {}).get("result") in ("fail", "partial"):
                     rec["notes"] = "the command itself failed, so this is not the expected " + it["expected"]["result"]
-                report["items"].append(rec); json.dump(report, open(rep_path, "w"), indent=1); continue
+                report["items"].append(rec); json.dump(report, open(rep_path, "w", encoding="utf-8", newline="\n"), indent=1); continue
         for ex in it.get("expect", []):
             p = root / ex["path"]; c = {"check": ex["rule"], "path": ex["path"]}
             if not p.exists():
@@ -258,7 +258,7 @@ def main():
                 if alt:
                     c["note"] = "identical once the sha256 of the public copies it records are read as the originals'"
             elif ex["rule"] == "json_equal":
-                A_ = json.loads(p.read_text()); B_ = json.loads((root / ex["reference_path"]).read_text()) if ex.get("reference_path") else None
+                A_ = json.loads(p.read_text(encoding="utf-8")); B_ = json.loads((root / ex["reference_path"]).read_text(encoding="utf-8")) if ex.get("reference_path") else None
                 diffs = []
                 for jp in ex.get("json_paths", []):
                     va = jget(A_, jp)
@@ -267,7 +267,7 @@ def main():
                         diffs.append({"path": jp, "rerun": va, "reference": vb})
                 c.update(reference=ex.get("reference_path", ex.get("reference_value")), differences=diffs[:10], pass_=not diffs)
             elif ex["rule"] == "sequence_equal":
-                A_ = json.loads(p.read_text())["sequence"]; B_ = json.loads((root / ex["reference_path"]).read_text())["sequence"]
+                A_ = json.loads(p.read_text(encoding="utf-8"))["sequence"]; B_ = json.loads((root / ex["reference_path"]).read_text(encoding="utf-8"))["sequence"]
                 tol = ex.get("abs_tol", 10); bad = []
                 for x in sorted(set(A_) | set(B_)):
                     la, lb = A_.get(x, []), B_.get(x, [])
@@ -275,7 +275,7 @@ def main():
                         bad.append(x)
                 c.update(reference=ex["reference_path"], abs_tol_K=tol, compositions=len(set(A_) | set(B_)), differing_compositions=bad[:20], n_differing=len(bad), pass_=not bad)
             elif ex["rule"] == "json_tol":
-                got = jget(json.loads(p.read_text()), ex["json_path"]); ref = ex["reference_value"]
+                got = jget(json.loads(p.read_text(encoding="utf-8")), ex["json_path"]); ref = ex["reference_value"]
                 c.update(reference=ref, rerun=got, diff=None if got is None else got - ref, abs_tol=ex["abs_tol"], pass_=got is not None and abs(got - ref) <= ex["abs_tol"])
             c["pass"] = c.pop("pass_", c.get("pass", False))
             allpass &= c["pass"]; rec["checks"].append(c)
@@ -284,14 +284,14 @@ def main():
             rec["outcome"] = "expected " + it["expected"]["result"] + ": " + it["expected"].get("reason", "")
             allpass = allpass and all(c["pass"] for c in rec["checks"] if c["check"] == "command exit code")
         report["items"].append(rec)
-        json.dump(report, open(rep_path, "w"), indent=1)
+        json.dump(report, open(rep_path, "w", encoding="utf-8", newline="\n"), indent=1)
     ok_items = all((i.get("pass") is not False) or (i.get("outcome", "").startswith("expected") and all(c["pass"] for c in i["checks"] if c["check"] in ("command exit code", "copy hash")))
                    for i in report["items"])
     report["finished"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
     report["pass"] = bool(ok_items)   # predictions and data-identity checks only; environment and pins are notes
     report["unexpected_failures"] = [i["id"] for i in report["items"] if i.get("pass") is False and not i.get("outcome")]
     report["expected_failures"] = [i["id"] for i in report["items"] if i.get("outcome")]
-    json.dump(report, open(rep_path, "w"), indent=1)
+    json.dump(report, open(rep_path, "w", encoding="utf-8", newline="\n"), indent=1)
     md = [f"# Reproduce report: {report['specific_protocol']}", "", f"host {report['host']} ({report['machine']}), python {py}, root `{root}`",
           f"started {report['started']}, finished {report['finished']}; environment {'PASS' if report['environment']['pass'] else 'FAIL'} ({report['environment']['got']})", "",
           "| item | step | check | reference | rerun | tolerance | result |", "|---|---|---|---|---|---|---|"]
@@ -303,7 +303,7 @@ def main():
             md.append(f"| {it['id']} | {it['step']} | {c['check']} `{c.get('path', '')}` | {str(refv)[:40]} | {str(rr)[:40]}{extra} | {tol} | {res_} |")
     md += ["", f"PhaseForge+ source check (note): {report.get('phaseforgeplus')}", f"Notes: {report['notes']}", f"Expected failures: {report['expected_failures']}; unexpected failures: {report['unexpected_failures']}",
            "", f"**Overall: {'PASS' if report['pass'] else 'FAIL'}** (predictions and data-identity checks; environment and pins are notes; an item marked expected=fail does not fail the run when it fails as declared)"]
-    Path(str(rep_path).replace(".json", ".md")).write_text("\n".join(md) + "\n")
+    Path(str(rep_path).replace(".json", ".md")).write_text("\n".join(md) + "\n", encoding="utf-8", newline="\n")
     print("overall", "PASS" if report["pass"] else "FAIL", "->", rep_path)
     sys.exit(0 if report["pass"] else 1)
 
