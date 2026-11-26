@@ -1,6 +1,6 @@
 # CALPHAD model fitting protocol for ORCHID-SAGE
 
-Version: 2.1 — 2026-11-06 (version 2.0 of 5 Nov plus the PI rulings of 6 Nov recorded in Section 0; supersedes 1.9, kept as `fit_protocol_v1.9.md`). Executable form: `protocols/general/orchid-calphad-fit@2.0.0.yaml`, which pins this text by sha256; schema family and tools in `protocols/` (SCHEMA.md).  
+Version: 2.2.0 — 2026-11-26 (version 2.1 with the intervening frozen protocol changes, the glass-forming-liquid rules of J. Saal, the sampling and consistency rules of M. E. Bustamante, and the coordinator additions approved by the PI). Executable form: `protocols/general/orchid-calphad-fit@2.2.0.yaml`, which pins this text by sha256; schema family and tools in `protocols/` (SCHEMA.md). Earlier pinned texts remain in the frozen files indexed by `fit_protocol.versions.json`.
 Status: normative workflow for agents; proposed SAGE integration contract.
 
 ## 0. What changed in 2.0, and why
@@ -93,6 +93,8 @@ Run it on every dataset that enters the objective, write `results/data_consisten
 6. **Cross-source comparison at the same state:** report disagreements beyond the stated uncertainties; never settle them from the desk.
 7. **Pull at the reference:** score the reference assessment (when one exists) and the best candidate per dataset; list datasets whose contribution is out of proportion to their size, and points that dominate a dataset.
 
+A model never disqualifies a measurement. Record a disagreement with its direction and its sources, and mark the anchor as an experiment to repeat.
+
 A flagged value is first checked against our reading of the source (ORCHID `magnitude_suspect` and similar flags); the data stay unchanged. It stays in the fit at its uncertainty unless the PI decides to hold it, and the fit is reported with and without it when it matters.
 
 ### 0.3 Ranking
@@ -126,6 +128,8 @@ Neither ESPEI's ZPF term nor the hinge penalizes a phase splitting into two comp
 
 **Glass-forming liquids: the gate runs the other way.** For a liquid that is used below its liquidus (any glass or glass-ceramic campaign, and any campaign whose deliverable includes supercooled-liquid or glass thermodynamics), the supercooled liquid down to Tg is part of the intended domain: the glass inherits its composition fluctuations, so a liquid miscibility gap below the liquidus is a prediction that the glass phase-separates. There, apply the liquid convexity constraint from the liquidus down to T_low = Tg (or the lowest temperature at which the liquid is used, if higher), on a temperature grid fine enough to resolve a gap between grid temperatures (spacing no more than about 100 K, and always including T_low), unless the sources report liquid or glass phase separation in that domain (for example the metastable immiscibility of many borate and alkali silicate glasses), in which case Section 9's exception applies. Checking convexity only at the liquidus temperatures of the observations is not enough: a gap can sit just below the lowest of them and widen on cooling. Worked example (oxide, ionic two-sublattice liquid, FeO–P₂O₅): a fit with the convexity constraint at 1250, 1350 and 1450 K only had a stable two-liquid region at 1220–1300 K, metastable down to 700 K, with a second difference of G (per mol of oxide units, step 0.02) of −1.2 kJ at 700 K; extending the constraint to 700–1450 K removed it with the liquidus point rms essentially unchanged (31 and 33 K against 30 and 34 K).
 
+Tg is a recorded input for each composition, with its source and uncertainty (for example a DSC measurement and its cooling rate). CALPHAD does not predict Tg, which is kinetic and depends on the cooling rate. Where Tg has not been measured, use a declared estimate, for example Tg ~ 2/3 Tm with temperatures in kelvin, label it as an estimate, assign a wide uncertainty and report a sensitivity check on T_low. Record the source and uncertainty of Tm when it supplies that estimate.
+
 ### 0.4c Default physics heuristics for solution phases (PI, 5 Nov)
 
 - **Liquid:** always run the corrected Hong–Liu entropy calculation (pair/quasi-chemical correction of the chemical-mixing term, Section 10.D) on the PhaseForge liquid MD, and enter the resulting excess entropies as observations with their uncertainty (provisional until the correction is reviewed).
@@ -138,6 +142,10 @@ Neither ESPEI's ZPF term nor the hinge penalizes a phase splitting into two comp
 - Before a campaign, check the gradient build against ESPEI 0.9.0 at the reference parameters and a few random points (term by term, agreement to ~1e-9) and against finite differences.
 - Reproduce the reference assessment first (Cr–Ni: the published optimum reproduced its diagram; the published starting values gave a wrong topology, so initialization matters).
 - Non-finite likelihood at a real observation (Cr–Ni: one Pugliese activity point where pycalphad returns NaN, also in 0.9.0): retry at a small logged jitter of the state, never drop the observation; report the region.
+
+For every pycalphad `equilibrium()` call, set the sampling density through `calc_opts={"pdens": N}`. A direct `pdens=N` argument is silently ignored by `equilibrium()`, although `calculate()` honours it. Record N with the calculation, including calls made inside fitting, reference scoring, validation and uncertainty propagation.
+
+For multicomponent ordered solutions, recompute key equilibria at increasing sampling densities and report the changes in assemblages, compositions, phase fractions and Gibbs energies in `results/density_check.json`. Keep the model, conditions and other solver settings fixed, and record the densities, software build, failures and any remaining sensitivity. No single density was reliable for the four- and five-metal rocksalt carbides reported in issue #2. This is a reported check, not a gate or a claim that the densest result is the global equilibrium. Run `density_check_ordered` after the first equilibrium calculation that includes the ordered phases, and repeat it for the fitted candidates when their parameters change; report non-applicability when there is no multicomponent ordered solution.
 
 ### 0.6 Process hygiene and compute
 
@@ -323,8 +331,10 @@ Liquid phase separation is an explicit exception to a blanket convexity requirem
 **Liquid entropy and the Kauzmann condition (required for glass-forming liquids).** A liquid whose entropy falls below that of its equilibrium crystals above Tg (a Kauzmann point, T_K > Tg) is unphysical and makes every glass property computed from it (configurational entropy, enthalpy of vitrification, devitrification driving force) wrong in sign or magnitude. Sparse liquidus data do not prevent it: a well-fitting liquidus can be reached by a liquid that orders too strongly on cooling. Ionic and associate liquids are the usual case: a strongly associated species with a large positive entropy term (+T·b on its end member or interaction) pays for the liquidus and orders below it. Therefore:
 - Put the condition into the objective, not only into the report: a one-sided penalty ΔS(liquid − crystals) ≥ S_min at temperatures down to T_low (as above), at compositions spanning the intended domain, with ΔS = −∂ΔG/∂T from the model with internal degrees of freedom (speciation, redox) equilibrated, and the crystals as the equilibrium assemblage at each temperature. S_min is a margin in J/(K·mol formula units), recorded with its basis (a few J/(K·mol) is typical; zero is a boundary, not a margin).
 - For a liquid with a variable redox state, check the condition at the nominal state and at least two other redox states the glasses are made at; the excess entropy can differ by several J/(K·mol) between them.
-- Audit the result independently in the deployment software (for example pycalphad on the written TDB), and report T_K, ΔS at Tg and the excess entropy of mixing for each composition.
+- Audit the result independently in the deployment software (for example pycalphad on the written TDB), and report T_K with its uncertainty propagated from the uncertainty of the liquid entropy, ΔS at Tg and the excess entropy of mixing for each composition.
 - Do not add a liquid heat-capacity correction below the liquidus (fragility-based ΔCp, Stebbins-type Cp) on top of a CALPHAD liquid without rechecking the Kauzmann condition with it: the extra entropy loss on cooling can exceed the liquid's excess entropy and create a Kauzmann point above Tg.
+
+The Kauzmann check is a model-consistency check, only as good as the sub-liquidus liquid heat capacity. A standard CALPHAD liquid without the supercooled excess Cp tends to give a T_K that is too low, so the check is easy to pass. Report this limitation with the entropy uncertainty and repeat the check after any sub-liquidus Cp correction, as required above.
 
 **Physical constraints interact.** A penalty that moves the liquid's entropy (Kauzmann), its curvature (convexity) or a fixed parameter changes the others. Evaluate every physical constraint of the liquid on the same composition and temperature grid after each change, and re-run the stability checks of this section and Section 13 on the final parameters, not only those the latest change targeted. Worked example: the refit that added the Kauzmann penalty above removed a Kauzmann point at 1025–1306 K from an Fe₂O₃–P₂O₅ liquid; the same refit left the FeO–P₂O₅ side of that liquid non-convex below 1300 K (the previous fit was convex there), and no check covered it until the convexity gate was extended to Tg.
 

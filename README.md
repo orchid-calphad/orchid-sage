@@ -12,7 +12,7 @@ reruns the protocol and compares the result with the published one within declar
 
 | part | where |
 |---|---|
-| the general protocol `orchid-calphad-fit` (2.0.0 to 2.1.2) and its prose rationale | `protocols/general/`, `docs/fit_protocol.md` |
+| the general protocol `orchid-calphad-fit` (2.0.0 to 2.2.0) and its prose rationale | `protocols/general/`, `docs/fit_protocol.md` |
 | the Cr–Ni assessment of the paper: specific protocol `crni-paper-fit-step4c-b@1.0.4` (approved), its earlier versions, run cards, evidence bundles, code snapshots, dashboards and rerun reports | `protocols/specific/`, `assessments/crni-paper-fit-step4c-b/`, `assessments/crni-paper-fit-step4-s1/`, `protocols/reproduce/` |
 | the schema of protocols, run cards and results | `protocols/schema/`, `protocols/SCHEMA.md` |
 | the validator, the reproduction tool and the other protocol tools | `protocols/tools/` |
